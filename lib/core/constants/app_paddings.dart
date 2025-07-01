@@ -29,18 +29,6 @@ class Symmetric
   /// 2px horizontal
   EdgeInsets get xXXSmall => EdgeInsets.symmetric(horizontal: 2.w);
 
-  /// 8px horizontal 4px vertical
-  EdgeInsets get xXSmall => EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.w);
-  
-  /// 12px horizontal
-  EdgeInsets get mediumH => EdgeInsets.symmetric(horizontal: 12.w);
-
-  /// 16.5px horizontal 44.5px vertical
-  EdgeInsets get xlargeHV => EdgeInsets.symmetric(horizontal: (16.5).w, vertical: (44.5).h);
-
-  /// 20px horizontal, 20px vertical
-  EdgeInsets get largeHV => EdgeInsets.symmetric(horizontal: (20).w, vertical: (20).h);
-
 }
 
 
@@ -50,12 +38,6 @@ class Directional
 
   /// 8px start,, 8px top,, 16px bottom
   EdgeInsetsDirectional get xXSmall => EdgeInsetsDirectional.only(start: 8.w, top: 8.h, bottom: 16.h);
-
-  /// 15px end only
-  EdgeInsetsDirectional get mediumEnd => EdgeInsetsDirectional.only(end: 15.w);
-
-  /// 16px end only
-  EdgeInsetsDirectional get mediumStart => EdgeInsetsDirectional.only(start: 16.w);
 
 }
 

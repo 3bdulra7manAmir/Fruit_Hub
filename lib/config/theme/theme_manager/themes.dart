@@ -2,24 +2,42 @@ import 'package:flutter/material.dart';
 import '../color_manager/colors.dart';
 import 'themes_styles.dart';
 
-class AppThemes
+class AppTheme
 {
-  AppThemes._();
+  AppTheme._();
 
-  static ThemeData defaultTheme()
+  static ThemeData lightTheme()
   {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.color.kWhite001,
-      cardTheme: AppLightStyles.cardTheme,
+      cardTheme: LightThemeStyles.cardTheme,
 
-      elevatedButtonTheme: AppLightStyles.elevatedButtonTheme,
-      inputDecorationTheme: AppLightStyles.inputBorder,
+      elevatedButtonTheme: LightThemeStyles.elevatedButtonTheme,
+      inputDecorationTheme: LightThemeStyles.inputBorder,
 
-      appBarTheme: AppLightStyles.appBarTheme,
-      dialogTheme: AppLightStyles.dialogTheme,
-      bottomSheetTheme: AppLightStyles.bottomSheetTheme,
+      appBarTheme: LightThemeStyles.appBarTheme,
+      dialogTheme: LightThemeStyles.dialogTheme,
+      bottomSheetTheme: LightThemeStyles.bottomSheetTheme,
+      
+    );
+  }
+
+  static ThemeData darkTheme()
+  {
+    return ThemeData(
+      useMaterial3: true,
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: AppColors.color.kWhite001,
+      cardTheme: DarkThemeStyles.cardTheme,
+
+      elevatedButtonTheme: DarkThemeStyles.elevatedButtonTheme,
+      inputDecorationTheme: DarkThemeStyles.inputBorder,
+
+      appBarTheme: DarkThemeStyles.appBarTheme,
+      dialogTheme: DarkThemeStyles.dialogTheme,
+      bottomSheetTheme: DarkThemeStyles.bottomSheetTheme,
       
     );
   }

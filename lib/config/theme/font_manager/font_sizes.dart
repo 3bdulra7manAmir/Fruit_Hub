@@ -9,10 +9,10 @@ abstract class AppFontSizes
   static double get xSmall => 13.0;
 
   /// [16.0]
-  static double get small => 16.0;
+  static double get meduim => 16.0;
 
   /// [19.0]
-  static double get meduim => 19.0;
+  static double get xMeduim => 19.0;
 
   /// [23.0]
   static double get large => 23.0;

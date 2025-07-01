@@ -1,6 +1,7 @@
+import 'dart:developer';
 import 'font_manager_base.dart';
-import 'font_manager_cairo.dart';
 import 'font_manager_roboto.dart';
+import 'font_manager_cairo.dart';
 
 class AppFonts
 {
@@ -14,26 +15,53 @@ class AppFonts
     return _instance!;
   }
 
-  static FontManagerBase get font => i._fonts;
-  String _fontKey = 'Cairo';
-
-  set fontKey(String key)
+  static FontManagerBase get font
   {
-    if (key.trim().isEmpty) return;
-    _fontKey = key.toLowerCase();
+    try
+    {
+      return i._fonts;
+    }
+    catch (e, stack)
+    {
+      log("Erro in get font: $e ,, Stack: $stack");
+      return FontRoboto();
+    }
   }
 
+  String language = 'en';
+  set langCode(String code)
+  {
+    try
+    {
+      if (code.isEmpty)
+      {
+        return;
+      }
+      language = code.toLowerCase();
+    }
+    on Exception catch (e, stack)
+    {
+      log("Erro in font Language: $e ,, Stack: $stack");
+    }
+  }
 
   FontManagerBase get _fonts
   {
-    switch (_fontKey)
+    try
     {
-      case 'Cairo':
+      if (language == "ar")
+      {
         return FontCairo();
-      case 'Roboto':
+      }
+      else
+      {
         return FontRoboto();
-      default:
-        return FontRoboto();
+      }
+    }
+    catch (e, stack)
+    {
+      log("Erro in font Language: $e ,, Stack: $stack");
+      return FontRoboto();
     }
   }
 }

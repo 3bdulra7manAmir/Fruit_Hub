@@ -14,12 +14,6 @@ class BorderOnly
 {
   BorderOnly._();
 
-  ///[topLeft: 12.r ,, bottomLeft: 12.r]
-  BorderRadiusGeometry get xSmall1 => BorderRadius.only(
-    topLeft: Radius.circular(12.r),
-    bottomLeft: Radius.circular(12.r),
-  );
-
   ///[topLeft: 12.r ,, topRight: 12.r]
   BorderRadiusGeometry get xSmall2 => BorderRadius.only(
     topLeft: Radius.circular(12.r),
@@ -75,15 +69,3 @@ abstract class AppBorderWidth
   /// [small] → 2px
   static double get small => 2.0.w;
 }
-
-
-// abstract class AppFullBorders
-// {
-//   AppFullBorders._();
-
-//   /// [color: kGrey001, width: 1.0.w]
-//   static BoxBorder get verificationCode => Border.all(
-//     color: AppColors.color.kWhite001,
-//     width: thin,
-//   );
-// }

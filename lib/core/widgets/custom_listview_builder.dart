@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomListviewBuilder extends StatelessWidget
 {
-  final Widget Function(BuildContext, int) separatorBuilder;
   final Widget? Function(BuildContext, int) itemBuilder;
+  final Widget Function(BuildContext, int) separatorBuilder;
   final int itemCount;
   final EdgeInsetsGeometry? padding;
   final bool? reverse;
@@ -24,14 +24,14 @@ class CustomListviewBuilder extends StatelessWidget
   Widget build(BuildContext context)
   {
     return ListView.separated(
-      scrollDirection: scrollDirection ?? Axis.vertical,
       itemBuilder: itemBuilder,
       separatorBuilder: separatorBuilder,
       itemCount: itemCount,
-      padding: padding,
+      scrollDirection: scrollDirection ?? Axis.vertical,
       reverse: reverse ?? false,
-      shrinkWrap: true,
       physics: physics ?? const ScrollPhysics(),
+      padding: padding,
+      shrinkWrap: true,
     );
   }
 }

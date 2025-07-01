@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCircularIndicator extends StatelessWidget
 {
@@ -7,10 +8,10 @@ class CustomCircularIndicator extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return const Center(
+    return  Center(
       child: SizedBox(
-        width: 32, height: 32,
-        child: CircularProgressIndicator(strokeWidth: 2),
+        width: 32.w, height: 32.h,
+        child: CircularProgressIndicator(strokeWidth: 2.w),
       ),
     );
   }

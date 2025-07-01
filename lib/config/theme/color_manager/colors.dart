@@ -1,4 +1,5 @@
 import 'color_manager_base.dart';
+import 'color_manager_dark.dart';
 import 'color_manager_light.dart';
 
 class AppColors
@@ -15,8 +16,18 @@ class AppColors
 
   static ColorManagerBase get color => i._colors;
 
+  String _themeMode = 'light';
+
+  set themeMode(String mode)
+  {
+    if (mode == 'light' || mode == 'dark')
+    {
+      _themeMode = mode;
+    }
+  }
+
   ColorManagerBase get _colors
   {
-    return LightColorScheme();
+    return _themeMode == 'dark' ? DarkColorScheme() : LightColorScheme();
   }
 }

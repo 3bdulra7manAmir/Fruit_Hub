@@ -3,11 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constants/app_borders.dart';
-import '../constants/app_margins.dart';
 
 class CustomNavBar extends StatelessWidget
 {
-  const CustomNavBar({super.key, this.padding, this.alignment, this.width, this.height, this.borderRadius, this.color, required this.navBarChildren});
+  const CustomNavBar(
+    {super.key, 
+    this.padding, 
+    this.alignment, 
+    this.width, 
+    this.height, 
+    this.borderRadius, 
+    this.color, 
+    required this.navBarChildren});
 
   final EdgeInsetsGeometry? padding;
   final AlignmentGeometry? alignment;
@@ -21,10 +28,8 @@ class CustomNavBar extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      padding: padding ?? AppMargins.symmetric.medium,
-      alignment: alignment ?? Alignment.center,
-      width: width,
-      height: height ?? 105.h,
+      width: width, height: height ?? 105.h,
+      padding: padding, alignment: alignment ?? Alignment.center,
       decoration: BoxDecoration(
         borderRadius: borderRadius ?? AppRadiuses.circular.xXSmall, 
         //color: color ?? AppColors.color.kWhite002, //HERE
