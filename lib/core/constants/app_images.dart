@@ -12,9 +12,9 @@ class _Icons
   _Icons._();
 
   /// Appointments Empty
-  final String medicalCalendar = "assets/icons/appointments_empty/medical_calendar.svg";
-  final String medicalCalendarPNG = "assets/icons/appointments_empty/medical_calendar.png";
-
+  final String treeLeaf = "assets/icons/Splash/Tree_Leaf.svg";
+  final String appLogo = "assets/icons/Splash/App_Logo.svg";
+  final String bubbles = "assets/icons/Splash/Bubbles.svg";
 }
 
 ///-----------------------------------------------------------------//
