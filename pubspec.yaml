@@ -1,0 +1,98 @@
+name: e_commerce_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+# App Name Changer
+  rename_app: ^1.6.3
+
+  # App Icon Changer
+  flutter_launcher_icons: ^0.14.4
+
+  # Riverpod (State Management)
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+  # Routing
+  go_router: ^14.8.1
+
+  # Cached Network Image
+  cached_network_image: ^3.4.1
+
+  # Device Preview (for responsive testing)
+  device_preview: ^1.2.0
+
+  # Screen Util (responsive UI)
+  flutter_screenutil: ^5.9.3
+
+  # SVG rendering
+  flutter_svg: ^2.2.0
+
+  # Comparing and Hashing
+  equatable: ^2.0.7
+
+  # Either type
+  dartz: ^0.10.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Linting
+  flutter_lints: ^5.0.0
+  riverpod_lint: ^2.6.1
+
+  # Code generation
+  build_runner: ^2.4.9
+  riverpod_generator: ^2.6.1
+
+  # Manually pinned to avoid analyzer conflicts
+  analyzer: 6.11.0
+  analyzer_plugin: 0.11.3
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo/Cairo-Black.ttf
+        - asset: assets/fonts/Cairo/Cairo-Bold.ttf
+        - asset: assets/fonts/Cairo/Cairo-ExtraBold.ttf
+        - asset: assets/fonts/Cairo/Cairo-ExtraLight.ttf
+        - asset: assets/fonts/Cairo/Cairo-Light.ttf
+        - asset: assets/fonts/Cairo/Cairo-Medium.ttf
+        - asset: assets/fonts/Cairo/Cairo-Regular.ttf
+        - asset: assets/fonts/Cairo/Cairo-SemiBold.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto/Roboto-ExtraBold.ttf
+        - asset: assets/fonts/Roboto/Roboto-ExtraLight.ttf
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-SemiBold.ttf
+
+  assets:
+    - assets/fonts/Cairo/
+    - assets/fonts/Roboto/
+
+    - assets/icons/App_Icon/
+    - assets/icons/Splash/
+
+    - assets/jsons/
+
