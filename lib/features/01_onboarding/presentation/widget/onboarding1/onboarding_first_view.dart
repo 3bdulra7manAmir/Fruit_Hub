@@ -1,0 +1,42 @@
+import 'package:e_commerce_app/core/extensions/widget_margin.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../config/localization/app_localizations.dart';
+import '../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import 'background_color_widget.dart';
+import 'fruit_pack_image_widget.dart';
+import 'welcome_text_widget.dart';
+
+class OnboardingFirst extends StatelessWidget
+{
+  const OnboardingFirst({super.key});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Column(
+      children:
+      [
+        Stack(
+          children:
+          [
+            BackgroundColorWidget(color: AppColors.color.kYellow001),
+            FruitPackImageWidget(img: AppAssets.icons.fruitPack,),
+          ],
+        ),
+        Sizes.size47.verticalSpace,
+        Column(
+          children:
+          [
+            const WelcomeTextWidget().marginSymmetric(horizontal: (76.5).w),
+            Sizes.size24.verticalSpace,
+            WelcomeTextWidget2(text: S.of(context)!.onBoardingDescription,),
+          ],
+        ),
+      ],
+    );
+  }
+}

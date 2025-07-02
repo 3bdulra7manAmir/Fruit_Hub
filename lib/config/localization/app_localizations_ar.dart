@@ -13,4 +13,15 @@ class SAr extends S {
 
   @override
   String get error => 'خطأ';
+
+  @override
+  String get onBoardingDescription =>
+      'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.';
+
+  @override
+  String get searchAndShop => 'ابحث وتسوق';
+
+  @override
+  String get onBoarding2Description =>
+      'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية';
 }

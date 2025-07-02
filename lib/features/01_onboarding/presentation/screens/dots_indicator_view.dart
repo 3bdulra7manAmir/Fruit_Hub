@@ -1,0 +1,67 @@
+import 'package:dots_indicator/dots_indicator.dart';
+import 'package:e_commerce_app/features/01_onboarding/presentation/widget/onboarding2/start_now_button_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../config/theme/color_manager/colors.dart';
+import '../../../../core/constants/app_paddings.dart';
+import '../../../../core/constants/app_sizes.dart';
+import '../widget/onboarding1/onboarding_first_view.dart';
+import '../widget/onboarding2/onboarding_sec_view.dart';
+
+class DotIndicator extends StatefulWidget
+{
+  const DotIndicator({super.key});
+
+  @override
+  State<DotIndicator> createState() => _DotIndicatorState();
+}
+
+class _DotIndicatorState extends State<DotIndicator>
+{
+  int currentPage = 0;
+  @override
+  Widget build(BuildContext context)
+  {
+    
+    return Scaffold(
+      body: Column(
+        children:
+        [
+          Expanded(
+            child: PageView(
+              onPageChanged: (index) => setState(() => currentPage = index),
+              children: const [ OnboardingFirst(), OnboardingSecond(), ],
+            ),
+          ),
+          Indicator(currentPage: currentPage),
+          Sizes.size29.verticalSpace,
+          if (currentPage == 1)
+            const StartNowButtonWidget(),
+          Sizes.size43.verticalSpace,
+        ],
+      ),
+    );
+  }
+}
+
+class Indicator extends StatelessWidget
+{
+  const Indicator({super.key, required this.currentPage,});
+
+  final int currentPage;
+  @override
+  Widget build(BuildContext context)
+  {
+    return DotsIndicator(
+      dotsCount: 2, 
+      position: currentPage.toDouble(), 
+      animate: true,
+      decorator: DotsDecorator(
+        activeColor: AppColors.color.kGreen001,
+        color: AppColors.color.kGreen003, 
+        spacing: AppPadding.symmetric.xXXSmall,
+      ),
+    );
+  }
+}

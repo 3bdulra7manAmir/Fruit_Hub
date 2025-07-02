@@ -13,4 +13,15 @@ class SEn extends S {
 
   @override
   String get error => 'Error';
+
+  @override
+  String get onBoardingDescription =>
+      'Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality.';
+
+  @override
+  String get searchAndShop => 'Search and shop';
+
+  @override
+  String get onBoarding2Description =>
+      'We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.';
 }

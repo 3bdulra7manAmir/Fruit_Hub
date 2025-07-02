@@ -6,7 +6,6 @@ abstract class AppRoutes
   // Splash
   static const splash = '/splash';
   // onboarding1
-  static const onboarding1 = '/onboarding1';
-  // onboarding2
-  static const onboarding2 = '/onboarding2';
+  static const dotIndicator = '/dots_indicator';
+
 }

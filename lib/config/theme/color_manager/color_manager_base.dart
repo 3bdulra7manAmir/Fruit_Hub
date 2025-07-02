@@ -7,7 +7,7 @@ abstract class ColorManagerBase
   Color get kTransparent;
 
   // White Color Range
-  /// [F8F8F8]
+  /// [FFFFFF]
   Color get kWhite001;
 
   // Grey Color Range
@@ -19,13 +19,16 @@ abstract class ColorManagerBase
   Color get kBlack001;
 
   // Green Color Range
-  /// [_60A77F]
+  /// [_1B5E37]
   Color get kGreen001;
+  /// [_B0E8C7]
+  Color get kGreen002;
+  /// [_5DB957]
+  Color get kGreen003;
 
-  // Red Color Range
-  /// [_D92C20]
-  Color get kRed001;
-
+  // Orange Color Range
+  /// [_F4A91F]
+  Color get kOrange001;
 
   // Yellow Color Range
   /// [FFDE00]

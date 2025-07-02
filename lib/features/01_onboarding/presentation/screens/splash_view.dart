@@ -19,7 +19,7 @@ class _SplashState extends State<Splash>
   @override
   void initState()
   {
-    Future.delayed(const Duration(seconds: 2), () => AppRouter.router.pushReplacement(AppRoutes.onboarding1),);
+    Future.delayed(const Duration(seconds: 2), () => AppRouter.router.pushReplacement(AppRoutes.dotIndicator),);
     super.initState();
   }
 

@@ -27,13 +27,19 @@ class LightColorScheme extends ColorManagerBase
   
   // Green Color Range
   @override
-  /// [_60A77F]
-  Color get kGreen001 => const Color(0xff60A77F);
-
-  // Red Color Range
+  /// [_1B5E37]
+  Color get kGreen001 => const Color(0xff1B5E37);
   @override
-  /// [_D92C20]
-  Color get kRed001 => const Color(0xffD92C20);
+  /// [_B0E8C7]
+  Color get kGreen002 => const Color(0xffB0E8C7);
+  @override
+  /// [_5DB957]
+  Color get kGreen003 => const Color(0xff5DB957);
+
+  // Orange Color Range
+  @override
+  /// [_F4A91F]
+  Color get kOrange001 => const Color(0xffF4A91F);
   
 
   // Yellow Color Range

@@ -28,7 +28,7 @@ class AppFonts
     }
   }
 
-  String language = 'en';
+  String language = 'ar';
   set langCode(String code)
   {
     try
@@ -55,7 +55,8 @@ class AppFonts
       }
       else
       {
-        return FontRoboto();
+        return FontCairo();
+        //return FontRoboto(); // IF U WANNA USE A FONT FOR "EN" AND ANOTHER FOR "AR"
       }
     }
     catch (e, stack)

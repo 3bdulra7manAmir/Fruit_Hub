@@ -27,6 +27,7 @@ class ECommerceApp extends StatelessWidget
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.supportedLocales,
+          locale: const Locale('ar'),
       
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),

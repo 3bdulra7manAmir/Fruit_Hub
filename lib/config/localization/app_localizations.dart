@@ -108,6 +108,24 @@ abstract class S {
   /// In en, this message translates to:
   /// **'Error'**
   String get error;
+
+  /// No description provided for @onBoardingDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality.'**
+  String get onBoardingDescription;
+
+  /// No description provided for @searchAndShop.
+  ///
+  /// In en, this message translates to:
+  /// **'Search and shop'**
+  String get searchAndShop;
+
+  /// No description provided for @onBoarding2Description.
+  ///
+  /// In en, this message translates to:
+  /// **'We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.'**
+  String get onBoarding2Description;
 }
 
 class _SDelegate extends LocalizationsDelegate<S> {
