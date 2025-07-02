@@ -21,6 +21,8 @@ abstract class AppStrings
   static const String searchAndShop = "Search and Shop";
   /// [ نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية ]
   static const String onBoarding2Description = "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية";
+  /// [ Start Now ]
+  static const String startNow = "Start now";
 
 
   //-----------------------//

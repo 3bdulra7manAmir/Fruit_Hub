@@ -24,4 +24,7 @@ class SAr extends S {
   @override
   String get onBoarding2Description =>
       'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية';
+
+  @override
+  String get startNow => 'ابدأ الان';
 }

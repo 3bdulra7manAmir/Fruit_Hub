@@ -1,36 +1,30 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:e_commerce_app/features/01_onboarding/presentation/widget/onboarding2/start_now_button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../controller/dot_indicator_controller.dart';
 import '../widget/onboarding1/onboarding_first_view.dart';
 import '../widget/onboarding2/onboarding_sec_view.dart';
 
-class DotIndicator extends StatefulWidget
+class DotIndicator extends ConsumerWidget
 {
   const DotIndicator({super.key});
 
   @override
-  State<DotIndicator> createState() => _DotIndicatorState();
-}
-
-class _DotIndicatorState extends State<DotIndicator>
-{
-  int currentPage = 0;
-  @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
-    
+    final currentPage = ref.watch(dotIndicatorProvider);
     return Scaffold(
       body: Column(
-        children:
-        [
+        children: [
           Expanded(
             child: PageView(
-              onPageChanged: (index) => setState(() => currentPage = index),
+              onPageChanged: (index) => ref.read(dotIndicatorProvider.notifier).set(index),
               children: const [ OnboardingFirst(), OnboardingSecond(), ],
             ),
           ),
@@ -44,6 +38,7 @@ class _DotIndicatorState extends State<DotIndicator>
     );
   }
 }
+
 
 class Indicator extends StatelessWidget
 {

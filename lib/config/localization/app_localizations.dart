@@ -126,6 +126,12 @@ abstract class S {
   /// In en, this message translates to:
   /// **'We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.'**
   String get onBoarding2Description;
+
+  /// No description provided for @startNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Start now'**
+  String get startNow;
 }
 
 class _SDelegate extends LocalizationsDelegate<S> {

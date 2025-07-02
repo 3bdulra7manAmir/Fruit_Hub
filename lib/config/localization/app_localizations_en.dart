@@ -24,4 +24,7 @@ class SEn extends S {
   @override
   String get onBoarding2Description =>
       'We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.';
+
+  @override
+  String get startNow => 'Start now';
 }

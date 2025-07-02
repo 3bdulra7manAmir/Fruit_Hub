@@ -1,3 +1,21 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'dart:developer';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final StateProvider dotIndicatorProvider = StateProvider<int>((ref) => 0);
+part 'dot_indicator_controller.g.dart';
+
+@riverpod
+class DotIndicator extends _$DotIndicator
+{
+  @override
+  int build() 
+  {
+    log("Indicator Page => 0");
+    return 0;
+  }
+
+  void set(int value)
+  { 
+    log("Indicator Page => $value");
+    state = value;
+  }
+}
