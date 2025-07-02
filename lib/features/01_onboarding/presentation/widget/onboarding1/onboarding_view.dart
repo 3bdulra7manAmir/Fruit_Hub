@@ -10,9 +10,9 @@ import 'background_color_widget.dart';
 import 'fruit_pack_image_widget.dart';
 import 'welcome_text_widget.dart';
 
-class OnboardingFirst extends StatelessWidget
+class OnboardingWelcome extends StatelessWidget
 {
-  const OnboardingFirst({super.key});
+  const OnboardingWelcome({super.key});
 
   @override
   Widget build(BuildContext context)

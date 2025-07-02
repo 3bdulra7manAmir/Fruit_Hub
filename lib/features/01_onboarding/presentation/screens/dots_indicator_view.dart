@@ -8,8 +8,8 @@ import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../controller/dot_indicator_controller.dart';
-import '../widget/onboarding1/onboarding_first_view.dart';
-import '../widget/onboarding2/onboarding_sec_view.dart';
+import '../widget/onboarding1/onboarding_view.dart';
+import '../widget/onboarding2/onboarding_view.dart';
 
 class DotIndicator extends ConsumerWidget
 {
@@ -25,7 +25,7 @@ class DotIndicator extends ConsumerWidget
           Expanded(
             child: PageView(
               onPageChanged: (index) => ref.read(dotIndicatorProvider.notifier).set(index),
-              children: const [ OnboardingFirst(), OnboardingSecond(), ],
+              children: const [ OnboardingWelcome(), SearchAndShop(), ],
             ),
           ),
           Indicator(currentPage: currentPage),

@@ -11,9 +11,9 @@ import '../onboarding1/background_color_widget.dart';
 import '../onboarding1/fruit_pack_image_widget.dart';
 import '../onboarding1/welcome_text_widget.dart';
 
-class OnboardingSecond extends StatelessWidget
+class SearchAndShop extends StatelessWidget
 {
-  const OnboardingSecond({super.key});
+  const SearchAndShop({super.key});
 
   @override
   Widget build(BuildContext context)

@@ -1,4 +1,6 @@
+import 'package:e_commerce_app/core/extensions/string.dart';
 import 'package:e_commerce_app/core/extensions/widget_margin.dart';
+import 'package:e_commerce_app/core/extensions/widget_textstyle.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,8 +23,20 @@ class WelcomeTextWidget extends StatelessWidget
       [
         Text(S.of(context)!.welcomeIn, style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),),
         Text(" ", style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),),
-        Text(AppStrings.hub, style: AppStyles.extraBlack(fontColor: AppColors.color.kGreen001),),
-        Text(AppStrings.fruit, style: AppStyles.extraBlack(fontColor: AppColors.color.kOrange001)),
+        Text(
+          AppStrings.fruit.localized(context, ar: AppStrings.hub), 
+          style: AppStyles.extraBlack(fontColor: AppColors.color.kGreen001).byLocale(context,
+            ar: AppStyles.extraBlack(fontColor: AppColors.color.kOrange001),
+            en: AppStyles.extraBlack(fontColor: AppColors.color.kGreen001),
+          ),
+        ),
+        Text(
+          AppStrings.hub.localized(context, ar: AppStrings.fruit),
+          style: AppStyles.extraBlack(fontColor: AppColors.color.kOrange001).byLocale(context,
+            ar: AppStyles.extraBlack(fontColor: AppColors.color.kGreen001),
+            en: AppStyles.extraBlack(fontColor: AppColors.color.kOrange001),
+          ),
+        ),
       ],
     );
   }
