@@ -12,5 +12,5 @@ class SAr extends S {
   String get welcomeIn => 'مرحبًا بك في';
 
   @override
-  String get error => 'Error';
+  String get error => 'خطأ';
 }

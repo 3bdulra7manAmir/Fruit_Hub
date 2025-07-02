@@ -37,7 +37,7 @@ class LightColorScheme extends ColorManagerBase
   
 
   // Yellow Color Range
-  /// [FFDE00]
+  /// [_FDF4E2]
   @override
-  Color get kYellow001 => const Color(0xFFF3E3A4);
+  Color get kYellow001 => const Color(0xFFFDF4E2);
 }
