@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/widgets/custom_circular_indicator.dart';
 import '../../features/01_onboarding/presentation/screens/splash_view.dart';
 import '../../features/01_onboarding/presentation/screens/dots_indicator_view.dart';
+import '../../features/02_auth/presentation/screens/login_view.dart';
 import 'app_routes.dart';
 
 
@@ -14,7 +15,7 @@ abstract class AppRouter
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
-    initialLocation: AppRoutes.splash,
+    initialLocation: AppRoutes.login,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -30,6 +31,13 @@ abstract class AppRouter
         path: AppRoutes.dotIndicator,
         name: AppRoutes.dotIndicator,
         builder: (context, state) => const DotIndicator(),
+      ),
+
+      /// [ Login ]
+      GoRoute(
+        path: AppRoutes.login,
+        name: AppRoutes.login,
+        builder: (context, state) => const Login(),
       ),
     ]
   );

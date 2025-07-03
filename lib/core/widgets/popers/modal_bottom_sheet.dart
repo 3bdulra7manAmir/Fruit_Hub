@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void showAppBottomSheet({
+void customAppBottomSheet({
   required BuildContext context,
   bool? isScrollControlled,
   bool? isDismissible,

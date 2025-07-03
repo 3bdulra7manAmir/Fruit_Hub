@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import '../../../core/constants/app_borders.dart';
 import '../color_manager/colors.dart';
 
-
+//------------------------------------------------//
+//                 Light THEME                    //
+//------------------------------------------------//
 abstract class LightThemeStyles
 {
   LightThemeStyles._();
@@ -14,7 +16,7 @@ abstract class LightThemeStyles
           borderRadius: AppRadiuses.circular.small,
           side: BorderSide(color: AppColors.color.kTransparent,),),
       ),
-      //backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlue001), //HERE
+      backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kGreen001),
       overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
       shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
       elevation: WidgetStateProperty.all(0),
@@ -23,15 +25,25 @@ abstract class LightThemeStyles
     ),
   );
 
-  static InputDecorationTheme get inputBorder => InputDecorationTheme(border: OutlineInputBorder(borderRadius: AppRadiuses.circular.xSmall,),);
+  static InputDecorationTheme get inputBorder => InputDecorationTheme(
+    filled: true,
+    fillColor: AppColors.color.kGrey004,
+    border: OutlineInputBorder(
+      borderSide: BorderSide(color: AppColors.color.kGrey003),
+      borderRadius: AppRadiuses.circular.xXXSmall,
+    ),
+  );
 
   static CardThemeData get cardTheme => const CardThemeData();
-  static AppBarTheme get appBarTheme => const AppBarTheme();
+  static AppBarTheme get appBarTheme => AppBarTheme(backgroundColor: AppColors.color.kWhite001);
   static DialogThemeData get dialogTheme => const DialogThemeData();
   static BottomSheetThemeData get bottomSheetTheme => const BottomSheetThemeData();
 
 }
 
+//------------------------------------------------//
+//                  DARK THEME                    //
+//------------------------------------------------//
 abstract class DarkThemeStyles
 {
   DarkThemeStyles._();
@@ -43,7 +55,7 @@ abstract class DarkThemeStyles
           borderRadius: AppRadiuses.circular.small,
           side: BorderSide(color: AppColors.color.kTransparent,),),
       ),
-      //backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlue001), //HERE
+      backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kGreen001),
       overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
       shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
       elevation: WidgetStateProperty.all(0),
@@ -57,5 +69,4 @@ abstract class DarkThemeStyles
   static AppBarTheme get appBarTheme => const AppBarTheme();
   static DialogThemeData get dialogTheme => const DialogThemeData();
   static BottomSheetThemeData get bottomSheetTheme => const BottomSheetThemeData();
-
 }

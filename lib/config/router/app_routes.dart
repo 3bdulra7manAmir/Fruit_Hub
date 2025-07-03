@@ -2,10 +2,21 @@ abstract class AppRoutes
 {
   AppRoutes._();
 
-  /// [Splash]
-  // Splash
+  /// [OnBoarding]
+  
+  // [Splash]
   static const splash = '/splash';
-  // onboarding1
+  // [Dots Indicator]
   static const dotIndicator = '/dots_indicator';
+
+
+  /// [Auth]
+  
+  // [Login]
+  static const login = '/login';
+
+  /// [Home]
+  // [Home]
+  static const home = '/home';
 
 }

@@ -9,7 +9,7 @@ abstract class AppStyles
 {
   AppStyles._();
 
-  /// Size= [23] Weight= [w900], Color= [_0D0D12],
+  /// Size= [23] Weight= [w900], Color= [_0C0D0D],
   static TextStyle extraBlack({
     double? fontSize,
     FontWeight? fontWeight,
@@ -31,6 +31,29 @@ abstract class AppStyles
     );
 
   }
+
+  /// Size= [19] Weight= [w700], Color= [_0C0D0D],
+  static TextStyle extraBold({
+    double? fontSize,
+    FontWeight? fontWeight,
+    Color? fontColor,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    Color? textDecorationColor,
+    TextOverflow? textOverflow,
+  })
+  {
+    return TextStyle(
+      fontSize: fontSize ?? AppFontSizes.xMeduim.sp,
+      fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+      color: fontColor ?? AppColors.color.kBlack001,
+      fontFamily: fontFamily ?? AppFonts.font.fontName,
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+    );
+  }
+
   /// Size= [16] Weight= [w700], Color= [_FFFFFF],
   static TextStyle bold({
     double? fontSize,
@@ -52,6 +75,7 @@ abstract class AppStyles
       overflow: textOverflow ?? TextOverflow.ellipsis,
     );
   }
+
   /// Size= [13] Weight= [w600], Color= [_4E5556],
   static TextStyle semiBold({
     double? fontSize,

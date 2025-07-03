@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../config/theme/color_manager/colors.dart';
 import '../constants/app_sizes.dart';
 
 class CustomDivider extends StatelessWidget
@@ -15,8 +16,8 @@ class CustomDivider extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Divider(
-      //color: color ?? AppColors.color.kGrey005, //HERE
-      thickness: thickness ?? (Sizes.size2).h,
+      color: color ?? AppColors.color.kGrey005, //HERE
+      thickness: thickness ?? (Sizes.size1).h,
       indent: indent,
       endIndent: endIndent,
     );

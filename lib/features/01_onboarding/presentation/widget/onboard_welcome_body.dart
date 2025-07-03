@@ -2,13 +2,13 @@ import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../config/localization/app_localizations.dart';
-import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_images.dart';
-import '../../../../../core/constants/app_sizes.dart';
-import 'background_color_widget.dart';
-import 'fruit_pack_image_widget.dart';
-import 'welcome_text_widget.dart';
+import '../../../../config/localization/app_localizations.dart';
+import '../../../../config/theme/color_manager/colors.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_sizes.dart';
+import 'onboard_welcome/background_color.dart';
+import 'onboard_welcome/fruit_pack_image.dart';
+import 'onboard_welcome/welcome_text.dart';
 
 class OnboardingWelcome extends StatelessWidget
 {

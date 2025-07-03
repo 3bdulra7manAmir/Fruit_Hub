@@ -1,5 +1,5 @@
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:e_commerce_app/features/01_onboarding/presentation/widget/onboarding2/start_now_button_widget.dart';
+import 'package:e_commerce_app/features/01_onboarding/presentation/widget/onboard_search_and_shop/start_now_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,8 +8,8 @@ import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../controller/dot_indicator_controller.dart';
-import '../widget/onboarding1/onboarding_view.dart';
-import '../widget/onboarding2/onboarding_view.dart';
+import '../widget/onboard_welcome_body.dart';
+import '../widget/onboard_search_and_shop_body.dart';
 
 class DotIndicator extends ConsumerWidget
 {
@@ -21,7 +21,8 @@ class DotIndicator extends ConsumerWidget
     final currentPage = ref.watch(dotIndicatorProvider);
     return Scaffold(
       body: Column(
-        children: [
+        children:
+        [
           Expanded(
             child: PageView(
               onPageChanged: (index) => ref.read(dotIndicatorProvider.notifier).set(index),

@@ -97,17 +97,17 @@ abstract class S {
     Locale('en'),
   ];
 
-  /// No description provided for @welcomeIn.
-  ///
-  /// In en, this message translates to:
-  /// **'Welcome In'**
-  String get welcomeIn;
-
   /// No description provided for @error.
   ///
   /// In en, this message translates to:
   /// **'Error'**
   String get error;
+
+  /// No description provided for @welcomeIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome In'**
+  String get welcomeIn;
 
   /// No description provided for @onBoardingDescription.
   ///
@@ -115,23 +115,137 @@ abstract class S {
   /// **'Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality.'**
   String get onBoardingDescription;
 
-  /// No description provided for @searchAndShop.
-  ///
-  /// In en, this message translates to:
-  /// **'Search and shop'**
-  String get searchAndShop;
-
   /// No description provided for @onBoarding2Description.
   ///
   /// In en, this message translates to:
   /// **'We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.'**
   String get onBoarding2Description;
 
+  /// No description provided for @searchAndShop.
+  ///
+  /// In en, this message translates to:
+  /// **'Search and shop'**
+  String get searchAndShop;
+
   /// No description provided for @startNow.
   ///
   /// In en, this message translates to:
   /// **'Start now'**
   String get startNow;
+
+  /// No description provided for @emailIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is required'**
+  String get emailIsRequired;
+
+  /// No description provided for @enterEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter email'**
+  String get enterEmail;
+
+  /// No description provided for @invalidEmailSymbol.
+  ///
+  /// In en, this message translates to:
+  /// **'Email must contain \'@\' symbol.'**
+  String get invalidEmailSymbol;
+
+  /// No description provided for @invalidEmailDomain.
+  ///
+  /// In en, this message translates to:
+  /// **'Email must end with a valid domain (e.g., .com, .org).'**
+  String get invalidEmailDomain;
+
+  /// No description provided for @validateFailureEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Error validating email:'**
+  String get validateFailureEmail;
+
+  /// No description provided for @fullNameIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name is required.'**
+  String get fullNameIsRequired;
+
+  /// No description provided for @invalidFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid full name.'**
+  String get invalidFullName;
+
+  /// No description provided for @validateFailureFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Validation failed for full name:'**
+  String get validateFailureFullName;
+
+  /// No description provided for @passwordIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Password is required'**
+  String get passwordIsRequired;
+
+  /// No description provided for @invalidPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid Password'**
+  String get invalidPassword;
+
+  /// No description provided for @passwordLength8Character.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 8 characters long.'**
+  String get passwordLength8Character;
+
+  /// No description provided for @passwordOneUpperCase.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one uppercase letter.'**
+  String get passwordOneUpperCase;
+
+  /// No description provided for @passwordOneLowerCase.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one lowercase letter.'**
+  String get passwordOneLowerCase;
+
+  /// No description provided for @passwordOneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one number.'**
+  String get passwordOneNumber;
+
+  /// No description provided for @passwordOneSpecialCharacter.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one special character.'**
+  String get passwordOneSpecialCharacter;
+
+  /// No description provided for @validateFailurePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Error validating password:'**
+  String get validateFailurePassword;
+
+  /// No description provided for @phoneNumberIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number is required'**
+  String get phoneNumberIsRequired;
+
+  /// No description provided for @invalidPhoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid phone number'**
+  String get invalidPhoneNumber;
+
+  /// No description provided for @unsupportedPhoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Un-Supported phone number'**
+  String get unsupportedPhoneNumber;
 }
 
 class _SDelegate extends LocalizationsDelegate<S> {

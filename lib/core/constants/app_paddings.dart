@@ -36,8 +36,8 @@ class Directional
 {
   Directional._();
 
-  /// 8px start,, 8px top,, 16px bottom
-  EdgeInsetsDirectional get xXSmall => EdgeInsetsDirectional.only(start: 8.w, top: 8.h, bottom: 16.h);
+  /// 16px From End
+  EdgeInsetsDirectional get smallEnd => EdgeInsetsDirectional.only(end: 16.w,);
 
 }
 

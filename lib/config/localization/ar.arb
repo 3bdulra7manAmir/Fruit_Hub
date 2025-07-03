@@ -4,9 +4,30 @@
 
   "welcomeIn": "مرحبًا بك في",
   "onBoardingDescription": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
-  
+  "onBoarding2Description": "نُقدِّم لك نخبة مختارة من أفضل الفواكه. تصفّح التفاصيل والصور والتقييمات لتختار الفاكهة المثالية بثقة.",
   "searchAndShop": "ابحث وتسوق",
-  "onBoarding2Description": "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
-  "startNow": "ابدأ الان"
+  "startNow": "ابدأ الآن",
 
+  "emailIsRequired": "البريد الإلكتروني مطلوب",
+  "enterEmail": "أدخل البريد الإلكتروني",
+  "invalidEmailSymbol": "يجب أن يحتوي البريد الإلكتروني على رمز '@'.",
+  "invalidEmailDomain": "يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).",
+  "validateFailureEmail": "خطأ في التحقق من البريد الإلكتروني:",
+
+  "fullNameIsRequired": "الاسم الكامل مطلوب.",
+  "invalidFullName": "يرجى إدخال اسم كامل صالح.",
+  "validateFailureFullName": "فشل التحقق من الاسم الكامل:",
+
+  "passwordIsRequired": "كلمة المرور مطلوبة",
+  "invalidPassword": "كلمة المرور غير صالحة",
+  "passwordLength8Character": "يجب أن تكون كلمة المرور مكونة من ٨ أحرف على الأقل.",
+  "passwordOneUpperCase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.",
+  "passwordOneLowerCase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.",
+  "passwordOneNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.",
+  "passwordOneSpecialCharacter": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.",
+  "validateFailurePassword": "خطأ في التحقق من كلمة المرور:",
+
+  "phoneNumberIsRequired": "رقم الهاتف مطلوب",
+  "invalidPhoneNumber": "رقم الهاتف غير صالح",
+  "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً"
 }

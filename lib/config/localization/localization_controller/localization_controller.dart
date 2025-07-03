@@ -10,13 +10,13 @@ class LocaleNotifier extends _$LocaleNotifier
   @override
   Locale build()
   {
-    log("Default Localization is : EN");
-    return const Locale('ar'); // default is English
+    log("Default Localization is : ar");
+    return const Locale('ar'); // default is Ar
   } 
   
   void toggle()
   {
-    state = state.languageCode == 'en'
+    state = state.languageCode == 'ar'
       ? const Locale('ar')
     : const Locale('en');
   }

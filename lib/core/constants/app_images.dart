@@ -21,6 +21,14 @@ class _Icons
 
   /// [OnBoarding2]
   final String pineapple = "assets/icons/OnBoarding/Pineapple.svg";
+
+  /// [Login]
+  final String rightBlackArrow = "assets/icons/Login/Right_Black_Arrow.svg";
+  final String eyeGrey = "assets/icons/Login/Eye_Grey.svg";
+
+  final String google = "assets/icons/Login/Google.svg";
+  final String apple = "assets/icons/Login/Apple.svg";
+  final String facebook = "assets/icons/Login/Facebook.svg";
 }
 
 ///-----------------------------------------------------------------//

@@ -1,10 +1,33 @@
 {
   "@@locale": "en",
-  "welcomeIn": "Welcome In",
   "error": "Error",
-  "onBoardingDescription": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality.",
-  "searchAndShop": "Search and shop",
-  "onBoarding2Description": "We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.",
-  "startNow": "Start now"
 
+  "welcomeIn": "Welcome In",
+  "onBoardingDescription": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality.",
+  "onBoarding2Description": "We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.",
+  "searchAndShop": "Search and shop",
+  "startNow": "Start now",
+
+  "emailIsRequired": "Email is required",
+  "enterEmail": "Enter email",
+  "invalidEmailSymbol": "Email must contain '@' symbol.",
+  "invalidEmailDomain": "Email must end with a valid domain (e.g., .com, .org).",
+  "validateFailureEmail": "Error validating email:",
+
+  "fullNameIsRequired": "Full name is required.",
+  "invalidFullName": "Please enter a valid full name.",
+  "validateFailureFullName": "Validation failed for full name:",
+
+  "passwordIsRequired": "Password is required",
+  "invalidPassword": "Invalid Password",
+  "passwordLength8Character": "Password must be at least 8 characters long.",
+  "passwordOneUpperCase": "Password must contain at least one uppercase letter.",
+  "passwordOneLowerCase": "Password must contain at least one lowercase letter.",
+  "passwordOneNumber": "Password must contain at least one number.",
+  "passwordOneSpecialCharacter": "Password must contain at least one special character.",
+  "validateFailurePassword": "Error validating password:",
+
+  "phoneNumberIsRequired": "Phone number is required",
+  "invalidPhoneNumber": "Invalid phone number",
+  "unsupportedPhoneNumber": "Un-Supported phone number"
 }

@@ -18,7 +18,7 @@ class StartNowButtonWidget extends StatelessWidget
     onPressed: ()
     {
       log("Start Now");
-      AppRouter.router.pushReplacement(AppRoutes.splash);
+      AppRouter.router.pushReplacement(AppRoutes.login);
     },);
   }
 }

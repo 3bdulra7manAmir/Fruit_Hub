@@ -87,5 +87,6 @@ flutter:
     - assets/icons/App_Icon/
     - assets/icons/Splash/
     - assets/icons/OnBoarding/
+    - assets/icons/Login/
 
     - assets/jsons/
