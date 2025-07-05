@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ForgetPasswordPhone extends StatelessWidget
+class PasswordRecoveryPhone extends StatelessWidget
 {
-  const ForgetPasswordPhone({super.key});
+  const PasswordRecoveryPhone({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -12,7 +12,7 @@ class ForgetPasswordPhone extends StatelessWidget
       body: Column(
         children:
         [
-
+          
         ],
       ),
     );

@@ -37,6 +37,7 @@ class Register extends StatelessWidget
             RegisterButton(),
             Sizes.size26.verticalSpace,
             AlreadyHasAnAccountWidget(),
+            Sizes.size16.verticalSpace,
           ],
         ).marginSymmetric(horizontal: 16.w),
       ),
