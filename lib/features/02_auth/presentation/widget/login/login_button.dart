@@ -1,5 +1,6 @@
-import 'dart:developer';
+// ignore_for_file: unused_import
 
+import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/router/app_router.dart';
@@ -15,7 +16,7 @@ class LoginButtonWidget extends StatelessWidget
   {
     return CustomButton(
       text: "تسجيل دخول",
-      onPressed: (){ log("Login Pressed..."); AppRouter.router.pushNamed(AppRoutes.home); },
+      onPressed: (){ log("Login Pressed...");  },  //AppRouter.router.pushNamed(AppRoutes.home);
     );
   }
 }

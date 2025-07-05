@@ -14,6 +14,8 @@ abstract class AppRoutes
   
   // [Login]
   static const login = '/login';
+  // [Login]
+  static const register = '/register';
 
   /// [Home]
   // [Home]

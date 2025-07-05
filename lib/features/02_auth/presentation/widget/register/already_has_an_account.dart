@@ -7,9 +7,9 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
 
-class DontHaveAccountWidget extends StatelessWidget
+class AlreadyHasAnAccountWidget extends StatelessWidget
 {
-  const DontHaveAccountWidget({super.key});
+  const AlreadyHasAnAccountWidget({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -18,15 +18,15 @@ class DontHaveAccountWidget extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.center,
       children:
       [
-        Text("لا تمتلك حساب؟", style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
+        Text("تمتلك حساب بالفعل؟", style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
         Text(" ", style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
         GestureDetector(
           onTap: ()
           {
-            log("Create Account Pressed...");
-            AppRouter.router.pushNamed(AppRoutes.register);
+            log("Login Pressed...");
+            AppRouter.router.pushNamed(AppRoutes.login);
           },
-          child: Text("قم بإنشاء حساب", style: AppStyles.bold(fontColor: AppColors.color.kGreen001, fontWeight: AppFontWeights.semiBoldWeight),)
+          child: Text("تسجيل دخول", style: AppStyles.bold(fontColor: AppColors.color.kGreen001, fontWeight: AppFontWeights.semiBoldWeight),)
         ),
       ],
     );

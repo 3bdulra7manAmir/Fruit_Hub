@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../config/router/app_router.dart';
 import '../../constants/app_images.dart';
+import '../../constants/app_styles.dart';
 
 class AuthAppBar extends StatelessWidget implements PreferredSizeWidget
 {
@@ -14,7 +16,7 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget
     this.isDefaultBack,
     this.barLeading,
     this.barLeadingWidth,
-    this.barTitle,
+    required this.barTitle,
     this.barActions,
     this.barActionsPadding,
     this.isPaddingTop,
@@ -25,7 +27,7 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget
   final bool? isDefaultBack;
   final Widget? barLeading;
   final double? barLeadingWidth;
-  final Widget? barTitle;
+  final String barTitle;
   final List<Widget>? barActions;
   final EdgeInsetsGeometry? barActionsPadding;
   final bool? isPaddingTop;
@@ -38,16 +40,31 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget
       backgroundColor: backgroundColor,
       automaticallyImplyLeading: isDefaultBack ?? false,
       leading: GestureDetector(
-        onTap: () => AppRouter.router.pop(),
+        onTap: leadingOnTap,
         child: barLeading ?? SvgPicture.asset(AppAssets.icons.rightBlackArrow,)
       ),
       leadingWidth: barLeadingWidth ?? 44.w,
-      title: barTitle,
+      title: Text(barTitle, style: AppStyles.extraBold(),),
       centerTitle: true,
       actions: barActions,
       actionsPadding: barActionsPadding,
     ).marginDirectional(start: 16.w, top: 11.h);
   }
+
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight + (toolbarHeight ?? 0));
+
+  void leadingOnTap()
+  {
+    try
+    {
+      log("Trying to Pop...");
+      AppRouter.router.pop();
+    }
+    catch (err, stack)
+    {
+      log("Error While Poping: $err ,, Stack: $stack");
+      return;
+    }
+  }
 }

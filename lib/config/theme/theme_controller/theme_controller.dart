@@ -10,7 +10,7 @@ class ThemeModeNotifier extends _$ThemeModeNotifier
   @override
   ThemeMode build() 
   {
-    log("Theme Mode Default is: Light");
+    log("Default Theme Mode is: Light");
     return ThemeMode.light; // Default is Light
   }
 

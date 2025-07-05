@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:e_commerce_app/core/extensions/widget_iterator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,7 +10,6 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/widgets/buttons/custom_icon_button.dart';
 
 class OtherOptionWidget extends StatelessWidget
 {
@@ -22,9 +22,24 @@ class OtherOptionWidget extends StatelessWidget
       children:
       [
         ...[
-          OtherOptionCardWidget(text: 'تسجيل بواسطة جوجل',  logo: AppAssets.icons.google,),
-          OtherOptionCardWidget(text: 'تسجيل بواسطة أبل',  logo: AppAssets.icons.apple,),
-          OtherOptionCardWidget(text: 'تسجيل بواسطة فيسبوك',  logo: AppAssets.icons.facebook,),
+          GestureDetector(
+            onTap: () {
+              log("Google");
+            },
+            child: OtherOptionCardWidget(text: 'تسجيل بواسطة جوجل',  logo: AppAssets.icons.google,)
+          ),
+          GestureDetector(
+            onTap: () {
+              log("Apple");
+            },
+            child: OtherOptionCardWidget(text: 'تسجيل بواسطة أبل',  logo: AppAssets.icons.apple,)
+          ),
+          GestureDetector(
+            onTap: () {
+              log("Facebook");
+            },
+            child: OtherOptionCardWidget(text: 'تسجيل بواسطة فيسبوك',  logo: AppAssets.icons.facebook,)
+          ),
         ].addSeparator(child: Sizes.size16.verticalSpace),
       ],
     );

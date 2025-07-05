@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/appbars/auth_appbar.dart';
+//import '../../../../core/widgets/appbars/auth_appbar.dart';
 
 class Home extends StatelessWidget
 {
@@ -10,7 +10,7 @@ class Home extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: AuthAppBar(),
+      //appBar: AuthAppBar(),
       body: Column(
         children:
         [
