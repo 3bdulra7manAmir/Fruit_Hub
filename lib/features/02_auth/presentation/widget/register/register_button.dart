@@ -2,9 +2,9 @@ import 'dart:developer';
 import 'package:e_commerce_app/core/widgets/buttons/custom_button.dart';
 import 'package:flutter/material.dart';
 
-class RegisterButton extends StatelessWidget
+class RegisterButtonWidget extends StatelessWidget
 {
-  const RegisterButton({super.key, required this.formKey});
+  const RegisterButtonWidget({super.key, required this.formKey});
   final GlobalKey<FormState> formKey;
 
   @override

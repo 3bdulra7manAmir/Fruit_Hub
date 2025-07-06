@@ -1,11 +1,13 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/widgets/buttons/custom_button.dart';
 
-class ForgetPasswordButton extends StatelessWidget
+class ForgetPasswordButtonWidget extends StatelessWidget
 {
-  const ForgetPasswordButton({super.key, required, required this.formKey});
+  const ForgetPasswordButtonWidget({super.key, required, required this.formKey});
 
   final GlobalKey<FormState> formKey;
 
@@ -17,7 +19,7 @@ class ForgetPasswordButton extends StatelessWidget
       if (!formKey.currentState!.validate())
         {
           log("Valid ForgetPassword...");
-          //AppRouter.router.pushNamed(AppRoutes.home);
+          AppRouter.router.pushNamed(AppRoutes.passwordRecoveryEmail);
         }
         else
         {

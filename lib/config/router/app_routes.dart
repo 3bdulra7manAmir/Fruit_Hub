@@ -14,10 +14,14 @@ abstract class AppRoutes
   
   // [Login]
   static const login = '/login';
-  // [Login]
+  // [register]
   static const register = '/register';
-  // [Login]
+  // [Forget Password Phone]
   static const forgetPasswordPhone = '/forgetPasswordPhone';
+  // [Password Recovery Email]
+  static const passwordRecoveryEmail = '/passwordRecoveryEmail';
+  // [New Password]
+  static const newPassword = '/newPassword';
 
   /// [Home]
   // [Home]

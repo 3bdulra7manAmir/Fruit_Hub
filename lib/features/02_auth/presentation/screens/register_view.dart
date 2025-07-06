@@ -38,7 +38,7 @@ class Register extends StatelessWidget
               Sizes.size16.verticalSpace,
               RegisterTermsWidget(),
               Sizes.size30.verticalSpace,
-              RegisterButton(formKey: registerFormKey,),
+              RegisterButtonWidget(formKey: registerFormKey,),
               Sizes.size26.verticalSpace,
               AlreadyHasAnAccountWidget(),
               Sizes.size16.verticalSpace,

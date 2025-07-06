@@ -32,7 +32,7 @@ class ForgetPasswordPhone extends StatelessWidget
               Sizes.size30.verticalSpace,
               PhoneNumberFormFieldWidget(),
               Sizes.size30.verticalSpace,
-              ForgetPasswordButton(formKey: forgetPasswordPhoneFormKey,),
+              ForgetPasswordButtonWidget(formKey: forgetPasswordPhoneFormKey,),
               Sizes.size16.verticalSpace,
             ],
           ).marginSymmetric(horizontal: 16.w),
