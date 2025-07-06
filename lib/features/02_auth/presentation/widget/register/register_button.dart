@@ -1,6 +1,7 @@
 import 'dart:developer';
-import 'package:e_commerce_app/core/widgets/buttons/custom_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/widgets/buttons/custom_button.dart';
 
 class RegisterButtonWidget extends StatelessWidget
 {
