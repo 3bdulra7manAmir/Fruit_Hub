@@ -20,7 +20,7 @@ class DidForgetPasswordWidget extends StatelessWidget
       onTap: ()
       {
         log("Forget Password? Pressed");
-        //AppRouter.router.pushNamed(AppRoutes.forgetPassword);
+        AppRouter.router.pushNamed(AppRoutes.forgetPasswordPhone);
       },
       child: Text(
         "نسيت كلمة المرور؟", 
