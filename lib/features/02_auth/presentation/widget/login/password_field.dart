@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/custom_textform_field.dart';
 
 class LoginPasswordWidget extends StatelessWidget
@@ -16,9 +17,11 @@ class LoginPasswordWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
+      validator: (value) => AppValidation.passwordValidation(value, context),
       hintText: "كلمة المرور",
       suffixIcon: GestureDetector(
-        onTap: () {
+        onTap: ()
+        {
           log("Eye");
         },
         child: SvgPicture.asset(AppAssets.icons.eyeGrey,).paddingDirectionalOnly(end: 30.w,),

@@ -9,14 +9,27 @@ import '../../../../../core/widgets/buttons/custom_button.dart';
 
 class LoginButtonWidget extends StatelessWidget
 {
-  const LoginButtonWidget({super.key});
+  const LoginButtonWidget({super.key, required this.formKey});
+  final GlobalKey<FormState> formKey;
 
   @override
   Widget build(BuildContext context)
   {
     return CustomButton(
       text: "تسجيل دخول",
-      onPressed: (){ log("Login Pressed...");  },  //AppRouter.router.pushNamed(AppRoutes.home);
+      onPressed: ()
+      {
+        log("Login Pressed...");
+        if (!formKey.currentState!.validate())
+        {
+          log("Valid Login...");
+          //AppRouter.router.pushNamed(AppRoutes.home);
+        }
+        else
+        {
+          log("InValid Login...");
+        }
+      },  
     );
   }
 }

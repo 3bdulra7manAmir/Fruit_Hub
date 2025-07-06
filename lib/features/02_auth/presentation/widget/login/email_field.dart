@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/custom_textform_field.dart';
 
 class LoginEmailWidget extends StatelessWidget
@@ -9,6 +10,9 @@ class LoginEmailWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return CustomTextFormField(hintText: "البريد الإلكتروني",);
+    return CustomTextFormField(
+      hintText: "البريد الإلكتروني",
+      validator: (value) => AppValidation.emailValidation(value, context),
+    );
   }
 }
