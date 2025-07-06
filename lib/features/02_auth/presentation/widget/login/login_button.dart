@@ -19,7 +19,6 @@ class LoginButtonWidget extends StatelessWidget
       text: "تسجيل دخول",
       onPressed: ()
       {
-        log("Login Pressed...");
         if (!formKey.currentState!.validate())
         {
           log("Valid Login...");

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../config/theme/color_manager/colors.dart';
 import '../../config/theme/font_manager/font_weights.dart';
@@ -52,7 +51,7 @@ class CustomTextFormField extends StatelessWidget
   Widget build(BuildContext context)
   {
     return SizedBox(
-      height: height ?? 56.h, width: width ?? double.infinity,
+      height: height, width: width ?? double.infinity,
       child: TextFormField(
         enabled: isEnabled,
         keyboardType: keyboardType,

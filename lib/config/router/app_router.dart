@@ -45,7 +45,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.register,
         name: AppRoutes.register,
-        builder: (context, state) => const Register(),
+        builder: (context, state) => Register(),
       ),
     ]
   );

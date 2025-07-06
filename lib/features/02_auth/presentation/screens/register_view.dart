@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/widgets/app_form.dart';
 import '../../../../core/widgets/appbars/auth_appbar.dart';
 import '../widget/register/already_has_an_account.dart';
 import '../widget/register/email_field.dart';
@@ -13,7 +14,8 @@ import '../widget/register/register_terms.dart';
 
 class Register extends StatelessWidget
 {
-  const Register({super.key});
+   Register({super.key});
+  final GlobalKey<FormState> registerFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context)
@@ -22,24 +24,27 @@ class Register extends StatelessWidget
       appBar: AuthAppBar(barTitle: "حساب جديد",),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: Column(
-          children:
-          [
-            Sizes.size24.verticalSpace,
-            RegisterFullNameWidget(),
-            Sizes.size16.verticalSpace,
-            RegisterEmailWidget(),
-            Sizes.size16.verticalSpace,
-            RegisterPasswordWidget(),
-            Sizes.size16.verticalSpace,
-            RegisterTermsWidget(),
-            Sizes.size30.verticalSpace,
-            RegisterButton(),
-            Sizes.size26.verticalSpace,
-            AlreadyHasAnAccountWidget(),
-            Sizes.size16.verticalSpace,
-          ],
-        ).marginSymmetric(horizontal: 16.w),
+        child: AppForm(
+          formKey: registerFormKey,
+          formBody: Column(
+            children:
+            [
+              Sizes.size24.verticalSpace,
+              RegisterFullNameWidget(),
+              Sizes.size16.verticalSpace,
+              RegisterEmailWidget(),
+              Sizes.size16.verticalSpace,
+              RegisterPasswordWidget(),
+              Sizes.size16.verticalSpace,
+              RegisterTermsWidget(),
+              Sizes.size30.verticalSpace,
+              RegisterButton(formKey: registerFormKey,),
+              Sizes.size26.verticalSpace,
+              AlreadyHasAnAccountWidget(),
+              Sizes.size16.verticalSpace,
+            ],
+          ).marginSymmetric(horizontal: 16.w),
+        ),
       ),
     );
   }

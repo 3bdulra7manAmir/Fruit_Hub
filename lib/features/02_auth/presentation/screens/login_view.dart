@@ -16,7 +16,7 @@ import '../widget/login/password_field.dart';
 class Login extends StatelessWidget
 {
   Login({super.key});
-  final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context)
@@ -26,7 +26,7 @@ class Login extends StatelessWidget
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
-          formKey: loginEmailFormKey,
+          formKey: loginFormKey,
           formBody: Column(
             children:
             [
@@ -37,7 +37,7 @@ class Login extends StatelessWidget
               Sizes.size16.verticalSpace,
               DidForgetPasswordWidget(),
               Sizes.size33.verticalSpace,
-              LoginButtonWidget(formKey: loginEmailFormKey,),
+              LoginButtonWidget(formKey: loginFormKey,),
               Sizes.size33.verticalSpace,
               DontHaveAccountWidget(),
               Sizes.size33.verticalSpace,

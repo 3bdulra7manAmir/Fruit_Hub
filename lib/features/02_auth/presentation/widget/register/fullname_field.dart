@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/custom_textform_field.dart';
 
 class RegisterFullNameWidget extends StatelessWidget
@@ -9,6 +10,9 @@ class RegisterFullNameWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return CustomTextFormField(hintText: "الاسم كامل",);
+    return CustomTextFormField(
+      validator: (value) => AppValidation.fullNameValidation(value, context),
+      hintText: "الاسم كامل",
+    );
   }
 }

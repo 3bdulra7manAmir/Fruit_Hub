@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class RegisterButton extends StatelessWidget
 {
-  const RegisterButton({super.key});
+  const RegisterButton({super.key, required this.formKey});
+  final GlobalKey<FormState> formKey;
 
   @override
   Widget build(BuildContext context)
@@ -13,7 +14,15 @@ class RegisterButton extends StatelessWidget
       text: "إنشاء حساب جديد",
       onPressed: ()
       {
-        log("Register Has been PRESSED...");
+        if (!formKey.currentState!.validate())
+        {
+          log("Valid Register...");
+          //AppRouter.router.pushNamed(AppRoutes.home);
+        }
+        else
+        {
+          log("InValid Register...");
+        }
       },
     );
   }
