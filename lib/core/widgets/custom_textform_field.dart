@@ -19,6 +19,7 @@ class CustomTextFormField extends StatelessWidget
     this.validator,
     this.onSubmitted,
     this.hintText,
+    this.hintTextDirection,
     this.hintStyle,
     this.prefixIcon,
     this.suffixIcon,
@@ -39,6 +40,7 @@ class CustomTextFormField extends StatelessWidget
   final String? Function(String?)? validator;
   final void Function(String)? onSubmitted;
   final String? hintText;
+  final TextDirection? hintTextDirection;
   final TextStyle? hintStyle;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
@@ -62,6 +64,7 @@ class CustomTextFormField extends StatelessWidget
         onFieldSubmitted: onSubmitted,
         decoration: InputDecoration(
           hintText: hintText,
+          hintTextDirection: hintTextDirection,
           hintStyle: hintStyle ?? AppStyles.semiBold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.boldWeight),
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,

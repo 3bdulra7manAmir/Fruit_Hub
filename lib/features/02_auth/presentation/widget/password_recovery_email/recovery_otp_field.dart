@@ -53,55 +53,58 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
   @override
   Widget build(BuildContext context)
   {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(widget.otpLength, (index)
-      {
-        return Container(
-          width: 74.w,
-          margin: const EdgeInsets.symmetric(horizontal: 6),
-          decoration: BoxDecoration(
-            color: AppColors.color.kGrey004,
-            borderRadius: AppRadiuses.circular.xXXSmall,
-            border: Border.all(color: AppColors.color.kGrey003),
-          ),
-          child: TextFormField(
-            controller: controllers[index],
-            focusNode: focusNodes[index],
-            textAlign: TextAlign.center,
-            maxLength: 1,
-            keyboardType: TextInputType.number,
-            style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),
-            decoration: InputDecoration(
-              counterText: '',
-              enabledBorder: OutlineInputBorder(
-                borderRadius: AppRadiuses.circular.xXXSmall,
-                borderSide: BorderSide(color: AppColors.color.kGrey003),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: AppRadiuses.circular.xXXSmall,
-                borderSide: BorderSide(color: AppColors.color.kGrey003),
-              ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(widget.otpLength, (index)
+        {
+          return Container(
+            width: 74.w,
+            margin: const EdgeInsets.symmetric(horizontal: 6),
+            decoration: BoxDecoration(
+              color: AppColors.color.kGrey004,
+              borderRadius: AppRadiuses.circular.xXXSmall,
+              border: Border.all(color: AppColors.color.kGrey003),
             ),
-            onChanged: (value)
-            {
-              if (value.isNotEmpty)
+            child: TextFormField(
+              controller: controllers[index],
+              focusNode: focusNodes[index],
+              textAlign: TextAlign.center,
+              maxLength: 1,
+              keyboardType: TextInputType.number,
+              style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),
+              decoration: InputDecoration(
+                counterText: '',
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: AppRadiuses.circular.xXXSmall,
+                  borderSide: BorderSide(color: AppColors.color.kGrey003),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: AppRadiuses.circular.xXXSmall,
+                  borderSide: BorderSide(color: AppColors.color.kGrey003),
+                ),
+              ),
+              onChanged: (value)
               {
-                if (index < widget.otpLength - 1)
+                if (value.isNotEmpty)
                 {
-                  FocusScope.of(context).requestFocus(focusNodes[index + 1]);
+                  if (index < widget.otpLength - 1)
+                  {
+                    FocusScope.of(context).requestFocus(focusNodes[index + 1]);
+                  }
+                  else
+                  {
+                    final otp = controllers.map((c) => c.text).join();
+                    widget.onCompleted?.call(otp);
+                    FocusScope.of(context).unfocus();
+                  }
                 }
-                else
-                {
-                  final otp = controllers.map((c) => c.text).join();
-                  widget.onCompleted?.call(otp);
-                  FocusScope.of(context).unfocus();
-                }
-              }
-            },
-          ),
-        );
-      }),
+              },
+            ),
+          );
+        }),
+      ),
     );
   }
 }

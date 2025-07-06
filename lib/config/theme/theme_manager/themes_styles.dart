@@ -35,7 +35,7 @@ abstract class LightThemeStyles
   );
 
   static CardThemeData get cardTheme => const CardThemeData();
-  static AppBarTheme get appBarTheme => AppBarTheme(backgroundColor: AppColors.color.kWhite001);
+  static AppBarTheme get appBarTheme => AppBarTheme(backgroundColor: AppColors.color.kWhite001, surfaceTintColor: AppColors.color.kTransparent);
   static DialogThemeData get dialogTheme => const DialogThemeData();
   static BottomSheetThemeData get bottomSheetTheme => const BottomSheetThemeData();
 

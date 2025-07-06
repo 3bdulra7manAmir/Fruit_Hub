@@ -18,26 +18,28 @@ class SearchAndShop extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Column(
-      children:
-      [
-        Stack(
-          children:
-          [
-            BackgroundColorWidget(color: AppColors.color.kGreen002,),
-            FruitPackImageWidget(img: AppAssets.icons.pineapple,),
-          ],
-        ),
-        Sizes.size47.verticalSpace,
-        Column(
-          children:
-          [
-            Text(S.of(context)!.searchAndShop, style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),),
-            Sizes.size24.verticalSpace,
-            WelcomeTextWidget2(text: S.of(context)!.onBoarding2Description,),
-          ],
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children:
+        [
+          Stack(
+            children:
+            [
+              BackgroundColorWidget(color: AppColors.color.kGreen002,),
+              FruitPackImageWidget(img: AppAssets.icons.pineapple,),
+            ],
+          ),
+          Sizes.size47.verticalSpace,
+          Column(
+            children:
+            [
+              Text(S.of(context)!.searchAndShop, style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),),
+              Sizes.size24.verticalSpace,
+              WelcomeTextWidget2(text: S.of(context)!.onBoarding2Description,),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

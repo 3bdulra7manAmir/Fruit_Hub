@@ -17,6 +17,7 @@ abstract class Sizes
   static const double size34 = 34.0;
   static const double size43 = 43.0;
   static const double size47 = 47.0;
+  static const double size50 = 50;
   static const double size53 = 53.0;
-  //static const double size64 = 64;
+  static const double size64 = 64;
 }

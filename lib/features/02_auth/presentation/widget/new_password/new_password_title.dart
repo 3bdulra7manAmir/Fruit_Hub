@@ -12,7 +12,10 @@ class NewPasswordTitleWidget extends StatelessWidget
   {
     return Text(
       "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
-      style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.semiBoldWeight),
+      style: AppStyles.bold(
+        fontColor: AppColors.color.kBlack001, 
+        fontWeight: AppFontWeights.semiBoldWeight
+      ), maxLines: 2,
     );
   }
 }

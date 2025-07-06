@@ -8,6 +8,8 @@ void customAppDialog({
   MainAxisAlignment? actionsAlignment,
   Widget? content,
   List<Widget>? actions,
+  ShapeBorder? shape,
+  Color? backgroundColor,
   })
   {
     showDialog(
@@ -17,6 +19,8 @@ void customAppDialog({
       actionsAlignment: actionsAlignment,
       content: content,
       actions: actions,
+      shape: shape,
+      backgroundColor: backgroundColor,
     ),
   );
 }

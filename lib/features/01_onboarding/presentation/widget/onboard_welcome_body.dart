@@ -17,26 +17,28 @@ class OnboardingWelcome extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Column(
-      children:
-      [
-        Stack(
-          children:
-          [
-            BackgroundColorWidget(color: AppColors.color.kYellow001),
-            FruitPackImageWidget(img: AppAssets.icons.fruitPack,),
-          ],
-        ),
-        Sizes.size47.verticalSpace,
-        Column(
-          children:
-          [
-            const WelcomeTextWidget().marginSymmetric(horizontal: (76.5).w),
-            Sizes.size24.verticalSpace,
-            WelcomeTextWidget2(text: S.of(context)!.onBoardingDescription,),
-          ],
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children:
+        [
+          Stack(
+            children:
+            [
+              BackgroundColorWidget(color: AppColors.color.kYellow001),
+              FruitPackImageWidget(img: AppAssets.icons.fruitPack,),
+            ],
+          ),
+          Sizes.size47.verticalSpace,
+          Column(
+            children:
+            [
+              const WelcomeTextWidget(),
+              Sizes.size24.verticalSpace,
+              WelcomeTextWidget2(text: S.of(context)!.onBoardingDescription,),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

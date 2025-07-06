@@ -29,6 +29,7 @@ class DotIndicator extends ConsumerWidget
               children: const [ OnboardingWelcome(), SearchAndShop(), ],
             ),
           ),
+          Sizes.size16.verticalSpace,
           Indicator(currentPage: currentPage),
           Sizes.size29.verticalSpace,
           if (currentPage == 1)

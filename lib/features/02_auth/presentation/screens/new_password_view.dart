@@ -25,6 +25,7 @@ class NewPassword extends StatelessWidget
         child: AppForm(
           formKey: newPasswordFormKey,
           formBody: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
               Sizes.size24.verticalSpace,
