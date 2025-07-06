@@ -20,7 +20,7 @@ class NewPasswordButtonWidget extends StatelessWidget
         if (!formKey.currentState!.validate())
         {
           log("Create Password Has been Pressed...");
-          //AppRouter.router.pushReplacementNamed(AppRoutes.login);
+          AppRouter.router.pushReplacementNamed(AppRoutes.login);
         }
         else
         {
