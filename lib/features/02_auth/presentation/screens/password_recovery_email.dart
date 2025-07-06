@@ -23,6 +23,7 @@ class PasswordRecoveryEmail extends StatelessWidget
     return Scaffold(
       appBar: AuthAppBar(barTitle: "التحقق من الرمز",),
       body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
           formKey: passwordRecoveryFormKey,
           formBody: Column(

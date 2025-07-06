@@ -21,6 +21,7 @@ class NewPassword extends StatelessWidget
     return Scaffold(
       appBar: AuthAppBar(barTitle: "كلمة مرور جديدة"),
       body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
           formKey: newPasswordFormKey,
           formBody: Column(

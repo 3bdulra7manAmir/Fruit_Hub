@@ -14,7 +14,7 @@ import '../widget/register/register_terms.dart';
 
 class Register extends StatelessWidget
 {
-   Register({super.key});
+  Register({super.key});
   final GlobalKey<FormState> registerFormKey = GlobalKey<FormState>();
 
   @override
