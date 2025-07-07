@@ -7,10 +7,14 @@ class RegisterEmailWidget extends StatelessWidget
 {
   const RegisterEmailWidget({super.key});
 
+  static final TextEditingController emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
+      keyboardType: TextInputType.emailAddress,
+      controller: emailController,
       validator: (value) => AppValidation.emailValidation(value, context),
       hintText: "البريد الإلكتروني",
     );

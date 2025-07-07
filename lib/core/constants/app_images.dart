@@ -29,6 +29,10 @@ class _Icons
   final String google = "assets/icons/Login/Google.svg";
   final String apple = "assets/icons/Login/Apple.svg";
   final String facebook = "assets/icons/Login/Facebook.svg";
+
+  /// [New Password]
+  final String successGreen = "assets/icons/New_Password/Success_Green.svg";
+  final String removeBlack = "assets/icons/New_Password/Remove_Black.svg";
 }
 
 ///-----------------------------------------------------------------//

@@ -13,11 +13,15 @@ class FirstPasswordFieldWidget extends ConsumerWidget
 {
   const FirstPasswordFieldWidget({super.key});
 
+  static final TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
     final obscureProvider = ref.watch(firstObscurePasswordProvider);
     return CustomTextFormField(
+      controller: passwordController,
+      keyboardType: TextInputType.visiblePassword,
       validator: (value) => AppValidation.passwordValidation(value, context),
       hintText: "كلمة المرور الجديدة",
       obscureText: !obscureProvider,

@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/widgets/buttons/custom_button.dart';
+import 'email_field.dart';
+import 'password_field.dart';
 
 class LoginButtonWidget extends StatelessWidget
 {
-  const LoginButtonWidget({super.key, required this.formKey});
+  const LoginButtonWidget({super.key, required this.formKey,});
   final GlobalKey<FormState> formKey;
 
   @override
@@ -22,6 +24,9 @@ class LoginButtonWidget extends StatelessWidget
         if (!formKey.currentState!.validate())
         {
           log("Valid Login...");
+          final email = LoginEmailWidget.emailController.text;
+          final password = LoginPasswordWidget.passwordController.text;
+          log("$email \t $password");
           //AppRouter.router.pushNamed(AppRoutes.home);
         }
         else

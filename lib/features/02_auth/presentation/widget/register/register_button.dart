@@ -2,6 +2,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/buttons/custom_button.dart';
+import 'email_field.dart';
+import 'fullname_field.dart';
+import 'password_field.dart';
 
 class RegisterButtonWidget extends StatelessWidget
 {
@@ -18,7 +21,11 @@ class RegisterButtonWidget extends StatelessWidget
         if (!formKey.currentState!.validate())
         {
           log("Valid Register...");
-          //AppRouter.router.pushNamed(AppRoutes.home);
+          final fullname = RegisterFullNameWidget.fullNameController.text;
+          final email = RegisterEmailWidget.emailController.text;
+          final password = RegisterPasswordWidget.passwordController.text;
+          log("$fullname \t $email \t $password");
+          //AppRouter.router.pushNamed(AppRoutes.login);
         }
         else
         {
