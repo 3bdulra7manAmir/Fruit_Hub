@@ -32,6 +32,12 @@ class LightColorScheme extends ColorManagerBase
   @override
   /// [_616A6B]
   Color get kGrey006 => const Color(0xff616A6B);
+  @override
+  /// [_D9D9D9]
+  Color get kGrey007 => const Color(0xffD9D9D9);
+  @override
+  /// [_F3F5F7]
+  Color get kGrey008 => const Color(0xffF3F5F7);
   
   // Black Color Range
   @override
@@ -60,6 +66,9 @@ class LightColorScheme extends ColorManagerBase
   @override
   /// [_F4A91F]
   Color get kOrange001 => const Color(0xffF4A91F);
+  @override
+  /// [_F8C76D]
+  Color get kOrange002 => const Color(0xffF8C76D);
   
 
   // Yellow Color Range

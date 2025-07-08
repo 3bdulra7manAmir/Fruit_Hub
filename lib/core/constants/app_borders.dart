@@ -15,16 +15,11 @@ class BorderOnly
   BorderOnly._();
 
   ///[topLeft: 12.r ,, topRight: 12.r]
-  BorderRadiusGeometry get xSmall2 => BorderRadius.only(
-    topLeft: Radius.circular(12.r),
-    topRight: Radius.circular(12.r),
+  BorderRadiusGeometry get xSmall => BorderRadius.only(
+    bottomRight: Radius.circular(4.r),
+    topRight: Radius.circular(4.r),
   );
 
-  ///[topLeft: 16.r ,, topRight: 16.r]
-  BorderRadiusGeometry get meduim => BorderRadius.only(
-    topLeft: Radius.circular(16.r),
-    topRight: Radius.circular(16.r),
-  );
 }
 
 

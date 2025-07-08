@@ -1,3 +1,8 @@
+import 'dart:developer';
+
+import 'package:e_commerce_app/config/theme/color_manager/colors.dart';
+import 'package:e_commerce_app/config/theme/font_manager/font_weights.dart';
+import 'package:e_commerce_app/core/constants/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class MostSoldWidget extends StatelessWidget
@@ -7,6 +12,20 @@ class MostSoldWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container();
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children:
+      [
+        Text("الأكثر مبيعًا", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        GestureDetector(
+          onTap: () {log("More has been Pressed...");},
+          child: Text("المزيد", style: AppStyles.semiBold(
+            fontColor: AppColors.color.kGrey002,
+            fontWeight: AppFontWeights.regularWeight,
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

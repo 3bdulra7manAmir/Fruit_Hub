@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_borders.dart';
 import '../color_manager/colors.dart';
 
@@ -44,7 +45,15 @@ abstract class LightThemeStyles
     );
   }
 
-  static CardThemeData get cardTheme => const CardThemeData();
+  static CardThemeData get cardTheme => CardThemeData(
+    color: AppColors.color.kWhite001,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadiusGeometry.directional(
+        topStart: Radius.circular(4.r),
+        bottomStart: Radius.circular(4.r),
+      )
+    )
+  );
   static AppBarTheme get appBarTheme => AppBarTheme(backgroundColor: AppColors.color.kWhite001, surfaceTintColor: AppColors.color.kTransparent);
   static DialogThemeData get dialogTheme => DialogThemeData(
     backgroundColor: AppColors.color.kWhite001,

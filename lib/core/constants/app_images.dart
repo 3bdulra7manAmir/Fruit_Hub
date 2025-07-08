@@ -51,5 +51,6 @@ class _IMGs
 
   ///[Home]
   final String user = "assets/imgs/Home/User.png";
+  final String fruitCard = "assets/imgs/Home/Fruit_Card.png";
   
 }

@@ -1,4 +1,5 @@
 
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,7 +19,8 @@ class SearchBarWidget extends StatelessWidget
     return Container(
       height: 40.h,
       decoration: BoxDecoration(
-        boxShadow: [
+        boxShadow:
+        [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.1),
             offset: const Offset(0, 2),
@@ -27,8 +29,8 @@ class SearchBarWidget extends StatelessWidget
         ],
       ),
       child: CustomTextFormField(
-        suffixIcon: Image.asset(AppAssets.icons.filterGreyPNG, width: 20.w, height: 20.h,),
-        prefixIcon: Image.asset(AppAssets.icons.searchGreen, width: 20.w, height: 20.h,),
+        suffixIcon: SuffixIconWidget(),
+        prefixIcon: PrefixIconWidget(),
         fillColor: AppColors.color.kWhite001,
         hintText: "ابحث عن.......",
         hintStyle: AppStyles.semiBold(
@@ -37,6 +39,36 @@ class SearchBarWidget extends StatelessWidget
         ),
         keyboardType: TextInputType.text,
       ),
+    );
+  }
+}
+
+class PrefixIconWidget extends StatelessWidget
+{
+  const PrefixIconWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return GestureDetector(
+      onTap: ()
+      {log("Search Settings has been Pressed...");},
+      child: Image.asset(AppAssets.icons.searchGreen, width: 20.w, height: 20.h,)
+    );
+  }
+}
+
+class SuffixIconWidget extends StatelessWidget
+{
+  const SuffixIconWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return GestureDetector(
+      onTap: ()
+      {log("Filter Settings has been Pressed...");},
+      child: Image.asset(AppAssets.icons.filterGreyPNG, width: 20.w, height: 20.h,)
     );
   }
 }

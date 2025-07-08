@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
+import '../widget/fruit_grid_list.dart';
 import '../widget/most_sold.dart';
 import '../widget/offers_list.dart';
 import '../widget/search_bar.dart';
@@ -18,17 +19,21 @@ class Home extends StatelessWidget
   {
     return Scaffold(
       appBar: UserAppBar(),
-      body: CustomColumn(
-        children:
-        [
-          Sizes.size16.verticalSpace,
-          SearchBarWidget(),
-          Sizes.size12.verticalSpace,
-          SizedBox(height: 342.h, child: OffersListWidget()),
-          Sizes.size12.verticalSpace,
-          MostSoldWidget(),
-          Sizes.size8.verticalSpace,
-        ],
+      body: SingleChildScrollView(
+        child: CustomColumn(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+          [
+            Sizes.size16.verticalSpace,
+            SearchBarWidget(),
+            Sizes.size12.verticalSpace,
+            SizedBox(height: 158.h, child: OffersListWidget()),
+            Sizes.size12.verticalSpace,
+            MostSoldWidget(),
+            Sizes.size8.verticalSpace,
+            FruitGridListWidget(),
+          ],
+        ),
       ),
     );
   }

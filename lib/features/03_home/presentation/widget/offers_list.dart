@@ -15,7 +15,7 @@ class OffersListWidget extends StatelessWidget
     return CustomListviewBuilder(
       itemBuilder: (context, index) => OffersWidget(),
       separatorBuilder: (context, index) => Sizes.size8.horizontalSpace,
-      itemCount: 4,
+      itemCount: 5,
       scrollDirection: Axis.horizontal,
     );
   }
