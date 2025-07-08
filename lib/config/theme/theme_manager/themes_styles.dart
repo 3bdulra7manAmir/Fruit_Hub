@@ -28,15 +28,28 @@ abstract class LightThemeStyles
   static InputDecorationTheme get inputBorder => InputDecorationTheme(
     filled: true,
     fillColor: AppColors.color.kGrey004,
-    border: OutlineInputBorder(
+    border: borderLightStyle(),
+    enabledBorder: borderLightStyle(),
+    disabledBorder: borderLightStyle(),
+    errorBorder: borderLightStyle(),
+    focusedBorder: borderLightStyle(),
+    focusedErrorBorder: borderLightStyle(),
+  );
+
+  static OutlineInputBorder borderLightStyle()
+  {
+    return OutlineInputBorder(
       borderSide: BorderSide(color: AppColors.color.kGrey003),
       borderRadius: AppRadiuses.circular.xXXSmall,
-    ),
-  );
+    );
+  }
 
   static CardThemeData get cardTheme => const CardThemeData();
   static AppBarTheme get appBarTheme => AppBarTheme(backgroundColor: AppColors.color.kWhite001, surfaceTintColor: AppColors.color.kTransparent);
-  static DialogThemeData get dialogTheme => const DialogThemeData();
+  static DialogThemeData get dialogTheme => DialogThemeData(
+    backgroundColor: AppColors.color.kWhite001,
+    shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXSmall,),
+  );
   static BottomSheetThemeData get bottomSheetTheme => const BottomSheetThemeData();
 
 }

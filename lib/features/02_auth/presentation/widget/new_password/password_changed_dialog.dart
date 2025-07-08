@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -14,9 +13,6 @@ void showSuccessDialog(context)
 {
   customAppDialog(
     context: context,
-    backgroundColor: AppColors.color.kWhite001,
-    shape: RoundedRectangleBorder(
-    borderRadius: AppRadiuses.circular.xXXSmall,),
     content: Column(
       mainAxisSize: MainAxisSize.min,
       children:

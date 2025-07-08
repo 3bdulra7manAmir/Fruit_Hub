@@ -47,6 +47,12 @@ class BorderCircular
   /// [circular: 16.r]
   BorderRadius get medium => BorderRadius.circular(16.r);
 
+  /// [circular: 50.r]
+  BorderRadius get large => BorderRadius.circular(50.r);
+
+  /// [circular: 100.r]
+  BorderRadius get xLarge => BorderRadius.circular(100.r);
+
 }
 
 

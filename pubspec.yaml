@@ -91,4 +91,7 @@ flutter:
     - assets/icons/New_Password/
     - assets/icons/Login/
 
+    - assets/icons/Home/
+    - assets/imgs/Home/
+
     - assets/jsons/

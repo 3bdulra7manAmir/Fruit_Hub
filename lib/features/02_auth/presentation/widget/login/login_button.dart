@@ -21,13 +21,16 @@ class LoginButtonWidget extends StatelessWidget
       text: "تسجيل دخول",
       onPressed: ()
       {
-        if (!formKey.currentState!.validate())
+        if (formKey.currentState!.validate())
         {
           log("Valid Login...");
           final email = LoginEmailWidget.emailController.text;
           final password = LoginPasswordWidget.passwordController.text;
           log("$email \t $password");
-          //AppRouter.router.pushNamed(AppRoutes.home);
+          if (email == "shadow@gmail.com" && password == "12345678aA#")
+          {
+            AppRouter.router.pushNamed(AppRoutes.home);
+          }
         }
         else
         {

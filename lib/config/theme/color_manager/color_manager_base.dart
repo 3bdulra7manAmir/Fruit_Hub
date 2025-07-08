@@ -37,6 +37,8 @@ abstract class ColorManagerBase
   Color get kGreen003;
   /// [_2D9F5D]
   Color get kGreen004;
+  /// [_EEF8ED]
+  Color get kGreen005;
 
   // Orange Color Range
   /// [_F4A91F]

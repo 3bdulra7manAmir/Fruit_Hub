@@ -1,10 +1,10 @@
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/app_form.dart';
-import '../../../../core/widgets/appbars/auth_appbar.dart';
+import '../../../../core/widgets/custom_form.dart';
+import '../widget/auth_appbar.dart';
+import '../../../../core/widgets/custom_column.dart';
 import '../widget/login/did_forget_password.dart';
 import '../widget/login/dont_have_account.dart';
 import '../widget/login/email_field.dart';
@@ -27,7 +27,7 @@ class Login extends StatelessWidget
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
           formKey: loginFormKey,
-          formBody: Column(
+          formBody: CustomColumn(
             children:
             [
               Sizes.size24.verticalSpace,
@@ -46,7 +46,7 @@ class Login extends StatelessWidget
               OtherOptionWidget(),
               Sizes.size16.verticalSpace,
             ],
-          ).marginSymmetric(horizontal: 16.w),
+          ),
         ),
       ),
     );

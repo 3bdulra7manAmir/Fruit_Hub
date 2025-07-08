@@ -27,7 +27,8 @@ class CustomTextFormField extends StatelessWidget
     this.fillColor,
     this.focusedColor,
     this.borderRadius,
-
+    this.borderRadiusColor,
+    this.contentPadding,
   });
 
   final double? height;
@@ -48,6 +49,8 @@ class CustomTextFormField extends StatelessWidget
   final Color? fillColor;
   final Color? focusedColor;
   final BorderRadius? borderRadius;
+  final Color? borderRadiusColor;
+  final EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context)
@@ -71,7 +74,11 @@ class CustomTextFormField extends StatelessWidget
           suffixStyle: suffixStyle,
           fillColor: fillColor,
           focusColor: focusedColor,
-          border: borderRadius != null ? OutlineInputBorder(borderRadius: borderRadius!,): null,
+          border: borderRadius != null ? OutlineInputBorder(
+            borderRadius: borderRadius!, 
+            borderSide: BorderSide(color: borderRadiusColor ?? Colors.transparent,)
+          ): null,
+          contentPadding: contentPadding,
         ),
       ),
     );

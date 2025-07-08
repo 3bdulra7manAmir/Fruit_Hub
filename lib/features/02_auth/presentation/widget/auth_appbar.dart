@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../config/router/app_router.dart';
-import '../../constants/app_images.dart';
-import '../../constants/app_styles.dart';
+import '../../../../config/router/app_router.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_styles.dart';
 
 class AuthAppBar extends StatelessWidget implements PreferredSizeWidget
 {

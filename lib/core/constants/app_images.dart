@@ -33,11 +33,23 @@ class _Icons
   /// [New Password]
   final String successGreen = "assets/icons/New_Password/Success_Green.svg";
   final String removeBlack = "assets/icons/New_Password/Remove_Black.svg";
+
+  /// [Home]
+  // [AppBar]
+  final String userIMG = "assets/icons/Home/User.svg";
+  final String billGreen = "assets/icons/Home/Bill_Green.svg";
+  final String billRedDot = "assets/icons/Home/Dot_Red.svg";
+  // [Search Bar]
+  final String searchGreen = "assets/icons/Home/Search_Green.png";
+  final String filterGreyPNG = "assets/icons/Home/Filter_Grey.png";
 }
 
 ///-----------------------------------------------------------------//
 class _IMGs
 {
   _IMGs._();
+
+  ///[Home]
+  final String user = "assets/imgs/Home/User.png";
   
 }

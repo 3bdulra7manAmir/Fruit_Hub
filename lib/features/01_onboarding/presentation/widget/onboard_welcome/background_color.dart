@@ -12,7 +12,7 @@ class BackgroundColorWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return ClipPath(
-      clipper: WaveClipper(),
+      clipper: OnBoardingWaveClipper(),
       child: Container(height: 400.h, color: color,),
     );
   }

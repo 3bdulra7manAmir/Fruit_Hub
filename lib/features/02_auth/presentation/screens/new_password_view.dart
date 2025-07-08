@@ -1,10 +1,10 @@
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/app_form.dart';
-import '../../../../core/widgets/appbars/auth_appbar.dart';
+import '../../../../core/widgets/custom_form.dart';
+import '../widget/auth_appbar.dart';
+import '../../../../core/widgets/custom_column.dart';
 import '../widget/new_password/first_password_field.dart';
 import '../widget/new_password/new_password_button.dart';
 import '../widget/new_password/new_password_title.dart';
@@ -24,7 +24,7 @@ class NewPassword extends StatelessWidget
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
           formKey: newPasswordFormKey,
-          formBody: Column(
+          formBody: CustomColumn(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
@@ -38,7 +38,7 @@ class NewPassword extends StatelessWidget
               NewPasswordButtonWidget(formKey: newPasswordFormKey,),
               Sizes.size16.verticalSpace,
             ],
-          ).marginSymmetric(horizontal: 16.w),
+          ),
         ),
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/widgets/custom_column.dart';
+
 class PasswordRecoveryPhone extends StatelessWidget
 {
   const PasswordRecoveryPhone({super.key});
@@ -9,7 +11,7 @@ class PasswordRecoveryPhone extends StatelessWidget
   {
     return Scaffold(
       //appBar: ,
-      body: Column(
+      body: CustomColumn(
         children:
         [
           
