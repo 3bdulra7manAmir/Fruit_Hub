@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class FruitPackImageWidget extends StatelessWidget
+class FruitPackImgWidget extends StatelessWidget
 {
-  const FruitPackImageWidget({super.key, this.bottom, this.left, this.right, this.top, required this.img});
+  const FruitPackImgWidget({super.key, this.bottom, this.left, this.right, this.top, required this.img});
 
   final double? bottom;
   final double? left;

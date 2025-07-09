@@ -19,7 +19,7 @@ class ECommerceApp extends ConsumerWidget
     final themeProvider = ref.watch(themeModeNotifierProvider);
     final localProvider = ref.watch(localeNotifierProvider);
     return DevicePreview(
-      //enabled: false,
+      enabled: false,
       builder: (context) => ScreenUtilInit(
         designSize: const Size(375, 812),
           builder: (context, child) => MaterialApp.router(

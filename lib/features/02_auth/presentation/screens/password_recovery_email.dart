@@ -6,7 +6,7 @@ import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/custom_form.dart';
-import '../widget/auth_appbar.dart';
+import '../../../../core/widgets/app_appbar.dart';
 import '../../../../core/widgets/custom_column.dart';
 import '../widget/password_recovery_email/phone_recovery_title.dart';
 import '../widget/password_recovery_email/recovery_otp_field.dart';
@@ -21,7 +21,7 @@ class PasswordRecoveryEmail extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: AuthAppBar(barTitle: "التحقق من الرمز",),
+      appBar: CustomAppBar(barTitle: "التحقق من الرمز",),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(

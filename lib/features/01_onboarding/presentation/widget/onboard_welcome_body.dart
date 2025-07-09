@@ -24,7 +24,7 @@ class OnboardingWelcome extends StatelessWidget
             children:
             [
               BackgroundColorWidget(color: AppColors.color.kYellow001),
-              FruitPackImageWidget(img: AppAssets.icons.fruitPack,),
+              FruitPackImgWidget(img: AppAssets.icons.fruitPack,),
             ],
           ),
           Sizes.size47.verticalSpace,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/widgets/grid_view_builder.dart';
-import 'fruit_grid_card.dart';
+import '../../../../core/widgets/custom_grid_view_builder.dart';
+import 'fruit_grid_card/fruit_card_body.dart';
 
 class FruitGridListWidget extends StatelessWidget
 {
@@ -12,7 +12,7 @@ class FruitGridListWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomGridbuilder(
-      itemCount: 5,
+      itemCount: 9,
       itemBuilder: (context, index) => FruitGridCardWidget(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,             //  controls how many items per row

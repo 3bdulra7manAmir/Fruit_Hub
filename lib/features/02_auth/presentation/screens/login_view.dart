@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/custom_form.dart';
-import '../widget/auth_appbar.dart';
+import '../../../../core/widgets/app_appbar.dart';
 import '../../../../core/widgets/custom_column.dart';
 import '../widget/login/did_forget_password.dart';
 import '../widget/login/dont_have_account.dart';
@@ -22,7 +22,7 @@ class Login extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: AuthAppBar(barTitle: "تسجيل دخول"),
+      appBar: CustomAppBar(barTitle: "تسجيل دخول"),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(

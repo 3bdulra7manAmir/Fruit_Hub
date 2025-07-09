@@ -5,8 +5,8 @@ import '../../../../core/constants/app_sizes.dart';
 import '../widget/fruit_grid_list.dart';
 import '../widget/most_sold.dart';
 import '../widget/offers_list.dart';
-import '../widget/search_bar.dart';
-import '../widget/user_appbar.dart';
+import '../widget/search_bar/search_bar_body.dart';
+import '../widget/user_appbar/user_appbar_body.dart';
 import '../../../../core/widgets/custom_column.dart';
 
 
@@ -20,6 +20,7 @@ class Home extends StatelessWidget
     return Scaffold(
       appBar: UserAppBar(),
       body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomColumn(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:

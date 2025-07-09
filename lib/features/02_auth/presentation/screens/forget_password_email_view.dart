@@ -4,18 +4,23 @@ import '../../../../core/widgets/custom_column.dart';
 
 class ForgetPasswordEmail extends StatelessWidget
 {
-  const ForgetPasswordEmail({super.key});
+  ForgetPasswordEmail({super.key});
+
+  final GlobalKey<FormState> forgetPasswordEmailFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      //appBar: ,
-      body: CustomColumn(
-        children:
-        [
-
-        ],
+      //appBar: CustomAppBar(barTitle: "نسيان كلمة المرور"),
+      body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        child: CustomColumn(
+          children:
+          [
+        
+          ],
+        ),
       ),
     );
   }

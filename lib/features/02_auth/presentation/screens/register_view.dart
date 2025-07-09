@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/custom_form.dart';
-import '../widget/auth_appbar.dart';
+import '../../../../core/widgets/app_appbar.dart';
 import '../../../../core/widgets/custom_column.dart';
 import '../widget/register/already_has_an_account.dart';
 import '../widget/register/email_field.dart';
@@ -21,7 +21,7 @@ class Register extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: AuthAppBar(barTitle: "حساب جديد",),
+      appBar: CustomAppBar(barTitle: "حساب جديد",),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
