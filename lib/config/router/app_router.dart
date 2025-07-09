@@ -11,6 +11,7 @@ import '../../features/02_auth/presentation/screens/password_recovery_email.dart
 import '../../features/02_auth/presentation/screens/register_view.dart';
 import '../../features/03_home/presentation/screens/home_view.dart';
 import '../../features/03_home/presentation/screens/more_popular_view.dart';
+import '../../features/04_search/presentation/screens/search_view.dart';
 import 'app_routes.dart';
 
 
@@ -83,6 +84,18 @@ abstract class AppRouter
         path: AppRoutes.mostSold,
         name: AppRoutes.mostSold,
         builder: (context, state) => MorePopular(),
+      ),
+
+
+      ///[ Search ]
+      GoRoute(
+        path: AppRoutes.search,
+        name: AppRoutes.search,
+        builder: (context, state)
+        {
+          final fruitName = state.uri.queryParameters['fruitName'] ?? '';
+          return Search(fruitName: fruitName);
+        } ,
       ),
     ]
   );

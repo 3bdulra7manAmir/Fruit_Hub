@@ -20,6 +20,7 @@ class FruitGridCardWidget extends StatelessWidget
     return ClipRRect(
       borderRadius: AppRadiuses.circular.xSmall,
       child: Card(
+        elevation: 0,
         color: AppColors.color.kGrey008,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

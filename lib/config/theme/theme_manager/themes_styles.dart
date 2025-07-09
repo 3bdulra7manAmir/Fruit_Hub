@@ -41,7 +41,7 @@ abstract class LightThemeStyles
   {
     return OutlineInputBorder(
       borderSide: BorderSide(color: AppColors.color.kGrey003),
-      borderRadius: AppRadiuses.circular.xXXSmall,
+      borderRadius: AppRadiuses.circular.xXXXSmall,
     );
   }
 
@@ -57,7 +57,7 @@ abstract class LightThemeStyles
   static AppBarTheme get appBarTheme => AppBarTheme(backgroundColor: AppColors.color.kWhite001, surfaceTintColor: AppColors.color.kTransparent);
   static DialogThemeData get dialogTheme => DialogThemeData(
     backgroundColor: AppColors.color.kWhite001,
-    shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXSmall,),
+    shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXSmall,),
   );
   static BottomSheetThemeData get bottomSheetTheme => const BottomSheetThemeData();
 

@@ -28,7 +28,10 @@ class BorderCircular
   BorderCircular._();
 
   /// [circular: 4.r]
-  BorderRadius get xXXSmall => BorderRadius.circular(4.r);
+  BorderRadius get xXXXSmall => BorderRadius.circular(4.r);
+
+  /// [circular: 5.r]
+  BorderRadius get xXXSmall => BorderRadius.circular(5.r);
 
   /// [circular: 8.r]
   BorderRadius get xXSmall => BorderRadius.circular(8.r);

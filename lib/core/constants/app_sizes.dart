@@ -6,6 +6,7 @@ abstract class Sizes
   static const double size1 = 1.0;
   static const double size2 = 2.0;
   static const double size4 = 4.0;
+  static const double size7 = 7.0;
   static const double size8 = 8.0;
   static const double size11 = 11.0;
   static const double size12 = 12.0;

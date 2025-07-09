@@ -10,7 +10,10 @@ import 'search_icon.dart';
 
 class SearchBarWidget extends StatelessWidget
 {
-  const SearchBarWidget({super.key});
+  const SearchBarWidget({super.key, required this.onSubmitted, this.controller});
+
+  final void Function(String)? onSubmitted;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context)
@@ -28,6 +31,7 @@ class SearchBarWidget extends StatelessWidget
         ],
       ),
       child: CustomTextFormField(
+        controller: controller,
         suffixIcon: FilterIconWidget(),
         prefixIcon: SearchIconWidget(),
         fillColor: AppColors.color.kWhite001,
@@ -37,6 +41,7 @@ class SearchBarWidget extends StatelessWidget
           fontWeight: AppFontWeights.regularWeight,
         ),
         keyboardType: TextInputType.text,
+        onSubmitted: onSubmitted,
       ),
     );
   }

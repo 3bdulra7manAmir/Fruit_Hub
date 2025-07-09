@@ -1,6 +1,9 @@
+import 'dart:developer';
+import 'package:e_commerce_app/config/router/app_router_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/router/app_router.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../widget/home/fruit_grid_list.dart';
 import '../widget/home/most_sold.dart';
@@ -26,7 +29,13 @@ class Home extends StatelessWidget
           children:
           [
             Sizes.size16.verticalSpace,
-            SearchBarWidget(),
+            SearchBarWidget(
+              onSubmitted: (value)
+              {
+                log("Search Field Value is => $value");
+                AppRouter.router.pushSearchString(fruitName: value);
+              },
+            ),
             Sizes.size12.verticalSpace,
             SizedBox(height: 158.h, child: OffersListWidget()),
             Sizes.size12.verticalSpace,

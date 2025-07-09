@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,11 @@ class MorePopular extends StatelessWidget
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: "الأكثر مبيعًا",
-        barActions: [BillWidget()],
+        barActions: [
+          GestureDetector(
+            onTap: () {log("Notifications Bill has been Pressed...");},
+            child: BillWidget())
+        ],
         barActionsPadding: AppMargins.directional.smallEnd,
       ),
       body: SingleChildScrollView(

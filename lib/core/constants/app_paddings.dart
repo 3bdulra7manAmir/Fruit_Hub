@@ -26,9 +26,11 @@ class Symmetric
 {
   Symmetric._();
 
-  /// 2px horizontal
+  /// 5px horizontal
   EdgeInsets get xXXSmall => EdgeInsets.symmetric(horizontal: 5.w);
 
+  /// 16px horizontal 8px vertical
+  EdgeInsets get xXSmall => EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h);
 }
 
 
