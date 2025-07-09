@@ -48,7 +48,7 @@ class Search extends StatelessWidget
         
             //fResultsBody(),
             //IfPreviousResultsBody(),
-            IfNoResultsBody(),
+            //IfNoResultsBody(),
           ],
         ),
       ),

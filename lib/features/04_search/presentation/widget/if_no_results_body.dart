@@ -17,29 +17,19 @@ class IfNoResultsBody extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Container(
-          height: 80.h, width: double.infinity, alignment: Alignment.topRight,
-          padding: AppPadding.symmetric.xXSmall,
-          decoration: BoxDecoration(
-            color: AppColors.color.kWhite001,
-            borderRadius: AppRadiuses.circular.xXXSmall,
-          ),
-          child: Text("لاتوجد نتائج بحث", style: AppStyles.semiBold(
-            fontColor: AppColors.color.kGrey002,
-            fontWeight: AppFontWeights.regularWeight,
-          ),),
-        ),
-        //Spacer(),
-        Center(child: SvgPicture.asset("assets/icons/Search/No_Search_Results.svg"),),
+        NoSearchResultsFoundWidget(),
+        Sizes.size125.verticalSpace,
+        NoResultsImgWidget(),
         Sizes.size20.verticalSpace,
         Column(
           children:
           [
-            Text("البحث", style: AppStyles.bold(fontColor: AppColors.color.kGrey006),),
-            Sizes.size7.verticalSpace,
+            Text("البحث", 
+            style: AppStyles.bold(fontColor: AppColors.color.kGrey006),
+          ),
+            Sizes.size16.verticalSpace,
             Text("عفوًا... هذه المعلومات غير متوفرة للحظة", style: AppStyles.semiBold(
               fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.regularWeight),
             ),
@@ -48,5 +38,47 @@ class IfNoResultsBody extends StatelessWidget
         Sizes.size16.verticalSpace,
       ],
     );
+  }
+}
+
+
+class NoSearchResultsFoundWidget extends StatelessWidget
+{
+  const NoSearchResultsFoundWidget({super.key});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Container(
+      height: 80.h, width: double.infinity,
+      padding: AppPadding.symmetric.xXSmall,
+      decoration: BoxDecoration(
+        color: AppColors.color.kWhite001,
+        borderRadius: AppRadiuses.circular.xXXSmall,
+        boxShadow:
+        [
+          BoxShadow(
+          color: const Color(0x0F000000),
+          offset: Offset(0, 0),
+          blurRadius: 12,),
+        ]
+      ),
+      child: Text("لاتوجد نتائج بحث", style: AppStyles.semiBold(
+        fontColor: AppColors.color.kGrey002,
+        fontWeight: AppFontWeights.regularWeight,
+      ),),
+    );
+  }
+}
+
+
+class NoResultsImgWidget extends StatelessWidget
+{
+  const NoResultsImgWidget({super.key});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Center(child: SvgPicture.asset("assets/icons/Search/No_Search_Results.svg"),);
   }
 }
