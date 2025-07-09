@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/widgets/custom_grid_view_builder.dart';
+import '../../../../../core/widgets/custom_grid_view_builder.dart';
 import 'fruit_grid_card/fruit_card_body.dart';
 
 class FruitGridListWidget extends StatelessWidget

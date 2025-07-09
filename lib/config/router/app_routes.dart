@@ -26,5 +26,10 @@ abstract class AppRoutes
   /// [Home]
   // [Home]
   static const home = '/home';
+  // [Most Sold]
+  static const mostSold = '/mostSold';
+
+  /// [Search]
+  static const search = '/search';
 
 }

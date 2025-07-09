@@ -24,6 +24,6 @@ class Directional
 {
   Directional._();
 
-  /// [_directional_6.w] End Directional Margin (6px)
-  EdgeInsetsDirectional get smallEnd => EdgeInsetsDirectional.only(end: 6.w);
+  /// [_directional_16.w] End Directional Margin (16px)
+  EdgeInsetsDirectional get smallEnd => EdgeInsetsDirectional.only(end: 16.w);
 }

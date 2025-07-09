@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../widget/fruit_grid_list.dart';
-import '../widget/most_sold.dart';
-import '../widget/offers_list.dart';
-import '../widget/search_bar/search_bar_body.dart';
-import '../widget/user_appbar/user_appbar_body.dart';
+import '../widget/home/fruit_grid_list.dart';
+import '../widget/home/most_sold.dart';
+import '../widget/home/offers_list.dart';
+import '../widget/home/search_bar/search_bar_body.dart';
+import '../widget/home/user_appbar/user_appbar_body.dart';
 import '../../../../core/widgets/custom_column.dart';
 
 
@@ -33,6 +33,7 @@ class Home extends StatelessWidget
             MostSoldWidget(),
             Sizes.size8.verticalSpace,
             FruitGridListWidget(),
+            Sizes.size16.verticalSpace,
           ],
         ),
       ),

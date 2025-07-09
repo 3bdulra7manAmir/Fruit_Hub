@@ -39,8 +39,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
     return AppBar(
       backgroundColor: backgroundColor,
       automaticallyImplyLeading: isDefaultBack ?? false,
-      leading: GestureDetector(
-        onTap: leadingOnTap,
+      leading: GestureDetector(onTap: leadingOnTap,
         child: barLeading ?? SvgPicture.asset(AppAssets.icons.rightBlackArrow,)
       ),
       leadingWidth: barLeadingWidth ?? 44.w,

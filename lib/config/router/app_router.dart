@@ -10,6 +10,7 @@ import '../../features/02_auth/presentation/screens/new_password_view.dart';
 import '../../features/02_auth/presentation/screens/password_recovery_email.dart';
 import '../../features/02_auth/presentation/screens/register_view.dart';
 import '../../features/03_home/presentation/screens/home_view.dart';
+import '../../features/03_home/presentation/screens/more_popular_view.dart';
 import 'app_routes.dart';
 
 
@@ -20,7 +21,7 @@ abstract class AppRouter
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
-    initialLocation: AppRoutes.home,
+    initialLocation: AppRoutes.splash,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -76,6 +77,12 @@ abstract class AppRouter
         path: AppRoutes.home,
         name: AppRoutes.home,
         builder: (context, state) => Home(),
+      ),
+      //[Most Sold]
+      GoRoute(
+        path: AppRoutes.mostSold,
+        name: AppRoutes.mostSold,
+        builder: (context, state) => MorePopular(),
       ),
     ]
   );

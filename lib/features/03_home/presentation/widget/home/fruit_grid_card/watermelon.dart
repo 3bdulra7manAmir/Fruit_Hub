@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constants/app_images.dart';
+import '../../../../../../core/constants/app_images.dart';
 
 class WatermelonWidget extends StatelessWidget
 {
