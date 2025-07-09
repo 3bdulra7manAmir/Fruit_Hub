@@ -42,6 +42,9 @@ class _Icons
   // [Search Bar]
   final String searchGreen = "assets/icons/Home/Search_Green.png";
   final String filterGreyPNG = "assets/icons/Home/Filter_Grey.png";
+  // [Most Sold]
+  final String hartBlack = "assets/icons/Home/Hart_Black.svg";
+  final String addGreen = "assets/icons/Home/Add_Green.svg";
 }
 
 ///-----------------------------------------------------------------//
@@ -52,5 +55,6 @@ class _IMGs
   ///[Home]
   final String user = "assets/imgs/Home/User.png";
   final String fruitCard = "assets/imgs/Home/Fruit_Card.png";
+  final String watermelon = "assets/imgs/Home/Watermelon.png";
   
 }
