@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
+import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
@@ -79,6 +80,6 @@ class NoResultsImgWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Center(child: SvgPicture.asset("assets/icons/Search/No_Search_Results.svg"),);
+    return Center(child: SvgPicture.asset(AppAssets.icons.noSearchResults),);
   }
 }

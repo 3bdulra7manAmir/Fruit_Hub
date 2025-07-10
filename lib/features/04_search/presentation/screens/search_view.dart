@@ -30,7 +30,8 @@ class Search extends StatelessWidget
         [
           GestureDetector(
             onTap: () {log("Notifications Bill has been Pressed...");},
-            child: BillWidget())
+            child: BillWidget()
+          ),
         ],
         barActionsPadding: AppMargins.directional.smallEnd,
       ),
@@ -42,13 +43,11 @@ class Search extends StatelessWidget
             Sizes.size16.verticalSpace,
             SearchBarWidget(
               controller: TextEditingController(text: fruitName),
-              onSubmitted: (value)
-              {log("Search Field Value is => $value");},
+              onSubmitted: (value) {log("Search Field Value is => $value");},
             ),
-        
-            //fResultsBody(),
-            //IfPreviousResultsBody(),
             //IfNoResultsBody(),
+            //IfResultsBody(),
+            //IfPreviousResultsBody(),
           ],
         ),
       ),

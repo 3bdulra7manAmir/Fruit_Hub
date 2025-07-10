@@ -28,11 +28,11 @@ class CustomNavBar extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      width: width, height: height ?? 105.h,
-      padding: padding, alignment: alignment ?? Alignment.center,
+      width: width, height: height ?? 70.h,
+      padding: padding ?? EdgeInsets.symmetric(horizontal: 27.w, vertical: 20.h), 
+      alignment: alignment ?? Alignment.center,
       decoration: BoxDecoration(
-        borderRadius: borderRadius ?? AppRadiuses.circular.xXSmall, 
-        //color: color ?? AppColors.color.kWhite002, //HERE
+        borderRadius: borderRadius ?? BorderRadius.only(topLeft: Radius.circular(30.r), topRight: Radius.circular(30.r)), 
       ),
       child: navBarChildren,
     );

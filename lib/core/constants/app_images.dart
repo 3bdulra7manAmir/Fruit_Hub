@@ -30,7 +30,7 @@ class _Icons
   final String apple = "assets/icons/Login/Apple.svg";
   final String facebook = "assets/icons/Login/Facebook.svg";
 
-  /// [New Password]
+  /// [New_Password]
   final String successGreen = "assets/icons/New_Password/Success_Green.svg";
   final String removeBlack = "assets/icons/New_Password/Remove_Black.svg";
 
@@ -45,6 +45,11 @@ class _Icons
   // [Most Sold]
   final String hartBlack = "assets/icons/Home/Hart_Black.svg";
   final String addGreen = "assets/icons/Home/Add_Green.svg";
+
+  ///[Search]
+  final String noSearchResults= "assets/icons/Search/No_Search_Results.svg";
+  final String watchGrey = "assets/icons/Search/Watch_Grey.svg";
+  final String removeBlacksemisold = "assets/icons/Search/Remove_Black_semi_sold.svg";
 }
 
 ///-----------------------------------------------------------------//

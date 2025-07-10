@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../config/theme/font_manager/font_weights.dart';
+import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/custom_listview_builder.dart';
@@ -52,13 +53,13 @@ class PreviouslySearchedTextWidget extends StatelessWidget
     (
       children:
       [
-        SvgPicture.asset("assets/icons/Search/Watch_Grey.svg"),
+        SvgPicture.asset(AppAssets.icons.watchGrey),
         Sizes.size16.horizontalSpace,
         Text("فراولة", style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.regularWeight),),
         Spacer(),
         GestureDetector(
           onTap: () {log("Single Delete has been Pressed...");},
-          child: SvgPicture.asset("assets/icons/Search/Remove_Black_semi_sold.svg")
+          child: SvgPicture.asset(AppAssets.icons.removeBlacksemisold)
         ),
       ],
     );
