@@ -29,10 +29,10 @@ class SEn extends S {
   String get startNow => 'Start now';
 
   @override
-  String get emailIsRequired => 'Email is required';
+  String get enterEmail => 'Enter email';
 
   @override
-  String get enterEmail => 'Enter email';
+  String get emailIsRequired => 'Email is required';
 
   @override
   String get invalidEmailSymbol => 'Email must contain \'@\' symbol.';
@@ -42,22 +42,19 @@ class SEn extends S {
       'Email must end with a valid domain (e.g., .com, .org).';
 
   @override
-  String get validateFailureEmail => 'Error validating email:';
+  String get emailFailureValidation => 'Error validating email:';
 
   @override
   String get fullNameIsRequired => 'Full name is required.';
 
   @override
-  String get invalidFullName => 'Please enter a valid full name.';
+  String get fullNameinvalid => 'Please enter a valid full name.';
 
   @override
-  String get validateFailureFullName => 'Validation failed for full name:';
+  String get fullNameValidationFailure => 'Validation failed for full name:';
 
   @override
   String get passwordIsRequired => 'Password is required';
-
-  @override
-  String get invalidPassword => 'Invalid Password';
 
   @override
   String get passwordLength8Character =>
@@ -79,7 +76,10 @@ class SEn extends S {
       'Password must contain at least one special character.';
 
   @override
-  String get validateFailurePassword => 'Error validating password:';
+  String get invalidPassword => 'Invalid Password';
+
+  @override
+  String get passwordValidationFailure => 'Error validating password:';
 
   @override
   String get phoneNumberIsRequired => 'Phone number is required';

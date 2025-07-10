@@ -17,7 +17,7 @@ void showSuccessDialog(context)
       mainAxisSize: MainAxisSize.min,
       children:
       [
-        Sizes.size50.verticalSpace,
+        Sizes.s50.verticalSpace,
         Stack(
           children:
           [
@@ -31,12 +31,12 @@ void showSuccessDialog(context)
             ),
           ],
         ),
-        Sizes.size29.verticalSpace,
+        Sizes.s29.verticalSpace,
         Text(
           "تم تغيير الباسورد بنجاح",
           style: AppStyles.bold(fontColor: AppColors.color.kBlack001),
         ),
-        Sizes.size50.verticalSpace,
+        Sizes.s50.verticalSpace,
       ],
     )
   );

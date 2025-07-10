@@ -47,7 +47,7 @@ class CustomButton extends ConsumerWidget
           padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(padding),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
             borderRadius: borderRadius ?? AppRadiuses.circular.medium,
-            side: BorderSide(width: borderWidth ?? (Sizes.size1).w, color: borderColor ?? AppColors.color.kTransparent)),),
+            side: BorderSide(width: borderWidth ?? (Sizes.s1).w, color: borderColor ?? AppColors.color.kTransparent)),),
           backgroundColor: WidgetStateProperty.all<Color>(backgroundColor ?? AppColors.color.kGreen001,),
         ),
         onPressed: onPressed,

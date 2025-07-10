@@ -40,7 +40,7 @@ class OtherOptionWidget extends StatelessWidget
             },
             child: OtherOptionCardWidget(text: 'تسجيل بواسطة فيسبوك',  logo: AppAssets.icons.facebook,)
           ),
-        ].addSeparator(child: Sizes.size16.verticalSpace),
+        ].addSeparator(child: Sizes.s16.verticalSpace),
       ],
     );
   }
@@ -73,9 +73,9 @@ class OtherOptionCardWidget extends StatelessWidget
       child: Row(
         children:
         [
-          Sizes.size18.horizontalSpace,
+          Sizes.s18.horizontalSpace,
           SvgPicture.asset(logo),
-          Sizes.size53.horizontalSpace,
+          Sizes.s53.horizontalSpace,
           Text(text, style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.semiBoldWeight),),
           
         ],

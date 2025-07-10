@@ -33,7 +33,7 @@ Widget build(BuildContext context, WidgetRef ref)
         value: isChecked,
         onChanged: (_) => ref.read(checkboxNotifierProvider.notifier).toggle(),
       ),
-      Sizes.size16.horizontalSpace,
+      Sizes.s16.horizontalSpace,
       Expanded(
         child: Text.rich(
           TextSpan(

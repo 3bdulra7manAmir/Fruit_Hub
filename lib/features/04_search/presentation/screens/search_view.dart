@@ -24,23 +24,13 @@ class Search extends StatelessWidget
   {
     //log("Received fruitName: $fruitName"); // Just for debug
     return Scaffold(
-      appBar: CustomAppBar(
-        barTitle: "البحث",
-        barActions:
-        [
-          GestureDetector(
-            onTap: () {log("Notifications Bill has been Pressed...");},
-            child: BillWidget()
-          ),
-        ],
-        barActionsPadding: AppMargins.directional.smallEnd,
-      ),
+      appBar: CustomAppBar(barTitle: "البحث", isNotifications: true,),
       body: SingleChildScrollView(
         child: CustomColumn(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            Sizes.size16.verticalSpace,
+            Sizes.s16.verticalSpace,
             SearchBarWidget(
               controller: TextEditingController(text: fruitName),
               onSubmitted: (value) {log("Search Field Value is => $value");},

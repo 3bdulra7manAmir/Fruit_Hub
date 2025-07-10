@@ -6,7 +6,7 @@ import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 import 'onboard_welcome/background_color.dart';
-import 'onboard_welcome/fruit_pack_image.dart';
+import 'onboard_welcome/fruit_pack_img.dart';
 import 'onboard_welcome/welcome_text.dart';
 
 class OnboardingWelcome extends StatelessWidget
@@ -27,12 +27,12 @@ class OnboardingWelcome extends StatelessWidget
               FruitPackImgWidget(img: AppAssets.icons.fruitPack,),
             ],
           ),
-          Sizes.size47.verticalSpace,
+          Sizes.s47.verticalSpace,
           Column(
             children:
             [
               const WelcomeTextWidget(),
-              Sizes.size24.verticalSpace,
+              Sizes.s24.verticalSpace,
               WelcomeTextWidget2(text: S.of(context)!.onBoardingDescription,),
             ],
           ),

@@ -26,13 +26,13 @@ class ForgetPasswordPhone extends StatelessWidget
           formBody: CustomColumn(
             children:
             [
-              Sizes.size24.verticalSpace,
+              Sizes.s24.verticalSpace,
               ForgetPasswordTitleWidget(),
-              Sizes.size30.verticalSpace,
+              Sizes.s30.verticalSpace,
               PhoneNumberFormFieldWidget(),
-              Sizes.size30.verticalSpace,
+              Sizes.s30.verticalSpace,
               ForgetPasswordButtonWidget(formKey: forgetPasswordPhoneFormKey,),
-              Sizes.size16.verticalSpace,
+              Sizes.s16.verticalSpace,
             ],
           ),
         ),

@@ -4,31 +4,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/app_appbar.dart';
 import '../../../../core/widgets/custom_column.dart';
-import '../widget/home/fruit_grid_list.dart';
-import '../widget/more_popular/most_sold.dart';
+import '../widget/card.dart';
+import '../widget/title.dart';
 
-
-class MorePopular extends StatelessWidget
+class Notifications extends StatelessWidget
 {
-  const MorePopular ({super.key});
+  const Notifications({super.key});
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "الأكثر مبيعًا", isNotifications: true,),
+      appBar: CustomAppBar(barTitle: "الاشعارات", isNotifications: true,),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomColumn(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            Sizes.s24.verticalSpace,
-            MostSoldWidgetExpaneded(),
-            Sizes.s8.verticalSpace,
-            FruitGridListWidget(),
             Sizes.s16.verticalSpace,
-          ],
+            NotificationsListTitleWidget(),
+            Sizes.s16.verticalSpace,
+            NotificationsCard(isGreen: false,),
+          ]
         ),
       ),
     );

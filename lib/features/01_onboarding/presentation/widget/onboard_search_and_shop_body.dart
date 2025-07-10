@@ -8,7 +8,7 @@ import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import 'onboard_welcome/background_color.dart';
-import 'onboard_welcome/fruit_pack_image.dart';
+import 'onboard_welcome/fruit_pack_img.dart';
 import 'onboard_welcome/welcome_text.dart';
 
 class SearchAndShop extends StatelessWidget
@@ -29,12 +29,12 @@ class SearchAndShop extends StatelessWidget
               FruitPackImgWidget(img: AppAssets.icons.pineapple,),
             ],
           ),
-          Sizes.size47.verticalSpace,
+          Sizes.s47.verticalSpace,
           Column(
             children:
             [
               Text(S.of(context)!.searchAndShop, style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),),
-              Sizes.size24.verticalSpace,
+              Sizes.s24.verticalSpace,
               WelcomeTextWidget2(text: S.of(context)!.onBoarding2Description,),
             ],
           ),

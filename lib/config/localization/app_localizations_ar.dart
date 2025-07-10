@@ -29,10 +29,10 @@ class SAr extends S {
   String get startNow => 'ابدأ الآن';
 
   @override
-  String get emailIsRequired => 'البريد الإلكتروني مطلوب';
+  String get enterEmail => 'أدخل البريد الإلكتروني';
 
   @override
-  String get enterEmail => 'أدخل البريد الإلكتروني';
+  String get emailIsRequired => 'البريد الإلكتروني مطلوب';
 
   @override
   String get invalidEmailSymbol =>
@@ -43,22 +43,19 @@ class SAr extends S {
       'يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).';
 
   @override
-  String get validateFailureEmail => 'خطأ في التحقق من البريد الإلكتروني:';
+  String get emailFailureValidation => 'خطأ في التحقق من البريد الإلكتروني:';
 
   @override
   String get fullNameIsRequired => 'الاسم الكامل مطلوب.';
 
   @override
-  String get invalidFullName => 'يرجى إدخال اسم كامل صالح.';
+  String get fullNameinvalid => 'يرجى إدخال اسم كامل صالح.';
 
   @override
-  String get validateFailureFullName => 'فشل التحقق من الاسم الكامل:';
+  String get fullNameValidationFailure => 'فشل التحقق من الاسم الكامل:';
 
   @override
   String get passwordIsRequired => 'كلمة المرور مطلوبة';
-
-  @override
-  String get invalidPassword => 'كلمة المرور غير صالحة';
 
   @override
   String get passwordLength8Character =>
@@ -81,7 +78,10 @@ class SAr extends S {
       'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.';
 
   @override
-  String get validateFailurePassword => 'خطأ في التحقق من كلمة المرور:';
+  String get invalidPassword => 'كلمة المرور غير صالحة';
+
+  @override
+  String get passwordValidationFailure => 'خطأ في التحقق من كلمة المرور:';
 
   @override
   String get phoneNumberIsRequired => 'رقم الهاتف مطلوب';

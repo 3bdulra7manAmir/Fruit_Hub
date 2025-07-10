@@ -32,4 +32,7 @@ abstract class AppRoutes
   /// [Search]
   static const search = '/search';
 
+  /// [Notifications]
+  static const notifications = '/notifications';
+
 }

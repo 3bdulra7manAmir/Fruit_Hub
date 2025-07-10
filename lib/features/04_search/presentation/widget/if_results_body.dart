@@ -19,12 +19,12 @@ class IfResultsBody extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Sizes.size16.verticalSpace,
+        Sizes.s16.verticalSpace,
         Text("نتائج البحث ", style: AppStyles.semiBold(
           fontColor: AppColors.color.kGrey002, 
           fontWeight: AppFontWeights.regularWeight),
         ),
-        Sizes.size16.verticalSpace,
+        Sizes.s16.verticalSpace,
         FruitFilterGridWidget(),
       ],
     );

@@ -133,17 +133,17 @@ abstract class S {
   /// **'Start now'**
   String get startNow;
 
-  /// No description provided for @emailIsRequired.
-  ///
-  /// In en, this message translates to:
-  /// **'Email is required'**
-  String get emailIsRequired;
-
   /// No description provided for @enterEmail.
   ///
   /// In en, this message translates to:
   /// **'Enter email'**
   String get enterEmail;
+
+  /// No description provided for @emailIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is required'**
+  String get emailIsRequired;
 
   /// No description provided for @invalidEmailSymbol.
   ///
@@ -157,11 +157,11 @@ abstract class S {
   /// **'Email must end with a valid domain (e.g., .com, .org).'**
   String get invalidEmailDomain;
 
-  /// No description provided for @validateFailureEmail.
+  /// No description provided for @emailFailureValidation.
   ///
   /// In en, this message translates to:
   /// **'Error validating email:'**
-  String get validateFailureEmail;
+  String get emailFailureValidation;
 
   /// No description provided for @fullNameIsRequired.
   ///
@@ -169,29 +169,23 @@ abstract class S {
   /// **'Full name is required.'**
   String get fullNameIsRequired;
 
-  /// No description provided for @invalidFullName.
+  /// No description provided for @fullNameinvalid.
   ///
   /// In en, this message translates to:
   /// **'Please enter a valid full name.'**
-  String get invalidFullName;
+  String get fullNameinvalid;
 
-  /// No description provided for @validateFailureFullName.
+  /// No description provided for @fullNameValidationFailure.
   ///
   /// In en, this message translates to:
   /// **'Validation failed for full name:'**
-  String get validateFailureFullName;
+  String get fullNameValidationFailure;
 
   /// No description provided for @passwordIsRequired.
   ///
   /// In en, this message translates to:
   /// **'Password is required'**
   String get passwordIsRequired;
-
-  /// No description provided for @invalidPassword.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid Password'**
-  String get invalidPassword;
 
   /// No description provided for @passwordLength8Character.
   ///
@@ -223,11 +217,17 @@ abstract class S {
   /// **'Password must contain at least one special character.'**
   String get passwordOneSpecialCharacter;
 
-  /// No description provided for @validateFailurePassword.
+  /// No description provided for @invalidPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid Password'**
+  String get invalidPassword;
+
+  /// No description provided for @passwordValidationFailure.
   ///
   /// In en, this message translates to:
   /// **'Error validating password:'**
-  String get validateFailurePassword;
+  String get passwordValidationFailure;
 
   /// No description provided for @phoneNumberIsRequired.
   ///

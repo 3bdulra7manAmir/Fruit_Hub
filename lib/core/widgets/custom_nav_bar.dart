@@ -1,8 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../constants/app_borders.dart';
 
 class CustomNavBar extends StatelessWidget
 {

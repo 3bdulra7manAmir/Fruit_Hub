@@ -21,22 +21,22 @@ class IfNoResultsBody extends StatelessWidget
       children:
       [
         NoSearchResultsFoundWidget(),
-        Sizes.size125.verticalSpace,
+        Sizes.s125.verticalSpace,
         NoResultsImgWidget(),
-        Sizes.size20.verticalSpace,
+        Sizes.s20.verticalSpace,
         Column(
           children:
           [
             Text("البحث", 
             style: AppStyles.bold(fontColor: AppColors.color.kGrey006),
           ),
-            Sizes.size16.verticalSpace,
+            Sizes.s16.verticalSpace,
             Text("عفوًا... هذه المعلومات غير متوفرة للحظة", style: AppStyles.semiBold(
               fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.regularWeight),
             ),
           ],
         ),
-        Sizes.size16.verticalSpace,
+        Sizes.s16.verticalSpace,
       ],
     );
   }

@@ -32,7 +32,7 @@ abstract class AppValidation
     }
     catch (e)
     {
-      return "${S.of(context)!.validateFailureEmail} ${e.toString()}";
+      return "${S.of(context)!.emailFailureValidation} ${e.toString()}";
     }
   }
 
@@ -46,13 +46,13 @@ abstract class AppValidation
       }
       if (!value.isFullName)
       {
-        return S.of(context)!.invalidFullName;
+        return S.of(context)!.fullNameinvalid;
       }
       return null;
     }
     catch (e)
     {
-      return "${S.of(context)!.validateFailureFullName} ${e.toString()}";
+      return "${S.of(context)!.fullNameValidationFailure} ${e.toString()}";
     }
   }
 
@@ -93,7 +93,7 @@ abstract class AppValidation
     }
     catch (e)
     {
-      return "${S.of(context)!.validateFailurePassword} ${e.toString()}";
+      return "${S.of(context)!.passwordValidationFailure} ${e.toString()}";
     }
   }
 

@@ -38,14 +38,15 @@ class DarkColorScheme extends ColorManagerBase
   @override
   /// [_F3F5F7]
   Color get kGrey008 => const Color(0xffF3F5F7);
+  @override
+  /// [_323232]
+  Color get kGrey009 => const Color(0xff323232);
   
   // Black Color Range
   @override
   /// [_0C0D0D]
   Color get kBlack001 => const Color(0xff0C0D0D);
-  @override
-  /// [_EEF8ED]
-  Color get kGreen005 => const Color(0xffEEF8ED);
+
   
   
   // Green Color Range
@@ -61,6 +62,12 @@ class DarkColorScheme extends ColorManagerBase
   @override
   /// [_2D9F5D]
   Color get kGreen004 => const Color(0xff2D9F5D);
+  @override
+  /// [_EEF8ED]
+  Color get kGreen005 => const Color(0xffEEF8ED);
+  @override
+  /// [_EBF9F1]
+  Color get kGreen006 => const Color(0xffEBF9F1);
 
   // Orange Color Range
   @override
@@ -75,4 +82,9 @@ class DarkColorScheme extends ColorManagerBase
   /// [FFDE00]
   @override
   Color get kYellow001 => const Color(0xFFF3E3A4);
+
+  // Red Color Range
+  /// [EB5757]
+  @override
+  Color get kRed001 => const Color(0xFFEB5757);
 }

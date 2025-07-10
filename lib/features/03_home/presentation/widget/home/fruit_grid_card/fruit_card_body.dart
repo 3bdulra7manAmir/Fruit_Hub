@@ -26,10 +26,10 @@ class FruitGridCardWidget extends StatelessWidget
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            Sizes.size8.verticalSpace,
+            Sizes.s8.verticalSpace,
             const FavouriteWidget(),
             Expanded(child: const WatermelonWidget(),),
-            Sizes.size12.verticalSpace,
+            Sizes.s12.verticalSpace,
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,7 +39,7 @@ class FruitGridCardWidget extends StatelessWidget
                 const AddButtonWidget(),
               ],
             ),
-            Sizes.size20.verticalSpace,
+            Sizes.s20.verticalSpace,
           ],
         ).marginSymmetric(horizontal: 8.w),
       ),

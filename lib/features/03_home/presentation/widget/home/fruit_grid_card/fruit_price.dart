@@ -18,7 +18,7 @@ class PriceWidget extends StatelessWidget
       children:
       [
         Text("بطيخ", style: AppStyles.semiBold(fontColor: AppColors.color.kBlack001,), maxLines: 1,),
-        Sizes.size4.verticalSpace,
+        Sizes.s4.verticalSpace,
         Row(
           children:
           [

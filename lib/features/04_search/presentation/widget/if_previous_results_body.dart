@@ -21,7 +21,7 @@ class IfPreviousResultsBody extends StatelessWidget
     return Column(
       children:
       [
-        Sizes.size24.verticalSpace,
+        Sizes.s24.verticalSpace,
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:
@@ -34,7 +34,7 @@ class IfPreviousResultsBody extends StatelessWidget
             ),
           ],
         ),
-        Sizes.size16.verticalSpace,
+        Sizes.s16.verticalSpace,
         PreviouslySearchedResultsWidget(),
       ],
     );
@@ -54,7 +54,7 @@ class PreviouslySearchedTextWidget extends StatelessWidget
       children:
       [
         SvgPicture.asset(AppAssets.icons.watchGrey),
-        Sizes.size16.horizontalSpace,
+        Sizes.s16.horizontalSpace,
         Text("فراولة", style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.regularWeight),),
         Spacer(),
         GestureDetector(
@@ -76,7 +76,7 @@ class PreviouslySearchedResultsWidget extends StatelessWidget
   {
     return CustomListviewBuilder(
       itemBuilder: (context, index) => PreviouslySearchedTextWidget(), 
-      separatorBuilder: (context, index) => Sizes.size8.verticalSpace, 
+      separatorBuilder: (context, index) => Sizes.s8.verticalSpace, 
       itemCount: 3
     );
   }

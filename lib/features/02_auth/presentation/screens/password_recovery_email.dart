@@ -29,11 +29,11 @@ class PasswordRecoveryEmail extends StatelessWidget
           formBody: CustomColumn(
             children:
             [
-              Sizes.size24.verticalSpace,
+              Sizes.s24.verticalSpace,
               PhoneRecoveryTitleWidget(),
-              Sizes.size29.verticalSpace,
+              Sizes.s29.verticalSpace,
               RecoveryOtpFieldWidget(),
-              Sizes.size29.verticalSpace,
+              Sizes.s29.verticalSpace,
               GestureDetector(
                 onTap: ()
                 {

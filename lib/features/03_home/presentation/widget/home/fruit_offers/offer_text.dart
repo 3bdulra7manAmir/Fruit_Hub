@@ -41,9 +41,9 @@ class FruitCardWidget extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Sizes.size25.verticalSpace,
+        Sizes.s25.verticalSpace,
         Text("عروض العيد", style: AppStyles.semiBold(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.regularWeight),),
-        Sizes.size8.verticalSpace,
+        Sizes.s8.verticalSpace,
         Row(
           children:
           [
@@ -52,9 +52,9 @@ class FruitCardWidget extends StatelessWidget
             Text("25%", style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
           ],
         ),
-        Sizes.size8.verticalSpace,
+        Sizes.s8.verticalSpace,
         ShopNowButtonWidget(),
-        Sizes.size30.verticalSpace,
+        Sizes.s30.verticalSpace,
       ],
     );
   }
