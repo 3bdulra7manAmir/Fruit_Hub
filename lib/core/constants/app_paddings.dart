@@ -27,8 +27,11 @@ class Symmetric
   Symmetric._();
 
   /// 5px horizontal
-  EdgeInsets get xXXSmall => EdgeInsets.symmetric(horizontal: 5.w);
+  EdgeInsets get xXXXSmall => EdgeInsets.symmetric(horizontal: 5.w);
 
+  /// 16px horizontal 8px vertical
+  EdgeInsets get xXXSmall => EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h);
+  
   /// 16px horizontal 8px vertical
   EdgeInsets get xXSmall => EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h);
 

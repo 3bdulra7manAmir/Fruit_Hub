@@ -52,7 +52,7 @@ class NoSearchResultsFoundWidget extends StatelessWidget
   {
     return Container(
       height: 80.h, width: double.infinity,
-      padding: AppPadding.symmetric.xXSmall,
+      padding: AppPadding.symmetric.xXXSmall,
       decoration: BoxDecoration(
         color: AppColors.color.kWhite001,
         borderRadius: AppRadiuses.circular.xXXSmall,

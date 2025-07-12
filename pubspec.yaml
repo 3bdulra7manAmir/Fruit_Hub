@@ -94,6 +94,7 @@ flutter:
     - assets/icons/Search/
     - assets/icons/Home/
     - assets/icons/Notifications/
+    - assets/icons/Products/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/

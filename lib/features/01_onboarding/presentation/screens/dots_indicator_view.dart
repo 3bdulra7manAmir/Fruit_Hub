@@ -57,7 +57,7 @@ class Indicator extends StatelessWidget
       decorator: DotsDecorator(
         activeColor: AppColors.color.kGreen001,
         color: AppColors.color.kGreen003, 
-        spacing: AppPadding.symmetric.xXXSmall,
+        spacing: AppPadding.symmetric.xXXXSmall,
       ),
     );
   }

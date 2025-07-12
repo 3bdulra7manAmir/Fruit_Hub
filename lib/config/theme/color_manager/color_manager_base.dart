@@ -9,6 +9,8 @@ abstract class ColorManagerBase
   // White Color Range
   /// [FFFFFF]
   Color get kWhite001;
+  /// [CACECE66]
+  Color get kWhite002;
 
   // Grey Color Range
   /// [_4E5556]

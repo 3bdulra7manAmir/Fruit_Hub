@@ -54,6 +54,10 @@ class _Icons
   ///[Notifications]
   final String notificationsImg = "assets/imgs/Notifications/Notification_Img.png";
   final String greenDot = "assets/icons/Notifications/Dot_Green.svg";
+  
+  ///[Products]
+  final String swapArrows = "assets/icons/Products/Horizontal_Arrows.svg";
+  final String avocado = "assets/icons/Products/Avocado.png";
 }
 
 ///-----------------------------------------------------------------//

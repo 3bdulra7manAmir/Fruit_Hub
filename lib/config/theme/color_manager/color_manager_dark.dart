@@ -12,6 +12,9 @@ class DarkColorScheme extends ColorManagerBase
   @override
   /// [FFFFFF]
   Color get kWhite001 => const Color(0xffFFFFFF);
+  @override
+  /// [CACECE66]
+  Color get kWhite002 => const Color.fromRGBO(202, 206, 206, 0.4);
 
   // Grey Color Range
   @override

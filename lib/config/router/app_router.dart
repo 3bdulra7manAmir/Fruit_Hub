@@ -13,6 +13,7 @@ import '../../features/03_home/presentation/screens/home_view.dart';
 import '../../features/03_home/presentation/screens/more_popular_view.dart';
 import '../../features/04_search/presentation/screens/search_view.dart';
 import '../../features/05_notifications/presentation/screens/notifications_view.dart';
+import '../../features/06_products/presentation/screens/products_view.dart';
 import 'app_routes.dart';
 import 'route_boserver.dart';
 
@@ -26,7 +27,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.splash,
+    initialLocation: AppRoutes.products,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -107,6 +108,13 @@ abstract class AppRouter
         path: AppRoutes.notifications,
         name: AppRoutes.notifications,
         builder: (context, state) => const Notifications(),
+      ),
+
+      ///[Products]
+      GoRoute(
+        path: AppRoutes.products,
+        name: AppRoutes.products,
+        builder: (context, state) => const Products(),
       ),
     ]
   );

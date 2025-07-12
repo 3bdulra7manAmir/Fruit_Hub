@@ -45,7 +45,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
       backgroundColor: backgroundColor,
       centerTitle: true,
       title: Text(barTitle, style: AppStyles.extraBold()),
-      automaticallyImplyLeading: isDefaultBack ?? false,
+      automaticallyImplyLeading: false,
       leadingWidth: barLeadingWidth ?? 44.w,
       leading: (isCustomBack ?? true) ? backButtonOnTap(context) : null,
       actions: (isNotifications ?? false) ? (barActions ?? [billOnTap(context)]) : null,

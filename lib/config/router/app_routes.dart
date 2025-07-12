@@ -35,4 +35,7 @@ abstract class AppRoutes
   /// [Notifications]
   static const notifications = '/notifications';
 
+  /// [Products]
+  static const products = '/products';
+
 }
