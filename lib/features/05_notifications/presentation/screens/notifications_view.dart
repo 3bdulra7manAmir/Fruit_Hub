@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../widget/card_body.dart';
 import '../widget/cards_list.dart';
 import '../widget/title_body.dart';
 
@@ -27,11 +24,12 @@ class Notifications extends StatelessWidget
           children:
           [
             Sizes.s16.verticalSpace,
-            const NotificationsTitleWidget().marginSymmetric(horizontal: 16.w),
+            const NotificationsTitleWidget(header: "جديد", count: "2",).marginSymmetric(horizontal: 16.w),
             Sizes.s16.verticalSpace,
             const NotificationsCardListWidget(),
-            Sizes.s11.verticalSpace,
-
+            const NotificationsTitleWidget(header: "في وقت سابق", count: "2",).marginSymmetric(horizontal: 16.w),
+            Sizes.s16.verticalSpace,
+            const NotificationsCardListWidget(),
           ]
         ),
       ),

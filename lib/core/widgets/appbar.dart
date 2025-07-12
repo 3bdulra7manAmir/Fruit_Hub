@@ -11,7 +11,7 @@ import '../constants/app_images.dart';
 import '../constants/app_margins.dart';
 import '../constants/app_styles.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget 
 {
   const CustomAppBar({
     super.key,
@@ -48,7 +48,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
       automaticallyImplyLeading: isDefaultBack ?? false,
       leadingWidth: barLeadingWidth ?? 44.w,
       leading: (isCustomBack ?? true) ? backButtonOnTap(context) : null,
-      actions: (isNotifications ?? false) ? (barActions ?? [billOnTap()]) : null,
+      actions: (isNotifications ?? false) ? (barActions ?? [billOnTap(context)]) : null,
       actionsPadding: (isNotifications ?? false) ? (barActionsPadding ?? AppMargins.directional.smallEnd) : EdgeInsets.zero,
     ).marginDirectional(start: 16.w, top: 11.h);
   }
@@ -60,11 +60,27 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   GestureDetector(onTap: () => leadingOnTap(context), child: barLeading ?? SvgPicture.asset(AppAssets.icons.rightBlackArrow),);
 }
 
-  GestureDetector billOnTap() => 
+  GestureDetector billOnTap(context) => 
   GestureDetector(onTap: ()
   {
     log("Notifications Bill has been Pressed...");
-    AppRouter.router.pushNamed(AppRoutes.notifications);
+    try
+    {
+      if (AppRouter.currentRoute == AppRoutes.notifications)
+      {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('انت اساسًا في شاشة الاشعارات يا معلم...')),
+        );
+      }
+      else
+      {
+        AppRouter.router.pushNamed(AppRoutes.notifications);
+      }
+    }
+    catch (e, stack)
+    {
+      log("Error Going to Notifications Screen: $e, Stack is: $stack");
+    }
   }, child: const BillWidget(),);
 
   void leadingOnTap(BuildContext context)

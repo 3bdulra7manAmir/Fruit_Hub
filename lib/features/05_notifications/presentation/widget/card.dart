@@ -10,14 +10,14 @@ import 'card_time.dart';
 
 class NotificationsCardWidget extends StatelessWidget
 {
-  const NotificationsCardWidget({super.key, required this.isGreenBackground});
-  final bool isGreenBackground;
+  const NotificationsCardWidget({super.key, this.isGreenBackground});
+  final bool? isGreenBackground;
 
   @override
   Widget build(BuildContext context)
   {
     return Card(
-      color: isGreenBackground ? AppColors.color.kGreen006 : AppColors.color.kWhite001,
+      color: isGreenBackground! ? AppColors.color.kGreen006 : AppColors.color.kWhite001,
       child: Container(
         margin: AppPadding.symmetric.notificationsCard,
         child: Row(

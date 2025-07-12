@@ -2,9 +2,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/widgets/paint_clipper.dart';
 
-class BackgroundColorWidget extends StatelessWidget
+class ClippedColorWidget extends StatelessWidget
 {
-  const BackgroundColorWidget({super.key, required this.color});
+  const ClippedColorWidget({super.key, required this.color});
 
   final Color color;
 

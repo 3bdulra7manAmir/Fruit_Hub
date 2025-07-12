@@ -7,9 +7,9 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../onboard_welcome/fruit_pack_background.dart';
-import '../onboard_welcome/fruit_pack_img.dart';
-import 'welcome_text.dart';
+import '../onboard_welcome/clipped_background.dart';
+import '../fruit_img.dart';
+import '../welcome_subtitle_text.dart';
 
 class SearchAndShop extends StatelessWidget
 {
@@ -25,21 +25,34 @@ class SearchAndShop extends StatelessWidget
           Stack(
             children:
             [
-              BackgroundColorWidget(color: AppColors.color.kGreen002,),
-              FruitPackImgWidget(img: AppAssets.icons.pineapple,),
+              ClippedColorWidget(color: AppColors.color.kGreen002,),
+              FruitImgWidget(img: AppAssets.icons.pineapple,),
             ],
           ),
           Sizes.s47.verticalSpace,
           Column(
             children:
             [
-              Text(S.of(context)!.searchAndShop, style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),),
+              SearchAndShopTitleWidget(),
               Sizes.s24.verticalSpace,
-              WelcomeTextWidget2(text: S.of(context)!.onBoarding2Description,),
+              WelcomeSubtitleWidget(text: S.of(context)!.onBoarding2Description,),
             ],
           ),
         ],
       ),
     );
+  }
+}
+
+class SearchAndShopTitleWidget extends StatelessWidget
+{
+  const SearchAndShopTitleWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Text(S.of(context)!.searchAndShop, 
+    style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),
+  );
   }
 }

@@ -10,7 +10,8 @@ import '../../../../../config/router/app_routes.dart';
 
 class MostSoldWidget extends StatelessWidget
 {
-  const MostSoldWidget({super.key});
+  const MostSoldWidget({super.key, required this.isMoreEnabled});
+  final bool isMoreEnabled;
 
   @override
   Widget build(BuildContext context)
@@ -26,11 +27,12 @@ class MostSoldWidget extends StatelessWidget
             log("More has been Pressed...");
             AppRouter.router.pushNamed(AppRoutes.mostSold);
           },
-          child: Text("المزيد", style: AppStyles.semiBold(
+          child: isMoreEnabled ?
+          Text("المزيد", style: AppStyles.semiBold(
             fontColor: AppColors.color.kGrey002,
             fontWeight: AppFontWeights.regularWeight,
             ),
-          ),
+          ) : SizedBox.shrink(),
         ),
       ],
     );

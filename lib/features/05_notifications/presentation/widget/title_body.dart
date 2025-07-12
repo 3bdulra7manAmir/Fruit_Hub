@@ -8,7 +8,9 @@ import 'title_header.dart';
 
 class NotificationsTitleWidget extends StatelessWidget
 {
-  const NotificationsTitleWidget({super.key,});
+  const NotificationsTitleWidget({super.key, required this.header, required this.count,});
+  final String header;
+  final String count;
   
 
   @override
@@ -17,9 +19,9 @@ class NotificationsTitleWidget extends StatelessWidget
     return Row(
       children:
       [  //
-        const HeaderWidget(header: "جديد"),
+        HeaderWidget(header: header),
         Sizes.s6.horizontalSpace,
-        const CountWidget(count: "2",),
+        CountWidget(count: count,),
         const Spacer(),
         const MarkAllAsReadWidget(),
       ],

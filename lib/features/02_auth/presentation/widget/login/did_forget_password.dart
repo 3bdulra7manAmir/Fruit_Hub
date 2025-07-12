@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import 'dart:developer';
 import 'package:e_commerce_app/core/extensions/widget_align.dart';
 import 'package:flutter/material.dart';

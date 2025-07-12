@@ -24,6 +24,7 @@ class ECommerceApp extends ConsumerWidget
         designSize: const Size(375, 812),
           builder: (context, child) => MaterialApp.router(
           routerConfig: AppRouter.router,
+          
           localizationsDelegates:
           const [
             S.delegate,

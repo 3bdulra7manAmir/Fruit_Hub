@@ -5,7 +5,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/home/fruit_grid_list.dart';
-import '../widget/more_popular/most_sold.dart';
+import '../widget/home/most_sold.dart';
 
 
 class MorePopular extends StatelessWidget
@@ -24,7 +24,7 @@ class MorePopular extends StatelessWidget
           children:
           [
             Sizes.s24.verticalSpace,
-            const MostSoldWidgetExpaneded(),
+            const MostSoldWidget(isMoreEnabled: false,),
             Sizes.s8.verticalSpace,
             const FruitGridListWidget(),
             Sizes.s16.verticalSpace,
