@@ -1,8 +1,6 @@
 import 'package:e_commerce_app/core/extensions/string.dart';
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:e_commerce_app/core/extensions/widget_textstyle.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/localization/app_localizations.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
@@ -42,21 +40,3 @@ class WelcomeTextWidget extends StatelessWidget
   }
 }
 
-
-class WelcomeTextWidget2 extends StatelessWidget
-{
-  const WelcomeTextWidget2({super.key, required this.text});
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context)
-  {
-    return Text(
-      text, 
-      style: AppStyles.semiBold(), 
-      textAlign: TextAlign.center,
-      maxLines: 3, 
-    ).marginSymmetric(horizontal: (37).w);
-  }
-}

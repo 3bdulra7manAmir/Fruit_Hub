@@ -1,30 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/theme/color_manager/colors.dart';
+import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
-import 'notifications_img.dart';
-import 'notifications_text.dart';
-import 'notifications_time.dart';
+import 'card_img.dart';
+import 'card_text.dart';
+import 'card_time.dart';
 
-class NotificationsCard extends StatelessWidget
+class NotificationsCardWidget extends StatelessWidget
 {
-  const NotificationsCard({super.key, required this.isGreen});
-
-  final bool isGreen;
+  const NotificationsCardWidget({super.key, required this.isGreenBackground});
+  final bool isGreenBackground;
 
   @override
   Widget build(BuildContext context)
   {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children:
-      [
-        const NotificationsImgWidget(),
-        Sizes.s13.horizontalSpace,
-        const NotificationsTextWidget(),
-        const Spacer(),
-        const NotificationsTimeWidget(),
-      ],
+    return Card(
+      color: isGreenBackground ? AppColors.color.kGreen006 : AppColors.color.kWhite001,
+      child: Container(
+        margin: AppPadding.symmetric.notificationsCard,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+          [
+            const NotificationsImgWidget(),
+            Sizes.s13.horizontalSpace,
+            const NotificationsTextWidget(),
+            const Spacer(),
+            const NotificationsTimeWidget(),
+          ],
+        ),
+      ),
     );
   }
 }
+

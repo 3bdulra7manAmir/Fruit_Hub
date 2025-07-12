@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomColumn extends StatelessWidget
 {
-  const CustomColumn({super.key, this.crossAxisAlignment, required this.children});
+  const CustomColumn({super.key, this.crossAxisAlignment, required this.children, this.isMargin});
 
   final CrossAxisAlignment? crossAxisAlignment;
   final List<Widget> children;
+  final bool? isMargin;
 
   @override
   Widget build(BuildContext context)
@@ -15,6 +16,6 @@ class CustomColumn extends StatelessWidget
     return Column(
       crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
       children: children
-    ).marginSymmetric(horizontal: 16.w);
+    ).marginSymmetric(horizontal: (isMargin ?? true) ? 16.w : 0);
   }
 }

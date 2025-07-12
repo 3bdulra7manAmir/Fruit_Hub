@@ -14,12 +14,6 @@ class BorderOnly
 {
   BorderOnly._();
 
-  ///[topLeft: 12.r ,, topRight: 12.r]
-  BorderRadiusGeometry get xSmall => BorderRadius.only(
-    bottomRight: Radius.circular(4.r),
-    topRight: Radius.circular(4.r),
-  );
-
 }
 
 

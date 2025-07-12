@@ -1,11 +1,15 @@
+// ignore_for_file: unused_import
+
+import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../widget/card.dart';
-import '../widget/title.dart';
+import '../widget/card_body.dart';
+import '../widget/cards_list.dart';
+import '../widget/title_body.dart';
 
 class Notifications extends StatelessWidget
 {
@@ -19,13 +23,15 @@ class Notifications extends StatelessWidget
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomColumn(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start, isMargin: false,
           children:
           [
             Sizes.s16.verticalSpace,
-            const NotificationsListTitleWidget(),
+            const NotificationsTitleWidget().marginSymmetric(horizontal: 16.w),
             Sizes.s16.verticalSpace,
-            const NotificationsCard(isGreen: false,),
+            const NotificationsCardListWidget(),
+            Sizes.s11.verticalSpace,
+
           ]
         ),
       ),

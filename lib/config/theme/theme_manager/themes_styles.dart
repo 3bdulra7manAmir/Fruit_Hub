@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_borders.dart';
 import '../color_manager/colors.dart';
 
@@ -40,27 +39,26 @@ abstract class LightThemeStyles
   static OutlineInputBorder borderLightStyle()
   {
     return OutlineInputBorder(
-      borderSide: BorderSide(color: AppColors.color.kGrey003),
+      borderSide: BorderSide(color: AppColors.color.kGrey003), 
       borderRadius: AppRadiuses.circular.xXXXSmall,
     );
   }
 
   static CardThemeData get cardTheme => CardThemeData(
+    elevation: 0, 
+    margin: EdgeInsets.zero, 
+    shape: Border(),
     color: AppColors.color.kWhite001,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadiusGeometry.directional(
-        topStart: Radius.circular(4.r),
-        bottomStart: Radius.circular(4.r),
-      )
-    )
   );
-  static AppBarTheme get appBarTheme => AppBarTheme(backgroundColor: AppColors.color.kWhite001, surfaceTintColor: AppColors.color.kTransparent);
+  static AppBarTheme get appBarTheme => AppBarTheme(
+    backgroundColor: AppColors.color.kWhite001, 
+    surfaceTintColor: AppColors.color.kTransparent
+  );
   static DialogThemeData get dialogTheme => DialogThemeData(
-    backgroundColor: AppColors.color.kWhite001,
+    backgroundColor: AppColors.color.kWhite001, 
     shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXSmall,),
   );
   static BottomSheetThemeData get bottomSheetTheme => const BottomSheetThemeData();
-
 }
 
 //------------------------------------------------//

@@ -22,9 +22,8 @@ class NotificationsTextWidget extends StatelessWidget
             TextSpan(text: "50% ", style: AppStyles.semiBold(fontColor: AppColors.color.kRed001),),
             const TextSpan(text: "علي اسعار الفواكه بمناسبه العيد"),
           ],
-        ),
-        maxLines: 2
-        ),
+        ), maxLines: 2
+      ),
     );
   }
 }

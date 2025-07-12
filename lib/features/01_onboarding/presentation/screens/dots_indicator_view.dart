@@ -8,8 +8,8 @@ import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../controller/dot_indicator_controller.dart';
 import '../widget/onboard_search_and_shop/start_now_button.dart';
-import '../widget/onboard_welcome_body.dart';
-import '../widget/onboard_search_and_shop_body.dart';
+import '../widget/onboard_welcome/onboard_welcome_body.dart';
+import '../widget/onboard_search_and_shop/onboard_search_and_shop_body.dart';
 
 class DotIndicator extends ConsumerWidget
 {

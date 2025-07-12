@@ -11,6 +11,9 @@ class NotificationsTimeWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("9 صباحا", style: AppStyles.semiBold(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),);
+    return Text("9 صباحا", style: AppStyles.semiBold(
+      fontWeight: AppFontWeights.regularWeight, 
+      fontColor: AppColors.color.kGrey002),
+    );
   }
 }

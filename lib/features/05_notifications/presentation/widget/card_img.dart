@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/constants/app_images.dart';
+
 class NotificationsImgWidget extends StatelessWidget
 {
   const NotificationsImgWidget({super.key});
@@ -7,6 +9,6 @@ class NotificationsImgWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Image.asset("assets/imgs/Notifications/Notification_Img.png");
+    return Image.asset(AppAssets.icons.notificationsImg);
   }
 }

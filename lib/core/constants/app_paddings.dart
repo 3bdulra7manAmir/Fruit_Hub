@@ -31,6 +31,10 @@ class Symmetric
 
   /// 16px horizontal 8px vertical
   EdgeInsets get xXSmall => EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h);
+
+  /// 16px horizontal 12px vertical
+  EdgeInsets get notificationsCard => EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h);
+
 }
 
 
@@ -39,7 +43,7 @@ class Directional
   Directional._();
 
   /// 25px from start
-  EdgeInsetsDirectional get smallstart => EdgeInsetsDirectional.only(start: 25.w,);
+  EdgeInsetsDirectional get offerText => EdgeInsetsDirectional.only(start: 25.w,);
 
 }
 

@@ -93,6 +93,7 @@ flutter:
     - assets/icons/Login/
     - assets/icons/Search/
     - assets/icons/Home/
+    - assets/icons/Notifications/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/

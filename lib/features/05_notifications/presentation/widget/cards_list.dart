@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/listview_builder.dart';
-import 'card.dart';
+import 'card_body.dart';
 
 class NotificationsCardListWidget extends StatelessWidget
 {
@@ -14,7 +14,7 @@ class NotificationsCardListWidget extends StatelessWidget
   {
     return CustomListviewBuilder(
       itemCount: 3,
-      itemBuilder: (context, index) => const NotificationsCard(isGreen: false,),
+      itemBuilder: (context, index) => const NotificationsCardBody(),
       separatorBuilder: (context, index) => Sizes.s16.verticalSpace,
     );
   }

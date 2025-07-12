@@ -20,9 +20,12 @@ class OfferTextWidget extends StatelessWidget
     return ClipPath(
       clipper: OfferWaveClipper(),
       child: Container(
-        padding: AppPadding.directional.smallstart,
         width: 175.w,
-        decoration: BoxDecoration(borderRadius: AppRadiuses.only.xSmall, color: AppColors.color.kGreen003,),
+        padding: AppPadding.directional.offerText,
+        decoration: BoxDecoration(
+          borderRadius: AppRadiuses.circular.xXXXSmall, 
+          color: AppColors.color.kGreen003,
+        ),
         child: const FruitCardWidget(),
       ),
     );

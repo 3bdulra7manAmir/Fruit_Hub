@@ -50,6 +50,10 @@ class _Icons
   final String noSearchResults= "assets/icons/Search/No_Search_Results.svg";
   final String watchGrey = "assets/icons/Search/Watch_Grey.svg";
   final String removeBlacksemisold = "assets/icons/Search/Remove_Black_semi_sold.svg";
+
+  ///[Notifications]
+  final String notificationsImg = "assets/imgs/Notifications/Notification_Img.png";
+  final String greenDot = "assets/icons/Notifications/Dot_Green.svg";
 }
 
 ///-----------------------------------------------------------------//
