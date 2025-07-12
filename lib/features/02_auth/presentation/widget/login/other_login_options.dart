@@ -11,9 +11,9 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 
-class OtherOptionWidget extends StatelessWidget
+class OtherOptionsWidget extends StatelessWidget
 {
-  const OtherOptionWidget({super.key});
+  const OtherOptionsWidget({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -77,7 +77,6 @@ class OtherOptionCardWidget extends StatelessWidget
           SvgPicture.asset(logo),
           Sizes.s53.horizontalSpace,
           Text(text, style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.semiBoldWeight),),
-          
         ],
       ),
     );

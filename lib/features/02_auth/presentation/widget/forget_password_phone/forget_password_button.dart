@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/widgets/buttons/button.dart';
-import 'phone_number_form_field.dart';
+import 'number_field.dart';
 
 class ForgetPasswordButtonWidget extends StatelessWidget
 {
@@ -20,8 +20,8 @@ class ForgetPasswordButtonWidget extends StatelessWidget
       if (!formKey.currentState!.validate())
         {
           log("Valid ForgetPassword...");
-          log(PhoneNumberFormFieldWidget.phoneController.text);
-          PhoneNumberFormFieldWidget.phoneController.clear();
+          log(PhoneNumberWidget.phoneController.text);
+          PhoneNumberWidget.phoneController.clear();
           AppRouter.router.pushNamed(AppRoutes.passwordRecoveryEmail);
         }
         else

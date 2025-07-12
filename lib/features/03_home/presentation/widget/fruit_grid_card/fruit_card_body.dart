@@ -2,13 +2,13 @@ import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../../core/constants/app_borders.dart';
-import '../../../../../../core/constants/app_sizes.dart';
-import 'favourite.dart';
+import '../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import 'favourite_img.dart';
 import 'fruit_price.dart';
 import 'add_button.dart';
-import 'watermelon.dart';
+import 'watermelon_img.dart';
 
 class FruitGridCardWidget extends StatelessWidget
 {

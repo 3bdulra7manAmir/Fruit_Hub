@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_images.dart';
 
 class SearchIconWidget extends StatelessWidget
 {

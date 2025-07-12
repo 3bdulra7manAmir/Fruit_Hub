@@ -6,7 +6,7 @@ import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/gridview_builder.dart';
-import '../../../03_home/presentation/widget/home/fruit_grid_card/fruit_card_body.dart';
+import '../../../03_home/presentation/widget/fruit_grid_card/fruit_card_body.dart';
 
 class IfResultsBody extends StatelessWidget
 {

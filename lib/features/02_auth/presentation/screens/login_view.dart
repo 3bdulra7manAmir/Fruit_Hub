@@ -7,11 +7,11 @@ import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/login/did_forget_password.dart';
 import '../widget/login/dont_have_account.dart';
-import '../widget/login/email_field.dart';
+import '../widget/login/login_email_field.dart';
 import '../widget/login/login_button.dart';
-import '../widget/login/or.dart';
+import '../widget/login/or_widget.dart';
 import '../widget/login/other_login_options.dart';
-import '../widget/login/password_field.dart';
+import '../widget/login/login_password_field.dart';
 
 class Login extends StatelessWidget
 {
@@ -43,7 +43,7 @@ class Login extends StatelessWidget
               Sizes.s33.verticalSpace,
               const OrWidget(),
               Sizes.s16.verticalSpace,
-              const OtherOptionWidget(),
+              const OtherOptionsWidget(),
               Sizes.s16.verticalSpace,
             ],
           ),

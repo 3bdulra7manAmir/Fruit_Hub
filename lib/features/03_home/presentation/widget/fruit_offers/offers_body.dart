@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'fruit_image.dart';
+import 'fruit_img.dart';
 import 'offer_text.dart';
 
 class OffersBody extends StatelessWidget

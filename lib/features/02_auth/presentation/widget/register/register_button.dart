@@ -2,9 +2,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/buttons/button.dart';
-import 'email_field.dart';
+import 'register_email_field.dart';
 import 'fullname_field.dart';
-import 'password_field.dart';
+import 'register_password_field.dart';
 
 class RegisterButtonWidget extends StatelessWidget
 {

@@ -18,7 +18,7 @@ class NotificationsTitleWidget extends StatelessWidget
   {
     return Row(
       children:
-      [  //
+      [
         HeaderWidget(header: header),
         Sizes.s6.horizontalSpace,
         CountWidget(count: count,),

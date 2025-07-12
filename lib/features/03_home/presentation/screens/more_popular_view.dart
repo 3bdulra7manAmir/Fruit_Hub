@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../widget/home/fruit_grid_list.dart';
-import '../widget/home/most_sold.dart';
+import '../widget/fruit_grid_list.dart';
+import '../widget/most_sold.dart';
 
 
 class MorePopular extends StatelessWidget

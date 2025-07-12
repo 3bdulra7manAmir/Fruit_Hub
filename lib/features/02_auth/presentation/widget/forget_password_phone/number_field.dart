@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
-class PhoneNumberFormFieldWidget extends StatelessWidget
+class PhoneNumberWidget extends StatelessWidget
 {
-  const PhoneNumberFormFieldWidget({super.key});
+  const PhoneNumberWidget({super.key});
 
   static final TextEditingController phoneController = TextEditingController();
 

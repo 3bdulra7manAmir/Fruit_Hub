@@ -6,9 +6,9 @@ import '../../../../core/widgets/form.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/register/already_has_an_account.dart';
-import '../widget/register/email_field.dart';
+import '../widget/register/register_email_field.dart';
 import '../widget/register/fullname_field.dart';
-import '../widget/register/password_field.dart';
+import '../widget/register/register_password_field.dart';
 import '../widget/register/register_button.dart';
 import '../widget/register/register_terms.dart';
 

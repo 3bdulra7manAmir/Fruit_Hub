@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_images.dart';
 
 class FavouriteWidget extends StatelessWidget
 {

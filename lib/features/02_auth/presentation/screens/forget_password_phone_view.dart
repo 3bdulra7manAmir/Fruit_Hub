@@ -7,7 +7,7 @@ import '../../../../core/widgets/form.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/forget_password_phone/forget_password_button.dart';
-import '../widget/forget_password_phone/phone_number_form_field.dart';
+import '../widget/forget_password_phone/number_field.dart';
 
 class ForgetPasswordPhone extends StatelessWidget
 {
@@ -29,7 +29,7 @@ class ForgetPasswordPhone extends StatelessWidget
               Sizes.s24.verticalSpace,
               const ForgetPasswordTitleWidget(),
               Sizes.s30.verticalSpace,
-              const PhoneNumberFormFieldWidget(),
+              const PhoneNumberWidget(),
               Sizes.s30.verticalSpace,
               ForgetPasswordButtonWidget(formKey: forgetPasswordPhoneFormKey,),
               Sizes.s16.verticalSpace,

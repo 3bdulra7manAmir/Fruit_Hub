@@ -5,8 +5,8 @@ import 'package:e_commerce_app/config/theme/font_manager/font_weights.dart';
 import 'package:e_commerce_app/core/constants/app_styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../config/router/app_router.dart';
-import '../../../../../config/router/app_routes.dart';
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/app_routes.dart';
 
 class MostSoldWidget extends StatelessWidget
 {
