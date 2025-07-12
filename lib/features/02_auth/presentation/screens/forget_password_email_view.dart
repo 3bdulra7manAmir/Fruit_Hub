@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/custom_column.dart';
+import '../../../../core/widgets/column.dart';
 
 class ForgetPasswordEmail extends StatelessWidget
 {

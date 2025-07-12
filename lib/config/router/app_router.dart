@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../core/widgets/custom_circular_indicator.dart';
+import '../../core/widgets/circular_indicator.dart';
 import '../../features/01_onboarding/presentation/screens/splash_view.dart';
 import '../../features/01_onboarding/presentation/screens/dots_indicator_view.dart';
 import '../../features/02_auth/presentation/screens/forget_password_phone_view.dart';

@@ -5,7 +5,7 @@ import '../../../../../config/localization/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/constants/app_margins.dart';
-import '../../../../../core/widgets/buttons/custom_button.dart';
+import '../../../../../core/widgets/buttons/button.dart';
 
 class StartNowButtonWidget extends StatelessWidget
 {

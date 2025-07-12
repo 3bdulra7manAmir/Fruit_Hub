@@ -5,7 +5,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/widgets/custom_divider.dart';
+import '../../../../../core/widgets/divider.dart';
 
 class OrWidget extends StatelessWidget
 {

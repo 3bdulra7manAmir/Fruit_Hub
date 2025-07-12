@@ -16,20 +16,17 @@ class NotificationsCard extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container(
-      height: 59.h,
-      color: isGreen ? AppColors.color.kGreen006 : AppColors.color.kWhite001,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children:
-        [
-          NotificationsImgWidget(),
-          Sizes.s13.horizontalSpace,
-          NotificationsTextWidget(),
-          Spacer(),
-          NotificationsTimeWidget(),
-        ],
-      ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children:
+      [
+        NotificationsImgWidget(),
+        Sizes.s13.horizontalSpace,
+        NotificationsTextWidget(),
+        //Text("datadatadatadatadatadatadata"),
+        Spacer(),
+        NotificationsTimeWidget(),
+      ],
     );
   }
 }

@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/validation/app_validation.dart';
-import '../../../../../core/widgets/custom_textform_field.dart';
+import '../../../../../core/widgets/textform_field.dart';
 import '../../controller/login/obscure_password_controller.dart';
 
 class LoginPasswordWidget extends ConsumerWidget

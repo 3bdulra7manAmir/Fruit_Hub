@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/app_appbar.dart';
-import '../../../../core/widgets/custom_column.dart';
+import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/column.dart';
 import '../widget/card.dart';
 import '../widget/title.dart';
 

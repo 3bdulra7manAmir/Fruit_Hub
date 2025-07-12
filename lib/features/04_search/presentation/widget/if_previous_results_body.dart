@@ -9,7 +9,7 @@ import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
-import '../../../../core/widgets/custom_listview_builder.dart';
+import '../../../../core/widgets/listview_builder.dart';
 
 class IfPreviousResultsBody extends StatelessWidget
 {

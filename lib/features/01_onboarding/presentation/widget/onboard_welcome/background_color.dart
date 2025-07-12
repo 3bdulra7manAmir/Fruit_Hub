@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/widgets/custom_paint_clipper.dart';
+import '../../../../../core/widgets/paint_clipper.dart';
 
 class BackgroundColorWidget extends StatelessWidget
 {

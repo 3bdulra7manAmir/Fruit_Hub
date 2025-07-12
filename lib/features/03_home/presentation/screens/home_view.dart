@@ -10,7 +10,7 @@ import '../widget/home/most_sold.dart';
 import '../widget/home/offers_list.dart';
 import '../widget/home/search_bar/search_bar_body.dart';
 import '../widget/home/user_appbar/user_appbar_body.dart';
-import '../../../../core/widgets/custom_column.dart';
+import '../../../../core/widgets/column.dart';
 
 
 class Home extends StatelessWidget

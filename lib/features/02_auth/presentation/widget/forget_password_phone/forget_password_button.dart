@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
-import '../../../../../core/widgets/buttons/custom_button.dart';
+import '../../../../../core/widgets/buttons/button.dart';
 import 'phone_number_form_field.dart';
 
 class ForgetPasswordButtonWidget extends StatelessWidget

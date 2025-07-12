@@ -7,7 +7,7 @@ import '../../../../../../core/constants/app_borders.dart';
 import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
-import '../../../../../../core/widgets/custom_paint_clipper.dart';
+import '../../../../../../core/widgets/paint_clipper.dart';
 import 'shop_now_button.dart';
 
 class OfferTextWidget extends StatelessWidget
