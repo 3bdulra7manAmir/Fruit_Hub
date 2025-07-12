@@ -31,7 +31,7 @@ class NotificationsListTitleWidget extends StatelessWidget
             fontColor: AppColors.color.kGreen001),
           ),
         ),
-        Spacer(),
+        const Spacer(),
         Text("تحديد الكل مقروء", style: AppStyles.semiBold(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),),
       ],
     );

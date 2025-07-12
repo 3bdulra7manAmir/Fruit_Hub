@@ -14,7 +14,7 @@ class NotificationsCardListWidget extends StatelessWidget
   {
     return CustomListviewBuilder(
       itemCount: 3,
-      itemBuilder: (context, index) => NotificationsCard(isGreen: false,),
+      itemBuilder: (context, index) => const NotificationsCard(isGreen: false,),
       separatorBuilder: (context, index) => Sizes.s16.verticalSpace,
     );
   }

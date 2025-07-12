@@ -20,9 +20,9 @@ class IfNoResultsBody extends StatelessWidget
     return Column(
       children:
       [
-        NoSearchResultsFoundWidget(),
+        const NoSearchResultsFoundWidget(),
         Sizes.s125.verticalSpace,
-        NoResultsImgWidget(),
+        const NoResultsImgWidget(),
         Sizes.s20.verticalSpace,
         Column(
           children:
@@ -57,10 +57,9 @@ class NoSearchResultsFoundWidget extends StatelessWidget
         color: AppColors.color.kWhite001,
         borderRadius: AppRadiuses.circular.xXXSmall,
         boxShadow:
-        [
+        const [
           BoxShadow(
-          color: const Color(0x0F000000),
-          offset: Offset(0, 0),
+          color: Color(0x0F000000),
           blurRadius: 12,),
         ]
       ),

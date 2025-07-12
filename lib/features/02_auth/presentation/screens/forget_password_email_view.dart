@@ -11,7 +11,7 @@ class ForgetPasswordEmail extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Scaffold(
+    return const Scaffold(
       //appBar: CustomAppBar(barTitle: "نسيان كلمة المرور"),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,

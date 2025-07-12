@@ -15,7 +15,7 @@ class Notifications extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "الاشعارات", isNotifications: true,),
+      appBar: const CustomAppBar(barTitle: "الاشعارات", isNotifications: true,),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomColumn(
@@ -23,9 +23,9 @@ class Notifications extends StatelessWidget
           children:
           [
             Sizes.s16.verticalSpace,
-            NotificationsListTitleWidget(),
+            const NotificationsListTitleWidget(),
             Sizes.s16.verticalSpace,
-            NotificationsCard(isGreen: false,),
+            const NotificationsCard(isGreen: false,),
           ]
         ),
       ),

@@ -21,7 +21,7 @@ class Register extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "حساب جديد",),
+      appBar: const CustomAppBar(barTitle: "حساب جديد",),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
@@ -30,17 +30,17 @@ class Register extends StatelessWidget
             children:
             [
               Sizes.s24.verticalSpace,
-              RegisterFullNameWidget(),
+              const RegisterFullNameWidget(),
               Sizes.s16.verticalSpace,
-              RegisterEmailWidget(),
+              const RegisterEmailWidget(),
               Sizes.s16.verticalSpace,
-              RegisterPasswordWidget(),
+              const RegisterPasswordWidget(),
               Sizes.s16.verticalSpace,
-              RegisterTermsWidget(),
+              const RegisterTermsWidget(),
               Sizes.s30.verticalSpace,
               RegisterButtonWidget(formKey: registerFormKey,),
               Sizes.s26.verticalSpace,
-              AlreadyHasAnAccountWidget(),
+              const AlreadyHasAnAccountWidget(),
               Sizes.s16.verticalSpace,
             ],
           ),

@@ -23,7 +23,7 @@ class OfferTextWidget extends StatelessWidget
         padding: AppPadding.directional.smallstart,
         width: 175.w,
         decoration: BoxDecoration(borderRadius: AppRadiuses.only.xSmall, color: AppColors.color.kGreen003,),
-        child: FruitCardWidget(),
+        child: const FruitCardWidget(),
       ),
     );
   }
@@ -53,7 +53,7 @@ class FruitCardWidget extends StatelessWidget
           ],
         ),
         Sizes.s8.verticalSpace,
-        ShopNowButtonWidget(),
+        const ShopNowButtonWidget(),
         Sizes.s30.verticalSpace,
       ],
     );

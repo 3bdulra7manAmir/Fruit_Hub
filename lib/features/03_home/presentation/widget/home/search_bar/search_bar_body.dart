@@ -20,19 +20,19 @@ class SearchBarWidget extends StatelessWidget
   {
     return Container(
       height: 40.h,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         boxShadow:
         [
           BoxShadow(
-          color: const Color(0x0A000000),
+          color: Color(0x0A000000),
           offset: Offset(0, 2),
           blurRadius: 9,),
         ],
       ),
       child: CustomTextFormField(
         controller: controller,
-        suffixIcon: FilterIconWidget(),
-        prefixIcon: SearchIconWidget(),
+        suffixIcon: const FilterIconWidget(),
+        prefixIcon: const SearchIconWidget(),
         fillColor: AppColors.color.kWhite001,
         hintText: "ابحث عن.......",
         hintStyle: AppStyles.semiBold(

@@ -30,18 +30,18 @@ class UserAppBar extends StatelessWidget implements PreferredSizeWidget
             {
               log("UserImg has been Pressed...");
             },
-            child: UserImgWidget()
+            child: const UserImgWidget()
           ),
           Sizes.s11.horizontalSpace,
-          UserNameWidget(),
-          Spacer(),
+          const UserNameWidget(),
+          const Spacer(),
           GestureDetector(
             onTap: ()
             {
               log("Notifications have been Pressed");
               AppRouter.router.pushNamed(AppRoutes.notifications);
             },
-            child: BillWidget()
+            child: const BillWidget()
           ),
         ],
       ),

@@ -35,7 +35,7 @@ class IfPreviousResultsBody extends StatelessWidget
           ],
         ),
         Sizes.s16.verticalSpace,
-        PreviouslySearchedResultsWidget(),
+        const PreviouslySearchedResultsWidget(),
       ],
     );
   }
@@ -56,7 +56,7 @@ class PreviouslySearchedTextWidget extends StatelessWidget
         SvgPicture.asset(AppAssets.icons.watchGrey),
         Sizes.s16.horizontalSpace,
         Text("فراولة", style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.regularWeight),),
-        Spacer(),
+        const Spacer(),
         GestureDetector(
           onTap: () {log("Single Delete has been Pressed...");},
           child: SvgPicture.asset(AppAssets.icons.removeBlacksemisold)
@@ -75,7 +75,7 @@ class PreviouslySearchedResultsWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomListviewBuilder(
-      itemBuilder: (context, index) => PreviouslySearchedTextWidget(), 
+      itemBuilder: (context, index) => const PreviouslySearchedTextWidget(), 
       separatorBuilder: (context, index) => Sizes.s8.verticalSpace, 
       itemCount: 3
     );

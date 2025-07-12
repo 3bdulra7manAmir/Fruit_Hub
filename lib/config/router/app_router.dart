@@ -78,13 +78,13 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.home,
         name: AppRoutes.home,
-        builder: (context, state) => Home(),
+        builder: (context, state) => const Home(),
       ),
       //[Most Sold]
       GoRoute(
         path: AppRoutes.mostSold,
         name: AppRoutes.mostSold,
-        builder: (context, state) => MorePopular(),
+        builder: (context, state) => const MorePopular(),
       ),
 
 
@@ -103,7 +103,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.notifications,
         name: AppRoutes.notifications,
-        builder: (context, state) => Notifications(),
+        builder: (context, state) => const Notifications(),
       ),
     ]
   );

@@ -13,7 +13,7 @@ class FruitGridListWidget extends StatelessWidget
   {
     return CustomGridbuilder(
       itemCount: 9,
-      itemBuilder: (context, index) => FruitGridCardWidget(),
+      itemBuilder: (context, index) => const FruitGridCardWidget(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,             //  controls how many items per row
         mainAxisSpacing: (8.0).h,      // vertical spacing

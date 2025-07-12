@@ -21,7 +21,7 @@ class PasswordRecoveryEmail extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "التحقق من الرمز",),
+      appBar: const CustomAppBar(barTitle: "التحقق من الرمز",),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
@@ -30,9 +30,9 @@ class PasswordRecoveryEmail extends StatelessWidget
             children:
             [
               Sizes.s24.verticalSpace,
-              PhoneRecoveryTitleWidget(),
+              const PhoneRecoveryTitleWidget(),
               Sizes.s29.verticalSpace,
-              RecoveryOtpFieldWidget(),
+              const RecoveryOtpFieldWidget(),
               Sizes.s29.verticalSpace,
               GestureDetector(
                 onTap: ()
@@ -40,7 +40,7 @@ class PasswordRecoveryEmail extends StatelessWidget
                   log("ReSend Code...");
                   AppRouter.router.pushNamed(AppRoutes.newPassword);
                 },
-                child: ResendCodeWidget()
+                child: const ResendCodeWidget()
               ),
             ],
           ),

@@ -25,7 +25,7 @@ class IfResultsBody extends StatelessWidget
           fontWeight: AppFontWeights.regularWeight),
         ),
         Sizes.s16.verticalSpace,
-        FruitFilterGridWidget(),
+        const FruitFilterGridWidget(),
       ],
     );
   }
@@ -40,7 +40,7 @@ class FruitFilterGridWidget extends StatelessWidget
   {
     return CustomGridbuilder(
       itemCount: 1,
-      itemBuilder: (context, index) => FruitGridCardWidget(),
+      itemBuilder: (context, index) => const FruitGridCardWidget(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,             //  controls how many items per row
         mainAxisSpacing: (8.0).h,      // vertical spacing

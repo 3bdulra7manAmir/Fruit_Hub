@@ -24,7 +24,7 @@ class Search extends StatelessWidget
   {
     //log("Received fruitName: $fruitName"); // Just for debug
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "البحث", isNotifications: true,),
+      appBar: const CustomAppBar(barTitle: "البحث", isNotifications: true,),
       body: SingleChildScrollView(
         child: CustomColumn(
           crossAxisAlignment: CrossAxisAlignment.start,

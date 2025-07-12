@@ -32,7 +32,7 @@ class FirstPasswordFieldWidget extends ConsumerWidget
         },
         child: obscureProvider ? 
         SvgPicture.asset(AppAssets.icons.eyeGrey,).paddingDirectionalOnly(end: 30.w,)
-        : Icon(Icons.visibility_off, color: Color(0xffC9CECF),).paddingDirectionalOnly(end: 30.w,),
+        : const Icon(Icons.visibility_off, color: Color(0xffC9CECF),).paddingDirectionalOnly(end: 30.w,),
       ),
     );
   }

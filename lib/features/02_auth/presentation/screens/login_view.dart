@@ -22,7 +22,7 @@ class Login extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "تسجيل دخول"),
+      appBar: const CustomAppBar(barTitle: "تسجيل دخول"),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
@@ -31,19 +31,19 @@ class Login extends StatelessWidget
             children:
             [
               Sizes.s24.verticalSpace,
-              LoginEmailWidget(),
+              const LoginEmailWidget(),
               Sizes.s16.verticalSpace,
-              LoginPasswordWidget(),
+              const LoginPasswordWidget(),
               Sizes.s16.verticalSpace,
-              DidForgetPasswordWidget(),
+              const DidForgetPasswordWidget(),
               Sizes.s33.verticalSpace,
               LoginButtonWidget(formKey: loginFormKey,),
               Sizes.s33.verticalSpace,
-              DontHaveAccountWidget(),
+              const DontHaveAccountWidget(),
               Sizes.s33.verticalSpace,
-              OrWidget(),
+              const OrWidget(),
               Sizes.s16.verticalSpace,
-              OtherOptionWidget(),
+              const OtherOptionWidget(),
               Sizes.s16.verticalSpace,
             ],
           ),

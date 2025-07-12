@@ -19,7 +19,7 @@ class NewPassword extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "كلمة مرور جديدة"),
+      appBar: const CustomAppBar(barTitle: "كلمة مرور جديدة"),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: AppForm(
@@ -29,11 +29,11 @@ class NewPassword extends StatelessWidget
             children:
             [
               Sizes.s24.verticalSpace,
-              NewPasswordTitleWidget(),
+              const NewPasswordTitleWidget(),
               Sizes.s34.verticalSpace,
-              FirstPasswordFieldWidget(),
+              const FirstPasswordFieldWidget(),
               Sizes.s24.verticalSpace,
-              SecondPasswordFieldWidget(),
+              const SecondPasswordFieldWidget(),
               Sizes.s24.verticalSpace,
               NewPasswordButtonWidget(formKey: newPasswordFormKey,),
               Sizes.s16.verticalSpace,

@@ -28,15 +28,15 @@ class FruitGridCardWidget extends StatelessWidget
           [
             Sizes.s8.verticalSpace,
             const FavouriteWidget(),
-            Expanded(child: const WatermelonWidget(),),
+            const Expanded(child: WatermelonWidget(),),
             Sizes.s12.verticalSpace,
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:
               [
                 Expanded(child: PriceWidget()),
-                const AddButtonWidget(),
+                AddButtonWidget(),
               ],
             ),
             Sizes.s20.verticalSpace,

@@ -21,7 +21,7 @@ class Home extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: UserAppBar(),
+      appBar: const UserAppBar(),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomColumn(
@@ -37,11 +37,11 @@ class Home extends StatelessWidget
               },
             ),
             Sizes.s12.verticalSpace,
-            SizedBox(height: 158.h, child: OffersListWidget()),
+            SizedBox(height: 158.h, child: const OffersListWidget()),
             Sizes.s12.verticalSpace,
-            MostSoldWidget(),
+            const MostSoldWidget(),
             Sizes.s8.verticalSpace,
-            FruitGridListWidget(),
+            const FruitGridListWidget(),
             Sizes.s16.verticalSpace,
           ],
         ),

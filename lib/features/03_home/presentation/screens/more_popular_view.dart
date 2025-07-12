@@ -16,7 +16,7 @@ class MorePopular extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "الأكثر مبيعًا", isNotifications: true,),
+      appBar: const CustomAppBar(barTitle: "الأكثر مبيعًا", isNotifications: true,),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomColumn(
@@ -24,9 +24,9 @@ class MorePopular extends StatelessWidget
           children:
           [
             Sizes.s24.verticalSpace,
-            MostSoldWidgetExpaneded(),
+            const MostSoldWidgetExpaneded(),
             Sizes.s8.verticalSpace,
-            FruitGridListWidget(),
+            const FruitGridListWidget(),
             Sizes.s16.verticalSpace,
           ],
         ),

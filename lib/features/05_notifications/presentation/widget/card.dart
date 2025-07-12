@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import 'notifications_img.dart';
 import 'notifications_text.dart';
@@ -20,12 +19,11 @@ class NotificationsCard extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        NotificationsImgWidget(),
+        const NotificationsImgWidget(),
         Sizes.s13.horizontalSpace,
-        NotificationsTextWidget(),
-        //Text("datadatadatadatadatadatadata"),
-        Spacer(),
-        NotificationsTimeWidget(),
+        const NotificationsTextWidget(),
+        const Spacer(),
+        const NotificationsTimeWidget(),
       ],
     );
   }
