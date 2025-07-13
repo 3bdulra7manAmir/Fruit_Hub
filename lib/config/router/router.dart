@@ -14,7 +14,7 @@ import '../../features/03_home/presentation/screens/more_popular_view.dart';
 import '../../features/04_search/presentation/screens/search_view.dart';
 import '../../features/05_notifications/presentation/screens/notifications_view.dart';
 import '../../features/06_products/presentation/screens/products_view.dart';
-import 'app_routes.dart';
+import 'routes.dart';
 import 'route_boserver.dart';
 
 

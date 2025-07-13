@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
-import 'filter_by.dart';
+import 'filter_by_text.dart';
 import 'filtration_button.dart';
 import 'price_filter_text.dart';
 import 'price_limits.dart';
@@ -28,15 +28,15 @@ void priceFilterSheet(context)
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              FilterProductsByWidget(),
+              FilterProductsByWidget(title: "تصنيف حسب :",),
               Sizes.s19.verticalSpace,
               PriceFilterTextWidget(),
               Sizes.s16.verticalSpace,
               PriceLimitsWidget(),
               Sizes.s16.verticalSpace,
-              PriceSilderWidget(),
+              PriceSliderWidget(),
               Sizes.s16.verticalSpace,
-              FiltrationButtonWidget(),
+              PriceFiltrationButtonWidget(),
               Sizes.s32.verticalSpace,
             ],
           ).marginSymmetric(horizontal: 20.w),

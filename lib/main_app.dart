@@ -5,7 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'config/localization/app_localizations.dart';
 import 'config/localization/localization_controller/localization_controller.dart';
-import 'config/router/app_router.dart';
+import 'config/router/router.dart';
 import 'config/theme/theme_controller/theme_controller.dart';
 import 'config/theme/theme_manager/themes.dart';
 

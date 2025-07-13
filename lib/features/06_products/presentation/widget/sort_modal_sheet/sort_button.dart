@@ -1,12 +1,13 @@
 
 import 'dart:developer';
+import 'package:e_commerce_app/config/router/router.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/buttons/button.dart';
 
-class FiltrationButtonWidget extends StatelessWidget
+class AlpahpetFiltrationButtonWidget extends StatelessWidget
 {
-  const FiltrationButtonWidget({super.key});
+  const AlpahpetFiltrationButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -16,6 +17,8 @@ class FiltrationButtonWidget extends StatelessWidget
       onPressed: ()
       {
         log("Filter...");
+        AppRouter.router.pop();
+        
       },
     );
   }

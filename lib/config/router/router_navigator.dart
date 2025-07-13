@@ -1,6 +1,6 @@
-import 'app_router.dart';
+import 'router.dart';
 import 'package:go_router/go_router.dart';
-import 'app_routes.dart';
+import 'routes.dart';
 
 extension AppRouterNavigator on GoRouter
 {

@@ -3,7 +3,7 @@ import 'package:e_commerce_app/config/router/router_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/router/app_router.dart';
+import '../../../../config/router/router.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../widget/fruit_grid_list.dart';
 import '../widget/most_sold.dart';

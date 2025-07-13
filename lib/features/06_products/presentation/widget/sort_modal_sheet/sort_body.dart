@@ -1,0 +1,41 @@
+import 'package:e_commerce_app/core/extensions/widget_margin.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
+import '../price_filter_modal_sheet/filter_by_text.dart';
+import 'sort_button.dart';
+import 'radio_list.dart';
+
+
+void arrangementFilterSheet(context)
+{
+  customAppBottomSheet(
+    context: context, 
+    builder: (context)
+    {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        children:
+        [
+          Sizes.s25.verticalSpace,
+          ModalSheetDragger(),
+          Sizes.s32.verticalSpace,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:
+            [
+              FilterProductsByWidget(title: "ترتيب حسب :",),
+              Sizes.s14.verticalSpace,
+              ArrangementRadioList(),
+              Sizes.s11.verticalSpace,
+              AlpahpetFiltrationButtonWidget(),
+              Sizes.s32.verticalSpace,
+            ],
+          ).marginSymmetric(horizontal: 20.w),
+        ],
+      );
+    },
+  );
+}

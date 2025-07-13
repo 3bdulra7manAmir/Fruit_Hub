@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'app_router.dart';
+import 'router.dart';
 
 class NavigatorObserverWithTracking extends NavigatorObserver
 {

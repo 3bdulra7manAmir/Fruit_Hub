@@ -2,8 +2,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/localization/app_localizations.dart';
-import '../../../../../config/router/app_router.dart';
-import '../../../../../config/router/app_routes.dart';
+import '../../../../../config/router/router.dart';
+import '../../../../../config/router/routes.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 

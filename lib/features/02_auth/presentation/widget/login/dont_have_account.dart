@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
-import '../../../../../config/router/app_router.dart';
-import '../../../../../config/router/app_routes.dart';
+import '../../../../../config/router/router.dart';
+import '../../../../../config/router/routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
