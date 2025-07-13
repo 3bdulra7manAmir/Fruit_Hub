@@ -20,17 +20,17 @@ void arrangementFilterSheet(context)
         children:
         [
           Sizes.s25.verticalSpace,
-          ModalSheetDragger(),
+          const ModalSheetDragger(),
           Sizes.s32.verticalSpace,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              FilterProductsByWidget(title: "ترتيب حسب :",),
+              const FilterProductsByWidget(title: "ترتيب حسب :",),
               Sizes.s14.verticalSpace,
-              ArrangementRadioList(),
+              const ArrangementRadioList(),
               Sizes.s11.verticalSpace,
-              AlpahpetFiltrationButtonWidget(),
+              const AlpahpetFiltrationButtonWidget(),
               Sizes.s32.verticalSpace,
             ],
           ).marginSymmetric(horizontal: 20.w),

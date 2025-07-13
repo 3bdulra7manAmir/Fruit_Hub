@@ -33,7 +33,7 @@ class SearchAndShop extends StatelessWidget
           Column(
             children:
             [
-              SearchAndShopTitleWidget(),
+              const SearchAndShopTitleWidget(),
               Sizes.s24.verticalSpace,
               WelcomeSubtitleWidget(text: S.of(context)!.onBoarding2Description,),
             ],

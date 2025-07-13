@@ -22,21 +22,21 @@ void priceFilterSheet(context)
         children:
         [
           Sizes.s25.verticalSpace,
-          ModalSheetDragger(),
+          const ModalSheetDragger(),
           Sizes.s32.verticalSpace,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              FilterProductsByWidget(title: "تصنيف حسب :",),
+              const FilterProductsByWidget(title: "تصنيف حسب :",),
               Sizes.s19.verticalSpace,
-              PriceFilterTextWidget(),
+              const PriceFilterTextWidget(),
               Sizes.s16.verticalSpace,
-              PriceLimitsWidget(),
+              const PriceLimitsWidget(),
               Sizes.s16.verticalSpace,
-              PriceSliderWidget(),
+              const PriceSliderWidget(),
               Sizes.s16.verticalSpace,
-              PriceFiltrationButtonWidget(),
+              const PriceFiltrationButtonWidget(),
               Sizes.s32.verticalSpace,
             ],
           ).marginSymmetric(horizontal: 20.w),

@@ -16,6 +16,6 @@ class NotificationGreenDotWidget extends StatelessWidget
     Positioned(
       right: 22.w, top: (-3.4).h,
       child: SvgPicture.asset(AppAssets.icons.greenDot)
-    ) : SizedBox.shrink();
+    ) : const SizedBox.shrink();
   }
 }

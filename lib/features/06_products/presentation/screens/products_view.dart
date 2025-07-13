@@ -20,7 +20,7 @@ class Products extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,),
+      appBar: const CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomColumn(
@@ -30,13 +30,13 @@ class Products extends StatelessWidget
             Sizes.s16.verticalSpace,
             SearchBarWidget(onSubmitted: (value) {log("Search Bar Value: $value");},),
             Sizes.s16.verticalSpace,
-            OurProductsWidget(),
+            const OurProductsWidget(),
             Sizes.s8.verticalSpace,
-            SizedBox(height: 89.h, child: FruitsProductsListWidget()),
+            SizedBox(height: 89.h, child: const FruitsProductsListWidget()),
             Sizes.s24.verticalSpace,
-            MostSoldWidget(isMoreEnabled: true),
+            const MostSoldWidget(isMoreEnabled: true),
             Sizes.s8.verticalSpace,
-            FruitGridListWidget(),
+            const FruitGridListWidget(),
           ]
         ),
       ),

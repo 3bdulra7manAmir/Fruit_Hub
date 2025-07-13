@@ -47,7 +47,7 @@ abstract class LightThemeStyles
   static CardThemeData get cardTheme => CardThemeData(
     elevation: 0, 
     margin: EdgeInsets.zero, 
-    shape: Border(),
+    shape: const Border(),
     color: AppColors.color.kWhite001,
   );
   static AppBarTheme get appBarTheme => AppBarTheme(

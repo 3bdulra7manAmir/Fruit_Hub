@@ -32,7 +32,7 @@ class MostSoldWidget extends StatelessWidget
             fontColor: AppColors.color.kGrey002,
             fontWeight: AppFontWeights.regularWeight,
             ),
-          ) : SizedBox.shrink(),
+          ) : const SizedBox.shrink(),
         ),
       ],
     );

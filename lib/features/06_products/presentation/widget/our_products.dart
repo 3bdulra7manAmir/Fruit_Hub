@@ -20,7 +20,7 @@ class OurProductsWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:
       [

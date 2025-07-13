@@ -14,7 +14,7 @@ class FruitsProductsListWidget extends StatelessWidget
   {
     return CustomListviewBuilder(
       itemCount: 8, scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) => FruitsProductsWidget(),
+      itemBuilder: (context, index) => const FruitsProductsWidget(),
       separatorBuilder: (context, index) => Sizes.s9.horizontalSpace,
     );
   }

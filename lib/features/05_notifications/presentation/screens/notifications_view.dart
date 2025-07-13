@@ -27,8 +27,9 @@ class Notifications extends StatelessWidget
             const NotificationsTitleWidget(header: "جديد", count: "2",).marginSymmetric(horizontal: 16.w),
             Sizes.s16.verticalSpace,
             const NotificationsCardListWidget(),
-            const NotificationsTitleWidget(header: "في وقت سابق", count: "2",).marginSymmetric(horizontal: 16.w),
             Sizes.s16.verticalSpace,
+            const NotificationsTitleWidget(header: "في وقت سابق", count: "2",).marginSymmetric(horizontal: 16.w),
+            Sizes.s26.verticalSpace,
             const NotificationsCardListWidget(),
           ]
         ),

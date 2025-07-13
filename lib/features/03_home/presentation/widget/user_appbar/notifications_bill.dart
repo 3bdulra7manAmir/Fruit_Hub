@@ -21,7 +21,7 @@ class BillWidget extends StatelessWidget
         [
           Center(child: SvgPicture.asset(AppAssets.icons.billGreen,)),
           Positioned(
-            bottom: 21.h,  right: 16.w, 
+            bottom: 21.h,  right: (14.5).w, 
             child: SvgPicture.asset(AppAssets.icons.billRedDot)
           ),
         ],
