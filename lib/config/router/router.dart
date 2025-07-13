@@ -13,6 +13,7 @@ import '../../features/03_home/presentation/screens/home_view.dart';
 import '../../features/03_home/presentation/screens/more_popular_view.dart';
 import '../../features/04_search/presentation/screens/search_view.dart';
 import '../../features/05_notifications/presentation/screens/notifications_view.dart';
+import '../../features/06_products/presentation/screens/filtered_products_view.dart';
 import '../../features/06_products/presentation/screens/products_view.dart';
 import 'routes.dart';
 import 'route_boserver.dart';
@@ -115,6 +116,13 @@ abstract class AppRouter
         path: AppRoutes.products,
         name: AppRoutes.products,
         builder: (context, state) => const Products(),
+      ),
+
+      ///[_Filtered_Products]
+      GoRoute(
+        path: AppRoutes.filteredProducts,
+        name: AppRoutes.filteredProducts,
+        builder: (context, state) => const FilteredProducts(),
       ),
     ]
   );
