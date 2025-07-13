@@ -34,7 +34,7 @@ class FruitGridCardWidget extends StatelessWidget
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:
               [
-                Expanded(child: PriceWidget()),
+                Expanded(child: FruitGridPriceWidget()),
                 AddButtonWidget(),
               ],
             ),

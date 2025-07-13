@@ -5,9 +5,9 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 
-class PriceWidget extends StatelessWidget
+class FruitGridPriceWidget extends StatelessWidget
 {
-  const PriceWidget({super.key});
+  const FruitGridPriceWidget({super.key});
 
   @override
   Widget build(BuildContext context)

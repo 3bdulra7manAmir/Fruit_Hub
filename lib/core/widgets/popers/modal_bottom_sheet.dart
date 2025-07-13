@@ -1,4 +1,7 @@
+import 'package:e_commerce_app/config/theme/color_manager/colors.dart';
+import 'package:e_commerce_app/core/constants/app_borders.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void customAppBottomSheet({
   required BuildContext context,
@@ -16,4 +19,22 @@ void customAppBottomSheet({
     shape: shape,
     builder: builder,
   );
+}
+
+
+class ModalSheetDragger extends StatelessWidget
+{
+  const ModalSheetDragger({super.key});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Container(
+      width: 60.w, height: 3.h,
+      decoration: BoxDecoration(
+        color: AppColors.color.kBlue001,
+        borderRadius: AppRadiuses.circular.large,
+      ),
+    );
+  }
 }

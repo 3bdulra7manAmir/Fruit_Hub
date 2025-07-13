@@ -58,6 +58,7 @@ class _Icons
   ///[Products]
   final String swapArrows = "assets/icons/Products/Horizontal_Arrows.svg";
   final String avocado = "assets/icons/Products/Avocado.png";
+  final String priceTag = "assets/icons/Products/Price_Tag.svg";
 }
 
 ///-----------------------------------------------------------------//

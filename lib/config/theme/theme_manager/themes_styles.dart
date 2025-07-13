@@ -58,7 +58,9 @@ abstract class LightThemeStyles
     backgroundColor: AppColors.color.kWhite001, 
     shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXSmall,),
   );
-  static BottomSheetThemeData get bottomSheetTheme => const BottomSheetThemeData();
+  static BottomSheetThemeData get bottomSheetTheme =>  BottomSheetThemeData(
+    backgroundColor: AppColors.color.kWhite001
+  );
 }
 
 //------------------------------------------------//

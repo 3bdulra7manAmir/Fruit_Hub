@@ -9,6 +9,6 @@ class NotificationsImgWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Image.asset(AppAssets.icons.notificationsImg);
+    return Image.asset(AppAssets.icons.notificationsImg,);
   }
 }

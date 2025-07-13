@@ -31,6 +31,8 @@ abstract class ColorManagerBase
   Color get kGrey008;
   /// [_323232]
   Color get kGrey009;
+  /// [_CDD2DE]
+  Color get kGrey010;
 
   // Black Color Range
   /// [_0C0D0D]
@@ -63,5 +65,9 @@ abstract class ColorManagerBase
   // Red Color Range
   /// [EB5757]
   Color get kRed001;
+
+  // Blue Color Range
+  /// [_131F46]
+  Color get kBlue001;
 
 }

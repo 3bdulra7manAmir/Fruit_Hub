@@ -26,8 +26,8 @@ class NotificationsCardWidget extends StatelessWidget
           [
             const NotificationsImgWidget(),
             Sizes.s13.horizontalSpace,
-            const NotificationsTextWidget(),
-            const Spacer(),
+            SizedBox(width: 178.w, child: const NotificationsTextWidget()),
+            Spacer(),
             const NotificationsTimeWidget(),
           ],
         ),
