@@ -64,6 +64,10 @@ class _Icons
   final String subtract = "assets/icons/Products_Details/Subtract_Grey.svg";
   final String star = "assets/icons/Products_Details/Star.svg";
   final String calendarBlue = "assets/icons/Products_Details/Calendar_Blue.svg";
+
+  ///[Cart]
+  final String watermelonV3 = "assets/icons/Cart/Watermelon_V3.png";
+  final String trash = "assets/icons/Cart/Trash.svg";
 }
 
 ///-----------------------------------------------------------------//

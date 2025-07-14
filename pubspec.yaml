@@ -96,6 +96,7 @@ flutter:
     - assets/icons/Notifications/
     - assets/icons/Products/
     - assets/icons/Products_Details/
+    - assets/icons/Cart/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/

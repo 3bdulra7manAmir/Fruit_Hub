@@ -35,6 +35,9 @@ class Symmetric
   /// 16px horizontal 8px vertical
   EdgeInsets get xXSmall => EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h);
 
+  /// 10px horizontal
+  EdgeInsets get xSmall => EdgeInsets.symmetric(vertical: 10.w);
+
   /// 16px horizontal 12px vertical
   EdgeInsets get notificationsCard => EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h);
 

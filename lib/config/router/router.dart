@@ -30,7 +30,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.itemsDetails,
+    initialLocation: AppRoutes.cart,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
