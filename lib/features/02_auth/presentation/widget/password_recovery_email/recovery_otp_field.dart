@@ -73,7 +73,7 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
               textAlign: TextAlign.center,
               maxLength: 1,
               keyboardType: TextInputType.number,
-              style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),
+              style: AppStyles.black(fontWeight: AppFontWeights.boldWeight),
               decoration: InputDecoration(
                 counterText: '',
                 enabledBorder: OutlineInputBorder(

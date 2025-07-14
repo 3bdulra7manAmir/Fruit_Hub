@@ -17,7 +17,7 @@ class MarkAllAsReadWidget extends StatelessWidget
       {
         log("Remove All Green Color Or Remove From List did not decide Know Yet...");
       },
-      child: Text("تحديد الكل مقروء", style: AppStyles.semiBold(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),)
+      child: Text("تحديد الكل مقروء", style: AppStyles.light(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),)
     );
   }
 }

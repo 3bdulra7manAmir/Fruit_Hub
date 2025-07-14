@@ -31,7 +31,7 @@ class IfNoResultsBody extends StatelessWidget
             style: AppStyles.bold(fontColor: AppColors.color.kGrey006),
           ),
             Sizes.s16.verticalSpace,
-            Text("عفوًا... هذه المعلومات غير متوفرة للحظة", style: AppStyles.semiBold(
+            Text("عفوًا... هذه المعلومات غير متوفرة للحظة", style: AppStyles.light(
               fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.regularWeight),
             ),
           ],
@@ -63,7 +63,7 @@ class NoSearchResultsFoundWidget extends StatelessWidget
           blurRadius: 12,),
         ]
       ),
-      child: Text("لاتوجد نتائج بحث", style: AppStyles.semiBold(
+      child: Text("لاتوجد نتائج بحث", style: AppStyles.light(
         fontColor: AppColors.color.kGrey002,
         fontWeight: AppFontWeights.regularWeight,
       ),),

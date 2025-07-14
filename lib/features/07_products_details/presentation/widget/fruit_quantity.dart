@@ -73,12 +73,12 @@ class FruitQuantityPriceWidget extends StatelessWidget
         Sizes.s4.verticalSpace,
         RichText(
           textAlign: TextAlign.center,
-          text: TextSpan(style: AppStyles.semiBold(fontWeight: AppFontWeights.boldWeight,),
+          text: TextSpan(style: AppStyles.light(fontWeight: AppFontWeights.boldWeight,),
           children:
           [
-            TextSpan(text: "20جنية", style: AppStyles.semiBold(fontColor: AppColors.color.kOrange001)),
-            TextSpan(text: " / ", style: AppStyles.semiBold(fontColor: AppColors.color.kOrange002)),
-            TextSpan(text: "الكيلو", style: AppStyles.semiBold(fontColor: AppColors.color.kOrange002)),
+            TextSpan(text: "20جنية", style: AppStyles.light(fontColor: AppColors.color.kOrange001)),
+            TextSpan(text: " / ", style: AppStyles.light(fontColor: AppColors.color.kOrange002)),
+            TextSpan(text: "الكيلو", style: AppStyles.light(fontColor: AppColors.color.kOrange002)),
           ]
           ),
         ),

@@ -21,7 +21,7 @@ class CountWidget extends StatelessWidget
         color: AppColors.color.kGreen006,
         borderRadius: AppRadiuses.circular.large,
       ),
-      child: Text(count, style: AppStyles.semiBold(
+      child: Text(count, style: AppStyles.light(
         fontWeight: AppFontWeights.boldWeight, 
         fontColor: AppColors.color.kGreen001),
       ),

@@ -27,7 +27,7 @@ class FruitsProductsWidget extends StatelessWidget
           child: Image.asset(AppAssets.icons.avocado),
         ),
         Sizes.s2.verticalSpace,
-        Text("افوكادو", style: AppStyles.semiBold(fontColor: AppColors.color.kBlack001),)
+        Text("افوكادو", style: AppStyles.light(fontColor: AppColors.color.kBlack001),)
       ],
     );
   }

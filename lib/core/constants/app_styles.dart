@@ -10,7 +10,7 @@ abstract class AppStyles
   AppStyles._();
 
   /// Size= [23] Weight= [w900], Color= [_0C0D0D],
-  static TextStyle extraBlack({
+  static TextStyle black({
     double? fontSize,
     FontWeight? fontWeight,
     Color? fontColor,
@@ -76,7 +76,7 @@ abstract class AppStyles
     );
   }
 
-  /// Size= [13] Weight= [w600], Color= [_4E5556],
+  /// Size= [14] Weight= [w400], Color= [_9796A1],
   static TextStyle semiBold({
     double? fontSize,
     FontWeight? fontWeight,
@@ -89,6 +89,28 @@ abstract class AppStyles
   {
     return TextStyle(
       fontSize: fontSize ?? AppFontSizes.xSmall.sp,
+      fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
+      color: fontColor ?? AppColors.color.kGrey012,
+      fontFamily: fontFamily ?? AppFonts.font.fontName,
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+    );
+  }
+
+  /// Size= [13] Weight= [w600], Color= [_4E5556],
+  static TextStyle light({
+    double? fontSize,
+    FontWeight? fontWeight,
+    Color? fontColor,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    Color? textDecorationColor,
+    TextOverflow? textOverflow,
+  })
+  {
+    return TextStyle(
+      fontSize: fontSize ?? AppFontSizes.xXSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
       color: fontColor ?? AppColors.color.kGrey001,
       fontFamily: fontFamily ?? AppFonts.font.fontName,

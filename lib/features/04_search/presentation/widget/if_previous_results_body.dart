@@ -26,11 +26,11 @@ class IfPreviousResultsBody extends StatelessWidget
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:
           [
-            Text("عمليات البحث الأخيرة", style: AppStyles.semiBold(fontColor: AppColors.color.kBlack001),),
+            Text("عمليات البحث الأخيرة", style: AppStyles.light(fontColor: AppColors.color.kBlack001),),
             GestureDetector(
               onTap: ()
               {log("Delete All has been Pressed...");},
-              child: Text("حذف الكل", style: AppStyles.semiBold(fontColor: AppColors.color.kGrey002),)
+              child: Text("حذف الكل", style: AppStyles.light(fontColor: AppColors.color.kGrey002),)
             ),
           ],
         ),

@@ -21,7 +21,7 @@ class PriceFilterTextWidget extends StatelessWidget
         Sizes.s8.horizontalSpace,
         SvgPicture.asset(AppAssets.icons.priceTag),
         Sizes.s8.horizontalSpace,
-        Text("السعر :", style: AppStyles.semiBold(
+        Text("السعر :", style: AppStyles.light(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack001),
         ),

@@ -35,7 +35,7 @@ class SearchBarWidget extends StatelessWidget
         prefixIcon: const SearchIconWidget(),
         fillColor: AppColors.color.kWhite001,
         hintText: "ابحث عن.......",
-        hintStyle: AppStyles.semiBold(
+        hintStyle: AppStyles.light(
           fontColor: AppColors.color.kGrey002,
           fontWeight: AppFontWeights.regularWeight,
         ),

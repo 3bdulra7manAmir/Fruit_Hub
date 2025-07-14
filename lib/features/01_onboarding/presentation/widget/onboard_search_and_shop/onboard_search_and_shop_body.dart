@@ -52,7 +52,7 @@ class SearchAndShopTitleWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(S.of(context)!.searchAndShop, 
-    style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),
+    style: AppStyles.black(fontWeight: AppFontWeights.boldWeight),
   );
   }
 }

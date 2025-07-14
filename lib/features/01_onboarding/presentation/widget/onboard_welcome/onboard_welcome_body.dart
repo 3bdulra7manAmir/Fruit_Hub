@@ -58,23 +58,23 @@ class FruitHubTitleWidget extends StatelessWidget
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-        style: AppStyles.extraBlack(fontWeight: AppFontWeights.boldWeight),
+        style: AppStyles.black(fontWeight: AppFontWeights.boldWeight),
         children:
         [
           TextSpan(text: S.of(context)!.welcomeIn),
           const TextSpan(text: ' '),
           TextSpan(
             text: AppStrings.fruit.localized(context, ar: AppStrings.fruit, en: AppStrings.fruit,),
-            style: AppStyles.extraBlack().byLocale(context, 
-              ar: AppStyles.extraBlack(fontColor: AppColors.color.kGreen001,),
-              en: AppStyles.extraBlack(fontColor: AppColors.color.kGreen001,),
+            style: AppStyles.black().byLocale(context, 
+              ar: AppStyles.black(fontColor: AppColors.color.kGreen001,),
+              en: AppStyles.black(fontColor: AppColors.color.kGreen001,),
             ),
           ),
           TextSpan(
             text: AppStrings.hub.localized(context, ar: AppStrings.hub, en: AppStrings.hub,),
-            style: AppStyles.extraBlack().byLocale(context, 
-              ar: AppStyles.extraBlack(fontColor: AppColors.color.kOrange001,),
-              en: AppStyles.extraBlack(fontColor: AppColors.color.kOrange001,),
+            style: AppStyles.black().byLocale(context, 
+              ar: AppStyles.black(fontColor: AppColors.color.kOrange001,),
+              en: AppStyles.black(fontColor: AppColors.color.kOrange001,),
             ),
           ),
         ],
