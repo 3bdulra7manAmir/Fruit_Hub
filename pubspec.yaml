@@ -95,11 +95,11 @@ flutter:
     - assets/icons/Home/
     - assets/icons/Notifications/
     - assets/icons/Products/
-    - assets/icons/Products_Details/
+    - assets/icons/Items_Details/
     - assets/icons/Cart/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/
-    - assets/imgs/Products_Details/
+    - assets/imgs/Items_Details/
 
     - assets/jsons/

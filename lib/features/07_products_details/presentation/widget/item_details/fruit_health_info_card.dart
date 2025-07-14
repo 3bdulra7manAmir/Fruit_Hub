@@ -9,17 +9,25 @@ import '../../../../../core/constants/app_styles.dart';
 
 class FruitHealthInfoCardWidget extends StatelessWidget
 {
-  const FruitHealthInfoCardWidget({super.key, required this.title, required this.subTitle, required this.img});
+  const FruitHealthInfoCardWidget({
+    super.key, 
+    required this.title, 
+    required this.subTitle, 
+    required this.img, 
+    this.is2Title = false,
+    this.title2});
 
   final String title;
   final String subTitle;
   final String img;
+  final bool? is2Title;
+  final String? title2;
 
   @override
   Widget build(BuildContext context)
   {
     return Container(
-      width: 163.w, height: 80.h, alignment: Alignment.center,
+      height: 80.h, alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: AppRadiuses.circular.medium,
         border: Border.all(color: AppColors.color.kGrey014)
@@ -34,7 +42,17 @@ class FruitHealthInfoCardWidget extends StatelessWidget
             mainAxisAlignment: MainAxisAlignment.center,
             children:
             [
-              Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
+              !is2Title! ?
+              Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007),)
+              : Row(
+                children:
+                [
+                  Text(title2!, style: AppStyles.bold(fontColor: AppColors.color.kGrey013)),
+                  Text(" ", style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
+                  Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
+                ],
+              ),
+          
               Sizes.s4.verticalSpace, 
               Text(subTitle, style: AppStyles.light(fontColor: AppColors.color.kGrey013),),
             ],

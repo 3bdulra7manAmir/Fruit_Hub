@@ -5,8 +5,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/item_details/add_to_cart_button.dart';
 import '../widget/item_details/fruit_description.dart';
-import '../widget/item_details/fruit_health_info1.dart';
-import '../widget/item_details/fruit_health_info2.dart';
+import '../widget/item_details/fruit_health_cards_grid.dart';
 import '../widget/item_details/fruit_item_widget.dart';
 import '../widget/item_details/fruit_quantity.dart';
 import '../widget/item_details/fruit_rating.dart';
@@ -37,9 +36,7 @@ class ItemDetails extends StatelessWidget
                 Sizes.s8.verticalSpace,
                 const FruitItemDescriptionWidget(),
                 Sizes.s16.verticalSpace,
-                const FruitHealthInfo1Widget(),
-                Sizes.s16.verticalSpace,
-                const FruitHealthInfo2Widget(),
+                const FruitHealthGridInfoWidget(),
                 Sizes.s24.verticalSpace,
                 const AddToCartButtonWidget(),
                 Sizes.s16.verticalSpace,

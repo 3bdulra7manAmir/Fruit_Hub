@@ -24,7 +24,7 @@ class CartCardWidget extends StatelessWidget
           Sizes.s16.horizontalSpace,
           const CartItemQuantityWidget(),
           Spacer(),
-          const CartItemPrice(),
+          const CartItemPriceWidget(),
         ],
       ).paddingSymmetric(horizontal: 16.w),
     );
