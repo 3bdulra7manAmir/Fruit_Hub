@@ -17,7 +17,6 @@ class FruitHealthGridInfoWidget extends StatelessWidget
       itemBuilder: (context, index) => FruitHealthInfoCardWidget(
         img: AppAssets.icons.calendarBlue,
         title: "عام", subTitle: "الصلاحيه",
-        is2Title: true, title2: "(256)",
       ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,             //  controls how many items per row
