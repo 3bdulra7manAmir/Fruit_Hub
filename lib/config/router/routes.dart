@@ -44,4 +44,7 @@ abstract class AppRoutes
   /// [Items_Details]
   static const itemsDetails = '/itemsDetails';
 
+  /// [cart]
+  static const cart = '/cart';
+
 }

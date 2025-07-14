@@ -3,13 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/column.dart';
-import '../widget/add_to_cart_button.dart';
-import '../widget/fruit_description.dart';
-import '../widget/fruit_health_info1.dart';
-import '../widget/fruit_health_info2.dart';
-import '../widget/fruit_item_widget.dart';
-import '../widget/fruit_quantity.dart';
-import '../widget/fruit_rating.dart';
+import '../widget/item_details/add_to_cart_button.dart';
+import '../widget/item_details/fruit_description.dart';
+import '../widget/item_details/fruit_health_info1.dart';
+import '../widget/item_details/fruit_health_info2.dart';
+import '../widget/item_details/fruit_item_widget.dart';
+import '../widget/item_details/fruit_quantity.dart';
+import '../widget/item_details/fruit_rating.dart';
 
 class ItemDetails extends StatelessWidget
 {

@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/features/07_products_details/presentation/screens/item_details_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -16,6 +15,8 @@ import '../../features/04_search/presentation/screens/search_view.dart';
 import '../../features/05_notifications/presentation/screens/notifications_view.dart';
 import '../../features/06_products/presentation/screens/filtered_products_view.dart';
 import '../../features/06_products/presentation/screens/products_view.dart';
+import '../../features/07_products_details/presentation/screens/cart_view.dart';
+import '../../features/07_products_details/presentation/screens/item_details_view.dart';
 import 'routes.dart';
 import 'route_boserver.dart';
 
@@ -131,6 +132,13 @@ abstract class AppRouter
         path: AppRoutes.itemsDetails,
         name: AppRoutes.itemsDetails,
         builder: (context, state) => const ItemDetails(),
+      ),
+
+      ///[Cart]
+      GoRoute(
+        path: AppRoutes.cart,
+        name: AppRoutes.cart,
+        builder: (context, state) => const Cart(),
       ),
     ]
   );

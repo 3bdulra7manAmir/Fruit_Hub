@@ -3,11 +3,11 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../config/router/router.dart';
-import '../../../../config/theme/color_manager/colors.dart';
-import '../../../../core/constants/app_images.dart';
-import '../../../../core/widgets/paint_clipper.dart';
-import '../../../01_onboarding/presentation/widget/onboard_welcome/clipped_background.dart';
+import '../../../../../config/router/router.dart';
+import '../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/widgets/paint_clipper.dart';
+import '../../../../01_onboarding/presentation/widget/onboard_welcome/clipped_background.dart';
 
 
 class FruitItemWidget extends StatelessWidget
