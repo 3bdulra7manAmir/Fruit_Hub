@@ -27,7 +27,7 @@ class FruitHealthInfoCardWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      height: 80.h, alignment: Alignment.center,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: AppRadiuses.circular.medium,
         border: Border.all(color: AppColors.color.kGrey014)
@@ -36,7 +36,14 @@ class FruitHealthInfoCardWidget extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
-          Sizes.s28.horizontalSpace,
+          if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
+          [
+            Sizes.s20.horizontalSpace,
+          ]
+          else...
+          [
+            Sizes.s10.horizontalSpace,
+          ],
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -48,18 +55,32 @@ class FruitHealthInfoCardWidget extends StatelessWidget
                 children:
                 [
                   Text(title2!, style: AppStyles.bold(fontColor: AppColors.color.kGrey013)),
-                  Text(" ", style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
+                  Text(" ", style: AppStyles.bold(),),
                   Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
                 ],
               ),
-          
               Sizes.s4.verticalSpace, 
               Text(subTitle, style: AppStyles.light(fontColor: AppColors.color.kGrey013),),
             ],
           ),
           Sizes.s16.horizontalSpace,
-          SvgPicture.asset(img),
-          Sizes.s28.horizontalSpace,
+          if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
+          [
+            SizedBox.shrink(),
+          ]
+          else...
+          [
+            SvgPicture.asset(img),
+          ],
+
+          if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
+          [
+            Sizes.s20.horizontalSpace,
+          ]
+          else...
+          [
+            Sizes.s10.horizontalSpace,
+          ],
         ],
       ),
     );

@@ -24,7 +24,6 @@ class Cart extends StatelessWidget
             Sizes.s16.verticalSpace,
             const CartTitleWidget(),
             Sizes.s24.verticalSpace,
-            //SizedBox(height: 92.h, child: const CartCardWidget()),
             const CartItemsListWidget(),
             Sizes.s16.verticalSpace,
             const CartPayButtonWidget(),
