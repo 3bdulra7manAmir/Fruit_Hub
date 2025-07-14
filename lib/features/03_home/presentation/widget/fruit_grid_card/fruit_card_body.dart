@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,13 +30,16 @@ class FruitGridCardWidget extends StatelessWidget
             const FavouriteWidget(),
             const Expanded(child: WatermelonWidget(),),
             Sizes.s12.verticalSpace,
-            const Row(
+            Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:
               [
                 Expanded(child: FruitGridPriceWidget()),
-                AddButtonWidget(),
+                GestureDetector(
+                  onTap: () {log("Add has been Pressed...");},
+                  child: FruitAddButtonWidget()
+                ),
               ],
             ),
             Sizes.s20.verticalSpace,

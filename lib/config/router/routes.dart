@@ -38,7 +38,10 @@ abstract class AppRoutes
   /// [Products]
   static const products = '/products';
 
-  /// [_Filtered_Products]
+  /// [Filtered_Products]
   static const filteredProducts = '/filteredProducts';
+
+  /// [Items_Details]
+  static const itemsDetails = '/itemsDetails';
 
 }

@@ -28,7 +28,7 @@ class OnboardingWelcome extends StatelessWidget
           Stack(
             children:
             [
-              ClippedColorWidget(color: AppColors.color.kYellow001),
+              ClippedBackgroundWidget(color: AppColors.color.kYellow001),
               FruitImgWidget(img: AppAssets.icons.fruitPack,),
             ],
           ),

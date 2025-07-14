@@ -59,6 +59,9 @@ class _Icons
   final String swapArrows = "assets/icons/Products/Horizontal_Arrows.svg";
   final String avocado = "assets/icons/Products/Avocado.png";
   final String priceTag = "assets/icons/Products/Price_Tag.svg";
+
+  ///[Products_Details]
+  final String subtract = "assets/icons/Products_Details/Subtract_Grey.svg";
 }
 
 ///-----------------------------------------------------------------//
@@ -70,5 +73,8 @@ class _IMGs
   final String user = "assets/imgs/Home/User.png";
   final String fruitCard = "assets/imgs/Home/Fruit_Card.png";
   final String watermelon = "assets/imgs/Home/Watermelon.png";
+
+  ///[Products_Details]
+  final String watermelonV2 = "assets/imgs/Products_Details/Watermelon_v2.png";
   
 }

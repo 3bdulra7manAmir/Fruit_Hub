@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 
-class FruitItemDescription extends StatelessWidget
+class FruitItemDescriptionWidget extends StatelessWidget
 {
-  const FruitItemDescription({super.key});
+  const FruitItemDescriptionWidget({super.key});
 
   @override
   Widget build(BuildContext context)

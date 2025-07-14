@@ -95,8 +95,10 @@ flutter:
     - assets/icons/Home/
     - assets/icons/Notifications/
     - assets/icons/Products/
+    - assets/icons/Products_Details/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/
+    - assets/imgs/Products_Details/
 
     - assets/jsons/

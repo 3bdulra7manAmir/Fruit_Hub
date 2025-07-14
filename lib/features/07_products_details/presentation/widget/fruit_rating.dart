@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 
-class FruitItemRating extends StatelessWidget
+class FruitItemRatingWidget extends StatelessWidget
 {
-  const FruitItemRating({super.key});
+  const FruitItemRatingWidget({super.key});
 
   @override
   Widget build(BuildContext context)

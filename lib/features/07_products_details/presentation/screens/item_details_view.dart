@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
@@ -18,27 +18,35 @@ class ItemDetails extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return SingleChildScrollView(
-      keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-      child: CustomColumn(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children:
-        [
-          const FruitItemWidget(),
-          Sizes.s24.verticalSpace,
-          const FruitNeededQuantity(),
-          Sizes.s8.verticalSpace,
-          const FruitItemRating(),
-          Sizes.s8.verticalSpace,
-          const FruitItemDescription(),
-          Sizes.s16.verticalSpace,
-          const FruitHealthInfo1(),
-          Sizes.s16.verticalSpace,
-          const FruitHealthInfo2(),
-          Sizes.s24.verticalSpace,
-          const AddToCartButton(),
-          Sizes.s16.verticalSpace,
-        ]
+    return Scaffold(
+      body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+          [
+            const FruitItemWidget(),
+            Sizes.s24.verticalSpace,
+            CustomColumn(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:
+              [
+                const FruitNeededQuantityWidget(),
+                Sizes.s8.verticalSpace,
+                const FruitItemRatingWidget(),
+                Sizes.s8.verticalSpace,
+                const FruitItemDescriptionWidget(),
+                Sizes.s16.verticalSpace,
+                const FruitHealthInfo1Widget(),
+                Sizes.s16.verticalSpace,
+                const FruitHealthInfo2Widget(),
+                Sizes.s24.verticalSpace,
+                const AddToCartButtonWidget(),
+                Sizes.s16.verticalSpace,
+              ]
+            ),
+          ],
+        ),
       ),
     );
   }

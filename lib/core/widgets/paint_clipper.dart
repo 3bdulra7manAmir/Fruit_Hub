@@ -59,3 +59,32 @@ class OfferWaveClipper extends CustomClipper<Path>
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
+
+
+class BottomArcClipper extends CustomClipper<Path>
+{
+  @override
+  Path getClip(Size size)
+  {
+    final path = Path();
+
+    // Start from top-left
+    path.lineTo(0, 0);
+    path.lineTo(0, size.height * 0.92);
+
+    // Arc-like downward curve at bottom
+    path.quadraticBezierTo(
+      size.width * 0.5, size.height * 1.05, // control point pushes the curve downward
+      size.width, size.height * 0.92, // end point on the bottom-right
+    );
+
+    // Line to top-right
+    path.lineTo(size.width, 0);
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}

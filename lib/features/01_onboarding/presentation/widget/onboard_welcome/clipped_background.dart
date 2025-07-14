@@ -2,18 +2,20 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/widgets/paint_clipper.dart';
 
-class ClippedColorWidget extends StatelessWidget
+class ClippedBackgroundWidget extends StatelessWidget
 {
-  const ClippedColorWidget({super.key, required this.color});
+  const ClippedBackgroundWidget({super.key, this.clipper, required this.color, this.height,});
 
+  final CustomClipper<Path>? clipper;
   final Color color;
+  final double? height;
 
   @override
   Widget build(BuildContext context)
   {
     return ClipPath(
-      clipper: OnBoardingWaveClipper(),
-      child: Container(height: 400.h, color: color,),
+      clipper: clipper ?? OnBoardingWaveClipper(),
+      child: Container(height: height ?? 400.h, color: color,),
     );
   }
 }

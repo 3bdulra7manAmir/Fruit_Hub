@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 
-class AddToCartButton extends StatelessWidget
+class AddToCartButtonWidget extends StatelessWidget
 {
-  const AddToCartButton({super.key});
+  const AddToCartButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context)

@@ -25,7 +25,7 @@ class SearchAndShop extends StatelessWidget
           Stack(
             children:
             [
-              ClippedColorWidget(color: AppColors.color.kGreen002,),
+              ClippedBackgroundWidget(color: AppColors.color.kGreen002,),
               FruitImgWidget(img: AppAssets.icons.pineapple,),
             ],
           ),

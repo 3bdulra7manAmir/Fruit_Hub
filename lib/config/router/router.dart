@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/features/07_products_details/presentation/screens/item_details_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -28,7 +29,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.filteredProducts,
+    initialLocation: AppRoutes.itemsDetails,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -118,11 +119,18 @@ abstract class AppRouter
         builder: (context, state) => const Products(),
       ),
 
-      ///[_Filtered_Products]
+      ///[Filtered_Products]
       GoRoute(
         path: AppRoutes.filteredProducts,
         name: AppRoutes.filteredProducts,
         builder: (context, state) => const FilteredProducts(),
+      ),
+
+      ///[Item_Details]
+      GoRoute(
+        path: AppRoutes.itemsDetails,
+        name: AppRoutes.itemsDetails,
+        builder: (context, state) => const ItemDetails(),
       ),
     ]
   );
