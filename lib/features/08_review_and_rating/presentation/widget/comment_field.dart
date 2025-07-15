@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:e_commerce_app/core/extensions/widget_shadow_box.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,10 @@ class CommentFieldWidget extends StatelessWidget
   {
     return CustomTextFormField(
       prefixIcon: Image.asset(AppAssets.icons.userComment),
+      borderRadius: AppRadiuses.circular.xSmall,
+      borderRadiusColor: AppColors.color.kWhite003,
+      keyboardType: TextInputType.text,
+      onSubmitted: (value) => log(value),
       fillColor: AppColors.color.kWhite001,
       hintText: "اكتب التعليق..",
       hintStyle: AppStyles.extraLight(
