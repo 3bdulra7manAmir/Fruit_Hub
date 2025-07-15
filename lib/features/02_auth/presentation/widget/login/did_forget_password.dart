@@ -2,8 +2,8 @@ import 'dart:developer';
 import 'package:e_commerce_app/core/extensions/widget_align.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../config/router/router.dart';
-import '../../../../../config/router/routes.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_styles.dart';
 

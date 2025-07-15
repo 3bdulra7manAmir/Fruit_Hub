@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/widgets.dart';
 
-import '../../../../../config/router/router.dart';
-import '../../../../../config/router/routes.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 
 class AddToCartButtonWidget extends StatelessWidget

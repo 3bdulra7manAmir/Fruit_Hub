@@ -2,16 +2,13 @@ abstract class AppRoutes
 {
   AppRoutes._();
 
-  /// [OnBoarding]
-  
+  /// [ OnBoarding ]
   // [Splash]
   static const splash = '/splash';
   // [Dots Indicator]
   static const dotIndicator = '/dots_indicator';
 
-
-  /// [Auth]
-  
+  /// [ Auth ]
   // [Login]
   static const login = '/login';
   // [register]
@@ -23,28 +20,31 @@ abstract class AppRoutes
   // [New Password]
   static const newPassword = '/newPassword';
 
-  /// [Home]
+  /// [ Home ]
   // [Home]
   static const home = '/home';
   // [Most Sold]
   static const mostSold = '/mostSold';
 
-  /// [Search]
+  /// [ Search ]
   static const search = '/search';
 
-  /// [Notifications]
+  /// [ Notifications ]
   static const notifications = '/notifications';
 
-  /// [Products]
+  /// [ Products ]
   static const products = '/products';
 
-  /// [Filtered_Products]
+  /// [ Filtered_Products ]
   static const filteredProducts = '/filteredProducts';
 
-  /// [Items_Details]
+  /// [ Items_Details ]
   static const itemsDetails = '/itemsDetails';
 
-  /// [cart]
+  /// [ cart ]
   static const cart = '/cart';
+
+  /// [ Review and Rating ]
+  static const rate = '/rate';
 
 }

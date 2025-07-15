@@ -1,16 +1,15 @@
 import 'dart:developer';
-
-import 'package:e_commerce_app/config/theme/color_manager/colors.dart';
-import 'package:e_commerce_app/core/constants/app_styles.dart';
-import 'package:e_commerce_app/features/03_home/presentation/widget/fruit_grid_list.dart';
-import 'package:e_commerce_app/features/03_home/presentation/widget/search_bar/search_bar_body.dart';
-import 'package:e_commerce_app/features/06_products/presentation/widget/our_products.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
+import '../../../03_home/presentation/widget/fruit_grid_list.dart';
+import '../../../03_home/presentation/widget/search_bar/search_bar_body.dart';
+import '../widget/our_products.dart';
 
 class FilteredProducts extends StatelessWidget
 {

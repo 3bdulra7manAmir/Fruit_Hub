@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../config/router/router.dart';
-import '../../config/router/routes.dart';
+import '../../config/router/app_router.dart';
+import '../../config/router/app_routes.dart';
 import '../../features/03_home/presentation/widget/user_appbar/notifications_bill.dart';
 import '../constants/app_images.dart';
 import '../constants/app_margins.dart';

@@ -1,9 +1,9 @@
 import 'dart:developer';
-import 'package:e_commerce_app/config/router/router_navigator.dart';
+import 'package:e_commerce_app/config/router/route_extras.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/router/router.dart';
+import '../../../../config/router/app_router.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../widget/fruit_grid_list.dart';
 import '../widget/most_sold.dart';
@@ -16,6 +16,7 @@ import '../../../../core/widgets/column.dart';
 class Home extends StatelessWidget
 {
   const Home({super.key});
+  
 
   @override
   Widget build(BuildContext context)
@@ -46,6 +47,7 @@ class Home extends StatelessWidget
           ],
         ),
       ),
+      //bottomNavigationBar: CustomNavBarWidget(),
     );
   }
 }

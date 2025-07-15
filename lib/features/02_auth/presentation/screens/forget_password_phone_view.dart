@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/features/02_auth/presentation/widget/forget_password_phone/forget_password_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,6 +6,7 @@ import '../../../../core/widgets/form.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/forget_password_phone/forget_password_button.dart';
+import '../widget/forget_password_phone/forget_password_title.dart';
 import '../widget/forget_password_phone/number_field.dart';
 
 class ForgetPasswordPhone extends StatelessWidget

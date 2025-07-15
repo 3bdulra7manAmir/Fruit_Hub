@@ -17,8 +17,9 @@ import '../../features/06_products/presentation/screens/filtered_products_view.d
 import '../../features/06_products/presentation/screens/products_view.dart';
 import '../../features/07_products_details/presentation/screens/cart_view.dart';
 import '../../features/07_products_details/presentation/screens/item_details_view.dart';
-import 'routes.dart';
-import 'route_boserver.dart';
+import '../../features/08_review_and_rating/presentation/screens/review_rating_view.dart';
+import 'app_routes.dart';
+import 'route_observer.dart';
 
 
 abstract class AppRouter
@@ -30,7 +31,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.itemsDetails,
+    initialLocation: AppRoutes.login,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -39,13 +40,13 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.splash,
         name: AppRoutes.splash,
-        builder: (context, state) => const Splash(),
+        builder: (_, _) => const Splash(),
       ),
       // [Dots Indicator]
       GoRoute(
         path: AppRoutes.dotIndicator,
         name: AppRoutes.dotIndicator,
-        builder: (context, state) => const DotIndicator(),
+        builder: (_, _) => const DotIndicator(),
       ),
 
       /// [ Auth Feature ]
@@ -53,93 +54,119 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.login,
         name: AppRoutes.login,
-        builder: (context, state) => Login(),
+        builder: (_, _) => Login(),
       ),
       // [Register]
       GoRoute(
         path: AppRoutes.register,
         name: AppRoutes.register,
-        builder: (context, state) => Register(),
+        builder: (_, _) => Register(),
       ),
       // [Forget Password Phone]
       GoRoute(
         path: AppRoutes.forgetPasswordPhone,
         name: AppRoutes.forgetPasswordPhone,
-        builder: (context, state) => ForgetPasswordPhone(),
+        builder: (_, _) => ForgetPasswordPhone(),
       ),
       // [Password Recovery Email]
       GoRoute(
         path: AppRoutes.passwordRecoveryEmail,
         name: AppRoutes.passwordRecoveryEmail,
-        builder: (context, state) => PasswordRecoveryEmail(),
+        builder: (_, _) => PasswordRecoveryEmail(),
       ),
       // [New Password]
       GoRoute(
         path: AppRoutes.newPassword,
         name: AppRoutes.newPassword,
-        builder: (context, state) => NewPassword(),
+        builder: (_, _) => NewPassword(),
       ),
 
 
-      ///[ Home ]
+      ///[ Home Feature ]
       GoRoute(
         path: AppRoutes.home,
         name: AppRoutes.home,
-        builder: (context, state) => const Home(),
+        builder: (_, _) => const Home(),
       ),
       //[Most Sold]
       GoRoute(
         path: AppRoutes.mostSold,
         name: AppRoutes.mostSold,
-        builder: (context, state) => const MorePopular(),
+        builder: (_, _) => const MorePopular(),
       ),
 
-
-      ///[ Search ]
+      ///[ Search Feature ]
       GoRoute(
         path: AppRoutes.search,
         name: AppRoutes.search,
-        builder: (context, state)
+        builder: (_, state)
         {
-          final fruitName = state.uri.queryParameters['fruitName'] ?? '';
+          final fruitName = state.extra as String? ?? 'NULL';
           return Search(fruitName: fruitName);
         } ,
       ),
 
-      ///[Notifications]
+      ///[ Notifications Feature ]
       GoRoute(
         path: AppRoutes.notifications,
         name: AppRoutes.notifications,
-        builder: (context, state) => const Notifications(),
+        builder: (_, _) => const Notifications(),
       ),
 
-      ///[Products]
+      ///[ Products Feature ]
       GoRoute(
         path: AppRoutes.products,
         name: AppRoutes.products,
-        builder: (context, state) => const Products(),
+        builder: (_, _) => const Products(),
       ),
 
-      ///[Filtered_Products]
+      ///[ Filtered_Products Feature ]
       GoRoute(
         path: AppRoutes.filteredProducts,
         name: AppRoutes.filteredProducts,
-        builder: (context, state) => const FilteredProducts(),
+        builder: (_, _) => const FilteredProducts(),
       ),
 
-      ///[Item_Details]
+      ///[ Item_Details Feature ]
       GoRoute(
         path: AppRoutes.itemsDetails,
         name: AppRoutes.itemsDetails,
-        builder: (context, state) => const ItemDetails(),
+        builder: (_, _) => const ItemDetails(),
       ),
 
-      ///[Cart]
+      ///[ Cart Feature]
       GoRoute(
         path: AppRoutes.cart,
         name: AppRoutes.cart,
-        builder: (context, state) => const Cart(),
+        builder: (_, _) => const Cart(),
       ),
+      
+      ///[ Cart Feature]
+      GoRoute(
+        path: AppRoutes.rate,
+        name: AppRoutes.rate,
+        builder: (_, _) => const ReviewAndRating(),
+      ),
+
+
+      // StatefulShellRoute.indexedStack(
+      //   builder: (_, __, navigationShell) => navigationShell,
+      //   branches:
+      //   [
+      //     /// Home
+      //     StatefulShellBranch(
+      //       initialLocation: AppRoutes.home,
+      //       routes: <RouteBase>
+      //       [
+      //         GoRoute(
+      //           path: AppRoutes.home,
+      //           name: AppRoutes.home,
+      //           builder: (_, _) => const Home(),
+      //         ),
+      //       ],
+      //     ),
+      //   ],
+      // ),
     ]
   );
 }
