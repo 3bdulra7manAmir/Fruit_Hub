@@ -20,7 +20,7 @@ class CommentFieldWidget extends StatelessWidget
       prefixIcon: Image.asset(AppAssets.icons.userComment),
       fillColor: AppColors.color.kWhite001,
       hintText: "اكتب التعليق..",
-      hintStyle: AppStyles.light(
+      hintStyle: AppStyles.extraLight(
         fontWeight: AppFontWeights.regularWeight, 
         fontColor: AppColors.color.kBlack002
       ),

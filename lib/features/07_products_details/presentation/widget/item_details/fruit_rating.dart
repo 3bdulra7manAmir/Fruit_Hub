@@ -20,14 +20,14 @@ class FruitItemRatingWidget extends StatelessWidget
       [
         SvgPicture.asset(AppAssets.icons.itemDetailsStar),
         Sizes.s9.horizontalSpace,
-        Text("4.5", style: AppStyles.light(fontColor: AppColors.color.kBlack002),),
+        Text("4.5", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack002),),
         Sizes.s9.horizontalSpace,
-        Text("(30+)", style: AppStyles.light(
+        Text("(30+)", style: AppStyles.extraLight(
           fontColor: AppColors.color.kGrey012, 
           fontWeight: AppFontWeights.regularWeight),
         ),
         Sizes.s9.horizontalSpace,
-        Text("المراجعه", style: AppStyles.light(
+        Text("المراجعه", style: AppStyles.extraLight(
           fontColor: AppColors.color.kGreen001, 
           fontWeight: AppFontWeights.boldWeight),
         ),

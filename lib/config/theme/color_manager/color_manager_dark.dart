@@ -116,7 +116,10 @@ class DarkColorScheme extends ColorManagerBase
   /// [FFDE00]
   @override
   Color get kYellow001 => const Color(0xFFF3E3A4);
-
+  /// [_FFC529]
+  @override
+  Color get kYellow002 => const Color(0xFFFFC529);
+  
   // Red Color Range
   /// [EB5757]
   @override

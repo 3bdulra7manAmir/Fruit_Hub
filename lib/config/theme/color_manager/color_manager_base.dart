@@ -81,6 +81,8 @@ abstract class ColorManagerBase
   // Yellow Color Range
   /// [FFDE00]
   Color get kYellow001;
+  /// [FFC529]
+  Color get kYellow002;
 
   // Red Color Range
   /// [EB5757]

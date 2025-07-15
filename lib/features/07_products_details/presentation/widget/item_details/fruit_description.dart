@@ -12,7 +12,7 @@ class FruitItemDescriptionWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text("ينتمي إلى الفصيلة القرعية ولثمرته لُب حلو المذاق وقابل للأكل، وبحسب علم النبات فهي تعتبر ثمار لبيّة، تستعمل لفظة البطيخ للإشارة إلى النبات نفسه أو إلى الثمرة تحديداً",
-    style: AppStyles.light(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey013),
+    style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey013),
     maxLines: 3,
     );
   }

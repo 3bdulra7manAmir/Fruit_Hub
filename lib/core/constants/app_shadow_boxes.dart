@@ -20,5 +20,12 @@ abstract class AppShadowBoxes
     blurRadius: 45,
     spreadRadius: 20,
   );
+
+  static BoxShadow get userImg => BoxShadow(
+    color: const Color(0x80FFC529),
+    blurRadius: 6.84,
+    spreadRadius: 13.67,
+  );
+
   
 }

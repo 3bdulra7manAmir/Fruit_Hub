@@ -11,7 +11,7 @@ class ReviewsCountTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("324 مراجعه", style: AppStyles.light(
+    return Text("324 مراجعه", style: AppStyles.extraLight(
       fontColor: AppColors.color.kBlack001, 
       fontWeight: AppFontWeights.boldWeight),
     );

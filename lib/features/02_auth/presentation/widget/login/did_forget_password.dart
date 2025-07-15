@@ -22,7 +22,7 @@ class DidForgetPasswordWidget extends StatelessWidget
       },
       child: Text(
         "نسيت كلمة المرور؟", 
-        style: AppStyles.light(fontColor: AppColors.color.kGreen004)
+        style: AppStyles.extraLight(fontColor: AppColors.color.kGreen004)
       ).align(Alignment.centerLeft),
     );
   }

@@ -33,7 +33,7 @@ class IfNoResultsBody extends StatelessWidget
             style: AppStyles.bold(fontColor: AppColors.color.kGrey006),
           ),
             Sizes.s16.verticalSpace,
-            Text("عفوًا... هذه المعلومات غير متوفرة للحظة", style: AppStyles.light(
+            Text("عفوًا... هذه المعلومات غير متوفرة للحظة", style: AppStyles.extraLight(
               fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.regularWeight),
             ),
           ],
@@ -52,7 +52,7 @@ class NoSearchResultsFoundWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("لاتوجد نتائج بحث", style: AppStyles.light(
+    return Text("لاتوجد نتائج بحث", style: AppStyles.extraLight(
       fontColor: AppColors.color.kGrey002,
       fontWeight: AppFontWeights.regularWeight,
     ),).withShadow(

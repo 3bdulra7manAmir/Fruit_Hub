@@ -115,6 +115,9 @@ class LightColorScheme extends ColorManagerBase
   /// [_FDF4E2]
   @override
   Color get kYellow001 => const Color(0xFFFDF4E2);
+  /// [_FFC529]
+  @override
+  Color get kYellow002 => const Color(0xFFFFC529);
 
   // Red Color Range
   /// [EB5757]

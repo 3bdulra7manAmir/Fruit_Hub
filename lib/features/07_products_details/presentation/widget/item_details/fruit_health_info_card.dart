@@ -60,7 +60,7 @@ class FruitHealthInfoCardWidget extends StatelessWidget
                 ],
               ),
               Sizes.s4.verticalSpace, 
-              Text(subTitle, style: AppStyles.light(fontColor: AppColors.color.kGrey013),),
+              Text(subTitle, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey013),),
             ],
           ),
           Sizes.s16.horizontalSpace,

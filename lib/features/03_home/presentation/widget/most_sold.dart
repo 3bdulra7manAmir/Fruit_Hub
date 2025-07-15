@@ -27,7 +27,7 @@ class MostSoldWidget extends StatelessWidget
             AppRouter.router.pushNamed(AppRoutes.mostSold);
           },
           child: isMoreEnabled ?
-          Text("المزيد", style: AppStyles.light(
+          Text("المزيد", style: AppStyles.extraLight(
             fontColor: AppColors.color.kGrey002,
             fontWeight: AppFontWeights.regularWeight,
             ),

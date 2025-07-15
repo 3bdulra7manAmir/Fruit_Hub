@@ -56,7 +56,7 @@ class _PriceSliderWidgetState extends State<PriceSliderWidget>
     return SliderTheme(
       data: SliderTheme.of(context).copyWith(
         showValueIndicator: ShowValueIndicator.always,
-        valueIndicatorTextStyle: AppStyles.light(fontColor: AppColors.color.kGreen001),
+        valueIndicatorTextStyle: AppStyles.extraLight(fontColor: AppColors.color.kGreen001),
         tickMarkShape: SliderTickMarkShape.noTickMark,
         
       ),

@@ -28,7 +28,7 @@ class PriceLimitsWidget extends StatelessWidget
           ),
         ),
         Sizes.s14.horizontalSpace,
-        Text("الي", style: AppStyles.light(
+        Text("الي", style: AppStyles.extraLight(
           fontColor: AppColors.color.kBlack001, 
           fontWeight: AppFontWeights.boldWeight),
         ),

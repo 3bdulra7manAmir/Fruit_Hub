@@ -20,7 +20,7 @@ class IfResultsBody extends StatelessWidget
       children:
       [
         Sizes.s16.verticalSpace,
-        Text("نتائج البحث ", style: AppStyles.light(
+        Text("نتائج البحث ", style: AppStyles.extraLight(
           fontColor: AppColors.color.kGrey002, 
           fontWeight: AppFontWeights.regularWeight),
         ),

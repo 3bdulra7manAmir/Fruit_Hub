@@ -45,7 +45,7 @@ class FruitCardWidget extends StatelessWidget
       children:
       [
         Sizes.s25.verticalSpace,
-        Text("عروض العيد", style: AppStyles.light(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.regularWeight),),
+        Text("عروض العيد", style: AppStyles.extraLight(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.regularWeight),),
         Sizes.s8.verticalSpace,
         Row(
           children:

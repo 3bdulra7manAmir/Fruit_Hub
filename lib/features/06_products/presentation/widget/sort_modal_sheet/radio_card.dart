@@ -69,7 +69,7 @@ class FiltrationOptionTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text(value.title, style: AppStyles.light(
+    return Text(value.title, style: AppStyles.extraLight(
       fontWeight: AppFontWeights.boldWeight,
       fontColor: AppColors.color.kBlack001,),
     );

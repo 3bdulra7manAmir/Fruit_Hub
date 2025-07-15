@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/theme/color_manager/colors.dart';
-import '../../../../core/constants/app_borders.dart';
-import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_styles.dart';
-import '../../../../core/widgets/linear_indicator.dart';
+import '../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/widgets/linear_indicator.dart';
 
 class RatingBarWidget extends StatelessWidget
 {
@@ -30,7 +30,7 @@ class RatingBarWidget extends StatelessWidget
           ),
         ),
         Sizes.s8.horizontalSpace,
-        Text(rating.toString(), style: AppStyles.light(fontColor: AppColors.color.kBlack001),),
+        Text(rating.toString(), style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
       ],
     );
   }

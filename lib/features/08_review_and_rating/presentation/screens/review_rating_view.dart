@@ -5,8 +5,8 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/comment_field.dart';
-import '../widget/comments_list.dart';
-import '../widget/rating_widget.dart';
+import '../widget/comments/comments_list.dart';
+import '../widget/rating/rating_body.dart';
 import '../widget/reviews_count.dart';
 import '../widget/summary_text.dart';
 
@@ -32,6 +32,7 @@ class ReviewAndRating extends StatelessWidget
           const RatingWidget(),
           Sizes.s16.verticalSpace,
           const CommentsListWidget(),
+          Sizes.s16.verticalSpace,
         ]
       ),
     );

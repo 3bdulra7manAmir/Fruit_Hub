@@ -15,7 +15,7 @@ class WelcomeSubtitleWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text(S.of(context)!.onBoarding2Description, style: AppStyles.light(), 
+    return Text(S.of(context)!.onBoarding2Description, style: AppStyles.extraLight(), 
       textAlign: TextAlign.center, maxLines: 3, 
     ).marginSymmetric(horizontal: (37).w);
   }

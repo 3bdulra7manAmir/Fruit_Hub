@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 
-class PriceFilterTextWidget extends StatelessWidget
+class CommentInfoWidget extends StatelessWidget
 {
-  const PriceFilterTextWidget({super.key});
+  const CommentInfoWidget({super.key,});
 
   @override
   Widget build(BuildContext context)
   {
-    return Row(
+    return Column(
       children:
       [
-        Sizes.s8.horizontalSpace,
-        SvgPicture.asset(AppAssets.icons.priceTag),
-        Sizes.s8.horizontalSpace,
-        Text("السعر :", style: AppStyles.extraLight(
-          fontWeight: AppFontWeights.boldWeight, 
+        Text("Ahmed Amr", style: AppStyles.bold(
+          fontWeight: AppFontWeights.semiBoldWeight, 
           fontColor: AppColors.color.kBlack001),
+        ),
+        Sizes.s6.verticalSpace,
+        Text("25/06/2020", style: AppStyles.extraLight(
+          fontWeight: AppFontWeights.regularWeight, 
+          fontColor: AppColors.color.kGrey002),
         ),
       ],
     );

@@ -12,11 +12,11 @@ class NotificationsTextWidget extends StatelessWidget
   {
     return RichText(
       text: TextSpan(
-        style: AppStyles.light(fontColor: AppColors.color.kGrey009),
+        style: AppStyles.extraLight(fontColor: AppColors.color.kGrey009),
         children:
         [
           const TextSpan(text: "خصم "),
-          TextSpan(text: "50% ", style: AppStyles.light(fontColor: AppColors.color.kRed001),),
+          TextSpan(text: "50% ", style: AppStyles.extraLight(fontColor: AppColors.color.kRed001),),
           const TextSpan(text: "علي اسعار الفواكه بمناسبه العيد"),
         ],
       ), maxLines: 2

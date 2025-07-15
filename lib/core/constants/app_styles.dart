@@ -99,7 +99,7 @@ abstract class AppStyles
   }
 
   /// Size= [13] Weight= [w600], Color= [_4E5556],
-  static TextStyle light({
+  static TextStyle extraLight({
     double? fontSize,
     FontWeight? fontWeight,
     Color? fontColor,
@@ -113,6 +113,28 @@ abstract class AppStyles
       fontSize: fontSize ?? AppFontSizes.xXSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
       color: fontColor ?? AppColors.color.kGrey001,
+      fontFamily: fontFamily ?? AppFonts.font.fontName,
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+    );
+  }
+
+  /// Size= [11] Weight= [w600], Color= [_FFFFFF],
+  static TextStyle light({
+    double? fontSize,
+    FontWeight? fontWeight,
+    Color? fontColor,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    Color? textDecorationColor,
+    TextOverflow? textOverflow,
+  })
+  {
+    return TextStyle(
+      fontSize: fontSize ?? AppFontSizes.xXXSmall.sp,
+      fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
+      color: fontColor ?? AppColors.color.kWhite001,
       fontFamily: fontFamily ?? AppFonts.font.fontName,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,

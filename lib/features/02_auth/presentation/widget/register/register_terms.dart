@@ -38,12 +38,12 @@ Widget build(BuildContext context, WidgetRef ref)
         child: Text.rich(
           TextSpan(
             text: "من خلال إنشاء حساب ، فإنك توافق على ", 
-            style: AppStyles.light(fontColor: AppColors.color.kGrey002),
+            style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),
           children:
           [
             TextSpan(
               text: "الشروط والأحكام الخاصة بنا", 
-              style: AppStyles.light(fontColor: AppColors.color.kGreen004),
+              style: AppStyles.extraLight(fontColor: AppColors.color.kGreen004),
             ),
           ],
         ), maxLines: 3, overflow: TextOverflow.ellipsis,

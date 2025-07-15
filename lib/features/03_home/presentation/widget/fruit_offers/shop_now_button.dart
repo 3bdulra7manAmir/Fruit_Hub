@@ -19,7 +19,7 @@ class ShopNowButtonWidget extends StatelessWidget
   {
     return CustomButton(
       text: "تسوق الان",
-      textStyle: AppStyles.light(
+      textStyle: AppStyles.extraLight(
         fontWeight: AppFontWeights.boldWeight,
         fontColor: AppColors.color.kGreen001,
       ),
