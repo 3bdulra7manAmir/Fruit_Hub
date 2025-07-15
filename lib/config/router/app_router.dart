@@ -37,7 +37,8 @@ abstract class AppRouter
     observers: [NavigatorObserverWithTracking()],
     initialLocation: AppRoutes.login,
     errorBuilder: (_, __) => const Scaffold(body: Center(child: CustomCircularIndicator())),
-    routes: [
+    routes:
+    [
       /// [ Onboarding ]
       GoRoute(
         path: AppRoutes.splash,
@@ -76,37 +77,7 @@ abstract class AppRouter
         name: AppRoutes.newPassword,
         builder: (_, __) => NewPassword(),
       ),
-
-      /// [ Shared Routes outside Shell ]
-      GoRoute(
-        path: AppRoutes.mostSold,
-        name: AppRoutes.mostSold,
-        builder: (_, __) => const MorePopular(),
-      ),
-      GoRoute(
-        path: AppRoutes.search,
-        name: AppRoutes.search,
-        builder: (_, state)
-        {
-          final fruitName = state.extra as String? ?? '';
-          return Search(fruitName: fruitName);
-        },
-      ),
-      GoRoute(
-        path: AppRoutes.notifications,
-        name: AppRoutes.notifications,
-        builder: (_, __) => const Notifications(),
-      ),
-      GoRoute(
-        path: AppRoutes.filteredProducts,
-        name: AppRoutes.filteredProducts,
-        builder: (_, __) => const FilteredProducts(),
-      ),
-      GoRoute(
-        path: AppRoutes.itemsDetails,
-        name: AppRoutes.itemsDetails,
-        builder: (_, __) => const ItemDetails(),
-      ),
+      
       GoRoute(
         path: AppRoutes.rate,
         name: AppRoutes.rate,
@@ -118,38 +89,116 @@ abstract class AppRouter
         builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
         branches:
         [
-          /// Branch 0: Home + its subroutes
+          /// Branch 0: Home + subroutes [ MostSold,, Notifications,, Search,, itemsDetails ]
           StatefulShellBranch(
-            routes: [
+            routes:
+            [
               GoRoute(
                 path: AppRoutes.home,
                 name: AppRoutes.home,
                 builder: (_, __) => const Home(),
+                routes:
+                [
+                  GoRoute(
+                    path: AppRoutes.mostSold,
+                    name: AppRoutes.mostSold,
+                    builder: (_, __) => const MorePopular(),
+                  ),
+                  GoRoute(
+                    path: AppRoutes.notifications,
+                    name: AppRoutes.notifications,
+                    builder: (_, __) => const Notifications(),
+                  ),
+                  GoRoute(
+                    path: AppRoutes.search,
+                    name: AppRoutes.search,
+                    builder: (_, state)
+                    {
+                      final fruitName = state.extra as String? ?? '';
+                      return Search(fruitName: fruitName);
+                    },
+                  ),
+                  GoRoute(
+                    path: AppRoutes.itemsDetails,
+                    name: AppRoutes.itemsDetails,
+                    builder: (_, __) => const ItemDetails(),
+                  ),
+                ],
               ),
             ],
           ),
 
-          /// Branch 1: Products + filtered + itemDetails (shared)
+          /// Branch 1: Products + subroutes [ Notifications,, Search,, Filtered Products,, itemsDetails ]
           StatefulShellBranch(
-            routes: [
+            routes:
+            [
               GoRoute(
                 path: AppRoutes.products,
                 name: AppRoutes.products,
                 builder: (_, __) => const Products(),
+                routes:
+                [
+                  GoRoute(
+                    path: AppRoutes.notifications,
+                    name: AppRoutes.notifications,
+                    builder: (_, __) => const Notifications(),
+                  ),
+                  GoRoute(
+                    path: AppRoutes.search,
+                    name: AppRoutes.search,
+                    builder: (_, state)
+                    {
+                      final fruitName = state.extra as String? ?? '';
+                      return Search(fruitName: fruitName);
+                    },
+                  ),
+                  GoRoute(
+                    path: AppRoutes.filteredProducts,
+                    name: AppRoutes.filteredProducts,
+                    builder: (_, __) => const FilteredProducts(),
+                  ),
+                  GoRoute(
+                    path: AppRoutes.itemsDetails,
+                    name: AppRoutes.itemsDetails,
+                    builder: (_, __) => const ItemDetails(),
+                  ),
+                ]
               ),
             ],
           ),
 
-          /// Branch 2: Cart + rate
+          /// Branch 2: Cart + subroutes [ itemsDetails ]
           StatefulShellBranch(
-            routes: [
+            routes:
+            [
               GoRoute(
                 path: AppRoutes.cart,
                 name: AppRoutes.cart,
                 builder: (_, __) => const Cart(),
+                routes:
+                [
+                  GoRoute(
+                    path: AppRoutes.itemsDetails,
+                    name: AppRoutes.itemsDetails,
+                    builder: (_, __) => const ItemDetails(),
+                  ),
+                ]
               ),
             ],
           ),
+
+          // /// Branch 3: Profile + subroutes [  ]
+          // StatefulShellBranch(
+          //   routes:
+          //   [
+          //     GoRoute(
+          //       path: AppRoutes.profile,
+          //       name: AppRoutes.profile,
+          //       builder: (_, __) => const Profile(),
+          //       routes: []
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     ],

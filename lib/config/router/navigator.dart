@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/widgets/appbar.dart';
 import '../../core/widgets/navbar/nav_bar_model.dart';
 import '../../core/widgets/navbar/nav_bar_widget.dart';
 import '../../features/03_home/presentation/widget/user_appbar/user_appbar_body.dart';
@@ -10,11 +11,53 @@ class MainScaffold extends StatelessWidget
 {
   final StatefulNavigationShell navigationShell;
 
-  const MainScaffold({super.key, required this.navigationShell});
+  MainScaffold({super.key, required this.navigationShell});
 
   void _goBranch(int index)
   {
     navigationShell.goBranch(index, initialLocation: index == navigationShell.currentIndex);
+  }
+
+  final List<NavBarItemModel> items =
+  [
+    NavBarItemModel(
+      title: 'الصفحة الرئيسية',
+      activeIcon: SvgPicture.asset('assets/icons/NavBar/Home_active.svg'),
+      inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Cart_not_active.svg'),
+      
+    ),
+    NavBarItemModel(
+      title: 'المنتجات',
+      activeIcon: SvgPicture.asset('assets/icons/NavBar/Products_active.svg'),
+      inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Products_not_active.svg'),
+    ),
+    NavBarItemModel(
+      title: 'السلة',
+      activeIcon: SvgPicture.asset('assets/icons/NavBar/Cart_active.svg'),
+      inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Cart_not_active.svg'),
+    ),
+    NavBarItemModel(
+      title: 'حسابي',
+      activeIcon: SvgPicture.asset('assets/icons/NavBar/User_active.svg'),
+      inactiveIcon: SvgPicture.asset('assets/icons/NavBar/User_not_active.svg'),
+    ),
+  ];
+
+  PreferredSizeWidget? _buildAppBar(int index)
+  {
+    switch (index)
+    {
+      case 0:
+        return const UserAppBar();
+      case 1:
+        return CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,);
+      case 2:
+        return CustomAppBar(barTitle: "السلة",);
+      case 3:
+        return AppBar(title: const Text("Profile AppBar"));
+      default:
+        return null;
+    }
   }
 
   @override
@@ -26,47 +69,11 @@ class MainScaffold extends StatelessWidget
       body: navigationShell,
       bottomNavigationBar: CustomNavBar(
         currentIndex: currentIndex,
-        items: [
-          NavBarItemModel(
-            title: 'Home',
-            activeIcon: SvgPicture.asset('assets/icons/NavBar/Home_active.svg', color: Colors.white),
-            inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Home_inactive.svg', color: Colors.grey),
-          ),
-          NavBarItemModel(
-            title: 'Products',
-            activeIcon: SvgPicture.asset('assets/icons/NavBar/Products_active.svg', color: Colors.white),
-            inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Products_inactive.svg', color: Colors.grey),
-          ),
-          NavBarItemModel(
-            title: 'Notifications',
-            activeIcon: SvgPicture.asset('/assets/icons/NavBar/', color: Colors.white),
-            inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Cart_inactive.svg', color: Colors.grey),
-          ),
-          NavBarItemModel(
-            title: 'Cart',
-            activeIcon: SvgPicture.asset('assets/icons/NavBar/User_active.svg', color: Colors.white),
-            inactiveIcon: SvgPicture.asset('assets/icons/NavBar/User_inactive.svg', color: Colors.grey),
-          ),
-        ],
+        items: items,
         onTap: _goBranch,
       ),
     );
   }
-
-  PreferredSizeWidget? _buildAppBar(int index)
-  {
-    switch (index)
-    {
-      case 0:
-        return const UserAppBar();
-      case 1:
-        return AppBar(title: const Text("Products AppBar"));
-      case 2:
-        return AppBar(title: const Text("Notifications AppBar"));
-      case 3:
-        return AppBar(title: const Text("Cart AppBar"));
-      default:
-        return null;
-    }
-  }
+  
+  
 }
