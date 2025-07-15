@@ -12,11 +12,11 @@ class ReviewAndRating extends StatelessWidget
   {
     return Scaffold(
       appBar: CustomAppBar(barTitle: "المراجعه",),
-      body: SingleChildScrollView(
-        child: CustomColumn(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: []
-        ),
+      body: CustomSingleChild(
+        children:
+        [
+          
+        ]
       ),
     );
   }

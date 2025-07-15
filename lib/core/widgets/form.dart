@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class AppForm extends StatelessWidget
+class CustomForm extends StatelessWidget
 {
-  const AppForm({super.key, this.formKey, this.formBody});
+  const CustomForm({super.key, this.formKey, this.formBody});
 
   final GlobalKey<FormState>? formKey;
   final Widget? formBody;

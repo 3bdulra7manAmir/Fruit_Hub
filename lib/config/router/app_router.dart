@@ -31,7 +31,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.login,
+    initialLocation: AppRoutes.splash,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -101,7 +101,7 @@ abstract class AppRouter
         name: AppRoutes.search,
         builder: (_, state)
         {
-          final fruitName = state.extra as String? ?? 'NULL';
+          final fruitName = state.extra as String? ?? '';
           return Search(fruitName: fruitName);
         } ,
       ),

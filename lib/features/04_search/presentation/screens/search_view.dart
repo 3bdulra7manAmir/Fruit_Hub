@@ -25,21 +25,18 @@ class Search extends StatelessWidget
     //log("Received fruitName: $fruitName"); // Just for debug
     return Scaffold(
       appBar: const CustomAppBar(barTitle: "البحث", isNotifications: true,),
-      body: SingleChildScrollView(
-        child: CustomColumn(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:
-          [
-            Sizes.s16.verticalSpace,
-            SearchBarWidget(
-              controller: TextEditingController(text: fruitName),
-              onSubmitted: (value) {log("Search Field Value is => $value");},
-            ),
-            //IfNoResultsBody(),
-            //IfResultsBody(),
-            //IfPreviousResultsBody(),
-          ],
-        ),
+      body: CustomSingleChild(
+        children:
+        [
+          Sizes.s16.verticalSpace,
+          SearchBarWidget(
+            controller: TextEditingController(text: fruitName),
+            onSubmitted: (value) {log("Search Field Value is => $value");},
+          ),
+          //IfNoResultsBody(),
+          //IfResultsBody(),
+          //IfPreviousResultsBody(),
+        ],
       ),
     );
   }

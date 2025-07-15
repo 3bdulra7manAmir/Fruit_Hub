@@ -24,7 +24,7 @@ class Register extends StatelessWidget
       appBar: const CustomAppBar(barTitle: "حساب جديد",),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: AppForm(
+        child: CustomForm(
           formKey: registerFormKey,
           formBody: CustomColumn(
             children:

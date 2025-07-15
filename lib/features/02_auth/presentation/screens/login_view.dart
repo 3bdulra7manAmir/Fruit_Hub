@@ -25,7 +25,7 @@ class Login extends StatelessWidget
       appBar: const CustomAppBar(barTitle: "تسجيل دخول"),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: AppForm(
+        child: CustomForm(
           formKey: loginFormKey,
           formBody: CustomColumn(
             children:

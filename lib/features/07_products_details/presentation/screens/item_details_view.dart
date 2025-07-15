@@ -27,7 +27,6 @@ class ItemDetails extends StatelessWidget
             const FruitItemWidget(),
             Sizes.s24.verticalSpace,
             CustomColumn(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
                 const FruitNeededQuantityWidget(),

@@ -21,24 +21,20 @@ class Products extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomColumn(
-          crossAxisAlignment: CrossAxisAlignment.start, 
-          children:
-          [
-            Sizes.s16.verticalSpace,
-            SearchBarWidget(onSubmitted: (value) {log("Search Bar Value: $value");},),
-            Sizes.s16.verticalSpace,
-            const OurProductsWidget(),
-            Sizes.s8.verticalSpace,
-            SizedBox(height: 89.h, child: const FruitsProductsListWidget()),
-            Sizes.s24.verticalSpace,
-            const MostSoldWidget(isMoreEnabled: true),
-            Sizes.s8.verticalSpace,
-            const FruitGridListWidget(),
-          ]
-        ),
+      body: CustomSingleChild(
+        children:
+        [
+          Sizes.s16.verticalSpace,
+          SearchBarWidget(onSubmitted: (value) {log("Search Bar Value: $value");},),
+          Sizes.s16.verticalSpace,
+          const OurProductsWidget(),
+          Sizes.s8.verticalSpace,
+          SizedBox(height: 89.h, child: const FruitsProductsListWidget()),
+          Sizes.s24.verticalSpace,
+          const MostSoldWidget(isMoreEnabled: true),
+          Sizes.s8.verticalSpace,
+          const FruitGridListWidget(),
+        ]
       ),
     );
   }

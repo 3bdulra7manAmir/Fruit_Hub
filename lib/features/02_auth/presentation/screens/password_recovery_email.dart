@@ -24,7 +24,7 @@ class PasswordRecoveryEmail extends StatelessWidget
       appBar: const CustomAppBar(barTitle: "التحقق من الرمز",),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: AppForm(
+        child: CustomForm(
           formKey: passwordRecoveryFormKey,
           formBody: CustomColumn(
             children:

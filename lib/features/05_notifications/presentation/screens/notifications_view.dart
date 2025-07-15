@@ -17,22 +17,19 @@ class Notifications extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: "الاشعارات", isNotifications: true,),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomColumn(
-          crossAxisAlignment: CrossAxisAlignment.start, isMargin: false,
-          children:
-          [
-            Sizes.s16.verticalSpace,
-            const NotificationsTitleWidget(header: "جديد", count: "2",).marginSymmetric(horizontal: 16.w),
-            Sizes.s16.verticalSpace,
-            const NotificationsCardListWidget(),
-            Sizes.s16.verticalSpace,
-            const NotificationsTitleWidget(header: "في وقت سابق", count: "2",).marginSymmetric(horizontal: 16.w),
-            Sizes.s26.verticalSpace,
-            const NotificationsCardListWidget(),
-          ]
-        ),
+      body: CustomSingleChild(
+        isMargin: false,
+        children:
+        [
+          Sizes.s16.verticalSpace,
+          const NotificationsTitleWidget(header: "جديد", count: "2",).marginSymmetric(horizontal: 16.w),
+          Sizes.s16.verticalSpace,
+          const NotificationsCardListWidget(),
+          Sizes.s16.verticalSpace,
+          const NotificationsTitleWidget(header: "في وقت سابق", count: "2",).marginSymmetric(horizontal: 16.w),
+          Sizes.s26.verticalSpace,
+          const NotificationsCardListWidget(),
+        ]
       ),
     );
   }

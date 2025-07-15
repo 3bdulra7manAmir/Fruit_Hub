@@ -13,14 +13,11 @@ class ForgetPasswordEmail extends StatelessWidget
   {
     return const Scaffold(
       //appBar: CustomAppBar(barTitle: "نسيان كلمة المرور"),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomColumn(
-          children:
-          [
-        
-          ],
-        ),
+      body: CustomSingleChild(
+        children:
+        [
+      
+        ],
       ),
     );
   }

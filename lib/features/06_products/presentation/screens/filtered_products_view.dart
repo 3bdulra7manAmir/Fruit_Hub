@@ -20,19 +20,16 @@ class FilteredProducts extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomColumn(
-          children:
-          [
-            Sizes.s16.verticalSpace,
-            SearchBarWidget(onSubmitted: (value){log(value);}),
-            Sizes.s16.verticalSpace,
-            const FilteredResultsTitleWidget(),
-            Sizes.s16.verticalSpace,
-            const FruitGridListWidget(),
-          ]
-        ),
+      body: CustomSingleChild(
+        children:
+        [
+          Sizes.s16.verticalSpace,
+          SearchBarWidget(onSubmitted: (value){log(value);}),
+          Sizes.s16.verticalSpace,
+          const FilteredResultsTitleWidget(),
+          Sizes.s16.verticalSpace,
+          const FruitGridListWidget(),
+        ]
       ),
     );
   }

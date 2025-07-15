@@ -22,10 +22,9 @@ class NewPassword extends StatelessWidget
       appBar: const CustomAppBar(barTitle: "كلمة مرور جديدة"),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: AppForm(
+        child: CustomForm(
           formKey: newPasswordFormKey,
           formBody: CustomColumn(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
               Sizes.s24.verticalSpace,

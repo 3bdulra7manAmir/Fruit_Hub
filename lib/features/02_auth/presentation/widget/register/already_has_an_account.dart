@@ -24,7 +24,7 @@ class AlreadyHasAnAccountWidget extends StatelessWidget
           onTap: ()
           {
             log("Login Pressed...");
-            AppRouter.router.pushNamed(AppRoutes.login);
+            AppRouter.router.pushReplacement(AppRoutes.login);
           },
           child: Text("تسجيل دخول", style: AppStyles.bold(fontColor: AppColors.color.kGreen001, fontWeight: AppFontWeights.semiBoldWeight),)
         ),

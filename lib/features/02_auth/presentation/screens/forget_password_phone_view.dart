@@ -21,7 +21,7 @@ class ForgetPasswordPhone extends StatelessWidget
       appBar: const CustomAppBar(barTitle: "نسيان كلمة المرور"),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: AppForm(
+        child: CustomForm(
           formKey: forgetPasswordPhoneFormKey,
           formBody: CustomColumn(
             children:

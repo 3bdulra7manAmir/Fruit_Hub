@@ -17,19 +17,15 @@ class MorePopular extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: "الأكثر مبيعًا", isNotifications: true,),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomColumn(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:
-          [
-            Sizes.s24.verticalSpace,
-            const MostSoldWidget(isMoreEnabled: false,),
-            Sizes.s8.verticalSpace,
-            const FruitGridListWidget(),
-            Sizes.s16.verticalSpace,
-          ],
-        ),
+      body: CustomSingleChild(
+        children:
+        [
+          Sizes.s24.verticalSpace,
+          const MostSoldWidget(isMoreEnabled: false,),
+          Sizes.s8.verticalSpace,
+          const FruitGridListWidget(),
+          Sizes.s16.verticalSpace,
+        ],
       ),
     );
   }

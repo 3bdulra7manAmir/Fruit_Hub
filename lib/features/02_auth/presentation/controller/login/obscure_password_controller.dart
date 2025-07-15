@@ -9,7 +9,6 @@ class LoginObscurePassword extends _$LoginObscurePassword
   @override
   bool build()
   {
-    log("inital State is: True");
     return true;
   }
 

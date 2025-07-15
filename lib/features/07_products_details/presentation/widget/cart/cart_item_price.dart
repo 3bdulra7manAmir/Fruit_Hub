@@ -16,7 +16,7 @@ class CartItemPriceWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
         Sizes.s6.verticalSpace,
