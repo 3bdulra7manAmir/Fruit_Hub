@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../core/widgets/circular_indicator.dart';
 import '../../features/01_onboarding/presentation/screens/splash_view.dart';
 import '../../features/01_onboarding/presentation/screens/dots_indicator_view.dart';
@@ -18,84 +19,70 @@ import '../../features/06_products/presentation/screens/products_view.dart';
 import '../../features/07_products_details/presentation/screens/cart_view.dart';
 import '../../features/07_products_details/presentation/screens/item_details_view.dart';
 import '../../features/08_review_and_rating/presentation/screens/review_rating_view.dart';
-import 'app_routes.dart';
-import 'route_observer.dart';
 
+import '../router/app_routes.dart';
+import '../router/route_observer.dart';
+import 'navigator.dart';
 
 abstract class AppRouter
 {
   AppRouter._();
+
   static final navigatorState = GlobalKey<NavigatorState>(debugLabel: 'root');
   static String? currentRoute;
+
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
-    observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.rate,
-    errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
-    routes:
-    [
-      /// [ OnBoarding Feature ]
-      // [Splash]
+    observers: [NavigatorObserverWithTracking()],
+    initialLocation: AppRoutes.login,
+    errorBuilder: (_, __) => const Scaffold(body: Center(child: CustomCircularIndicator())),
+    routes: [
+      /// [ Onboarding ]
       GoRoute(
         path: AppRoutes.splash,
         name: AppRoutes.splash,
-        builder: (_, _) => const Splash(),
+        builder: (_, __) => const Splash(),
       ),
-      // [Dots Indicator]
       GoRoute(
         path: AppRoutes.dotIndicator,
         name: AppRoutes.dotIndicator,
-        builder: (_, _) => const DotIndicator(),
+        builder: (_, __) => const DotIndicator(),
       ),
 
-      /// [ Auth Feature ]
-      // [Login]
+      /// [ Auth ]
       GoRoute(
         path: AppRoutes.login,
         name: AppRoutes.login,
-        builder: (_, _) => Login(),
+        builder: (_, __) => Login(),
       ),
-      // [Register]
       GoRoute(
         path: AppRoutes.register,
         name: AppRoutes.register,
-        builder: (_, _) => Register(),
+        builder: (_, __) => Register(),
       ),
-      // [Forget Password Phone]
       GoRoute(
         path: AppRoutes.forgetPasswordPhone,
         name: AppRoutes.forgetPasswordPhone,
-        builder: (_, _) => ForgetPasswordPhone(),
+        builder: (_, __) => ForgetPasswordPhone(),
       ),
-      // [Password Recovery Email]
       GoRoute(
         path: AppRoutes.passwordRecoveryEmail,
         name: AppRoutes.passwordRecoveryEmail,
-        builder: (_, _) => PasswordRecoveryEmail(),
+        builder: (_, __) => PasswordRecoveryEmail(),
       ),
-      // [New Password]
       GoRoute(
         path: AppRoutes.newPassword,
         name: AppRoutes.newPassword,
-        builder: (_, _) => NewPassword(),
+        builder: (_, __) => NewPassword(),
       ),
 
-
-      ///[ Home Feature ]
-      GoRoute(
-        path: AppRoutes.home,
-        name: AppRoutes.home,
-        builder: (_, _) => const Home(),
-      ),
-      //[Most Sold]
+      /// [ Shared Routes outside Shell ]
       GoRoute(
         path: AppRoutes.mostSold,
         name: AppRoutes.mostSold,
-        builder: (_, _) => const MorePopular(),
+        builder: (_, __) => const MorePopular(),
       ),
-
-      ///[ Search Feature ]
       GoRoute(
         path: AppRoutes.search,
         name: AppRoutes.search,
@@ -103,70 +90,68 @@ abstract class AppRouter
         {
           final fruitName = state.extra as String? ?? '';
           return Search(fruitName: fruitName);
-        } ,
+        },
       ),
-
-      ///[ Notifications Feature ]
       GoRoute(
         path: AppRoutes.notifications,
         name: AppRoutes.notifications,
-        builder: (_, _) => const Notifications(),
+        builder: (_, __) => const Notifications(),
       ),
-
-      ///[ Products Feature ]
-      GoRoute(
-        path: AppRoutes.products,
-        name: AppRoutes.products,
-        builder: (_, _) => const Products(),
-      ),
-
-      ///[ Filtered_Products Feature ]
       GoRoute(
         path: AppRoutes.filteredProducts,
         name: AppRoutes.filteredProducts,
-        builder: (_, _) => const FilteredProducts(),
+        builder: (_, __) => const FilteredProducts(),
       ),
-
-      ///[ Item_Details Feature ]
       GoRoute(
         path: AppRoutes.itemsDetails,
         name: AppRoutes.itemsDetails,
-        builder: (_, _) => const ItemDetails(),
+        builder: (_, __) => const ItemDetails(),
       ),
-
-      ///[ Cart Feature]
-      GoRoute(
-        path: AppRoutes.cart,
-        name: AppRoutes.cart,
-        builder: (_, _) => const Cart(),
-      ),
-      
-      ///[ Cart Feature]
       GoRoute(
         path: AppRoutes.rate,
         name: AppRoutes.rate,
-        builder: (_, _) => const ReviewAndRating(),
+        builder: (_, __) => const ReviewAndRating(),
       ),
 
+      /// [ Stateful Shell ]
+      StatefulShellRoute.indexedStack(
+        builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
+        branches:
+        [
+          /// Branch 0: Home + its subroutes
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.home,
+                name: AppRoutes.home,
+                builder: (_, __) => const Home(),
+              ),
+            ],
+          ),
 
-      // StatefulShellRoute.indexedStack(
-      //   builder: (_, __, navigationShell) => navigationShell,
-      //   branches:
-      //   [
-      //     /// Home
-      //     StatefulShellBranch(
-      //       initialLocation: AppRoutes.home,
-      //       routes: <RouteBase>
-      //       [
-      //         GoRoute(
-      //           path: AppRoutes.home,
-      //           name: AppRoutes.home,
-      //           builder: (_, _) => const Home(),
-      //         ),
-      //       ],
-      //     ),
-      //   ],
-      // ),
-    ]
+          /// Branch 1: Products + filtered + itemDetails (shared)
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.products,
+                name: AppRoutes.products,
+                builder: (_, __) => const Products(),
+              ),
+            ],
+          ),
+
+          /// Branch 2: Cart + rate
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.cart,
+                name: AppRoutes.cart,
+                builder: (_, __) => const Cart(),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ],
   );
 }

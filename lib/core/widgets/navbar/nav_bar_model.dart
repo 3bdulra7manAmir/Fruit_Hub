@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-class NavBarItemModel
-{
+class NavBarItemModel {
   const NavBarItemModel({
     this.key,
-    required this.icon,
+    required this.activeIcon,
     this.inactiveIcon,
     this.title,
     this.activeColor,
@@ -15,7 +14,7 @@ class NavBarItemModel
   });
 
   final Key? key;
-  final String icon;
+  final Widget activeIcon;
   final Widget? inactiveIcon;
   final String? title;
   final Color? activeColor;

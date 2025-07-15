@@ -1,11 +1,7 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class NavBarItemWidget extends StatelessWidget
-{
+class NavBarItemWidget extends StatelessWidget {
   const NavBarItemWidget({
     super.key,
     required this.index,
@@ -14,7 +10,7 @@ class NavBarItemWidget extends StatelessWidget
     required this.activeIconColor,
     required this.activeTitleColor,
     required this.inactiveColor,
-    required this.icon,
+    required this.activeIcon,
     required this.inactiveIcon,
     required this.title,
     required this.showActiveBackgroundColor,
@@ -32,7 +28,7 @@ class NavBarItemWidget extends StatelessWidget
   final Color activeIconColor;
   final Color activeTitleColor;
   final Color inactiveColor;
-  final String icon;
+  final Widget activeIcon;
   final Widget? inactiveIcon;
   final String? title;
   final bool showActiveBackgroundColor;
@@ -44,14 +40,12 @@ class NavBarItemWidget extends StatelessWidget
   final VoidCallback onTap;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return TweenAnimationBuilder<double>(
       tween: Tween(begin: 0, end: isSelected ? 1 : 0),
       curve: curve,
       duration: duration,
-      builder: (_, value, __)
-      {
+      builder: (_, value, __) {
         return Material(
           color: Colors.transparent,
           shape: border,
@@ -63,29 +57,31 @@ class NavBarItemWidget extends StatelessWidget
             child: Stack(
               clipBehavior: Clip.none,
               alignment: Alignment.centerLeft,
-              children:
-              [
+              children: [
                 if (isSelected && title != null)
                   Container(
-                    height: 40.h, alignment: Alignment.center,
+                    height: 40.h,
+                    alignment: Alignment.center,
                     padding: EdgeInsets.only(left: 54.r * value, right: 12.r),
                     decoration: BoxDecoration(
                       color: activeBackgroundColor,
                       borderRadius: BorderRadius.circular(20.r),
                     ),
-                    child: Text(title!, style: textStyle.copyWith(color: activeTitleColor),),
+                    child: Text(
+                      title!,
+                      style: textStyle.copyWith(color: activeTitleColor),
+                    ),
                   ),
-                Container(height: 60.h,
+                Container(
+                  height: 60.h,
                   padding: EdgeInsets.all(10.r),
                   decoration: BoxDecoration(
                     color: Color.lerp(Colors.transparent, activeIconColor, value),
                     shape: BoxShape.circle,
                   ),
-                  child: SvgPicture.asset(icon,
-                    color: isSelected ? Colors.white : activeIconColor,
-                    height: 24.h,
-                    width: 24.h,
-                  ),
+                  child: isSelected
+                      ? activeIcon
+                      : (inactiveIcon ?? activeIcon),
                 ),
               ],
             ),
