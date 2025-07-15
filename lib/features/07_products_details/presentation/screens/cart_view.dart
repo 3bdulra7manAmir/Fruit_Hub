@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/column.dart';
 import '../widget/cart/cart_items_list.dart';
 import '../widget/cart/cart_pay_button.dart';
 import '../widget/cart/cart_title.dart';
@@ -15,21 +16,19 @@ class Cart extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "السلة",),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: Column(
-          children:
-          [
-            Sizes.s16.verticalSpace,
-            const CartTitleWidget(),
-            Sizes.s24.verticalSpace,
-            const CartItemsListWidget(),
-            Sizes.s16.verticalSpace,
-            const CartPayButtonWidget(),
-            Sizes.s16.verticalSpace,
-          ],
-        ),
+      appBar: const CustomAppBar(barTitle: "السلة",),
+      body: CustomSingleChild(
+        isMargin: false,
+        children:
+        [
+          Sizes.s16.verticalSpace,
+          const CartTitleWidget(),
+          Sizes.s24.verticalSpace,
+          const CartItemsListWidget(),
+          Sizes.s16.verticalSpace,
+          const CartPayButtonWidget(),
+          Sizes.s16.verticalSpace,
+        ],
       ),
     );
   }

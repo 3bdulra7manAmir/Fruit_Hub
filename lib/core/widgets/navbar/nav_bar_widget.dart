@@ -46,10 +46,10 @@ class CustomNavBar extends StatelessWidget
         color: Colors.white,
         borderRadius: BorderRadius.circular(20.r),
         boxShadow:
-        [
+        const [
           BoxShadow(
             blurRadius: 6,
-            offset: const Offset(3, 0),
+            offset: Offset(3, 0),
             color: Colors.black12,
           )
         ],

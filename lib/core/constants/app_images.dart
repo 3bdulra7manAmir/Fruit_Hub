@@ -60,14 +60,18 @@ class _Icons
   final String avocado = "assets/icons/Products/Avocado.png";
   final String priceTag = "assets/icons/Products/Price_Tag.svg";
 
-  ///[Products_Details]
-  final String subtract = "assets/icons/Products_Details/Subtract_Grey.svg";
-  final String star = "assets/icons/Products_Details/Star.svg";
-  final String calendarBlue = "assets/icons/Products_Details/Calendar_Blue.svg";
+  ///[Item_Details]
+  final String subtract = "assets/icons/Items_Details/Subtract_Grey.svg";
+  final String itemDetailsStar = "assets/icons/Items_Details/Star.svg";
+  final String calendarBlue = "assets/icons/Items_Details/Calendar_Blue.svg";
 
   ///[Cart]
   final String watermelonV3 = "assets/icons/Cart/Watermelon_V3.png";
   final String trash = "assets/icons/Cart/Trash.svg";
+
+  ///[Review And Rating]
+  final String userComment = "assets/icons/Review_And_Rating/User_Comment.png";
+  final String reviewStar = "assets/icons/Review_And_Rating/Star.svg";
 }
 
 ///-----------------------------------------------------------------//
@@ -81,6 +85,6 @@ class _IMGs
   final String watermelon = "assets/imgs/Home/Watermelon.png";
 
   ///[Products_Details]
-  final String watermelonV2 = "assets/imgs/Products_Details/Watermelon_v2.png";
+  final String watermelonV2 = "assets/imgs/Items_Details/Watermelon_v2.png";
   
 }

@@ -46,7 +46,7 @@ class FruitItemWidget extends StatelessWidget
       log("Poping Back...");
       AppRouter.router.pop();
     } 
-    on Exception catch (e, stack)
+    catch (e, stack)
     {
       log("Error: $e,, Stack: $stack");
     }

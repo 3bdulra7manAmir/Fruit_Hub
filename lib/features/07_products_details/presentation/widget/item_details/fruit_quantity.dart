@@ -41,7 +41,7 @@ class FruitQuantityChanger extends StatelessWidget
       [
         GestureDetector(
           onTap: () {log("Add has been Pressed...");},
-          child: FruitAddButtonWidget(),
+          child: const FruitAddButtonWidget(),
         ),
 
         Sizes.s16.horizontalSpace,

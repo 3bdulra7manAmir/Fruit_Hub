@@ -21,6 +21,9 @@ class BorderCircular
 {
   BorderCircular._();
 
+  /// [circular: 2.r]
+  BorderRadius get xXXXXSmall => BorderRadius.circular(2.r);
+
   /// [circular: 4.r]
   BorderRadius get xXXXSmall => BorderRadius.circular(4.r);
 

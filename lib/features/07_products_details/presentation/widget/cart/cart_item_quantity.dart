@@ -29,7 +29,7 @@ class CartItemQuantityWidget extends StatelessWidget
           fontColor: AppColors.color.kOrange001),
         ),
         Sizes.s10.verticalSpace,
-        FruitQuantityChanger(),
+        const FruitQuantityChanger(),
       ],
     );
   }

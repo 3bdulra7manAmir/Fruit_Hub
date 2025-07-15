@@ -15,6 +15,9 @@ class LightColorScheme extends ColorManagerBase
   @override
   /// [CACECE66]
   Color get kWhite002 => const Color.fromRGBO(202, 206, 206, 0.4);
+  @override
+  /// [EEEEEE]
+  Color get kWhite003 => const Color(0xffEEEEEE);
 
   // Grey Color Range
   @override
@@ -101,7 +104,12 @@ class LightColorScheme extends ColorManagerBase
   @override
   /// [_F8C76D]
   Color get kOrange002 => const Color(0xffF8C76D);
-  
+  @override
+  /// [_FFB400]
+  Color get kOrange003 => const Color(0xffFFB400);
+  @override
+  /// [_F1F3F3]
+  Color get kGrey015 => const Color(0xffF1F3F3);
 
   // Yellow Color Range
   /// [_FDF4E2]

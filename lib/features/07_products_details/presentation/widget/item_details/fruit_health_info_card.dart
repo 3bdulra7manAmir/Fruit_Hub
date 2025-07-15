@@ -66,7 +66,7 @@ class FruitHealthInfoCardWidget extends StatelessWidget
           Sizes.s16.horizontalSpace,
           if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
           [
-            SizedBox.shrink(),
+            const SizedBox.shrink(),
           ]
           else...
           [

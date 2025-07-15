@@ -35,10 +35,10 @@ class FruitGridCardWidget extends StatelessWidget
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:
               [
-                Expanded(child: FruitGridPriceWidget()),
+                const Expanded(child: FruitGridPriceWidget()),
                 GestureDetector(
                   onTap: () {log("Add has been Pressed...");},
-                  child: FruitAddButtonWidget()
+                  child: const FruitAddButtonWidget()
                 ),
               ],
             ),

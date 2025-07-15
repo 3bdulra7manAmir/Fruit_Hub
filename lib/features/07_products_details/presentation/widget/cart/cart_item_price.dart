@@ -16,13 +16,13 @@ class CartItemPriceWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children:
       [
         Sizes.s6.verticalSpace,
         GestureDetector(
           onTap: () {log("Trash...");},
-          child: DeleteImgWidget()
+          child: const DeleteImgWidget()
         ),
         const Spacer(),
         const ItemPriceTextWidget(),

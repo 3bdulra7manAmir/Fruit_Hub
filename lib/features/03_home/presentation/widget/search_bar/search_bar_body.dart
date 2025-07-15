@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/core/constants/app_shadow_boxes.dart';
+import 'package:e_commerce_app/core/extensions/widget_shadow_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,31 +20,19 @@ class SearchBarWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container(
-      height: 40.h,
-      decoration: const BoxDecoration(
-        boxShadow:
-        [
-          BoxShadow(
-          color: Color(0x0A000000),
-          offset: Offset(0, 2),
-          blurRadius: 9,),
-        ],
+    return CustomTextFormField(
+      controller: controller,
+      suffixIcon: const FilterIconWidget(),
+      prefixIcon: const SearchIconWidget(),
+      fillColor: AppColors.color.kWhite001,
+      hintText: "ابحث عن.......",
+      hintStyle: AppStyles.light(
+        fontColor: AppColors.color.kGrey002,
+        fontWeight: AppFontWeights.regularWeight,
       ),
-      child: CustomTextFormField(
-        controller: controller,
-        suffixIcon: const FilterIconWidget(),
-        prefixIcon: const SearchIconWidget(),
-        fillColor: AppColors.color.kWhite001,
-        hintText: "ابحث عن.......",
-        hintStyle: AppStyles.light(
-          fontColor: AppColors.color.kGrey002,
-          fontWeight: AppFontWeights.regularWeight,
-        ),
-        keyboardType: TextInputType.text,
-        onSubmitted: onSubmitted,
-      ),
-    );
+      keyboardType: TextInputType.text,
+      onSubmitted: onSubmitted,
+    ).withShadow(shadow: AppShadowBoxes.searchBar, height: 40.h,);
   }
 }
 

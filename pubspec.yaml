@@ -25,6 +25,7 @@ dependencies:
   flutter_otp_text_field: ^1.5.1+1
   persistent_bottom_nav_bar: ^6.2.1
   dots_indicator: ^4.0.1
+  percent_indicator: ^4.2.5
 
   # Routing
   go_router: ^14.8.1
@@ -97,6 +98,7 @@ flutter:
     - assets/icons/Products/
     - assets/icons/Items_Details/
     - assets/icons/Cart/
+    - assets/icons/Review_And_Rating/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/

@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/core/constants/app_shadow_boxes.dart';
+import 'package:e_commerce_app/core/extensions/widget_shadow_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -50,23 +52,15 @@ class NoSearchResultsFoundWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container(
+    return Text("لاتوجد نتائج بحث", style: AppStyles.light(
+      fontColor: AppColors.color.kGrey002,
+      fontWeight: AppFontWeights.regularWeight,
+    ),).withShadow(
+      shadow: AppShadowBoxes.noSearchResults,
+      backgroundColor: AppColors.color.kWhite001,
+      borderRadius: AppRadiuses.circular.xXXSmall,
       height: 80.h, width: double.infinity,
       padding: AppPadding.symmetric.xXXSmall,
-      decoration: BoxDecoration(
-        color: AppColors.color.kWhite001,
-        borderRadius: AppRadiuses.circular.xXXSmall,
-        boxShadow:
-        const [
-          BoxShadow(
-          color: Color(0x0F000000),
-          blurRadius: 12,),
-        ]
-      ),
-      child: Text("لاتوجد نتائج بحث", style: AppStyles.light(
-        fontColor: AppColors.color.kGrey002,
-        fontWeight: AppFontWeights.regularWeight,
-      ),),
     );
   }
 }

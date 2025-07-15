@@ -18,7 +18,7 @@ class FruitItemRatingWidget extends StatelessWidget
     return Row(
       children:
       [
-        SvgPicture.asset(AppAssets.icons.star),
+        SvgPicture.asset(AppAssets.icons.itemDetailsStar),
         Sizes.s9.horizontalSpace,
         Text("4.5", style: AppStyles.light(fontColor: AppColors.color.kBlack002),),
         Sizes.s9.horizontalSpace,
