@@ -24,7 +24,6 @@ class MainScaffold extends StatelessWidget
       title: 'الصفحة الرئيسية',
       activeIcon: SvgPicture.asset('assets/icons/NavBar/Home_active.svg'),
       inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Cart_not_active.svg'),
-      
     ),
     NavBarItemModel(
       title: 'المنتجات',

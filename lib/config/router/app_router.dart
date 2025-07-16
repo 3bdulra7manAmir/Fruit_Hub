@@ -86,106 +86,98 @@ abstract class AppRouter
 
       /// [ Stateful Shell ]
       StatefulShellRoute.indexedStack(
-        builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
-        branches:
-        [
-          /// Branch 0: Home + subroutes [ MostSold,, Notifications,, Search,, itemsDetails ]
-          StatefulShellBranch(
-            routes:
-            [
-              GoRoute(
-                path: AppRoutes.home,
-                name: AppRoutes.home,
-                builder: (_, __) => const Home(),
-                routes:
-                [
-                  GoRoute(
-                    path: AppRoutes.mostSold,
-                    name: AppRoutes.mostSold,
-                    builder: (_, __) => const MorePopular(),
-                  ),
-                  GoRoute(
-                    path: AppRoutes.notifications,
-                    name: AppRoutes.notifications,
-                    builder: (_, __) => const Notifications(),
-                  ),
-                  GoRoute(
-                    path: AppRoutes.search,
-                    name: AppRoutes.search,
-                    builder: (_, state)
-                    {
-                      final fruitName = state.extra as String? ?? '';
-                      return Search(fruitName: fruitName);
-                    },
-                  ),
-                  GoRoute(
-                    path: AppRoutes.itemsDetails,
-                    name: AppRoutes.itemsDetails,
-                    builder: (_, __) => const ItemDetails(),
-                  ),
-                ],
-              ),
-            ],
-          ),
+  builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
+  branches: [
+    /// Branch 0: Home + subroutes
+    StatefulShellBranch(
+      routes: [
+        GoRoute(
+          path: AppRoutes.home,
+          name: AppRoutes.home,
+          builder: (_, __) => const Home(),
+          routes: [
+            GoRoute(
+              path: AppRoutes.mostSold,
+              name: AppRoutes.mostSold,
+              builder: (_, __) => const MorePopular(),
+            ),
+            GoRoute(
+              path: AppRoutes.notificationsForHome,
+              name: AppRoutes.notificationsForHome,
+              builder: (_, __) => const Notifications(),
+            ),
+            GoRoute(
+              path: AppRoutes.searchForHome,
+              name: AppRoutes.searchForHome,
+              builder: (_, state) {
+                final fruitName = state.extra as String? ?? '';
+                return Search(fruitName: fruitName);
+              },
+            ),
+            GoRoute(
+              path: AppRoutes.itemsDetailsFromHome,
+              name: AppRoutes.itemsDetailsFromHome,
+              builder: (_, __) => const ItemDetails(),
+            ),
+          ],
+        ),
+      ],
+    ),
 
-          /// Branch 1: Products + subroutes [ Notifications,, Search,, Filtered Products,, itemsDetails ]
-          StatefulShellBranch(
-            routes:
-            [
-              GoRoute(
-                path: AppRoutes.products,
-                name: AppRoutes.products,
-                builder: (_, __) => const Products(),
-                routes:
-                [
-                  GoRoute(
-                    path: AppRoutes.notifications,
-                    name: AppRoutes.notifications,
-                    builder: (_, __) => const Notifications(),
-                  ),
-                  GoRoute(
-                    path: AppRoutes.search,
-                    name: AppRoutes.search,
-                    builder: (_, state)
-                    {
-                      final fruitName = state.extra as String? ?? '';
-                      return Search(fruitName: fruitName);
-                    },
-                  ),
-                  GoRoute(
-                    path: AppRoutes.filteredProducts,
-                    name: AppRoutes.filteredProducts,
-                    builder: (_, __) => const FilteredProducts(),
-                  ),
-                  GoRoute(
-                    path: AppRoutes.itemsDetails,
-                    name: AppRoutes.itemsDetails,
-                    builder: (_, __) => const ItemDetails(),
-                  ),
-                ]
-              ),
-            ],
-          ),
+    /// Branch 1: Products + subroutes
+    StatefulShellBranch(
+      routes: [
+        GoRoute(
+          path: AppRoutes.products,
+          name: AppRoutes.products,
+          builder: (_, __) => const Products(),
+          routes: [
+            GoRoute(
+              path: AppRoutes.notificationsForProducts,
+              name: AppRoutes.notificationsForProducts,
+              builder: (_, __) => const Notifications(),
+            ),
+            GoRoute(
+              path: AppRoutes.searchForProducts,
+              name: AppRoutes.searchForProducts,
+              builder: (_, state) {
+                final fruitName = state.extra as String? ?? '';
+                return Search(fruitName: fruitName);
+              },
+            ),
+            GoRoute(
+              path: AppRoutes.filteredProducts,
+              name: AppRoutes.filteredProducts,
+              builder: (_, __) => const FilteredProducts(),
+            ),
+            GoRoute(
+              path: AppRoutes.itemsDetailsFromProducts,
+              name: AppRoutes.itemsDetailsFromProducts,
+              builder: (_, __) => const ItemDetails(),
+            ),
+          ],
+        ),
+      ],
+    ),
 
-          /// Branch 2: Cart + subroutes [ itemsDetails ]
-          StatefulShellBranch(
-            routes:
-            [
-              GoRoute(
-                path: AppRoutes.cart,
-                name: AppRoutes.cart,
-                builder: (_, __) => const Cart(),
-                routes:
-                [
-                  GoRoute(
-                    path: AppRoutes.itemsDetails,
-                    name: AppRoutes.itemsDetails,
-                    builder: (_, __) => const ItemDetails(),
-                  ),
-                ]
-              ),
-            ],
-          ),
+    /// Branch 2: Cart + subroutes
+    StatefulShellBranch(
+      routes: [
+        GoRoute(
+          path: AppRoutes.cart,
+          name: AppRoutes.cart,
+          builder: (_, __) => const Cart(),
+          routes: [
+            GoRoute(
+              path: AppRoutes.itemsDetailsFromCart,
+              name: AppRoutes.itemsDetailsFromCart,
+              builder: (_, __) => const ItemDetails(),
+            ),
+          ],
+        ),
+      ],
+    )
+
 
           // /// Branch 3: Profile + subroutes [  ]
           // StatefulShellBranch(
