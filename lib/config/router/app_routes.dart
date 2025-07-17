@@ -51,9 +51,12 @@ abstract class AppRoutes
   static const checkoutShip = '/checkout';
 
   /// [ CheckOut Address ]
-  static const checkOutAddress = '/checkoutAddress';
+  static const checkoutAddress = '/checkoutAddress';
 
   /// [ CheckOut Address ]
-  static const payment = '/payment';
+  static const checkoutPayment = '/checkoutPayment';
+
+  /// [ CheckOut Address ]
+  static const checkoutReview = '/checkoutReview';
 
 }
