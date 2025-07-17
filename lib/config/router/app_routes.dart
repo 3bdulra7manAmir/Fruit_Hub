@@ -47,7 +47,13 @@ abstract class AppRoutes
   /// [ Review and Rating ]
   static const rate = '/rate';
 
-  /// [ checkout ]
-  static const checkout = '/checkout';
+  /// [ checkoutShip ]
+  static const checkoutShip = '/checkout';
+
+  /// [ CheckOut Address ]
+  static const checkOutAddress = '/checkoutAddress';
+
+  /// [ CheckOut Address ]
+  static const payment = '/payment';
 
 }

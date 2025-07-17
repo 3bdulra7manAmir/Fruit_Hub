@@ -18,6 +18,8 @@ import '../../features/06_products/presentation/screens/products_view.dart';
 import '../../features/07_products_details/presentation/screens/cart_view.dart';
 import '../../features/07_products_details/presentation/screens/item_details_view.dart';
 import '../../features/08_review_and_rating/presentation/screens/review_rating_view.dart';
+import '../../features/09_checkout/presentation/screens/checkout_address_view.dart';
+import '../../features/09_checkout/presentation/screens/checkout_payment.dart';
 import '../../features/09_checkout/presentation/screens/checkout_ship_view.dart';
 import 'app_routes.dart';
 import 'route_observer.dart';
@@ -32,7 +34,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.checkout,
+    initialLocation: AppRoutes.payment,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -150,35 +152,47 @@ abstract class AppRouter
       ),
 
       ///[ CheckOut Feature]
+      // Checkout Ship
       GoRoute(
-        path: AppRoutes.checkout,
-        name: AppRoutes.checkout,
+        path: AppRoutes.checkoutShip,
+        name: AppRoutes.checkoutShip,
         builder: (_, _) => const CheckoutShip(),
       ),
-
-
-      StatefulShellRoute.indexedStack(
-        builder: (_, __, navigationShell) => navigationShell,
-        branches:
-        [
-          /// Home
-          StatefulShellBranch(
-            initialLocation: AppRoutes.home,
-            routes: <RouteBase>
-            [
-              GoRoute(
-                path: AppRoutes.home,
-                name: AppRoutes.home,
-                builder: (_, _) => const Home(),
-                routes:
-                [
-                  
-                ]
-              ),
-            ],
-          ),
-        ],
+      // Checkout Address
+      GoRoute(
+        path: AppRoutes.checkOutAddress,
+        name: AppRoutes.checkOutAddress,
+        builder: (_, _) => const CheckoutAddress(),
       ),
+      // Checkout Payment
+      GoRoute(
+        path: AppRoutes.payment,
+        name: AppRoutes.payment,
+        builder: (_, _) => const CheckoutPayment(),
+      ),
+
+      // StatefulShellRoute.indexedStack(
+      //   builder: (_, __, navigationShell) => navigationShell,
+      //   branches:
+      //   [
+      //     /// Home
+      //     StatefulShellBranch(
+      //       initialLocation: AppRoutes.home,
+      //       routes: <RouteBase>
+      //       [
+      //         GoRoute(
+      //           path: AppRoutes.home,
+      //           name: AppRoutes.home,
+      //           builder: (_, _) => const Home(),
+      //           routes:
+      //           [
+                  
+      //           ]
+      //         ),
+      //       ],
+      //     ),
+      //   ],
+      // ),
     ]
   );
 }

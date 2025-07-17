@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'checkbox_controller.g.dart';
 
 @riverpod
-class RegisterCheckbox extends _$RegisterCheckbox
+class KeepCardCheckbox extends _$KeepCardCheckbox
 {
   @override
   bool build()

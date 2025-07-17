@@ -1,27 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'obscure_password_controller.dart';
+part of 'checkbox_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$loginObscurePasswordHash() =>
-    r'efcc7f02190e7f8d19cff3a06f60ed41a8c71f05';
+String _$keepCardCheckboxHash() => r'966ace04385551484813b500c69a45f120ab34b3';
 
-/// See also [LoginObscurePassword].
-@ProviderFor(LoginObscurePassword)
-final loginObscurePasswordProvider =
-    AutoDisposeNotifierProvider<LoginObscurePassword, bool>.internal(
-  LoginObscurePassword.new,
-  name: r'loginObscurePasswordProvider',
+/// See also [KeepCardCheckbox].
+@ProviderFor(KeepCardCheckbox)
+final keepCardCheckboxProvider =
+    AutoDisposeNotifierProvider<KeepCardCheckbox, bool>.internal(
+  KeepCardCheckbox.new,
+  name: r'keepCardCheckboxProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$loginObscurePasswordHash,
+      : _$keepCardCheckboxHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$LoginObscurePassword = AutoDisposeNotifier<bool>;
+typedef _$KeepCardCheckbox = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

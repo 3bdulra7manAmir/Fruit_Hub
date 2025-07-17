@@ -99,6 +99,7 @@ flutter:
     - assets/icons/Items_Details/
     - assets/icons/Cart/
     - assets/icons/Review_And_Rating/
+    - assets/icons/Checkout_Payment/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/

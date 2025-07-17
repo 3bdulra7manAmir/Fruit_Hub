@@ -4,12 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../widget/checkout_ship_view/payment_option_cards_list.dart';
+import '../widget/checkout_ship/payment_option_cards_list.dart';
 import '../widget/nav_buttons.dart';
 import '../widget/payment_steps_list.dart';
 
 final List<String> titles = ['الشحن', 'العنوان', 'الدفع', 'المراجعة'];
-
+int currentStep = 0;
 
 class CheckoutShip extends StatefulWidget
 {
@@ -21,13 +21,13 @@ class CheckoutShip extends StatefulWidget
 
 class _CheckoutShipState extends State<CheckoutShip>
 {
-  int currentStep = 0;
+  
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
       appBar: CustomAppBar(barTitle: titles[currentStep]),
-      body: CustomColumn(
+      body: CustomSingleChild(
         children:
         [
           Sizes.s16.verticalSpace,
@@ -36,12 +36,14 @@ class _CheckoutShipState extends State<CheckoutShip>
           ),
           Sizes.s32.verticalSpace,
           PaymentOptionCardsList(),
-          CheckOutNavButtons(
+          Sizes.s16.verticalSpace,
+          CheckOutNavButtonsWidget(
             currentStep: currentStep,
             totalSteps: titles.length,
             onBack: () => setState(() => currentStep--),
             onNext: () => setState(() => currentStep++),
           ),
+          Sizes.s16.verticalSpace,
         ],
       ),
     );

@@ -4,24 +4,25 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../widget/checkout_address/address_textfield.dart';
-import '../widget/checkout_address/appartment_textfield.dart';
-import '../widget/checkout_address/city_textfield.dart';
-import '../widget/checkout_address/email_textfield.dart';
-import '../widget/checkout_address/fullname_textfield.dart';
-import '../widget/checkout_address/save_address.dart';
+import '../widget/checkout_payment/card_auth_info.dart';
+import '../widget/checkout_payment/card_number_textfield.dart';
+import '../widget/checkout_payment/card_owner_textfield.dart';
+import '../widget/checkout_payment/choose_suitable_payment.dart';
+import '../widget/checkout_payment/default_card.dart';
+import '../widget/checkout_payment/payment_methods_list.dart';
+import '../widget/checkout_payment/please_choose_payment.dart';
 import '../widget/nav_buttons.dart';
 import '../widget/payment_steps_list.dart';
 import 'checkout_ship_view.dart';
 
-class CheckoutAddress extends StatefulWidget
+class CheckoutPayment extends StatefulWidget
 {
-  const CheckoutAddress({super.key});
+  const CheckoutPayment({super.key});
 
   @override
-  State<CheckoutAddress> createState() => _CheckoutAddressState();
+  State<CheckoutPayment> createState() => _CheckoutPaymentState();
 }
-class _CheckoutAddressState extends State<CheckoutAddress>
+class _CheckoutPaymentState extends State<CheckoutPayment>
 {
   @override
   Widget build(BuildContext context)
@@ -36,18 +37,20 @@ class _CheckoutAddressState extends State<CheckoutAddress>
             child: PaymentStepsListWidget(currentStep: currentStep),
           ),
           Sizes.s24.verticalSpace,
-          CheckOutFullNameWidget(),
-          Sizes.s8.verticalSpace,
-          CheckOutEmailWidget(),
-          Sizes.s8.verticalSpace,
-          CheckOutAddressWidget(),
-          Sizes.s8.verticalSpace,
-          CheckOutCityWidget(),
-          Sizes.s8.verticalSpace,
-          AppartmentFieldWidget(),
+          ChooseSuitablePaymentTextWidget(),
+          Sizes.s13.verticalSpace,
+          PleaseChooseSuitablePaymentTextWidget(),
+          Sizes.s13.verticalSpace,
+          SizedBox(height: 43.h, child: PaymentMethodsListWidget()),
           Sizes.s16.verticalSpace,
-          SaveAddressWidget(),
-          Sizes.s64.verticalSpace,
+          CardOwnerNameWidget(),
+          Sizes.s8.verticalSpace,
+          CardNumberWidget(),
+          Sizes.s8.verticalSpace,
+          CardAuthInfoWidget(),
+          Sizes.s18.verticalSpace,
+          MakeCardAsDeafultWidget(),
+          Sizes.s60.verticalSpace,
           CheckOutNavButtonsWidget(
             currentStep: currentStep,
             totalSteps: titles.length,
