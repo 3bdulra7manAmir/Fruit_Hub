@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/config/theme/color_manager/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -21,25 +22,28 @@ class MainScaffold extends StatelessWidget
   final List<NavBarItemModel> items =
   [
     NavBarItemModel(
-      title: 'الصفحة الرئيسية',
+      activeColor: AppColors.color.kGreen001,
+      title: 'الرئيسية',
       activeIcon: SvgPicture.asset('assets/icons/NavBar/Home_active.svg'),
-      inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Cart_not_active.svg'),
+      inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Home_not_active.svg'),
     ),
     NavBarItemModel(
+      activeColor: AppColors.color.kGreen001,
       title: 'المنتجات',
       activeIcon: SvgPicture.asset('assets/icons/NavBar/Products_active.svg'),
       inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Products_not_active.svg'),
     ),
     NavBarItemModel(
-      title: 'السلة',
+      activeColor: AppColors.color.kGreen001,
+      title: 'سلة التسوق',
       activeIcon: SvgPicture.asset('assets/icons/NavBar/Cart_active.svg'),
       inactiveIcon: SvgPicture.asset('assets/icons/NavBar/Cart_not_active.svg'),
     ),
-    NavBarItemModel(
-      title: 'حسابي',
-      activeIcon: SvgPicture.asset('assets/icons/NavBar/User_active.svg'),
-      inactiveIcon: SvgPicture.asset('assets/icons/NavBar/User_not_active.svg'),
-    ),
+    // NavBarItemModel(
+    //   title: 'حسابي',
+    //   activeIcon: SvgPicture.asset('assets/icons/NavBar/User_active.svg'),
+    //   inactiveIcon: SvgPicture.asset('assets/icons/NavBar/User_not_active.svg'),
+    // ),
   ];
 
   PreferredSizeWidget? _buildAppBar(int index)
@@ -52,8 +56,8 @@ class MainScaffold extends StatelessWidget
         return CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,);
       case 2:
         return CustomAppBar(barTitle: "السلة",);
-      case 3:
-        return AppBar(title: const Text("Profile AppBar"));
+      // case 3:
+      //   return AppBar(title: const Text("Profile AppBar"));
       default:
         return null;
     }

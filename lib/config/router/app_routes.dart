@@ -2,38 +2,49 @@ abstract class AppRoutes
 {
   AppRoutes._();
 
-  /// ========== Onboarding ==========
+  /// [ OnBoarding ]
+  // [Splash]
   static const splash = '/splash';
+  // [Dots Indicator]
   static const dotIndicator = '/dots_indicator';
 
-  /// ========== Auth ==========
+  /// [ Auth ]
+  // [Login]
   static const login = '/login';
+  // [register]
   static const register = '/register';
+  // [Forget Password Phone]
   static const forgetPasswordPhone = '/forgetPasswordPhone';
+  // [Password Recovery Email]
   static const passwordRecoveryEmail = '/passwordRecoveryEmail';
+  // [New Password]
   static const newPassword = '/newPassword';
 
-  /// ========== Review & Rating ==========
+  /// [ Home ]
+  // [Home]
+  static const home = '/home';
+  // [Most Sold]
+  static const mostSold = '/mostSold';
+
+  /// [ Search ]
+  static const search = '/search';
+
+  /// [ Notifications ]
+  static const notifications = '/notifications';
+
+  /// [ Products ]
+  static const products = '/products';
+
+  /// [ Filtered_Products ]
+  static const filteredProducts = '/filteredProducts';
+
+  /// [ Items_Details ]
+  static const itemsDetails = '/itemsDetails';
+
+  /// [ cart ]
+  static const cart = '/cart';
+
+  /// [ Review and Rating ]
   static const rate = '/rate';
 
-  /// ========== Home Branch ==========
-  static const home = '/home';
-  static const mostSold = 'mostSold'; // relative route
-  static const notificationsForHome = 'notificationsForHome';
-  static const searchForHome = 'searchForHome';
-  static const itemsDetailsFromHome = 'itemsDetailsFromHome';
-
-  /// ========== Products Branch ==========
-  static const products = '/products';
-  static const filteredProducts = 'filteredProducts'; // relative
-  static const notificationsForProducts = 'notificationsForProducts';
-  static const searchForProducts = 'searchForProducts';
-  static const itemsDetailsFromProducts = 'itemsDetailsFromProducts';
-
-  /// ========== Cart Branch ==========
-  static const cart = '/cart';
-  static const itemsDetailsFromCart = 'itemsDetailsFromCart';
-
-  // Future branches:
-  // static const profile = '/profile';
 }

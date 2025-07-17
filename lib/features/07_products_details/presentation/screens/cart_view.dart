@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/cart/cart_items_list.dart';
 import '../widget/cart/cart_pay_button.dart';
@@ -15,9 +14,7 @@ class Cart extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Scaffold(
-      appBar: const CustomAppBar(barTitle: "السلة",),
-      body: CustomSingleChild(
+    return CustomSingleChild(
         isMargin: false,
         children:
         [
@@ -29,7 +26,6 @@ class Cart extends StatelessWidget
           const CartPayButtonWidget(),
           Sizes.s16.verticalSpace,
         ],
-      ),
     );
   }
 }

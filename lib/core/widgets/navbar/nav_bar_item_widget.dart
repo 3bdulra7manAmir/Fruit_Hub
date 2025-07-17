@@ -1,7 +1,11 @@
+import 'package:e_commerce_app/config/theme/color_manager/colors.dart';
+import 'package:e_commerce_app/core/constants/app_borders.dart';
+import 'package:e_commerce_app/core/constants/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class NavBarItemWidget extends StatelessWidget {
+class NavBarItemWidget extends StatelessWidget
+{
   const NavBarItemWidget({
     super.key,
     required this.index,
@@ -40,37 +44,37 @@ class NavBarItemWidget extends StatelessWidget {
   final VoidCallback onTap;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return TweenAnimationBuilder<double>(
       tween: Tween(begin: 0, end: isSelected ? 1 : 0),
       curve: curve,
       duration: duration,
-      builder: (_, value, __) {
+      builder: (_, value, __)
+      {
         return Material(
           color: Colors.transparent,
           shape: border,
           child: InkWell(
             onTap: isSelected ? null : onTap,
-            borderRadius: BorderRadius.circular(20.r),
+            borderRadius: AppRadiuses.circular.xXMedium,
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             child: Stack(
               clipBehavior: Clip.none,
               alignment: Alignment.centerLeft,
-              children: [
+              children:
+              [
                 if (isSelected && title != null)
                   Container(
                     height: 40.h,
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(left: 54.r * value, right: 12.r),
+                    padding: EdgeInsets.only(left: 40.r * value, right: 12.r),
                     decoration: BoxDecoration(
                       color: activeBackgroundColor,
-                      borderRadius: BorderRadius.circular(20.r),
+                      borderRadius: AppRadiuses.circular.xMedium,
                     ),
-                    child: Text(
-                      title!,
-                      style: textStyle.copyWith(color: activeTitleColor),
-                    ),
+                    child: Text(title!, style: AppStyles.light(fontColor: AppColors.color.kGreen001),),
                   ),
                 Container(
                   height: 60.h,
@@ -79,9 +83,7 @@ class NavBarItemWidget extends StatelessWidget {
                     color: Color.lerp(Colors.transparent, activeIconColor, value),
                     shape: BoxShape.circle,
                   ),
-                  child: isSelected
-                      ? activeIcon
-                      : (inactiveIcon ?? activeIcon),
+                  child: isSelected ? activeIcon : (inactiveIcon ?? activeIcon),
                 ),
               ],
             ),

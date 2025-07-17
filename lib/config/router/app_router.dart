@@ -27,171 +27,163 @@ import 'navigator.dart';
 abstract class AppRouter
 {
   AppRouter._();
-
   static final navigatorState = GlobalKey<NavigatorState>(debugLabel: 'root');
   static String? currentRoute;
-
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
-    observers: [NavigatorObserverWithTracking()],
-    initialLocation: AppRoutes.login,
-    errorBuilder: (_, __) => const Scaffold(body: Center(child: CustomCircularIndicator())),
+    observers: [NavigatorObserverWithTracking(),],
+    initialLocation: AppRoutes.home,
+    errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
-      /// [ Onboarding ]
+      /// [ OnBoarding Feature ]
+      // [Splash]
       GoRoute(
         path: AppRoutes.splash,
         name: AppRoutes.splash,
-        builder: (_, __) => const Splash(),
+        builder: (_, _) => const Splash(),
       ),
+      // [Dots Indicator]
       GoRoute(
         path: AppRoutes.dotIndicator,
         name: AppRoutes.dotIndicator,
-        builder: (_, __) => const DotIndicator(),
+        builder: (_, _) => const DotIndicator(),
       ),
 
-      /// [ Auth ]
+      /// [ Auth Feature ]
+      // [Login]
       GoRoute(
         path: AppRoutes.login,
         name: AppRoutes.login,
-        builder: (_, __) => Login(),
+        builder: (_, _) => Login(),
       ),
+      // [Register]
       GoRoute(
         path: AppRoutes.register,
         name: AppRoutes.register,
-        builder: (_, __) => Register(),
+        builder: (_, _) => Register(),
       ),
+      // [Forget Password Phone]
       GoRoute(
         path: AppRoutes.forgetPasswordPhone,
         name: AppRoutes.forgetPasswordPhone,
-        builder: (_, __) => ForgetPasswordPhone(),
+        builder: (_, _) => ForgetPasswordPhone(),
       ),
+      // [Password Recovery Email]
       GoRoute(
         path: AppRoutes.passwordRecoveryEmail,
         name: AppRoutes.passwordRecoveryEmail,
-        builder: (_, __) => PasswordRecoveryEmail(),
+        builder: (_, _) => PasswordRecoveryEmail(),
       ),
+      // [New Password]
       GoRoute(
         path: AppRoutes.newPassword,
         name: AppRoutes.newPassword,
-        builder: (_, __) => NewPassword(),
+        builder: (_, _) => NewPassword(),
+      ),
+
+      //[Most Sold]
+      GoRoute(
+        path: AppRoutes.mostSold,
+        name: AppRoutes.mostSold,
+        builder: (_, _) => const MorePopular(),
+      ),
+
+      ///[ Search Feature ]
+      GoRoute(
+        path: AppRoutes.search,
+        name: AppRoutes.search,
+        builder: (_, state)
+        {
+          final fruitName = state.extra as String? ?? '';
+          return Search(fruitName: fruitName);
+        } ,
+      ),
+
+      ///[ Notifications Feature ]
+      GoRoute(
+        path: AppRoutes.notifications,
+        name: AppRoutes.notifications,
+        builder: (_, _) => const Notifications(),
+      ),
+
+      ///[ Filtered_Products Feature ]
+      GoRoute(
+        path: AppRoutes.filteredProducts,
+        name: AppRoutes.filteredProducts,
+        builder: (_, _) => const FilteredProducts(),
+      ),
+
+      ///[ Item_Details Feature ]
+      GoRoute(
+        path: AppRoutes.itemsDetails,
+        name: AppRoutes.itemsDetails,
+        builder: (_, _) => const ItemDetails(),
       ),
       
+      ///[ Cart Feature]
       GoRoute(
         path: AppRoutes.rate,
         name: AppRoutes.rate,
-        builder: (_, __) => const ReviewAndRating(),
+        builder: (_, _) => const ReviewAndRating(),
       ),
 
       /// [ Stateful Shell ]
       StatefulShellRoute.indexedStack(
-  builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
-  branches: [
-    /// Branch 0: Home + subroutes
-    StatefulShellBranch(
-      routes: [
-        GoRoute(
-          path: AppRoutes.home,
-          name: AppRoutes.home,
-          builder: (_, __) => const Home(),
-          routes: [
+      builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
+      branches:
+      [
+        /// Brach 0: Home + subroutes
+        StatefulShellBranch(
+          routes:
+          [
             GoRoute(
-              path: AppRoutes.mostSold,
-              name: AppRoutes.mostSold,
-              builder: (_, __) => const MorePopular(),
-            ),
-            GoRoute(
-              path: AppRoutes.notificationsForHome,
-              name: AppRoutes.notificationsForHome,
-              builder: (_, __) => const Notifications(),
-            ),
-            GoRoute(
-              path: AppRoutes.searchForHome,
-              name: AppRoutes.searchForHome,
-              builder: (_, state) {
-                final fruitName = state.extra as String? ?? '';
-                return Search(fruitName: fruitName);
-              },
-            ),
-            GoRoute(
-              path: AppRoutes.itemsDetailsFromHome,
-              name: AppRoutes.itemsDetailsFromHome,
-              builder: (_, __) => const ItemDetails(),
+              path: AppRoutes.home,
+              name: AppRoutes.home,
+              builder: (_, __) => const Home(),
             ),
           ],
         ),
-      ],
-    ),
 
-    /// Branch 1: Products + subroutes
-    StatefulShellBranch(
-      routes: [
-        GoRoute(
-          path: AppRoutes.products,
-          name: AppRoutes.products,
-          builder: (_, __) => const Products(),
-          routes: [
+        /// Branch 1: Products + subroutes
+        StatefulShellBranch(
+          routes:
+          [
             GoRoute(
-              path: AppRoutes.notificationsForProducts,
-              name: AppRoutes.notificationsForProducts,
-              builder: (_, __) => const Notifications(),
-            ),
-            GoRoute(
-              path: AppRoutes.searchForProducts,
-              name: AppRoutes.searchForProducts,
-              builder: (_, state) {
-                final fruitName = state.extra as String? ?? '';
-                return Search(fruitName: fruitName);
-              },
-            ),
-            GoRoute(
-              path: AppRoutes.filteredProducts,
-              name: AppRoutes.filteredProducts,
-              builder: (_, __) => const FilteredProducts(),
-            ),
-            GoRoute(
-              path: AppRoutes.itemsDetailsFromProducts,
-              name: AppRoutes.itemsDetailsFromProducts,
-              builder: (_, __) => const ItemDetails(),
+              path: AppRoutes.products,
+              name: AppRoutes.products,
+              builder: (_, __) => const Products(),
+              routes: [],
             ),
           ],
         ),
-      ],
-    ),
 
-    /// Branch 2: Cart + subroutes
-    StatefulShellBranch(
-      routes: [
-        GoRoute(
-          path: AppRoutes.cart,
-          name: AppRoutes.cart,
-          builder: (_, __) => const Cart(),
-          routes: [
+        /// Branch 2: Cart + subroutes
+        StatefulShellBranch(
+          routes:
+          [
             GoRoute(
-              path: AppRoutes.itemsDetailsFromCart,
-              name: AppRoutes.itemsDetailsFromCart,
-              builder: (_, __) => const ItemDetails(),
+              path: AppRoutes.cart,
+              name: AppRoutes.cart,
+              builder: (_, __) => const Cart(),
+              routes: [],
             ),
           ],
-        ),
+        )
+        /// Branch 3: Profile + subroutes [  ]
+        // StatefulShellBranch(
+        //   routes:
+        //   [
+        //     GoRoute(
+        //       path: AppRoutes.profile,
+        //       name: AppRoutes.profile,
+        //       builder: (_, __) => const Profile(),
+        //       routes: []
+        //     ),
+        //   ],
+        // ),
       ],
-    )
-
-
-          // /// Branch 3: Profile + subroutes [  ]
-          // StatefulShellBranch(
-          //   routes:
-          //   [
-          //     GoRoute(
-          //       path: AppRoutes.profile,
-          //       name: AppRoutes.profile,
-          //       builder: (_, __) => const Profile(),
-          //       routes: []
-          //     ),
-          //   ],
-          // ),
-        ],
       ),
     ],
   );
