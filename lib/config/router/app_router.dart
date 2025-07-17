@@ -178,28 +178,25 @@ abstract class AppRouter
         builder: (_, _) => const CheckoutReview(),
       ),
 
-      StatefulShellRoute.indexedStack(
-        builder: (_, __, navigationShell) => navigationShell,
-        branches:
-        [
-          /// Home
-          StatefulShellBranch(
-            initialLocation: AppRoutes.home,
-            routes: <RouteBase>
-            [
-              GoRoute(
-                path: AppRoutes.home,
-                name: AppRoutes.home,
-                builder: (_, _) => const Home(),
-                routes:
-                [
-                  
-                ]
-              ),
-            ],
-          ),
-        ],
-      ),
+      // StatefulShellRoute.indexedStack(
+      //   builder: (_, __, navigationShell) => navigationShell,
+      //   branches:
+      //   [
+      //     /// Home
+      //     StatefulShellBranch(
+      //       initialLocation: AppRoutes.home,
+      //       routes: <RouteBase>
+      //       [
+      //         GoRoute(
+      //           path: AppRoutes.home,
+      //           name: AppRoutes.home,
+      //           builder: (_, _) => const Home(),
+      //           routes: []
+      //         ),
+      //       ],
+      //     ),
+      //   ],
+      // ),
     ]
   );
 }
