@@ -22,6 +22,8 @@ import '../../features/09_checkout/presentation/screens/checkout_address_view.da
 import '../../features/09_checkout/presentation/screens/checkout_payment.dart';
 import '../../features/09_checkout/presentation/screens/checkout_review_view.dart';
 import '../../features/09_checkout/presentation/screens/checkout_ship_view.dart';
+import '../../features/09_checkout/presentation/screens/payment_success.dart';
+import '../../features/09_checkout/presentation/screens/track_order.dart';
 import 'app_routes.dart';
 import 'route_observer.dart';
 
@@ -35,7 +37,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.checkoutReview,
+    initialLocation: AppRoutes.trackOrder,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -176,6 +178,18 @@ abstract class AppRouter
         path: AppRoutes.checkoutReview,
         name: AppRoutes.checkoutReview,
         builder: (_, _) => const CheckoutReview(),
+      ),
+
+      GoRoute(
+        path: AppRoutes.paymentSuccess,
+        name: AppRoutes.paymentSuccess,
+        builder: (_, _) => const PaymentSuccess(),
+      ),
+
+      GoRoute(
+        path: AppRoutes.trackOrder,
+        name: AppRoutes.trackOrder,
+        builder: (_, _) => const TrackOrder(),
       ),
 
       // StatefulShellRoute.indexedStack(

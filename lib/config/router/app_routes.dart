@@ -59,4 +59,10 @@ abstract class AppRoutes
   /// [ CheckOut Address ]
   static const checkoutReview = '/checkoutReview';
 
+  /// [ Payment Success ]
+  static const paymentSuccess = '/paymentSuccess';
+
+  /// [ Track Order ]
+  static const trackOrder = '/trackOrder';
+
 }

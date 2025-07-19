@@ -77,6 +77,10 @@ class _Icons
   ///[Checkout_Review]
   final String editGrey = "assets/icons/Checkout_Review/Edit_Grey.svg";
   final String locationGrey = "assets/icons/Checkout_Review/Location_Grey.svg";
+
+  ///[Checkout_Order]
+  final String closedOrderBox = "assets/icons/Track_Order/Order_Box.svg";
+  final String openedOrderBox = "assets/icons/Track_Order/Opened_Order_Box.svg";
 }
 
 ///-----------------------------------------------------------------//

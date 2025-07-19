@@ -17,8 +17,8 @@ class All
 {
   All._();
 
-  /// 2 all sides
-  final EdgeInsets smallAll = const EdgeInsets.all(2);
+  /// 17 all sides
+  final EdgeInsets trackClosedOrder = const EdgeInsets.all(17);
 }
 
 
@@ -59,6 +59,11 @@ class Directional
 
   /// 25px from start
   EdgeInsetsDirectional get offerText => EdgeInsetsDirectional.only(start: 25.w,);
+
+
+  EdgeInsetsDirectional get orderCard => EdgeInsetsDirectional.only(
+    top: 19.h, bottom: 19.h, end: 32.w
+  );
 
 }
 

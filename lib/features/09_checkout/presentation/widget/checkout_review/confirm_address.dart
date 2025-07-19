@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -22,38 +23,68 @@ class ConfirmAddressWidget extends StatelessWidget
       child: Column(
         children:
         [
-          Row(
-            children:
-            [
-              Text("عنوان التوصيل", style: AppStyles.extraLight(
-                fontWeight: AppFontWeights.boldWeight, 
-                fontColor: AppColors.color.kBlack001),
-              ),
-              Spacer(),
-              Row(
-                children:
-                [
-                  SvgPicture.asset(AppAssets.icons.editGrey),
-                  Sizes.s4.horizontalSpace,
-                  Text("تعديل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
-                ],
-              ),
-            ],
-          ),
+          DeliveryAddressEditWidget(),
           Sizes.s8.verticalSpace,
-          Row(
-            children:
-            [
-              SvgPicture.asset(AppAssets.icons.locationGrey),
-              Sizes.s8.horizontalSpace,
-              Text("شارع النيل، مبنى رقم ١٢٣", style: AppStyles.bold(
-                fontWeight: AppFontWeights.regularWeight, 
-                fontColor: AppColors.color.kGrey001),
-              ),
-            ],
-          )
+          DeliveryAddressWidget(),
         ],
       )
+    );
+  }
+}
+
+
+class DeliveryAddressEditWidget extends StatelessWidget
+{
+  const DeliveryAddressEditWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Row(
+      children:
+      [
+        Text("عنوان التوصيل", style: AppStyles.extraLight(
+          fontWeight: AppFontWeights.boldWeight, 
+          fontColor: AppColors.color.kBlack001),
+        ),
+        Spacer(),
+        GestureDetector(
+          onTap: ()
+          {
+            log("Edit has been Pressed");
+          },
+          child: Row(
+            children:
+            [
+              SvgPicture.asset(AppAssets.icons.editGrey),
+              Sizes.s4.horizontalSpace,
+              Text("تعديل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+
+class DeliveryAddressWidget extends StatelessWidget
+{
+  const DeliveryAddressWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Row(
+      children:
+      [
+        SvgPicture.asset(AppAssets.icons.locationGrey),
+        Sizes.s8.horizontalSpace,
+        Text("شارع النيل، مبنى رقم ١٢٣", style: AppStyles.bold(
+          fontWeight: AppFontWeights.regularWeight, 
+          fontColor: AppColors.color.kGrey001),
+        ),
+      ],
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -46,13 +48,19 @@ class PaymentMethodEditWidget extends StatelessWidget
           fontColor: AppColors.color.kBlack001),
         ),
         Spacer(),
-        Row(
-          children:
-          [
-            SvgPicture.asset(AppAssets.icons.editGrey),
-            Sizes.s4.horizontalSpace,
-            Text("تعديل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
-          ],
+        GestureDetector(
+          onTap: () 
+          {
+            log("Edit has been Pressed...");
+          },
+          child: Row(
+            children:
+            [
+              SvgPicture.asset(AppAssets.icons.editGrey),
+              Sizes.s4.horizontalSpace,
+              Text("تعديل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
+            ],
+          ),
         ),
       ],
     );
