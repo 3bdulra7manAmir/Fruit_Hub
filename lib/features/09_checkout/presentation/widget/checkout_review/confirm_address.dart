@@ -1,4 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../config/theme/font_manager/font_weights.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_paddings.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_styles.dart';
+import '../common_container.dart';
 
 class ConfirmAddressWidget extends StatelessWidget
 {
@@ -7,6 +17,43 @@ class ConfirmAddressWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container();
+    return CommonContainerWidget(
+      padding: AppPadding.symmetric.addressCard,
+      child: Column(
+        children:
+        [
+          Row(
+            children:
+            [
+              Text("عنوان التوصيل", style: AppStyles.extraLight(
+                fontWeight: AppFontWeights.boldWeight, 
+                fontColor: AppColors.color.kBlack001),
+              ),
+              Spacer(),
+              Row(
+                children:
+                [
+                  SvgPicture.asset(AppAssets.icons.editGrey),
+                  Sizes.s4.horizontalSpace,
+                  Text("تعديل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
+                ],
+              ),
+            ],
+          ),
+          Sizes.s8.verticalSpace,
+          Row(
+            children:
+            [
+              SvgPicture.asset(AppAssets.icons.locationGrey),
+              Sizes.s8.horizontalSpace,
+              Text("شارع النيل، مبنى رقم ١٢٣", style: AppStyles.bold(
+                fontWeight: AppFontWeights.regularWeight, 
+                fontColor: AppColors.color.kGrey001),
+              ),
+            ],
+          )
+        ],
+      )
+    );
   }
 }

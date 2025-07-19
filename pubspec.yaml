@@ -100,6 +100,7 @@ flutter:
     - assets/icons/Cart/
     - assets/icons/Review_And_Rating/
     - assets/icons/Checkout_Payment/
+    - assets/icons/Checkout_Review/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/

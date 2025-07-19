@@ -41,6 +41,15 @@ class Symmetric
   /// 16px horizontal 12px vertical
   EdgeInsets get notificationsCard => EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h);
 
+  /// 2px horizontal 15px vertical
+  EdgeInsets get totalOrderCard => EdgeInsets.symmetric(horizontal: 2.w, vertical: 15.h);
+
+  /// 9px horizontal 5px vertical
+  EdgeInsets get confirmPaymentMethod => EdgeInsets.symmetric(horizontal: 9.w, vertical: 5.h);
+
+  /// 4px horizontal 5px vertical
+  EdgeInsets get addressCard => EdgeInsets.symmetric(horizontal: 4.w, vertical: 5.h);
+
 }
 
 

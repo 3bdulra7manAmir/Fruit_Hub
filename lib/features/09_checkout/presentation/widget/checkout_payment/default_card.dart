@@ -1,10 +1,10 @@
-import 'package:e_commerce_app/config/theme/color_manager/colors.dart';
-import 'package:e_commerce_app/core/constants/app_styles.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/checkbox.dart';
 import '../../controller/checkbox_controller.dart';
 

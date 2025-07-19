@@ -15,10 +15,8 @@ class _Icons
   final String treeLeaf = "assets/icons/Splash/Tree_Leaf.svg";
   final String appLogo = "assets/icons/Splash/App_Logo.svg";
   final String bubbles = "assets/icons/Splash/Bubbles.svg";
-
   /// [OnBoarding1]
   final String fruitPack = "assets/icons/OnBoarding/Fruit_Package.svg";
-
   /// [OnBoarding2]
   final String pineapple = "assets/icons/OnBoarding/Pineapple.svg";
 
@@ -72,6 +70,13 @@ class _Icons
   ///[Review And Rating]
   final String userComment = "assets/icons/Review_And_Rating/User_Comment.png";
   final String reviewStar = "assets/icons/Review_And_Rating/Star.svg";
+
+  ///[Checkout_Payment]
+  final String paymentMethodLogo = "assets/icons/Checkout_Payment/Mastercard.svg";
+
+  ///[Checkout_Review]
+  final String editGrey = "assets/icons/Checkout_Review/Edit_Grey.svg";
+  final String locationGrey = "assets/icons/Checkout_Review/Location_Grey.svg";
 }
 
 ///-----------------------------------------------------------------//

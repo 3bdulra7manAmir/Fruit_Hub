@@ -51,6 +51,8 @@ abstract class ColorManagerBase
   Color get kGrey017;
   /// [_D6DCE5]
   Color get kGrey018;
+  /// [_CACECE]
+  Color get kGrey019;
 
   // Black Color Range
   /// [_0C0D0D]

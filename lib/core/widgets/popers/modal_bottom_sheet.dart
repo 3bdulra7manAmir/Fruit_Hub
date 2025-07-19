@@ -14,6 +14,7 @@ void customAppBottomSheet({
   required WidgetBuilder builder,
 }) {
   showModalBottomSheet(
+    barrierColor: Colors.transparent,
     context: context,
     isDismissible: isDismissible ?? true,
     isScrollControlled: isScrollControlled ?? true,
