@@ -27,16 +27,21 @@ void customAppBottomSheet({
 
 class ModalSheetDragger extends StatelessWidget
 {
-  const ModalSheetDragger({super.key});
+  const ModalSheetDragger({super.key, this.color, this.width, this.height, this.borderRadius});
+
+  final Color? color;
+  final double? width;
+  final double? height;
+  final BorderRadiusGeometry? borderRadius;
 
   @override
   Widget build(BuildContext context)
   {
     return Container(
-      width: 60.w, height: 3.h,
+      width: width ?? 60.w, height: height ?? 3.h,
       decoration: BoxDecoration(
-        color: AppColors.color.kBlue001,
-        borderRadius: AppRadiuses.circular.large,
+        color: color ?? AppColors.color.kBlue001,
+        borderRadius: borderRadius ?? AppRadiuses.circular.large,
       ),
     );
   }
