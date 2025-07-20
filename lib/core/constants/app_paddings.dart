@@ -60,7 +60,6 @@ class Directional
   /// 25px from start
   EdgeInsetsDirectional get offerText => EdgeInsetsDirectional.only(start: 25.w,);
 
-
   EdgeInsetsDirectional get orderCard => EdgeInsetsDirectional.only(
     top: 19.h, 
     bottom: 19.h, 
@@ -68,8 +67,8 @@ class Directional
   );
 
   EdgeInsetsDirectional get orderTimeLine => EdgeInsetsDirectional.only(
-    //top: 20.h, 
-    //bottom: 20.h, 
+    top: 20.h, 
+    bottom: 20.h, 
     end: 60.w, 
     start: 30.w
   );

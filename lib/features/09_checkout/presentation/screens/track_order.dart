@@ -1,11 +1,13 @@
-import 'package:e_commerce_app/core/widgets/appbar.dart';
-import 'package:e_commerce_app/core/widgets/column.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/theme/color_manager/colors.dart';
+import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/column.dart';
 import '../widget/track_order/current_order_cart.dart';
-import '../widget/track_order/order_tracking_time_line.dart';
+import '../widget/track_order/time_line_list.dart';
 
 class TrackOrder extends StatelessWidget
 {
@@ -22,7 +24,11 @@ class TrackOrder extends StatelessWidget
           Sizes.s16.verticalSpace,
           CurrentOrderWidget(),
           Sizes.s19.verticalSpace,
-          OrderTrackingTimeLineWidget(),
+          Container(
+            color: AppColors.color.kGrey016,
+            padding: AppPadding.directional.orderTimeLine,
+            child: OrderTimeLineListWidget()
+          ),
           Sizes.s16.verticalSpace,
         ]
       ),
