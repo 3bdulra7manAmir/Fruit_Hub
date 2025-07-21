@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/buttons/button.dart';
+import '../../../../core/widgets/snackbar.dart';
 
 class CheckOutNavButtonsWidget extends StatelessWidget
 {
@@ -21,9 +22,7 @@ class CheckOutNavButtonsWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomButton(text: "التالي", onPressed: currentStep < totalSteps - 1
-      ? onNext : () => ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("تم إكمال الخطوات!")),
-      ),
+      ? onNext : () => CustomSnackBar.show(context, "تم إكمال الخطوات!"),
     );
   }
 }

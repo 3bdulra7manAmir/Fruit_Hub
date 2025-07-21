@@ -102,6 +102,7 @@ flutter:
     - assets/icons/Checkout_Payment/
     - assets/icons/Checkout_Review/
     - assets/icons/Track_Order/
+    - assets/icons/Profile/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/

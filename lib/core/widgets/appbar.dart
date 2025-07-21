@@ -10,6 +10,7 @@ import '../../features/03_home/presentation/widget/user_appbar/notifications_bil
 import '../constants/app_images.dart';
 import '../constants/app_margins.dart';
 import '../constants/app_styles.dart';
+import 'snackbar.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget 
 {
@@ -68,9 +69,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
     {
       if (AppRouter.currentRoute == AppRoutes.notifications)
       {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('انت اساسًا في شاشة الاشعارات يا معلم...')),
-        );
+        CustomSnackBar.show(context, "انت اساسًا في شاشة الاشعارات يا معلم...");
       }
       else
       {

@@ -49,10 +49,7 @@ class KeepAddressSwitchButtonWidget extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final isSwitched = ref.watch(toggleSwitchProvider);
-
-    // iOS: full pill shape, Android: less rounded
     final BorderRadius borderRadius = AppRadiuses.circular.medium;
-
     final double width = 44.w;
     final double height = 24.h;
     final double circleSize = 20.w;

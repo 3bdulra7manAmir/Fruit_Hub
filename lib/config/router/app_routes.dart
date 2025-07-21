@@ -65,4 +65,7 @@ abstract class AppRoutes
   /// [ Track Order ]
   static const trackOrder = '/trackOrder';
 
+  /// [ Profile ]
+  static const profile = '/profile';
+
 }

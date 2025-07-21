@@ -29,15 +29,9 @@ class CurrentOrderWidget extends StatelessWidget
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              Text("طلب رقم: 1234567#", style: AppStyles.extraLight(
-                fontWeight: AppFontWeights.boldWeight,
-                fontColor: AppColors.color.kBlack004,),
-              ),
+              OrderNumberTextWidget(),
               Sizes.s3.verticalSpace,
-              Text("تم الطلب :22 مارس ,2024", style: AppStyles.light(
-                fontWeight: AppFontWeights.regularWeight,
-                fontColor: AppColors.color.kGrey002,),
-              ),
+              OrderDateTextWidget(),
               Sizes.s6.verticalSpace,
               OrdersCountTextWidget(),
             ],
@@ -63,6 +57,36 @@ class OrderIconWidget extends StatelessWidget
         borderRadius: AppRadiuses.circular.large,
         color: AppColors.color.kGreen006,
       ),child: SvgPicture.asset(AppAssets.icons.closedOrderBox),
+    );
+  }
+}
+
+
+class OrderNumberTextWidget extends StatelessWidget
+{
+  const OrderNumberTextWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Text("طلب رقم: 1234567#", style: AppStyles.extraLight(
+      fontWeight: AppFontWeights.boldWeight,
+      fontColor: AppColors.color.kBlack004,),
+    );
+  }
+}
+
+
+class OrderDateTextWidget extends StatelessWidget
+{
+  const OrderDateTextWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Text("تم الطلب :22 مارس ,2024", style: AppStyles.light(
+      fontWeight: AppFontWeights.regularWeight,
+      fontColor: AppColors.color.kGrey002,),
     );
   }
 }
