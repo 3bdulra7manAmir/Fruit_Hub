@@ -24,7 +24,7 @@ import '../../features/09_checkout/presentation/screens/checkout_review_view.dar
 import '../../features/09_checkout/presentation/screens/checkout_ship_view.dart';
 import '../../features/09_checkout/presentation/screens/payment_success.dart';
 import '../../features/09_checkout/presentation/screens/track_order.dart';
-import '../../features/10_profile/presentation/screens/profile_main_menu.dart';
+import '../../features/10_profile/presentation/screens/profile_menu_view.dart';
 import 'app_routes.dart';
 import 'route_observer.dart';
 

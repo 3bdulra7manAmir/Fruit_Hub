@@ -19,6 +19,8 @@ class All
 
   /// 17 all sides
   final EdgeInsets trackClosedOrder = const EdgeInsets.all(17);
+  /// 6 all sides
+  final EdgeInsets userCamera = const EdgeInsets.all(6);
 }
 
 
@@ -71,6 +73,13 @@ class Directional
     bottom: 20.h, 
     end: 60.w, 
     start: 30.w
+  );
+
+  EdgeInsetsDirectional get logOut => EdgeInsetsDirectional.only(
+    top: 10.h, 
+    bottom: 10.h, 
+    end: 49.w, 
+    start: 114.w
   );
 
 }

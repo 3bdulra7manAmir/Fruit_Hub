@@ -43,6 +43,7 @@ abstract class Sizes
   static const double s63 = 63;
   static const double s64 = 64;
   static const double s67 = 67;
+  static const double s80 = 80;
   static const double s100 = 100;
   static const double s125 = 125;
   static const double s150 = 150;

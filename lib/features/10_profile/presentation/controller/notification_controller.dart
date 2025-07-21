@@ -1,9 +1,9 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'save_address_controller.g.dart';
+part 'notification_controller.g.dart';
 
 @riverpod
-class ToggleSwitchSaveAddress extends _$ToggleSwitchSaveAddress
+class ToggleSwitchNotifications extends _$ToggleSwitchNotifications
 {
   @override
   bool build() => false;

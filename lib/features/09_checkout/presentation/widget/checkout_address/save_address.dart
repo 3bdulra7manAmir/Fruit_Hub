@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -48,7 +47,7 @@ class KeepAddressSwitchButtonWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final isSwitched = ref.watch(toggleSwitchProvider);
+    final isSwitched = ref.watch(toggleSwitchSaveAddressProvider);
     final BorderRadius borderRadius = AppRadiuses.circular.medium;
     final double width = 44.w;
     final double height = 24.h;
@@ -59,7 +58,7 @@ class KeepAddressSwitchButtonWidget extends ConsumerWidget
       onTap: ()
       {
         log(!isSwitched ? "True" : "False");
-        ref.read(toggleSwitchProvider.notifier).toggle();
+        ref.read(toggleSwitchSaveAddressProvider.notifier).toggle();
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),

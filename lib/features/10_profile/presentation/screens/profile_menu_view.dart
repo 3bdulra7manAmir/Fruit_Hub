@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:e_commerce_app/core/extensions/widget_margin.dart';
+import 'package:e_commerce_app/features/10_profile/presentation/controller/language_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,7 +14,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../../../09_checkout/presentation/controller/save_address_controller.dart';
+
 
 class Profile extends StatelessWidget
 {
@@ -23,7 +24,7 @@ class Profile extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "حسابي",),
+      appBar: CustomAppBar(barTitle: "حسابي", isCustomBack: false,),
       body: CustomSingleChild(
         isMargin: false,
         children:
@@ -81,16 +82,16 @@ class UserProfileImg extends StatelessWidget
       [
         Image.asset("assets/icons/Profile/User_Profile.png", width: 73.w, height: 73.h,),
         Positioned(
-          top: 60.h,
+          bottom: -11.h,
           child: Container(
-            alignment: Alignment.center,
+            padding: AppPadding.all.userCamera,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey022,
               borderRadius: AppRadiuses.circular.large,
-              border: Border.all(color: AppColors.color.kWhite001,),
+              border: Border.all(color: AppColors.color.kWhite001, width: Sizes.s2.w),
             ),
             child: SvgPicture.asset("assets/icons/Profile/Camera_Green.svg", width: 16.w, height: 16.h,)
-            ),
+          ),
         ),
       ],
     );
@@ -258,13 +259,13 @@ class OptionsMenuWidget extends StatelessWidget
 }
 
 
-class HelpTextWidget extends StatelessWidget {
-  const HelpTextWidget({
-    super.key,
-  });
+class HelpTextWidget extends StatelessWidget
+{
+  const HelpTextWidget({super.key,});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Text("المساعده", style: AppStyles.extraLight(
       fontColor: AppColors.color.kBlack001,
       fontWeight: AppFontWeights.semiBoldWeight,),
@@ -281,12 +282,21 @@ class LogOutWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      padding: AppPadding.symmetric.xSmall,
+      padding: AppPadding.directional.logOut,
       height: 41.h, width: 375.w, alignment: Alignment.center,
       decoration: BoxDecoration(color: AppColors.color.kGreen006,),
-      child: Text("لديك 3 منتجات في سله التسوق", style: AppStyles.extraLight(
-        fontColor: AppColors.color.kGreen001, 
-        fontWeight: AppFontWeights.regularWeight),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children:
+        [
+          Expanded(
+            child: Text("تسجيل الخروج", style: AppStyles.extraLight(
+              fontColor: AppColors.color.kGreen001,),
+            ),
+          ),
+          Expanded(child: SvgPicture.asset("assets/icons/Profile/SignOut_Green.svg")),
+        ],
       ),
     );
   }
@@ -300,18 +310,17 @@ class SwitchButtonWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final isSwitched = ref.watch(toggleSwitchProvider);
+    final isSwitched = ref.watch(toggleSwitchLanguageProvider);
     final BorderRadius borderRadius = AppRadiuses.circular.medium;
-    final double width = 44.w;
-    final double height = 24.h;
-    final double circleSize = 20.w;
-    final EdgeInsetsGeometry padding = EdgeInsets.all(2.w);
+    final double width = 29.w;
+    final double height = 17.h;
+    final double circleSize = 15.w;
+    final EdgeInsetsGeometry padding = EdgeInsets.all(1.w);
 
     return GestureDetector(
-      onTap: ()
-      {
+      onTap: () {
         log(!isSwitched ? "True" : "False");
-        ref.read(toggleSwitchProvider.notifier).toggle();
+        ref.read(toggleSwitchLanguageProvider.notifier).toggle();
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
@@ -319,10 +328,10 @@ class SwitchButtonWidget extends ConsumerWidget
         height: height,
         padding: padding,
         decoration: BoxDecoration(
-          color: isSwitched ? AppColors.color.kGreen001 : Colors.grey.shade300,
+          color: isSwitched ? AppColors.color.kGreen001 : AppColors.color.kGrey023.withValues(alpha: 0.5),
           borderRadius: borderRadius,
         ),
-        alignment: isSwitched ? Alignment.centerRight : Alignment.centerLeft,
+        alignment: isSwitched ? Alignment.centerLeft : Alignment.centerRight,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           width: circleSize,

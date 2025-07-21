@@ -1,9 +1,9 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'save_address_controller.g.dart';
+part 'language_controller.g.dart';
 
 @riverpod
-class ToggleSwitchSaveAddress extends _$ToggleSwitchSaveAddress
+class ToggleSwitchLanguage extends _$ToggleSwitchLanguage
 {
   @override
   bool build() => false;
