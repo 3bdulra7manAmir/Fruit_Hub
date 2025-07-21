@@ -34,8 +34,7 @@ abstract class AppRoutes
 
   /// [ Products ]
   static const products = '/products';
-
-  /// [ Filtered_Products ]
+  // [ Filtered_Products ]
   static const filteredProducts = '/filteredProducts';
 
   /// [ Items_Details ]
@@ -49,23 +48,20 @@ abstract class AppRoutes
 
   /// [ checkoutShip ]
   static const checkoutShip = '/checkout';
-
-  /// [ CheckOut Address ]
+  // [ CheckOut Address ]
   static const checkoutAddress = '/checkoutAddress';
-
-  /// [ CheckOut Address ]
+  // [ CheckOut Address ]
   static const checkoutPayment = '/checkoutPayment';
-
-  /// [ CheckOut Address ]
+  // [ CheckOut Address ]
   static const checkoutReview = '/checkoutReview';
-
-  /// [ Payment Success ]
+  // [ Payment Success ]
   static const paymentSuccess = '/paymentSuccess';
-
-  /// [ Track Order ]
+  // [ Track Order ]
   static const trackOrder = '/trackOrder';
 
   /// [ Profile ]
   static const profile = '/profile';
+  // [ Profile ]
+  static const personalInfo = '/personalInfo';
 
 }
