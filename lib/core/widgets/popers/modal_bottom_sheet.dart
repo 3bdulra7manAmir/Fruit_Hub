@@ -25,9 +25,9 @@ void customAppBottomSheet({
 }
 
 
-class ModalSheetDragger extends StatelessWidget
+class CustomModalSheetDragger extends StatelessWidget
 {
-  const ModalSheetDragger({super.key, this.color, this.width, this.height, this.borderRadius});
+  const CustomModalSheetDragger({super.key, this.color, this.width, this.height, this.borderRadius});
 
   final Color? color;
   final double? width;

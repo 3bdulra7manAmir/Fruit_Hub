@@ -282,7 +282,7 @@ class LogOutWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      padding: AppPadding.directional.logOut,
+      padding: AppPadding.directional.logOutCard,
       height: 41.h, width: 375.w, alignment: Alignment.center,
       decoration: BoxDecoration(color: AppColors.color.kGreen006,),
       child: Row(

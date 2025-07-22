@@ -65,7 +65,7 @@ class Directional
   EdgeInsetsDirectional get orderCard => EdgeInsetsDirectional.only(
     top: 19.h, 
     bottom: 19.h, 
-    end: 32.w
+    //end: 32.w
   );
 
   EdgeInsetsDirectional get orderTimeLine => EdgeInsetsDirectional.only(
@@ -75,11 +75,17 @@ class Directional
     start: 30.w
   );
 
-  EdgeInsetsDirectional get logOut => EdgeInsetsDirectional.only(
+  EdgeInsetsDirectional get logOutCard => EdgeInsetsDirectional.only(
     top: 10.h, 
     bottom: 10.h, 
     end: 49.w, 
     start: 114.w
+  );
+
+  EdgeInsetsDirectional get ordersHistoryCard => EdgeInsetsDirectional.only(
+    top: 19.h, 
+    bottom: 19.h, 
+    end: 32.w, 
   );
 
 }

@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/core/widgets/divider.dart';
+import 'package:e_commerce_app/core/widgets/popers/modal_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,29 +15,87 @@ import '../common_container.dart';
 
 class CurrentOrderWidget extends StatelessWidget
 {
-  const CurrentOrderWidget({super.key});
+  const CurrentOrderWidget({super.key, required this.isDownArrow});
+  
+  final bool isDownArrow;
+  final bool isExpanded = true;
 
   @override
   Widget build(BuildContext context)
   {
     return CommonContainerWidget(
       padding: AppPadding.directional.orderCard,
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children:
         [
-          OrderIconWidget(),
-          Sizes.s16.horizontalSpace,
-          Column(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              OrderNumberTextWidget(),
-              Sizes.s3.verticalSpace,
-              OrderDateTextWidget(),
-              Sizes.s6.verticalSpace,
-              OrdersCountTextWidget(),
+              OrderIconWidget(),
+              Sizes.s16.horizontalSpace,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:
+                [
+                  OrderNumberTextWidget(),
+                  Sizes.s3.verticalSpace,
+                  OrderDateTextWidget(),
+                  Sizes.s6.verticalSpace,
+                  OrdersCountTextWidget(),
+                ],
+              ),
+              if(isDownArrow)...
+              [
+                Sizes.s56.horizontalSpace,
+                GestureDetector(
+                  onTap: ()
+                  {
+                    
+                  },
+                  child: SvgPicture.asset(
+                    isExpanded ? "assets/icons/Orders_History/Up_Arrow_Black.svg"
+                    : "assets/icons/Orders_History/Down_Arrow_Black.svg"),
+                ),
+              ]
+              else...[SizedBox.shrink()]
             ],
-          )
+          ),
+          if(isExpanded)...
+          [
+            Sizes.s20.verticalSpace,
+            CustomDivider(color: AppColors.color.kGrey021),
+            Sizes.s3.verticalSpace,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:
+              [
+                Column(
+                  children:
+                  [
+                    Sizes.s3.verticalSpace,
+                    Container(
+                      width: 10.w, height: 10.h,
+                      decoration: BoxDecoration(
+                        color: AppColors.color.kGreen001,
+                        borderRadius: AppRadiuses.circular.large,
+                      ),
+                    ),
+                    CustomModalSheetDragger(
+                      color: AppColors.color.kGreen009,
+                      width: 2.w, height: 20.h,
+                    ),
+                  ],
+                ),
+                Sizes.s11.horizontalSpace,
+                Text("تتبع الطلب", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
+                Spacer(),
+                Text("22 مارس , 2024", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
+              ],
+            )
+          ]
+          else...[SizedBox.shrink()]
         ],
       ),
     );

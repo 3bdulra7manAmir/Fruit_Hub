@@ -21,7 +21,7 @@ class TimeLineCardWidget extends StatelessWidget
       [
         Positioned(
           top: 65.h, left: 0, right: 50.w,
-          child: ModalSheetDragger(height: 1.h, color: AppColors.color.kGrey021,),
+          child: CustomModalSheetDragger(height: 1.h, color: AppColors.color.kGrey021,),
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class TimeLineCardWidget extends StatelessWidget
               children:
               [
                 OrderIconWidget(),
-                ModalSheetDragger(width: 2.w, height: 40.h, color: AppColors.color.kGrey020,),
+                CustomModalSheetDragger(width: 2.w, height: 40.h, color: AppColors.color.kGrey020,),
               ],
             ),
             Sizes.s24.horizontalSpace,

@@ -24,6 +24,8 @@ import '../../features/09_checkout/presentation/screens/checkout_review_view.dar
 import '../../features/09_checkout/presentation/screens/checkout_ship_view.dart';
 import '../../features/09_checkout/presentation/screens/payment_success.dart';
 import '../../features/09_checkout/presentation/screens/track_order.dart';
+import '../../features/10_profile/presentation/screens/orders_history.dart';
+import '../../features/10_profile/presentation/screens/payment_methods.dart';
 import '../../features/10_profile/presentation/screens/personal_info_view.dart';
 import '../../features/10_profile/presentation/screens/profile_menu_view.dart';
 import 'app_routes.dart';
@@ -39,7 +41,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.personalInfo,
+    initialLocation: AppRoutes.paymentMethods,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -157,53 +159,67 @@ abstract class AppRouter
       ),
 
       ///[ CheckOut Feature]
-      // Checkout Ship
+      // [Checkout Ship]
       GoRoute(
         path: AppRoutes.checkoutShip,
         name: AppRoutes.checkoutShip,
         builder: (_, _) => const CheckoutShip(),
       ),
-      // Checkout Address
+      // [Checkout Address]
       GoRoute(
         path: AppRoutes.checkoutAddress,
         name: AppRoutes.checkoutAddress,
         builder: (_, _) => const CheckoutAddress(),
       ),
-      // Checkout Payment
+      // [Checkout Payment]
       GoRoute(
         path: AppRoutes.checkoutPayment,
         name: AppRoutes.checkoutPayment,
         builder: (_, _) => const CheckoutPayment(),
       ),
-      // Checkout Payment
+      // [Checkout Payment]
       GoRoute(
         path: AppRoutes.checkoutReview,
         name: AppRoutes.checkoutReview,
         builder: (_, _) => const CheckoutReview(),
       ),
-
+      // [Checout Payment Review]
       GoRoute(
         path: AppRoutes.paymentSuccess,
         name: AppRoutes.paymentSuccess,
         builder: (_, _) => const PaymentSuccess(),
       ),
-
+      // [Checkout Order Tracking]
       GoRoute(
         path: AppRoutes.trackOrder,
         name: AppRoutes.trackOrder,
         builder: (_, _) => const TrackOrder(),
       ),
 
+      /// [ Profile ]
+      // [Profile Menu]
       GoRoute(
         path: AppRoutes.profile,
         name: AppRoutes.profile,
         builder: (_, _) => const Profile(),
       ),
-
+      // [Personal Information]
       GoRoute(
         path: AppRoutes.personalInfo,
         name: AppRoutes.personalInfo,
         builder: (_, _) => const PersonalInfo(),
+      ),
+      // [Orders History]
+      GoRoute(
+        path: AppRoutes.ordersHistory,
+        name: AppRoutes.ordersHistory,
+        builder: (_, _) => const OrdersHistory(),
+      ),
+
+      GoRoute(
+        path: AppRoutes.paymentMethods,
+        name: AppRoutes.paymentMethods,
+        builder: (_, _) => const PaymentMethods(),
       ),
 
       // StatefulShellRoute.indexedStack(

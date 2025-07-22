@@ -22,7 +22,7 @@ class TrackOrder extends StatelessWidget
         children:
         [
           Sizes.s16.verticalSpace,
-          CurrentOrderWidget(),
+          CurrentOrderWidget(isDownArrow: false,),
           Sizes.s19.verticalSpace,
           Container(
             color: AppColors.color.kGrey016,

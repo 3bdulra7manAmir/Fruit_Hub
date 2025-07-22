@@ -20,7 +20,7 @@ void arrangementFilterSheet(context)
         children:
         [
           Sizes.s25.verticalSpace,
-          const ModalSheetDragger(),
+          const CustomModalSheetDragger(),
           Sizes.s32.verticalSpace,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

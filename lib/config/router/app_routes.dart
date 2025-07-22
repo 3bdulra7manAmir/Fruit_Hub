@@ -63,5 +63,10 @@ abstract class AppRoutes
   static const profile = '/profile';
   // [ Profile ]
   static const personalInfo = '/personalInfo';
+  // [ Orders History ]
+  static const ordersHistory = '/ordersHistory';
+
+  // [ Payment Methods ]
+  static const paymentMethods = '/PaymentMethods';
 
 }
