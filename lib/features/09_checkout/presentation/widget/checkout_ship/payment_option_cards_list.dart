@@ -26,7 +26,7 @@ class _PaymentOptionCardsListState extends State<PaymentOptionCardsList>
       itemBuilder: (context, index)
       {
         return InkWell(
-          borderRadius: AppRadiuses.circular.xXXXSmall,
+          borderRadius: AppRadiuses.circular.xXXXXSmall,
           onTap: () => setState(() {selectedIndex = index;}),
           child: PaymentOptionCard(isSelected: selectedIndex == index,)
         );

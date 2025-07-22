@@ -64,7 +64,7 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
             margin: const EdgeInsets.symmetric(horizontal: 6),
             decoration: BoxDecoration(
               color: AppColors.color.kGrey004,
-              borderRadius: AppRadiuses.circular.xXXXSmall,
+              borderRadius: AppRadiuses.circular.xXXXXSmall,
               border: Border.all(color: AppColors.color.kGrey003),
             ),
             child: TextFormField(
@@ -77,11 +77,11 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
               decoration: InputDecoration(
                 counterText: '',
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: AppRadiuses.circular.xXXXSmall,
+                  borderRadius: AppRadiuses.circular.xXXXXSmall,
                   borderSide: BorderSide(color: AppColors.color.kGrey003),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: AppRadiuses.circular.xXXXSmall,
+                  borderRadius: AppRadiuses.circular.xXXXXSmall,
                   borderSide: BorderSide(color: AppColors.color.kGrey003),
                 ),
               ),

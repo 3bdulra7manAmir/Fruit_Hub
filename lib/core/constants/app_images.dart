@@ -81,6 +81,12 @@ class _Icons
   ///[Checkout_Order]
   final String closedOrderBox = "assets/icons/Track_Order/Order_Box.svg";
   final String openedOrderBox = "assets/icons/Track_Order/Opened_Order_Box.svg";
+
+  ///[Profile]
+  //[Personal_info]
+  final String editGreyV2 = "assets/icons/Personal_Info/Edit_Grey.svg";
+  //[Payment_Methods]
+  final String mastercard = "assets/icons/Payment_Methods/Mastercard.svg";
 }
 
 ///-----------------------------------------------------------------//

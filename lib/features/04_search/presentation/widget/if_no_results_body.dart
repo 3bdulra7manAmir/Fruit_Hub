@@ -58,7 +58,7 @@ class NoSearchResultsFoundWidget extends StatelessWidget
     ),).withShadow(
       shadow: AppShadowBoxes.noSearchResults,
       backgroundColor: AppColors.color.kWhite001,
-      borderRadius: AppRadiuses.circular.xXXSmall,
+      borderRadius: AppRadiuses.circular.xXXXSmall,
       height: 80.h, width: double.infinity,
       padding: AppPadding.symmetric.xXXSmall,
     );

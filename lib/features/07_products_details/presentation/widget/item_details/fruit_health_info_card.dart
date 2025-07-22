@@ -36,7 +36,7 @@ class FruitHealthInfoCardWidget extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
-          if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
+          if (1.sw <= 360 && 1.sh <= 640)...
           [
             Sizes.s20.horizontalSpace,
           ]
@@ -64,7 +64,7 @@ class FruitHealthInfoCardWidget extends StatelessWidget
             ],
           ),
           Sizes.s16.horizontalSpace,
-          if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
+          if (1.sw <= 360 && 1.sh <= 640)...
           [
             const SizedBox.shrink(),
           ]
@@ -73,7 +73,7 @@ class FruitHealthInfoCardWidget extends StatelessWidget
             SvgPicture.asset(img),
           ],
 
-          if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
+          if (1.sw <= 360 && 1.sh <= 640)...
           [
             Sizes.s20.horizontalSpace,
           ]

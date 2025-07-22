@@ -26,7 +26,7 @@ class CustomCheckbox extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Checkbox(
-      shape: RoundedRectangleBorder(borderRadius: borderRadius ?? AppRadiuses.circular.xXXXSmall),
+      shape: RoundedRectangleBorder(borderRadius: borderRadius ?? AppRadiuses.circular.xXXXXSmall),
       side: BorderSide(color: borderColor ?? AppColors.color.kGrey005, width: borderWidth ?? 1.5.w),
       fillColor: fillColor ?? WidgetStateProperty.resolveWith((states)
       {

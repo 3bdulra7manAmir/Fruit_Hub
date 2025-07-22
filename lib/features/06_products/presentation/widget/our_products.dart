@@ -49,7 +49,7 @@ class FiltrationArrowsWidget extends StatelessWidget
       child: Container(
         height: 31.h, width: 44.w, alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: AppRadiuses.circular.xXXXSmall,
+          borderRadius: AppRadiuses.circular.xXXXXSmall,
           border: Border.all(color: AppColors.color.kWhite002),
           color: AppColors.color.kWhite001,
         ), child: SvgPicture.asset(AppAssets.icons.swapArrows),

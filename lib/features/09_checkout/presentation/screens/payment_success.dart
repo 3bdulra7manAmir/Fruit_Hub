@@ -37,7 +37,7 @@ class _PaymentSuccessState extends State<PaymentSuccess>
           DoneSuccessfullyTextWidget(),
           Sizes.s9.verticalSpace,
           OrderNumberTextWidget(),
-          if (MediaQuery.of(context).size.width <= 360 && MediaQuery.of(context).size.height <= 640)...
+          if (1.sw <= 360 && 1.sh <= 640)...
           [
             Sizes.s67.verticalSpace,
           ]

@@ -26,7 +26,7 @@ class ShopNowButtonWidget extends StatelessWidget
       onPressed: ()
       {log("Shop Now Has been Pressed...");}, 
       backgroundColor: AppColors.color.kWhite001,
-      borderRadius: AppRadiuses.circular.xXXXSmall,
+      borderRadius: AppRadiuses.circular.xXXXXSmall,
       width: 116.w, height: 32.h,
     );
   }

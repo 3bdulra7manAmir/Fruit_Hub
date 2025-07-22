@@ -2,7 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../config/theme/color_manager/colors.dart';
-import '../../../config/theme/font_manager/font_weights.dart';
 import '../../constants/app_borders.dart';
 import '../../constants/app_sizes.dart';
 import '../../constants/app_styles.dart';
@@ -11,6 +10,7 @@ class CustomIconButton extends ConsumerWidget
 {
   const CustomIconButton({
     super.key,
+    this.margin,
     this.width,
     this.height,
     this.padding,
@@ -24,6 +24,7 @@ class CustomIconButton extends ConsumerWidget
     required this.icon,
   });
 
+  final EdgeInsetsGeometry? margin;
   final double? width;
   final double? height;
   final EdgeInsetsGeometry? padding;
@@ -41,20 +42,19 @@ class CustomIconButton extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    return SizedBox(
-      width: width ?? double.infinity,
-      height: height ?? 52.h,
+    return Container(
+      margin: margin, width: width ?? double.infinity, height: height ?? 54.h,
       child: ElevatedButton.icon(
         style: ButtonStyle(
           padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(padding),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
-            borderRadius: borderRadius ?? AppRadiuses.circular.small,
+            borderRadius: borderRadius ?? AppRadiuses.circular.medium,
             side: BorderSide(width: borderWidth ?? (Sizes.s1).w, color: borderColor ?? AppColors.color.kTransparent)
             ),),
-          backgroundColor: WidgetStateProperty.all<Color>(backgroundColor ?? AppColors.color.kWhite001,),
+          backgroundColor: WidgetStateProperty.all<Color>(backgroundColor ?? AppColors.color.kGreen001,),
         ),
         onPressed: onPressed,
-        label: Text(text, style: textStyle ?? AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.semiBoldWeight),),
+        label: Text(text, style: textStyle ?? AppStyles.bold(),),
         icon: icon,
       ),
     );

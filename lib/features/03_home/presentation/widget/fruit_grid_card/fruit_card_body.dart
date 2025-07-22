@@ -19,7 +19,7 @@ class FruitGridCardWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return ClipRRect(
-      borderRadius: AppRadiuses.circular.xXXXSmall,
+      borderRadius: AppRadiuses.circular.xXXXXSmall,
       child: Card(
         color: AppColors.color.kGrey008,
         child: Column(

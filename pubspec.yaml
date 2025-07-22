@@ -103,6 +103,7 @@ flutter:
     - assets/icons/Checkout_Review/
     - assets/icons/Track_Order/
     - assets/icons/Profile/
+    - assets/icons/Payment_Methods/
     - assets/icons/Personal_Info/
     - assets/icons/Orders_History/
 

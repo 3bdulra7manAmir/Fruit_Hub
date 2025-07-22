@@ -22,7 +22,7 @@ class PaymentOptionCard extends StatelessWidget
       padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
       decoration: BoxDecoration(
         color: AppColors.color.kGrey007.withValues(alpha: 0.2),
-        borderRadius: AppRadiuses.circular.xXXXSmall,
+        borderRadius: AppRadiuses.circular.xXXXXSmall,
         border: Border.all(color: isSelected ? AppColors.color.kGreen001 : Colors.transparent,),
       ),
       child: Row(

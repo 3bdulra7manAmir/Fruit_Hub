@@ -21,7 +21,7 @@ class RatingBarWidget extends StatelessWidget
       [
         Expanded(
           child: ClipRRect(
-            borderRadius: AppRadiuses.circular.xXXXXSmall,
+            borderRadius: AppRadiuses.circular.linearRatingBar,
             child: CustomLinearIndicator(
               backgroundColor: AppColors.color.kGrey015,
               progressColor: AppColors.color.kOrange003,

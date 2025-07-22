@@ -24,7 +24,7 @@ class CommonContainerWidget extends StatelessWidget
     return Container(
       padding: padding ?? AppPadding.symmetric.confirmPaymentMethod,
       decoration: BoxDecoration(
-        borderRadius: AppRadiuses.circular.xXXXSmall,
+        borderRadius: AppRadiuses.circular.xXXXXSmall,
         color: AppColors.color.kGrey016,
       ), child: child,
     );

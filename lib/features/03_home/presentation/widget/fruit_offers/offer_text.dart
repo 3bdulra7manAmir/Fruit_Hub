@@ -23,7 +23,7 @@ class OfferTextWidget extends StatelessWidget
         width: 175.w,
         padding: AppPadding.directional.offerText,
         decoration: BoxDecoration(
-          borderRadius: AppRadiuses.circular.xXXXSmall, 
+          borderRadius: AppRadiuses.circular.xXXXXSmall, 
           color: AppColors.color.kGreen003,
         ),
         child: const FruitCardWidget(),

@@ -20,7 +20,7 @@ class PaymentMethodCardWidget extends StatelessWidget
       width: width ?? 67.w, height: height ?? 43.h, alignment: Alignment.center,
       decoration: BoxDecoration(
         color: AppColors.color.kWhite001,
-        borderRadius: AppRadiuses.circular.xXXXSmall,
+        borderRadius: AppRadiuses.circular.xXXXXSmall,
         border: Border.all(color: AppColors.color.kGrey018),
         boxShadow:
         [
