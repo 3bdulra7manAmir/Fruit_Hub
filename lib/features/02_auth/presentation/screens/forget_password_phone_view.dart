@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/form.dart';
 import '../../../../core/widgets/appbar.dart';
@@ -18,7 +19,7 @@ class ForgetPasswordPhone extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: "نسيان كلمة المرور"),
+      appBar: CustomAppBar(barTitle: S.current.forgotPassword),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomForm(

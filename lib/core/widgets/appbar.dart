@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:e_commerce_app/core/extensions/string.dart';
 import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -61,7 +62,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   GestureDetector backButtonOnTap(BuildContext context) => 
   GestureDetector(onTap: () => leadingOnTap(context), child: barLeading ?? BackButtonWidget(),
   );
-  //GestureDetector(onTap: () => leadingOnTap(context), child: barLeading ?? SvgPicture.asset(AppAssets.icons.rightBlackArrow),);
 }
 
   class BackButtonWidget extends StatelessWidget
@@ -71,6 +71,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
     @override
     Widget build(BuildContext context)
     {
+      final String arrowDirection = AppAssets.icons.rightBlackArrow.localized(context, 
+      ar: AppAssets.icons.rightBlackArrow, en: AppAssets.icons.leftBlackArrow);
       return Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
@@ -78,7 +80,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
           shape: BoxShape.circle,
           border: Border.all(color: AppColors.color.kGrey014, ),
         ),
-        child: SvgPicture.asset(AppAssets.icons.rightBlackArrow,),
+        child: SvgPicture.asset(arrowDirection),
       );
     }
   }

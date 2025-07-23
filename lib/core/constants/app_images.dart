@@ -88,6 +88,7 @@ class _Icons
   ///[Profile]
   //[Personal_info]
   final String editGreyV2 = "assets/icons/Personal_Info/Edit_Grey.svg";
+  final String leftBlackArrow = "assets/icons/Profile/Left_Black_Arrow.svg";
   //[Payment_Methods]
   final String mastercard = "assets/icons/Payment_Methods/Mastercard.svg";
   final String addWhiteV2 = "assets/icons/Payment_Methods/Add.svg";

@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:e_commerce_app/core/constants/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -114,7 +115,7 @@ class OptionsMenuWidget extends StatelessWidget
               [
                 Text("العربية", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
                 Sizes.s2.horizontalSpace,
-                SvgPicture.asset("assets/icons/Profile/Left_Black_Arrow.svg"),
+                SvgPicture.asset(AppAssets.icons.leftBlackArrow),
               ],
             ),
             onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),

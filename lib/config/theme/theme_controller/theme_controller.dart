@@ -11,7 +11,7 @@ class Theme extends _$Theme
   ThemeMode build() 
   {
     log("Default Theme Mode is: Light");
-    return ThemeMode.light; // Default is Light
+    return ThemeMode.dark; // Default is Light
   }
 
   void toggle()

@@ -32,4 +32,5 @@ abstract class AppStrings
   /// [ Error ]
   static const String error = "Error";
 
+
 }
