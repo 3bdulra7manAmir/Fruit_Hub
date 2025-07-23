@@ -1,13 +1,14 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../../core/utils/toggle.dart';
+
 part 'notification_controller.g.dart';
 
 @riverpod
-class ToggleSwitchNotifications extends _$ToggleSwitchNotifications
+class ToggleSwitchNotifications extends _$ToggleSwitchNotifications with ToggleSwitchBase
 {
   @override
   bool build() => false;
 
-  void toggle() => state = !state;
   void set(bool value) => state = value;
 }

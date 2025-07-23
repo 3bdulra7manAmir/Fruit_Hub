@@ -1,5 +1,8 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
@@ -59,6 +62,7 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(widget.otpLength, (index)
         {
+          
           return Container(
             width: 74.w,
             margin: const EdgeInsets.symmetric(horizontal: 6),
@@ -68,6 +72,7 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
               border: Border.all(color: AppColors.color.kGrey003),
             ),
             child: TextFormField(
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               controller: controllers[index],
               focusNode: focusNodes[index],
               textAlign: TextAlign.center,
@@ -76,14 +81,12 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
               style: AppStyles.black(fontWeight: AppFontWeights.boldWeight),
               decoration: InputDecoration(
                 counterText: '',
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: AppRadiuses.circular.xXXXXSmall,
-                  borderSide: BorderSide(color: AppColors.color.kGrey003),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: AppRadiuses.circular.xXXXXSmall,
-                  borderSide: BorderSide(color: AppColors.color.kGrey003),
-                ),
+                enabledBorder: outlineInputBorder,
+                focusedBorder: outlineInputBorder,
+                errorBorder: outlineInputBorder,
+                disabledBorder: outlineInputBorder,
+                focusedErrorBorder: outlineInputBorder,
+                border: outlineInputBorder,
               ),
               onChanged: (value)
               {
@@ -101,6 +104,7 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
                   }
                 }
               },
+              onFieldSubmitted: (value) => log(value),
             ),
           );
         }),
@@ -108,3 +112,9 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
     );
   }
 }
+
+
+final outlineInputBorder = OutlineInputBorder(
+  borderRadius: AppRadiuses.circular.xXXXXSmall,
+  borderSide: BorderSide(color: AppColors.color.kGrey003),
+);

@@ -37,7 +37,7 @@ class _PaymentSuccessState extends State<PaymentSuccess>
           DoneSuccessfullyTextWidget(),
           Sizes.s9.verticalSpace,
           OrderNumberTextWidget(),
-          if (1.sw <= 360 && 1.sh <= 640)...
+          if (1.sw <= 427 && 1.sh <= 952)...
           [
             Sizes.s67.verticalSpace,
           ]

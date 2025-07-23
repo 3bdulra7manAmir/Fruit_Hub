@@ -1,5 +1,3 @@
-import 'package:e_commerce_app/core/widgets/divider.dart';
-import 'package:e_commerce_app/core/widgets/popers/modal_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,6 +9,8 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/widgets/divider.dart';
+import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
 import '../common_container.dart';
 
 class CurrentOrderWidget extends StatelessWidget

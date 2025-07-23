@@ -1,9 +1,9 @@
-import 'package:e_commerce_app/core/widgets/buttons/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/buttons/button.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/personal_info/change_password_text.dart';
 import '../widget/personal_info/confirm_password_field.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../config/theme/color_manager/colors.dart';
 import '../../config/theme/font_manager/font_weights.dart';
@@ -11,11 +12,13 @@ class CustomTextFormField extends StatelessWidget
     super.key,
     this.height,
     this.width,
+    this.inputFormatters,
     this.isEnabled,
     this.keyboardType,
     this.readOnly,
     this.obscureText,
     this.controller,
+    this.style,
     this.validator,
     this.onSubmitted,
     this.hintText,
@@ -33,12 +36,14 @@ class CustomTextFormField extends StatelessWidget
 
   final double? height;
   final double? width;
+  final List<TextInputFormatter>? inputFormatters;
   final bool? isEnabled;
   final TextInputType? keyboardType;
   final bool? readOnly;
   final bool? obscureText;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
+  final TextStyle? style;
   final void Function(String)? onSubmitted;
   final String? hintText;
   final TextDirection? hintTextDirection;
@@ -58,6 +63,7 @@ class CustomTextFormField extends StatelessWidget
     return SizedBox(
       height: height, width: width ?? double.infinity,
       child: TextFormField(
+        inputFormatters: inputFormatters,
         enabled: isEnabled,
         keyboardType: keyboardType,
         readOnly: readOnly ?? false,
@@ -65,6 +71,7 @@ class CustomTextFormField extends StatelessWidget
         controller: controller,
         validator: validator,
         onFieldSubmitted: onSubmitted,
+        style: style,
         decoration: InputDecoration(
           hintText: hintText,
           hintTextDirection: hintTextDirection,

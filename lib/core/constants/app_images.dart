@@ -21,7 +21,8 @@ class _Icons
   final String pineapple = "assets/icons/OnBoarding/Pineapple.svg";
 
   /// [Login]
-  final String rightBlackArrow = "assets/icons/Login/Right_Black_Arrow.svg";
+  final String rightBlackArrow = "assets/icons/Login/Right_Black_Arrow _No_Circle.svg";
+  final String rightBlackArrowPNG = "assets/icons/Login/Right_Black_Arrow _No_Circle.png";
   final String eyeGrey = "assets/icons/Login/Eye_Grey.svg";
 
   final String google = "assets/icons/Login/Google.svg";
@@ -87,6 +88,7 @@ class _Icons
   final String editGreyV2 = "assets/icons/Personal_Info/Edit_Grey.svg";
   //[Payment_Methods]
   final String mastercard = "assets/icons/Payment_Methods/Mastercard.svg";
+  final String addWhiteV2 = "assets/icons/Payment_Methods/Add.svg";
 }
 
 ///-----------------------------------------------------------------//

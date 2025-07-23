@@ -24,11 +24,15 @@ import '../../features/09_checkout/presentation/screens/checkout_review_view.dar
 import '../../features/09_checkout/presentation/screens/checkout_ship_view.dart';
 import '../../features/09_checkout/presentation/screens/payment_success.dart';
 import '../../features/09_checkout/presentation/screens/track_order.dart';
-import '../../features/10_profile/presentation/screens/orders_history.dart';
+import '../../features/10_profile/presentation/screens/add_new_payment_card_view.dart';
+import '../../features/10_profile/presentation/screens/favourit_view.dart';
+import '../../features/10_profile/presentation/screens/orders_history_view.dart';
 import '../../features/10_profile/presentation/screens/payment_methods.dart';
 import '../../features/10_profile/presentation/screens/personal_info_view.dart';
 import '../../features/10_profile/presentation/screens/profile_menu_view.dart';
+import '../../features/10_profile/presentation/screens/who_we_are.dart';
 import 'app_routes.dart';
+import 'navigator.dart';
 import 'route_observer.dart';
 
 
@@ -41,7 +45,7 @@ abstract class AppRouter
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
     observers: [NavigatorObserverWithTracking(),],
-    initialLocation: AppRoutes.paymentMethods,
+    initialLocation: AppRoutes.splash,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
     [
@@ -92,12 +96,12 @@ abstract class AppRouter
       ),
 
 
-      ///[ Home Feature ]
-      GoRoute(
-        path: AppRoutes.home,
-        name: AppRoutes.home,
-        builder: (_, _) => const Home(),
-      ),
+      // ///[ Home Feature ]
+      // GoRoute(
+      //   path: AppRoutes.home,
+      //   name: AppRoutes.home,
+      //   builder: (_, _) => const Home(),
+      // ),
       //[Most Sold]
       GoRoute(
         path: AppRoutes.mostSold,
@@ -124,11 +128,11 @@ abstract class AppRouter
       ),
 
       ///[ Products Feature ]
-      GoRoute(
-        path: AppRoutes.products,
-        name: AppRoutes.products,
-        builder: (_, _) => const Products(),
-      ),
+      // GoRoute(
+      //   path: AppRoutes.products,
+      //   name: AppRoutes.products,
+      //   builder: (_, _) => const Products(),
+      // ),
 
       ///[ Filtered_Products Feature ]
       GoRoute(
@@ -144,12 +148,12 @@ abstract class AppRouter
         builder: (_, _) => const ItemDetails(),
       ),
 
-      ///[ Cart Feature]
-      GoRoute(
-        path: AppRoutes.cart,
-        name: AppRoutes.cart,
-        builder: (_, _) => const Cart(),
-      ),
+      // ///[ Cart Feature]
+      // GoRoute(
+      //   path: AppRoutes.cart,
+      //   name: AppRoutes.cart,
+      //   builder: (_, _) => const Cart(),
+      // ),
       
       ///[ Cart Feature]
       GoRoute(
@@ -198,11 +202,11 @@ abstract class AppRouter
 
       /// [ Profile ]
       // [Profile Menu]
-      GoRoute(
-        path: AppRoutes.profile,
-        name: AppRoutes.profile,
-        builder: (_, _) => const Profile(),
-      ),
+      // GoRoute(
+      //   path: AppRoutes.profile,
+      //   name: AppRoutes.profile,
+      //   builder: (_, _) => const Profile(),
+      // ),
       // [Personal Information]
       GoRoute(
         path: AppRoutes.personalInfo,
@@ -222,25 +226,82 @@ abstract class AppRouter
         builder: (_, _) => const PaymentMethods(),
       ),
 
-      // StatefulShellRoute.indexedStack(
-      //   builder: (_, __, navigationShell) => navigationShell,
-      //   branches:
-      //   [
-      //     /// Home
-      //     StatefulShellBranch(
-      //       initialLocation: AppRoutes.home,
-      //       routes: <RouteBase>
-      //       [
-      //         GoRoute(
-      //           path: AppRoutes.home,
-      //           name: AppRoutes.home,
-      //           builder: (_, _) => const Home(),
-      //           routes: []
-      //         ),
-      //       ],
-      //     ),
-      //   ],
-      // ),
+      GoRoute(
+        path: AppRoutes.addNewPaymentCard,
+        name: AppRoutes.addNewPaymentCard,
+        builder: (_, _) => const AddNewPaymentCard(),
+      ),
+
+      GoRoute(
+        path: AppRoutes.favourit,
+        name: AppRoutes.favourit,
+        builder: (_, _) => const Favourit(),
+      ),
+      
+      GoRoute(
+        path: AppRoutes.whoWeAre,
+        name: AppRoutes.whoWeAre,
+        builder: (_, _) => const WhoWeAre(),
+      ),
+
+      /// [ Stateful Shell ]
+      StatefulShellRoute.indexedStack(
+        builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
+        branches:
+        [
+          /// [Brach 0: Home]
+          StatefulShellBranch(
+            routes:
+            [
+              GoRoute(
+                path: AppRoutes.home,
+                name: AppRoutes.home,
+                builder: (_, __) => const Home(),
+                routes: [],
+              ),
+            ],
+          ),
+
+          /// [Branch 1: Products]
+          StatefulShellBranch(
+            routes:
+            [
+              GoRoute(
+                path: AppRoutes.products,
+                name: AppRoutes.products,
+                builder: (_, __) => const Products(),
+                routes: [],
+              ),
+            ],
+          ),
+
+          /// [Branch 2: Cart]
+          StatefulShellBranch(
+            routes:
+            [
+              GoRoute(
+                path: AppRoutes.cart,
+                name: AppRoutes.cart,
+                builder: (_, __) => const Cart(),
+                routes: [],
+              ),
+            ],
+          ),
+
+          /// [Branch 3: Profile]
+          StatefulShellBranch(
+            routes:
+            [
+              GoRoute(
+                path: AppRoutes.profile,
+                name: AppRoutes.profile,
+                builder: (_, __) => const Profile(),
+                routes: []
+              ),
+            ],
+          ),
+        ],
+      ),
     ]
   );
 }

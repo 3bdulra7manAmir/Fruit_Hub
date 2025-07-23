@@ -20,16 +20,19 @@ class RegisterButtonWidget extends StatelessWidget
       {
         if (!formKey.currentState!.validate())
         {
+          log("InValid Register...");
+          RegisterFullNameWidget.fullNameController.clear();
+          RegisterEmailWidget.emailController.clear();
+          RegisterPasswordWidget.passwordController.clear();
+        }
+        else
+        {
           log("Valid Register...");
           final fullname = RegisterFullNameWidget.fullNameController.text;
           final email = RegisterEmailWidget.emailController.text;
           final password = RegisterPasswordWidget.passwordController.text;
           log("$fullname \t $email \t $password");
           //AppRouter.router.pushNamed(AppRoutes.login);
-        }
-        else
-        {
-          log("InValid Register...");
         }
       },
     );

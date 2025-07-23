@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../03_home/presentation/widget/fruit_grid_list.dart';
 import '../../../03_home/presentation/widget/most_sold.dart';
@@ -19,9 +18,7 @@ class Products extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Scaffold(
-      appBar: const CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,),
-      body: CustomSingleChild(
+    return CustomSingleChild(
         children:
         [
           Sizes.s16.verticalSpace,
@@ -35,7 +32,6 @@ class Products extends StatelessWidget
           Sizes.s8.verticalSpace,
           const FruitGridListWidget(),
         ]
-      ),
     );
   }
 }

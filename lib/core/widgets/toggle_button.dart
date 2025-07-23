@@ -5,46 +5,59 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
-import '../../controller/language_controller.dart';
+import '../utils/toggle.dart';
 
-class SwitchButtonWidget extends ConsumerWidget
+class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWidget
 {
-  const SwitchButtonWidget({super.key});
+  const SwitchButtonWidget({
+    super.key,
+    required this.provider,
+    this.borderRadius,
+    this.width,
+    this.height,
+    this.circleSize,
+  });
+
+  final AutoDisposeNotifierProvider<T, bool> provider;
+  final BorderRadius? borderRadius;
+  final double? width;
+  final double? height;
+  final double? circleSize;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
-    final isSwitched = ref.watch(toggleSwitchLanguageProvider);
-    final BorderRadius borderRadius = AppRadiuses.circular.medium;
-    final double width = 29.w;
-    final double height = 17.h;
-    final double circleSize = 15.w;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isSwitched = ref.watch(provider);
+    final BorderRadius effectiveBorderRadius = borderRadius ?? AppRadiuses.circular.medium;
+    final double effectiveWidth = width ?? 29.w;
+    final double effectiveHeight = height ?? 17.h;
+    final double effectiveCircleSize = circleSize ?? 15.w;
     final EdgeInsetsGeometry padding = EdgeInsets.all(1.w);
 
     return GestureDetector(
       onTap: () {
         log(!isSwitched ? "True" : "False");
-        ref.read(toggleSwitchLanguageProvider.notifier).toggle();
+        (ref.read(provider.notifier) as ToggleSwitchBase).toggle();
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
-        width: width,
-        height: height,
+        width: effectiveWidth,
+        height: effectiveHeight,
         padding: padding,
         decoration: BoxDecoration(
-          color: isSwitched ? AppColors.color.kGreen001 : AppColors.color.kGrey023.withValues(alpha: 0.5),
-          borderRadius: borderRadius,
+          color: isSwitched
+              ? AppColors.color.kGreen001
+              : AppColors.color.kGrey023.withAlpha(128),
+          borderRadius: effectiveBorderRadius,
         ),
         alignment: isSwitched ? Alignment.centerLeft : Alignment.centerRight,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
-          width: circleSize,
-          height: circleSize,
+          width: effectiveCircleSize,
+          height: effectiveCircleSize,
           decoration: const BoxDecoration(
             color: Colors.white,
             shape: BoxShape.circle,
-            boxShadow:
-            [
+            boxShadow: [
               BoxShadow(
                 color: Color.fromARGB(15, 16, 24, 40),
                 offset: Offset(0, 1),
@@ -62,3 +75,5 @@ class SwitchButtonWidget extends ConsumerWidget
     );
   }
 }
+
+

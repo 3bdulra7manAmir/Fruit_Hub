@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/profile_menu/general_text.dart';
 import '../widget/profile_menu/help_text.dart';
@@ -21,39 +20,36 @@ class Profile extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Scaffold(
-      appBar: CustomAppBar(barTitle: "حسابي", isCustomBack: false,),
-      body: CustomSingleChild(
-        isMargin: false,
-        children:
-        [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:
-            [
-              Row(
-                children:
-                [
-                  UserProfileImg(),
-                  Sizes.s24.horizontalSpace,
-                  UserProfileInfo(),
-                ],
-              ),
-              Sizes.s16.verticalSpace,
-              GeneralTextWidget(),
-              Sizes.s16.verticalSpace,
-              OptionsMenuWidget(),
-              Sizes.s22.verticalSpace,
-              HelpTextWidget(),
-              Sizes.s16.verticalSpace,
-              WhoWeAreTextWidget(),
-            ]
-          ).marginSymmetric(horizontal: 16.w),
-          Sizes.s63.verticalSpace,
-          LogOutWidget(),
-          Sizes.s33.verticalSpace,
-        ]
-      ),
+    return CustomSingleChild(
+      isMargin: false,
+      children:
+      [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:
+          [
+            Row(
+              children:
+              [
+                UserProfileImg(),
+                Sizes.s24.horizontalSpace,
+                UserProfileInfo(),
+              ],
+            ),
+            Sizes.s16.verticalSpace,
+            GeneralTextWidget(),
+            Sizes.s16.verticalSpace,
+            OptionsMenuWidget(),
+            Sizes.s22.verticalSpace,
+            HelpTextWidget(),
+            Sizes.s16.verticalSpace,
+            WhoWeAreTextWidget(),
+          ]
+        ).marginSymmetric(horizontal: 16.w),
+        Sizes.s63.verticalSpace,
+        LogOutWidget(),
+        Sizes.s33.verticalSpace,
+      ]
     );
   }
 }

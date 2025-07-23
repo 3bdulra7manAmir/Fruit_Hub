@@ -6,21 +6,19 @@ part of 'theme_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$themeModeNotifierHash() => r'c0590b9e36d74bd4b09d91c0a8406380cf4d7134';
+String _$themeHash() => r'd4107da707e9878a50961d579e022d33c24b9a47';
 
-/// See also [ThemeModeNotifier].
-@ProviderFor(ThemeModeNotifier)
-final themeModeNotifierProvider =
-    AutoDisposeNotifierProvider<ThemeModeNotifier, ThemeMode>.internal(
-  ThemeModeNotifier.new,
-  name: r'themeModeNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$themeModeNotifierHash,
+/// See also [Theme].
+@ProviderFor(Theme)
+final themeProvider = AutoDisposeNotifierProvider<Theme, ThemeMode>.internal(
+  Theme.new,
+  name: r'themeProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$themeHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$ThemeModeNotifier = AutoDisposeNotifier<ThemeMode>;
+typedef _$Theme = AutoDisposeNotifier<ThemeMode>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../config/localization/app_localizations.dart';
+import '../../config/i18n/generated/l10n.dart';
 import '../constants/app_styles.dart';
 
 class CustomErrorWidget extends StatelessWidget
@@ -12,6 +12,6 @@ class CustomErrorWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Center(child: Text('${S.of(context)!.error}: $e', style: AppStyles.black(),));
+    return Center(child: Text('${S.current.error}: $e', style: AppStyles.black(),));
   }
 }

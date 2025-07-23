@@ -1,5 +1,7 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -7,7 +9,10 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import 'switch_button.dart';
+import '../../../../../core/widgets/toggle_button.dart';
+import '../../controller/language_informer.dart';
+import '../../controller/notification_controller.dart';
+import '../../controller/theme_informer.dart';
 
 class ProfileOptions extends StatelessWidget
 {
@@ -91,36 +96,34 @@ class OptionsMenuWidget extends StatelessWidget
           leading: "assets/icons/Profile/Bill_Green.svg",
           title: "الاشعارات",
           isArrow: false,
-          caseWidget: SwitchButtonWidget(),
+          caseWidget: SwitchButtonWidget(provider: toggleSwitchNotificationsProvider,),
           onTap: ()
           {
             log("Notifications has been Pressed...");
             //AppRouter.router.pushNamed(AppRoutes.);
           },
         ),
-        ProfileOptions(
-          leading: "assets/icons/Profile/Language_Green.svg",
-          title: "اللغة",
-          isArrow: false,
-          caseWidget: Row(
-            mainAxisSize: MainAxisSize.min,
-            children:
-            [
-              Text("العربية", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
-              Sizes.s2.horizontalSpace,
-              SvgPicture.asset("assets/icons/Profile/Left_Black_Arrow.svg"),
-            ],
+        Consumer(
+          builder: (context, ref, child) => ProfileOptions(
+            leading: "assets/icons/Profile/Language_Green.svg",
+            title: "اللغة",
+            isArrow: false,
+            caseWidget: Row(
+              mainAxisSize: MainAxisSize.min,
+              children:
+              [
+                Text("العربية", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
+                Sizes.s2.horizontalSpace,
+                SvgPicture.asset("assets/icons/Profile/Left_Black_Arrow.svg"),
+              ],
+            ),
+            onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
           ),
-          onTap: ()
-          {
-            log("Language has been Pressed...");
-            //AppRouter.router.pushNamed(AppRoutes.);
-          },
         ),
         ProfileOptions(
           leading: "assets/icons/Profile/Magic_Green.svg",
           isArrow: false,
-          caseWidget: SwitchButtonWidget(),
+          caseWidget: SwitchButtonWidget(provider: themeInformerProvider,),
           title: "الوضع",
           onTap: ()
           {

@@ -1,8 +1,9 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../config/theme/color_manager/colors.dart';
+import '../../constants/app_borders.dart';
+import '../../constants/app_styles.dart';
 
 class NavBarItemWidget extends StatelessWidget
 {
@@ -14,7 +15,7 @@ class NavBarItemWidget extends StatelessWidget
     required this.activeIconColor,
     required this.activeTitleColor,
     required this.inactiveColor,
-    required this.icon,
+    required this.activeIcon,
     required this.inactiveIcon,
     required this.title,
     required this.showActiveBackgroundColor,
@@ -32,7 +33,7 @@ class NavBarItemWidget extends StatelessWidget
   final Color activeIconColor;
   final Color activeTitleColor;
   final Color inactiveColor;
-  final String icon;
+  final Widget activeIcon;
   final Widget? inactiveIcon;
   final String? title;
   final bool showActiveBackgroundColor;
@@ -57,7 +58,7 @@ class NavBarItemWidget extends StatelessWidget
           shape: border,
           child: InkWell(
             onTap: isSelected ? null : onTap,
-            borderRadius: BorderRadius.circular(20.r),
+            borderRadius: AppRadiuses.circular.xXMedium,
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             child: Stack(
@@ -67,25 +68,23 @@ class NavBarItemWidget extends StatelessWidget
               [
                 if (isSelected && title != null)
                   Container(
-                    height: 40.h, alignment: Alignment.center,
-                    padding: EdgeInsets.only(left: 54.r * value, right: 12.r),
+                    height: 40.h,
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.only(left: 40.r * value, right: 12.r),
                     decoration: BoxDecoration(
                       color: activeBackgroundColor,
-                      borderRadius: BorderRadius.circular(20.r),
+                      borderRadius: AppRadiuses.circular.xMedium,
                     ),
-                    child: Text(title!, style: textStyle.copyWith(color: activeTitleColor),),
+                    child: Text(title!, style: AppStyles.light(fontColor: AppColors.color.kGreen001),),
                   ),
-                Container(height: 60.h,
+                Container(
+                  height: 60.h,
                   padding: EdgeInsets.all(10.r),
                   decoration: BoxDecoration(
                     color: Color.lerp(Colors.transparent, activeIconColor, value),
                     shape: BoxShape.circle,
                   ),
-                  child: SvgPicture.asset(icon,
-                    color: isSelected ? Colors.white : activeIconColor,
-                    height: 24.h,
-                    width: 24.h,
-                  ),
+                  child: isSelected ? activeIcon : (inactiveIcon ?? activeIcon),
                 ),
               ],
             ),

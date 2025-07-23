@@ -3,10 +3,10 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'config/localization/app_localizations.dart';
-import 'config/localization/localization_controller/localization_controller.dart';
-import 'config/router/app_router.dart';
+import 'config/i18n/generated/l10n.dart';
 import 'config/theme/theme_controller/theme_controller.dart';
+import 'core/services/localization/localization_controller.dart';
+import 'config/router/app_router.dart';
 import 'config/theme/theme_manager/themes.dart';
 
 class ECommerceApp extends ConsumerWidget
@@ -16,8 +16,8 @@ class ECommerceApp extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final themeProvider = ref.watch(themeModeNotifierProvider);
-    final localProvider = ref.watch(localeNotifierProvider);
+    final themesProvider = ref.watch(themeProvider);
+    final localProvider = ref.watch(localizationProvider);
     return DevicePreview(
       //enabled: false,
       builder: (context) => ScreenUtilInit(
@@ -26,18 +26,19 @@ class ECommerceApp extends ConsumerWidget
           routerConfig: AppRouter.router,
           
           localizationsDelegates:
-          const [
+          const
+          [
             S.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          supportedLocales: S.supportedLocales,
+          supportedLocales: S.delegate.supportedLocales,
           locale: localProvider,
       
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),
-          themeMode: themeProvider,
+          themeMode: themesProvider,
           
           debugShowCheckedModeBanner: false,
         ),

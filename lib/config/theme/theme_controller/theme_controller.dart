@@ -5,7 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'theme_controller.g.dart';
 
 @riverpod
-class ThemeModeNotifier extends _$ThemeModeNotifier
+class Theme extends _$Theme
 {
   @override
   ThemeMode build() 

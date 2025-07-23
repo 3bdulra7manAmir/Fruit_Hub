@@ -24,13 +24,13 @@ class FirstPasswordFieldWidget extends ConsumerWidget
       keyboardType: TextInputType.visiblePassword,
       validator: (value) => AppValidation.passwordValidation(value, context),
       hintText: "كلمة المرور الجديدة",
-      obscureText: !obscureProvider,
+      obscureText: obscureProvider,
       suffixIcon: GestureDetector(
         onTap: ()
         {
           ref.read(firstObscurePasswordProvider.notifier).toggle();
         },
-        child: obscureProvider ? 
+        child: !obscureProvider ? 
         SvgPicture.asset(AppAssets.icons.eyeGrey,).paddingDirectionalOnly(end: 30.w,)
         : const Icon(Icons.visibility_off, color: Color(0xffC9CECF),).paddingDirectionalOnly(end: 30.w,),
       ),

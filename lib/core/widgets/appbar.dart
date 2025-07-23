@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../config/router/app_router.dart';
 import '../../config/router/app_routes.dart';
+import '../../config/theme/color_manager/colors.dart';
 import '../../features/03_home/presentation/widget/user_appbar/notifications_bill.dart';
 import '../constants/app_images.dart';
 import '../constants/app_margins.dart';
@@ -58,8 +59,29 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   Size get preferredSize => Size.fromHeight(kToolbarHeight + (toolbarHeight ?? 0));
 
   GestureDetector backButtonOnTap(BuildContext context) => 
-  GestureDetector(onTap: () => leadingOnTap(context), child: barLeading ?? SvgPicture.asset(AppAssets.icons.rightBlackArrow),);
+  GestureDetector(onTap: () => leadingOnTap(context), child: barLeading ?? BackButtonWidget(),
+  );
+  //GestureDetector(onTap: () => leadingOnTap(context), child: barLeading ?? SvgPicture.asset(AppAssets.icons.rightBlackArrow),);
 }
+
+  class BackButtonWidget extends StatelessWidget
+  {
+    const BackButtonWidget({super.key});
+  
+    @override
+    Widget build(BuildContext context)
+    {
+      return Container(
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: AppColors.color.kWhite001,
+          shape: BoxShape.circle,
+          border: Border.all(color: AppColors.color.kGrey014, ),
+        ),
+        child: SvgPicture.asset(AppAssets.icons.rightBlackArrow,),
+      );
+    }
+  }
 
   GestureDetector billOnTap(context) => 
   GestureDetector(onTap: ()

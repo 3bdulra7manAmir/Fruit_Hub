@@ -7,7 +7,7 @@ part of 'notification_controller.dart';
 // **************************************************************************
 
 String _$toggleSwitchNotificationsHash() =>
-    r'8004b3299873da2dd638af4f3c247a4e1178be15';
+    r'849112c79e0323e6d52f2e4ac8d8de991b656632';
 
 /// See also [ToggleSwitchNotifications].
 @ProviderFor(ToggleSwitchNotifications)

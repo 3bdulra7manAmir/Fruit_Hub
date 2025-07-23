@@ -27,12 +27,16 @@ class LoginButtonWidget extends StatelessWidget
           log("$email \t $password");
           if (email == "shadow@gmail.com" && password == "12345678aA#")
           {
+            LoginEmailWidget.emailController.clear();
+            LoginPasswordWidget.passwordController.clear();
             AppRouter.router.pushNamed(AppRoutes.home);
           }
         }
         else
         {
           log("InValid Login...");
+          LoginEmailWidget.emailController.clear();
+          LoginPasswordWidget.passwordController.clear();
         }
       },  
     );

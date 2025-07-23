@@ -14,7 +14,7 @@ dependencies:
     sdk: flutter
 
   # Core packages
-  intl: any
+  intl: ^0.20.2
   equatable: ^2.0.7
   dartz: ^0.10.1
 
@@ -22,8 +22,6 @@ dependencies:
   cached_network_image: ^3.4.1
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.0
-  flutter_otp_text_field: ^1.5.1+1
-  persistent_bottom_nav_bar: ^6.2.1
   dots_indicator: ^4.0.1
   percent_indicator: ^4.2.5
 
@@ -55,6 +53,8 @@ dev_dependencies:
   # Analyzer (manual pins to avoid conflicts)
   analyzer: 6.11.0
   analyzer_plugin: 0.11.3
+
+  intl_utils: ^2.8.2
 
 flutter:
   uses-material-design: true
@@ -106,9 +106,17 @@ flutter:
     - assets/icons/Payment_Methods/
     - assets/icons/Personal_Info/
     - assets/icons/Orders_History/
+    - assets/icons/NavBar/
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/
     - assets/imgs/Items_Details/
 
     - assets/jsons/
+
+flutter_intl:
+  enabled: true
+  arb_dir: lib/config/i18n/l10n
+  output_dir: lib/config/i18n/generated
+  class_name: S
+  main_locale: ar

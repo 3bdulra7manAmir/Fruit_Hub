@@ -19,14 +19,14 @@ class ForgetPasswordButtonWidget extends StatelessWidget
     {
       if (!formKey.currentState!.validate())
         {
+          log("InValid ForgetPassword...");
+        }
+        else
+        {
           log("Valid ForgetPassword...");
           log(PhoneNumberWidget.phoneController.text);
           PhoneNumberWidget.phoneController.clear();
           AppRouter.router.pushNamed(AppRoutes.passwordRecoveryEmail);
-        }
-        else
-        {
-          log("InValid ForgetPassword...");
         }
     }, text: "نسيت كلمة المرور");
   }

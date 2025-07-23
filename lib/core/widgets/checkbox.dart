@@ -41,17 +41,3 @@ class CustomCheckbox extends StatelessWidget
     );
   }
 }
-
-// shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXSmall),
-//       side: BorderSide(color: AppColors.color.kGrey005, width: 1.5.w),
-//       fillColor: WidgetStateProperty.resolveWith((states)
-//       {
-//         if (states.contains(WidgetState.selected))
-//         {
-//           return AppColors.color.kGreen001;
-//         }
-//         return null;
-//       }),
-//       value: isChecked,
-//       onChanged: (_) => ref.read(checkboxNotifierProvider.notifier).toggle(),
-//     );

@@ -24,13 +24,13 @@ class LoginPasswordWidget extends ConsumerWidget
       controller: passwordController,
       validator: (value) => AppValidation.passwordValidation(value, context),
       hintText: "كلمة المرور",
-      obscureText: !obscureProvider,
+      obscureText: obscureProvider,
       suffixIcon: GestureDetector(
         onTap: ()
         {
           ref.read(loginObscurePasswordProvider.notifier).toggle();
         },
-        child: obscureProvider ? 
+        child: !obscureProvider ? 
         SvgPicture.asset(AppAssets.icons.eyeGrey,).paddingDirectionalOnly(end: 30.w,)
         : const Icon(Icons.visibility_off, color: Color(0xffC9CECF),).paddingDirectionalOnly(end: 30.w,),
       ),

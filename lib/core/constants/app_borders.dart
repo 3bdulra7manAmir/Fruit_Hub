@@ -28,7 +28,7 @@ class BorderCircular
   BorderRadius get xXXXXSmall => BorderRadius.circular(4.r);
 
   /// [circular: 5.r]
-  BorderRadius get xXXXSmall => BorderRadius.circular(5.r);
+  BorderRadius get noSearchResults => BorderRadius.circular(5.r);
 
   /// [circular: 6.r]
   BorderRadius get xXXSmall => BorderRadius.circular(6.r);
@@ -44,6 +44,12 @@ class BorderCircular
 
   /// [circular: 16.r]
   BorderRadius get medium => BorderRadius.circular(16.r);
+
+  /// [circular: 20.r]
+  BorderRadius get xMedium => BorderRadius.circular(20.r);
+
+  /// [circular: 30.r]
+  BorderRadius get xXMedium => BorderRadius.circular(30.r);
 
   /// [circular: 50.r]
   BorderRadius get large => BorderRadius.circular(50.r);

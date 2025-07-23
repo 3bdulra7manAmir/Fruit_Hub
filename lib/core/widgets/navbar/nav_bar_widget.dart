@@ -1,12 +1,10 @@
 // ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'nav_bar_item_widget.dart';
 import 'nav_bar_model.dart';
 
-class CustomNavBar extends StatelessWidget
-{
+class CustomNavBar extends StatelessWidget {
   const CustomNavBar({
     super.key,
     required this.currentIndex,
@@ -35,8 +33,7 @@ class CustomNavBar extends StatelessWidget
   final TextStyle textStyle;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     final isLight = Theme.of(context).brightness == Brightness.light;
     final inactiveColor = isLight ? const Color(0xFF505050) : const Color(0xF2FFFFFF);
 
@@ -45,8 +42,7 @@ class CustomNavBar extends StatelessWidget
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20.r),
-        boxShadow:
-        const [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 6,
             offset: Offset(3, 0),
@@ -56,10 +52,10 @@ class CustomNavBar extends StatelessWidget
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(items.length, (index)
-        {
+        children: List.generate(items.length, (index) {
           final item = items[index];
           final activeColor = item.activeColor ?? Colors.blue;
+
           return NavBarItemWidget(
             index: index,
             isSelected: index == currentIndex,
@@ -67,7 +63,7 @@ class CustomNavBar extends StatelessWidget
             activeIconColor: item.activeIconColor ?? activeColor,
             activeTitleColor: item.activeTitleColor ?? activeColor,
             inactiveColor: item.inactiveColor ?? inactiveColor,
-            icon: item.icon,
+            activeIcon: item.activeIcon,
             inactiveIcon: item.inactiveIcon,
             title: item.title,
             showActiveBackgroundColor: showActiveBackgroundColor,

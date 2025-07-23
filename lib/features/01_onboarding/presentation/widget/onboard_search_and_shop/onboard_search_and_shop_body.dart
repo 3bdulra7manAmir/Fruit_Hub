@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../config/localization/app_localizations.dart';
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -35,7 +35,7 @@ class SearchAndShop extends StatelessWidget
             [
               const SearchAndShopTitleWidget(),
               Sizes.s24.verticalSpace,
-              WelcomeSubtitleWidget(text: S.of(context)!.onBoarding2Description,),
+              WelcomeSubtitleWidget(text: S.current.onBoarding2Description,),
             ],
           ),
         ],
@@ -51,7 +51,7 @@ class SearchAndShopTitleWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text(S.of(context)!.searchAndShop, 
+    return Text(S.current.searchAndShop, 
     style: AppStyles.black(fontWeight: AppFontWeights.boldWeight),
   );
   }
