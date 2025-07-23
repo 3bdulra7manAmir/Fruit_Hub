@@ -44,6 +44,8 @@ class _Icons
   // [Most Sold]
   final String hartBlack = "assets/icons/Home/Hart_Black.svg";
   final String addGreen = "assets/icons/Home/Add_Green.svg";
+  final String crossBlack = "assets/icons/Home/Cross_Black.svg";
+  final String crossWhite = "assets/icons/Home/Cross_White.svg";
 
   ///[Search]
   final String noSearchResults= "assets/icons/Search/No_Search_Results.svg";
@@ -89,6 +91,10 @@ class _Icons
   //[Payment_Methods]
   final String mastercard = "assets/icons/Payment_Methods/Mastercard.svg";
   final String addWhiteV2 = "assets/icons/Payment_Methods/Add.svg";
+
+  //[Favourit]
+  final String hartFilledPNG = "assets/icons/Favourit/Hart_Filled_Red.png";
+  final String hartFilled = "assets/icons/Favourit/Hart_Filled_Red.svg";
 }
 
 ///-----------------------------------------------------------------//

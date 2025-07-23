@@ -139,6 +139,9 @@ class LightColorScheme extends ColorManagerBase
   @override
   /// [_28B446]
   Color get kGreen009 => const Color(0xff28B446);
+  @override
+  /// [_217242]
+  Color get kGreen010 => const Color(0xff217242);
 
   // Orange Color Range
   @override

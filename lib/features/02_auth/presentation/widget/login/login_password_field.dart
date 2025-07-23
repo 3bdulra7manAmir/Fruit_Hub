@@ -13,7 +13,7 @@ class LoginPasswordWidget extends ConsumerWidget
 {
   const LoginPasswordWidget({super.key});
 
-  static final TextEditingController passwordController = TextEditingController();
+  static final TextEditingController passwordController = TextEditingController(text: "12345678aA#");
 
   @override
   Widget build(BuildContext context, WidgetRef ref)

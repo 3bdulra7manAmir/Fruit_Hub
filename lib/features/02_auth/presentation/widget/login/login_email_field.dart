@@ -7,7 +7,7 @@ class LoginEmailWidget extends StatelessWidget
 {
   const LoginEmailWidget({super.key});
 
-  static final TextEditingController emailController = TextEditingController();
+  static final TextEditingController emailController = TextEditingController(text: "shadow@gmail.com");
 
   @override
   Widget build(BuildContext context)

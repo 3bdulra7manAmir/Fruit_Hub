@@ -26,6 +26,17 @@ extension LocalizedStringExtension on String
     if (!isAr && isDark) return enDark;
     return enLight;
   }
+
+  String darkOrLight(BuildContext context,
+  {
+    required String dark,
+    required String light,
+  })
+  {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return isDark ? dark : light;
+  }
+  
 }
 
 

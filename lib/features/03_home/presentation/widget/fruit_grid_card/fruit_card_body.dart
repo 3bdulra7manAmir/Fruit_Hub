@@ -18,34 +18,32 @@ class FruitGridCardWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return ClipRRect(
-      borderRadius: AppRadiuses.circular.xXXXXSmall,
-      child: Card(
-        color: AppColors.color.kGrey008,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:
-          [
-            Sizes.s8.verticalSpace,
-            const FavouriteWidget(),
-            const Expanded(child: WatermelonWidget(),),
-            Sizes.s12.verticalSpace,
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:
-              [
-                const Expanded(child: FruitGridPriceWidget()),
-                GestureDetector(
-                  onTap: () {log("Add has been Pressed...");},
-                  child: const FruitAddButtonWidget()
-                ),
-              ],
-            ),
-            Sizes.s20.verticalSpace,
-          ],
-        ).marginSymmetric(horizontal: 8.w),
-      ),
+    return Card(
+      color: AppColors.color.kGrey008,
+      shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXXSmall,),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children:
+        [
+          Sizes.s8.verticalSpace,
+          const FavouriteWidget(),
+          const Expanded(child: WatermelonWidget(),),
+          Sizes.s12.verticalSpace,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:
+            [
+              const Expanded(child: FruitGridPriceWidget()),
+              GestureDetector(
+                onTap: () {log("Add has been Pressed...");},
+                child: const FruitAddButtonWidget()
+              ),
+            ],
+          ),
+          Sizes.s20.verticalSpace,
+        ],
+      ).marginSymmetric(horizontal: 8.w),
     );
   }
 }
