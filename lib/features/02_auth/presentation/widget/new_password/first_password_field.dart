@@ -26,10 +26,7 @@ class FirstPasswordFieldWidget extends ConsumerWidget
       hintText: 'كلمة المرور الجديدة',
       obscureText: obscureProvider,
       suffixIcon: GestureDetector(
-        onTap: ()
-        {
-          ref.read(firstObscurePasswordProvider.notifier).toggle();
-        },
+        onTap: () => ref.read(firstObscurePasswordProvider.notifier).toggle(),
         child: !obscureProvider ? 
         SvgPicture.asset(AppAssets.icons.eyeGrey,).paddingDirectionalOnly(end: 30.w,)
         : const Icon(Icons.visibility_off, color: Color(0xffC9CECF),).paddingDirectionalOnly(end: 30.w,),

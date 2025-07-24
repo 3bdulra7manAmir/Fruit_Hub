@@ -9,7 +9,7 @@ class FavouriteImg extends _$FavouriteImg
   @override
   bool build()
   {
-    const initialValue = true;
+    const initialValue = false;
     log('Initial Favourit State: $initialValue');
     return initialValue;
   }

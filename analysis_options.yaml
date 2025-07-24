@@ -14,8 +14,6 @@ linter:
     prefer_final_fields: true                    # Use `final` for fields that are never reassigned
     prefer_final_locals: true                    # Use `final` for variables that are not reassigned
     
-
-
     # ------------------------------------------------------------------------------
     # Important Warnings & Best Practices
     # ------------------------------------------------------------------------------

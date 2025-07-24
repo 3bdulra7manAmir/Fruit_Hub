@@ -17,11 +17,10 @@ class PaymentMethods extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    log('Width: ${1.sw}, Height: ${1.sh}');
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: 'المدفوعات', isCustomBack: true, isNotifications: true,
-        actions: [SvgPicture.asset(AppAssets.icons.editGreyV2, )],
+        actions: [PaymentActionWidget()],
       ),
       body: CustomSingleChild(
         children:
@@ -29,14 +28,27 @@ class PaymentMethods extends StatelessWidget
           Sizes.s16.verticalSpace,
           const PaymentMethodsListWidget(),
           if (1.sw <= 427 && 1.sh <= 952)...
-          [
-            Sizes.s150.verticalSpace,
-          ]
+          [Sizes.s150.verticalSpace,]
           else...[Sizes.s300.verticalSpace,],
           const AddNewPaymentMethodButtonWidget(),
           Sizes.s16.verticalSpace,
         ]
       ),
+    );
+  }
+}
+
+
+class PaymentActionWidget extends StatelessWidget
+{
+  const PaymentActionWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return GestureDetector(
+      onTap: () {log('Edit...');},
+      child: SvgPicture.asset(AppAssets.icons.editGreyV2,),
     );
   }
 }

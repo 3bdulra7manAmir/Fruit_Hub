@@ -22,8 +22,8 @@ class FavouriteWidget extends ConsumerWidget
         ref.read(favouriteImgProvider.notifier).toggle();
       },
       child: isFavouritProvider ? //ShadowCompany
-      SvgPicture.asset(AppAssets.icons.hartBlack)
-      : Image.asset(AppAssets.icons.hartFilledPNG),
+      Image.asset(AppAssets.icons.hartFilledPNG)
+      : SvgPicture.asset(AppAssets.icons.hartBlack),
     );
   }
 }

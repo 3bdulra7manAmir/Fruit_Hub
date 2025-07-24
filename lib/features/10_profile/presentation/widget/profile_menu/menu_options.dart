@@ -74,7 +74,7 @@ class OptionsMenuWidget extends StatelessWidget
           onTap: ()
           {
             log('Orders has been Pressed...');
-            //AppRouter.router.pushNamed(AppRoutes.);
+            AppRouter.router.pushNamed(AppRoutes.ordersHistory);
           },
         ),
         ProfileOptions(
@@ -83,7 +83,7 @@ class OptionsMenuWidget extends StatelessWidget
           onTap: ()
           {
             log('Payments has been Pressed...');
-            //AppRouter.router.pushNamed(AppRoutes.);
+            AppRouter.router.pushNamed(AppRoutes.paymentMethods);
           },
         ),
         ProfileOptions(
@@ -92,7 +92,7 @@ class OptionsMenuWidget extends StatelessWidget
           onTap: ()
           {
             log('Favourit has been Pressed...');
-            //AppRouter.router.pushNamed(AppRoutes.);
+            AppRouter.router.pushNamed(AppRoutes.favourit);
           },
         ),
         ProfileOptions(
@@ -107,6 +107,7 @@ class OptionsMenuWidget extends StatelessWidget
             leading: 'assets/icons/Profile/Language_Green.svg',
             title: 'اللغة',
             isArrow: false,
+            onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
             caseWidget: Row(
               mainAxisSize: MainAxisSize.min,
               children:
@@ -116,7 +117,6 @@ class OptionsMenuWidget extends StatelessWidget
                 SvgPicture.asset(AppAssets.icons.leftBlackArrow),
               ],
             ),
-            onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
           ),
         ),
         ProfileOptions(
@@ -124,10 +124,7 @@ class OptionsMenuWidget extends StatelessWidget
           isArrow: false,
           caseWidget: SwitchButtonWidget(provider: themeInformerProvider,),
           title: 'الوضع',
-          onTap: ()
-          {
-            log('Theme has been Pressed...');
-          },
+          onTap: () {log('Theme has been Pressed...');},
         ),
       ]
     );
