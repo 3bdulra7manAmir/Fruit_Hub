@@ -75,8 +75,6 @@ abstract class ColorManagerBase
   Color get kBlack003;
   /// [_000000]
   Color get kBlack004;
-  // /// [_0D0D0D]
-  // Color get kBlack005;
 
   // Green Color Range
   /// [_1B5E37]

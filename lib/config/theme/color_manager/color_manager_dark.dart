@@ -108,10 +108,7 @@ class DarkColorScheme extends ColorManagerBase
   Color get kBlack003 => const Color(0xff06161C);
   @override
   /// [_000000]
-  Color get kBlack004 => const Color(0xff000000); 
-  // @override
-  // /// [_0D0D0D]
-  // Color get kBlack005 => const Color(0xff0D0D0D);   
+  Color get kBlack004 => const Color(0xff000000);   
   
   // Green Color Range
   @override

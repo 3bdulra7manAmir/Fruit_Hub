@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -63,7 +65,7 @@ class OptionsMenuWidget extends StatelessWidget
           onTap: ()
           {
             log('Profile has been Pressed...');
-            //AppRouter.router.pushNamed(AppRoutes.);
+            AppRouter.router.pushNamed(AppRoutes.personalInfo);
           },
         ),
         ProfileOptions(
@@ -97,12 +99,8 @@ class OptionsMenuWidget extends StatelessWidget
           leading: 'assets/icons/Profile/Bill_Green.svg',
           title: 'الاشعارات',
           isArrow: false,
-          caseWidget: SwitchButtonWidget(provider: toggleSwitchNotificationsProvider,),
-          onTap: ()
-          {
-            log('Notifications has been Pressed...');
-            //AppRouter.router.pushNamed(AppRoutes.);
-          },
+          caseWidget: SwitchButtonWidget(provider: toggleSwitchNotificationsProvider),
+          onTap: () => log('Notifications has been Pressed...'),
         ),
         Consumer(
           builder: (context, ref, child) => ProfileOptions(
@@ -129,9 +127,8 @@ class OptionsMenuWidget extends StatelessWidget
           onTap: ()
           {
             log('Theme has been Pressed...');
-            //AppRouter.router.pushNamed(AppRoutes.);
           },
-        )
+        ),
       ]
     );
   }

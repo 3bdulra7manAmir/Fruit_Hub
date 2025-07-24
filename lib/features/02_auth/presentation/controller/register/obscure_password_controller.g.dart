@@ -7,7 +7,7 @@ part of 'obscure_password_controller.dart';
 // **************************************************************************
 
 String _$registerObscurePasswordHash() =>
-    r'a0382398ed8d09b698e9c3a0b59c0534c2fa31c9';
+    r'90cf6cbfba9cc3d94d42a2e0f019bf59d8ba6769';
 
 /// See also [RegisterObscurePassword].
 @ProviderFor(RegisterObscurePassword)

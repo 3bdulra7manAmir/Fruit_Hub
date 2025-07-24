@@ -28,7 +28,7 @@ class AppTheme
   {
     return ThemeData(
       useMaterial3: true,
-      brightness: Brightness.light,
+      brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColors.color.kWhite001,
       cardTheme: DarkThemeStyles.cardTheme,
 

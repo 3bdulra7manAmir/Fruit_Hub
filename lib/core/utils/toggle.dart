@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-mixin ToggleSwitchBase on AutoDisposeNotifier<bool>
+mixin ToggleSwitchBase
 {
-  void toggle() => state = !state;
+  void toggle() => throw UnimplementedError('toggle must be overridden');
 }
