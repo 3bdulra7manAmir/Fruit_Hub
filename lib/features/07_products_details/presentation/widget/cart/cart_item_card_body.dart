@@ -1,9 +1,9 @@
-import 'package:e_commerce_app/core/extensions/widget_padding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/extensions/widget_padding.dart';
 import 'cart_item_img.dart';
 import 'cart_item_price.dart';
 import 'cart_item_quantity.dart';

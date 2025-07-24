@@ -9,8 +9,17 @@ class PopScopeWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return PopScope(
-      //onPopInvokedWithResult: (didPop, result) => , 
-      child: child,
+      onPopInvokedWithResult: (didPop, result)
+      {
+        if (didPop)
+        {
+          
+        }
+        else
+        {
+          
+        }
+      }, child: child,
     );
   }
 }

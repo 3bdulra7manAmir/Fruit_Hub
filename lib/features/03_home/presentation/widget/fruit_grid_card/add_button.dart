@@ -1,12 +1,12 @@
 // ignore_for_file: unused_import
 
-import 'package:e_commerce_app/core/extensions/string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/extensions/string.dart';
 
 class FruitAddButtonWidget extends StatelessWidget
 {

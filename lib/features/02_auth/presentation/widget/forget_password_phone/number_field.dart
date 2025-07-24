@@ -21,7 +21,7 @@ class PhoneNumberWidget extends StatelessWidget
       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
       controller: phoneController,
       validator: (value) => AppValidation.phoneNumberValidation(value, context),
-      hintText: "+20 123 567 8911",
+      hintText: '+20 123 567 8911',
       hintStyle: AppStyles.bold(fontColor: AppColors.color.kBlack001,
         fontWeight: AppFontWeights.semiBoldWeight,),
       hintTextDirection: TextDirection.ltr,

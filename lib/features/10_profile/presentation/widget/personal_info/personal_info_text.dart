@@ -10,6 +10,6 @@ class PersonalInfoTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("المعلومات الشخصيه", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),);
+    return Text('المعلومات الشخصيه', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),);
   }
 }

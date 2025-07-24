@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/checkout_payment/card_auth_info.dart';
 import '../widget/checkout_payment/card_number_textfield.dart';
@@ -28,7 +28,7 @@ class _CheckoutPaymentState extends State<CheckoutPayment>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: titles[currentStep]),
+      appBar: CustomAppBar(title: titles[currentStep]),
       body: CustomSingleChild(
         children:
         [
@@ -37,19 +37,19 @@ class _CheckoutPaymentState extends State<CheckoutPayment>
             child: PaymentStepsListWidget(currentStep: currentStep),
           ),
           Sizes.s24.verticalSpace,
-          ChooseSuitablePaymentTextWidget(),
+          const ChooseSuitablePaymentTextWidget(),
           Sizes.s13.verticalSpace,
-          PleaseChooseSuitablePaymentTextWidget(),
+          const PleaseChooseSuitablePaymentTextWidget(),
           Sizes.s13.verticalSpace,
-          SizedBox(height: 43.h, child: PaymentMethodsListWidget()),
+          SizedBox(height: 43.h, child: const PaymentMethodsListWidget()),
           Sizes.s16.verticalSpace,
-          CardOwnerNameWidget(),
+          const CardOwnerNameWidget(),
           Sizes.s8.verticalSpace,
-          CardNumberWidget(),
+          const CardNumberWidget(),
           Sizes.s8.verticalSpace,
-          CardAuthInfoWidget(),
+          const CardAuthInfoWidget(),
           Sizes.s18.verticalSpace,
-          MakeCardAsDeafultWidget(),
+          const MakeCardAsDeafultWidget(),
           Sizes.s60.verticalSpace,
           CheckOutNavButtonsWidget(
             currentStep: currentStep,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_borders.dart';
-import '../../../../../core/constants/app_images.dart';
+import '../../../../config/theme/color_manager/colors.dart';
+import '../../../constants/app_borders.dart';
+import '../../../constants/app_images.dart';
 
 class UserImgWidget extends StatelessWidget
 {

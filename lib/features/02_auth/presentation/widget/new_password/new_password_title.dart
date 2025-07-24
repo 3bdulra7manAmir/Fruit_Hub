@@ -11,7 +11,7 @@ class NewPasswordTitleWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(
-      "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
+      'قم بإنشاء كلمة مرور جديدة لتسجيل الدخول',
       style: AppStyles.bold(
         fontColor: AppColors.color.kBlack001, 
         fontWeight: AppFontWeights.semiBoldWeight

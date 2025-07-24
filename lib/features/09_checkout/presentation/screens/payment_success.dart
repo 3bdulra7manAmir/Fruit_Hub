@@ -1,10 +1,11 @@
 import 'dart:developer';
-import 'package:e_commerce_app/core/extensions/widget_align.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/extensions/widget_align.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/nav_buttons.dart';
 import '../widget/payment_success/done_successfully_text.dart';
@@ -26,17 +27,17 @@ class _PaymentSuccessState extends State<PaymentSuccess>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "الدفع", isCustomBack: false,),
+      appBar: const CustomAppBar(title: 'الدفع', isCustomBack: false,),
       body: CustomSingleChild(
         crossAxisAlignment: CrossAxisAlignment.center,
         children:
         [
           Sizes.s67.verticalSpace,
-          SuccessImgWidget(),
+          const SuccessImgWidget(),
           Sizes.s33.verticalSpace,
-          DoneSuccessfullyTextWidget(),
+          const DoneSuccessfullyTextWidget(),
           Sizes.s9.verticalSpace,
-          OrderNumberTextWidget(),
+          const OrderNumberTextWidget(),
           if (1.sw <= 427 && 1.sh <= 952)...
           [
             Sizes.s67.verticalSpace,
@@ -55,10 +56,10 @@ class _PaymentSuccessState extends State<PaymentSuccess>
           GestureDetector(
             onTap: ()
             {
-              log("Route to the main Screen...");
+              log('Route to the main Screen...');
               //AppRouter
             },
-            child: MainPageTextWidget()
+            child: const MainPageTextWidget()
           ),
           Sizes.s16.verticalSpace,
         ]

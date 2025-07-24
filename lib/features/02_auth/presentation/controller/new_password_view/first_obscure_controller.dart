@@ -9,13 +9,13 @@ class FirstObscurePassword extends _$FirstObscurePassword
   @override
   bool build()
   {
-    log("inital State is: True");
+    log('inital State is: True');
     return true;
   }
 
   void toggle()
   { 
-    log("obscure text state is: $state");
+    log('obscure text state is: $state');
     state = !state;
   }
 }

@@ -10,6 +10,6 @@ class ChangePasswordTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("تغيير كلمة المرور", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),);
+    return Text('تغيير كلمة المرور', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),);
   }
 }

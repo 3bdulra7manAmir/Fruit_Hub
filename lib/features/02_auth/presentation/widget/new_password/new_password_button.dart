@@ -20,12 +20,12 @@ class NewPasswordButtonWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomButton(
-      text: "إنشاء كلمة مرور جديدة",
+      text: 'إنشاء كلمة مرور جديدة',
       onPressed: ()
       {
         if (!formKey.currentState!.validate())
         {
-          log("InValid Creation...");
+          log('InValid Creation...');
         }
         else
         {
@@ -33,8 +33,8 @@ class NewPasswordButtonWidget extends StatelessWidget
           final password2 = SecondPasswordFieldWidget.passwordController.text;
           if(password1 == password2)
           {
-            log("Create Password Has been Pressed...");
-            log("$password1 \t $password2");
+            log('Create Password Has been Pressed...');
+            log('$password1 \t $password2');
             showSuccessDialog(context);
             AppRouter.router.pushReplacementNamed(AppRoutes.login);
           }
@@ -42,7 +42,7 @@ class NewPasswordButtonWidget extends StatelessWidget
           {
             FirstPasswordFieldWidget.passwordController.clear();
             SecondPasswordFieldWidget.passwordController.clear();
-            CustomSnackBar.show(context, "كلمتا السر غير متطبقتان يا معلم\n حاول تدخل 2 متطابقين كده بتكلم بجد...");
+            CustomSnackBar.show(context, 'كلمتا السر غير متطبقتان يا معلم\n حاول تدخل 2 متطابقين كده بتكلم بجد...');
           }
         }
       },  

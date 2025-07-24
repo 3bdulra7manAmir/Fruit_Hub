@@ -10,6 +10,6 @@ class OrderNumberTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("رقم الطلب : 1245789663#", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),);
+    return Text('رقم الطلب : 1245789663#', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),);
   }
 }

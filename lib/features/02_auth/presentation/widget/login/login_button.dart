@@ -16,16 +16,16 @@ class LoginButtonWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomButton(
-      text: "تسجيل دخول",
+      text: 'تسجيل دخول',
       onPressed: ()
       {
         if (formKey.currentState!.validate())
         {
-          log("Valid Login...");
+          log('Valid Login...');
           final email = LoginEmailWidget.emailController.text;
           final password = LoginPasswordWidget.passwordController.text;
-          log("$email \t $password");
-          if (email == "shadow@gmail.com" && password == "12345678aA#")
+          log('$email \t $password');
+          if (email == 'shadow@gmail.com' && password == '12345678aA#')
           {
             LoginEmailWidget.emailController.clear();
             LoginPasswordWidget.passwordController.clear();
@@ -34,7 +34,7 @@ class LoginButtonWidget extends StatelessWidget
         }
         else
         {
-          log("InValid Login...");
+          log('InValid Login...');
           LoginEmailWidget.emailController.clear();
           LoginPasswordWidget.passwordController.clear();
         }

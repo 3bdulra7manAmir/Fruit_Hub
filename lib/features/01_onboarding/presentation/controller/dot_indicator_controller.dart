@@ -9,13 +9,13 @@ class DotIndicator extends _$DotIndicator
   @override
   int build() 
   {
-    log("Indicator Page => 0");
+    log('Indicator Page => 0');
     return 0;
   }
 
   void set(int value)
   { 
-    log("Indicator Page => $value");
+    log('Indicator Page => $value');
     state = value;
   }
 }

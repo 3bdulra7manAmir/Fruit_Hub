@@ -35,7 +35,7 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
 
     return GestureDetector(
       onTap: () {
-        log(!isSwitched ? "True" : "False");
+        log(!isSwitched ? 'True' : 'False');
         (ref.read(provider.notifier) as ToggleSwitchBase).toggle();
       },
       child: AnimatedContainer(

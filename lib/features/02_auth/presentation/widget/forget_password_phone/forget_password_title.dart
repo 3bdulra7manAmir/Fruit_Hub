@@ -12,7 +12,7 @@ class ForgetPasswordTitleWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(
-      "لا تقلق ، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.", 
+      'لا تقلق ، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.', 
       style: AppStyles.bold(
         fontWeight: AppFontWeights.semiBoldWeight, 
         fontColor: AppColors.color.kGrey006

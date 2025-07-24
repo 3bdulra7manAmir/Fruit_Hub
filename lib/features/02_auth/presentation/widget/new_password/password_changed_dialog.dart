@@ -33,7 +33,7 @@ void showSuccessDialog(context)
         ),
         Sizes.s29.verticalSpace,
         Text(
-          "تم تغيير الباسورد بنجاح",
+          'تم تغيير الباسورد بنجاح',
           style: AppStyles.bold(fontColor: AppColors.color.kBlack001),
         ),
         Sizes.s50.verticalSpace,

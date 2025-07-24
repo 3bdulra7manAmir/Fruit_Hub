@@ -13,8 +13,8 @@ class CartPayButtonWidget extends StatelessWidget
   {
     return CustomButton(
       margin: AppMargins.symmetric.medium,
-      text: "الدفع  120جنيه",
-      onPressed: () {log("Pay has been Pressed...");},
+      text: 'الدفع  120جنيه',
+      onPressed: () {log('Pay has been Pressed...');},
     );
   }
 }

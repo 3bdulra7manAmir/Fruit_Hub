@@ -1,5 +1,3 @@
-import 'package:e_commerce_app/core/extensions/string.dart';
-import 'package:e_commerce_app/core/extensions/widget_textstyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,9 +8,11 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/string.dart';
+import '../../../../../core/extensions/widget_textstyle.dart';
+import '../fruit_img.dart';
 import '../welcome_subtitle_text.dart';
 import 'clipped_background.dart';
-import '../fruit_img.dart';
 
 class OnboardingWelcome extends StatelessWidget
 {

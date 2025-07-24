@@ -10,8 +10,8 @@ import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_styles.dart';
-import 'sort_modal_sheet/sort_body.dart';
 import 'price_filter_modal_sheet/modal_sheet_body.dart';
+import 'sort_modal_sheet/sort_body.dart';
 
 class OurProductsWidget extends StatelessWidget
 {
@@ -42,7 +42,7 @@ class FiltrationArrowsWidget extends StatelessWidget
     return GestureDetector(
       onTap: ()
       {
-        log("Arrows Has been Pressed...");
+        log('Arrows Has been Pressed...');
         priceFilterSheet(context);
         
       },
@@ -66,6 +66,6 @@ class OurProductsTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("منتجاتنا", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
+    return Text('منتجاتنا', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
   }
 }

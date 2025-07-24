@@ -1,7 +1,7 @@
-import 'package:e_commerce_app/core/extensions/string.dart';
 import 'package:flutter/material.dart';
 
 import '../../../config/i18n/generated/l10n.dart';
+import '../../extensions/string.dart';
 
 
 abstract class AppValidation
@@ -32,7 +32,7 @@ abstract class AppValidation
     }
     catch (e)
     {
-      return "${S.of(context).emailFailureValidation} ${e.toString()}";
+      return '${S.of(context).emailFailureValidation} ${e.toString()}';
     }
   }
 
@@ -52,7 +52,7 @@ abstract class AppValidation
     }
     catch (e)
     {
-      return "${S.of(context).fullNameValidationFailure} ${e.toString()}";
+      return '${S.of(context).fullNameValidationFailure} ${e.toString()}';
     }
   }
 
@@ -60,7 +60,7 @@ abstract class AppValidation
   {
     try
     {
-      final password = value ?? "";
+      final password = value ?? '';
       if (password.isEmpty)
       {
         return S.of(context).passwordIsRequired;
@@ -93,7 +93,7 @@ abstract class AppValidation
     }
     catch (e)
     {
-      return "${S.of(context).passwordValidationFailure} ${e.toString()}";
+      return '${S.of(context).passwordValidationFailure} ${e.toString()}';
     }
   }
 

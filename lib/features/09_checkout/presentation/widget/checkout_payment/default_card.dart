@@ -1,5 +1,5 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
@@ -23,7 +23,7 @@ class MakeCardAsDeafultWidget extends ConsumerWidget
           onChanged: (_) => ref.read(keepCardCheckboxProvider.notifier).toggle(),
         ),
         Sizes.s16.horizontalSpace,
-        MarkAsDefaultCardTextWidget()
+        const MarkAsDefaultCardTextWidget()
       ],
     );
   }
@@ -36,6 +36,6 @@ class MarkAsDefaultCardTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("جعل البطاقة افتراضية", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey006),);
+    return Text('جعل البطاقة افتراضية', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey006),);
   }
 }

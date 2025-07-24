@@ -18,7 +18,7 @@ class UserProfileImg extends StatelessWidget
       alignment: Alignment.center, clipBehavior: Clip.none,
       children:
       [
-        Image.asset("assets/icons/Profile/User_Profile.png", width: 73.w, height: 73.h,),
+        Image.asset('assets/icons/Profile/User_Profile.png', width: 73.w, height: 73.h,),
         Positioned(
           bottom: -11.h,
           child: Container(
@@ -28,7 +28,7 @@ class UserProfileImg extends StatelessWidget
               borderRadius: AppRadiuses.circular.large,
               border: Border.all(color: AppColors.color.kWhite001, width: Sizes.s2.w),
             ),
-            child: SvgPicture.asset("assets/icons/Profile/Camera_Green.svg", width: 16.w, height: 16.h,)
+            child: SvgPicture.asset('assets/icons/Profile/Camera_Green.svg', width: 16.w, height: 16.h,)
           ),
         ),
       ],

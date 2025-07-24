@@ -13,14 +13,14 @@ import '../../../../../core/constants/app_styles.dart';
 
 class RecoveryOtpFieldWidget extends StatefulWidget
 {
-  final int otpLength;
-  final void Function(String)? onCompleted;
 
   const RecoveryOtpFieldWidget({
     super.key,
     this.otpLength = 4,
     this.onCompleted,
   });
+  final int otpLength;
+  final void Function(String)? onCompleted;
 
   @override
   State<RecoveryOtpFieldWidget> createState() => _RecoveryOtpFieldWidgetState();

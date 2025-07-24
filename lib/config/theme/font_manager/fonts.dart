@@ -1,13 +1,14 @@
 import 'dart:developer';
+
 import 'font_manager_base.dart';
-import 'font_manager_roboto.dart';
 import 'font_manager_cairo.dart';
+import 'font_manager_roboto.dart';
 
 class AppFonts
 {
-  static AppFonts? _instance;
 
   AppFonts._();
+  static AppFonts? _instance;
 
   static AppFonts get i
   {
@@ -21,9 +22,9 @@ class AppFonts
     {
       return i._fonts;
     }
-    catch (e, stack)
+    catch (error, stack)
     {
-      log("Erro in get font: $e ,, Stack: $stack");
+      log('Erro in get font: $error ,, Stack: $stack');
       return FontRoboto();
     }
   }
@@ -39,9 +40,9 @@ class AppFonts
       }
       language = code.toLowerCase();
     }
-    on Exception catch (e, stack)
+    on Exception catch (error, stack)
     {
-      log("Erro in font Language: $e ,, Stack: $stack");
+      log('Erro in font Language: $error ,, Stack: $stack');
     }
   }
 
@@ -49,7 +50,7 @@ class AppFonts
   {
     try
     {
-      if (language == "ar")
+      if (language == 'ar')
       {
         return FontCairo();
       }
@@ -59,9 +60,9 @@ class AppFonts
         //return FontRoboto(); // IF U WANNA USE A FONT FOR "EN" AND ANOTHER FOR "AR"
       }
     }
-    catch (e, stack)
+    catch (error, stack)
     {
-      log("Erro in font Language: $e ,, Stack: $stack");
+      log('Erro in font Language: $error ,, Stack: $stack');
       return FontRoboto();
     }
   }

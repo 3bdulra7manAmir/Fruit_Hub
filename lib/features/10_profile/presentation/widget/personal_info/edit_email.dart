@@ -11,8 +11,8 @@ class EditEmailFieldWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      hintText: "mail@mail.com",
-      suffixIcon: SvgPicture.asset("assets/icons/Personal_Info/Edit_Grey.svg", fit: BoxFit.scaleDown,),
+      hintText: 'mail@mail.com',
+      suffixIcon: SvgPicture.asset('assets/icons/Personal_Info/Edit_Grey.svg', fit: BoxFit.scaleDown,),
     );
   }
 }

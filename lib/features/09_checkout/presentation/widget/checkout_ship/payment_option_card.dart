@@ -9,11 +9,11 @@ import '../../../../../core/constants/app_styles.dart';
 
 class PaymentOptionCard extends StatelessWidget
 {
-  final bool isSelected;
   const PaymentOptionCard({
     super.key,
     required this.isSelected,
   });
+  final bool isSelected;
 
   @override
   Widget build(BuildContext context)
@@ -30,9 +30,9 @@ class PaymentOptionCard extends StatelessWidget
         [
           PaymentRadioButtonWidget(isSelected: isSelected),
           Sizes.s10.horizontalSpace,
-          PaymentOptionTextWidget(),
+          const PaymentOptionTextWidget(),
           const Spacer(),
-          PaymentCardPriceTextWidget(),
+          const PaymentCardPriceTextWidget(),
         ],
       ),
     );
@@ -80,9 +80,9 @@ class PaymentOptionTextWidget extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Text("الدفع عند الاستلام", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack004),),
+        Text('الدفع عند الاستلام', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack004),),
         Sizes.s6.verticalSpace,
-        Text("التسليم من المكان", style: AppStyles.extraLight(
+        Text('التسليم من المكان', style: AppStyles.extraLight(
           fontColor: AppColors.color.kBlack004.withValues(alpha: 0.5)),),
       ],
     );
@@ -99,7 +99,7 @@ class PaymentCardPriceTextWidget extends StatelessWidget
     return Column(
       children:
       [
-        Text("40 جنيه", style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, 
+        Text('40 جنيه', style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, 
             fontColor: AppColors.color.kGreen008
           ),
         ),

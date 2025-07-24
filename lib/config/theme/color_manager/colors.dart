@@ -4,9 +4,9 @@ import 'color_manager_light.dart';
 
 class AppColors
 {
-  static AppColors? _instance;
 
   AppColors._();
+  static AppColors? _instance;
 
   static AppColors get i
   {

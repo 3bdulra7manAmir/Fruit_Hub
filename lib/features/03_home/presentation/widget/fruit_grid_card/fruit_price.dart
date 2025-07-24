@@ -17,16 +17,16 @@ class FruitGridPriceWidget extends StatelessWidget
       mainAxisSize: MainAxisSize.min,
       children:
       [
-        Text("بطيخ", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001,), maxLines: 1,),
+        Text('بطيخ', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001,), maxLines: 1,),
         Sizes.s4.verticalSpace,
         Row(
           children:
           [
             Flexible(
-              child: Text("20جنية ", style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,), maxLines: 1,),
+              child: Text('20جنية ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,), maxLines: 1,),
             ),
             Flexible(
-              child: Text("/ الكيلو", style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002,), maxLines: 1,),
+              child: Text('/ الكيلو', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002,), maxLines: 1,),
             ),
           ],
         ),

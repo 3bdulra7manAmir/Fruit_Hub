@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/form.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
+import '../../../../core/widgets/form.dart';
 import '../widget/login/did_forget_password.dart';
 import '../widget/login/dont_have_account.dart';
-import '../widget/login/login_email_field.dart';
 import '../widget/login/login_button.dart';
+import '../widget/login/login_email_field.dart';
+import '../widget/login/login_password_field.dart';
 import '../widget/login/or_widget.dart';
 import '../widget/login/other_login_options.dart';
-import '../widget/login/login_password_field.dart';
 
 class Login extends StatelessWidget
 {
@@ -22,7 +22,7 @@ class Login extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: "تسجيل دخول"),
+      appBar: const CustomAppBar(title: 'تسجيل دخول'),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomForm(

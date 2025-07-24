@@ -8,7 +8,7 @@ import 'number_field.dart';
 
 class ForgetPasswordButtonWidget extends StatelessWidget
 {
-  const ForgetPasswordButtonWidget({super.key, required, required this.formKey});
+  const ForgetPasswordButtonWidget({super.key, required this.formKey});
 
   final GlobalKey<FormState> formKey;
 
@@ -19,15 +19,15 @@ class ForgetPasswordButtonWidget extends StatelessWidget
     {
       if (!formKey.currentState!.validate())
         {
-          log("InValid ForgetPassword...");
+          log('InValid ForgetPassword...');
         }
         else
         {
-          log("Valid ForgetPassword...");
+          log('Valid ForgetPassword...');
           log(PhoneNumberWidget.phoneController.text);
           PhoneNumberWidget.phoneController.clear();
           AppRouter.router.pushNamed(AppRoutes.passwordRecoveryEmail);
         }
-    }, text: "نسيت كلمة المرور");
+    }, text: 'نسيت كلمة المرور');
   }
 }

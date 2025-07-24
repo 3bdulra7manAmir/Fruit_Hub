@@ -13,10 +13,10 @@ class AddToCartButtonWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomButton(
-      text: "أضف الي السلة",
+      text: 'أضف الي السلة',
       onPressed: ()
       {
-        log("Add to Cart has been Pressed...");
+        log('Add to Cart has been Pressed...');
         AppRouter.router.pushNamed(AppRoutes.cart);
       },
     );

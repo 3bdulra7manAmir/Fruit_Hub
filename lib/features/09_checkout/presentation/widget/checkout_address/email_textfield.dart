@@ -16,7 +16,7 @@ class CheckOutEmailWidget extends StatelessWidget
       keyboardType: TextInputType.emailAddress,
       controller: emailController,
       validator: (value) => AppValidation.emailValidation(value, context),
-      hintText: "البريد الإلكتروني",
+      hintText: 'البريد الإلكتروني',
     );
   }
 }

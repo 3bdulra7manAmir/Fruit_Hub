@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/form.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
+import '../../../../core/widgets/form.dart';
 import '../widget/register/already_has_an_account.dart';
-import '../widget/register/register_email_field.dart';
 import '../widget/register/fullname_field.dart';
-import '../widget/register/register_password_field.dart';
 import '../widget/register/register_button.dart';
+import '../widget/register/register_email_field.dart';
+import '../widget/register/register_password_field.dart';
 import '../widget/register/register_terms.dart';
 
 class Register extends StatelessWidget
@@ -21,7 +21,7 @@ class Register extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: "حساب جديد",),
+      appBar: const CustomAppBar(title: 'حساب جديد',),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomForm(

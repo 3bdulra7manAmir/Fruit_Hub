@@ -13,7 +13,7 @@ class SearchIconWidget extends StatelessWidget
   {
     return GestureDetector(
       onTap: ()
-      {log("Search Settings has been Pressed...");},
+      {log('Search Settings has been Pressed...');},
       child: Image.asset(AppAssets.icons.searchGreen, width: 20.w, height: 20.h,)
     );
   }

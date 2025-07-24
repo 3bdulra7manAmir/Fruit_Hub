@@ -18,13 +18,13 @@ class ShopNowButtonWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomButton(
-      text: "تسوق الان",
+      text: 'تسوق الان',
       textStyle: AppStyles.extraLight(
         fontWeight: AppFontWeights.boldWeight,
         fontColor: AppColors.color.kGreen001,
       ),
       onPressed: ()
-      {log("Shop Now Has been Pressed...");}, 
+      {log('Shop Now Has been Pressed...');}, 
       backgroundColor: AppColors.color.kWhite001,
       borderRadius: AppRadiuses.circular.xXXXXSmall,
       width: 116.w, height: 32.h,

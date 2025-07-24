@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/checkout_ship/payment_option_cards_list.dart';
 import '../widget/nav_buttons.dart';
@@ -26,7 +26,7 @@ class _CheckoutShipState extends State<CheckoutShip>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: titles[currentStep]),
+      appBar: CustomAppBar(title: titles[currentStep]),
       body: CustomSingleChild(
         children:
         [
@@ -35,7 +35,7 @@ class _CheckoutShipState extends State<CheckoutShip>
             child: PaymentStepsListWidget(currentStep: currentStep),
           ),
           Sizes.s32.verticalSpace,
-          PaymentOptionCardsList(),
+          const PaymentOptionCardsList(),
           Sizes.s16.verticalSpace,
           CheckOutNavButtonsWidget(
             currentStep: currentStep,

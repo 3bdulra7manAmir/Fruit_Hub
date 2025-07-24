@@ -11,7 +11,7 @@ class Localization extends _$Localization
   @override
   Locale build()
   {
-    log("Default Localization is: ar");
+    log('Default Localization is: ar');
     return const Locale('ar'); // default is Arabic
   }
 
@@ -20,18 +20,18 @@ class Localization extends _$Localization
     state = state.languageCode == 'ar'
         ? const Locale('en')
         : const Locale('ar');
-    log("Localization toggled to: ${state.languageCode.toUpperCase()}");
+    log('Localization toggled to: ${state.languageCode.toUpperCase()}');
   }
 
   void setEnglish()
   {
     state = const Locale('en');
-    log("Localization is now: EN");
+    log('Localization is now: EN');
   }
 
   void setArabic()
   {
     state = const Locale('ar');
-    log("Localization is now: AR");
+    log('Localization is now: AR');
   }
 }

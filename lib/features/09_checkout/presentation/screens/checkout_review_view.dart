@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/checkout_review/confirm_address.dart';
 import '../widget/checkout_review/confirm_order_text.dart';
@@ -26,7 +26,7 @@ class _CheckoutReviewState extends State<CheckoutReview>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: titles[currentStep]),
+      appBar: CustomAppBar(title: titles[currentStep]),
       body: CustomSingleChild(
         children:
         [
@@ -35,15 +35,15 @@ class _CheckoutReviewState extends State<CheckoutReview>
             child: PaymentStepsListWidget(currentStep: currentStep),
           ),
           Sizes.s24.verticalSpace,
-          OrderSummaryTextWidget(),
+          const OrderSummaryTextWidget(),
           Sizes.s8.verticalSpace,
-          OrderSummaryWidget(),
+          const OrderSummaryWidget(),
           Sizes.s16.verticalSpace,
-          ConfirmOrderTextWidget(),
+          const ConfirmOrderTextWidget(),
           Sizes.s8.verticalSpace,
-          ConfirmPaymentMethodWidget(),
+          const ConfirmPaymentMethodWidget(),
           Sizes.s8.verticalSpace,
-          ConfirmAddressWidget(),
+          const ConfirmAddressWidget(),
           Sizes.s51.verticalSpace,
           CheckOutNavButtonsWidget(
             currentStep: currentStep,

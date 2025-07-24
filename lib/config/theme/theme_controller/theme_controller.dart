@@ -10,7 +10,7 @@ class Theme extends _$Theme
   @override
   ThemeMode build() 
   {
-    log("Default Theme Mode is: Light");
+    log('Default Theme Mode is: Light');
     return ThemeMode.dark; // Default is Light
   }
 
@@ -21,12 +21,12 @@ class Theme extends _$Theme
 
   void setLight()
   {
-    log("Theme Mode is: Light");
+    log('Theme Mode is: Light');
     state = ThemeMode.light;
   }
   void setDark()
   {
-    log("Theme Mode is: Dark");
+    log('Theme Mode is: Dark');
     state = ThemeMode.dark;
   }
 }

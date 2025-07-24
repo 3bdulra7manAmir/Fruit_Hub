@@ -13,7 +13,7 @@ class FilterIconWidget extends StatelessWidget
   {
     return GestureDetector(
       onTap: ()
-      {log("Filter Settings has been Pressed...");},
+      {log('Filter Settings has been Pressed...');},
       child: Image.asset(AppAssets.icons.filterGreyPNG, width: 20.w, height: 20.h,)
     );
   }

@@ -1,10 +1,10 @@
 
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/extensions/widget_margin.dart';
 
 class WelcomeSubtitleWidget extends StatelessWidget
 {

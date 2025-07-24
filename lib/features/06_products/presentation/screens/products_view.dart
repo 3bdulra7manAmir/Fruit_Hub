@@ -22,7 +22,7 @@ class Products extends StatelessWidget
         children:
         [
           Sizes.s16.verticalSpace,
-          SearchBarWidget(onSubmitted: (value) {log("Search Bar Value: $value");},),
+          SearchBarWidget(onSubmitted: (value) {log('Search Bar Value: $value');},),
           Sizes.s16.verticalSpace,
           const OurProductsWidget(),
           Sizes.s8.verticalSpace,

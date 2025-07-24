@@ -11,8 +11,8 @@ class EditFullNameFieldWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      hintText: "أحمد ياسر",
-      suffixIcon: SvgPicture.asset("assets/icons/Personal_Info/Edit_Grey.svg", fit: BoxFit.scaleDown,),
+      hintText: 'أحمد ياسر',
+      suffixIcon: SvgPicture.asset('assets/icons/Personal_Info/Edit_Grey.svg', fit: BoxFit.scaleDown,),
       
     );
   }

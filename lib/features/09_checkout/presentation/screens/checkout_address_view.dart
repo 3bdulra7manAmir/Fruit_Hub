@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/checkout_address/address_textfield.dart';
 import '../widget/checkout_address/appartment_textfield.dart';
@@ -27,7 +27,7 @@ class _CheckoutAddressState extends State<CheckoutAddress>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: titles[currentStep]),
+      appBar: CustomAppBar(title: titles[currentStep]),
       body: CustomSingleChild(
         children:
         [
@@ -36,17 +36,17 @@ class _CheckoutAddressState extends State<CheckoutAddress>
             child: PaymentStepsListWidget(currentStep: currentStep),
           ),
           Sizes.s24.verticalSpace,
-          CheckOutFullNameWidget(),
+          const CheckOutFullNameWidget(),
           Sizes.s8.verticalSpace,
-          CheckOutEmailWidget(),
+          const CheckOutEmailWidget(),
           Sizes.s8.verticalSpace,
-          CheckOutAddressWidget(),
+          const CheckOutAddressWidget(),
           Sizes.s8.verticalSpace,
-          CheckOutCityWidget(),
+          const CheckOutCityWidget(),
           Sizes.s8.verticalSpace,
-          AppartmentFieldWidget(),
+          const AppartmentFieldWidget(),
           Sizes.s16.verticalSpace,
-          SaveAddressWidget(),
+          const SaveAddressWidget(),
           Sizes.s64.verticalSpace,
           CheckOutNavButtonsWidget(
             currentStep: currentStep,

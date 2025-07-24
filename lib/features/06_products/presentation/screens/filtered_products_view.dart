@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../03_home/presentation/widget/fruit_grid_list.dart';
 import '../../../03_home/presentation/widget/search_bar/search_bar_body.dart';
@@ -19,7 +19,7 @@ class FilteredProducts extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,),
+      appBar: const CustomAppBar(title: 'المنتجات', isNotifications: true, isCustomBack: false,),
       body: CustomSingleChild(
         children:
         [
@@ -60,6 +60,6 @@ class FilteredResultsCountWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("4 نتائج", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
+    return Text('4 نتائج', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
   }
 }

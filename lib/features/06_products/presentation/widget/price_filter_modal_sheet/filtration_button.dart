@@ -13,10 +13,10 @@ class PriceFiltrationButtonWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomButton(
-      text: "تصفيه",
+      text: 'تصفيه',
       onPressed: ()
       {
-        log("Filter...");
+        log('Filter...');
         AppRouter.router.pop();
         arrangementFilterSheet(context);
       },

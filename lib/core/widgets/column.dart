@@ -1,6 +1,7 @@
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../extensions/widget_margin.dart';
 
 class CustomColumn extends StatelessWidget
 {

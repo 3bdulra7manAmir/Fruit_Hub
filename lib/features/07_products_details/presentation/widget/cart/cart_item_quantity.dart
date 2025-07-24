@@ -19,12 +19,12 @@ class CartItemQuantityWidget extends StatelessWidget
       children:
       [
         Sizes.s6.verticalSpace,
-        Text("بطيخ", style: AppStyles.extraLight(
+        Text('بطيخ', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack003),
         ),
         Sizes.s4.verticalSpace,
-        Text("3 كم", style: AppStyles.extraLight(
+        Text('3 كم', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.regularWeight, 
           fontColor: AppColors.color.kOrange001),
         ),

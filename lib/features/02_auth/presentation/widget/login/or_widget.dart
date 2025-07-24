@@ -20,7 +20,7 @@ class OrWidget extends StatelessWidget
       [
         Expanded(child: CustomDivider(color: AppColors.color.kGrey005,),),
         Sizes.s18.horizontalSpace,
-        Text("أو", style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
+        Text('أو', style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
         Sizes.s18.horizontalSpace,
         Expanded(child: CustomDivider(color: AppColors.color.kGrey005,),),
       ],

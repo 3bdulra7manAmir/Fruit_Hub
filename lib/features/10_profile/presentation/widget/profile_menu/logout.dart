@@ -23,9 +23,9 @@ class LogOutWidget extends StatelessWidget
         children:
         [
           Expanded(
-            child: Text("تسجيل الخروج", style: AppStyles.extraLight(fontColor: AppColors.color.kGreen001,),),
+            child: Text('تسجيل الخروج', style: AppStyles.extraLight(fontColor: AppColors.color.kGreen001,),),
           ),
-          Expanded(child: SvgPicture.asset("assets/icons/Profile/SignOut_Green.svg")),
+          Expanded(child: SvgPicture.asset('assets/icons/Profile/SignOut_Green.svg')),
         ],
       ),
     );

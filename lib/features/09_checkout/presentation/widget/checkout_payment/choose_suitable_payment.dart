@@ -11,7 +11,7 @@ class ChooseSuitablePaymentTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("أختار طريقه الدفع المناسبه :", style: AppStyles.extraLight(
+    return Text('أختار طريقه الدفع المناسبه :', style: AppStyles.extraLight(
       fontColor: AppColors.color.kBlack001, 
       fontWeight: AppFontWeights.boldWeight),
     );

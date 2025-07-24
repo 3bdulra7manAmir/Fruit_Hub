@@ -16,7 +16,7 @@ class RegisterFullNameWidget extends StatelessWidget
       keyboardType: TextInputType.name,
       controller: fullNameController,
       validator: (value) => AppValidation.fullNameValidation(value, context),
-      hintText: "الاسم كامل",
+      hintText: 'الاسم كامل',
     );
   }
 }
