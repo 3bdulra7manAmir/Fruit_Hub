@@ -15,9 +15,9 @@ class AddNewPaymentMethodButtonWidget extends StatelessWidget
     return CustomIconButton(
       onPressed: ()
       {
-        log("Add new Payment Method has been Pressed");
+        log('Add new Payment Method has been Pressed');
       },
-      text: "أضف وسيلة دفع جديده",
+      text: 'أضف وسيلة دفع جديده',
       icon: SvgPicture.asset(AppAssets.icons.addWhiteV2),
     );
   }

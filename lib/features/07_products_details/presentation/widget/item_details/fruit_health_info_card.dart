@@ -55,7 +55,7 @@ class FruitHealthInfoCardWidget extends StatelessWidget
                 children:
                 [
                   Text(title2!, style: AppStyles.bold(fontColor: AppColors.color.kGrey013)),
-                  Text(" ", style: AppStyles.bold(),),
+                  Text(' ', style: AppStyles.bold(),),
                   Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
                 ],
               ),

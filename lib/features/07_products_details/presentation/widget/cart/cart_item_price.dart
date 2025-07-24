@@ -21,7 +21,7 @@ class CartItemPriceWidget extends StatelessWidget
       [
         Sizes.s6.verticalSpace,
         GestureDetector(
-          onTap: () {log("Trash...");},
+          onTap: () {log('Trash...');},
           child: const DeleteImgWidget()
         ),
         const Spacer(),
@@ -52,7 +52,7 @@ class ItemPriceTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("60 جنيه ", style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
+    return Text('60 جنيه ', style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
   }
 }
 

@@ -22,13 +22,13 @@ class OrderSummaryWidget extends StatelessWidget
         crossAxisAlignment: CrossAxisAlignment.start,
         children:
         [
-          SubTotalTextWidget(),
+          const SubTotalTextWidget(),
           Sizes.s8.verticalSpace,
-          DeliveryCostTextWidget(),
+          const DeliveryCostTextWidget(),
           Sizes.s8.verticalSpace,
           CustomDivider(color: AppColors.color.kGrey019, endIndent: Sizes.s32.w, indent: Sizes.s32.w,),
           Sizes.s8.verticalSpace,
-          TotalCostTextWidget(),
+          const TotalCostTextWidget(),
         ],
       ),
     );
@@ -47,9 +47,9 @@ class SubTotalTextWidget extends StatelessWidget
       children:
       [
         Sizes.s2.horizontalSpace,
-        Text("المجموع الفرعي :", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
-        Spacer(),
-        Text("150 جنيه", style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
+        Text('المجموع الفرعي :', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
+        const Spacer(),
+        Text('150 جنيه', style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
         Sizes.s2.horizontalSpace,
       ],
     );
@@ -67,9 +67,9 @@ class DeliveryCostTextWidget extends StatelessWidget
     return Row(
       children:
       [
-        Text("التوصيل  :", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
-        Spacer(),
-        Text("30جنية", style: AppStyles.extraLight(),),
+        Text('التوصيل  :', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
+        const Spacer(),
+        Text('30جنية', style: AppStyles.extraLight(),),
         Sizes.s20.horizontalSpace,
       ],
     );
@@ -88,9 +88,9 @@ class TotalCostTextWidget extends StatelessWidget
       children:
       [
         Sizes.s2.horizontalSpace,
-        Text("الكلي", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
-        Spacer(),
-        Text("180 جنيه", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text('الكلي', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        const Spacer(),
+        Text('180 جنيه', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         Sizes.s2.horizontalSpace,
       ],
     );

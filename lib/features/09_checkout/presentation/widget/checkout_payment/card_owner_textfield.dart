@@ -16,7 +16,7 @@ class CardOwnerNameWidget extends StatelessWidget
       keyboardType: TextInputType.emailAddress,
       controller: ownerNameController,
       validator: (value) => AppValidation.fullNameValidation(value, context),
-      hintText: "اسم حامل البطاقه",
+      hintText: 'اسم حامل البطاقه',
     );
   }
 }

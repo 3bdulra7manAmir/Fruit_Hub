@@ -5,13 +5,13 @@ import '../constants/app_styles.dart';
 
 class CustomErrorWidget extends StatelessWidget
 {
-  const CustomErrorWidget({super.key, required this.e});
+  const CustomErrorWidget({super.key, required this.error});
 
-  final dynamic e;
+  final dynamic error;
 
   @override
   Widget build(BuildContext context)
   {
-    return Center(child: Text('${S.current.error}: $e', style: AppStyles.black(),));
+    return Center(child: Text('${S.current.error}: $error', style: AppStyles.black(),));
   }
 }

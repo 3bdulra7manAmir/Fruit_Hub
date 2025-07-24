@@ -5,10 +5,6 @@ import '../../../../core/widgets/snackbar.dart';
 
 class CheckOutNavButtonsWidget extends StatelessWidget
 {
-  final int currentStep;
-  final int totalSteps;
-  final VoidCallback onNext;
-  final VoidCallback onBack;
 
   const CheckOutNavButtonsWidget({
     super.key,
@@ -17,12 +13,16 @@ class CheckOutNavButtonsWidget extends StatelessWidget
     required this.onNext,
     required this.onBack,
   });
+  final int currentStep;
+  final int totalSteps;
+  final VoidCallback onNext;
+  final VoidCallback onBack;
 
   @override
   Widget build(BuildContext context)
   {
-    return CustomButton(text: "التالي", onPressed: currentStep < totalSteps - 1
-      ? onNext : () => CustomSnackBar.show(context, "تم إكمال الخطوات!"),
+    return CustomButton(text: 'التالي', onPressed: currentStep < totalSteps - 1
+      ? onNext : () => CustomSnackBar.show(context, 'تم إكمال الخطوات!'),
     );
   }
 }

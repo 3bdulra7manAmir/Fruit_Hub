@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,6 +5,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/widget_margin.dart';
 import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
 import 'current_order_cart.dart';
 
@@ -30,7 +30,7 @@ class TimeLineCardWidget extends StatelessWidget
             Column(
               children:
               [
-                OrderIconWidget(),
+                const OrderIconWidget(),
                 CustomModalSheetDragger(width: 2.w, height: 40.h, color: AppColors.color.kGrey020,),
               ],
             ),
@@ -39,11 +39,11 @@ class TimeLineCardWidget extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Text( "تتبع الطلب", style: AppStyles.extraLight(
+                Text( 'تتبع الطلب', style: AppStyles.extraLight(
                   fontWeight: AppFontWeights.boldWeight,
                   fontColor: AppColors.color.kBlack004,),
                 ),
-                Text("22 مارس , 2024", style: AppStyles.extraLight(
+                Text('22 مارس , 2024', style: AppStyles.extraLight(
                   fontColor: AppColors.color.kGrey002,),
                 ),
               ],

@@ -1,5 +1,5 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -23,7 +23,7 @@ Widget build(BuildContext context, WidgetRef ref)
         onChanged: (_) => ref.read(registerCheckboxProvider.notifier).toggle(),
       ),
       //Sizes.s12.horizontalSpace,
-      RegisterTermsTextWidget(),
+      const RegisterTermsTextWidget(),
     ],
   );
 }
@@ -40,12 +40,12 @@ class RegisterTermsTextWidget extends StatelessWidget
     return Expanded(
       child: Text.rich(
         TextSpan(
-          text: "من خلال إنشاء حساب ، فإنك توافق على ", 
+          text: 'من خلال إنشاء حساب ، فإنك توافق على ', 
           style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),
         children:
         [
           TextSpan(
-            text: "الشروط والأحكام الخاصة بنا", 
+            text: 'الشروط والأحكام الخاصة بنا', 
             style: AppStyles.extraLight(fontColor: AppColors.color.kGreen004),
           ),
         ],

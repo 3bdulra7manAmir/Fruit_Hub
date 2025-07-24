@@ -18,15 +18,15 @@ class DontHaveAccountWidget extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.center,
       children:
       [
-        Text("لا تمتلك حساب؟", style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
-        Text(" ", style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
+        Text('لا تمتلك حساب؟', style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
+        Text(' ', style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
         GestureDetector(
           onTap: ()
           {
-            log("Create Account Pressed...");
+            log('Create Account Pressed...');
             AppRouter.router.pushNamed(AppRoutes.register);
           },
-          child: Text("قم بإنشاء حساب", style: AppStyles.bold(fontColor: AppColors.color.kGreen001, fontWeight: AppFontWeights.semiBoldWeight),)
+          child: Text('قم بإنشاء حساب', style: AppStyles.bold(fontColor: AppColors.color.kGreen001, fontWeight: AppFontWeights.semiBoldWeight),)
         ),
       ],
     );

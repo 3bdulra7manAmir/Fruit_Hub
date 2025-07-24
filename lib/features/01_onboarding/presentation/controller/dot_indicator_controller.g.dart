@@ -6,7 +6,7 @@ part of 'dot_indicator_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$dotIndicatorHash() => r'1667566a325c74cb2e4036e084f23109134bdd45';
+String _$dotIndicatorHash() => r'677022339f5520e2bdc6c0146e33ed088992f26e';
 
 /// See also [DotIndicator].
 @ProviderFor(DotIndicator)

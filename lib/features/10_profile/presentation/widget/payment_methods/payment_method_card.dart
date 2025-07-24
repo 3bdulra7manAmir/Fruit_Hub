@@ -26,7 +26,7 @@ class PaymentMethodCard extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.end,
         children:
         [
-          Text("**** 1234 ", style: AppStyles.bold(
+          Text('**** 1234 ', style: AppStyles.bold(
             fontColor: AppColors.color.kGrey002, 
             fontWeight: AppFontWeights.semiBoldWeight),
             textDirection: TextDirection.ltr,

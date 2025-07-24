@@ -15,9 +15,9 @@ class MarkAllAsReadWidget extends StatelessWidget
     return GestureDetector(
       onTap: ()
       {
-        log("Remove All Green Color Or Remove From List did not decide Know Yet...");
+        log('Remove All Green Color Or Remove From List did not decide Know Yet...');
       },
-      child: Text("تحديد الكل مقروء", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),)
+      child: Text('تحديد الكل مقروء', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),)
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/comment_field.dart';
 import '../widget/comments/comments_list.dart';
@@ -18,7 +18,7 @@ class ReviewAndRating extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: "المراجعه",),
+      appBar: const CustomAppBar(title: 'المراجعه',),
       body: CustomSingleChild(
         children:
         [

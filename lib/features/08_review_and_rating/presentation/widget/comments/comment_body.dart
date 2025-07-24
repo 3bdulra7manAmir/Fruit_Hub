@@ -21,13 +21,13 @@ class CommentBody extends StatelessWidget
           mainAxisAlignment: MainAxisAlignment.end,
           children: 
           [
-            CommentInfoWidget(),
+            const CommentInfoWidget(),
             Sizes.s15.horizontalSpace,
-            RatingUserImgBody(),
+            const RatingUserImgBody(),
           ],
         ),
         Sizes.s18.verticalSpace,
-        UserCommentTextWidget(),
+        const UserCommentTextWidget(),
       ],
     );
   }

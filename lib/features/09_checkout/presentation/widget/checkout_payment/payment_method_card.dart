@@ -23,7 +23,7 @@ class PaymentMethodCardWidget extends StatelessWidget
         borderRadius: AppRadiuses.circular.xXXXXSmall,
         border: Border.all(color: AppColors.color.kGrey018),
         boxShadow:
-        [
+        const [
           // BoxShadow(
           //   color: const Color(0x14B7B7B7), 
           //   offset: Offset(0, 20),

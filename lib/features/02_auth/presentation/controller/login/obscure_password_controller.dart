@@ -14,7 +14,7 @@ class LoginObscurePassword extends _$LoginObscurePassword
 
   void toggle()
   { 
-    log("obscure text state is: $state");
+    log('obscure text state is: $state');
     state = !state;
   }
 }

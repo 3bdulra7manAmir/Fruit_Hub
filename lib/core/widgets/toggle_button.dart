@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,8 +24,9 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
   final double? circleSize;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final isSwitched = ref.watch(provider);
+  Widget build(BuildContext context, WidgetRef ref)
+  {
+    final isActive = ref.watch(provider);
     final BorderRadius effectiveBorderRadius = borderRadius ?? AppRadiuses.circular.medium;
     final double effectiveWidth = width ?? 29.w;
     final double effectiveHeight = height ?? 17.h;
@@ -34,30 +34,26 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
     final EdgeInsetsGeometry padding = EdgeInsets.all(1.w);
 
     return GestureDetector(
-      onTap: () {
-        log(!isSwitched ? "True" : "False");
-        (ref.read(provider.notifier) as ToggleSwitchBase).toggle();
-      },
+      onTap: () => (ref.read(provider.notifier) as ToggleSwitchBase).toggle(),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         width: effectiveWidth,
         height: effectiveHeight,
         padding: padding,
         decoration: BoxDecoration(
-          color: isSwitched
-              ? AppColors.color.kGreen001
-              : AppColors.color.kGrey023.withAlpha(128),
+          color: isActive ? AppColors.color.kGreen001.withOpacity(0.85) : AppColors.color.kGrey019.withOpacity(0.6),
           borderRadius: effectiveBorderRadius,
-        ),
-        alignment: isSwitched ? Alignment.centerLeft : Alignment.centerRight,
+          border: Border.all(color: AppColors.color.kGrey014,),),
+        alignment: isActive ? Alignment.centerRight : Alignment.centerLeft,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           width: effectiveCircleSize,
           height: effectiveCircleSize,
-          decoration: const BoxDecoration(
-            color: Colors.white,
+          decoration:  BoxDecoration(
+            color: AppColors.color.kWhite001,
             shape: BoxShape.circle,
-            boxShadow: [
+            boxShadow:
+            [
               BoxShadow(
                 color: Color.fromARGB(15, 16, 24, 40),
                 offset: Offset(0, 1),
@@ -75,5 +71,4 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
     );
   }
 }
-
 

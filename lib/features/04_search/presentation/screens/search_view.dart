@@ -1,14 +1,15 @@
 // ignore_for_file: unused_import
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_margins.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
+import '../../../../core/widgets/appbar/user_appbar/notifications_bill.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../03_home/presentation/widget/search_bar/search_bar_body.dart';
-import '../../../03_home/presentation/widget/user_appbar/notifications_bill.dart';
 import '../widget/if_no_results_body.dart';
 import '../widget/if_previous_results_body.dart';
 import '../widget/if_results_body.dart';
@@ -24,14 +25,14 @@ class Search extends StatelessWidget
   {
     //log("Received fruitName: $fruitName"); // Just for debug
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: "البحث", isNotifications: true,),
+      appBar: const CustomAppBar(title: 'البحث', isNotifications: true,),
       body: CustomSingleChild(
         children:
         [
           Sizes.s16.verticalSpace,
           SearchBarWidget(
             controller: TextEditingController(text: fruitName),
-            onSubmitted: (value) {log("Search Field Value is => $value");},
+            onSubmitted: (value) {log('Search Field Value is => $value');},
           ),
           //IfNoResultsBody(),
           //IfResultsBody(),

@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/core/extensions/filtration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,14 +5,12 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/filtration.dart';
 
 enum SingingCharacter { low2Hight, hight2Low, alpha }
 
 class ArrangementRadioCard extends StatelessWidget
 {
-  final SingingCharacter value;
-  final SingingCharacter? groupValue;
-  final ValueChanged<SingingCharacter?> onChanged;
 
   const ArrangementRadioCard({
     super.key,
@@ -21,6 +18,9 @@ class ArrangementRadioCard extends StatelessWidget
     required this.groupValue,
     required this.onChanged,
   });
+  final SingingCharacter value;
+  final SingingCharacter? groupValue;
+  final ValueChanged<SingingCharacter?> onChanged;
 
   @override
   Widget build(BuildContext context)

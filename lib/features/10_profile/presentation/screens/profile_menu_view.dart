@@ -1,8 +1,8 @@
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/extensions/widget_margin.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/profile_menu/general_text.dart';
 import '../widget/profile_menu/help_text.dart';
@@ -31,23 +31,23 @@ class Profile extends StatelessWidget
             Row(
               children:
               [
-                UserProfileImg(),
+                const UserProfileImg(),
                 Sizes.s24.horizontalSpace,
-                UserProfileInfo(),
+                const UserProfileInfo(),
               ],
             ),
             Sizes.s16.verticalSpace,
-            GeneralTextWidget(),
+            const GeneralTextWidget(),
             Sizes.s16.verticalSpace,
-            OptionsMenuWidget(),
+            const OptionsMenuWidget(),
             Sizes.s22.verticalSpace,
-            HelpTextWidget(),
+            const HelpTextWidget(),
             Sizes.s16.verticalSpace,
-            WhoWeAreTextWidget(),
+            const WhoWeAreTextWidget(),
           ]
         ).marginSymmetric(horizontal: 16.w),
         Sizes.s63.verticalSpace,
-        LogOutWidget(),
+        const LogOutWidget(),
         Sizes.s33.verticalSpace,
       ]
     );

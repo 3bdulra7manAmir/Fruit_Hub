@@ -7,7 +7,7 @@ class LoginEmailWidget extends StatelessWidget
 {
   const LoginEmailWidget({super.key});
 
-  static final TextEditingController emailController = TextEditingController(text: "shadow@gmail.com");
+  static final TextEditingController emailController = TextEditingController(text: 'shadow@gmail.com');
 
   @override
   Widget build(BuildContext context)
@@ -15,7 +15,7 @@ class LoginEmailWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.emailAddress,
       controller: emailController,
-      hintText: "البريد الإلكتروني",
+      hintText: 'البريد الإلكتروني',
       validator: (value) => AppValidation.emailValidation(value, context),
     );
   }

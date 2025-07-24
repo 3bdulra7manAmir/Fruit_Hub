@@ -10,7 +10,7 @@ class MainPageTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("الرئيسية", style: AppStyles.bold(
+    return Text('الرئيسية', style: AppStyles.bold(
       fontColor: AppColors.color.kGreen001, 
       textDecoration: TextDecoration.underline,
       textDecorationColor: AppColors.color.kGreen001),

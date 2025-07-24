@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'package:e_commerce_app/core/extensions/widget_iterator.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,6 +10,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/widget_iterator.dart';
 
 class OtherOptionsWidget extends StatelessWidget
 {
@@ -24,19 +25,19 @@ class OtherOptionsWidget extends StatelessWidget
         ...[
           GestureDetector(
             onTap: () {
-              log("Google");
+              log('Google');
             },
             child: OtherOptionCardWidget(text: 'تسجيل بواسطة جوجل',  logo: AppAssets.icons.google,)
           ),
           GestureDetector(
             onTap: () {
-              log("Apple");
+              log('Apple');
             },
             child: OtherOptionCardWidget(text: 'تسجيل بواسطة أبل',  logo: AppAssets.icons.apple,)
           ),
           GestureDetector(
             onTap: () {
-              log("Facebook");
+              log('Facebook');
             },
             child: OtherOptionCardWidget(text: 'تسجيل بواسطة فيسبوك',  logo: AppAssets.icons.facebook,)
           ),

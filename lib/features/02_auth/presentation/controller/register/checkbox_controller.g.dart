@@ -6,7 +6,7 @@ part of 'checkbox_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$registerCheckboxHash() => r'f5ae2fa47f4de8b9dc8c3d6f762e53036011b677';
+String _$registerCheckboxHash() => r'c10abd09ea1f4968f72ca57bfbd00f1033a8c0d4';
 
 /// See also [RegisterCheckbox].
 @ProviderFor(RegisterCheckbox)

@@ -10,14 +10,14 @@ class FavouriteImg extends _$FavouriteImg
   bool build()
   {
     const initialValue = true;
-    log("Initial Favourit State: $initialValue");
+    log('Initial Favourit State: $initialValue');
     return initialValue;
   }
 
   void toggle()
   {
     state = !state;
-    log("Favourit Toggled => $state");
+    log('Favourit Toggled => $state');
   }
 }
 

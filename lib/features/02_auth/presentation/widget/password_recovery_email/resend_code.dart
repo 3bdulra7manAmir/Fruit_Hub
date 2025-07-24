@@ -12,7 +12,7 @@ class ResendCodeWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(
-      "إعادة إرسال الرمز",
+      'إعادة إرسال الرمز',
       style: AppStyles.bold(fontColor: AppColors.color.kGreen004, fontWeight: AppFontWeights.semiBoldWeight),
     );
   }

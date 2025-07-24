@@ -24,11 +24,11 @@ class PriceLimitsWidget extends StatelessWidget
               borderRadius: AppRadiuses.circular.xXSmall,
               border: Border.all(color: AppColors.color.kGrey010),
             ),
-            child: const Text("0"),
+            child: const Text('0'),
           ),
         ),
         Sizes.s14.horizontalSpace,
-        Text("الي", style: AppStyles.extraLight(
+        Text('الي', style: AppStyles.extraLight(
           fontColor: AppColors.color.kBlack001, 
           fontWeight: AppFontWeights.boldWeight),
         ),
@@ -40,7 +40,7 @@ class PriceLimitsWidget extends StatelessWidget
               borderRadius: AppRadiuses.circular.xXSmall,
               border: Border.all(color: AppColors.color.kGrey010),
             ),
-            child: const Text("0"),
+            child: const Text('0'),
           ),
         ),
       ]

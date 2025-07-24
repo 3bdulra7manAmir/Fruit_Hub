@@ -12,7 +12,7 @@ class PhoneRecoveryTitleWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(
-      "أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي Maxxx@email.com",
+      'أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي Maxxx@email.com',
       style: AppStyles.bold(
         fontColor: AppColors.color.kGrey006, 
         fontWeight: AppFontWeights.semiBoldWeight

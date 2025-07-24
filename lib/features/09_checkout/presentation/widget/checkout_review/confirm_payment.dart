@@ -23,9 +23,9 @@ class ConfirmPaymentMethodWidget extends StatelessWidget
       child: Column(
         children:
         [
-          PaymentMethodEditWidget(),
+          const PaymentMethodEditWidget(),
           Sizes.s13.verticalSpace,
-          PaymentMethodCardNumbersWidget(),
+          const PaymentMethodCardNumbersWidget(),
         ],
       ),
     );
@@ -43,22 +43,22 @@ class PaymentMethodEditWidget extends StatelessWidget
     return Row(
       children:
       [
-        Text("وسيلة الدفع", style: AppStyles.extraLight(
+        Text('وسيلة الدفع', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack001),
         ),
-        Spacer(),
+        const Spacer(),
         GestureDetector(
           onTap: () 
           {
-            log("Edit has been Pressed...");
+            log('Edit has been Pressed...');
           },
           child: Row(
             children:
             [
               SvgPicture.asset(AppAssets.icons.editGrey),
               Sizes.s4.horizontalSpace,
-              Text("تعديل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
+              Text('تعديل', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
             ],
           ),
         ),
@@ -79,7 +79,7 @@ class PaymentMethodCardNumbersWidget extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.end,
       children:
       [
-        Text("**** **** **** 6522", style: AppStyles.bold(
+        Text('**** **** **** 6522', style: AppStyles.bold(
           fontWeight: AppFontWeights.regularWeight, 
           fontColor: AppColors.color.kGrey001),
           textDirection: TextDirection.ltr,

@@ -8,15 +8,18 @@
   "searchAndShop": "Search and shop",
   "startNow": "Start now",
 
+
   "enterEmail": "Enter email",
   "emailIsRequired": "Email is required",
   "invalidEmailSymbol": "Email must contain '@' symbol.",
   "invalidEmailDomain": "Email must end with a valid domain (e.g., .com, .org).",
   "emailFailureValidation": "Error validating email:",
 
+
   "fullNameIsRequired": "Full name is required.",
   "fullNameinvalid": "Please enter a valid full name.",
   "fullNameValidationFailure": "Validation failed for full name:",
+
 
   "passwordIsRequired": "Password is required",
   "passwordLength8Character": "Password must be at least 8 characters long.",
@@ -27,7 +30,88 @@
   "invalidPassword": "Invalid Password",
   "passwordValidationFailure": "Error validating password:",
 
+
   "phoneNumberIsRequired": "Phone number is required",
   "invalidPhoneNumber": "Invalid phone number",
-  "unsupportedPhoneNumber": "Un-Supported phone number"
+  "unsupportedPhoneNumber": "Un-Supported phone number",
+
+
+  "forgotPassword": "Forget Password",
+  
+
+  "dontHaveAccount": "Don't have an account?",
+  "createAccount": "Create an account",
+
+  
+  "or": "OR",
+  "alreadyHaveAccount": "Already have an account?",
+  "login": "Login",
+
+
+  "mostSold": "Best Sellers",
+  "more": "More",
+  "eidOffers": "Eid Offers",
+  "discount": "Discount",
+
+
+  "goodMorning": "Good morning!..",
+  "search": "Search",
+  "infoUnavailable": "Sorry... This information is currently unavailable",
+  "recentSearches": "Recent Searches",
+  "clearAll": "Clear All",
+  "searchResults": "Search Results",
+  "results": "Results",
+
+  "markAllRead": "Mark All as Read",
+
+  "ourProducts": "Our Products",
+  "price": "Price:",
+  "to": "To",
+
+
+  "itemsInCart": "You have products in your cart",
+  "review": "Review",
+  "summary": "Summary",
+
+
+  "saveAddress": "Save Address",
+  "choosePayment": "Choose your preferred payment method:",
+  "makeDefaultCard": "Make this card default",
+  "pleaseChoosePayment": "Please select a suitable payment method.",
+  "deliveryAddress": "Delivery Address",
+  "edit": "Edit",
+
+
+  "confirmOrder": "Please confirm your order",
+  "paymentMethod": "Payment Method",
+  "orderSummary": "Order Summary:",
+  "subtotal": "Subtotal:",
+  "delivery": "Delivery:",
+  "total": "Total",
+  "cashOnDelivery": "Cash on Delivery",
+  "pickup": "Pickup from Store",
+  "success": "Completed Successfully!",
+
+
+  "home": "Home",
+  "orderNumber": "Order No: #1245789663",
+  "trackOrder": "Track Order",
+  "numberOfOrders": "Number of Orders",
+
+
+  "changePassword": "Change Password",
+  "personalInfo": "Personal Information",
+  "general": "General",
+  "help": "Help",
+  "logout": "Log out",
+
+
+  "arabic": "Arabic",
+  "language": "Language",
+  "notifications": "Notifications",
+  "favorites": "Favorites",
+  "payments": "Payments",
+  "myOrders": "My Orders",
+  "profile": "Profile",
+  "theme": "Theme"
 }

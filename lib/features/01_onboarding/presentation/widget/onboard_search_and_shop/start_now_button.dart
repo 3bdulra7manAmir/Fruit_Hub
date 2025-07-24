@@ -17,7 +17,7 @@ class StartNowButtonWidget extends StatelessWidget
     return CustomButton(text: S.current.startNow, margin: AppMargins.symmetric.medium,
     onPressed: ()
     {
-      log("Start Now");
+      log('Start Now');
       AppRouter.router.pushReplacement(AppRoutes.login);
     },);
   }

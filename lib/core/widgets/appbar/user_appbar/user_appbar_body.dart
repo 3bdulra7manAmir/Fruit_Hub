@@ -1,11 +1,12 @@
 import 'dart:developer';
-import 'package:e_commerce_app/core/extensions/widget_margin.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../config/router/app_router.dart';
-import '../../../../../config/router/app_routes.dart';
-import '../../../../../core/constants/app_sizes.dart';
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/app_routes.dart';
+import '../../../constants/app_sizes.dart';
+import '../../../extensions/widget_margin.dart';
 import 'notifications_bill.dart';
 import 'user_img.dart';
 import 'user_name.dart';
@@ -28,7 +29,7 @@ class UserAppBar extends StatelessWidget implements PreferredSizeWidget
           GestureDetector(
             onTap: ()
             {
-              log("UserImg has been Pressed...");
+              log('UserImg has been Pressed...');
             },
             child: const UserImgWidget()
           ),
@@ -38,7 +39,7 @@ class UserAppBar extends StatelessWidget implements PreferredSizeWidget
           GestureDetector(
             onTap: ()
             {
-              log("Notifications have been Pressed");
+              log('Notifications have been Pressed');
               AppRouter.router.pushNamed(AppRoutes.notifications);
             },
             child: const BillWidget()

@@ -16,7 +16,7 @@ class CheckOutAddressWidget extends StatelessWidget
       keyboardType: TextInputType.name,
       controller: addressController,
       validator: (value) => AppValidation.fullNameValidation(value, context),
-      hintText: "العنوان",
+      hintText: 'العنوان',
     );
   }
 }

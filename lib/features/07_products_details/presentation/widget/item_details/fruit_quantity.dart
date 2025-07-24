@@ -40,16 +40,16 @@ class FruitQuantityChanger extends StatelessWidget
       children:
       [
         GestureDetector(
-          onTap: () {log("Add has been Pressed...");},
+          onTap: () {log('Add has been Pressed...');},
           child: const FruitAddButtonWidget(),
         ),
 
         Sizes.s16.horizontalSpace,
-        Text("4", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text('4', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
 
         Sizes.s16.horizontalSpace,
         GestureDetector(
-          onTap: () {log("Subtract has been Pressed...");},
+          onTap: () {log('Subtract has been Pressed...');},
           child: SvgPicture.asset(AppAssets.icons.subtract),
         ),
       ],
@@ -69,16 +69,16 @@ class FruitQuantityPriceWidget extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Text("بطيخ", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text('بطيخ', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         Sizes.s4.verticalSpace,
         RichText(
           textAlign: TextAlign.center,
           text: TextSpan(style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight,),
           children:
           [
-            TextSpan(text: "20جنية", style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001)),
-            TextSpan(text: " / ", style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
-            TextSpan(text: "الكيلو", style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
+            TextSpan(text: '20جنية', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001)),
+            TextSpan(text: ' / ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
+            TextSpan(text: 'الكيلو', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
           ]
           ),
         ),

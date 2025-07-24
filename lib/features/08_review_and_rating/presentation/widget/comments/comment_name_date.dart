@@ -16,12 +16,12 @@ class CommentInfoWidget extends StatelessWidget
     return Column(
       children:
       [
-        Text("Ahmed Amr", style: AppStyles.bold(
+        Text('Ahmed Amr', style: AppStyles.bold(
           fontWeight: AppFontWeights.semiBoldWeight, 
           fontColor: AppColors.color.kBlack001),
         ),
         Sizes.s6.verticalSpace,
-        Text("25/06/2020", style: AppStyles.extraLight(
+        Text('25/06/2020', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.regularWeight, 
           fontColor: AppColors.color.kGrey002),
         ),

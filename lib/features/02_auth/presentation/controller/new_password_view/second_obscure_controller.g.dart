@@ -7,7 +7,7 @@ part of 'second_obscure_controller.dart';
 // **************************************************************************
 
 String _$secondObscurePasswordHash() =>
-    r'c3b90e41d84c993c3e2fd3038c1900c821715f26';
+    r'c7f245b1a7be5ac44205cb357a9f09411dbae94c';
 
 /// See also [SecondObscurePassword].
 @ProviderFor(SecondObscurePassword)

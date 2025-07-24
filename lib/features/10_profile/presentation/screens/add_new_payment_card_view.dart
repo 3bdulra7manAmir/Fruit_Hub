@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../09_checkout/presentation/widget/checkout_payment/card_auth_info.dart';
 import '../../../09_checkout/presentation/widget/checkout_payment/card_number_textfield.dart';
@@ -18,24 +18,24 @@ class AddNewPaymentCard extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: "اضافه بطاقه جديده",),
+      appBar: const CustomAppBar(title: 'اضافه بطاقه جديده',),
       body: CustomSingleChild(
         children:
         [
           Sizes.s24.verticalSpace,
-          CardOwnerNameWidget(),
+          const CardOwnerNameWidget(),
           Sizes.s8.verticalSpace,
-          CardNumberWidget(),
+          const CardNumberWidget(),
           Sizes.s8.verticalSpace,
-          CardAuthInfoWidget(),
+          const CardAuthInfoWidget(),
           Sizes.s18.verticalSpace,
-          MakeCardAsDeafultWidget(),
+          const MakeCardAsDeafultWidget(),
           if (1.sw <= 427 && 1.sh <= 952)...
           [
             Sizes.s150.verticalSpace,
           ]
           else...[Sizes.s300.verticalSpace,],
-          AddNewPaymentMethodButtonWidget(),
+          const AddNewPaymentMethodButtonWidget(),
           Sizes.s16.verticalSpace,
         ]
       ),

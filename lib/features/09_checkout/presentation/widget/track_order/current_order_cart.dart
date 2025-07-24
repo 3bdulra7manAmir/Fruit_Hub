@@ -33,17 +33,17 @@ class CurrentOrderWidget extends StatelessWidget
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              OrderIconWidget(),
+              const OrderIconWidget(),
               Sizes.s16.horizontalSpace,
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  OrderNumberTextWidget(),
+                  const OrderNumberTextWidget(),
                   Sizes.s3.verticalSpace,
-                  OrderDateTextWidget(),
+                  const OrderDateTextWidget(),
                   Sizes.s6.verticalSpace,
-                  OrdersCountTextWidget(),
+                  const OrdersCountTextWidget(),
                 ],
               ),
               if(isDownArrow)...
@@ -55,11 +55,11 @@ class CurrentOrderWidget extends StatelessWidget
                     
                   },
                   child: SvgPicture.asset(
-                    isExpanded ? "assets/icons/Orders_History/Up_Arrow_Black.svg"
-                    : "assets/icons/Orders_History/Down_Arrow_Black.svg"),
+                    isExpanded ? 'assets/icons/Orders_History/Up_Arrow_Black.svg'
+                    : 'assets/icons/Orders_History/Down_Arrow_Black.svg'),
                 ),
               ]
-              else...[SizedBox.shrink()]
+              else...[const SizedBox.shrink()]
             ],
           ),
           if(isExpanded)...
@@ -89,13 +89,13 @@ class CurrentOrderWidget extends StatelessWidget
                   ],
                 ),
                 Sizes.s11.horizontalSpace,
-                Text("تتبع الطلب", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
-                Spacer(),
-                Text("22 مارس , 2024", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
+                Text('تتبع الطلب', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
+                const Spacer(),
+                Text('22 مارس , 2024', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
               ],
             )
           ]
-          else...[SizedBox.shrink()]
+          else...[const SizedBox.shrink()]
         ],
       ),
     );
@@ -129,7 +129,7 @@ class OrderNumberTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("طلب رقم: 1234567#", style: AppStyles.extraLight(
+    return Text('طلب رقم: 1234567#', style: AppStyles.extraLight(
       fontWeight: AppFontWeights.boldWeight,
       fontColor: AppColors.color.kBlack004,),
     );
@@ -144,7 +144,7 @@ class OrderDateTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("تم الطلب :22 مارس ,2024", style: AppStyles.light(
+    return Text('تم الطلب :22 مارس ,2024', style: AppStyles.light(
       fontWeight: AppFontWeights.regularWeight,
       fontColor: AppColors.color.kGrey002,),
     );
@@ -162,16 +162,16 @@ class OrdersCountTextWidget extends StatelessWidget
     return Row(
       children:
       [
-        Text("عدد الطلبات ", style: AppStyles.extraLight(
+        Text('عدد الطلبات ', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.regularWeight, 
           fontColor: AppColors.color.kGrey002),
         ),
-        Text(": 10", style: AppStyles.extraLight(
+        Text(': 10', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack001),
         ),
         Sizes.s15.horizontalSpace,
-        Text("250 جنية", style: AppStyles.extraLight(
+        Text('250 جنية', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack001),
         ),

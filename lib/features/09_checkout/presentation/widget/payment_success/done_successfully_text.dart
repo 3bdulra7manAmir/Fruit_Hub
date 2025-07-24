@@ -9,6 +9,6 @@ class DoneSuccessfullyTextWidget extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return Text("تم بنجاح !", style: AppStyles.bold(fontColor: AppColors.color.kBlack001,),);
+    return Text('تم بنجاح !', style: AppStyles.bold(fontColor: AppColors.color.kBlack001,),);
   }
 }

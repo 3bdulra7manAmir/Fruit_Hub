@@ -17,9 +17,9 @@ class UserProfileInfo extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Text("أحمد ياسر", style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue001),),
+        Text('أحمد ياسر', style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue001),),
         Sizes.s2.verticalSpace,
-        Text("mail@mail.com", style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey023),),
+        Text('mail@mail.com', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey023),),
       ],
     );
   }

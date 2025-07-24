@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/form.dart';
-import '../../../../core/widgets/appbar.dart';
+import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
+import '../../../../core/widgets/form.dart';
 import '../widget/new_password/first_password_field.dart';
 import '../widget/new_password/new_password_button.dart';
 import '../widget/new_password/new_password_title.dart';
@@ -19,7 +19,7 @@ class NewPassword extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: "كلمة مرور جديدة"),
+      appBar: const CustomAppBar(title: 'كلمة مرور جديدة'),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: CustomForm(

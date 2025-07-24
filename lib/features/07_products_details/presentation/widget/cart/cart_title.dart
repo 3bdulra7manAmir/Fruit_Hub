@@ -17,7 +17,7 @@ class CartTitleWidget extends StatelessWidget
       padding: AppPadding.symmetric.xSmall,
       height: 41.h, width: 375.w, alignment: Alignment.center,
       decoration: BoxDecoration(color: AppColors.color.kGreen006,),
-      child: Text("لديك 3 منتجات في سله التسوق", style: AppStyles.extraLight(
+      child: Text('لديك 3 منتجات في سله التسوق', style: AppStyles.extraLight(
         fontColor: AppColors.color.kGreen001, 
         fontWeight: AppFontWeights.regularWeight),
       ),

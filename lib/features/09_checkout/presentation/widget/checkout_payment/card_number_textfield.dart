@@ -16,7 +16,7 @@ class CardNumberWidget extends StatelessWidget
       keyboardType: TextInputType.emailAddress,
       controller: carNumberController,
       validator: (value) => AppValidation.fullNameValidation(value, context),
-      hintText: "رقم البطاقة",
+      hintText: 'رقم البطاقة',
     );
   }
 }

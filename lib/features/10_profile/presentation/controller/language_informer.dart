@@ -1,8 +1,4 @@
-// ignore_for_file: unused_import
-
-import 'dart:developer';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
 import '../../../../core/services/localization/localization_controller.dart';
 
 part 'language_informer.g.dart';

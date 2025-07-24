@@ -23,9 +23,9 @@ class ConfirmAddressWidget extends StatelessWidget
       child: Column(
         children:
         [
-          DeliveryAddressEditWidget(),
+          const DeliveryAddressEditWidget(),
           Sizes.s8.verticalSpace,
-          DeliveryAddressWidget(),
+          const DeliveryAddressWidget(),
         ],
       )
     );
@@ -43,22 +43,22 @@ class DeliveryAddressEditWidget extends StatelessWidget
     return Row(
       children:
       [
-        Text("عنوان التوصيل", style: AppStyles.extraLight(
+        Text('عنوان التوصيل', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack001),
         ),
-        Spacer(),
+        const Spacer(),
         GestureDetector(
           onTap: ()
           {
-            log("Edit has been Pressed");
+            log('Edit has been Pressed');
           },
           child: Row(
             children:
             [
               SvgPicture.asset(AppAssets.icons.editGrey),
               Sizes.s4.horizontalSpace,
-              Text("تعديل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
+              Text('تعديل', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
             ],
           ),
         ),
@@ -80,7 +80,7 @@ class DeliveryAddressWidget extends StatelessWidget
       [
         SvgPicture.asset(AppAssets.icons.locationGrey),
         Sizes.s8.horizontalSpace,
-        Text("شارع النيل، مبنى رقم ١٢٣", style: AppStyles.bold(
+        Text('شارع النيل، مبنى رقم ١٢٣', style: AppStyles.bold(
           fontWeight: AppFontWeights.regularWeight, 
           fontColor: AppColors.color.kGrey001),
         ),

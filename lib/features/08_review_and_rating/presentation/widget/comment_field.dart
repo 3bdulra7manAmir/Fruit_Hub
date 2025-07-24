@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'package:e_commerce_app/core/extensions/widget_shadow_box.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../../config/theme/color_manager/colors.dart';
@@ -8,6 +8,7 @@ import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/extensions/widget_shadow_box.dart';
 import '../../../../core/widgets/textform_field.dart';
 
 class CommentFieldWidget extends StatelessWidget
@@ -24,7 +25,7 @@ class CommentFieldWidget extends StatelessWidget
       keyboardType: TextInputType.text,
       onSubmitted: (value) => log(value),
       fillColor: AppColors.color.kWhite001,
-      hintText: "اكتب التعليق..",
+      hintText: 'اكتب التعليق..',
       hintStyle: AppStyles.extraLight(
         fontWeight: AppFontWeights.regularWeight, 
         fontColor: AppColors.color.kBlack002

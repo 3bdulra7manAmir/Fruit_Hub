@@ -1,6 +1,7 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
@@ -20,9 +21,9 @@ class SaveAddressWidget extends StatelessWidget
       children:
       [
 
-        KeepAddressSwitchButtonWidget(),
+        const KeepAddressSwitchButtonWidget(),
         Sizes.s8.horizontalSpace,
-        KeepAddressTextWidget(),
+        const KeepAddressTextWidget(),
       ],
     );
   }
@@ -35,7 +36,7 @@ class KeepAddressTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("حفظ العنوان", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),);
+    return Text('حفظ العنوان', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),);
   }
 }
 
@@ -57,7 +58,7 @@ class KeepAddressSwitchButtonWidget extends ConsumerWidget
     return GestureDetector(
       onTap: ()
       {
-        log(!isSwitched ? "True" : "False");
+        log(!isSwitched ? 'True' : 'False');
         ref.read(toggleSwitchSaveAddressProvider.notifier).toggle();
       },
       child: AnimatedContainer(

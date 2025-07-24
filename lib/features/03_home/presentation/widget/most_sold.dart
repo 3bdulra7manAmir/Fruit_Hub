@@ -19,15 +19,15 @@ class MostSoldWidget extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:
       [
-        Text("الأكثر مبيعًا", style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text('الأكثر مبيعًا', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         GestureDetector(
           onTap: ()
           {
-            log("More has been Pressed...");
+            log('More has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.mostSold);
           },
           child: isMoreEnabled ?
-          Text("المزيد", style: AppStyles.extraLight(
+          Text('المزيد', style: AppStyles.extraLight(
             fontColor: AppColors.color.kGrey002,
             fontWeight: AppFontWeights.regularWeight,
             ),

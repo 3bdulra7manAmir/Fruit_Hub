@@ -26,11 +26,11 @@ class IfPreviousResultsBody extends StatelessWidget
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:
           [
-            Text("عمليات البحث الأخيرة", style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
+            Text('عمليات البحث الأخيرة', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
             GestureDetector(
               onTap: ()
-              {log("Delete All has been Pressed...");},
-              child: Text("حذف الكل", style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
+              {log('Delete All has been Pressed...');},
+              child: Text('حذف الكل', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
             ),
           ],
         ),
@@ -55,10 +55,10 @@ class PreviouslySearchedTextWidget extends StatelessWidget
       [
         SvgPicture.asset(AppAssets.icons.watchGrey),
         Sizes.s16.horizontalSpace,
-        Text("فراولة", style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.regularWeight),),
+        Text('فراولة', style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.regularWeight),),
         const Spacer(),
         GestureDetector(
-          onTap: () {log("Single Delete has been Pressed...");},
+          onTap: () {log('Single Delete has been Pressed...');},
           child: SvgPicture.asset(AppAssets.icons.removeBlacksemisold)
         ),
       ],

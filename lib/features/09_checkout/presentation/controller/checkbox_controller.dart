@@ -10,14 +10,14 @@ class KeepCardCheckbox extends _$KeepCardCheckbox
   bool build()
   {
     const initialValue = false;
-    log("Initial CheckBox State: $initialValue");
+    log('Initial CheckBox State: $initialValue');
     return initialValue;
   }
 
   void toggle()
   {
     state = !state;
-    log("CheckBox Toggled => $state");
+    log('CheckBox Toggled => $state');
   }
 }
 

@@ -11,7 +11,7 @@ class GeneralTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("عام", style: AppStyles.bold(
+    return Text('عام', style: AppStyles.bold(
       fontWeight: AppFontWeights.semiBoldWeight, 
       fontColor: AppColors.color.kBlack001),
     );

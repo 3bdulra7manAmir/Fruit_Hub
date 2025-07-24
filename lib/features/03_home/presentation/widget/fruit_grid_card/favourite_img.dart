@@ -1,6 +1,7 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/constants/app_images.dart';
@@ -17,7 +18,7 @@ class FavouriteWidget extends ConsumerWidget
     return GestureDetector(
       onTap: ()
       {
-        log("Favourit Has been Pressed...");
+        log('Favourit Has been Pressed...');
         ref.read(favouriteImgProvider.notifier).toggle();
       },
       child: isFavouritProvider ? //ShadowCompany

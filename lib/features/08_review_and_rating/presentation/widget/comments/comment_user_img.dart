@@ -17,9 +17,9 @@ class RatingUserImgBody extends StatelessWidget
       clipBehavior: Clip.none,
       children:
       [
-        RatingUserImgWidget(),
+        const RatingUserImgWidget(),
         Positioned(right: -4.w, bottom: 4.h,
-          child: RatingValueHoveredWidget(),),
+          child: const RatingValueHoveredWidget(),),
       ]
     );
   }
@@ -38,7 +38,7 @@ class RatingUserImgWidget extends StatelessWidget
       decoration: BoxDecoration(
         borderRadius: AppRadiuses.circular.large,
         color: getRandomColor(),
-        image: DecorationImage(image: AssetImage("assets/icons/Review_And_Rating/User1.png"))
+        image: const DecorationImage(image: AssetImage('assets/icons/Review_And_Rating/User1.png'))
       ),
     );
   }
@@ -59,7 +59,7 @@ class RatingValueHoveredWidget extends StatelessWidget
         borderRadius: AppRadiuses.circular.xXSmall,
         //boxShadow: [AppShadowBoxes.userImg],
       ),
-      child: Text("5.0", style: AppStyles.light(),)
+      child: Text('5.0', style: AppStyles.light(),)
     );
   }
 }

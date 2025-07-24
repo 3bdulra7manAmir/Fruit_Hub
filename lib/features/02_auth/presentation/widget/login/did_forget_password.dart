@@ -1,11 +1,12 @@
 import 'dart:developer';
-import 'package:e_commerce_app/core/extensions/widget_align.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/widget_align.dart';
 
 class DidForgetPasswordWidget extends StatelessWidget
 {
@@ -17,11 +18,11 @@ class DidForgetPasswordWidget extends StatelessWidget
     return GestureDetector(
       onTap: ()
       {
-        log("Forget Password? Pressed");
+        log('Forget Password? Pressed');
         AppRouter.router.pushNamed(AppRoutes.forgetPasswordPhone);
       },
       child: Text(
-        "نسيت كلمة المرور؟", 
+        'نسيت كلمة المرور؟', 
         style: AppStyles.extraLight(fontColor: AppColors.color.kGreen004)
       ).align(Alignment.centerLeft),
     );

@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../core/widgets/appbar.dart';
+import '../../core/widgets/appbar/default_appbar/appbar.dart';
+import '../../core/widgets/appbar/user_appbar/user_appbar_body.dart';
 import '../../core/widgets/navbar/nav_bar_items_list.dart';
 import '../../core/widgets/navbar/nav_bar_widget.dart';
-import '../../features/03_home/presentation/widget/user_appbar/user_appbar_body.dart';
 
 class MainScaffold extends StatelessWidget
 {
-  final StatefulNavigationShell navigationShell;
-
   const MainScaffold({super.key, required this.navigationShell});
+  final StatefulNavigationShell navigationShell;
 
   void _goBranch(int index)
   {
@@ -39,11 +38,11 @@ class MainScaffold extends StatelessWidget
       case 0:
         return const UserAppBar();
       case 1:
-        return CustomAppBar(barTitle: "المنتجات", isNotifications: true, isCustomBack: false,);
+        return const CustomAppBar(title: 'المنتجات', isNotifications: true, isCustomBack: false,);
       case 2:
-        return CustomAppBar(barTitle: "السلة",);
+        return const CustomAppBar(title: 'السلة',);
       case 3:
-        return CustomAppBar(barTitle: "حسابي", isCustomBack: false,);
+        return const CustomAppBar(title: 'حسابي', isCustomBack: false,);
       default:
         return null;
     }

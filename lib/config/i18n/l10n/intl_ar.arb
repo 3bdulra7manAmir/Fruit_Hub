@@ -2,11 +2,13 @@
   "@@locale": "ar",
   "error": "خطأ",
 
+  
   "welcomeIn": "مرحبًا بك في",
   "onBoardingDescription": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
   "onBoarding2Description": "نُقدِّم لك نخبة مختارة من أفضل الفواكه. تصفّح التفاصيل والصور والتقييمات لتختار الفاكهة المثالية بثقة.",
   "searchAndShop": "ابحث وتسوق",
   "startNow": "ابدأ الآن",
+
 
   "enterEmail": "أدخل البريد الإلكتروني",
   "emailIsRequired": "البريد الإلكتروني مطلوب",
@@ -14,9 +16,11 @@
   "invalidEmailDomain": "يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).",
   "emailFailureValidation": "خطأ في التحقق من البريد الإلكتروني:",
 
+
   "fullNameIsRequired": "الاسم الكامل مطلوب.",
   "fullNameinvalid": "يرجى إدخال اسم كامل صالح.",
   "fullNameValidationFailure": "فشل التحقق من الاسم الكامل:",
+
 
   "passwordIsRequired": "كلمة المرور مطلوبة",
   "passwordLength8Character": "يجب أن تكون كلمة المرور مكونة من ٨ أحرف على الأقل.",
@@ -27,7 +31,88 @@
   "invalidPassword": "كلمة المرور غير صالحة",
   "passwordValidationFailure": "خطأ في التحقق من كلمة المرور:",
 
+
   "phoneNumberIsRequired": "رقم الهاتف مطلوب",
   "invalidPhoneNumber": "رقم الهاتف غير صالح",
-  "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً"
+  "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً",
+
+
+  "forgotPassword": "نسيت كلمة المرور",
+
+
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "createAccount": "سجّل حساب جديد",
+
+  
+  "or": "أو",
+  "alreadyHaveAccount": "لديك حساب مسبقًا؟",
+  "login": "تسجيل الدخول",
+
+
+  "mostSold": "الأكثر طلبًا",
+  "more": "عرض المزيد",
+  "eidOffers": "عروض عيدية",
+  "discount": "خصومات",
+
+
+  "goodMorning": "صباح الخير!..",
+  "search": "ابحث",
+  "infoUnavailable": "عذرًا... المعلومات غير متاحة حاليًا",
+  "recentSearches": "عمليات البحث الأخيرة",
+  "clearAll": "حذف الكل",
+  "searchResults": "نتائج البحث",
+  "results": "نتائج",
+
+  "markAllRead": "تحديد الكل كمقروء",
+
+  "ourProducts": "منتجاتنا",
+  "price": "السعر:",
+  "to": "إلى",
+
+
+  "itemsInCart": "لديك منتجات في سلة التسوق",
+  "review": "مراجعة",
+  "summary": "ملخص",
+
+
+  "saveAddress": "حفظ العنوان",
+  "choosePayment": "اختر وسيلة الدفع المناسبة:",
+  "makeDefaultCard": "اجعل البطاقة الافتراضية",
+  "pleaseChoosePayment": "يرجى اختيار وسيلة الدفع المناسبة لك.",
+  "deliveryAddress": "عنوان التوصيل",
+  "edit": "تعديل",
+
+
+  "confirmOrder": "يرجى تأكيد طلبك",
+  "paymentMethod": "طريقة الدفع",
+  "orderSummary": "ملخص الطلب:",
+  "subtotal": "الإجمالي الجزئي:",
+  "delivery": "رسوم التوصيل:",
+  "total": "الإجمالي",
+  "cashOnDelivery": "الدفع عند الاستلام",
+  "pickup": "الاستلام من الفرع",
+  "success": "تمت العملية بنجاح!",
+
+
+  "home": "الرئيسية",
+  "orderNumber": "رقم الطلب: 1245789663#",
+  "trackOrder": "تتبع الطلب",
+  "numberOfOrders": "عدد الطلبات",
+
+
+  "changePassword": "تغيير كلمة المرور",
+  "personalInfo": "المعلومات الشخصية",
+  "general": "عام",
+  "help": "المساعدة",
+  "logout": "تسجيل الخروج",
+
+
+  "arabic": "العربية",
+  "language": "اللغة",
+  "notifications": "الإشعارات",
+  "favorites": "المفضلة",
+  "payments": "المدفوعات",
+  "myOrders": "طلباتي",
+  "profile": "الملف الشخصي",
+  "theme": "الوضع"
 }

@@ -40,15 +40,15 @@ class FruitItemWidget extends StatelessWidget
 
   void backButtonOnTap()
   {
-    log("Poping has been Pressed...");
+    log('Poping has been Pressed...');
     try
     {
-      log("Poping Back...");
+      log('Poping Back...');
       AppRouter.router.pop();
     } 
-    catch (e, stack)
+    catch (error, stack)
     {
-      log("Error: $e,, Stack: $stack");
+      log('Error: $error,, Stack: $stack');
     }
   }
 }

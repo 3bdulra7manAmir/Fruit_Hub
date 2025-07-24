@@ -15,9 +15,9 @@ class CardAuthInfoWidget extends StatelessWidget
     return Row(
       children:
       [
-        Expanded(child: ExpireDateWidget()),
+        const Expanded(child: ExpireDateWidget()),
         Sizes.s16.horizontalSpace,
-        Expanded(child: CvvCodeWidget()),
+        const Expanded(child: CvvCodeWidget()),
       ],
     );
   }
@@ -37,7 +37,7 @@ class ExpireDateWidget extends StatelessWidget
       keyboardType: TextInputType.emailAddress,
       controller: expireDateController,
       validator: (value) => AppValidation.fullNameValidation(value, context),
-      hintText: "تاريخ الصلاحيه",
+      hintText: 'تاريخ الصلاحيه',
     );
   }
 }
@@ -56,7 +56,7 @@ class CvvCodeWidget extends StatelessWidget
       keyboardType: TextInputType.emailAddress,
       controller: cvvCodeController,
       validator: (value) => AppValidation.fullNameValidation(value, context),
-      hintText: "CVV",
+      hintText: 'CVV',
     );
   }
 }

@@ -1,9 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../core/widgets/circular_indicator.dart';
-import '../../features/01_onboarding/presentation/screens/splash_view.dart';
 import '../../features/01_onboarding/presentation/screens/dots_indicator_view.dart';
+import '../../features/01_onboarding/presentation/screens/splash_view.dart';
 import '../../features/02_auth/presentation/screens/forget_password_phone_view.dart';
 import '../../features/02_auth/presentation/screens/login_view.dart';
 import '../../features/02_auth/presentation/screens/new_password_view.dart';
@@ -257,7 +258,6 @@ abstract class AppRouter
                 path: AppRoutes.home,
                 name: AppRoutes.home,
                 builder: (_, __) => const Home(),
-                routes: [],
               ),
             ],
           ),
@@ -270,7 +270,6 @@ abstract class AppRouter
                 path: AppRoutes.products,
                 name: AppRoutes.products,
                 builder: (_, __) => const Products(),
-                routes: [],
               ),
             ],
           ),
@@ -283,7 +282,6 @@ abstract class AppRouter
                 path: AppRoutes.cart,
                 name: AppRoutes.cart,
                 builder: (_, __) => const Cart(),
-                routes: [],
               ),
             ],
           ),
@@ -295,8 +293,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.profile,
                 name: AppRoutes.profile,
-                builder: (_, __) => const Profile(),
-                routes: []
+                builder: (_, __) => const Profile()
               ),
             ],
           ),

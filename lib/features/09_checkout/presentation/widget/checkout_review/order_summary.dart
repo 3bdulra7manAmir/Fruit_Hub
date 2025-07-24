@@ -11,7 +11,7 @@ class OrderSummaryTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text("ملخص الطلب :", style: AppStyles.extraLight(
+    return Text('ملخص الطلب :', style: AppStyles.extraLight(
       fontColor: AppColors.color.kBlack001, 
       fontWeight: AppFontWeights.boldWeight),
     );

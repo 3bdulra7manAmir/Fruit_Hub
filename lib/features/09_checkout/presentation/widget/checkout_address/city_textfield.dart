@@ -16,7 +16,7 @@ class CheckOutCityWidget extends StatelessWidget
       keyboardType: TextInputType.name,
       controller: cityController,
       validator: (value) => AppValidation.fullNameValidation(value, context),
-      hintText: "المدينه",
+      hintText: 'المدينه',
     );
   }
 }

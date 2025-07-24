@@ -2,13 +2,6 @@ import 'package:flutter/material.dart';
 
 class CustomListviewBuilder extends StatelessWidget
 {
-  final Widget? Function(BuildContext, int) itemBuilder;
-  final Widget Function(BuildContext, int) separatorBuilder;
-  final int itemCount;
-  final EdgeInsetsGeometry? padding;
-  final bool? reverse;
-  final ScrollPhysics? physics;
-  final Axis? scrollDirection ;
 
   const CustomListviewBuilder({super.key,
   required this.itemBuilder,
@@ -19,6 +12,13 @@ class CustomListviewBuilder extends StatelessWidget
   this.physics,
   this.scrollDirection,
   });
+  final Widget? Function(BuildContext, int) itemBuilder;
+  final Widget Function(BuildContext, int) separatorBuilder;
+  final int itemCount;
+  final EdgeInsetsGeometry? padding;
+  final bool? reverse;
+  final ScrollPhysics? physics;
+  final Axis? scrollDirection ;
 
   @override
   Widget build(BuildContext context)
