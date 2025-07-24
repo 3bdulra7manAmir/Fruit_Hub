@@ -41,7 +41,7 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
         height: effectiveHeight,
         padding: padding,
         decoration: BoxDecoration(
-          color: isActive ? AppColors.color.kGreen001.withOpacity(0.85) : AppColors.color.kGrey019.withOpacity(0.6),
+          color: isActive ? AppColors.color.kGreen001 : AppColors.color.kGrey023.withAlpha(128),
           borderRadius: effectiveBorderRadius,
           border: Border.all(color: AppColors.color.kGrey014,),),
         alignment: isActive ? Alignment.centerRight : Alignment.centerLeft,
@@ -53,7 +53,7 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
             color: AppColors.color.kWhite001,
             shape: BoxShape.circle,
             boxShadow:
-            [
+            const [
               BoxShadow(
                 color: Color.fromARGB(15, 16, 24, 40),
                 offset: Offset(0, 1),
