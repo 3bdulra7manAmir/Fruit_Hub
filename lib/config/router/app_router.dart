@@ -212,7 +212,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.personalInfo,
         name: AppRoutes.personalInfo,
-        builder: (_, _) => const PersonalInfo(),
+        builder: (_, _) => PersonalInfo(),
       ),
       // [Orders History]
       GoRoute(

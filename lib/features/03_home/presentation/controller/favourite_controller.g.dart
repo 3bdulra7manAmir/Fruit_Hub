@@ -6,7 +6,7 @@ part of 'favourite_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$favouriteImgHash() => r'ac23829c46d573131bb4d716b900837d976635f9';
+String _$favouriteImgHash() => r'bc075c8090113ea2108370d56a8af837137617c0';
 
 /// See also [FavouriteImg].
 @ProviderFor(FavouriteImg)

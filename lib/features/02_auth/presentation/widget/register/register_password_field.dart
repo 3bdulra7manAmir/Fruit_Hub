@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/extensions/widget_padding.dart';
 import '../../../../../core/services/validation/app_validation.dart';
@@ -32,7 +33,7 @@ class RegisterPasswordWidget extends ConsumerWidget
         },
         child: obscureProvider ? 
         SvgPicture.asset(AppAssets.icons.eyeGrey,).paddingDirectionalOnly(end: 30.w,)
-        : const Icon(Icons.visibility_off, color: Color(0xffC9CECF),).paddingDirectionalOnly(end: 30.w,),
+        : Icon(Icons.visibility_off, color: AppColors.color.kGrey026,).paddingDirectionalOnly(end: 30.w,),
       ),
     );
   }

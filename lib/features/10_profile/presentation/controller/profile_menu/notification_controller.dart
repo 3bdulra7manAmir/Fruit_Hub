@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../core/utils/toggle.dart';
+import '../../../../../core/utils/toggle.dart';
 
 part 'notification_controller.g.dart';
 

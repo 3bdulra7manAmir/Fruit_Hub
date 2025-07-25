@@ -95,6 +95,9 @@ class LightColorScheme extends ColorManagerBase
   @override
   /// [_F8F8FA]
   Color get kGrey025 => const Color(0xffF8F8FA);
+  @override
+  /// [_C9CECF]
+  Color get kGrey026 => const Color(0xffC9CECF);
 
 
   // Black Color Range

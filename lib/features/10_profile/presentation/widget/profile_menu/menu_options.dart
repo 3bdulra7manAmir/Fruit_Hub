@@ -13,9 +13,9 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/toggle_button.dart';
-import '../../controller/language_informer.dart';
-import '../../controller/notification_controller.dart';
-import '../../controller/theme_informer.dart';
+import '../../controller/profile_menu/language_informer.dart';
+import '../../controller/profile_menu/notification_controller.dart';
+import '../../controller/profile_menu/theme_informer.dart';
 
 class ProfileOptions extends StatelessWidget
 {

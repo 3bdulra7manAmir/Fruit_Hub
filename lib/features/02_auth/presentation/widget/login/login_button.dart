@@ -29,7 +29,7 @@ class LoginButtonWidget extends StatelessWidget
           {
             LoginEmailWidget.emailController.clear();
             LoginPasswordWidget.passwordController.clear();
-            AppRouter.router.pushNamed(AppRoutes.home);
+            AppRouter.router.pushReplacementNamed(AppRoutes.home);
           }
         }
         else

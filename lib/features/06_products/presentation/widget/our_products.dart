@@ -1,7 +1,4 @@
-// ignore_for_file: unused_import
-
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,7 +8,6 @@ import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_styles.dart';
 import 'price_filter_modal_sheet/modal_sheet_body.dart';
-import 'sort_modal_sheet/sort_body.dart';
 
 class OurProductsWidget extends StatelessWidget
 {

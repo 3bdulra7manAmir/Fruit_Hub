@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../../../config/theme/theme_controller/theme_controller.dart';
-import '../../../../core/utils/toggle.dart';
+import '../../../../../config/theme/theme_controller/theme_controller.dart';
+import '../../../../../core/utils/toggle.dart';
 
 part 'theme_informer.g.dart';
 
