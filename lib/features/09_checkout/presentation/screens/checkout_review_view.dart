@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
+import '../controller/checkout_stepper_controller.dart';
 import '../widget/checkout_review/confirm_address.dart';
 import '../widget/checkout_review/confirm_order_text.dart';
 import '../widget/checkout_review/confirm_payment.dart';
@@ -11,29 +14,22 @@ import '../widget/checkout_review/order_summary.dart';
 import '../widget/checkout_review/order_total.dart';
 import '../widget/nav_buttons.dart';
 import '../widget/payment_steps_list.dart';
-import 'checkout_ship_view.dart';
 
-class CheckoutReview extends StatefulWidget
+class CheckoutReview extends ConsumerWidget
 {
   const CheckoutReview({super.key});
 
   @override
-  State<CheckoutReview> createState() => _CheckoutReviewState();
-}
-class _CheckoutReviewState extends State<CheckoutReview>
-{
-  @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutReview);
     return Scaffold(
-      appBar: CustomAppBar(title: titles[currentStep]),
+      appBar: const CustomAppBar(title: 'المراجعة'),
       body: CustomSingleChild(
         children:
         [
           Sizes.s16.verticalSpace,
-          SizedBox(height: 24.h,
-            child: PaymentStepsListWidget(currentStep: currentStep),
-          ),
+          SizedBox(height: 24.h, child: const PaymentStepsListWidget(),),
           Sizes.s24.verticalSpace,
           const OrderSummaryTextWidget(),
           Sizes.s8.verticalSpace,
@@ -45,12 +41,7 @@ class _CheckoutReviewState extends State<CheckoutReview>
           Sizes.s8.verticalSpace,
           const ConfirmAddressWidget(),
           Sizes.s51.verticalSpace,
-          CheckOutNavButtonsWidget(
-            currentStep: currentStep,
-            totalSteps: titles.length,
-            onBack: () => setState(() => currentStep--),
-            onNext: () => setState(() => currentStep++),
-          ),
+          const CheckOutNavButtonsWidget(),
           Sizes.s16.verticalSpace,
         ]
       ),

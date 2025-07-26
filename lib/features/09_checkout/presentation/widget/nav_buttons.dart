@@ -1,28 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/buttons/button.dart';
 import '../../../../core/widgets/snackbar.dart';
+import '../controller/checkout_stepper_controller.dart';
 
-class CheckOutNavButtonsWidget extends StatelessWidget
+class CheckOutNavButtonsWidget extends ConsumerWidget
 {
-
-  const CheckOutNavButtonsWidget({
-    super.key,
-    required this.currentStep,
-    required this.totalSteps,
-    required this.onNext,
-    required this.onBack,
-  });
-  final int currentStep;
-  final int totalSteps;
-  final VoidCallback onNext;
-  final VoidCallback onBack;
+  const CheckOutNavButtonsWidget({super.key});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
-    return CustomButton(text: 'التالي', onPressed: currentStep < totalSteps - 1
-      ? onNext : () => CustomSnackBar.show(context, 'تم إكمال الخطوات!'),
+    final controller = ref.watch(checkoutStepperControllerProvider);
+    return Row(
+      children:
+      [
+        if (controller.currentStep > 0)
+          Expanded(child: CustomButton(text: 'السابق', onPressed: controller.previousStep,),),
+        Sizes.s16.horizontalSpace,
+        Expanded(
+          child: CustomButton(
+            text: controller.currentStep < 3 ? 'التالي' : 'إكمال',
+            onPressed: controller.currentStep < 3
+            ? controller.nextStep : () => CustomSnackBar.show(context, 'تم إكمال الخطوات!'),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -1,48 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
+import '../controller/checkout_stepper_controller.dart';
 import '../widget/checkout_ship/payment_option_cards_list.dart';
 import '../widget/nav_buttons.dart';
 import '../widget/payment_steps_list.dart';
 
-final List<String> titles = ['الشحن', 'العنوان', 'الدفع', 'المراجعة'];
-int currentStep = 0;
 
-class CheckoutShip extends StatefulWidget
+class CheckoutShip extends ConsumerWidget
 {
   const CheckoutShip({super.key});
-
-  @override
-  State<CheckoutShip> createState() => _CheckoutShipState();
-}
-
-class _CheckoutShipState extends State<CheckoutShip>
-{
   
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutShip);
     return Scaffold(
-      appBar: CustomAppBar(title: titles[currentStep]),
+      appBar: const CustomAppBar(title: 'الشحن'),
       body: CustomSingleChild(
         children:
         [
           Sizes.s16.verticalSpace,
-          SizedBox(height: 24.h,
-            child: PaymentStepsListWidget(currentStep: currentStep),
-          ),
+          SizedBox(height: 24.h, child: const PaymentStepsListWidget(),),
           Sizes.s32.verticalSpace,
           const PaymentOptionCardsList(),
           Sizes.s16.verticalSpace,
-          CheckOutNavButtonsWidget(
-            currentStep: currentStep,
-            totalSteps: titles.length,
-            onBack: () => setState(() => currentStep--),
-            onNext: () => setState(() => currentStep++),
-          ),
+          const CheckOutNavButtonsWidget(),
           Sizes.s16.verticalSpace,
         ],
       ),

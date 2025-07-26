@@ -33,7 +33,7 @@ import '../../features/10_profile/presentation/screens/personal_info_view.dart';
 import '../../features/10_profile/presentation/screens/profile_menu_view.dart';
 import '../../features/10_profile/presentation/screens/who_we_are.dart';
 import 'app_routes.dart';
-import 'navigator.dart';
+import 'navigators/nav_bar_navigator.dart';
 import 'route_observer.dart';
 
 
@@ -96,13 +96,6 @@ abstract class AppRouter
         builder: (_, _) => NewPassword(),
       ),
 
-
-      // ///[ Home Feature ]
-      // GoRoute(
-      //   path: AppRoutes.home,
-      //   name: AppRoutes.home,
-      //   builder: (_, _) => const Home(),
-      // ),
       //[Most Sold]
       GoRoute(
         path: AppRoutes.mostSold,
@@ -128,35 +121,20 @@ abstract class AppRouter
         builder: (_, _) => const Notifications(),
       ),
 
-      ///[ Products Feature ]
-      // GoRoute(
-      //   path: AppRoutes.products,
-      //   name: AppRoutes.products,
-      //   builder: (_, _) => const Products(),
-      // ),
-
       ///[ Filtered_Products Feature ]
       GoRoute(
         path: AppRoutes.filteredProducts,
         name: AppRoutes.filteredProducts,
         builder: (_, _) => const FilteredProducts(),
       ),
-
       ///[ Item_Details Feature ]
       GoRoute(
         path: AppRoutes.itemsDetails,
         name: AppRoutes.itemsDetails,
         builder: (_, _) => const ItemDetails(),
       ),
-
-      // ///[ Cart Feature]
-      // GoRoute(
-      //   path: AppRoutes.cart,
-      //   name: AppRoutes.cart,
-      //   builder: (_, _) => const Cart(),
-      // ),
       
-      ///[ Cart Feature]
+      ///[ Rate Feature]
       GoRoute(
         path: AppRoutes.rate,
         name: AppRoutes.rate,
@@ -201,13 +179,6 @@ abstract class AppRouter
         builder: (_, _) => const TrackOrder(),
       ),
 
-      /// [ Profile ]
-      // [Profile Menu]
-      // GoRoute(
-      //   path: AppRoutes.profile,
-      //   name: AppRoutes.profile,
-      //   builder: (_, _) => const Profile(),
-      // ),
       // [Personal Information]
       GoRoute(
         path: AppRoutes.personalInfo,
@@ -220,25 +191,21 @@ abstract class AppRouter
         name: AppRoutes.ordersHistory,
         builder: (_, _) => const OrdersHistory(),
       ),
-
       GoRoute(
         path: AppRoutes.paymentMethods,
         name: AppRoutes.paymentMethods,
         builder: (_, _) => const PaymentMethods(),
       ),
-
       GoRoute(
         path: AppRoutes.addNewPaymentCard,
         name: AppRoutes.addNewPaymentCard,
         builder: (_, _) => const AddNewPaymentCard(),
       ),
-
       GoRoute(
         path: AppRoutes.favourit,
         name: AppRoutes.favourit,
         builder: (_, _) => const Favourit(),
       ),
-      
       GoRoute(
         path: AppRoutes.whoWeAre,
         name: AppRoutes.whoWeAre,

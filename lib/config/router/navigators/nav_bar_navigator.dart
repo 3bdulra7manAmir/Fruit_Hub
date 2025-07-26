@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../core/widgets/appbar/default_appbar/appbar.dart';
-import '../../core/widgets/appbar/user_appbar/user_appbar_body.dart';
-import '../../core/widgets/navbar/nav_bar_items_list.dart';
-import '../../core/widgets/navbar/nav_bar_widget.dart';
+import '../../../core/widgets/appbar/default_appbar/appbar.dart';
+import '../../../core/widgets/appbar/user_appbar/user_appbar_body.dart';
+import '../../../core/widgets/navbar/nav_bar_items_list.dart';
+import '../../../core/widgets/navbar/nav_bar_widget.dart';
+
 
 class MainScaffold extends StatelessWidget
 {
