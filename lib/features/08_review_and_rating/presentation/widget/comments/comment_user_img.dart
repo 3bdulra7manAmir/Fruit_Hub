@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/utils/random_color.dart';
 
@@ -38,7 +39,7 @@ class RatingUserImgWidget extends StatelessWidget
       decoration: BoxDecoration(
         borderRadius: AppRadiuses.circular.large,
         color: getRandomColor(),
-        image: const DecorationImage(image: AssetImage('assets/icons/Review_And_Rating/User1.png'))
+        image: DecorationImage(image: AssetImage(AppAssets.imgs.usercomment))
       ),
     );
   }

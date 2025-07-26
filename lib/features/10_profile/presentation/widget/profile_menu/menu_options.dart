@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,7 +39,7 @@ class ProfileOptions extends StatelessWidget
       contentPadding: EdgeInsets.zero,
       onTap: onTap,
       leading: SvgPicture.asset(leading),
-      trailing: isArrow ? SvgPicture.asset('assets/icons/Profile/Left_Black_Arrow.svg') : caseWidget,
+      trailing: isArrow ? SvgPicture.asset(AppAssets.icons.leftBlackArrow) : caseWidget,
       title: Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
       shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016,)),
     );
@@ -60,7 +59,7 @@ class OptionsMenuWidget extends StatelessWidget
       children:
       [
         ProfileOptions(
-          leading: 'assets/icons/Profile/User_Green.svg',
+          leading: AppAssets.icons.userGreen,
           title: 'الملف الشخصي',
           onTap: ()
           {
@@ -69,7 +68,7 @@ class OptionsMenuWidget extends StatelessWidget
           },
         ),
         ProfileOptions(
-          leading: 'assets/icons/Profile/Box_Green.svg',
+          leading: AppAssets.icons.boxGreen,
           title: 'طلباتي',
           onTap: ()
           {
@@ -78,7 +77,7 @@ class OptionsMenuWidget extends StatelessWidget
           },
         ),
         ProfileOptions(
-          leading: 'assets/icons/Profile/Wallet_Green.svg',
+          leading: AppAssets.icons.walletGreen,
           title: 'المدفوعات',
           onTap: ()
           {
@@ -87,7 +86,7 @@ class OptionsMenuWidget extends StatelessWidget
           },
         ),
         ProfileOptions(
-          leading: 'assets/icons/Profile/Heart_Green.svg',
+          leading: AppAssets.icons.hartGreen,
           title: 'المفضلة',
           onTap: ()
           {
@@ -96,7 +95,7 @@ class OptionsMenuWidget extends StatelessWidget
           },
         ),
         ProfileOptions(
-          leading: 'assets/icons/Profile/Bill_Green.svg',
+          leading: AppAssets.icons.billGreen,
           title: 'الاشعارات',
           isArrow: false,
           caseWidget: SwitchButtonWidget(provider: toggleSwitchNotificationsProvider),
@@ -104,7 +103,7 @@ class OptionsMenuWidget extends StatelessWidget
         ),
         Consumer(
           builder: (context, ref, child) => ProfileOptions(
-            leading: 'assets/icons/Profile/Language_Green.svg',
+            leading: AppAssets.icons.languageGreen,
             title: 'اللغة',
             isArrow: false,
             onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
@@ -120,7 +119,7 @@ class OptionsMenuWidget extends StatelessWidget
           ),
         ),
         ProfileOptions(
-          leading: 'assets/icons/Profile/Magic_Green.svg',
+          leading: AppAssets.icons.magicGreen,
           isArrow: false,
           caseWidget: SwitchButtonWidget(provider: themeInformerProvider,),
           title: 'الوضع',

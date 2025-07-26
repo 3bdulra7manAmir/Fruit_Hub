@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,7 +6,6 @@ import '../../../../config/router/app_router.dart';
 import '../../../../config/router/routes_extras.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/column.dart';
-import '../../../../core/widgets/popers/will_pop_scope.dart';
 import '../widget/fruit_grid_list.dart';
 import '../widget/most_sold.dart';
 import '../widget/offers_list.dart';
@@ -22,27 +20,25 @@ class Home extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return WillPopScopeWidget(
-      child: CustomSingleChild(
-          children:
-          [
-            Sizes.s16.verticalSpace,
-            SearchBarWidget(
-              onSubmitted: (value)
-              {
-                log('Search Field Value is => $value');
-                AppRouter.router.pushSearchString(fruitName: value);
-              },
-            ),
-            Sizes.s12.verticalSpace,
-            SizedBox(height: 158.h, child: const OffersListWidget()),
-            Sizes.s12.verticalSpace,
-            const MostSoldWidget(isMoreEnabled: true,),
-            Sizes.s8.verticalSpace,
-            const FruitGridListWidget(),
-            Sizes.s16.verticalSpace,
-          ],
-      ),
+    return CustomSingleChild(
+      children:
+      [
+        Sizes.s16.verticalSpace,
+        SearchBarWidget(
+          onSubmitted: (value)
+          {
+            log('Search Field Value is => $value');
+            AppRouter.router.pushSearchString(fruitName: value);
+          },
+        ),
+        Sizes.s12.verticalSpace,
+        SizedBox(height: 158.h, child: const OffersListWidget()),
+        Sizes.s12.verticalSpace,
+        const MostSoldWidget(isMoreEnabled: true,),
+        Sizes.s8.verticalSpace,
+        const FruitGridListWidget(),
+        Sizes.s16.verticalSpace,
+      ],
     );
   }
 }

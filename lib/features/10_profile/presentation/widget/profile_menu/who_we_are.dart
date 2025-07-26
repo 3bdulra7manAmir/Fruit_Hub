@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/constants/app_images.dart';
 import 'menu_options.dart';
 
 class WhoWeAreTextWidget extends StatelessWidget
@@ -11,7 +12,7 @@ class WhoWeAreTextWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return ProfileOptions(
-      leading: 'assets/icons/Profile/Info_Circle_Green.svg',
+      leading: AppAssets.icons.whoWeAre,
       title: 'من نحن',
       onTap: ()
       {

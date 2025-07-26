@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/utils/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
@@ -39,7 +40,7 @@ class NameEditWidget extends StatelessWidget
   {
     return GestureDetector(
       onTap: onTap,
-      child: SvgPicture.asset('assets/icons/Personal_Info/Edit_Grey.svg', fit: BoxFit.scaleDown,)
+      child: SvgPicture.asset(AppAssets.icons.editGreyV2, fit: BoxFit.scaleDown,)
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
 
@@ -25,7 +26,7 @@ class LogOutWidget extends StatelessWidget
           Expanded(
             child: Text('تسجيل الخروج', style: AppStyles.extraLight(fontColor: AppColors.color.kGreen001,),),
           ),
-          Expanded(child: SvgPicture.asset('assets/icons/Profile/SignOut_Green.svg')),
+          Expanded(child: SvgPicture.asset(AppAssets.icons.signOut)),
         ],
       ),
     );

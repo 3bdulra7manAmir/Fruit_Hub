@@ -1,33 +1,56 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+
 import '../../../config/router/app_router.dart';
+import '../../../config/theme/color_manager/colors.dart';
+import '../../constants/app_borders.dart';
+import '../../constants/app_images.dart';
+import '../../constants/app_sizes.dart';
+import '../../constants/app_styles.dart';
+import '../../extensions/widget_margin.dart';
+import '../buttons/button.dart';
 import 'dialog.dart';
 
-class WillPopScopeWidget extends StatelessWidget
+class PopScopeWidget extends StatelessWidget
 {
-  const WillPopScopeWidget({super.key, required this.child});
+  const PopScopeWidget({
+    super.key,
+    required this.child,
+    this.onWillPop,
+  });
 
   final Widget child;
+  final Future<bool> Function()? onWillPop;
 
   @override
   Widget build(BuildContext context)
   {
     return PopScope(
       canPop: false,
-      onPopInvokedWithResult: (didPop, result) async
+      onPopInvoked: (didPop) async
       {
-        if (didPop) return;
-        final canPop = AppRouter.router.canPop();
-        if (canPop)
+        if (didPop)
         {
-          AppRouter.router.pop(result);
+          log('Screen Closed');
+          return;
         }
-        else
+        final allowPop = await (onWillPop?.call() ?? _defaultBackHandler(context));
+        if (allowPop)
         {
-          final allowExit = await _defaultBackHandler(context);
-          if (allowExit)
+          if (AppRouter.router.canPop())
           {
-            await SystemNavigator.pop();
+            AppRouter.router.pop();
+          }
+          else
+          {
+            final shouldExit = await _defaultBackHandler(context);
+            if (shouldExit)
+            {
+              await Navigator.of(context).maybePop();
+            }
           }
         }
       },
@@ -39,18 +62,50 @@ class WillPopScopeWidget extends StatelessWidget
   {
     final result = await customAppDialog(
       context: context,
-      content: const Text('Do you want to exit the app?'),
-      actions:
-      [
-        TextButton(
-          onPressed: () => AppRouter.router.pop(false),
-          child: const Text('No'),
-        ),
-        TextButton(
-          onPressed: () => AppRouter.router.pop(true),
-          child: const Text('Yes'),
-        ),
-      ],
+      shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXXSmall),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children:
+        [
+          Sizes.s16.verticalSpace,
+          GestureDetector(
+            onTap: ()
+            {
+              log('PopScope Canceled');
+              AppRouter.router.pop();
+            },
+            child: SvgPicture.asset(AppAssets.icons.removeBlack)
+          ),
+          Sizes.s12.verticalSpace,
+          Text('هل ترغب في تسجيل الخروج ؟', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+          Sizes.s29.verticalSpace,
+          Row(
+            children:
+            [
+              Expanded(child: CustomButton(
+                onPressed: ()
+                {
+                  log('Exit App');
+                  SystemNavigator.pop();
+                },
+                text: 'تأكيد', width: 146.w, height: 48.h,
+                )),
+              Sizes.s8.horizontalSpace,
+              Expanded(child: CustomButton(
+                onPressed: ()
+                {
+                  AppRouter.router.pop();
+                },
+                text: 'لا ارغب', width: 146.w, height: 48.h,
+                textStyle: AppStyles.bold(fontColor: AppColors.color.kGreen001),
+                backgroundColor: AppColors.color.kWhite001,
+                borderColor: AppColors.color.kGreen001,
+                )),
+            ],
+          )
+        ],
+      ).marginSymmetric(horizontal: 20.w)
     );
     return result ?? false;
   }

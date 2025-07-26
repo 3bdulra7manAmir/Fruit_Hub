@@ -55,8 +55,8 @@ class CurrentOrderWidget extends StatelessWidget
                     
                   },
                   child: SvgPicture.asset(
-                    isExpanded ? 'assets/icons/Orders_History/Up_Arrow_Black.svg'
-                    : 'assets/icons/Orders_History/Down_Arrow_Black.svg'),
+                    isExpanded ? AppAssets.icons.upArrowBlack
+                    : AppAssets.icons.downArrowBlack),
                 ),
               ]
               else...[const SizedBox.shrink()]

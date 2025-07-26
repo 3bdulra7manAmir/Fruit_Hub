@@ -85,7 +85,21 @@ class _Icons
   final String closedOrderBox = 'assets/icons/Track_Order/Order_Box.svg';
   final String openedOrderBox = 'assets/icons/Track_Order/Opened_Order_Box.svg';
 
+  ///[Checkout_Track]
+  final String upArrowBlack = 'assets/icons/Orders_History/Up_Arrow_Black.svg';
+  final String downArrowBlack = 'assets/icons/Orders_History/Down_Arrow_Black.svg';
+
   ///[Profile]
+  //[Profile_Menu]
+  final String cameraGreen = 'assets/icons/Profile/Camera_Green.svg';
+  final String userGreen = 'assets/icons/Profile/User_Green.svg';
+  final String boxGreen = 'assets/icons/Profile/Box_Green.svg';
+  final String walletGreen = 'assets/icons/Profile/Wallet_Green.svg';
+  final String hartGreen = 'assets/icons/Profile/Hart_Green.svg';
+  final String languageGreen = 'assets/icons/Profile/Language_Green.svg';
+  final String magicGreen = 'assets/icons/Profile/Magic_Green.svg';
+  final String whoWeAre = 'assets/icons/Profile/Info_Circle_Green.svg';
+  final String signOut = 'assets/icons/Profile/SignOut_Green.svg';
   //[Personal_info]
   final String editGreyV2 = 'assets/icons/Personal_Info/Edit_Grey.svg';
   final String leftBlackArrow = 'assets/icons/Profile/Left_Black_Arrow.svg';
@@ -96,6 +110,16 @@ class _Icons
   //[Favourit]
   final String hartFilledPNG = 'assets/icons/Favourit/Hart_Filled_Red.png';
   final String hartFilled = 'assets/icons/Favourit/Hart_Filled_Red.svg';
+
+  ///[Nav Bar]
+  final String home = 'assets/icons/NavBar/Home_active.svg';
+  final String homeNotActive = 'assets/icons/NavBar/Home_not_active.svg';
+  final String products = 'assets/icons/NavBar/Products_active.svg';
+  final String productsNotActive = 'assets/icons/NavBar/Products_not_active.svg';
+  final String cart = 'assets/icons/NavBar/Cart_active.svg';
+  final String cartNotActive = 'assets/icons/NavBar/Cart_not_active.svg';
+  final String profile = 'assets/icons/NavBar/User_active.svg';
+  final String profileNotActive = 'assets/icons/NavBar/User_not_active.svg';
 }
 
 ///-----------------------------------------------------------------//
@@ -111,4 +135,10 @@ class _IMGs
   ///[Products_Details]
   final String watermelonV2 = 'assets/imgs/Items_Details/Watermelon_v2.png';
   
+  ///[Rating_And_Review]
+  final String usercomment = 'assets/icons/Review_And_Rating/User1.png';
+
+  ///[Profile_Menu]
+  final String userProfile = 'assets/icons/Profile/User_Profile.png';
+
 }
