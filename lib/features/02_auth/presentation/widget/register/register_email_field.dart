@@ -15,7 +15,7 @@ class RegisterEmailWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.emailAddress,
       controller: emailController,
-      validator: (value) => AppValidation.emailValidation(value, context),
+      validator: (value) => AppValidation.emailValidation(value),
       hintText: 'البريد الإلكتروني',
     );
   }

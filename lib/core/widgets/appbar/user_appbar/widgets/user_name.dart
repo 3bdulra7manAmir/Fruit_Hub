@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../config/theme/color_manager/colors.dart';
-import '../../../../config/theme/font_manager/font_weights.dart';
-import '../../../constants/app_styles.dart';
+import '../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../config/theme/font_manager/font_weights.dart';
+import '../../../../constants/app_styles.dart';
 
 class UserNameWidget extends StatelessWidget
 {

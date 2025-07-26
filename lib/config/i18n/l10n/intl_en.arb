@@ -36,6 +36,23 @@
   "unsupportedPhoneNumber": "Un-Supported phone number",
 
 
+  "cardNumberIsRequired": "Card number is required",
+  "invalidCardNumber": "Invalid card number",
+  "cardNumberValidationFailure": "Failed to validate card number:",
+
+
+  "cvvRequired": "CVV is required",
+  "cvvMustBe3or4Digits": "CVV must be 3 or 4 digits",
+  "invalidCvv": "Invalid CVV format",
+  "cvvValidationFailure": "Failed to validate CVV:",
+
+
+  "expireDateRequired": "Expiry date is required",
+  "expireDateWrongFormat": "Use MM/YY format",
+  "cardExpired": "This card has expired",
+  "expireDateValidationError": "Failed to validate expiry date:",
+
+
   "forgotPassword": "Forget Password",
   
 

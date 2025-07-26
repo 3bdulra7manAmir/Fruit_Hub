@@ -16,7 +16,7 @@ class LoginEmailWidget extends StatelessWidget
       keyboardType: TextInputType.emailAddress,
       controller: emailController,
       hintText: 'البريد الإلكتروني',
-      validator: (value) => AppValidation.emailValidation(value, context),
+      validator: (value) => AppValidation.emailValidation(value),
     );
   }
 }

@@ -9,7 +9,7 @@ import '../../../constants/app_margins.dart';
 import '../../../constants/app_styles.dart';
 import '../../../extensions/widget_margin.dart';
 import '../../snackbar.dart';
-import '../user_appbar/notifications_bill.dart';
+import '../user_appbar/widgets/notifications_bill.dart';
 import 'back_button.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget 

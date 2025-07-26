@@ -25,6 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "cardExpired":
+            MessageLookupByLibrary.simpleMessage("This card has expired"),
+        "cardNumberIsRequired":
+            MessageLookupByLibrary.simpleMessage("Card number is required"),
+        "cardNumberValidationFailure": MessageLookupByLibrary.simpleMessage(
+            "Failed to validate card number:"),
         "cashOnDelivery":
             MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
         "changePassword":
@@ -36,6 +42,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please confirm your order"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create an account"),
+        "cvvMustBe3or4Digits":
+            MessageLookupByLibrary.simpleMessage("CVV must be 3 or 4 digits"),
+        "cvvRequired": MessageLookupByLibrary.simpleMessage("CVV is required"),
+        "cvvValidationFailure":
+            MessageLookupByLibrary.simpleMessage("Failed to validate CVV:"),
         "delivery": MessageLookupByLibrary.simpleMessage("Delivery:"),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Delivery Address"),
@@ -50,6 +61,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is required"),
         "enterEmail": MessageLookupByLibrary.simpleMessage("Enter email"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
+        "expireDateRequired":
+            MessageLookupByLibrary.simpleMessage("Expiry date is required"),
+        "expireDateValidationError": MessageLookupByLibrary.simpleMessage(
+            "Failed to validate expiry date:"),
+        "expireDateWrongFormat":
+            MessageLookupByLibrary.simpleMessage("Use MM/YY format"),
         "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password"),
@@ -65,6 +82,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "infoUnavailable": MessageLookupByLibrary.simpleMessage(
             "Sorry... This information is currently unavailable"),
+        "invalidCardNumber":
+            MessageLookupByLibrary.simpleMessage("Invalid card number"),
+        "invalidCvv":
+            MessageLookupByLibrary.simpleMessage("Invalid CVV format"),
         "invalidEmailDomain": MessageLookupByLibrary.simpleMessage(
             "Email must end with a valid domain (e.g., .com, .org)."),
         "invalidEmailSymbol": MessageLookupByLibrary.simpleMessage(

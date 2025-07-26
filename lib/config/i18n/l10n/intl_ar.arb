@@ -36,6 +36,23 @@
   "invalidPhoneNumber": "رقم الهاتف غير صالح",
   "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً",
 
+  
+  "cardNumberIsRequired": "رقم البطاقة مطلوب",
+  "invalidCardNumber": "رقم البطاقة غير صالح",
+  "cardNumberValidationFailure": "فشل في التحقق من رقم البطاقة:",
+
+
+  "cvvRequired": "رمز التحقق مطلوب",
+  "cvvMustBe3or4Digits": "يجب أن يتكون رمز التحقق من 3 أو 4 أرقام",
+  "invalidCvv": "رمز التحقق غير صالح",
+  "cvvValidationFailure": "فشل في التحقق من رمز التحقق:",
+
+
+  "expireDateRequired": "تاريخ الانتهاء مطلوب",
+  "expireDateWrongFormat": "استخدم التنسيق MM/YY",
+  "cardExpired": "انتهت صلاحية البطاقة",
+  "expireDateValidationError": "فشل في التحقق من تاريخ الانتهاء:",
+
 
   "forgotPassword": "نسيت كلمة المرور",
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/services/validation/app_validation.dart';
+import '../../../../../core/utils/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class CardNumberWidget extends StatelessWidget
@@ -13,9 +14,10 @@ class CardNumberWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      keyboardType: TextInputType.emailAddress,
+      inputFormatters: AppInputFormatters.digitsOnly,
+      keyboardType: TextInputType.number,
       controller: carNumberController,
-      validator: (value) => AppValidation.fullNameValidation(value, context),
+      validator: (value) => AppValidation.fullNameValidation(value),
       hintText: 'رقم البطاقة',
     );
   }

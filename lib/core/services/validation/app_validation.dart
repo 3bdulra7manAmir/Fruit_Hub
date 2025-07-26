@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../../../config/i18n/generated/l10n.dart';
 import '../../extensions/string.dart';
 
@@ -8,120 +6,191 @@ abstract class AppValidation
 {
   AppValidation._();
 
-  static String? emailValidation(String? value, BuildContext context)
+  static String? emailValidation(String? value)
   {
     try
     {
       if (value == null || value.isEmpty)
       {
-        return S.of(context).emailIsRequired;
+        return S.current.emailIsRequired;
       }
       if (!value.contains('@'))
       {
-        return S.of(context).invalidEmailSymbol;
+        return S.current.invalidEmailSymbol;
       }
       if (!value.emailEndsWithDomain)
       {
-        return S.of(context).invalidEmailDomain;
+        return S.current.invalidEmailDomain;
       }
       if (!value.isEmail)
       {
-        return S.of(context).enterEmail;
+        return S.current.enterEmail;
       }
       return null;
     }
     catch (e)
     {
-      return '${S.of(context).emailFailureValidation} ${e.toString()}';
+      return '${S.current.emailFailureValidation} ${e.toString()}';
     }
   }
 
-  static String? fullNameValidation(String? value, BuildContext context)
+  static String? fullNameValidation(String? value)
   {
     try
     {
       if (value == null || value.trim().isEmpty)
       {
-        return S.of(context).fullNameIsRequired;
+        return S.current.fullNameIsRequired;
       }
       if (!value.isFullName)
       {
-        return S.of(context).fullNameinvalid;
+        return S.current.fullNameinvalid;
       }
       return null;
     }
     catch (e)
     {
-      return '${S.of(context).fullNameValidationFailure} ${e.toString()}';
+      return '${S.current.fullNameValidationFailure} ${e.toString()}';
     }
   }
 
-  static String? passwordValidation(String? value, BuildContext context)
+  static String? passwordValidation(String? value)
   {
     try
     {
       final password = value ?? '';
       if (password.isEmpty)
       {
-        return S.of(context).passwordIsRequired;
+        return S.current.passwordIsRequired;
       }
       if (!password.passwordIsLongEnough)
       {
-        return S.of(context).passwordLength8Character;
+        return S.current.passwordLength8Character;
       }
       if (!password.passwordHasUpperCase)
       {
-        return S.of(context).passwordOneUpperCase;
+        return S.current.passwordOneUpperCase;
       }
       if (!password.passwordHasLowerCase)
       {
-        return S.of(context).passwordOneLowerCase;
+        return S.current.passwordOneLowerCase;
       }
       if (!password.passwordHasDigit)
       {
-        return S.of(context).passwordOneNumber;
+        return S.current.passwordOneNumber;
       }
       if (!password.passwordHasSpecialChar)
       {
-        return S.of(context).passwordOneSpecialCharacter;
+        return S.current.passwordOneSpecialCharacter;
       }
       if (!password.hasValidPassword)
       {
-        return S.of(context).invalidPassword;
+        return S.current.invalidPassword;
       }
       return null;
     }
     catch (e)
     {
-      return '${S.of(context).passwordValidationFailure} ${e.toString()}';
+      return '${S.current.passwordValidationFailure} ${e.toString()}';
     }
   }
 
-  static String? phoneNumberValidation(String? value, BuildContext context)
+  static String? phoneNumberValidation(String? value)
   {
-  try
-  {
-    final cleanedValue = value?.convertNumbers;
-    if (cleanedValue == null || cleanedValue.isEmpty)
+    try
     {
-      return S.current.phoneNumberIsRequired;
-    }
-    if (!cleanedValue.isPhoneNumber)
-    {
-      if (cleanedValue.isFullPhoneLength)
+      final cleanedValue = value?.convertNumbers;
+      if (cleanedValue == null || cleanedValue.isEmpty)
       {
-        return S.current.unsupportedPhoneNumber;
+        return S.current.phoneNumberIsRequired;
       }
-      return S.current.invalidPhoneNumber;
+      if (!cleanedValue.isPhoneNumber)
+      {
+        if (cleanedValue.isFullPhoneLength)
+        {
+          return S.current.unsupportedPhoneNumber;
+        }
+        return S.current.invalidPhoneNumber;
+      }
+      return null;
     }
-    return null;
+    on Exception catch (e)
+    {
+      return e.toString();
+    }
   }
-  on Exception catch (e)
+
+  static String? paymentMethodNumValidation(String? value)
   {
-    return e.toString();
+    try
+    {
+      final card = value?.convertNumbers;
+      if (card == null || card.isEmpty)
+      {
+        return S.current.cardNumberIsRequired;
+      }
+      if (!card.isCreditOrDebitCardNumber)
+      {
+        return S.current.invalidCardNumber;
+      }
+      return null;
+    }
+    catch (e)
+    {
+      return '${S.current.cardNumberValidationFailure} ${e.toString()}';
+    }
   }
-}
+
+  static String? cvvValidation(String? value)
+  {
+    try
+    {
+      final cleaned = value?.replaceAll(RegExp(r'\D'), '');
+
+      if (cleaned == null || cleaned.isEmpty)
+      {
+        return S.current.cvvRequired;
+      }
+      if (!value.isValidCvvLength)
+      {
+        return S.current.cvvMustBe3or4Digits;
+      }
+      if (!value.isCvvCode)
+      {
+        return S.current.invalidCvv;
+      }
+      return null;
+    }
+    catch (e)
+    {
+      return '${S.current.cvvValidationFailure} ${e.toString()}';
+    }
+  }
+
+  static String? expireDateValidation(String? value)
+  {
+    try
+    {
+      if (value == null || value.trim().isEmpty)
+      {
+        return S.current.expireDateRequired;
+      }
+      if (!value.isExpireDateFormat)
+      {
+        return S.current.expireDateWrongFormat;
+      }
+      if (!value.isNotExpiredDate)
+      {
+        return S.current.cardExpired;
+      }
+      return null;
+    }
+    catch (e)
+    {
+      return '${S.current.expireDateValidationError} ${e.toString()}';
+    }
+  }
+
 
 }
-
 

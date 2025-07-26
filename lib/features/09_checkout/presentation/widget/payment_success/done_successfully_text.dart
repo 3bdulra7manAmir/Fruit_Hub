@@ -8,7 +8,8 @@ class DoneSuccessfullyTextWidget extends StatelessWidget
   const DoneSuccessfullyTextWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Text('تم بنجاح !', style: AppStyles.bold(fontColor: AppColors.color.kBlack001,),);
   }
 }

@@ -15,7 +15,7 @@ class CheckOutAddressWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.name,
       controller: addressController,
-      validator: (value) => AppValidation.fullNameValidation(value, context),
+      validator: (value) => AppValidation.fullNameValidation(value),
       hintText: 'العنوان',
     );
   }

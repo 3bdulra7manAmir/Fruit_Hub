@@ -33,7 +33,7 @@ import '../../features/10_profile/presentation/screens/personal_info_view.dart';
 import '../../features/10_profile/presentation/screens/profile_menu_view.dart';
 import '../../features/10_profile/presentation/screens/who_we_are.dart';
 import 'app_routes.dart';
-import 'navigators/nav_bar_navigator.dart';
+import 'nav_bar_navigator.dart';
 import 'route_observer.dart';
 
 
@@ -194,12 +194,12 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.paymentMethods,
         name: AppRoutes.paymentMethods,
-        builder: (_, _) => const PaymentMethods(),
+        builder: (_, _) => PaymentMethods(),
       ),
       GoRoute(
         path: AppRoutes.addNewPaymentCard,
         name: AppRoutes.addNewPaymentCard,
-        builder: (_, _) => const AddNewPaymentCard(),
+        builder: (_, _) => AddNewPaymentCard(),
       ),
       GoRoute(
         path: AppRoutes.favourit,

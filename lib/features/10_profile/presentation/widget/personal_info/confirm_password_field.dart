@@ -23,7 +23,7 @@ class ConfirmPasswordFieldWidget extends ConsumerWidget
     return CustomTextFormField(
       controller: confirmPasswordController,
       keyboardType: TextInputType.visiblePassword,
-      validator: (value) => AppValidation.passwordValidation(value, context),
+      validator: (value) => AppValidation.passwordValidation(value),
       hintText: 'تأكيد كلمة المرور الجديده',
       suffixIcon: GestureDetector(
         onTap: () => ref.read(confirmObscurePasswordProvider.notifier).toggle(),

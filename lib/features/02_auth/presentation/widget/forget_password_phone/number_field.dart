@@ -20,7 +20,7 @@ class PhoneNumberWidget extends StatelessWidget
       keyboardType: TextInputType.number,
       inputFormatters: AppInputFormatters.digitsOnly,
       controller: phoneController,
-      validator: (value) => AppValidation.phoneNumberValidation(value, context),
+      validator: (value) => AppValidation.phoneNumberValidation(value),
       hintText: '+20 123 567 8911',
       hintStyle: AppStyles.bold(fontColor: AppColors.color.kBlack001,
         fontWeight: AppFontWeights.semiBoldWeight,),

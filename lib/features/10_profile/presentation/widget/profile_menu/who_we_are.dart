@@ -1,6 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/constants/app_images.dart';
 import 'menu_options.dart';
 
@@ -17,7 +19,7 @@ class WhoWeAreTextWidget extends StatelessWidget
       onTap: ()
       {
         log('Who We are has been Pressed...');
-        //AppRouter.router.pushNamed(AppRoutes.);
+        AppRouter.router.pushNamed(AppRoutes.whoWeAre);
       },
     );
   }

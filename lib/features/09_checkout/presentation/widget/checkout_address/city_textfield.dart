@@ -15,7 +15,7 @@ class CheckOutCityWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.name,
       controller: cityController,
-      validator: (value) => AppValidation.fullNameValidation(value, context),
+      validator: (value) => AppValidation.fullNameValidation(value),
       hintText: 'المدينه',
     );
   }

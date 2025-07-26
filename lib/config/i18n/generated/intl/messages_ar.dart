@@ -25,6 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب مسبقًا؟"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "cardExpired":
+            MessageLookupByLibrary.simpleMessage("انتهت صلاحية البطاقة"),
+        "cardNumberIsRequired":
+            MessageLookupByLibrary.simpleMessage("رقم البطاقة مطلوب"),
+        "cardNumberValidationFailure": MessageLookupByLibrary.simpleMessage(
+            "فشل في التحقق من رقم البطاقة:"),
         "cashOnDelivery":
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "changePassword":
@@ -34,6 +40,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "clearAll": MessageLookupByLibrary.simpleMessage("حذف الكل"),
         "confirmOrder": MessageLookupByLibrary.simpleMessage("يرجى تأكيد طلبك"),
         "createAccount": MessageLookupByLibrary.simpleMessage("سجّل حساب جديد"),
+        "cvvMustBe3or4Digits": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يتكون رمز التحقق من 3 أو 4 أرقام"),
+        "cvvRequired": MessageLookupByLibrary.simpleMessage("رمز التحقق مطلوب"),
+        "cvvValidationFailure": MessageLookupByLibrary.simpleMessage(
+            "فشل في التحقق من رمز التحقق:"),
         "delivery": MessageLookupByLibrary.simpleMessage("رسوم التوصيل:"),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
@@ -49,6 +60,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterEmail":
             MessageLookupByLibrary.simpleMessage("أدخل البريد الإلكتروني"),
         "error": MessageLookupByLibrary.simpleMessage("خطأ"),
+        "expireDateRequired":
+            MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء مطلوب"),
+        "expireDateValidationError": MessageLookupByLibrary.simpleMessage(
+            "فشل في التحقق من تاريخ الانتهاء:"),
+        "expireDateWrongFormat":
+            MessageLookupByLibrary.simpleMessage("استخدم التنسيق MM/YY"),
         "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
@@ -64,6 +81,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "infoUnavailable": MessageLookupByLibrary.simpleMessage(
             "عذرًا... المعلومات غير متاحة حاليًا"),
+        "invalidCardNumber":
+            MessageLookupByLibrary.simpleMessage("رقم البطاقة غير صالح"),
+        "invalidCvv":
+            MessageLookupByLibrary.simpleMessage("رمز التحقق غير صالح"),
         "invalidEmailDomain": MessageLookupByLibrary.simpleMessage(
             "يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org)."),
         "invalidEmailSymbol": MessageLookupByLibrary.simpleMessage(

@@ -9,7 +9,9 @@ import '../../../../../core/widgets/buttons/icon_button.dart';
 
 class AddNewPaymentMethodButtonWidget extends StatelessWidget
 {
-  const AddNewPaymentMethodButtonWidget({super.key});
+  const AddNewPaymentMethodButtonWidget({super.key, required this.formKey});
+
+  final GlobalKey<FormState> formKey;
 
   @override
   Widget build(BuildContext context)
@@ -17,11 +19,20 @@ class AddNewPaymentMethodButtonWidget extends StatelessWidget
     return CustomIconButton(
       onPressed: ()
       {
-        log('Add new Payment Method has been Pressed');
-        AppRouter.router.pushNamed(AppRoutes.addNewPaymentCard);
+        if (!formKey.currentState!.validate())
+        {
+          log('InValid...');
+        }
+        else
+        {
+          log('Add new Payment Method has been Pressed');
+          AppRouter.router.pushNamed(AppRoutes.addNewPaymentCard);
+        }
       },
       text: 'أضف وسيلة دفع جديده',
       icon: SvgPicture.asset(AppAssets.icons.addWhiteV2),
     );
   }
 }
+
+

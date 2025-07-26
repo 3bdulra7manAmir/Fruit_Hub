@@ -15,7 +15,7 @@ class AppartmentFieldWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.name,
       controller: apartmentController,
-      validator: (value) => AppValidation.fullNameValidation(value, context),
+      validator: (value) => AppValidation.fullNameValidation(value),
       hintText: 'رقم الطابق , رقم الشقه ..',
     );
   }

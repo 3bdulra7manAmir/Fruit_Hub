@@ -15,7 +15,7 @@ class RegisterFullNameWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.name,
       controller: fullNameController,
-      validator: (value) => AppValidation.fullNameValidation(value, context),
+      validator: (value) => AppValidation.fullNameValidation(value),
       hintText: 'الاسم كامل',
     );
   }

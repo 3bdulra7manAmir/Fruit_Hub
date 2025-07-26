@@ -300,6 +300,116 @@ class S {
     );
   }
 
+  /// `رقم البطاقة مطلوب`
+  String get cardNumberIsRequired {
+    return Intl.message(
+      'رقم البطاقة مطلوب',
+      name: 'cardNumberIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم البطاقة غير صالح`
+  String get invalidCardNumber {
+    return Intl.message(
+      'رقم البطاقة غير صالح',
+      name: 'invalidCardNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في التحقق من رقم البطاقة:`
+  String get cardNumberValidationFailure {
+    return Intl.message(
+      'فشل في التحقق من رقم البطاقة:',
+      name: 'cardNumberValidationFailure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رمز التحقق مطلوب`
+  String get cvvRequired {
+    return Intl.message(
+      'رمز التحقق مطلوب',
+      name: 'cvvRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `يجب أن يتكون رمز التحقق من 3 أو 4 أرقام`
+  String get cvvMustBe3or4Digits {
+    return Intl.message(
+      'يجب أن يتكون رمز التحقق من 3 أو 4 أرقام',
+      name: 'cvvMustBe3or4Digits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رمز التحقق غير صالح`
+  String get invalidCvv {
+    return Intl.message(
+      'رمز التحقق غير صالح',
+      name: 'invalidCvv',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في التحقق من رمز التحقق:`
+  String get cvvValidationFailure {
+    return Intl.message(
+      'فشل في التحقق من رمز التحقق:',
+      name: 'cvvValidationFailure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تاريخ الانتهاء مطلوب`
+  String get expireDateRequired {
+    return Intl.message(
+      'تاريخ الانتهاء مطلوب',
+      name: 'expireDateRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استخدم التنسيق MM/YY`
+  String get expireDateWrongFormat {
+    return Intl.message(
+      'استخدم التنسيق MM/YY',
+      name: 'expireDateWrongFormat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انتهت صلاحية البطاقة`
+  String get cardExpired {
+    return Intl.message(
+      'انتهت صلاحية البطاقة',
+      name: 'cardExpired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في التحقق من تاريخ الانتهاء:`
+  String get expireDateValidationError {
+    return Intl.message(
+      'فشل في التحقق من تاريخ الانتهاء:',
+      name: 'expireDateValidationError',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `نسيت كلمة المرور`
   String get forgotPassword {
     return Intl.message(

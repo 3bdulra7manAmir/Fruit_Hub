@@ -22,7 +22,7 @@ class EditFullNameFieldWidget extends StatelessWidget
       controller: fullNameController,
       keyboardType: TextInputType.name,
       suffixIcon: NameEditWidget(onTap: () {log('Edit Name...');},),
-      validator: (value) => AppValidation.fullNameValidation(value, context),
+      validator: (value) => AppValidation.fullNameValidation(value),
       inputFormatters: AppInputFormatters.lettersOnly,
     );
   }

@@ -23,7 +23,7 @@ class CurrentPasswordFieldWidget extends ConsumerWidget
     return CustomTextFormField(
       controller: currentPasswordController,
       keyboardType: TextInputType.visiblePassword,
-      validator: (value) => AppValidation.passwordValidation(value, context),
+      validator: (value) => AppValidation.passwordValidation(value),
       hintText: 'كلمة المرور الحالي',
       suffixIcon: GestureDetector(
         onTap: () => ref.read(currentObscurePasswordProvider.notifier).toggle(),

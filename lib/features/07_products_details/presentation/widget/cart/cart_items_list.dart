@@ -15,7 +15,7 @@ class CartItemsListWidget extends StatelessWidget
     return CustomListviewBuilder(
       itemBuilder: (context, index) => SizedBox(height: 92.h, child: const CartCardWidget()),
       separatorBuilder: (context, index) => Sizes.s8.verticalSpace,
-      itemCount: 7,
+      itemCount: 3,
     );
   }
 }

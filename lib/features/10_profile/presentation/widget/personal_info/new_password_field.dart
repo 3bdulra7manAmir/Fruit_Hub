@@ -24,7 +24,7 @@ class NewPasswordFieldWidget extends ConsumerWidget
       hintText: 'كلمة المرور الجديده',
       controller: newPasswordController,
       keyboardType: TextInputType.visiblePassword,
-      validator: (value) => AppValidation.passwordValidation(value, context),
+      validator: (value) => AppValidation.passwordValidation(value),
       suffixIcon: GestureDetector(
         onTap: () => ref.read(newObscurePasswordProvider.notifier).toggle(),
         child: !obscureProvider ? 

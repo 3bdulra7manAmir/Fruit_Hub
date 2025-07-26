@@ -23,7 +23,7 @@ class SecondPasswordFieldWidget extends ConsumerWidget
     return CustomTextFormField(
       controller: passwordController,
       keyboardType: TextInputType.visiblePassword,
-      validator: (value) => AppValidation.passwordValidation(value, context),
+      validator: (value) => AppValidation.passwordValidation(value),
       hintText: 'أعد إدخال كلمة المرور',
       obscureText: obscureProvider,
       suffixIcon: GestureDetector(
