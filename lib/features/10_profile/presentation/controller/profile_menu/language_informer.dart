@@ -1,5 +1,5 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../../../../core/services/localization/localization_controller.dart';
+import '../../../../../config/i18n/localization/localization_controller.dart';
 
 part 'language_informer.g.dart';
 

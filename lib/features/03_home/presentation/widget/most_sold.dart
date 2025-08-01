@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../config/theme/color_manager/colors.dart';
@@ -19,7 +20,7 @@ class MostSoldWidget extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:
       [
-        Text('الأكثر مبيعًا', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text(S.current.bestSellers, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         GestureDetector(
           onTap: ()
           {
@@ -27,7 +28,7 @@ class MostSoldWidget extends StatelessWidget
             AppRouter.router.pushNamed(AppRoutes.mostSold);
           },
           child: isMoreEnabled ?
-          Text('المزيد', style: AppStyles.extraLight(
+          Text(S.current.more, style: AppStyles.extraLight(
             fontColor: AppColors.color.kGrey002,
             fontWeight: AppFontWeights.regularWeight,
             ),

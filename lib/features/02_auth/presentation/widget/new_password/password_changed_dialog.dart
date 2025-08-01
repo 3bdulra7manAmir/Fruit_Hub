@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -33,7 +34,7 @@ void showSuccessDialog(context)
         ),
         Sizes.s29.verticalSpace,
         Text(
-          'تم تغيير الباسورد بنجاح',
+          S.current.passwordChangedSuccessfully,
           style: AppStyles.bold(fontColor: AppColors.color.kBlack001),
         ),
         Sizes.s50.verticalSpace,

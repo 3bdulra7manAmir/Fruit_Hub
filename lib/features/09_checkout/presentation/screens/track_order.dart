@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
@@ -17,7 +18,7 @@ class TrackOrder extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'تتبع الطلب'),
+      appBar: CustomAppBar(title: S.current.trackOrder),
       body: CustomSingleChild(
         children:
         [

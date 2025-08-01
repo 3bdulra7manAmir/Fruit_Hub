@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
@@ -17,36 +18,35 @@ class Login extends StatelessWidget
 {
   Login({super.key});
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  final TextEditingController emailController = TextEditingController(text: 'shadow@gmail.com');
+  final TextEditingController passwordController = TextEditingController(text: '12345678aA#');
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'تسجيل دخول'),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomForm(
-          formKey: loginFormKey,
-          formBody: CustomColumn(
-            children:
-            [
-              Sizes.s24.verticalSpace,
-              const LoginEmailWidget(),
-              Sizes.s16.verticalSpace,
-              const LoginPasswordWidget(),
-              Sizes.s16.verticalSpace,
-              const DidForgetPasswordWidget(),
-              Sizes.s33.verticalSpace,
-              LoginButtonWidget(formKey: loginFormKey,),
-              Sizes.s33.verticalSpace,
-              const DontHaveAccountWidget(),
-              Sizes.s33.verticalSpace,
-              const OrWidget(),
-              Sizes.s16.verticalSpace,
-              const OtherOptionsWidget(),
-              Sizes.s16.verticalSpace,
-            ],
-          ),
+      appBar: CustomAppBar(title: S.current.login),
+      body: CustomForm(
+        formKey: loginFormKey,
+        formBody: CustomSingleChild(
+          children:
+          [
+            Sizes.s24.verticalSpace,
+            LoginEmailWidget(emailController: emailController,),
+            Sizes.s16.verticalSpace,
+            LoginPasswordWidget(passwordController: passwordController,),
+            Sizes.s16.verticalSpace,
+            const DidForgetPasswordWidget(),
+            Sizes.s33.verticalSpace,
+            LoginButtonWidget(formKey: loginFormKey, emailController: emailController, passwordController: passwordController,),
+            Sizes.s33.verticalSpace,
+            const DontHaveAccountWidget(),
+            Sizes.s33.verticalSpace,
+            const OrWidget(),
+            Sizes.s16.verticalSpace,
+            const OtherOptionsWidget(),
+            Sizes.s16.verticalSpace,
+          ],
         ),
       ),
     );

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_sizes.dart';
@@ -17,7 +18,7 @@ class WhoWeAre extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'من نحن'),
+      appBar: CustomAppBar(title: S.current.aboutUs),
       body: CustomSingleChild(
         children:
         [
@@ -26,18 +27,18 @@ class WhoWeAre extends StatelessWidget
             text: TextSpan(style: AppStyles.extraLight(),
               children:
               [
-                TextSpan(text: 'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص',
+                TextSpan(text: S.current.loremWarning,
                 style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002)),
                 const TextSpan(text: '\n'),
-                const TextSpan(text: 'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص',),
+                TextSpan(text: S.current.loremWarning1,),
                 const TextSpan(text: '\n'),
-                TextSpan(text: 'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. ',
+                TextSpan(text: S.current.loremWarning2,
                 style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),
                 ),
                 const TextSpan(text: '\n'),
-                const TextSpan(text: 'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص',),
+                TextSpan(text: S.current.loremWarning3,),
                 const TextSpan(text: '\n'),
-                const TextSpan(text: 'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص',),
+                TextSpan(text: S.current.loremWarning4,),
               ]
             ),
           ),

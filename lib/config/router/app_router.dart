@@ -158,7 +158,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.checkoutPayment,
         name: AppRoutes.checkoutPayment,
-        builder: (_, _) => const CheckoutPayment(),
+        builder: (_, _) => CheckoutPayment(),
       ),
       // [Checkout Payment]
       GoRoute(

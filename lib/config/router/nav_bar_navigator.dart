@@ -5,6 +5,7 @@ import '../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../core/widgets/appbar/user_appbar/user_appbar_body.dart';
 import '../../core/widgets/navbar/nav_bar_items_list.dart';
 import '../../core/widgets/navbar/nav_bar_widget.dart';
+import '../i18n/generated/l10n.dart';
 
 
 class MainScaffold extends StatelessWidget
@@ -39,11 +40,11 @@ class MainScaffold extends StatelessWidget
       case 0:
         return const UserAppBar();
       case 1:
-        return const CustomAppBar(title: 'المنتجات', isNotifications: true, isCustomBack: false,);
+        return CustomAppBar(title: S.current.products, isNotifications: true, isCustomBack: false,);
       case 2:
-        return const CustomAppBar(title: 'السلة', isCustomBack: false,);
+        return CustomAppBar(title: S.current.cart, isCustomBack: false,);
       case 3:
-        return const CustomAppBar(title: 'حسابي', isCustomBack: false,);
+        return CustomAppBar(title: S.current.myAccount, isCustomBack: false,);
       default:
         return null;
     }

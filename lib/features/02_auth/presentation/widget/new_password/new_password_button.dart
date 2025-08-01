@@ -1,24 +1,25 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 import '../../../../../core/widgets/snackbar.dart';
-import 'first_password_field.dart';
 import 'password_changed_dialog.dart';
-import 'second_password_field.dart';
 
 class NewPasswordButtonWidget extends StatelessWidget
 {
-  const NewPasswordButtonWidget({super.key, required this.formKey});
+  const NewPasswordButtonWidget({super.key, required this.formKey, required this.passwordController, required this.password2Controller});
   final GlobalKey<FormState> formKey;
+  final TextEditingController passwordController;
+  final TextEditingController password2Controller;
 
   @override
   Widget build(BuildContext context)
   {
     return CustomButton(
-      text: 'إنشاء كلمة مرور جديدة',
+      text: S.current.createNewPassword,
       onPressed: ()
       {
         if (!formKey.currentState!.validate())
@@ -27,20 +28,18 @@ class NewPasswordButtonWidget extends StatelessWidget
         }
         else
         {
-          final password1 = FirstPasswordFieldWidget.passwordController.text;
-          final password2 = SecondPasswordFieldWidget.passwordController.text;
-          if(password1 == password2)
+          if(passwordController.text == password2Controller.text)
           {
             log('Create Password Has been Pressed...');
-            log('$password1 \t $password2');
+            log('${passwordController.text} \t ${password2Controller.text}');
             showSuccessDialog(context);
             AppRouter.router.pushReplacementNamed(AppRoutes.login);
           }
           else
           {
-            FirstPasswordFieldWidget.passwordController.clear();
-            SecondPasswordFieldWidget.passwordController.clear();
-            CustomSnackBar.show(context, 'كلمتا السر غير متطبقتان يا معلم\n حاول تدخل 2 متطابقين كده بتكلم بجد...');
+            passwordController.clear();
+            password2Controller.clear();
+            CustomSnackBar.show(context, S.current.passwordsDontMatchFunny);
           }
         }
       },  

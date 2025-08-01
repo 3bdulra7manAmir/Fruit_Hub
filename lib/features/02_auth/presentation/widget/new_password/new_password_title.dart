@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -11,7 +12,7 @@ class NewPasswordTitleWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(
-      'قم بإنشاء كلمة مرور جديدة لتسجيل الدخول',
+      S.current.createPasswordToSignIn,
       style: AppStyles.bold(
         fontColor: AppColors.color.kBlack001, 
         fontWeight: AppFontWeights.semiBoldWeight

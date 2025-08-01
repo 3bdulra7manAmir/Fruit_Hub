@@ -24,8 +24,9 @@ class CustomColumn extends StatelessWidget
 
 class CustomSingleChild extends StatelessWidget
 {
-  const CustomSingleChild({super.key, this.crossAxisAlignment, required this.children, this.isMargin});
+  const CustomSingleChild({super.key, this.crossAxisAlignment, required this.children, this.isMargin, this.isOnDrag});
 
+  final bool? isOnDrag;
   final CrossAxisAlignment? crossAxisAlignment;
   final List<Widget> children;
   final bool? isMargin;
@@ -34,6 +35,7 @@ class CustomSingleChild extends StatelessWidget
   Widget build(BuildContext context)
   {
     return SingleChildScrollView(
+      keyboardDismissBehavior: (isOnDrag ?? true) ? ScrollViewKeyboardDismissBehavior.onDrag : null, //Edit
       child: Column(
         crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
         children: children

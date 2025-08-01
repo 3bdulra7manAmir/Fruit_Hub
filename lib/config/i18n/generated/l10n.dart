@@ -470,6 +470,276 @@ class S {
     );
   }
 
+  /// `كلمة مرور جديدة`
+  String get newPassword {
+    return Intl.message(
+      'كلمة مرور جديدة',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التحقق من الرمز`
+  String get verifyCode {
+    return Intl.message(
+      'التحقق من الرمز',
+      name: 'verifyCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حساب جديد`
+  String get newAccount {
+    return Intl.message(
+      'حساب جديد',
+      name: 'newAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا تقلق، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.`
+  String get phoneVerificationMessage {
+    return Intl.message(
+      'لا تقلق، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.',
+      name: 'phoneVerificationMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `نسيت كلمة المرور؟`
+  String get didForgotPassword {
+    return Intl.message(
+      'نسيت كلمة المرور؟',
+      name: 'didForgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البريد الإلكتروني`
+  String get email {
+    return Intl.message(
+      'البريد الإلكتروني',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور`
+  String get password {
+    return Intl.message(
+      'كلمة المرور',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل بواسطة جوجل`
+  String get signInWithGoogle {
+    return Intl.message(
+      'تسجيل بواسطة جوجل',
+      name: 'signInWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل بواسطة أبل`
+  String get signInWithApple {
+    return Intl.message(
+      'تسجيل بواسطة أبل',
+      name: 'signInWithApple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل بواسطة فيسبوك`
+  String get signInWithFacebook {
+    return Intl.message(
+      'تسجيل بواسطة فيسبوك',
+      name: 'signInWithFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إنشاء كلمة مرور جديدة`
+  String get createNewPassword {
+    return Intl.message(
+      'إنشاء كلمة مرور جديدة',
+      name: 'createNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمتا السر غير متطبقتان يا معلم\nحاول تدخل 2 متطابقين كده بتكلم بجد...`
+  String get passwordsDontMatchFunny {
+    return Intl.message(
+      'كلمتا السر غير متطبقتان يا معلم\nحاول تدخل 2 متطابقين كده بتكلم بجد...',
+      name: 'passwordsDontMatchFunny',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بإنشاء كلمة مرور جديدة لتسجيل الدخول`
+  String get createPasswordToSignIn {
+    return Intl.message(
+      'قم بإنشاء كلمة مرور جديدة لتسجيل الدخول',
+      name: 'createPasswordToSignIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم تغيير الباسورد بنجاح`
+  String get passwordChangedSuccessfully {
+    return Intl.message(
+      'تم تغيير الباسورد بنجاح',
+      name: 'passwordChangedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أعد إدخال كلمة المرور`
+  String get reEnterPassword {
+    return Intl.message(
+      'أعد إدخال كلمة المرور',
+      name: 'reEnterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي: {email}`
+  String enterCodeSentToEmail(Object email) {
+    return Intl.message(
+      'أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي: $email',
+      name: 'enterCodeSentToEmail',
+      desc: '',
+      args: [email],
+    );
+  }
+
+  /// `إعادة إرسال الرمز`
+  String get resendCode {
+    return Intl.message(
+      'إعادة إرسال الرمز',
+      name: 'resendCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تمتلك حساب بالفعل؟`
+  String get alreadyHaveAccount2 {
+    return Intl.message(
+      'تمتلك حساب بالفعل؟',
+      name: 'alreadyHaveAccount2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاسم الكامل`
+  String get fullName {
+    return Intl.message(
+      'الاسم الكامل',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إنشاء حساب جديد`
+  String get createNewAccount {
+    return Intl.message(
+      'إنشاء حساب جديد',
+      name: 'createNewAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `من خلال إنشاء حساب، فإنك توافق على `
+  String get byCreatingAccountYouAgree {
+    return Intl.message(
+      'من خلال إنشاء حساب، فإنك توافق على ',
+      name: 'byCreatingAccountYouAgree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الشروط والأحكام الخاصة بنا`
+  String get ourTermsAndConditions {
+    return Intl.message(
+      'الشروط والأحكام الخاصة بنا',
+      name: 'ourTermsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الأكثر مبيعًا`
+  String get bestSellers {
+    return Intl.message(
+      'الأكثر مبيعًا',
+      name: 'bestSellers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسوق الآن`
+  String get shopNow {
+    return Intl.message(
+      'تسوق الآن',
+      name: 'shopNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابحث عن.......`
+  String get searchFor {
+    return Intl.message(
+      'ابحث عن.......',
+      name: 'searchFor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المزيد`
+  String get more2 {
+    return Intl.message(
+      'المزيد',
+      name: 'more2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البحث`
+  String get search2 {
+    return Intl.message(
+      'البحث',
+      name: 'search2',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `الأكثر طلبًا`
   String get mostSold {
     return Intl.message(
@@ -500,11 +770,21 @@ class S {
     );
   }
 
-  /// `خصومات`
+  /// ` خصومات`
   String get discount {
     return Intl.message(
-      'خصومات',
+      ' خصومات',
       name: 'discount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هل ترغب في تسجيل الخروج ؟`
+  String get logoutConfirmation {
+    return Intl.message(
+      'هل ترغب في تسجيل الخروج ؟',
+      name: 'logoutConfirmation',
       desc: '',
       args: [],
     );
@@ -645,6 +925,226 @@ class S {
     return Intl.message(
       'ملخص',
       name: 'summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكيد كلمة المرور الجديدة`
+  String get confirmNewPassword {
+    return Intl.message(
+      'تأكيد كلمة المرور الجديدة',
+      name: 'confirmNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور الجديدة`
+  String get newPassword2 {
+    return Intl.message(
+      'كلمة المرور الجديدة',
+      name: 'newPassword2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حفظ التغييرات`
+  String get saveChanges {
+    return Intl.message(
+      'حفظ التغييرات',
+      name: 'saveChanges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكيد`
+  String get confirm {
+    return Intl.message(
+      'تأكيد',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا ارغب`
+  String get noThanks {
+    return Intl.message(
+      'لا ارغب',
+      name: 'noThanks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `علي اسعار الفواكه بمناسبه العيد`
+  String get fruitDiscount {
+    return Intl.message(
+      'علي اسعار الفواكه بمناسبه العيد',
+      name: 'fruitDiscount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تصفيه`
+  String get clearance {
+    return Intl.message(
+      'تصفيه',
+      name: 'clearance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور الحالي`
+  String get currentPassword {
+    return Intl.message(
+      'كلمة المرور الحالي',
+      name: 'currentPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أضف وسيلة دفع جديده`
+  String get addPaymentMethod {
+    return Intl.message(
+      'أضف وسيلة دفع جديده',
+      name: 'addPaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اسم حامل البطاقه`
+  String get cardHolderName {
+    return Intl.message(
+      'اسم حامل البطاقه',
+      name: 'cardHolderName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم البطاقة`
+  String get cardNumber {
+    return Intl.message(
+      'رقم البطاقة',
+      name: 'cardNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تاريخ الصلاحيه`
+  String get expiryDate {
+    return Intl.message(
+      'تاريخ الصلاحيه',
+      name: 'expiryDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المدينه`
+  String get city {
+    return Intl.message(
+      'المدينه',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم الطابق , رقم الشقه ..`
+  String get floorApartment {
+    return Intl.message(
+      'رقم الطابق , رقم الشقه ..',
+      name: 'floorApartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العنوان`
+  String get address {
+    return Intl.message(
+      'العنوان',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `السابق`
+  String get previous {
+    return Intl.message(
+      'السابق',
+      name: 'previous',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التالي`
+  String get next {
+    return Intl.message(
+      'التالي',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إكمال`
+  String get complete {
+    return Intl.message(
+      'إكمال',
+      name: 'complete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم إكمال الخطوات!`
+  String get stepsCompleted {
+    return Intl.message(
+      'تم إكمال الخطوات!',
+      name: 'stepsCompleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اكتب التعليق..`
+  String get typeComment {
+    return Intl.message(
+      'اكتب التعليق..',
+      name: 'typeComment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أضف الي السلة`
+  String get addToCart {
+    return Intl.message(
+      'أضف الي السلة',
+      name: 'addToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رمز الأمان`
+  String get cvv {
+    return Intl.message(
+      'رمز الأمان',
+      name: 'cvv',
       desc: '',
       args: [],
     );
@@ -965,6 +1465,226 @@ class S {
     return Intl.message(
       'الوضع',
       name: 'theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المنتجات`
+  String get products {
+    return Intl.message(
+      'المنتجات',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `السلة`
+  String get cart {
+    return Intl.message(
+      'السلة',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حسابي`
+  String get myAccount {
+    return Intl.message(
+      'حسابي',
+      name: 'myAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `سلة التسوق`
+  String get shoppingCart {
+    return Intl.message(
+      'سلة التسوق',
+      name: 'shoppingCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `جديد`
+  String get neww {
+    return Intl.message(
+      'جديد',
+      name: 'neww',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `في وقت سابق`
+  String get earlier {
+    return Intl.message(
+      'في وقت سابق',
+      name: 'earlier',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تصنيف حسب :`
+  String get filterBy {
+    return Intl.message(
+      'تصنيف حسب :',
+      name: 'filterBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ترتيب حسب :`
+  String get sortBy {
+    return Intl.message(
+      'ترتيب حسب :',
+      name: 'sortBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عام`
+  String get generalTitle {
+    return Intl.message(
+      'عام',
+      name: 'generalTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الصلاحيه`
+  String get generalSubTitle {
+    return Intl.message(
+      'الصلاحيه',
+      name: 'generalSubTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الدفع`
+  String get payment {
+    return Intl.message(
+      'الدفع',
+      name: 'payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المراجعة`
+  String get checkoutReview {
+    return Intl.message(
+      'المراجعة',
+      name: 'checkoutReview',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الشحن`
+  String get shipping {
+    return Intl.message(
+      'الشحن',
+      name: 'shipping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اضافه بطاقه جديده`
+  String get addNewCard {
+    return Intl.message(
+      'اضافه بطاقه جديده',
+      name: 'addNewCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاشعارات`
+  String get notificationsTitle {
+    return Intl.message(
+      'الاشعارات',
+      name: 'notificationsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `من نحن`
+  String get aboutUs {
+    return Intl.message(
+      'من نحن',
+      name: 'aboutUs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص`
+  String get loremWarning {
+    return Intl.message(
+      'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص',
+      name: 'loremWarning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.`
+  String get loremWarning1 {
+    return Intl.message(
+      'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.',
+      name: 'loremWarning1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص.`
+  String get loremWarning2 {
+    return Intl.message(
+      'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص.',
+      name: 'loremWarning2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.`
+  String get loremWarning3 {
+    return Intl.message(
+      'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.',
+      name: 'loremWarning3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.`
+  String get loremWarning4 {
+    return Intl.message(
+      'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.',
+      name: 'loremWarning4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.`
+  String get loremWarning5 {
+    return Intl.message(
+      'هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.',
+      name: 'loremWarning5',
       desc: '',
       args: [],
     );

@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
@@ -18,7 +19,7 @@ class AlreadyHasAnAccountWidget extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.center,
       children:
       [
-        Text('تمتلك حساب بالفعل؟', style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
+        Text(S.current.alreadyHaveAccount2, style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
         Text(' ', style: AppStyles.bold(fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.semiBoldWeight),),
         GestureDetector(
           onTap: ()
@@ -26,7 +27,7 @@ class AlreadyHasAnAccountWidget extends StatelessWidget
             log('Login Pressed...');
             AppRouter.router.pushReplacement(AppRoutes.login);
           },
-          child: Text('تسجيل دخول', style: AppStyles.bold(fontColor: AppColors.color.kGreen001, fontWeight: AppFontWeights.semiBoldWeight),)
+          child: Text(S.current.login, style: AppStyles.bold(fontColor: AppColors.color.kGreen001, fontWeight: AppFontWeights.semiBoldWeight),)
         ),
       ],
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
@@ -19,12 +20,17 @@ class PersonalInfo extends StatelessWidget
   PersonalInfo({super.key});
 
   final GlobalKey<FormState> personalInfoFormKey = GlobalKey<FormState>();
+  final TextEditingController fullNameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController currentPasswordController = TextEditingController();
+  final TextEditingController newPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'الملف الشخصي',),
+      appBar: CustomAppBar(title: S.current.profile,),
       body: CustomForm(
         formKey: personalInfoFormKey,
         formBody: 
@@ -34,19 +40,26 @@ class PersonalInfo extends StatelessWidget
             Sizes.s24.verticalSpace,
             const PersonalInfoTextWidget(),
             Sizes.s8.verticalSpace,
-            const EditFullNameFieldWidget(),
+            EditFullNameFieldWidget(fullNameController: fullNameController,),
             Sizes.s8.verticalSpace,
-            const EditEmailFieldWidget(),
+            EditEmailFieldWidget(emailController: emailController,),
             Sizes.s16.verticalSpace,
             const ChangePasswordTextWidget(),
             Sizes.s8.verticalSpace,
-            const CurrentPasswordFieldWidget(),
+            CurrentPasswordFieldWidget(currentPasswordController: currentPasswordController,),
             Sizes.s8.verticalSpace,
-            const NewPasswordFieldWidget(),
+            NewPasswordFieldWidget(newPasswordController: newPasswordController,),
             Sizes.s8.verticalSpace,
-            const ConfirmPasswordFieldWidget(),
+            ConfirmPasswordFieldWidget(confirmPasswordController: confirmPasswordController,),
             Sizes.s74.verticalSpace,
-            SaveEditsButtonWidget(formKey: personalInfoFormKey,),
+            SaveEditsButtonWidget(
+              formKey: personalInfoFormKey, 
+              fullNameController: fullNameController, 
+              emailController: emailController, 
+              currentPasswordController: currentPasswordController, 
+              newPasswordController: newPasswordController, 
+              confirmPasswordController: confirmPasswordController,
+            ),
             Sizes.s16.verticalSpace,
           ]
         ),

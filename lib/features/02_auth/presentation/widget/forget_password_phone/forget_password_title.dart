@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -12,7 +13,7 @@ class ForgetPasswordTitleWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(
-      'لا تقلق ، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.', 
+      S.current.phoneVerificationMessage,
       style: AppStyles.bold(
         fontWeight: AppFontWeights.semiBoldWeight, 
         fontColor: AppColors.color.kGrey006

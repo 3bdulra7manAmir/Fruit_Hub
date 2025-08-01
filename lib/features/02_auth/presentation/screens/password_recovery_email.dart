@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
@@ -22,29 +23,22 @@ class PasswordRecoveryEmail extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'التحقق من الرمز',),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomForm(
-          formKey: passwordRecoveryFormKey,
-          formBody: CustomColumn(
-            children:
-            [
-              Sizes.s24.verticalSpace,
-              const PhoneRecoveryTitleWidget(),
-              Sizes.s29.verticalSpace,
-              const RecoveryOtpFieldWidget(),
-              Sizes.s29.verticalSpace,
-              GestureDetector(
-                onTap: ()
-                {
-                  log('ReSend Code...');
-                  AppRouter.router.pushNamed(AppRoutes.newPassword);
-                },
-                child: const ResendCodeWidget()
-              ),
-            ],
-          ),
+      appBar: CustomAppBar(title: S.current.verifyCode),
+      body: CustomForm(
+        formKey: passwordRecoveryFormKey,
+        formBody: CustomSingleChild(
+          children:
+          [
+            Sizes.s24.verticalSpace,
+            const PhoneRecoveryTitleWidget(),
+            Sizes.s29.verticalSpace,
+            const RecoveryOtpFieldWidget(),
+            Sizes.s29.verticalSpace,
+            GestureDetector(
+              onTap: () {log('ReSend Code...'); AppRouter.router.pushNamed(AppRoutes.newPassword);},
+              child: const ResendCodeWidget(),
+            ),
+          ],
         ),
       ),
     );

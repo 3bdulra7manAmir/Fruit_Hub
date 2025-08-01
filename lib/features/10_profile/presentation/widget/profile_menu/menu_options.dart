@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
@@ -11,6 +12,7 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/widgets/identity_widgets/arrow.dart';
 import '../../../../../core/widgets/toggle_button.dart';
 import '../../controller/profile_menu/language_informer.dart';
 import '../../controller/profile_menu/notification_controller.dart';
@@ -35,11 +37,12 @@ class ProfileOptions extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
+    
     return ListTile(
       contentPadding: EdgeInsets.zero,
       onTap: onTap,
       leading: SvgPicture.asset(leading),
-      trailing: isArrow ? SvgPicture.asset(AppAssets.icons.leftBlackArrow) : caseWidget,
+      trailing: isArrow ? SvgPicture.asset(IdentityWidgets.arrowDirection(context)) : caseWidget,
       title: Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
       shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016,)),
     );
@@ -60,7 +63,7 @@ class OptionsMenuWidget extends StatelessWidget
       [
         ProfileOptions(
           leading: AppAssets.icons.userGreen,
-          title: 'الملف الشخصي',
+          title: S.current.profile,
           onTap: ()
           {
             log('Profile has been Pressed...');
@@ -69,7 +72,7 @@ class OptionsMenuWidget extends StatelessWidget
         ),
         ProfileOptions(
           leading: AppAssets.icons.boxGreen,
-          title: 'طلباتي',
+          title: S.current.myOrders,
           onTap: ()
           {
             log('Orders has been Pressed...');
@@ -78,7 +81,7 @@ class OptionsMenuWidget extends StatelessWidget
         ),
         ProfileOptions(
           leading: AppAssets.icons.walletGreen,
-          title: 'المدفوعات',
+          title: S.current.payments,
           onTap: ()
           {
             log('Payments has been Pressed...');
@@ -87,7 +90,7 @@ class OptionsMenuWidget extends StatelessWidget
         ),
         ProfileOptions(
           leading: AppAssets.icons.hartGreen,
-          title: 'المفضلة',
+          title: S.current.favorites,
           onTap: ()
           {
             log('Favourit has been Pressed...');
@@ -96,7 +99,7 @@ class OptionsMenuWidget extends StatelessWidget
         ),
         ProfileOptions(
           leading: AppAssets.icons.billGreen,
-          title: 'الاشعارات',
+          title: S.current.notifications,
           isArrow: false,
           caseWidget: SwitchButtonWidget(provider: toggleSwitchNotificationsProvider),
           onTap: () => log('Notifications has been Pressed...'),
@@ -104,16 +107,16 @@ class OptionsMenuWidget extends StatelessWidget
         Consumer(
           builder: (context, ref, child) => ProfileOptions(
             leading: AppAssets.icons.languageGreen,
-            title: 'اللغة',
+            title: S.current.language,
             isArrow: false,
             onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
             caseWidget: Row(
               mainAxisSize: MainAxisSize.min,
               children:
               [
-                Text('العربية', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
+                Text(S.current.arabic, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
                 Sizes.s2.horizontalSpace,
-                SvgPicture.asset(AppAssets.icons.leftBlackArrow),
+                SvgPicture.asset(IdentityWidgets.arrowDirection(context)),
               ],
             ),
           ),
@@ -122,7 +125,7 @@ class OptionsMenuWidget extends StatelessWidget
           leading: AppAssets.icons.magicGreen,
           isArrow: false,
           caseWidget: SwitchButtonWidget(provider: themeInformerProvider,),
-          title: 'الوضع',
+          title: S.current.theme,
           onTap: () {log('Theme has been Pressed...');},
         ),
       ]

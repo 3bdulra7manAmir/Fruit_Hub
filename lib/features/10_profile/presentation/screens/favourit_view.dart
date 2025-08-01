@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
@@ -15,7 +16,7 @@ class Favourit extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'المفضلة',),
+      appBar: CustomAppBar(title: S.current.favorites,),
       body: CustomSingleChild(
         children:
         [

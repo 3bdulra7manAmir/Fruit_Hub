@@ -2,6 +2,7 @@
   "@@locale": "en",
   "error": "Error",
 
+
   "welcomeIn": "Welcome In",
   "onBoardingDescription": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality.",
   "onBoarding2Description": "We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit.",
@@ -65,10 +66,48 @@
   "login": "Login",
 
 
+  "newPassword": "New Password",
+  "verifyCode": "Verification Code",
+  "newAccount": "New Account",
+  "phoneVerificationMessage": "Don’t worry, just enter your phone number and we’ll send a verification code.",
+  "didForgotPassword": "Forgot Password?",
+  "email": "Email",
+  "password": "Password",
+
+  "signInWithGoogle": "Sign in with Google",
+  "signInWithApple": "Sign in with Apple",
+  "signInWithFacebook": "Sign in with Facebook",
+
+
+  "createNewPassword": "Create a New Password",
+  "passwordsDontMatchFunny": "Passwords don’t match, bro.\nTry entering two matching ones — seriously!",
+
+
+  "createPasswordToSignIn": "Create a new password to sign in",
+  "passwordChangedSuccessfully": "Password changed successfully",
+  "reEnterPassword": "Re-enter the password",
+  "enterCodeSentToEmail": "Enter the code we sent to the following email address: {email}",
+
+
+  "resendCode": "Resend the code",
+  "alreadyHaveAccount2": "Already have an account?",
+  "fullName": "Full name",
+  "createNewAccount": "Create a new account",
+  "byCreatingAccountYouAgree": "By creating an account, you agree to ",
+  "ourTermsAndConditions": "our Terms and Conditions",
+
+
+  "bestSellers": "Best sellers",
+  "shopNow": "Shop now",
+  "searchFor": "Search for.......",
+  "more2": "more",
+  "search2": "Search",
+
+
   "mostSold": "Best Sellers",
-  "more": "More",
   "eidOffers": "Eid Offers",
-  "discount": "Discount",
+  "discount": "Discount ",
+  "logoutConfirmation": "Do you want to log out?",
 
 
   "goodMorning": "Good morning!..",
@@ -89,6 +128,30 @@
   "itemsInCart": "You have products in your cart",
   "review": "Review",
   "summary": "Summary",
+
+
+  "confirmNewPassword": "Confirm new password",
+  "newPassword2": "New password",
+  "saveChanges": "Save changes",
+  "confirm": "Confirm",
+  "noThanks": "No thanks",
+  "fruitDiscount": "Discount on fruit prices for Eid",
+  "clearance": "Clearance",
+  "currentPassword": "Current Password",
+  "addPaymentMethod": "Add new payment method",
+  "cardHolderName": "Cardholder Name",
+  "cardNumber": "Card Number",
+  "expiryDate": "Expiry Date",
+  "city": "City",
+  "floorApartment": "Floor number, apartment number..",
+  "address": "Address",
+  "previous": "Previous",
+  "next": "Next",
+  "complete": "Complete",
+  "stepsCompleted": "Steps completed!",
+  "typeComment": "Write a comment...",
+  "addToCart": "Add to cart",
+  "cvv": "CVV",
 
 
   "saveAddress": "Save Address",
@@ -130,5 +193,31 @@
   "payments": "Payments",
   "myOrders": "My Orders",
   "profile": "Profile",
-  "theme": "Theme"
+  "theme": "Theme",
+
+
+  "products": "Products",
+  "cart": "Cart",
+  "myAccount": "My Account",
+  "shoppingCart": "Shopping Cart",
+  "neww": "New",
+  "earlier": "Earlier",
+  "filterBy": "Filter by:",
+  "sortBy": "Sort by:",
+  "generalTitle": "General",
+  "generalSubTitle": "Validity",
+  "payment": "Payment",
+  "checkoutReview": "Review",
+  "shipping": "Shipping",
+  "addNewCard": "Add New Card",
+  "notificationsTitle": "Notifications",
+
+  
+  "aboutUs": "About Us",
+  "loremWarning": "There are many variations of passages of Lorem Ipsum available, but the majority have been altered in some way by injected humour or random words. If you are going to use a Lorem Ipsum passage, you need to make sure there isn't anything embarrassing hidden in the text.",
+  "loremWarning1": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+  "loremWarning2": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words.",
+  "loremWarning3": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+  "loremWarning4": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+  "loremWarning5": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text."
 }

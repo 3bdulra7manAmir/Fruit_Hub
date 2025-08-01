@@ -2,38 +2,38 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/widgets/buttons/button.dart';
-import 'fullname_field.dart';
-import 'register_email_field.dart';
-import 'register_password_field.dart';
 
 class RegisterButtonWidget extends StatelessWidget
 {
-  const RegisterButtonWidget({super.key, required this.formKey});
+  const RegisterButtonWidget({super.key, required this.formKey, required this.fullNameController, required this.emailController, required this.passwordController});
   final GlobalKey<FormState> formKey;
+  final TextEditingController fullNameController;
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
 
   @override
   Widget build(BuildContext context)
   {
     return CustomButton(
-      text: 'إنشاء حساب جديد',
+      text: S.current.createNewAccount,
       onPressed: ()
       {
         if (!formKey.currentState!.validate())
         {
           log('InValid Register...');
-          RegisterFullNameWidget.fullNameController.clear();
-          RegisterEmailWidget.emailController.clear();
-          RegisterPasswordWidget.passwordController.clear();
+          fullNameController.clear();
+          emailController.clear();
+          passwordController.clear();
         }
         else
         {
           log('Valid Register...');
-          final fullname = RegisterFullNameWidget.fullNameController.text;
-          final email = RegisterEmailWidget.emailController.text;
-          final password = RegisterPasswordWidget.passwordController.text;
-          log('$fullname \t $email \t $password');
-          //AppRouter.router.pushNamed(AppRoutes.login);
+          log('${fullNameController.text} \t ${emailController.text} \t ${passwordController.text}');
+          AppRouter.router.pushNamed(AppRoutes.login);
         }
       },
     );

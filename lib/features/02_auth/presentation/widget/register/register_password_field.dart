@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/extensions/widget_padding.dart';
@@ -12,9 +13,9 @@ import '../../controller/register/obscure_password_controller.dart';
 
 class RegisterPasswordWidget extends ConsumerWidget
 {
-  const RegisterPasswordWidget({super.key});
+  const RegisterPasswordWidget({super.key, required this.passwordController});
 
-  static final TextEditingController passwordController = TextEditingController();
+  final TextEditingController passwordController;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -24,7 +25,7 @@ class RegisterPasswordWidget extends ConsumerWidget
       keyboardType: TextInputType.visiblePassword,
       controller: passwordController,
       validator: (value) => AppValidation.passwordValidation(value),
-      hintText: 'كلمة المرور',
+      hintText: S.current.password,
       obscureText: !obscureProvider,
       suffixIcon: GestureDetector(
         onTap: ()

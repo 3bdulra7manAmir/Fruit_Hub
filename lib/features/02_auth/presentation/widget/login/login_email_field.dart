@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class LoginEmailWidget extends StatelessWidget
 {
-  const LoginEmailWidget({super.key});
+  const LoginEmailWidget({super.key, required this.emailController});
 
-  static final TextEditingController emailController = TextEditingController(text: 'shadow@gmail.com');
+  final TextEditingController emailController;
 
   @override
   Widget build(BuildContext context)
@@ -15,7 +16,7 @@ class LoginEmailWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.emailAddress,
       controller: emailController,
-      hintText: 'البريد الإلكتروني',
+      hintText: S.current.email,
       validator: (value) => AppValidation.emailValidation(value),
     );
   }

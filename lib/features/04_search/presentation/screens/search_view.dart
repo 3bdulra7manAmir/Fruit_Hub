@@ -4,6 +4,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_margins.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
@@ -25,7 +26,7 @@ class Search extends StatelessWidget
   {
     //log("Received fruitName: $fruitName"); // Just for debug
     return Scaffold(
-      appBar: const CustomAppBar(title: 'البحث', isNotifications: true,),
+      appBar:  CustomAppBar(title: S.current.search2, isNotifications: true,),
       body: CustomSingleChild(
         children:
         [

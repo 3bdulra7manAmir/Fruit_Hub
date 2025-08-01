@@ -10,9 +10,9 @@ import '../../../../../core/widgets/textform_field.dart';
 
 class EditFullNameFieldWidget extends StatelessWidget
 {
-  const EditFullNameFieldWidget({super.key,});
+  const EditFullNameFieldWidget({super.key, required this.fullNameController,});
 
-  static final TextEditingController fullNameController = TextEditingController();
+  final TextEditingController fullNameController;
 
   @override
   Widget build(BuildContext context)

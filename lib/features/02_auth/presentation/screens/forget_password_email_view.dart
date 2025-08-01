@@ -1,24 +1,28 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/column.dart';
+// import '../../../../core/widgets/column.dart';
+// import '../../../../core/widgets/form.dart';
 
-class ForgetPasswordEmail extends StatelessWidget
-{
-  ForgetPasswordEmail({super.key});
+// class ForgetPasswordEmail extends StatelessWidget
+// {
+//   ForgetPasswordEmail({super.key});
 
-  final GlobalKey<FormState> forgetPasswordEmailFormKey = GlobalKey<FormState>();
+//   final GlobalKey<FormState> forgetPasswordEmailFormKey = GlobalKey<FormState>();
 
-  @override
-  Widget build(BuildContext context)
-  {
-    return const Scaffold(
-      //appBar: CustomAppBar(barTitle: "نسيان كلمة المرور"),
-      body: CustomSingleChild(
-        children:
-        [
+//   @override
+//   Widget build(BuildContext context)
+//   {
+//     return const Scaffold(
+//       //appBar: CustomAppBar(barTitle: "نسيان كلمة المرور"),
+//       body: CustomForm(
+//         formKey: ,
+//         formBody: CustomSingleChild(
+//           children:
+//           [
       
-        ],
-      ),
-    );
-  }
-}
+//           ],
+//         ),
+//       )
+//     );
+//   }
+// }

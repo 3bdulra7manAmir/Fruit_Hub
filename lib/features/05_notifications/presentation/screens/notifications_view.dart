@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/extensions/widget_margin.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
@@ -16,17 +17,17 @@ class Notifications extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'الاشعارات', isNotifications: true,),
+      appBar: CustomAppBar(title: S.current.notifications, isNotifications: true,),
       body: CustomSingleChild(
         isMargin: false,
         children:
         [
           Sizes.s16.verticalSpace,
-          const NotificationsTitleWidget(header: 'جديد', count: '2',).marginSymmetric(horizontal: 16.w),
+          NotificationsTitleWidget(header: S.current.neww, count: '2',).marginSymmetric(horizontal: 16.w),
           Sizes.s16.verticalSpace,
           const NotificationsCardListWidget(),
           Sizes.s16.verticalSpace,
-          const NotificationsTitleWidget(header: 'في وقت سابق', count: '2',).marginSymmetric(horizontal: 16.w),
+          NotificationsTitleWidget(header: S.current.earlier, count: '2',).marginSymmetric(horizontal: 16.w),
           Sizes.s26.verticalSpace,
           const NotificationsCardListWidget(),
         ]

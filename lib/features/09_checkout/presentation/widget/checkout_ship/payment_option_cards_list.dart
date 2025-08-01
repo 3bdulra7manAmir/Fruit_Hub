@@ -21,7 +21,7 @@ class _PaymentOptionCardsListState extends State<PaymentOptionCardsList>
   Widget build(BuildContext context)
   {
     return CustomListviewBuilder(
-      itemCount: 5,
+      itemCount: 3,
       separatorBuilder: (context, index) => Sizes.s8.verticalSpace,
       itemBuilder: (context, index)
       {

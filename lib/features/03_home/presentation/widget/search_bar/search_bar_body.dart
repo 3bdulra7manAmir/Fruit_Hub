@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_shadow_boxes.dart';
@@ -25,7 +26,7 @@ class SearchBarWidget extends StatelessWidget
       suffixIcon: const FilterIconWidget(),
       prefixIcon: const SearchIconWidget(),
       fillColor: AppColors.color.kWhite001,
-      hintText: 'ابحث عن.......',
+      hintText: S.current.searchFor,
       hintStyle: AppStyles.extraLight(
         fontColor: AppColors.color.kGrey002,
         fontWeight: AppFontWeights.regularWeight,

@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
@@ -19,7 +20,7 @@ class FilteredProducts extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'المنتجات', isNotifications: true, isCustomBack: false,),
+      appBar: CustomAppBar(title: S.current.products, isNotifications: true, isCustomBack: false,),
       body: CustomSingleChild(
         children:
         [

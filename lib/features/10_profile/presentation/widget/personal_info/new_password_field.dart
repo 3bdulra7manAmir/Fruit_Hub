@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/extensions/widget_padding.dart';
@@ -12,16 +13,16 @@ import '../../controller/personal_info/new_obscure_controller.dart';
 
 class NewPasswordFieldWidget extends ConsumerWidget
 {
-  const NewPasswordFieldWidget({super.key,});
+  const NewPasswordFieldWidget({super.key, required this.newPasswordController});
 
-  static final TextEditingController newPasswordController = TextEditingController();
+  final TextEditingController newPasswordController;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
     final obscureProvider = ref.watch(newObscurePasswordProvider);
     return CustomTextFormField(
-      hintText: 'كلمة المرور الجديده',
+      hintText: S.current.newPassword2,
       controller: newPasswordController,
       keyboardType: TextInputType.visiblePassword,
       validator: (value) => AppValidation.passwordValidation(value),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/widget_margin.dart';
 import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
@@ -26,7 +27,7 @@ void arrangementFilterSheet(context)
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              const FilterProductsByWidget(title: 'ترتيب حسب :',),
+              FilterProductsByWidget(title: S.current.sortBy,),
               Sizes.s14.verticalSpace,
               const ArrangementRadioList(),
               Sizes.s11.verticalSpace,

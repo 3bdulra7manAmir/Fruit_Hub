@@ -1,6 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/widget_padding.dart';
@@ -20,7 +24,14 @@ class CartCardWidget extends StatelessWidget
       child: Row(
         children:
         [
-          const CartItemImgWidget(),
+          GestureDetector(
+            onTap: ()
+            {
+              log('Item Details...');
+              AppRouter.router.pushNamed(AppRoutes.itemsDetails);
+            },
+            child: const CartItemImgWidget()
+          ),
           Sizes.s16.horizontalSpace,
           const CartItemQuantityWidget(),
           const Spacer(),

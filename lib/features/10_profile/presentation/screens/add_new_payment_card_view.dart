@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
@@ -17,12 +18,14 @@ class AddNewPaymentCard extends StatelessWidget
   AddNewPaymentCard({super.key});
 
   final GlobalKey<FormState> cardFormKey = GlobalKey<FormState>();
+  final TextEditingController cardNumberController = TextEditingController();
+  final TextEditingController expireDateController = TextEditingController();
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'اضافه بطاقه جديده',),
+      appBar: CustomAppBar(title: S.current.addNewCard,),
       body: CustomForm(
         formKey: cardFormKey,
         formBody: CustomSingleChild(
@@ -31,9 +34,9 @@ class AddNewPaymentCard extends StatelessWidget
             Sizes.s24.verticalSpace,
             const CardOwnerNameWidget(),
             Sizes.s8.verticalSpace,
-            const CardNumberWidget(),
+            CardNumberWidget(cardNumberController: cardNumberController,),
             Sizes.s8.verticalSpace,
-            const CardAuthInfoWidget(),
+            CardAuthInfoWidget(expireDateController: expireDateController,),
             Sizes.s18.verticalSpace,
             const MakeCardAsDeafultWidget(),
             if (1.sw <= 427 && 1.sh <= 952)...
@@ -41,7 +44,7 @@ class AddNewPaymentCard extends StatelessWidget
               Sizes.s150.verticalSpace,
             ]
             else...[Sizes.s300.verticalSpace,],
-            AddNewPaymentMethodButtonWidget(formKey: cardFormKey,),
+            AddNewPaymentMethodButtonWidget(formKey: cardFormKey, cardNumberController: cardNumberController, expireDateController: expireDateController,),
             Sizes.s16.verticalSpace,
           ]
         ),

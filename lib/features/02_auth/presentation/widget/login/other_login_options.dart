@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
@@ -24,22 +25,16 @@ class OtherOptionsWidget extends StatelessWidget
       [
         ...[
           GestureDetector(
-            onTap: () {
-              log('Google');
-            },
-            child: OtherOptionCardWidget(text: 'تسجيل بواسطة جوجل',  logo: AppAssets.icons.google,)
+            onTap: () {log('Google');},
+            child: OtherOptionCardWidget(text: S.current.signInWithGoogle,  logo: AppAssets.icons.google,)
           ),
           GestureDetector(
-            onTap: () {
-              log('Apple');
-            },
-            child: OtherOptionCardWidget(text: 'تسجيل بواسطة أبل',  logo: AppAssets.icons.apple,)
+            onTap: () {log('Apple');},
+            child: OtherOptionCardWidget(text: S.current.signInWithApple,  logo: AppAssets.icons.apple,)
           ),
           GestureDetector(
-            onTap: () {
-              log('Facebook');
-            },
-            child: OtherOptionCardWidget(text: 'تسجيل بواسطة فيسبوك',  logo: AppAssets.icons.facebook,)
+            onTap: () {log('Facebook');},
+            child: OtherOptionCardWidget(text: S.current.signInWithFacebook,  logo: AppAssets.icons.facebook,)
           ),
         ].addSeparator(child: Sizes.s16.verticalSpace),
       ],

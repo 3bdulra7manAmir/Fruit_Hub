@@ -5,10 +5,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'config/i18n/generated/l10n.dart';
+import 'config/i18n/localization/localization_controller.dart';
 import 'config/router/app_router.dart';
 import 'config/theme/theme_controller/theme_controller.dart';
 import 'config/theme/theme_manager/themes.dart';
-import 'core/services/localization/localization_controller.dart';
 
 class ECommerceApp extends ConsumerWidget
 {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
@@ -19,14 +20,16 @@ import '../widget/payment_steps_list.dart';
 
 class CheckoutPayment extends ConsumerWidget
 {
-  const CheckoutPayment({super.key});
+  CheckoutPayment({super.key});
+  final TextEditingController cardNumberController = TextEditingController();
+  final TextEditingController expireDateController = TextEditingController();
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
     ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutPayment);
     return Scaffold(
-      appBar: const CustomAppBar(title: 'الدفع'),
+      appBar: CustomAppBar(title: S.current.payment),
       body: CustomSingleChild(
         children:
         [
@@ -41,9 +44,9 @@ class CheckoutPayment extends ConsumerWidget
           Sizes.s16.verticalSpace,
           const CardOwnerNameWidget(),
           Sizes.s8.verticalSpace,
-          const CardNumberWidget(),
+          CardNumberWidget(cardNumberController: cardNumberController,),
           Sizes.s8.verticalSpace,
-          const CardAuthInfoWidget(),
+          CardAuthInfoWidget(expireDateController: expireDateController,),
           Sizes.s18.verticalSpace,
           const MakeCardAsDeafultWidget(),
           Sizes.s60.verticalSpace,

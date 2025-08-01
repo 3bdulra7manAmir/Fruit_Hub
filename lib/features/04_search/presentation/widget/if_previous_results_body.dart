@@ -28,8 +28,7 @@ class IfPreviousResultsBody extends StatelessWidget
           [
             Text('عمليات البحث الأخيرة', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
             GestureDetector(
-              onTap: ()
-              {log('Delete All has been Pressed...');},
+              onTap: () {log('Delete All has been Pressed...');},
               child: Text('حذف الكل', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
             ),
           ],

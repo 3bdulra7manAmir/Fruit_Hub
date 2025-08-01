@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/extensions/widget_padding.dart';
@@ -12,9 +13,9 @@ import '../../controller/personal_info/current_obscure_controller.dart';
 
 class CurrentPasswordFieldWidget extends ConsumerWidget
 {
-  const CurrentPasswordFieldWidget({super.key,});
+  const CurrentPasswordFieldWidget({super.key, required this.currentPasswordController});
 
-  static final TextEditingController currentPasswordController = TextEditingController();
+  final TextEditingController currentPasswordController;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -24,7 +25,7 @@ class CurrentPasswordFieldWidget extends ConsumerWidget
       controller: currentPasswordController,
       keyboardType: TextInputType.visiblePassword,
       validator: (value) => AppValidation.passwordValidation(value),
-      hintText: 'كلمة المرور الحالي',
+      hintText: S.current.currentPassword,
       suffixIcon: GestureDetector(
         onTap: () => ref.read(currentObscurePasswordProvider.notifier).toggle(),
         child: !obscureProvider ? 
