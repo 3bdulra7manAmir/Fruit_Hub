@@ -61,6 +61,6 @@ class FilteredResultsCountWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text('4 نتائج', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
+    return Text('4 ${S.current.results}', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
   }
 }

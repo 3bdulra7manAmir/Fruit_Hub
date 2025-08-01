@@ -53,7 +53,7 @@ class NoSearchResultsFoundWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text('لاتوجد نتائج بحث', style: AppStyles.extraLight(
+    return Text(S.current.noSearchResults, style: AppStyles.extraLight(
       fontColor: AppColors.color.kGrey002,
       fontWeight: AppFontWeights.regularWeight,
     ),).withShadow(

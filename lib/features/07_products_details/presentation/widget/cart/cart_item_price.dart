@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -52,7 +53,7 @@ class ItemPriceTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text('60 جنيه ', style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
+    return Text('60 ${S.current.le} ', style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
   }
 }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
@@ -80,9 +81,9 @@ class PaymentOptionTextWidget extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Text('الدفع عند الاستلام', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack004),),
+        Text(S.current.cashOnDelivery, style: AppStyles.extraLight(fontColor: AppColors.color.kBlack004),),
         Sizes.s6.verticalSpace,
-        Text('التسليم من المكان', style: AppStyles.extraLight(
+        Text(S.current.pickup2, style: AppStyles.extraLight(
           fontColor: AppColors.color.kBlack004.withValues(alpha: 0.5)),),
       ],
     );

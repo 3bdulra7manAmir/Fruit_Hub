@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_paddings.dart';
@@ -47,9 +48,9 @@ class SubTotalTextWidget extends StatelessWidget
       children:
       [
         Sizes.s2.horizontalSpace,
-        Text('المجموع الفرعي :', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
+        Text(S.current.subtotal2, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
         const Spacer(),
-        Text('150 جنيه', style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
+        Text('150 ${S.current.le}', style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
         Sizes.s2.horizontalSpace,
       ],
     );
@@ -67,9 +68,9 @@ class DeliveryCostTextWidget extends StatelessWidget
     return Row(
       children:
       [
-        Text('التوصيل  :', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
+        Text(S.current.delivery2, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
         const Spacer(),
-        Text('30جنية', style: AppStyles.extraLight(),),
+        Text('30 ${S.current.le}', style: AppStyles.extraLight(),),
         Sizes.s20.horizontalSpace,
       ],
     );
@@ -88,9 +89,9 @@ class TotalCostTextWidget extends StatelessWidget
       children:
       [
         Sizes.s2.horizontalSpace,
-        Text('الكلي', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text(S.current.total2, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         const Spacer(),
-        Text('180 جنيه', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text('180 ${S.current.le}', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         Sizes.s2.horizontalSpace,
       ],
     );

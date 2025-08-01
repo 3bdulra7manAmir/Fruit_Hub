@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -27,7 +28,7 @@ class FruitItemRatingWidget extends StatelessWidget
           fontWeight: AppFontWeights.regularWeight),
         ),
         Sizes.s9.horizontalSpace,
-        Text('المراجعه', style: AppStyles.extraLight(
+        Text(S.current.review, style: AppStyles.extraLight(
           fontColor: AppColors.color.kGreen001, 
           fontWeight: AppFontWeights.boldWeight),
         ),

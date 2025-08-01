@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -43,7 +44,7 @@ class DeliveryAddressEditWidget extends StatelessWidget
     return Row(
       children:
       [
-        Text('عنوان التوصيل', style: AppStyles.extraLight(
+        Text(S.current.deliveryAddress, style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack001),
         ),
@@ -58,7 +59,7 @@ class DeliveryAddressEditWidget extends StatelessWidget
             [
               SvgPicture.asset(AppAssets.icons.editGrey),
               Sizes.s4.horizontalSpace,
-              Text('تعديل', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
+              Text(S.current.edit, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
             ],
           ),
         ),

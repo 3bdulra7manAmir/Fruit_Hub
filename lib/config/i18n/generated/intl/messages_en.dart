@@ -56,6 +56,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "checkoutReview": MessageLookupByLibrary.simpleMessage("Review"),
         "choosePayment": MessageLookupByLibrary.simpleMessage(
             "Choose your preferred payment method:"),
+        "choosePaymentMethod":
+            MessageLookupByLibrary.simpleMessage("Choose your payment method:"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Clear All"),
         "clearance": MessageLookupByLibrary.simpleMessage("Clearance"),
@@ -82,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cvvValidationFailure":
             MessageLookupByLibrary.simpleMessage("Failed to validate CVV:"),
         "delivery": MessageLookupByLibrary.simpleMessage("Delivery:"),
+        "delivery2": MessageLookupByLibrary.simpleMessage("Delivery :"),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Delivery Address"),
         "didForgotPassword":
@@ -144,7 +147,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid phone number"),
         "itemsInCart": MessageLookupByLibrary.simpleMessage(
             "You have products in your cart"),
+        "kiloG": MessageLookupByLibrary.simpleMessage("KG"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "le": MessageLookupByLibrary.simpleMessage("LE"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Log out"),
         "logoutConfirmation":
@@ -164,6 +169,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "makeDefaultCard":
             MessageLookupByLibrary.simpleMessage("Make this card default"),
         "markAllRead": MessageLookupByLibrary.simpleMessage("Mark All as Read"),
+        "more": MessageLookupByLibrary.simpleMessage("Show more"),
         "more2": MessageLookupByLibrary.simpleMessage("more"),
         "mostSold": MessageLookupByLibrary.simpleMessage("Best Sellers"),
         "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
@@ -173,6 +179,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "newPassword2": MessageLookupByLibrary.simpleMessage("New password"),
         "neww": MessageLookupByLibrary.simpleMessage("New"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "noSearchResults":
+            MessageLookupByLibrary.simpleMessage("No search results"),
         "noThanks": MessageLookupByLibrary.simpleMessage("No thanks"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "notificationsTitle":
@@ -208,19 +216,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordValidationFailure":
             MessageLookupByLibrary.simpleMessage("Error validating password:"),
         "passwordsDontMatchFunny": MessageLookupByLibrary.simpleMessage(
-            "Passwords don’t match, bro.\nTry entering two matching ones — seriously!"),
+            "Passwords don\'t match, bro.\nTry entering two matching ones — seriously!"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
+        "paymentMethod2":
+            MessageLookupByLibrary.simpleMessage("Payment Method"),
         "payments": MessageLookupByLibrary.simpleMessage("Payments"),
         "personalInfo":
             MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phoneNumberIsRequired":
             MessageLookupByLibrary.simpleMessage("Phone number is required"),
         "phoneVerificationMessage": MessageLookupByLibrary.simpleMessage(
-            "Don’t worry, just enter your phone number and we’ll send a verification code."),
+            "Don\'t worry, just enter your phone number and we\'ll send a verification code."),
         "pickup": MessageLookupByLibrary.simpleMessage("Pickup from Store"),
+        "pickup2": MessageLookupByLibrary.simpleMessage("Pickup"),
         "pleaseChoosePayment": MessageLookupByLibrary.simpleMessage(
             "Please select a suitable payment method."),
+        "pleaseChoosePaymentMethod": MessageLookupByLibrary.simpleMessage(
+            "Please choose your preferred payment method."),
+        "pleaseConfirmOrder":
+            MessageLookupByLibrary.simpleMessage("Please confirm your order"),
         "previous": MessageLookupByLibrary.simpleMessage("Previous"),
         "price": MessageLookupByLibrary.simpleMessage("Price:"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
@@ -229,6 +244,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Re-enter the password"),
         "recentSearches":
             MessageLookupByLibrary.simpleMessage("Recent Searches"),
+        "recommended": MessageLookupByLibrary.simpleMessage("Recommended"),
         "resendCode": MessageLookupByLibrary.simpleMessage("Resend the code"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),
@@ -240,6 +256,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search and shop"),
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
         "searchResults": MessageLookupByLibrary.simpleMessage("Search Results"),
+        "setAsDefaultCard":
+            MessageLookupByLibrary.simpleMessage("Set as default card"),
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop now"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
@@ -254,9 +272,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "stepsCompleted":
             MessageLookupByLibrary.simpleMessage("Steps completed!"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal:"),
+        "subtotal2": MessageLookupByLibrary.simpleMessage("Subtotal:"),
         "success":
             MessageLookupByLibrary.simpleMessage("Completed Successfully!"),
+        "success2": MessageLookupByLibrary.simpleMessage("Success!"),
         "summary": MessageLookupByLibrary.simpleMessage("Summary"),
+        "summary2": MessageLookupByLibrary.simpleMessage("Summary"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),

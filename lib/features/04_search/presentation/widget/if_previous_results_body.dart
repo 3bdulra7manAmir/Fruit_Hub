@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_images.dart';
@@ -26,10 +27,10 @@ class IfPreviousResultsBody extends StatelessWidget
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:
           [
-            Text('عمليات البحث الأخيرة', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
+            Text(S.current.recentSearches, style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
             GestureDetector(
               onTap: () {log('Delete All has been Pressed...');},
-              child: Text('حذف الكل', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
+              child: Text(S.current.clearAll, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
             ),
           ],
         ),
