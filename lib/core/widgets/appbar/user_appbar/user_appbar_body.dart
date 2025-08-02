@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../constants/app_sizes.dart';
-import '../../../extensions/widget_margin.dart';
+import '../../../extensions/margin.dart';
 import 'widgets/notifications_bill.dart';
 import 'widgets/user_img.dart';
 import 'widgets/user_name.dart';

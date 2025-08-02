@@ -11,7 +11,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/widget_iterator.dart';
+import '../../../../../core/extensions/iterator.dart';
 
 class OtherOptionsWidget extends StatelessWidget
 {

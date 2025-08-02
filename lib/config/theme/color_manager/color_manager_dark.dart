@@ -43,7 +43,7 @@ class DarkColorScheme extends ColorManagerBase
   Color get kGrey007 => const Color(0xffD9D9D9);
   @override
   /// [_F3F5F7]
-  Color get kGrey008 => const Color(0xffF3F5F7);
+  Color get kGrey008 => const Color(0xff171717);
   @override
   /// [_323232]
   Color get kGrey009 => const Color(0xff323232);

@@ -7,7 +7,7 @@ part of 'save_address_controller.dart';
 // **************************************************************************
 
 String _$toggleSwitchSaveAddressHash() =>
-    r'269be70da53974ae02ef95fba9c2d31e99be9e9a';
+    r'778a4a646e8256410c082101c46f6bc80552708a';
 
 /// See also [ToggleSwitchSaveAddress].
 @ProviderFor(ToggleSwitchSaveAddress)

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../config/theme/color_manager/colors.dart';
-import '../../../constants/app_images.dart';
-import '../../../extensions/string.dart';
+import '../../identity_widgets/widgets.dart';
 
 class BackButtonWidget extends StatelessWidget
   {
@@ -12,8 +11,6 @@ class BackButtonWidget extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-      final String arrowDirection = AppAssets.icons.rightBlackArrow.localized(context, 
-      ar: AppAssets.icons.rightBlackArrow, en: AppAssets.icons.leftBlackArrow);
       return Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
@@ -21,7 +18,7 @@ class BackButtonWidget extends StatelessWidget
           shape: BoxShape.circle,
           border: Border.all(color: AppColors.color.kGrey014,),
         ),
-        child: SvgPicture.asset(arrowDirection),
+        child: SvgPicture.asset(WidgetFilpper.appBarBack(context)),
       );
     }
   }

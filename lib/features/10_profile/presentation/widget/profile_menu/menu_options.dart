@@ -12,7 +12,7 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/widgets/identity_widgets/arrow.dart';
+import '../../../../../core/widgets/identity_widgets/widgets.dart';
 import '../../../../../core/widgets/toggle_button.dart';
 import '../../controller/profile_menu/language_informer.dart';
 import '../../controller/profile_menu/notification_controller.dart';
@@ -42,7 +42,7 @@ class ProfileOptions extends StatelessWidget
       contentPadding: EdgeInsets.zero,
       onTap: onTap,
       leading: SvgPicture.asset(leading),
-      trailing: isArrow ? SvgPicture.asset(IdentityWidgets.arrowDirection(context)) : caseWidget,
+      trailing: isArrow ? SvgPicture.asset(WidgetFilpper.menuOptions(context)) : caseWidget,
       title: Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
       shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016,)),
     );
@@ -116,7 +116,7 @@ class OptionsMenuWidget extends StatelessWidget
               [
                 Text(S.current.arabic, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
                 Sizes.s2.horizontalSpace,
-                SvgPicture.asset(IdentityWidgets.arrowDirection(context)),
+                SvgPicture.asset(WidgetFilpper.menuOptions(context)),
               ],
             ),
           ),

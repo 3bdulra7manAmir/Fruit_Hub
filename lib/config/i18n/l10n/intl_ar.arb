@@ -142,6 +142,8 @@
   "shipping": "الشحن",
 
   "payment": "الدفع",
+  "pay": "الدفع",
+  "cartProductsCount": "لديك {count} منتجات في سله التسوق",
   "paymentMethod": "طريقة الدفع",
   "paymentMethod2": "وسيلة الدفع",
   "payments": "المدفوعات",
@@ -187,6 +189,7 @@
   "theme": "الوضع",
   "notifications": "الإشعارات",
   "notificationsTitle": "الاشعارات",
+  "alreadyInNotifications": "انت أساسًا في شاشة الاشعارات يا معلم...",
   "markAllRead": "تحديد الكل كمقروء",
   "neww": "جديد",
   "earlier": "في وقت سابق",

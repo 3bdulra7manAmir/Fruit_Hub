@@ -1300,6 +1300,26 @@ class S {
     );
   }
 
+  /// `الدفع`
+  String get pay {
+    return Intl.message(
+      'الدفع',
+      name: 'pay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لديك {count} منتجات في سله التسوق`
+  String cartProductsCount(Object count) {
+    return Intl.message(
+      'لديك $count منتجات في سله التسوق',
+      name: 'cartProductsCount',
+      desc: '',
+      args: [count],
+    );
+  }
+
   /// `طريقة الدفع`
   String get paymentMethod {
     return Intl.message(
@@ -1695,6 +1715,16 @@ class S {
     return Intl.message(
       'الاشعارات',
       name: 'notificationsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انت أساسًا في شاشة الاشعارات يا معلم...`
+  String get alreadyInNotifications {
+    return Intl.message(
+      'انت أساسًا في شاشة الاشعارات يا معلم...',
+      name: 'alreadyInNotifications',
       desc: '',
       args: [],
     );

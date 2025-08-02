@@ -6,7 +6,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/widget_margin.dart';
+import '../../../../../core/extensions/margin.dart';
 import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
 import 'current_order_cart.dart';
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/extensions/widget_align.dart';
+import '../../../../core/extensions/align.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/nav_buttons.dart';
 import '../widget/payment_success/done_successfully_text.dart';

@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(email) =>
+  static String m0(count) => "You have ${count} products in the cart";
+
+  static String m1(email) =>
       "Enter the code we sent to the following email address: ${email}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -35,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "alreadyHaveAccount2":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "alreadyInNotifications": MessageLookupByLibrary.simpleMessage(
+            "You\'re already on the Notifications screen, boss..."),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "bestSellers": MessageLookupByLibrary.simpleMessage("Best sellers"),
         "byCreatingAccountYouAgree": MessageLookupByLibrary.simpleMessage(
@@ -49,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cardNumberValidationFailure": MessageLookupByLibrary.simpleMessage(
             "Failed to validate card number:"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "cartProductsCount": m0,
         "cashOnDelivery":
             MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
         "changePassword":
@@ -100,7 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Error validating email:"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("Email is required"),
-        "enterCodeSentToEmail": m0,
+        "enterCodeSentToEmail": m1,
         "enterEmail": MessageLookupByLibrary.simpleMessage("Enter email"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
         "expireDateRequired":
@@ -217,6 +222,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Error validating password:"),
         "passwordsDontMatchFunny": MessageLookupByLibrary.simpleMessage(
             "Passwords don\'t match, bro.\nTry entering two matching ones — seriously!"),
+        "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
         "paymentMethod2":

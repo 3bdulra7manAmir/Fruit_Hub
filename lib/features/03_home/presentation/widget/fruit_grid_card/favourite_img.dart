@@ -1,10 +1,8 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/constants/app_images.dart';
 import '../../controller/favourite_controller.dart';
 
 class FavouriteWidget extends ConsumerWidget
@@ -14,16 +12,10 @@ class FavouriteWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final isFavouritProvider = ref.watch(favouriteImgProvider);
     return GestureDetector(
       onTap: ()
-      {
-        log('Favourit Has been Pressed...');
-        ref.read(favouriteImgProvider.notifier).toggle();
-      },
-      child: isFavouritProvider ? //ShadowCompany
-      Image.asset(AppAssets.icons.hartFilledPNG)
-      : SvgPicture.asset(AppAssets.icons.hartBlack),
+      {log('Favourit Has been Pressed...'); ref.read(favouriteImgProvider.notifier).toggle();},
+      child: SvgPicture.asset(ref.watch(favouriteIconProvider)),
     );
   }
 }

@@ -11,7 +11,7 @@ import '../../constants/app_borders.dart';
 import '../../constants/app_images.dart';
 import '../../constants/app_sizes.dart';
 import '../../constants/app_styles.dart';
-import '../../extensions/widget_margin.dart';
+import '../../extensions/margin.dart';
 import '../buttons/button.dart';
 import 'dialog.dart';
 

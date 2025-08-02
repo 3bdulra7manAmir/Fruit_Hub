@@ -1,33 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../../../config/i18n/localization/localization_controller.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/transform.dart';
 
 class LogOutWidget extends StatelessWidget
 {
-  const LogOutWidget({super.key,});
+  const LogOutWidget({super.key});
 
   @override
   Widget build(BuildContext context)
   {
     return Container(
       padding: AppPadding.directional.logOutCard,
-      height: 41.h, width: 375.w, alignment: Alignment.center,
-      decoration: BoxDecoration(color: AppColors.color.kGreen006,),
+      height: 41.h,
+      width: 375.w,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(color: AppColors.color.kGreen006),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
           Expanded(
-            child: Text(S.current.logout, style: AppStyles.extraLight(fontColor: AppColors.color.kGreen001,),),
+            child: Text(S.current.logout, style: AppStyles.extraLight(fontColor: AppColors.color.kGreen001),),
           ),
-          Expanded(child: SvgPicture.asset(AppAssets.icons.signOut)),
+          Expanded(
+            child: Consumer(
+              builder: (_, ref, _) => SvgPicture.asset(AppAssets.icons.signOut).
+              flipForRtl(ref.watch(localizationProvider))
+            ),
+          ),
         ],
       ),
     );

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/string.dart';
+import '../../../../../core/extensions/validation.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/utils/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';

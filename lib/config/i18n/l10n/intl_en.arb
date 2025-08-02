@@ -125,6 +125,7 @@
   "to": "To",
   "addToCart": "Add to cart",
   "cart": "Cart",
+  "cartProductsCount": "You have {count} products in the cart",
   "shoppingCart": "Shopping Cart",
   "itemsInCart": "You have products in your cart",
 
@@ -142,6 +143,7 @@
   "shipping": "Shipping",
 
   "payment": "Payment",
+  "pay": "Pay",
   "paymentMethod": "Payment Method",
   "paymentMethod2": "Payment Method",
   "payments": "Payments",
@@ -187,6 +189,7 @@
   "theme": "Theme",
   "notifications": "Notifications",
   "notificationsTitle": "Notifications",
+  "alreadyInNotifications": "You're already on the Notifications screen, boss...",
   "markAllRead": "Mark All as Read",
   "neww": "New",
   "earlier": "Earlier",

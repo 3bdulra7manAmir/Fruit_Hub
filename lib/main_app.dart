@@ -17,8 +17,6 @@ class ECommerceApp extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final themesProvider = ref.watch(themeProvider);
-    final localProvider = ref.watch(localizationProvider);
     return DevicePreview(
       //enabled: false,
       builder: (context) => ScreenUtilInit(
@@ -35,11 +33,11 @@ class ECommerceApp extends ConsumerWidget
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
-          locale: localProvider,
+          locale: ref.watch(localizationProvider),
       
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),
-          themeMode: themesProvider,
+          themeMode: ref.watch(themeProvider),
           
           debugShowCheckedModeBanner: false,
         ),

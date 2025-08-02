@@ -6,7 +6,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/widget_shadow_box.dart';
+import '../../../../../core/extensions/shadow_box.dart';
 import '../../../../../core/widgets/textform_field.dart';
 import 'filter_icon.dart';
 import 'search_icon.dart';

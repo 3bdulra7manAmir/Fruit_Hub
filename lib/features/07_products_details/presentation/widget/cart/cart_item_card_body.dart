@@ -7,7 +7,7 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/extensions/widget_padding.dart';
+import '../../../../../core/extensions/padding.dart';
 import 'cart_item_img.dart';
 import 'cart_item_price.dart';
 import 'cart_item_quantity.dart';

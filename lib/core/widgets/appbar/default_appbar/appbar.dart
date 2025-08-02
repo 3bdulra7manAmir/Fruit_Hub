@@ -1,13 +1,13 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../constants/app_margins.dart';
 import '../../../constants/app_styles.dart';
-import '../../../extensions/widget_margin.dart';
+import '../../../extensions/margin.dart';
 import '../../snackbar.dart';
 import '../user_appbar/widgets/notifications_bill.dart';
 import 'back_button.dart';
@@ -64,24 +64,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
 
   
   GestureDetector billOnTap(context) => 
-  GestureDetector(onTap: ()
-  {
+  GestureDetector(onTap: () {
     log('Notifications Bill has been Pressed...');
     try
     {
       if (AppRouter.currentRoute == AppRoutes.notifications)
-      {
-        CustomSnackBar.show(context, 'انت اساسًا في شاشة الاشعارات يا معلم...');
-      }
+      {CustomSnackBar.show(context, S.current.alreadyInNotifications);}
       else
-      {
-        AppRouter.router.pushNamed(AppRoutes.notifications);
-      }
+      {AppRouter.router.pushNamed(AppRoutes.notifications);}
     }
     catch (error, stack)
-    {
-      log('Error Going to Notifications Screen: $error, Stack is: $stack');
-    }
+    {log('Error Going to Notifications Screen: $error, Stack is: $stack');}
   }, child: const BillWidget(),);
 
   void leadingOnTap(BuildContext context)

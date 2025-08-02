@@ -61,6 +61,37 @@ class OfferWaveClipper extends CustomClipper<Path>
 }
 
 
+class FlippedOfferWaveClipper extends CustomClipper<Path>
+{
+  @override
+  Path getClip(Size size) {
+    final Path path = Path();
+    // Start from top-left
+    path.moveTo(0, 0);
+    // Line to top-right before curve starts
+    path.lineTo(size.width * 0.85, 0);
+    // Right inward curve
+    path.quadraticBezierTo(
+      size.width, size.height * 0.25,
+      size.width, size.height * 0.5,
+    );
+    path.quadraticBezierTo(
+      size.width, size.height * 0.75,
+      size.width * 0.85, size.height,
+    );
+    // Line to bottom-left
+    path.lineTo(0, size.height);
+    // Close path
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
+
+
 class BottomArcClipper extends CustomClipper<Path>
 {
   @override

@@ -5,7 +5,7 @@ import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_styles.dart';
-import '../../../../core/extensions/widget_align.dart';
+import '../../../../core/extensions/align.dart';
 
 class SummaryTextWidget extends StatelessWidget
 {

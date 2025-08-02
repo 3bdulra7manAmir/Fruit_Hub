@@ -17,9 +17,7 @@ class Localization extends _$Localization
 
   void toggle()
   {
-    state = state.languageCode == 'ar'
-        ? const Locale('en')
-        : const Locale('ar');
+    state = state.languageCode == 'ar' ? const Locale('en') : const Locale('ar');
     log('Localization toggled to: ${state.languageCode.toUpperCase()}');
   }
 

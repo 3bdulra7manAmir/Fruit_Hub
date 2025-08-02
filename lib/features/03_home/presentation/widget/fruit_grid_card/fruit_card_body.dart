@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/extensions/widget_margin.dart';
+import '../../../../../core/extensions/margin.dart';
 import 'add_button.dart';
 import 'favourite_img.dart';
 import 'fruit_price.dart';

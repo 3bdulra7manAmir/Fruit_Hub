@@ -7,7 +7,7 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/widget_align.dart';
+import '../../../../../core/extensions/align.dart';
 
 class DidForgetPasswordWidget extends StatelessWidget
 {

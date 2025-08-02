@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(email) =>
+  static String m0(count) => "لديك ${count} منتجات في سله التسوق";
+
+  static String m1(email) =>
       "أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي: ${email}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -35,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لديك حساب مسبقًا؟"),
         "alreadyHaveAccount2":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
+        "alreadyInNotifications": MessageLookupByLibrary.simpleMessage(
+            "انت أساسًا في شاشة الاشعارات يا معلم..."),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "bestSellers": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "byCreatingAccountYouAgree": MessageLookupByLibrary.simpleMessage(
@@ -49,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cardNumberValidationFailure": MessageLookupByLibrary.simpleMessage(
             "فشل في التحقق من رقم البطاقة:"),
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
+        "cartProductsCount": m0,
         "cashOnDelivery":
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "changePassword":
@@ -98,7 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "خطأ في التحقق من البريد الإلكتروني:"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
-        "enterCodeSentToEmail": m0,
+        "enterCodeSentToEmail": m1,
         "enterEmail":
             MessageLookupByLibrary.simpleMessage("أدخل البريد الإلكتروني"),
         "error": MessageLookupByLibrary.simpleMessage("خطأ"),
@@ -216,6 +221,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "خطأ في التحقق من كلمة المرور:"),
         "passwordsDontMatchFunny": MessageLookupByLibrary.simpleMessage(
             "كلمتا السر غير متطبقتان يا معلم\nحاول تدخل 2 متطابقين كده بتكلم بجد..."),
+        "pay": MessageLookupByLibrary.simpleMessage("الدفع"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("طريقة الدفع"),
         "paymentMethod2": MessageLookupByLibrary.simpleMessage("وسيلة الدفع"),

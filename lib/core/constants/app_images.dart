@@ -42,7 +42,8 @@ class _Icons
   final String searchGreen = 'assets/icons/Home/Search_Green.png';
   final String filterGreyPNG = 'assets/icons/Home/Filter_Grey.png';
   // [Most Sold]
-  final String hartBlack = 'assets/icons/Home/Hart_Black.svg';
+  final String hartBlackEmptyWhite = 'assets/icons/Home/Hart_Black.svg';
+  final String hartGreyEmptyDarkTheme = 'assets/icons/Home/Heart_Empty_DarkTheme.svg';
   final String addGreen = 'assets/icons/Home/Add_Green.svg';
   final String crossBlack = 'assets/icons/Home/Cross_Black.svg';
   final String crossWhite = 'assets/icons/Home/Cross_White.svg';
@@ -109,7 +110,7 @@ class _Icons
 
   //[Favourit]
   final String hartFilledPNG = 'assets/icons/Favourit/Hart_Filled_Red.png';
-  final String hartFilled = 'assets/icons/Favourit/Hart_Filled_Red.svg';
+  final String hartRedWhiteTheme = 'assets/icons/Favourit/Hart_Filled_Red.svg';
 
   ///[Nav Bar]
   final String home = 'assets/icons/NavBar/Home_active.svg';

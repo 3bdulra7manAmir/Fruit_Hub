@@ -1,5 +1,5 @@
 import '../../../config/i18n/generated/l10n.dart';
-import '../../extensions/string.dart';
+import '../../extensions/validation.dart';
 
 
 abstract class AppValidation
