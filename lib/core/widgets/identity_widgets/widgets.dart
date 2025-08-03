@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../constants/app_images.dart';
 import '../../extensions/theme.dart';
 
-abstract class WidgetFilpper
+abstract class WidgetManager
 {
-  WidgetFilpper._();
+  WidgetManager._();
 
   // Menu Options Arrow Directions for Localization...
   static String menuOptions(BuildContext context)
@@ -25,7 +25,7 @@ abstract class WidgetFilpper
     );
   }
   
-  // Menu Options Arrow Directions for Localization...
+  // Cart or Product Add Arrow Cross Color for theming...
   static String crossColor(BuildContext context)
   {
     return AppAssets.icons.crossWhite.darkOrLight(context, 

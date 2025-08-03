@@ -8,6 +8,7 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/widgets/identity_widgets/widgets.dart';
 import '../../../../03_home/presentation/widget/fruit_grid_card/add_button.dart';
 
 class FruitNeededQuantityWidget extends StatelessWidget
@@ -41,7 +42,9 @@ class FruitQuantityChanger extends StatelessWidget
       [
         GestureDetector(
           onTap: () {log('Add has been Pressed...');},
-          child: const FruitAddButtonWidget(),
+          child: FruitAddButtonWidget(
+            child: SvgPicture.asset(WidgetManager.crossColor(context), fit: BoxFit.scaleDown,),
+          ),
         ),
 
         Sizes.s16.horizontalSpace,
@@ -50,7 +53,10 @@ class FruitQuantityChanger extends StatelessWidget
         Sizes.s16.horizontalSpace,
         GestureDetector(
           onTap: () {log('Subtract has been Pressed...');},
-          child: SvgPicture.asset(AppAssets.icons.subtract),
+          child: FruitAddButtonWidget(
+            color: AppColors.color.kWhite002,
+            child: SvgPicture.asset(AppAssets.icons.subtract),
+          ),
         ),
       ],
     );

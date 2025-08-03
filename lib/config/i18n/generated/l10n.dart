@@ -910,26 +910,6 @@ class S {
     );
   }
 
-  /// ` خصومات`
-  String get discount {
-    return Intl.message(
-      ' خصومات',
-      name: 'discount',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `علي اسعار الفواكه بمناسبه العيد`
-  String get fruitDiscount {
-    return Intl.message(
-      'علي اسعار الفواكه بمناسبه العيد',
-      name: 'fruitDiscount',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `تصفيه`
   String get clearance {
     return Intl.message(

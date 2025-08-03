@@ -8,7 +8,7 @@ import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_margins.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
-import '../../../../core/widgets/appbar/user_appbar/widgets/notifications_bill.dart';
+import '../../../../core/widgets/appbar/notifications_bill.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../03_home/presentation/widget/search_bar/search_bar_body.dart';
 import '../widget/if_no_results_body.dart';

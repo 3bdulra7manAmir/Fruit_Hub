@@ -53,7 +53,7 @@ class CustomButton extends ConsumerWidget
         ),
         onPressed: onPressed,
         onLongPress: onLongPress,
-        child: Text(text, style: textStyle ?? AppStyles.bold(),),
+        child: Text(text, style: textStyle ?? AppStyles.bold(fontColor: AppColors.color.kWhite003),),
       ),
     );
   }

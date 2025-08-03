@@ -1,12 +1,13 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../constants/app_sizes.dart';
 import '../../../extensions/margin.dart';
-import 'widgets/notifications_bill.dart';
+import '../notifications_bill.dart';
 import 'widgets/user_img.dart';
 import 'widgets/user_name.dart';
 
@@ -29,7 +30,18 @@ class UserAppBar extends StatelessWidget implements PreferredSizeWidget
             onTap: ()
             {
               log('UserImg has been Pressed...');
-              
+              WidgetsBinding.instance.addPostFrameCallback((_)
+              {
+                final shell = StatefulNavigationShell.maybeOf(context);
+                if (shell != null)
+                {
+                  shell.goBranch(3, initialLocation: true);
+                }
+                else
+                {
+                  log('NavigationShell is NULL');
+                }
+              });
             },
             child: const UserImgWidget()
           ),

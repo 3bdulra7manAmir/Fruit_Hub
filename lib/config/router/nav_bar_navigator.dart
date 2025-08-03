@@ -1,17 +1,16 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../config/i18n/generated/l10n.dart';
 import '../../../config/theme/color_manager/colors.dart';
 import '../../core/constants/app_images.dart';
+import '../../core/constants/app_styles.dart';
 import '../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../core/widgets/appbar/user_appbar/user_appbar_body.dart';
 import '../../core/widgets/navbar/nav_bar_model.dart';
 import '../../core/widgets/navbar/nav_bar_widget.dart';
-import '../i18n/localization/localization_controller.dart';
 
 
 
@@ -59,18 +58,13 @@ class MainScaffold extends StatelessWidget
     return Scaffold(
       appBar: _buildAppBar(currentIndex),
       body: navigationShell,
-      bottomNavigationBar: Consumer(
-        builder: (context, ref, _)
-        {
-          final here = ref.watch(localizationProvider);
-          log(here.toString());
-          return CustomNavBar(
-            currentIndex: currentIndex,
-            items: items,
-            onTap: _goBranch,
-          );
-        } 
-      ),
+      bottomNavigationBar: CustomNavBar(
+        itemPadding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 16.w),
+        textStyle: AppStyles.light(fontColor: AppColors.color.kGreen001),
+        currentIndex: currentIndex,
+        items: items,
+        onTap: _goBranch,
+      )
     );
   }
 

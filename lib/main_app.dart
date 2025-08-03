@@ -18,14 +18,13 @@ class ECommerceApp extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     return DevicePreview(
-      //enabled: false,
+      enabled: false,
       builder: (context) => ScreenUtilInit(
         designSize: const Size(375, 812),
           builder: (context, child) => MaterialApp.router(
           routerConfig: AppRouter.router,
           
-          localizationsDelegates:
-          const
+          localizationsDelegates: const
           [
             S.delegate,
             GlobalMaterialLocalizations.delegate,

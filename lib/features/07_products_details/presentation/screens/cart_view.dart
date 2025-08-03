@@ -22,7 +22,10 @@ class Cart extends StatelessWidget
           const CartTitleWidget(),
           Sizes.s24.verticalSpace,
           const CartItemsListWidget(),
-          Sizes.s16.verticalSpace,
+          if (1.sw <= 427 && 1.sh <= 952)...
+          [Sizes.s125.verticalSpace,]
+          else...
+          [Sizes.s43.horizontalSpace,],
           const CartPayButtonWidget(),
           Sizes.s16.verticalSpace,
         ],

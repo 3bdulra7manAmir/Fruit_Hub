@@ -39,7 +39,7 @@ class NewPasswordButtonWidget extends StatelessWidget
           {
             passwordController.clear();
             password2Controller.clear();
-            CustomSnackBar.show(context, S.current.passwordsDontMatchFunny);
+            CustomSnackBar().show(context, S.current.passwordsDontMatchFunny);
           }
         }
       },  

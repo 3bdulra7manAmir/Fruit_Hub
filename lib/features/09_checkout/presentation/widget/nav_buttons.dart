@@ -30,7 +30,7 @@ class CheckOutNavButtonsWidget extends ConsumerWidget
             onPressed: controller.currentStep < 3
             ? controller.nextStep : ()
             {
-              CustomSnackBar.show(context, S.current.stepsCompleted);
+              CustomSnackBar().show(context, S.current.stepsCompleted);
               Future.delayed(const Duration(seconds: 3), () => AppRouter.router.pushNamed(AppRoutes.paymentSuccess));
             } 
           ),

@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/extensions/align.dart';
 import '../../../../core/widgets/column.dart';
@@ -48,7 +50,7 @@ class _PaymentSuccessState extends State<PaymentSuccess>
           onTap: ()
           {
             log('Route to the main Screen...');
-            //AppRouter
+            AppRouter.router.goNamed(AppRoutes.home);
           },
           child: const MainPageTextWidget()
         ),

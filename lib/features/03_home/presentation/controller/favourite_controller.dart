@@ -9,8 +9,7 @@ import '../../../../../core/constants/app_images.dart';
 part 'favourite_controller.g.dart';
 
 @riverpod
-class FavouriteImg extends _$FavouriteImg
-{
+class FavouriteImg extends _$FavouriteImg {
   @override
   bool build()
   {
@@ -27,8 +26,7 @@ class FavouriteImg extends _$FavouriteImg
 }
 
 @riverpod
-String favouriteIcon(Ref ref)
-{
+String favouriteIcon(Ref ref) {
   final isFavourite = ref.watch(favouriteImgProvider);
   final themeMode = ref.watch(themeProvider);
   final isDark = themeMode == ThemeMode.dark;

@@ -12,21 +12,24 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/utils/toggle.dart';
 import '../../../../../core/widgets/identity_widgets/widgets.dart';
 import '../../../../../core/widgets/toggle_button.dart';
 import '../../controller/profile_menu/language_informer.dart';
 import '../../controller/profile_menu/notification_controller.dart';
 import '../../controller/profile_menu/theme_informer.dart';
 
+
 class ProfileOptions extends StatelessWidget
 {
   const ProfileOptions({
-  super.key, 
-  this.onTap, 
-  required this.leading, 
-  this.isArrow = true,
-  this.caseWidget,
-  required this.title});
+    super.key,
+    this.onTap,
+    required this.leading,
+    this.isArrow = true,
+    this.caseWidget,
+    required this.title,
+  });
 
   final void Function()? onTap;
   final String leading;
@@ -37,14 +40,13 @@ class ProfileOptions extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    
     return ListTile(
       contentPadding: EdgeInsets.zero,
       onTap: onTap,
       leading: SvgPicture.asset(leading),
-      trailing: isArrow ? SvgPicture.asset(WidgetFilpper.menuOptions(context)) : caseWidget,
+      trailing: isArrow ? SvgPicture.asset(WidgetManager.menuOptions(context)) : caseWidget,
       title: Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
-      shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016,)),
+      shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016)),
     );
   }
 }
@@ -52,20 +54,18 @@ class ProfileOptions extends StatelessWidget
 
 class OptionsMenuWidget extends StatelessWidget
 {
-  const OptionsMenuWidget({super.key,});
+  const OptionsMenuWidget({super.key});
 
   @override
   Widget build(BuildContext context)
   {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children:
-      [
+      children: [
         ProfileOptions(
           leading: AppAssets.icons.userGreen,
           title: S.current.profile,
-          onTap: ()
-          {
+          onTap: () {
             log('Profile has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.personalInfo);
           },
@@ -73,8 +73,7 @@ class OptionsMenuWidget extends StatelessWidget
         ProfileOptions(
           leading: AppAssets.icons.boxGreen,
           title: S.current.myOrders,
-          onTap: ()
-          {
+          onTap: () {
             log('Orders has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.ordersHistory);
           },
@@ -82,8 +81,7 @@ class OptionsMenuWidget extends StatelessWidget
         ProfileOptions(
           leading: AppAssets.icons.walletGreen,
           title: S.current.payments,
-          onTap: ()
-          {
+          onTap: () {
             log('Payments has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.paymentMethods);
           },
@@ -91,8 +89,7 @@ class OptionsMenuWidget extends StatelessWidget
         ProfileOptions(
           leading: AppAssets.icons.hartGreen,
           title: S.current.favorites,
-          onTap: ()
-          {
+          onTap: () {
             log('Favourit has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.favourit);
           },
@@ -101,7 +98,9 @@ class OptionsMenuWidget extends StatelessWidget
           leading: AppAssets.icons.billGreen,
           title: S.current.notifications,
           isArrow: false,
-          caseWidget: SwitchButtonWidget(provider: toggleSwitchNotificationsProvider),
+          caseWidget: SwitchButtonWidget(
+            provider: toggleSwitchNotificationsProvider,
+          ),
           onTap: () => log('Notifications has been Pressed...'),
         ),
         Consumer(
@@ -109,26 +108,34 @@ class OptionsMenuWidget extends StatelessWidget
             leading: AppAssets.icons.languageGreen,
             title: S.current.language,
             isArrow: false,
-            onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
+            onTap: () =>
+                ref.read(languageInformerProvider.notifier).toggleLanguage(),
             caseWidget: Row(
               mainAxisSize: MainAxisSize.min,
-              children:
-              [
-                Text(S.current.arabic, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
+              children: [
+                Text(
+                  S.current.arabic,
+                  style: AppStyles.extraLight(
+                    fontWeight: AppFontWeights.regularWeight,
+                    fontColor: AppColors.color.kBlack001,
+                  ),
+                ),
                 Sizes.s2.horizontalSpace,
-                SvgPicture.asset(WidgetFilpper.menuOptions(context)),
+                SvgPicture.asset(WidgetManager.menuOptions(context)),
               ],
             ),
           ),
         ),
-        ProfileOptions(
-          leading: AppAssets.icons.magicGreen,
-          isArrow: false,
-          caseWidget: SwitchButtonWidget(provider: themeInformerProvider,),
-          title: S.current.theme,
-          onTap: () {log('Theme has been Pressed...');},
+        Consumer(
+          builder: (context, ref, child) => ProfileOptions(
+            leading: AppAssets.icons.magicGreen,
+            isArrow: false,
+            caseWidget: SwitchButtonWidget(provider: themeInformerProvider),
+            title: S.current.theme,
+            onTap: () => (ref.read(themeInformerProvider.notifier) as ToggleSwitchBase).toggle(),
+          ),
         ),
-      ]
+      ],
     );
   }
 }

@@ -94,7 +94,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Delivery Address"),
         "didForgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
-        "discount": MessageLookupByLibrary.simpleMessage("Discount "),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "earlier": MessageLookupByLibrary.simpleMessage("Earlier"),
@@ -121,8 +120,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "Floor number, apartment number.."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password"),
-        "fruitDiscount": MessageLookupByLibrary.simpleMessage(
-            "Discount on fruit prices for Eid"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full name"),
         "fullNameIsRequired":
             MessageLookupByLibrary.simpleMessage("Full name is required."),

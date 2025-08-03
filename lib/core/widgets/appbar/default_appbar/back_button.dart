@@ -14,11 +14,11 @@ class BackButtonWidget extends StatelessWidget
       return Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: AppColors.color.kWhite001,
+          color: AppColors.color.kWhite004,
           shape: BoxShape.circle,
           border: Border.all(color: AppColors.color.kGrey014,),
         ),
-        child: SvgPicture.asset(WidgetFilpper.appBarBack(context)),
+        child: SvgPicture.asset(WidgetManager.appBarBack(context)),
       );
     }
   }

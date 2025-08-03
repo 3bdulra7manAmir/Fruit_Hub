@@ -5,6 +5,7 @@ import '../../../config/theme/color_manager/colors.dart';
 import '../../constants/app_borders.dart';
 import '../../constants/app_styles.dart';
 
+
 class NavBarItemWidget extends StatelessWidget
 {
   const NavBarItemWidget({
@@ -63,20 +64,20 @@ class NavBarItemWidget extends StatelessWidget
             highlightColor: Colors.transparent,
             child: Stack(
               clipBehavior: Clip.none,
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.centerRight,
               children:
               [
                 if (isSelected && title != null)
                   Container(
                     height: 40.h,
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(left: 40.r * value, right: 12.r),
+                    padding: EdgeInsetsDirectional.only(end: 12.w, start: 40.w), //left: 40.r * value, right: 12.r
                     decoration: BoxDecoration(
                       color: activeBackgroundColor,
                       borderRadius: AppRadiuses.circular.xMedium,
                     ),
-                    child: Text(title!, style: AppStyles.light(fontColor: AppColors.color.kGreen001),),
-                  ),
+                  child: Text(title!, style: AppStyles.light(fontColor: AppColors.color.kGreen001),),
+                ),
                 Container(
                   height: 60.h,
                   padding: EdgeInsets.all(10.r),

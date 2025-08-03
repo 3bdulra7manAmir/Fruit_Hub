@@ -92,7 +92,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
         "didForgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
-        "discount": MessageLookupByLibrary.simpleMessage(" خصومات"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "earlier": MessageLookupByLibrary.simpleMessage("في وقت سابق"),
@@ -120,8 +119,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("رقم الطابق , رقم الشقه .."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
-        "fruitDiscount": MessageLookupByLibrary.simpleMessage(
-            "علي اسعار الفواكه بمناسبه العيد"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "fullNameIsRequired":
             MessageLookupByLibrary.simpleMessage("الاسم الكامل مطلوب."),

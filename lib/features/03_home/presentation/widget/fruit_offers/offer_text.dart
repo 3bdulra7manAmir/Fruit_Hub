@@ -59,7 +59,7 @@ class FruitCardWidget extends StatelessWidget
         Row(
           children:
           [
-            Text(S.current.discount, style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
+            Text('خصومات', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
             Text(' ', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
             Text('25%', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
           ],

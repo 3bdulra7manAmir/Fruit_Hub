@@ -21,6 +21,7 @@ class CartCardWidget extends StatelessWidget
   {
     return Card(
       shape: Border.all(color: AppColors.color.kGrey014),
+      //color: ,
       child: Row(
         children:
         [
@@ -37,7 +38,7 @@ class CartCardWidget extends StatelessWidget
           const Spacer(),
           const CartItemPriceWidget(),
         ],
-      ).paddingSymmetric(horizontal: 16.w),
+      ).paddingSymmetric(horizontal: 16.w, vertical: 5.h),
     );
   }
 }

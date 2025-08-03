@@ -25,7 +25,6 @@ class SearchBarWidget extends StatelessWidget
       controller: controller,
       suffixIcon: const FilterIconWidget(),
       prefixIcon: const SearchIconWidget(),
-      fillColor: AppColors.color.kWhite001,
       hintText: S.current.searchFor,
       hintStyle: AppStyles.extraLight(
         fontColor: AppColors.color.kGrey002,

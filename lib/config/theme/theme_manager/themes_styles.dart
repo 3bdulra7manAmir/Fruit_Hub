@@ -89,18 +89,18 @@ abstract class DarkThemeStyles
   static InputDecorationTheme get inputBorder => InputDecorationTheme(
     filled: true,
     fillColor: AppColors.color.kGrey004,
-    border: borderLightStyle(),
-    enabledBorder: borderLightStyle(),
-    disabledBorder: borderLightStyle(),
-    errorBorder: borderLightStyle(),
-    focusedBorder: borderLightStyle(),
-    focusedErrorBorder: borderLightStyle(),
+    border: borderDarkStyle(),
+    enabledBorder: borderDarkStyle(),
+    disabledBorder: borderDarkStyle(),
+    errorBorder: borderDarkStyle(),
+    focusedBorder: borderDarkStyle(),
+    focusedErrorBorder: borderDarkStyle(),
   );
 
-  static OutlineInputBorder borderLightStyle()
+  static OutlineInputBorder borderDarkStyle()
   {
     return OutlineInputBorder(
-      borderSide: BorderSide(color: AppColors.color.kGrey003), 
+      //borderSide: BorderSide(color: AppColors.color.kGrey003), 
       borderRadius: AppRadiuses.circular.xXXXXSmall,
     );
   }
