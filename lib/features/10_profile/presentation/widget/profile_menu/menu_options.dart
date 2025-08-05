@@ -44,7 +44,7 @@ class ProfileOptions extends StatelessWidget
       contentPadding: EdgeInsets.zero,
       onTap: onTap,
       leading: SvgPicture.asset(leading),
-      trailing: isArrow ? SvgPicture.asset(WidgetManager.menuOptions(context)) : caseWidget,
+      trailing: isArrow ? SvgPicture.asset(WidgetManager.menuOptions(context), colorFilter: ColorFilter.mode(AppColors.color.kBlack001, BlendMode.srcIn),) : caseWidget,
       title: Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
       shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016)),
     );
@@ -108,20 +108,14 @@ class OptionsMenuWidget extends StatelessWidget
             leading: AppAssets.icons.languageGreen,
             title: S.current.language,
             isArrow: false,
-            onTap: () =>
-                ref.read(languageInformerProvider.notifier).toggleLanguage(),
+            onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
             caseWidget: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  S.current.arabic,
-                  style: AppStyles.extraLight(
-                    fontWeight: AppFontWeights.regularWeight,
-                    fontColor: AppColors.color.kBlack001,
-                  ),
-                ),
+                Text(S.current.arabic, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight,
+                    fontColor: AppColors.color.kBlack001,),),
                 Sizes.s2.horizontalSpace,
-                SvgPicture.asset(WidgetManager.menuOptions(context)),
+                SvgPicture.asset(WidgetManager.menuOptions(context), colorFilter: ColorFilter.mode(AppColors.color.kBlack001, BlendMode.srcIn),),
               ],
             ),
           ),

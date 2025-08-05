@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../config/i18n/generated/l10n.dart';
@@ -13,10 +12,6 @@ class MarkAllAsReadWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return GestureDetector(
-      onTap: ()
-      {log('Remove All Green Color Or Remove From List did not decide Know Yet...');},
-      child: Text(S.current.markAllRead, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),)
-    );
+    return Text(S.current.markAllRead, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),);
   }
 }

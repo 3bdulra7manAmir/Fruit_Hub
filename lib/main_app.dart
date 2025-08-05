@@ -74,8 +74,7 @@ class MaterialAppWidget extends ConsumerWidget
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       
-      localizationsDelegates: const
-      [
+      localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

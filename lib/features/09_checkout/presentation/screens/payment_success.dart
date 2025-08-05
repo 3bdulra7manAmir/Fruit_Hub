@@ -48,7 +48,7 @@ class PaymentSuccess extends StatelessWidget
             onPressed: ()
             {
               log('Follow Order has been pressed...');
-              AppRouter.router.pushReplacementNamed(AppRoutes.trackOrder);
+              AppRouter.router.pushNamed(AppRoutes.trackOrder);
             },
           ).align(Alignment.bottomCenter),
           Sizes.s16.verticalSpace,

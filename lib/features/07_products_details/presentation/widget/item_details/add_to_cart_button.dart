@@ -18,7 +18,7 @@ class AddToCartButtonWidget extends StatelessWidget
       onPressed: ()
       {
         log('Add to Cart has been Pressed...');
-        AppRouter.router.pushNamed(AppRoutes.cart);
+        AppRouter.router.goNamed(AppRoutes.cart);
       },
     );
   }

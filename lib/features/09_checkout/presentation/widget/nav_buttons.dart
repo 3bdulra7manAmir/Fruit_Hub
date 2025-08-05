@@ -26,7 +26,7 @@ class CheckOutNavButtonsWidget extends ConsumerWidget
       ? controller.nextStep : ()
       {
         CustomSnackBar().show(context, S.current.stepsCompleted);
-        Future.delayed(const Duration(seconds: 2), () => AppRouter.router.pushReplacementNamed(AppRoutes.paymentSuccess));
+        Future.delayed(const Duration(seconds: 2), () => AppRouter.router.goNamed(AppRoutes.paymentSuccess));
       } 
     );
   }

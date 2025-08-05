@@ -1,11 +1,11 @@
 import 'dart:developer';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/widgets/appbar/default_appbar/back_button.dart';
 import '../../../../../core/widgets/paint_clipper.dart';
 import '../../../../01_onboarding/presentation/widget/onboard_welcome/clipped_background.dart';
 
@@ -27,10 +27,13 @@ class FruitItemWidget extends StatelessWidget
           color: AppColors.color.kGrey008,
         ),
         Positioned(
-          top: 32.h, right: 16.w,
+          top: 30.h, right: 16.w,
           child: GestureDetector(
             onTap: backButtonOnTap,
-            child: SvgPicture.asset(AppAssets.icons.rightBlackArrow),
+            child: SizedBox(
+              width: 44.w, height: 44.h,
+              child: const BackButtonWidget()
+            ),
           ),
         ),
         Image.asset(AppAssets.imgs.watermelonV2,),
