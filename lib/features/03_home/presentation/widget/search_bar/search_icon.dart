@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,10 +10,6 @@ class SearchIconWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return GestureDetector(
-      onTap: ()
-      {log('Search Settings has been Pressed...');},
-      child: Image.asset(AppAssets.icons.searchGreen, width: 20.w, height: 20.h,)
-    );
+    return Image.asset(AppAssets.icons.searchGreen, width: 20.w, height: 20.h,);
   }
 }

@@ -125,7 +125,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.filteredProducts,
         name: AppRoutes.filteredProducts,
-        builder: (_, _) => const FilteredProducts(),
+        builder: (_, _) => FilteredProducts(),
       ),
       ///[ Item_Details Feature ]
       GoRoute(
@@ -224,7 +224,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.home,
                 name: AppRoutes.home,
-                builder: (_, __) => const Home(),
+                builder: (_, __) => Home(),
               ),
             ],
           ),
@@ -236,7 +236,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.products,
                 name: AppRoutes.products,
-                builder: (_, __) => const Products(),
+                builder: (_, __) => Products(),
               ),
             ],
           ),

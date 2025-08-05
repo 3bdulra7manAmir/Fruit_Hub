@@ -14,8 +14,9 @@ import '../widget/search_bar/search_bar_body.dart';
 
 class Home extends StatelessWidget
 {
-  const Home({super.key});
+  Home({super.key});
   
+  final TextEditingController homeSearchController = TextEditingController();   
 
   @override
   Widget build(BuildContext context)
@@ -25,6 +26,7 @@ class Home extends StatelessWidget
       [
         Sizes.s16.verticalSpace,
         SearchBarWidget(
+          controller: homeSearchController,
           onSubmitted: (value)
           {
             log('Search Field Value is => $value');

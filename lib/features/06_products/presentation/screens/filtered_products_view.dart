@@ -14,7 +14,9 @@ import '../widget/our_products.dart';
 
 class FilteredProducts extends StatelessWidget
 {
-  const FilteredProducts({super.key});
+  FilteredProducts({super.key});
+
+  final TextEditingController filterController = TextEditingController(); 
 
   @override
   Widget build(BuildContext context)
@@ -25,7 +27,10 @@ class FilteredProducts extends StatelessWidget
         children:
         [
           Sizes.s16.verticalSpace,
-          SearchBarWidget(onSubmitted: (value){log(value);}),
+          SearchBarWidget(
+            controller: filterController,
+            onSubmitted: (value){log(value);}
+          ),
           Sizes.s16.verticalSpace,
           const FilteredResultsTitleWidget(),
           Sizes.s16.verticalSpace,
