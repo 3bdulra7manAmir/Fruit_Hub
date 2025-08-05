@@ -104,7 +104,7 @@ class OptionsMenuWidget extends StatelessWidget
           onTap: () => log('Notifications has been Pressed...'),
         ),
         Consumer(
-          builder: (context, ref, child) => ProfileOptions(
+          builder: (_, ref, _) => ProfileOptions(
             leading: AppAssets.icons.languageGreen,
             title: S.current.language,
             isArrow: false,
@@ -127,7 +127,7 @@ class OptionsMenuWidget extends StatelessWidget
           ),
         ),
         Consumer(
-          builder: (context, ref, child) => ProfileOptions(
+          builder: (_, ref, _) => ProfileOptions(
             leading: AppAssets.icons.magicGreen,
             isArrow: false,
             caseWidget: SwitchButtonWidget(provider: themeInformerProvider),

@@ -2,6 +2,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../core/extensions/rebuild.dart';
+import '../../router/app_router.dart';
 import '../color_manager/colors.dart';
 
 part 'theme_controller.g.dart';
@@ -21,10 +23,12 @@ class Theme extends _$Theme
     if (state == ThemeMode.light)
     {
       setDark();
+      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
     }
     else
     {
       setLight();
+      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
     }
   }
 

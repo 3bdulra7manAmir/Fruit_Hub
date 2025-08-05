@@ -11,6 +11,7 @@ import '../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../core/widgets/appbar/user_appbar/user_appbar_body.dart';
 import '../../core/widgets/navbar/nav_bar_model.dart';
 import '../../core/widgets/navbar/nav_bar_widget.dart';
+import '../../core/widgets/popers/will_pop_scope.dart';
 
 
 
@@ -57,7 +58,7 @@ class MainScaffold extends StatelessWidget
     final currentIndex = navigationShell.currentIndex;
     return Scaffold(
       appBar: _buildAppBar(currentIndex),
-      body: navigationShell,
+      body: PopScopeWidget(child: navigationShell),
       bottomNavigationBar: CustomNavBar(
         itemPadding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 16.w),
         textStyle: AppStyles.light(fontColor: AppColors.color.kGreen001),

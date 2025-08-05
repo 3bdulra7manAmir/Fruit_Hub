@@ -40,7 +40,8 @@ import '../../../../../core/constants/app_styles.dart';
 // }
 
 
-class PriceSliderWidget extends StatefulWidget {
+class PriceSliderWidget extends StatefulWidget
+{
   const PriceSliderWidget({super.key});
 
   @override
@@ -58,7 +59,6 @@ class _PriceSliderWidgetState extends State<PriceSliderWidget>
         showValueIndicator: ShowValueIndicator.always,
         valueIndicatorTextStyle: AppStyles.extraLight(fontColor: AppColors.color.kGreen001),
         tickMarkShape: SliderTickMarkShape.noTickMark,
-        
       ),
       child: RangeSlider(
         values: _currentRangeValues,

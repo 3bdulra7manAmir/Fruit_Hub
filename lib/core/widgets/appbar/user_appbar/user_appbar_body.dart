@@ -1,7 +1,6 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
@@ -27,22 +26,7 @@ class UserAppBar extends StatelessWidget implements PreferredSizeWidget
         children:
         [
           GestureDetector(
-            onTap: ()
-            {
-              log('UserImg has been Pressed...');
-              WidgetsBinding.instance.addPostFrameCallback((_)
-              {
-                final shell = StatefulNavigationShell.maybeOf(context);
-                if (shell != null)
-                {
-                  shell.goBranch(3, initialLocation: true);
-                }
-                else
-                {
-                  log('NavigationShell is NULL');
-                }
-              });
-            },
+            onTap: () => AppRouter.router.goNamed(AppRoutes.profile),
             child: const UserImgWidget()
           ),
           Sizes.s11.horizontalSpace,

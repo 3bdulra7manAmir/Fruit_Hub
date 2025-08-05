@@ -35,16 +35,14 @@ class LanguageInformer extends _$LanguageInformer
     if (isEnglish)
     {
       //log("state is: $state → setArabic()");
-      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
-      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
       setArabic();
+      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
     }
     else
     {
       //log("state is: $state → setEnglish()");
-      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
-      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
       setEnglish();
+      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
     }
   }
 }

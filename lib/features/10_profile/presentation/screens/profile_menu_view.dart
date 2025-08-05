@@ -1,6 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/profile_menu/general_text.dart';
@@ -36,7 +40,14 @@ class Profile extends StatelessWidget
           ],
         ),
         Sizes.s16.verticalSpace,
-        const LogOutWidget(),
+        GestureDetector(
+          onTap: ()
+          {
+            log('Logout has been Pressed...');
+            AppRouter.router.pushReplacementNamed(AppRoutes.login);
+          },
+          child: const LogOutWidget()
+        ),
         Sizes.s16.verticalSpace,
       ],
     );

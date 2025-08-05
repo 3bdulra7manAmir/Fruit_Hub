@@ -15,12 +15,6 @@ class Localization extends _$Localization
     return const Locale('ar'); // default is Arabic
   }
 
-  void toggle()
-  {
-    state = state.languageCode == 'ar' ? const Locale('en') : const Locale('ar');
-    log('Localization toggled to: ${state.languageCode.toUpperCase()}');
-  }
-
   void setEnglish()
   {
     state = const Locale('en');
