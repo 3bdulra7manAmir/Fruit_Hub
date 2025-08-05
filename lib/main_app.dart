@@ -10,37 +10,85 @@ import 'config/router/app_router.dart';
 import 'config/theme/theme_controller/theme_controller.dart';
 import 'config/theme/theme_manager/themes.dart';
 
-class ECommerceApp extends ConsumerWidget
+class ECommerceApp extends StatelessWidget
 {
   const ECommerceApp({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
+  Widget build(BuildContext context)
+  {
+    return const DevicePreviewWidget(
+      isEnabled: false,
+      builder: ScreenUtilWidget(
+        designSize: Size(375, 812),
+        builder: MaterialAppWidget(),
+      ),
+    );
+  }
+}
+
+
+class DevicePreviewWidget extends StatelessWidget
+{
+  const DevicePreviewWidget({super.key, required this.builder, required this.isEnabled});
+
+  final bool isEnabled;
+  final Widget builder;
+
+  @override
+  Widget build(BuildContext context)
   {
     return DevicePreview(
-      enabled: false,
-      builder: (context) => ScreenUtilInit(
-        designSize: const Size(375, 812),
-          builder: (context, child) => MaterialApp.router(
-          routerConfig: AppRouter.router,
-          
-          localizationsDelegates: const
-          [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: S.delegate.supportedLocales,
-          locale: ref.watch(localizationProvider),
+      enabled: isEnabled,
+      builder: (context) => builder,
+    );
+  }
+}
+
+
+class ScreenUtilWidget extends StatelessWidget
+{
+  const ScreenUtilWidget({super.key, required this.designSize, required this.builder});
+
+  final Size designSize;
+  final MaterialAppWidget builder;
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return ScreenUtilInit(
+      designSize: designSize,
+      builder: (context, child) => builder,
+    );
+  }
+}
+
+
+class MaterialAppWidget extends ConsumerWidget
+{
+  const MaterialAppWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref)
+  {
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       
-          theme: AppTheme.lightTheme(),
-          darkTheme: AppTheme.darkTheme(),
-          themeMode: ref.watch(themeProvider),
+      localizationsDelegates: const
+      [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+      locale: ref.watch(localizationProvider),
           
-          debugShowCheckedModeBanner: false,
-        ),
-      ),
+      theme: AppTheme.lightTheme(),
+      darkTheme: AppTheme.darkTheme(),
+      themeMode: ref.watch(themeProvider),
+      
+      debugShowCheckedModeBanner: false,
     );
   }
 }

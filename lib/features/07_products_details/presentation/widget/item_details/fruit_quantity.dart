@@ -1,5 +1,7 @@
 import 'dart:developer';
+
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -10,6 +12,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/identity_widgets/widgets.dart';
 import '../../../../03_home/presentation/widget/fruit_grid_card/add_button.dart';
+import '../../controllers/fruit_item_quantity_controller.dart';
 
 class FruitNeededQuantityWidget extends StatelessWidget
 {
@@ -30,29 +33,37 @@ class FruitNeededQuantityWidget extends StatelessWidget
 }
 
 
-class FruitQuantityChanger extends StatelessWidget
+class FruitQuantityChanger extends ConsumerWidget
 {
   const FruitQuantityChanger({super.key,});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return Row(
       children:
       [
         GestureDetector(
-          onTap: () {log('Add has been Pressed...');},
+          onTap: ()
+          {
+            log('Add has been Pressed...');
+            ref.read(fruitItemQuantityProvider.notifier).increment();
+          },
           child: FruitAddButtonWidget(
             child: SvgPicture.asset(WidgetManager.crossColor(context), fit: BoxFit.scaleDown,),
           ),
         ),
 
         Sizes.s16.horizontalSpace,
-        Text('4', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text(ref.watch(fruitItemQuantityProvider).toString(), style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
 
         Sizes.s16.horizontalSpace,
         GestureDetector(
-          onTap: () {log('Subtract has been Pressed...');},
+          onTap: ()
+          {
+            log('Subtract has been Pressed...');
+            ref.read(fruitItemQuantityProvider.notifier).decrement();
+          },
           child: FruitAddButtonWidget(
             color: AppColors.color.kWhite002,
             child: SvgPicture.asset(AppAssets.icons.subtract),

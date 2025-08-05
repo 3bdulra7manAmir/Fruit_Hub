@@ -22,7 +22,7 @@ class CheckoutShip extends ConsumerWidget
   {
     ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutShip);
     return Scaffold(
-      appBar: CustomAppBar(title: S.current.shipping),
+      appBar: CustomAppBar(title: S.current.shipping, isCartBackButton: true,),
       body: CustomSingleChild(
         children:
         [

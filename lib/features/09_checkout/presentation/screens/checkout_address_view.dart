@@ -26,7 +26,7 @@ class CheckoutAddress extends ConsumerWidget
   {
     ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutAddress);
     return Scaffold(
-      appBar: CustomAppBar(title: S.current.address),
+      appBar: CustomAppBar(title: S.current.address, isCartBackButton: true,),
       body: CustomSingleChild(
         children:
         [

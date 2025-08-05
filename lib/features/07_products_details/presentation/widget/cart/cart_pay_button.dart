@@ -17,7 +17,7 @@ class CartPayButtonWidget extends StatelessWidget
     return CustomButton(
       margin: AppMargins.symmetric.medium,
       text: '${S.current.pay} 120 ${S.current.le}',
-      onPressed: () {log('Pay has been Pressed...'); AppRouter.router.pushNamed(AppRoutes.checkoutShip,);},
+      onPressed: () {log('Pay has been Pressed...'); AppRouter.router.goNamed(AppRoutes.checkoutShip,);},
     );
   }
 }

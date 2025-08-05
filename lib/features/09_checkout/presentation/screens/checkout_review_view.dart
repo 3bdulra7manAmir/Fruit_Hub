@@ -25,7 +25,7 @@ class CheckoutReview extends ConsumerWidget
   {
     ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutReview);
     return Scaffold(
-      appBar: CustomAppBar(title: S.current.review),
+      appBar: CustomAppBar(title: S.current.review, isCartBackButton: true,),
       body: CustomSingleChild(
         children:
         [

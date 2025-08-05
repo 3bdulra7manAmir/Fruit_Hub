@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,24 +20,45 @@ class CheckOutNavButtonsWidget extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final controller = ref.watch(checkoutStepperControllerProvider);
-    return Row(
-      children:
-      [
-        if (controller.currentStep > 0)
-          Expanded(child: CustomButton(text: S.current.previous, onPressed: controller.previousStep,),),
-        Sizes.s16.horizontalSpace,
-        Expanded(
-          child: CustomButton(
-            text: controller.currentStep < 3 ? S.current.next : S.current.complete,
-            onPressed: controller.currentStep < 3
-            ? controller.nextStep : ()
-            {
-              CustomSnackBar().show(context, S.current.stepsCompleted);
-              Future.delayed(const Duration(seconds: 3), () => AppRouter.router.pushNamed(AppRoutes.paymentSuccess));
-            } 
-          ),
-        ),
-      ],
+    return CustomButton(
+      text: controller.currentStep < 3 ? S.current.next : S.current.complete,
+      onPressed: controller.currentStep < 3
+      ? controller.nextStep : ()
+      {
+        CustomSnackBar().show(context, S.current.stepsCompleted);
+        Future.delayed(const Duration(seconds: 2), () => AppRouter.router.pushReplacementNamed(AppRoutes.paymentSuccess));
+      } 
     );
   }
 }
+
+
+// class CheckOutNavButtonsWidget extends ConsumerWidget
+// {
+//   const CheckOutNavButtonsWidget({super.key});
+
+//   @override
+//   Widget build(BuildContext context, WidgetRef ref)
+//   {
+//     final controller = ref.watch(checkoutStepperControllerProvider);
+//     return Row(
+//       children:
+//       [
+//         if (controller.currentStep > 0)
+//           Expanded(child: CustomButton(text: S.current.previous, onPressed: controller.previousStep,),),
+//         Sizes.s16.horizontalSpace,
+//         Expanded(
+//           child: CustomButton(
+//             text: controller.currentStep < 3 ? S.current.next : S.current.complete,
+//             onPressed: controller.currentStep < 3
+//             ? controller.nextStep : ()
+//             {
+//               CustomSnackBar().show(context, S.current.stepsCompleted);
+//               Future.delayed(const Duration(seconds: 3), () => AppRouter.router.pushNamed(AppRoutes.paymentSuccess));
+//             } 
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }

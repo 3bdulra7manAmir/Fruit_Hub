@@ -22,9 +22,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
     this.title,
     this.actions,
     this.actionsPadding,
-
     this.isNotifications,
     this.isCustomBack,
+    this.isCartBackButton,
     this.toolbarHeight,
   });
 
@@ -33,6 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   final double? leadingWidth;
   final Widget? leading;
   final bool? isCustomBack;
+  final bool? isCartBackButton;
   final List<Widget>? actions;
   final bool? isNotifications;
   final EdgeInsetsGeometry? actionsPadding;
@@ -47,7 +48,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
       title: Text(title ?? '', style: AppStyles.extraBold()),
       automaticallyImplyLeading: false,
       leadingWidth: leadingWidth ?? 44.w,
-      leading: (isCustomBack ?? true) ? backButtonOnTap(context) : null,
+      leading: (isCustomBack ?? true) ? ((isCartBackButton ?? false) ? cartBackButton(context) : backButtonOnTap(context)) : null,
       actions: (isNotifications ?? false) ? (actions ?? [billOnTap(context)]) : null,
       actionsPadding: (isNotifications ?? false) ? (actionsPadding ?? AppMargins.directional.smallEnd) : EdgeInsets.zero,
     ).marginDirectional(start: 16.w, top: 11.h);
@@ -56,12 +57,28 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight + (toolbarHeight ?? 0));
 
-  
 }
 
   GestureDetector backButtonOnTap(BuildContext context) {
     return GestureDetector(onTap: () => leadingOnTap(context), child: const CustomAppBar().leading ?? const BackButtonWidget());
-  } 
+  }
+
+  GestureDetector cartBackButton(BuildContext context) {
+    return GestureDetector(
+      onTap: ()
+      {
+        if(AppRouter.currentRoute == AppRoutes.checkoutShip)
+        {
+          AppRouter.router.goNamed(AppRoutes.cart);
+        }
+        else
+        {
+          AppRouter.router.pop();
+        }
+      },
+      child: const BackButtonWidget(),
+    );
+  }
   
   GestureDetector billOnTap(context) => GestureDetector(onTap: () {
     log('Notifications Bill has been Pressed...');

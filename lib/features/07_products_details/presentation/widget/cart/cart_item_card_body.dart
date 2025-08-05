@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,7 +20,7 @@ class CartCardWidget extends StatelessWidget
   {
     return Card(
       shape: Border.all(color: AppColors.color.kGrey014),
-      //color: ,
+      color: AppColors.color.kWhite005,
       child: Row(
         children:
         [

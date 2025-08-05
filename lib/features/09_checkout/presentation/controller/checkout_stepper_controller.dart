@@ -52,11 +52,11 @@ class CheckoutStepperController extends _$CheckoutStepperController with ChangeN
     }
   }
 
-  void previousStep()
-  {
-    if (_currentStep > 0)
-    {
-      goToStep(_currentStep - 1);
-    }
-  }
+  // void previousStep()
+  // {
+  //   if (_currentStep > 0)
+  //   {
+  //     goToStep(_currentStep - 1);
+  //   }
+  // }
 }

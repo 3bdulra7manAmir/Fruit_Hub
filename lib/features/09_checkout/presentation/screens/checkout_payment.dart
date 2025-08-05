@@ -29,7 +29,7 @@ class CheckoutPayment extends ConsumerWidget
   {
     ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutPayment);
     return Scaffold(
-      appBar: CustomAppBar(title: S.current.payment),
+      appBar: CustomAppBar(title: S.current.payment, isCartBackButton: true,),
       body: CustomSingleChild(
         children:
         [
