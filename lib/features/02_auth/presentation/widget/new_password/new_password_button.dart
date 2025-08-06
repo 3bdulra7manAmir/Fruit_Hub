@@ -32,7 +32,7 @@ class NewPasswordButtonWidget extends StatelessWidget
           {
             log('Create Password Has been Pressed...');
             log('${passwordController.text} \t ${password2Controller.text}');
-            showSuccessDialog(context);
+            showSuccessDialog(context, S.current.passwordChangedSuccessfully);
             AppRouter.router.pushReplacementNamed(AppRoutes.login);
           }
           else

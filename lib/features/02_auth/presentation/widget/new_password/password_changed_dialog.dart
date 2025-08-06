@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -10,7 +9,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/popers/dialog.dart';
 
-void showSuccessDialog(context)
+void showSuccessDialog(context, String title)
 {
   customAppDialog(
     context: context,
@@ -33,10 +32,7 @@ void showSuccessDialog(context)
           ],
         ),
         Sizes.s29.verticalSpace,
-        Text(
-          S.current.passwordChangedSuccessfully,
-          style: AppStyles.bold(fontColor: AppColors.color.kBlack001),
-        ),
+        Text(title, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         Sizes.s50.verticalSpace,
       ],
     )

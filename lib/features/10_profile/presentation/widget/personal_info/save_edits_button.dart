@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/widgets/buttons/button.dart';
+import '../../../../02_auth/presentation/widget/new_password/password_changed_dialog.dart';
 
 class SaveEditsButtonWidget extends StatelessWidget
 {
@@ -47,6 +48,7 @@ class SaveEditsButtonWidget extends StatelessWidget
         currentPasswordController.clear();
         newPasswordController.clear();
         confirmPasswordController.clear();
+        showSuccessDialog(context, S.current.changeSuccess);
       }
     }, 
     text: S.current.saveChanges);

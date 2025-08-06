@@ -1949,6 +1949,16 @@ class S {
       args: [],
     );
   }
+
+  /// `تم التغيير بنجاح`
+  String get changeSuccess {
+    return Intl.message(
+      'تم التغيير بنجاح',
+      name: 'changeSuccess',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

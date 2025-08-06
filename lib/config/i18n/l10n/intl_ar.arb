@@ -218,5 +218,8 @@
   "cityIsRequired": "يجب إدخال اسم المدينة.",
   "cityTooShort": "يجب أن يحتوي اسم المدينة على حرفين على الأقل.",
   "cityOnlyLettersAllowed": "يجب أن يحتوي اسم المدينة على حروف فقط.",
-  "cityValidationFailure": "حدث خطأ أثناء التحقق من صحة اسم المدينة:"
+  "cityValidationFailure": "حدث خطأ أثناء التحقق من صحة اسم المدينة:",
+
+  
+  "changeSuccess": "تم التغيير بنجاح"
 }

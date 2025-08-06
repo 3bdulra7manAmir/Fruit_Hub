@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
+        "changeSuccess":
+            MessageLookupByLibrary.simpleMessage("Changed successfully"),
         "checkoutReview": MessageLookupByLibrary.simpleMessage("Review"),
         "choosePayment": MessageLookupByLibrary.simpleMessage(
             "Choose your preferred payment method:"),

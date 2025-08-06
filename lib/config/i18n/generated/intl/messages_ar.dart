@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "changeSuccess":
+            MessageLookupByLibrary.simpleMessage("تم التغيير بنجاح"),
         "checkoutReview": MessageLookupByLibrary.simpleMessage("المراجعة"),
         "choosePayment":
             MessageLookupByLibrary.simpleMessage("اختر وسيلة الدفع المناسبة:"),

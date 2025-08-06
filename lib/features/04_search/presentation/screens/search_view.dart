@@ -36,7 +36,7 @@ class Search extends StatelessWidget
             onSubmitted: (value) {log('Search Field Value is => $value');},
           ),
           //IfNoResultsBody(),
-          //IfResultsBody(),
+          const IfResultsBody(),
           //IfPreviousResultsBody(),
         ],
       ),

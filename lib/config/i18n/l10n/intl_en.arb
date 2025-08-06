@@ -219,5 +219,8 @@
   "cityIsRequired": "City name is required.",
   "cityTooShort": "City name must be at least 2 characters long.",
   "cityOnlyLettersAllowed": "City name must contain only letters.",
-  "cityValidationFailure": "An error occurred while validating the city:"
+  "cityValidationFailure": "An error occurred while validating the city:",
+
+
+  "changeSuccess": "Changed successfully"
 }
