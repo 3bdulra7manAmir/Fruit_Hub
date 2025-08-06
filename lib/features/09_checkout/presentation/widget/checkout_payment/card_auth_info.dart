@@ -9,8 +9,9 @@ import '../../../../../core/widgets/textform_field.dart';
 
 class CardAuthInfoWidget extends StatelessWidget
 {
-  const CardAuthInfoWidget({super.key, required this.expireDateController});
+  const CardAuthInfoWidget({super.key, required this.expireDateController, required this.cvvCodeController});
   final TextEditingController expireDateController;
+  final TextEditingController cvvCodeController;
 
   @override
   Widget build(BuildContext context)
@@ -20,7 +21,7 @@ class CardAuthInfoWidget extends StatelessWidget
       [
         Expanded(child: ExpireDateWidget(expireDateController: expireDateController,)),
         Sizes.s16.horizontalSpace,
-        const Expanded(child: CvvCodeWidget()),
+        Expanded(child: CvvCodeWidget(cvvCodeController: cvvCodeController,)),
       ],
     );
   }
@@ -49,9 +50,9 @@ class ExpireDateWidget extends StatelessWidget
 
 class CvvCodeWidget extends StatelessWidget
 {
-  const CvvCodeWidget({super.key});
+  const CvvCodeWidget({super.key, required this.cvvCodeController});
 
-  static final TextEditingController cvvCodeController = TextEditingController();
+  final TextEditingController cvvCodeController;
 
   @override
   Widget build(BuildContext context)

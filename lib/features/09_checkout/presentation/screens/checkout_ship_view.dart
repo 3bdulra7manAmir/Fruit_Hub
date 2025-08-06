@@ -7,7 +7,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/checkout_ship/payment_option_cards_list.dart';
-import '../widget/nav_buttons.dart';
+import '../widget/next_button.dart';
 import '../widget/payment_steps_list.dart';
 
 

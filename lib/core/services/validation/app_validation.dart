@@ -192,23 +192,22 @@ abstract class AppValidation
   }
 
   static String? addressValidation(String? value) {
-    try
+  try
     {
-      final trimmed = value?.trim() ?? '';
 
-      if (trimmed.isEmpty) {
+      if (value == null || value.trim().isEmpty) {
         return S.current.addressIsRequired;
       }
-      if (trimmed.length < 10) {
+      if (value.length < 10) {
         return S.current.addressTooShort;
       }
-      if (!ValidationExtensions.hasLetters.hasMatch(trimmed)) {
+      if (!ValidationExtensions.hasLetters.hasMatch(value)) {
         return S.current.addressMustContainLetters;
       }
-      if (!ValidationExtensions.hasNumbers.hasMatch(trimmed)) {
+      if (!ValidationExtensions.hasNumbers.hasMatch(value)) {
         return S.current.addressMustContainNumber;
       }
-      if (ValidationExtensions.isOnlySymbols.hasMatch(trimmed)) {
+      if (ValidationExtensions.isOnlySymbols.hasMatch(value)) {
         return S.current.addressOnlySymbols;
       }
 
@@ -220,6 +219,24 @@ abstract class AppValidation
     }
   }
 
-
+  static String? cityValidation(String? value) {
+  try
+    {
+      if (value == null || value.trim().isEmpty) {
+        return S.current.cityIsRequired;
+      }
+      if (value.length < 2) {
+        return S.current.cityTooShort;
+      }
+      if (!ValidationExtensions.cityNamePattern.hasMatch(value)) {
+        return S.current.cityOnlyLettersAllowed;
+      }
+      return null;
+    }
+    catch (e)
+    {
+      return '${S.current.cityValidationFailure} ${e.toString()}';
+    }
+  }
 }
 

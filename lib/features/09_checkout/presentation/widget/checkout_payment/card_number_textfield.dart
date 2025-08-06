@@ -18,7 +18,7 @@ class CardNumberWidget extends StatelessWidget
       inputFormatters: AppInputFormatters.digitsOnly,
       keyboardType: TextInputType.number,
       controller: cardNumberController,
-      validator: (value) => AppValidation.fullNameValidation(value),
+      validator: (value) => AppValidation.paymentMethodNumValidation(value),
       hintText: S.current.cardNumber,
     );
   }

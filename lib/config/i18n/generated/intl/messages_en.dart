@@ -76,6 +76,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "choosePaymentMethod":
             MessageLookupByLibrary.simpleMessage("Choose your payment method:"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
+        "cityIsRequired":
+            MessageLookupByLibrary.simpleMessage("City name is required."),
+        "cityOnlyLettersAllowed": MessageLookupByLibrary.simpleMessage(
+            "City name must contain only letters."),
+        "cityTooShort": MessageLookupByLibrary.simpleMessage(
+            "City name must be at least 2 characters long."),
+        "cityValidationFailure": MessageLookupByLibrary.simpleMessage(
+            "An error occurred while validating the city:"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Clear All"),
         "clearance": MessageLookupByLibrary.simpleMessage("Clearance"),
         "complete": MessageLookupByLibrary.simpleMessage("Complete"),

@@ -11,7 +11,7 @@ import '../widget/checkout_review/confirm_order_text.dart';
 import '../widget/checkout_review/confirm_payment.dart';
 import '../widget/checkout_review/order_summary.dart';
 import '../widget/checkout_review/order_total.dart';
-import '../widget/nav_buttons.dart';
+import '../widget/next_button.dart';
 import '../widget/payment_steps_list.dart';
 
 class CheckoutReview extends ConsumerStatefulWidget {

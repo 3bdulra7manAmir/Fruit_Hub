@@ -76,6 +76,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "choosePaymentMethod": MessageLookupByLibrary.simpleMessage(
             "أختار طريقه الدفع المناسبه :"),
         "city": MessageLookupByLibrary.simpleMessage("المدينه"),
+        "cityIsRequired":
+            MessageLookupByLibrary.simpleMessage("يجب إدخال اسم المدينة."),
+        "cityOnlyLettersAllowed": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يحتوي اسم المدينة على حروف فقط."),
+        "cityTooShort": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يحتوي اسم المدينة على حرفين على الأقل."),
+        "cityValidationFailure": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ أثناء التحقق من صحة اسم المدينة:"),
         "clearAll": MessageLookupByLibrary.simpleMessage("حذف الكل"),
         "clearance": MessageLookupByLibrary.simpleMessage("تصفيه"),
         "complete": MessageLookupByLibrary.simpleMessage("إكمال"),

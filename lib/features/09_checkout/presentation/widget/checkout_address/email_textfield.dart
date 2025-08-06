@@ -6,9 +6,9 @@ import '../../../../../core/widgets/textform_field.dart';
 
 class CheckOutEmailWidget extends StatelessWidget
 {
-  const CheckOutEmailWidget({super.key});
+  const CheckOutEmailWidget({super.key, required this.emailController});
 
-  static final TextEditingController emailController = TextEditingController();
+  final TextEditingController emailController;
 
   @override
   Widget build(BuildContext context)

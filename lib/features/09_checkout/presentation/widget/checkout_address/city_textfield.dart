@@ -6,9 +6,9 @@ import '../../../../../core/widgets/textform_field.dart';
 
 class CheckOutCityWidget extends StatelessWidget
 {
-  const CheckOutCityWidget({super.key});
+  const CheckOutCityWidget({super.key, required this.cityController});
 
-  static final TextEditingController cityController = TextEditingController();
+  final TextEditingController cityController;
 
   @override
   Widget build(BuildContext context)
@@ -16,7 +16,7 @@ class CheckOutCityWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.name,
       controller: cityController,
-      validator: (value) => AppValidation.fullNameValidation(value),
+      validator: (value) => AppValidation.cityValidation(value),
       hintText: S.current.city,
     );
   }

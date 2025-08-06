@@ -7,9 +7,9 @@ import '../../../../../core/widgets/textform_field.dart';
 
 class CheckOutFullNameWidget extends StatelessWidget
 {
-  const CheckOutFullNameWidget({super.key});
+  const CheckOutFullNameWidget({super.key, required this.fullNameController});
 
-  static final TextEditingController fullNameController = TextEditingController();
+  final TextEditingController fullNameController;
 
   @override
   Widget build(BuildContext context)

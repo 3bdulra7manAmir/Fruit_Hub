@@ -6,9 +6,9 @@ import '../../../../../core/widgets/textform_field.dart';
 
 class AppartmentFieldWidget extends StatelessWidget
 {
-  const AppartmentFieldWidget({super.key});
+  const AppartmentFieldWidget({super.key, required this.apartmentController});
 
-  static final TextEditingController apartmentController = TextEditingController();
+  final TextEditingController apartmentController;
 
   @override
   Widget build(BuildContext context)
@@ -16,7 +16,7 @@ class AppartmentFieldWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.name,
       controller: apartmentController,
-      validator: (value) => AppValidation.fullNameValidation(value),
+      validator: (value) => AppValidation.addressValidation(value),
       hintText: S.current.floorApartment,
     );
   }

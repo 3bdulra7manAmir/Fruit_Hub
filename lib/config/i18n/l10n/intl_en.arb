@@ -212,5 +212,11 @@
   "addressMustContainLetters": "Address must contain letters",
   "addressMustContainNumber": "Address must contain at least one number",
   "addressOnlySymbols": "Address cannot contain only symbols",
-  "addressValidationFailure": "Address validation failed:"
+  "addressValidationFailure": "Address validation failed:",
+
+
+  "cityIsRequired": "City name is required.",
+  "cityTooShort": "City name must be at least 2 characters long.",
+  "cityOnlyLettersAllowed": "City name must contain only letters.",
+  "cityValidationFailure": "An error occurred while validating the city:"
 }

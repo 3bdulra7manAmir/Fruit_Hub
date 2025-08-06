@@ -20,6 +20,9 @@ class AddNewPaymentCard extends StatelessWidget
   final GlobalKey<FormState> cardFormKey = GlobalKey<FormState>();
   final TextEditingController cardNumberController = TextEditingController();
   final TextEditingController expireDateController = TextEditingController();
+  final TextEditingController cvvCodeController = TextEditingController();
+  final TextEditingController ownerNameController = TextEditingController();
+  
 
   @override
   Widget build(BuildContext context)
@@ -32,11 +35,11 @@ class AddNewPaymentCard extends StatelessWidget
           children:
           [
             Sizes.s24.verticalSpace,
-            const CardOwnerNameWidget(),
+            CardOwnerNameWidget(ownerNameController: ownerNameController,),
             Sizes.s8.verticalSpace,
             CardNumberWidget(cardNumberController: cardNumberController,),
             Sizes.s8.verticalSpace,
-            CardAuthInfoWidget(expireDateController: expireDateController,),
+            CardAuthInfoWidget(expireDateController: expireDateController, cvvCodeController: cvvCodeController,),
             Sizes.s18.verticalSpace,
             const MakeCardAsDeafultWidget(),
             if (1.sw <= 427 && 1.sh <= 952)...

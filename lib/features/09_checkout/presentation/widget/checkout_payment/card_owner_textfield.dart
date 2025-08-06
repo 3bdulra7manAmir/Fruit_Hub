@@ -7,9 +7,9 @@ import '../../../../../core/widgets/textform_field.dart';
 
 class CardOwnerNameWidget extends StatelessWidget
 {
-  const CardOwnerNameWidget({super.key});
+  const CardOwnerNameWidget({super.key, required this.ownerNameController});
 
-  static final TextEditingController ownerNameController = TextEditingController();
+  final TextEditingController ownerNameController;
 
   @override
   Widget build(BuildContext context)

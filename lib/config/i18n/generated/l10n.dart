@@ -1909,6 +1909,46 @@ class S {
       args: [],
     );
   }
+
+  /// `يجب إدخال اسم المدينة.`
+  String get cityIsRequired {
+    return Intl.message(
+      'يجب إدخال اسم المدينة.',
+      name: 'cityIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `يجب أن يحتوي اسم المدينة على حرفين على الأقل.`
+  String get cityTooShort {
+    return Intl.message(
+      'يجب أن يحتوي اسم المدينة على حرفين على الأقل.',
+      name: 'cityTooShort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `يجب أن يحتوي اسم المدينة على حروف فقط.`
+  String get cityOnlyLettersAllowed {
+    return Intl.message(
+      'يجب أن يحتوي اسم المدينة على حروف فقط.',
+      name: 'cityOnlyLettersAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حدث خطأ أثناء التحقق من صحة اسم المدينة:`
+  String get cityValidationFailure {
+    return Intl.message(
+      'حدث خطأ أثناء التحقق من صحة اسم المدينة:',
+      name: 'cityValidationFailure',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
