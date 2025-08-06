@@ -27,10 +27,10 @@ class CheckOutNavButtonsWidget extends ConsumerWidget
     return CustomButton(
       text: controller.currentStep < 3 ? S.current.next : S.current.complete,
       onPressed: () {
-        if (NavigatorObserverWithTracking.currentRouteName == AppRoutes.checkoutAddress) {
+        if (NavigatorObserverWithTracking.currentRoute == AppRoutes.checkoutAddress) {
           NextButtonOps(ref).addressButtonValidation(formKey, context);
         }
-        else if(NavigatorObserverWithTracking.currentRouteName == AppRoutes.checkoutPayment)
+        else if(NavigatorObserverWithTracking.currentRoute == AppRoutes.checkoutPayment)
         {
           NextButtonOps(ref).paymentCardButtonValidation(formKey, context);
         }

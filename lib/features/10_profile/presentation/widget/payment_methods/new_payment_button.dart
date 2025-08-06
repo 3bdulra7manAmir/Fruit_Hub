@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
+import '../../../../../config/router/route_observer.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/widgets/buttons/icon_button.dart';
 
@@ -26,6 +27,10 @@ class AddNewPaymentMethodButtonWidget extends StatelessWidget
         {
           log('InValid...');
         }
+        else if(NavigatorObserverWithTracking.currentRoute == AppRoutes.addNewPaymentCard)
+        {
+          AppRouter.router.pop();
+        }
         else
         {
           log('Add new Payment Method has been Pressed');
@@ -33,6 +38,7 @@ class AddNewPaymentMethodButtonWidget extends StatelessWidget
         }
       },
       text: S.current.addPaymentMethod,
+      
       icon: SvgPicture.asset(AppAssets.icons.addWhiteV2),
     );
   }

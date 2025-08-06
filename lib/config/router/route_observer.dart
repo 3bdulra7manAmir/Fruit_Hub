@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class NavigatorObserverWithTracking extends RouteObserver<PageRoute<dynamic>>
 {
-  static String? currentRouteName;
+  static String? currentRoute;
   static String? previousRouteName;
 
   @override
@@ -12,8 +12,8 @@ class NavigatorObserverWithTracking extends RouteObserver<PageRoute<dynamic>>
 
     if (route.settings.name != null && route.settings.name!.isNotEmpty)
     {
-      previousRouteName = currentRouteName;
-      currentRouteName = route.settings.name;
+      previousRouteName = currentRoute;
+      currentRoute = route.settings.name;
     }
   }
 
@@ -22,7 +22,7 @@ class NavigatorObserverWithTracking extends RouteObserver<PageRoute<dynamic>>
     super.didPop(route, previousRoute);
 
     if (previousRoute?.settings.name != null && previousRoute!.settings.name!.isNotEmpty) {
-      currentRouteName = previousRoute.settings.name;
+      currentRoute = previousRoute.settings.name;
     }
   }
   

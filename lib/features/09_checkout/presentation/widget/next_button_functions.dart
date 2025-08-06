@@ -17,7 +17,7 @@ class NextButtonOps
       controller.onNextPressed(context);
     } else {
       log('Invalid Info');
-      controller.onNextPressed(context);
+      //controller.onNextPressed(context);
     }
   }
 
@@ -29,7 +29,7 @@ class NextButtonOps
       controller.onNextPressed(context);
     } else {
       log('Invalid Info');
-      controller.onNextPressed(context);
+      //controller.onNextPressed(context);
     }
   }
 }

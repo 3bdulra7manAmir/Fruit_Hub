@@ -90,7 +90,7 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
     log('Notifications Bill has been Pressed...');
     try
     {
-      if (NavigatorObserverWithTracking.currentRouteName == AppRoutes.notifications)
+      if (NavigatorObserverWithTracking.currentRoute == AppRoutes.notifications)
       {CustomSnackBar().show(context, S.current.alreadyInNotifications);}
       else
       {AppRouter.router.pushNamed(AppRoutes.notifications);}
