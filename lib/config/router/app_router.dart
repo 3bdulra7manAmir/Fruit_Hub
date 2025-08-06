@@ -41,11 +41,10 @@ abstract class AppRouter
 {
   AppRouter._();
   static final navigatorState = GlobalKey<NavigatorState>(debugLabel: 'root');
-  static String? currentRoute;
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
-    observers: [NavigatorObserverWithTracking(),],
+    observers: [NavigatorObserverWithTracking()],
     initialLocation: AppRoutes.splash,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:
@@ -158,7 +157,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.checkoutPayment,
         name: AppRoutes.checkoutPayment,
-        builder: (_, _) => CheckoutPayment(),
+        builder: (_, _) => const CheckoutPayment(),
       ),
       // [Checkout Payment]
       GoRoute(

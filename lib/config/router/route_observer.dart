@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
 
-import 'app_router.dart';
 
-class NavigatorObserverWithTracking extends NavigatorObserver
+class NavigatorObserverWithTracking extends RouteObserver<PageRoute<dynamic>>
 {
+  static String? currentRouteName;
+  static String? previousRouteName;
+
   @override
-  void didPush(Route route, Route? previousRoute)
-  {
+  void didPush(Route route, Route? previousRoute) {
     super.didPush(route, previousRoute);
-    _setCurrentRoute(route);
-  }
 
-  @override
-  void didPop(Route route, Route? previousRoute)
-  {
-    super.didPop(route, previousRoute);
-    _setCurrentRoute(previousRoute);
-  }
-
-  void _setCurrentRoute(Route? route)
-  {
-    if (route?.settings.name != null)
+    if (route.settings.name != null && route.settings.name!.isNotEmpty)
     {
-      AppRouter.currentRoute = route!.settings.name;
+      previousRouteName = currentRouteName;
+      currentRouteName = route.settings.name;
     }
   }
+
+  @override
+  void didPop(Route route, Route? previousRoute) {
+    super.didPop(route, previousRoute);
+
+    if (previousRoute?.settings.name != null && previousRoute!.settings.name!.isNotEmpty) {
+      currentRouteName = previousRoute.settings.name;
+    }
+  }
+  
 }

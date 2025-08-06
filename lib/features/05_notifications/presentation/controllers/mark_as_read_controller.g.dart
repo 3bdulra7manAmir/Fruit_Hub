@@ -6,7 +6,7 @@ part of 'mark_as_read_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$markAsReadHash() => r'4a0f64eaf8fb85c8b27e83af6899dd2676b02165';
+String _$markAsReadHash() => r'13d2ca87623ac88fc3619df245d15a00ed2979f0';
 
 /// See also [MarkAsRead].
 @ProviderFor(MarkAsRead)

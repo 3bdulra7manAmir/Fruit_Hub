@@ -1,62 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
+import '../../../../core/widgets/snackbar.dart';
 
 part 'checkout_stepper_controller.g.dart';
 
 @riverpod
-class CheckoutStepperController extends _$CheckoutStepperController with ChangeNotifier
-{
+class CheckoutStepperController extends _$CheckoutStepperController {
   int _currentStep = 0;
   int get currentStep => _currentStep;
+  static const int maxStep = 3;
 
-  final Map<String, int> _stepRoutes =
-  {
-    AppRoutes.checkoutShip: 0,
-    AppRoutes.checkoutAddress: 1,
-    AppRoutes.checkoutPayment: 2,
-    AppRoutes.checkoutReview: 3,
-  };
+  List<String> stepRoutes = [
+  AppRoutes.checkoutShip,
+  AppRoutes.checkoutAddress,
+  AppRoutes.checkoutPayment,
+  AppRoutes.checkoutReview,
+];
 
   @override
-  CheckoutStepperController build()
-  {
+  CheckoutStepperController build() {
     return this;
   }
 
-  void updateStepFromRoute(String location)
-  {
-    final stepIndex = _stepRoutes[location];
-    if (stepIndex != null && _currentStep != stepIndex)
-    {
-      _currentStep = stepIndex;
-      notifyListeners();
-    }
-  }
+  void goToStep(int index) {
+    if (index < 0 || index > maxStep) return;
+    if (_currentStep == index) return;
 
-  void goToStep(int index)
-  {
-    final routeName = _stepRoutes.entries.firstWhere((e) => e.value == index).key;
     _currentStep = index;
-    notifyListeners();
-    AppRouter.router.pushNamed(routeName);
+    final route = stepRoutes[index];
+    AppRouter.router.goNamed(route);
   }
 
-  void nextStep()
+  void nextStep() => goToStep(_currentStep + 1);
+  void prevStep() => goToStep(_currentStep - 1);
+
+  void onNextPressed(BuildContext context) {
+  if (currentStep < 3)
   {
-    if (_currentStep < 3)
-    {
-      goToStep(_currentStep + 1);
-    }
+    nextStep();
   }
+  else
+  {
+    CustomSnackBar().show(context, S.current.stepsCompleted);
+    Future.delayed(const Duration(seconds: 2), ()
+    {
+      AppRouter.router.goNamed(AppRoutes.paymentSuccess);
+    });
+  }
+}
 
-  // void previousStep()
-  // {
-  //   if (_currentStep > 0)
-  //   {
-  //     goToStep(_currentStep - 1);
-  //   }
-  // }
 }

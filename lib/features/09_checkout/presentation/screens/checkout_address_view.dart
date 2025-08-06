@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/i18n/generated/l10n.dart';
-import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
@@ -17,14 +16,28 @@ import '../widget/checkout_address/save_address.dart';
 import '../widget/nav_buttons.dart';
 import '../widget/payment_steps_list.dart';
 
-class CheckoutAddress extends ConsumerWidget
+class CheckoutAddress extends ConsumerStatefulWidget
 {
   const CheckoutAddress({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
+  ConsumerState<CheckoutAddress> createState() => _CheckoutAddressState();
+}
+
+class _CheckoutAddressState extends ConsumerState<CheckoutAddress>
+{
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_)
+    {
+      ref.read(checkoutStepperControllerProvider.notifier).goToStep(1);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context)
   {
-    ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutAddress);
     return Scaffold(
       appBar: CustomAppBar(title: S.current.address, isCartBackButton: true,),
       body: CustomSingleChild(

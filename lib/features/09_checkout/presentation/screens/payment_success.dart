@@ -24,7 +24,7 @@ class PaymentSuccess extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'الدفع', isCustomBack: false,),
+      appBar: CustomAppBar(title: S.current.pay, isCustomBack: false,),
       body: CustomSingleChild(
         crossAxisAlignment: CrossAxisAlignment.center,
         children:
@@ -36,13 +36,9 @@ class PaymentSuccess extends StatelessWidget
           Sizes.s9.verticalSpace,
           const OrderNumberTextWidget(),
           if (1.sw <= 427 && 1.sh <= 952)...
-          [
-            Sizes.s67.verticalSpace,
-          ]
+          [Sizes.s67.verticalSpace,]
           else...
-          [
-            Sizes.s150.verticalSpace,
-          ],
+          [Sizes.s150.verticalSpace,],
           CustomButton(
             text: S.current.trackOrder,
             onPressed: ()
