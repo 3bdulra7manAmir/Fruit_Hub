@@ -21,8 +21,7 @@ class _Icons
   final String pineapple = 'assets/icons/OnBoarding/Pineapple.svg';
 
   /// [Login]
-  final String rightBlackArrow = 'assets/icons/Login/Right_Black_Arrow _No_Circle.svg';
-  final String rightBlackArrowPNG = 'assets/icons/Login/Right_Black_Arrow _No_Circle.png';
+
   final String eyeGrey = 'assets/icons/Login/Eye_Grey.svg';
 
   final String google = 'assets/icons/Login/Google.svg';

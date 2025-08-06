@@ -10,7 +10,6 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/widgets/identity_widgets/widgets.dart';
 import '../../../../03_home/presentation/widget/fruit_grid_card/add_button.dart';
 import '../../controllers/fruit_item_quantity_controller.dart';
 
@@ -50,7 +49,10 @@ class FruitQuantityChanger extends ConsumerWidget
             ref.read(fruitItemQuantityProvider.notifier).increment();
           },
           child: FruitAddButtonWidget(
-            child: SvgPicture.asset(WidgetManager.crossColor(context), fit: BoxFit.scaleDown,),
+            child: SvgPicture.asset(AppAssets.icons.crossWhite, 
+              fit: BoxFit.scaleDown, 
+              colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
+            ),
           ),
         ),
 

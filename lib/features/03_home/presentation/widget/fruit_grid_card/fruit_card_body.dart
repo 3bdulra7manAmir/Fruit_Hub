@@ -6,9 +6,9 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/margin.dart';
-import '../../../../../core/widgets/identity_widgets/widgets.dart';
 import 'add_button.dart';
 import 'favourite_img.dart';
 import 'fruit_price.dart';
@@ -41,7 +41,10 @@ class FruitGridCardWidget extends StatelessWidget
               GestureDetector(
                 onTap: () {log('Add has been Pressed...');},
                 child: FruitAddButtonWidget(
-                  child: SvgPicture.asset(WidgetManager.crossColor(context), fit: BoxFit.scaleDown,),
+                  child: SvgPicture.asset(AppAssets.icons.crossWhite, 
+                    fit: BoxFit.scaleDown,
+                    colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
+                  ),
                 ),
               ),
             ],

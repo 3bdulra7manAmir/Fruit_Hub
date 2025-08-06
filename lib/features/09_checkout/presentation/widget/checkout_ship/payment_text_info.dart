@@ -40,7 +40,7 @@ class PaymentCardPriceTextWidget extends StatelessWidget
     return Column(
       children:
       [
-        Text('40 جنيه', style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, 
+        Text('40 ${S.current.le}', style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, 
             fontColor: AppColors.color.kGreen008
           ),
         ),

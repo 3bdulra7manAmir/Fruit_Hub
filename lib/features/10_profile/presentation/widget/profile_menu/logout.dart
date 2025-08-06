@@ -29,13 +29,11 @@ class LogOutWidget extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
-          Expanded(
-            child: Text(S.current.logout, style: AppStyles.extraLight(fontColor: AppColors.color.kGreen001),),
-          ),
+          Expanded(child: Text(S.current.logout, style: AppStyles.extraLight(fontColor: AppColors.color.kGreen011),),),
           Expanded(
             child: Consumer(
               builder: (_, ref, _) => SvgPicture.asset(AppAssets.icons.signOut).
-              flipForRtl(ref.watch(localizationProvider))
+                flipForRtl(ref.watch(localizationProvider))
             ),
           ),
         ],

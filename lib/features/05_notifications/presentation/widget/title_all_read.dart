@@ -12,6 +12,9 @@ class MarkAllAsReadWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text(S.current.markAllRead, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey002),);
+    return Text(S.current.markAllRead, style: AppStyles.extraLight(
+      fontWeight: AppFontWeights.regularWeight, 
+      fontColor: AppColors.color.kGrey002),
+    );
   }
 }
