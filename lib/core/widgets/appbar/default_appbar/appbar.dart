@@ -1,10 +1,13 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
+import '../../../../config/router/route_observer.dart';
+import '../../../../features/09_checkout/presentation/controller/checkout_stepper_controller.dart';
 import '../../../constants/app_margins.dart';
 import '../../../constants/app_styles.dart';
 import '../../../extensions/margin.dart';
@@ -12,7 +15,7 @@ import '../../snackbar.dart';
 import '../notifications_bill.dart';
 import 'back_button.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget 
+class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget 
 {
   const CustomAppBar({
     super.key,
@@ -40,7 +43,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   final double? toolbarHeight;
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return AppBar(
       backgroundColor: backgroundColor,
@@ -48,7 +51,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
       title: Text(title ?? '', style: AppStyles.extraBold()),
       automaticallyImplyLeading: false,
       leadingWidth: leadingWidth ?? 44.w,
-      leading: (isCustomBack ?? true) ? ((isCartBackButton ?? false) ? cartBackButton(context) : backButtonOnTap(context)) : null,
+      leading: (isCustomBack ?? true) ? ((isCartBackButton ?? false) ? cartBackButton(context, ref) : backButtonOnTap(context)) : null,
       actions: (isNotifications ?? false) ? (actions ?? [billOnTap(context)]) : null,
       actionsPadding: (isNotifications ?? false) ? (actionsPadding ?? AppMargins.directional.smallEnd) : EdgeInsets.zero,
     ).marginDirectional(start: 16.w, top: 11.h);
@@ -63,28 +66,31 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
     return GestureDetector(onTap: () => leadingOnTap(context), child: const CustomAppBar().leading ?? const BackButtonWidget());
   }
 
-  GestureDetector cartBackButton(BuildContext context) {
+  GestureDetector cartBackButton(BuildContext context, WidgetRef ref) {
     return GestureDetector(
-      onTap: ()
-      {
-        if(AppRouter.currentRoute == AppRoutes.checkoutShip)
-        {
+      onTap: () {
+        final controller = ref.read(checkoutStepperControllerProvider.notifier);
+        final currentStep = ref.read(checkoutStepperControllerProvider).currentStep;
+
+
+        if (currentStep > 0) {
+          controller.prevStep();
+          AppRouter.router.goNamed(controller.stepRoutes[controller.currentStep]);
+        } else {
+          // رجوع للشاشة قبل Checkout، وليكن السلة
           AppRouter.router.goNamed(AppRoutes.cart);
-        }
-        else
-        {
-          AppRouter.router.pop();
         }
       },
       child: const BackButtonWidget(),
     );
   }
+
   
   GestureDetector billOnTap(context) => GestureDetector(onTap: () {
     log('Notifications Bill has been Pressed...');
     try
     {
-      if (AppRouter.currentRoute == AppRoutes.notifications)
+      if (NavigatorObserverWithTracking.currentRouteName == AppRoutes.notifications)
       {CustomSnackBar().show(context, S.current.alreadyInNotifications);}
       else
       {AppRouter.router.pushNamed(AppRoutes.notifications);}

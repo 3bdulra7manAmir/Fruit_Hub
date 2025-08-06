@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
-import '../utils/toggle.dart';
+import '../utils/logic/toggle.dart';
 
 class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWidget
 {

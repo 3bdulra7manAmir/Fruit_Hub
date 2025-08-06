@@ -12,7 +12,7 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/utils/toggle.dart';
+import '../../../../../core/utils/logic/toggle.dart';
 import '../../../../../core/widgets/identity_widgets/widgets.dart';
 import '../../../../../core/widgets/toggle_button.dart';
 import '../../controller/profile_menu/language_informer.dart';

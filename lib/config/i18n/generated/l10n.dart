@@ -1849,6 +1849,66 @@ class S {
       args: [],
     );
   }
+
+  /// `العنوان مطلوب`
+  String get addressIsRequired {
+    return Intl.message(
+      'العنوان مطلوب',
+      name: 'addressIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العنوان قصير جدًا (الحد الأدنى 10 أحرف)`
+  String get addressTooShort {
+    return Intl.message(
+      'العنوان قصير جدًا (الحد الأدنى 10 أحرف)',
+      name: 'addressTooShort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `يجب أن يحتوي العنوان على حروف`
+  String get addressMustContainLetters {
+    return Intl.message(
+      'يجب أن يحتوي العنوان على حروف',
+      name: 'addressMustContainLetters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `يجب أن يحتوي العنوان على رقم واحد على الأقل`
+  String get addressMustContainNumber {
+    return Intl.message(
+      'يجب أن يحتوي العنوان على رقم واحد على الأقل',
+      name: 'addressMustContainNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يمكن أن يحتوي العنوان على رموز فقط`
+  String get addressOnlySymbols {
+    return Intl.message(
+      'لا يمكن أن يحتوي العنوان على رموز فقط',
+      name: 'addressOnlySymbols',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في التحقق من العنوان:`
+  String get addressValidationFailure {
+    return Intl.message(
+      'فشل في التحقق من العنوان:',
+      name: 'addressValidationFailure',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

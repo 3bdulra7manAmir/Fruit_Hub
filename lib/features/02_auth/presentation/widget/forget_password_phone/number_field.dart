@@ -5,7 +5,7 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/validation.dart';
 import '../../../../../core/services/validation/app_validation.dart';
-import '../../../../../core/utils/input_formatters.dart';
+import '../../../../../core/utils/UI/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class PhoneNumberWidget extends StatelessWidget

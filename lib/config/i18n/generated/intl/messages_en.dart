@@ -33,6 +33,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add new payment method"),
         "addToCart": MessageLookupByLibrary.simpleMessage("Add to cart"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
+        "addressIsRequired":
+            MessageLookupByLibrary.simpleMessage("Address is required"),
+        "addressMustContainLetters": MessageLookupByLibrary.simpleMessage(
+            "Address must contain letters"),
+        "addressMustContainNumber": MessageLookupByLibrary.simpleMessage(
+            "Address must contain at least one number"),
+        "addressOnlySymbols": MessageLookupByLibrary.simpleMessage(
+            "Address cannot contain only symbols"),
+        "addressTooShort": MessageLookupByLibrary.simpleMessage(
+            "Address is too short (minimum 10 characters)"),
+        "addressValidationFailure":
+            MessageLookupByLibrary.simpleMessage("Address validation failed:"),
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "alreadyHaveAccount2":

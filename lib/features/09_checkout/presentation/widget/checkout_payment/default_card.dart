@@ -7,7 +7,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/checkbox.dart';
-import '../../controller/checkbox_controller.dart';
+import '../../controller/payment/checkbox_controller.dart';
 
 class MakeCardAsDeafultWidget extends ConsumerWidget
 {

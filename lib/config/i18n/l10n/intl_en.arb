@@ -204,5 +204,13 @@
   "loremWarning2": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words.",
   "loremWarning3": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
   "loremWarning4": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
-  "loremWarning5": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text."
+  "loremWarning5": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+
+  
+  "addressIsRequired": "Address is required",
+  "addressTooShort": "Address is too short (minimum 10 characters)",
+  "addressMustContainLetters": "Address must contain letters",
+  "addressMustContainNumber": "Address must contain at least one number",
+  "addressOnlySymbols": "Address cannot contain only symbols",
+  "addressValidationFailure": "Address validation failed:"
 }

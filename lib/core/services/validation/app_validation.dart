@@ -191,6 +191,35 @@ abstract class AppValidation
     }
   }
 
+  static String? addressValidation(String? value) {
+    try
+    {
+      final trimmed = value?.trim() ?? '';
+
+      if (trimmed.isEmpty) {
+        return S.current.addressIsRequired;
+      }
+      if (trimmed.length < 10) {
+        return S.current.addressTooShort;
+      }
+      if (!ValidationExtensions.hasLetters.hasMatch(trimmed)) {
+        return S.current.addressMustContainLetters;
+      }
+      if (!ValidationExtensions.hasNumbers.hasMatch(trimmed)) {
+        return S.current.addressMustContainNumber;
+      }
+      if (ValidationExtensions.isOnlySymbols.hasMatch(trimmed)) {
+        return S.current.addressOnlySymbols;
+      }
+
+      return null;
+    } 
+    catch (e)
+    {
+      return '${S.current.addressValidationFailure} ${e.toString()}';
+    }
+  }
+
 
 }
 

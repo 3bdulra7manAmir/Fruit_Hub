@@ -31,7 +31,7 @@ class PopScopeWidget extends StatelessWidget
   {
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) async
+      onPopInvokedWithResult: (didPop, result) async
       {
         if (didPop)
         {

@@ -22,12 +22,7 @@ class CheckOutNavButtonsWidget extends ConsumerWidget
     final controller = ref.watch(checkoutStepperControllerProvider);
     return CustomButton(
       text: controller.currentStep < 3 ? S.current.next : S.current.complete,
-      onPressed: controller.currentStep < 3
-      ? controller.nextStep : ()
-      {
-        CustomSnackBar().show(context, S.current.stepsCompleted);
-        Future.delayed(const Duration(seconds: 2), () => AppRouter.router.goNamed(AppRoutes.paymentSuccess));
-      } 
+      onPressed: () => controller.onNextPressed(context),
     );
   }
 }

@@ -33,6 +33,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أضف وسيلة دفع جديده"),
         "addToCart": MessageLookupByLibrary.simpleMessage("أضف الي السلة"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "addressIsRequired":
+            MessageLookupByLibrary.simpleMessage("العنوان مطلوب"),
+        "addressMustContainLetters": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يحتوي العنوان على حروف"),
+        "addressMustContainNumber": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يحتوي العنوان على رقم واحد على الأقل"),
+        "addressOnlySymbols": MessageLookupByLibrary.simpleMessage(
+            "لا يمكن أن يحتوي العنوان على رموز فقط"),
+        "addressTooShort": MessageLookupByLibrary.simpleMessage(
+            "العنوان قصير جدًا (الحد الأدنى 10 أحرف)"),
+        "addressValidationFailure":
+            MessageLookupByLibrary.simpleMessage("فشل في التحقق من العنوان:"),
         "alreadyHaveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب مسبقًا؟"),
         "alreadyHaveAccount2":
