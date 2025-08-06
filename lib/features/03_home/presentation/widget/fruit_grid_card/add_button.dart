@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 
-class FruitAddButtonWidget extends StatelessWidget
+class FruitAddButton extends StatelessWidget
 {
-  const FruitAddButtonWidget({super.key, required this.child, this.color});
+  const FruitAddButton({super.key, required this.child, this.color});
 
   final Widget child;
   final Color? color;

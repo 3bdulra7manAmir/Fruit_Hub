@@ -32,21 +32,13 @@ class FruitGridCardWidget extends StatelessWidget
           const FavouriteWidget(),
           const Expanded(child: WatermelonWidget(),),
           Sizes.s12.verticalSpace,
-          Row(
+          const Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children:
             [
-              const Expanded(child: FruitGridPriceWidget()),
-              GestureDetector(
-                onTap: () {log('Add has been Pressed...');},
-                child: FruitAddButtonWidget(
-                  child: SvgPicture.asset(AppAssets.icons.crossWhite, 
-                    fit: BoxFit.scaleDown,
-                    colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
-                  ),
-                ),
-              ),
+              Expanded(child: FruitGridPriceWidget()),
+              FruitAddButtonWidget(),
             ],
           ),
           Sizes.s20.verticalSpace,
@@ -57,4 +49,21 @@ class FruitGridCardWidget extends StatelessWidget
 }
 
 
+class FruitAddButtonWidget extends StatelessWidget
+{
+  const FruitAddButtonWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {log('Add has been Pressed...');},
+      child: FruitAddButton(
+        child: SvgPicture.asset(AppAssets.icons.crossWhite, 
+          fit: BoxFit.scaleDown,
+          colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
+        ),
+      ),
+    );
+  }
+}
 

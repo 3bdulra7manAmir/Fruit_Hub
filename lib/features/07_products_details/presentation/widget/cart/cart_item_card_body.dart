@@ -13,7 +13,8 @@ import 'cart_item_quantity.dart';
 
 class CartCardWidget extends StatelessWidget
 {
-  const CartCardWidget({super.key});
+  const CartCardWidget({super.key,  required this.itemId});
+  final int itemId;
 
   @override
   Widget build(BuildContext context)
@@ -35,7 +36,7 @@ class CartCardWidget extends StatelessWidget
           Sizes.s16.horizontalSpace,
           const CartItemQuantityWidget(),
           const Spacer(),
-          const CartItemPriceWidget(),
+          CartItemPriceWidget(itemId: itemId),
         ],
       ).paddingSymmetric(horizontal: 16.w, vertical: 5.h),
     );

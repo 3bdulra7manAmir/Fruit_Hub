@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/listview_builder.dart';
+import '../../controllers/cart_items_controller.dart';
 import 'cart_item_card_body.dart';
 
-class CartItemsListWidget extends StatelessWidget
+class CartItemsListWidget extends ConsumerWidget
 {
   const CartItemsListWidget({super.key});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final items = ref.watch(cartItemsProvider);
     return CustomListviewBuilder(
-      itemBuilder: (context, index) => SizedBox(height: 110.h, child: const CartCardWidget()),
+      itemBuilder: (context, index) {
+        final item = items[index];
+        return SizedBox(
+          height: 110.h,
+          child: CartCardWidget(itemId: item.id),
+        );
+      },
       separatorBuilder: (context, index) => Sizes.s8.verticalSpace,
-      itemCount: 3,
+      itemCount: items.length,
     );
   }
 }

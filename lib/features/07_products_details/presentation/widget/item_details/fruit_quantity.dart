@@ -48,7 +48,7 @@ class FruitQuantityChanger extends ConsumerWidget
             log('Add has been Pressed...');
             ref.read(fruitItemQuantityProvider.notifier).increment();
           },
-          child: FruitAddButtonWidget(
+          child: FruitAddButton(
             child: SvgPicture.asset(AppAssets.icons.crossWhite, 
               fit: BoxFit.scaleDown, 
               colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
@@ -66,7 +66,7 @@ class FruitQuantityChanger extends ConsumerWidget
             log('Subtract has been Pressed...');
             ref.read(fruitItemQuantityProvider.notifier).decrement();
           },
-          child: FruitAddButtonWidget(
+          child: FruitAddButton(
             color: AppColors.color.kWhite002,
             child: SvgPicture.asset(AppAssets.icons.subtract),
           ),

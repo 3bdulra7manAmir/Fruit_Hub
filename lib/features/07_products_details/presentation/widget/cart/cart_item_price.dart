@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -8,13 +9,16 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../controllers/cart_items_controller.dart';
 
-class CartItemPriceWidget extends StatelessWidget
+class CartItemPriceWidget extends ConsumerWidget
 {
-  const CartItemPriceWidget({super.key,});
+  const CartItemPriceWidget({super.key, required this.itemId});
+  final int itemId;
+
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -22,8 +26,11 @@ class CartItemPriceWidget extends StatelessWidget
       [
         Sizes.s6.verticalSpace,
         GestureDetector(
-          onTap: () {log('Trash...');},
-          child: const DeleteImgWidget()
+          onTap: () {
+            log('Trash...');
+            ref.read(cartItemsProvider.notifier).removeItem(itemId);
+          },
+          child: const TrashImgWidget()
         ),
         const Spacer(),
         const ItemPriceTextWidget(),
@@ -34,9 +41,9 @@ class CartItemPriceWidget extends StatelessWidget
 }
 
 
-class DeleteImgWidget extends StatelessWidget
+class TrashImgWidget extends StatelessWidget
 {
-  const DeleteImgWidget({super.key,});
+  const TrashImgWidget({super.key,});
 
   @override
   Widget build(BuildContext context)
