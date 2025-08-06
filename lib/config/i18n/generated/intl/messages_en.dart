@@ -304,6 +304,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
+        "total2": MessageLookupByLibrary.simpleMessage("Total"),
         "trackOrder": MessageLookupByLibrary.simpleMessage("Track Order"),
         "typeComment":
             MessageLookupByLibrary.simpleMessage("Write a comment..."),

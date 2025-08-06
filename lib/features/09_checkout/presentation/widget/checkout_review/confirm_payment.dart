@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../../../config/i18n/localization/localization_controller.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -67,15 +69,16 @@ class PaymentMethodEditWidget extends StatelessWidget
 }
 
 
-class PaymentMethodCardNumbersWidget extends StatelessWidget
+class PaymentMethodCardNumbersWidget extends ConsumerWidget
 {
   const PaymentMethodCardNumbersWidget({super.key,});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final rowAxis = ref.watch(localizationProvider);
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: rowAxis == const Locale('en') ? MainAxisAlignment.end : MainAxisAlignment.start,
       children:
       [
         Text('**** **** **** 6522', style: AppStyles.bold(
