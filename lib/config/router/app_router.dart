@@ -44,7 +44,7 @@ abstract class AppRouter
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
-    observers: [NavigatorObserverWithTracking()],
+    observers: [RouteTracker()],
     initialLocation: AppRoutes.splash,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
     routes:

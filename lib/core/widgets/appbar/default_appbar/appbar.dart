@@ -63,7 +63,8 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
 }
 
   GestureDetector backButtonOnTap(BuildContext context) {
-    return GestureDetector(onTap: () => leadingOnTap(context), child: const CustomAppBar().leading ?? const BackButtonWidget());
+    return GestureDetector(onTap: () => leadingOnTap(context), 
+    child: const CustomAppBar().leading ?? const BackButtonWidget());
   }
 
   GestureDetector cartBackButton(BuildContext context, WidgetRef ref) {
@@ -72,12 +73,10 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
         final controller = ref.read(checkoutStepperControllerProvider.notifier);
         final currentStep = ref.read(checkoutStepperControllerProvider).currentStep;
 
-
         if (currentStep > 0) {
           controller.prevStep();
           AppRouter.router.goNamed(controller.stepRoutes[controller.currentStep]);
         } else {
-          // رجوع للشاشة قبل Checkout، وليكن السلة
           AppRouter.router.goNamed(AppRoutes.cart);
         }
       },
@@ -90,7 +89,7 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
     log('Notifications Bill has been Pressed...');
     try
     {
-      if (NavigatorObserverWithTracking.currentRoute == AppRoutes.notifications)
+      if (RouteTracker.currentRoute == AppRoutes.notifications)
       {CustomSnackBar().show(context, S.current.alreadyInNotifications);}
       else
       {AppRouter.router.pushNamed(AppRoutes.notifications);}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class NavigatorObserverWithTracking extends RouteObserver<PageRoute<dynamic>>
+class RouteTracker extends RouteObserver<PageRoute<dynamic>>
 {
   static String? currentRoute;
   static String? previousRouteName;

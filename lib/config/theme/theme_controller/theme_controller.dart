@@ -17,7 +17,7 @@ class Theme extends _$Theme {
     return ThemeMode.light;
   }
 
-  ///[Load_Save_Them_ON_APP_START]
+  ///[Load_Saved_Them_ON_APP_START]
   Future<void> loadSavedTheme() async {
     final saved = SharedPrefManager().themeMode;
     final isDark = saved == 'dark';

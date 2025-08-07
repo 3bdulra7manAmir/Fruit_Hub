@@ -27,7 +27,7 @@ class AddNewPaymentMethodButtonWidget extends StatelessWidget
         {
           log('InValid...');
         }
-        else if(NavigatorObserverWithTracking.currentRoute == AppRoutes.addNewPaymentCard)
+        else if(RouteTracker.currentRoute == AppRoutes.addNewPaymentCard)
         {
           AppRouter.router.pop();
         }

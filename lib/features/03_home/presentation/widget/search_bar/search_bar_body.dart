@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,15 +9,17 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/shadow_box.dart';
+import '../../../../../core/widgets/snackbar.dart';
 import '../../../../../core/widgets/textform_field.dart';
 import 'filter_icon.dart';
 import 'search_icon.dart';
 
 class SearchBarWidget extends StatelessWidget
 {
-  const SearchBarWidget({super.key, required this.onSubmitted, required this.controller});
+  const SearchBarWidget({super.key, this.onSubmitted, required this.controller, this.searchIconOnTap});
 
   final void Function(String)? onSubmitted;
+  final void Function()? searchIconOnTap;
   final TextEditingController controller;
 
   @override
@@ -28,12 +29,11 @@ class SearchBarWidget extends StatelessWidget
       controller: controller,
       suffixIcon: const FilterIconWidget(),
       prefixIcon: GestureDetector(
-        onTap: ()
-        {
-          log('Search Settings has been Pressed...');
-          AppRouter.router.pushSearchString(fruitName: controller.text);
-          controller.clear();
-        } ,
+        onTap: searchIconOnTap ?? () {
+          if (controller.text.isEmpty)
+          {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+          else {AppRouter.router.pushSearchString(fruitName: controller.text);}
+        },
         child: const SearchIconWidget()
       ),
       hintText: S.current.searchFor,
@@ -42,7 +42,11 @@ class SearchBarWidget extends StatelessWidget
         fontWeight: AppFontWeights.regularWeight,
       ),
       keyboardType: TextInputType.text,
-      onSubmitted: onSubmitted,
+      onSubmitted: (value){
+        if (controller.text.isEmpty)
+        {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+        else {AppRouter.router.pushSearchString(fruitName: controller.text);}
+      },
     ).withShadow(shadow: AppShadowBoxes.searchBar, height: 40.h,);
   }
 }
