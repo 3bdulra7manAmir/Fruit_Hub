@@ -20,6 +20,7 @@ dependencies:
 
   # Database
   firebase_core: ^4.0.0
+  shared_preferences: ^2.5.3
 
   # UI
   cached_network_image: ^3.4.1
