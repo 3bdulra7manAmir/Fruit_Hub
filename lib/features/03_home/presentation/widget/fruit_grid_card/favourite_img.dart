@@ -13,9 +13,8 @@ class FavouriteWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isDark = ref.watch(themeProvider) == ThemeMode.dark;
     final img = ref.watch(favouriteImgProvider) ? AppAssets.icons.hartFilledWhite : AppAssets.icons.hartEmptyWhite;
-    final color = isDark ? AppColors.color.kBlack001 : null;
+    final color = ref.watch(themeProvider) == ThemeMode.dark ? AppColors.color.kBlack001 : null;
     return GestureDetector(
       onTap: () {
         log('Favourite has been pressed...');

@@ -6,7 +6,7 @@ part of 'language_informer.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$languageInformerHash() => r'aa16f1dc6bb74f532f0d58ea4109831627a94429';
+String _$languageInformerHash() => r'39d691333d5dd1180e9bd2ad738b5b4dc7d6eddb';
 
 /// See also [LanguageInformer].
 @ProviderFor(LanguageInformer)

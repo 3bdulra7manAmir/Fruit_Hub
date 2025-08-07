@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
+import '../../../../../core/services/database/shared_preferences/shared_pref_manager.dart';
 import '../../../core/extensions/rebuild.dart';
 import '../../router/app_router.dart';
 import '../color_manager/colors.dart';
@@ -9,40 +9,36 @@ import '../color_manager/colors.dart';
 part 'theme_controller.g.dart';
 
 @riverpod
-class Theme extends _$Theme
-{
+class Theme extends _$Theme {
   @override
-  ThemeMode build() 
-  {
-    log('Default Theme Mode is: Light');
-    return ThemeMode.light; // Default is Light
+  ThemeMode build() {
+    final themeString = SharedPrefManager().themeMode;
+    log('Loaded Theme from SharedPrefs: $themeString');
+
+    final appThemeMode = switch (themeString) {
+      'dark' => ThemeMode.dark,
+      'light' => ThemeMode.light,
+      _ => ThemeMode.system
+    };
+
+    AppColors.i.themeMode = appThemeMode.name;
+    return appThemeMode;
   }
 
-  void toggle()
-  {
-    if (state == ThemeMode.light)
-    {
-      setDark();
-      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
-    }
-    else
-    {
-      setLight();
-      (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
-    }
+  void toggle() {
+    final mode = state == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
+    _changeTheme(mode);
+    _saveTheme(mode);
+    (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild);
   }
 
-  void setLight()
-  {
-    log('Theme Mode is: Light');
-    AppColors.i.themeMode = 'light';
-    state = ThemeMode.light;
+  void _changeTheme(ThemeMode mode) {
+    state = mode;
+    AppColors.i.themeMode = mode.name;
+    // log(mode.name);
   }
 
-  void setDark()
-  {
-    log('Theme Mode is: Dark');
-    AppColors.i.themeMode = 'dark';
-    state = ThemeMode.dark;
+  void _saveTheme(ThemeMode mode) {
+    SharedPrefManager().setThemeMode(mode.name);
   }
 }
