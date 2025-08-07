@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
@@ -10,7 +11,7 @@ import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
-import '../../../../core/extensions/widget_shadow_box.dart';
+import '../../../../core/extensions/shadow_box.dart';
 
 class IfNoResultsBody extends StatelessWidget
 {
@@ -29,11 +30,11 @@ class IfNoResultsBody extends StatelessWidget
         Column(
           children:
           [
-            Text('البحث', 
+            Text(S.current.search2, 
             style: AppStyles.bold(fontColor: AppColors.color.kGrey006),
           ),
             Sizes.s16.verticalSpace,
-            Text('عفوًا... هذه المعلومات غير متوفرة للحظة', style: AppStyles.extraLight(
+            Text(S.current.infoUnavailable, style: AppStyles.extraLight(
               fontColor: AppColors.color.kGrey002, fontWeight: AppFontWeights.regularWeight),
             ),
           ],
@@ -52,7 +53,7 @@ class NoSearchResultsFoundWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text('لاتوجد نتائج بحث', style: AppStyles.extraLight(
+    return Text(S.current.noSearchResults, style: AppStyles.extraLight(
       fontColor: AppColors.color.kGrey002,
       fontWeight: AppFontWeights.regularWeight,
     ),).withShadow(

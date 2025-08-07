@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../../../config/i18n/localization/localization_controller.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
@@ -11,20 +13,24 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/transform.dart';
+import '../../../../../core/utils/logic/toggle.dart';
 import '../../../../../core/widgets/toggle_button.dart';
 import '../../controller/profile_menu/language_informer.dart';
 import '../../controller/profile_menu/notification_controller.dart';
 import '../../controller/profile_menu/theme_informer.dart';
 
-class ProfileOptions extends StatelessWidget
+
+class ProfileOptions extends ConsumerWidget
 {
   const ProfileOptions({
-  super.key, 
-  this.onTap, 
-  required this.leading, 
-  this.isArrow = true,
-  this.caseWidget,
-  required this.title});
+    super.key,
+    this.onTap,
+    required this.leading,
+    this.isArrow = true,
+    this.caseWidget,
+    required this.title,
+  });
 
   final void Function()? onTap;
   final String leading;
@@ -33,15 +39,15 @@ class ProfileOptions extends StatelessWidget
   final String title;
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       onTap: onTap,
       leading: SvgPicture.asset(leading),
-      trailing: isArrow ? SvgPicture.asset(AppAssets.icons.leftBlackArrow) : caseWidget,
+      trailing: isArrow ? SvgPicture.asset(AppAssets.icons.leftBlackArrow, colorFilter: ColorFilter.mode(AppColors.color.kBlack001, BlendMode.srcIn),).flipForRtl(ref.watch(localizationProvider)) : caseWidget,
       title: Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
-      shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016,)),
+      shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016)),
     );
   }
 }
@@ -49,83 +55,85 @@ class ProfileOptions extends StatelessWidget
 
 class OptionsMenuWidget extends StatelessWidget
 {
-  const OptionsMenuWidget({super.key,});
+  const OptionsMenuWidget({super.key});
 
   @override
   Widget build(BuildContext context)
   {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children:
-      [
+      children: [
         ProfileOptions(
           leading: AppAssets.icons.userGreen,
-          title: 'الملف الشخصي',
-          onTap: ()
-          {
+          title: S.current.profile,
+          onTap: () {
             log('Profile has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.personalInfo);
           },
         ),
         ProfileOptions(
           leading: AppAssets.icons.boxGreen,
-          title: 'طلباتي',
-          onTap: ()
-          {
+          title: S.current.myOrders,
+          onTap: () {
             log('Orders has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.ordersHistory);
           },
         ),
         ProfileOptions(
           leading: AppAssets.icons.walletGreen,
-          title: 'المدفوعات',
-          onTap: ()
-          {
+          title: S.current.payments,
+          onTap: () {
             log('Payments has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.paymentMethods);
           },
         ),
         ProfileOptions(
           leading: AppAssets.icons.hartGreen,
-          title: 'المفضلة',
-          onTap: ()
-          {
+          title: S.current.favorites,
+          onTap: () {
             log('Favourit has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.favourit);
           },
         ),
         ProfileOptions(
           leading: AppAssets.icons.billGreen,
-          title: 'الاشعارات',
+          title: S.current.notifications,
           isArrow: false,
-          caseWidget: SwitchButtonWidget(provider: toggleSwitchNotificationsProvider),
+          caseWidget: SwitchButtonWidget(
+            provider: toggleSwitchNotificationsProvider,
+          ),
           onTap: () => log('Notifications has been Pressed...'),
         ),
         Consumer(
-          builder: (context, ref, child) => ProfileOptions(
+          builder: (_, ref, _) => ProfileOptions(
             leading: AppAssets.icons.languageGreen,
-            title: 'اللغة',
+            title: S.current.language,
             isArrow: false,
             onTap: () => ref.read(languageInformerProvider.notifier).toggleLanguage(),
             caseWidget: Row(
               mainAxisSize: MainAxisSize.min,
-              children:
-              [
-                Text('العربية', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
+              children: [
+                Text(S.current.arabic, style: AppStyles.extraLight(
+                  fontWeight: AppFontWeights.regularWeight,
+                  fontColor: AppColors.color.kBlack001,),
+                ),
                 Sizes.s2.horizontalSpace,
-                SvgPicture.asset(AppAssets.icons.leftBlackArrow),
+                SvgPicture.asset(AppAssets.icons.leftBlackArrow, colorFilter: ColorFilter.mode(AppColors.color.kBlack001, BlendMode.srcIn),)
+                .flipForRtl(ref.watch(localizationProvider)),
               ],
             ),
           ),
         ),
-        ProfileOptions(
-          leading: AppAssets.icons.magicGreen,
-          isArrow: false,
-          caseWidget: SwitchButtonWidget(provider: themeInformerProvider,),
-          title: 'الوضع',
-          onTap: () {log('Theme has been Pressed...');},
+        Consumer(
+          builder: (_, ref, _) => ProfileOptions(
+            leading: AppAssets.icons.magicGreen,
+            isArrow: false,
+            caseWidget: SwitchButtonWidget(provider: themeInformerProvider),
+            title: S.current.theme,
+            onTap: () => (ref.read(themeInformerProvider.notifier) as ToggleSwitchBase).toggle(),
+          ),
         ),
-      ]
+      ],
     );
   }
 }

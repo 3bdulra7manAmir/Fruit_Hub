@@ -10,16 +10,15 @@ import '../../../../../core/constants/app_sizes.dart';
 
 class UserProfileImg extends StatelessWidget
 {
-  const UserProfileImg({super.key,});
+  const UserProfileImg({super.key});
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center, clipBehavior: Clip.none,
-      children:
-      [
-        Image.asset(AppAssets.imgs.userProfile, width: 73.w, height: 73.h,),
+      alignment: Alignment.center,
+      clipBehavior: Clip.none,
+      children: [
+        Image.asset(AppAssets.imgs.userProfile, width: 73.w, height: 73.h),
         Positioned(
           bottom: -11.h,
           child: Container(
@@ -27,9 +26,14 @@ class UserProfileImg extends StatelessWidget
             decoration: BoxDecoration(
               color: AppColors.color.kGrey022,
               borderRadius: AppRadiuses.circular.large,
-              border: Border.all(color: AppColors.color.kWhite001, width: Sizes.s2.w),
+              border: Border.all(
+                color: AppColors.color.kWhite001,
+                width: Sizes.s2.w,
+              ),
             ),
-            child: SvgPicture.asset(AppAssets.icons.cameraGreen, width: 16.w, height: 16.h,)
+            child: SvgPicture.asset(AppAssets.icons.cameraGreen, width: 16.w, height: 16.h,
+              colorFilter: ColorFilter.mode(AppColors.color.kBlack001, BlendMode.srcIn),
+            ),
           ),
         ),
       ],

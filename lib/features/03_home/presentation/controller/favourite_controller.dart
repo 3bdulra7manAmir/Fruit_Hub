@@ -1,11 +1,11 @@
 import 'dart:developer';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+
 part 'favourite_controller.g.dart';
 
 @riverpod
-class FavouriteImg extends _$FavouriteImg
-{
+class FavouriteImg extends _$FavouriteImg {
   @override
   bool build()
   {
@@ -20,4 +20,3 @@ class FavouriteImg extends _$FavouriteImg
     log('Favourit Toggled => $state');
   }
 }
-

@@ -1,5 +1,5 @@
 import '../../../config/i18n/generated/l10n.dart';
-import '../../extensions/string.dart';
+import '../../extensions/validation.dart';
 
 
 abstract class AppValidation
@@ -191,6 +191,52 @@ abstract class AppValidation
     }
   }
 
+  static String? addressValidation(String? value) {
+  try
+    {
 
+      if (value == null || value.trim().isEmpty) {
+        return S.current.addressIsRequired;
+      }
+      if (value.length < 10) {
+        return S.current.addressTooShort;
+      }
+      if (!ValidationExtensions.hasLetters.hasMatch(value)) {
+        return S.current.addressMustContainLetters;
+      }
+      if (!ValidationExtensions.hasNumbers.hasMatch(value)) {
+        return S.current.addressMustContainNumber;
+      }
+      if (ValidationExtensions.isOnlySymbols.hasMatch(value)) {
+        return S.current.addressOnlySymbols;
+      }
+
+      return null;
+    } 
+    catch (e)
+    {
+      return '${S.current.addressValidationFailure} ${e.toString()}';
+    }
+  }
+
+  static String? cityValidation(String? value) {
+  try
+    {
+      if (value == null || value.trim().isEmpty) {
+        return S.current.cityIsRequired;
+      }
+      if (value.length < 2) {
+        return S.current.cityTooShort;
+      }
+      if (!ValidationExtensions.cityNamePattern.hasMatch(value)) {
+        return S.current.cityOnlyLettersAllowed;
+      }
+      return null;
+    }
+    catch (e)
+    {
+      return '${S.current.cityValidationFailure} ${e.toString()}';
+    }
+  }
 }
 

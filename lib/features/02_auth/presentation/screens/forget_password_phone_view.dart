@@ -13,29 +13,28 @@ import '../widget/forget_password_phone/number_field.dart';
 class ForgetPasswordPhone extends StatelessWidget
 {
   ForgetPasswordPhone({super.key});
+
   final GlobalKey<FormState> forgetPasswordPhoneFormKey = GlobalKey<FormState>();
+  final TextEditingController phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
       appBar: CustomAppBar(title: S.current.forgotPassword),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomForm(
-          formKey: forgetPasswordPhoneFormKey,
-          formBody: CustomColumn(
-            children:
-            [
-              Sizes.s24.verticalSpace,
-              const ForgetPasswordTitleWidget(),
-              Sizes.s30.verticalSpace,
-              const PhoneNumberWidget(),
-              Sizes.s30.verticalSpace,
-              ForgetPasswordButtonWidget(formKey: forgetPasswordPhoneFormKey,),
-              Sizes.s16.verticalSpace,
-            ],
-          ),
+      body: CustomForm(
+        formKey: forgetPasswordPhoneFormKey,
+        formBody: CustomSingleChild(
+          children:
+          [
+            Sizes.s24.verticalSpace,
+            const ForgetPasswordTitleWidget(),
+            Sizes.s30.verticalSpace,
+            PhoneNumberWidget(phoneController: phoneController,),
+            Sizes.s30.verticalSpace,
+            ForgetPasswordButtonWidget(formKey: forgetPasswordPhoneFormKey, phoneController: phoneController,),
+            Sizes.s16.verticalSpace,
+          ],
         ),
       ),
     );

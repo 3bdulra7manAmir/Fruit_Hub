@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -15,7 +16,7 @@ class WhoWeAreTextWidget extends StatelessWidget
   {
     return ProfileOptions(
       leading: AppAssets.icons.whoWeAre,
-      title: 'من نحن',
+      title: S.current.aboutUs,
       onTap: ()
       {
         log('Who We are has been Pressed...');

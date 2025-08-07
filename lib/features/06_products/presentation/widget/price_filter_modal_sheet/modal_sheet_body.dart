@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/extensions/widget_margin.dart';
+import '../../../../../core/extensions/margin.dart';
 import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
 import 'filter_by_text.dart';
 import 'filtration_button.dart';
@@ -28,7 +29,7 @@ void priceFilterSheet(context)
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              const FilterProductsByWidget(title: 'تصنيف حسب :',),
+              FilterProductsByWidget(title: S.current.filterBy,),
               Sizes.s19.verticalSpace,
               const PriceFilterTextWidget(),
               Sizes.s16.verticalSpace,

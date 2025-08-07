@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
@@ -14,30 +15,29 @@ class NewPassword extends StatelessWidget
 {
   NewPassword({super.key});
   final GlobalKey<FormState> newPasswordFormKey = GlobalKey<FormState>();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController password2Controller = TextEditingController();
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'كلمة مرور جديدة'),
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: CustomForm(
-          formKey: newPasswordFormKey,
-          formBody: CustomColumn(
-            children:
-            [
-              Sizes.s24.verticalSpace,
-              const NewPasswordTitleWidget(),
-              Sizes.s34.verticalSpace,
-              const FirstPasswordFieldWidget(),
-              Sizes.s24.verticalSpace,
-              const SecondPasswordFieldWidget(),
-              Sizes.s24.verticalSpace,
-              NewPasswordButtonWidget(formKey: newPasswordFormKey,),
-              Sizes.s16.verticalSpace,
-            ],
-          ),
+      appBar: CustomAppBar(title: S.current.newPassword),
+      body: CustomForm(
+        formKey: newPasswordFormKey,
+        formBody: CustomSingleChild(
+          children:
+          [
+            Sizes.s24.verticalSpace,
+            const NewPasswordTitleWidget(),
+            Sizes.s34.verticalSpace,
+            FirstPasswordFieldWidget(passwordController: passwordController,),
+            Sizes.s24.verticalSpace,
+            SecondPasswordFieldWidget(password2Controller: password2Controller,),
+            Sizes.s24.verticalSpace,
+            NewPasswordButtonWidget(formKey: newPasswordFormKey, passwordController: passwordController, password2Controller: password2Controller,),
+            Sizes.s16.verticalSpace,
+          ],
         ),
       ),
     );

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/services/validation/app_validation.dart';
-import '../../../../../core/utils/input_formatters.dart';
+import '../../../../../core/utils/UI/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class CardOwnerNameWidget extends StatelessWidget
 {
-  const CardOwnerNameWidget({super.key});
+  const CardOwnerNameWidget({super.key, required this.ownerNameController});
 
-  static final TextEditingController ownerNameController = TextEditingController();
+  final TextEditingController ownerNameController;
 
   @override
   Widget build(BuildContext context)
@@ -18,7 +19,7 @@ class CardOwnerNameWidget extends StatelessWidget
       keyboardType: TextInputType.emailAddress,
       controller: ownerNameController,
       validator: (value) => AppValidation.fullNameValidation(value),
-      hintText: 'اسم حامل البطاقه',
+      hintText: S.current.cardHolderName,
     );
   }
 }

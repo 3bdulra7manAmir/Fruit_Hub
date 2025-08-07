@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/checkbox.dart';
@@ -40,12 +41,12 @@ class RegisterTermsTextWidget extends StatelessWidget
     return Expanded(
       child: Text.rich(
         TextSpan(
-          text: 'من خلال إنشاء حساب ، فإنك توافق على ', 
+          text: S.current.byCreatingAccountYouAgree, 
           style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),
         children:
         [
           TextSpan(
-            text: 'الشروط والأحكام الخاصة بنا', 
+            text: S.current.ourTermsAndConditions, 
             style: AppStyles.extraLight(fontColor: AppColors.color.kGreen004),
           ),
         ],

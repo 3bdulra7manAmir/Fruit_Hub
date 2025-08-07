@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../../../09_checkout/presentation/widget/track_order/current_order_cart.dart';
+import '../../../09_checkout/presentation/widget/track_order/current_order_cart_body.dart';
 
 class OrdersHistory extends StatelessWidget
 {
@@ -14,7 +15,7 @@ class OrdersHistory extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'طلباتي'),
+      appBar: CustomAppBar(title: S.current.myOrders),
       body: CustomSingleChild(
         children:
         [

@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/routes_extras.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/widget_shadow_box.dart';
+import '../../../../../core/extensions/shadow_box.dart';
+import '../../../../../core/widgets/snackbar.dart';
 import '../../../../../core/widgets/textform_field.dart';
 import 'filter_icon.dart';
 import 'search_icon.dart';
 
 class SearchBarWidget extends StatelessWidget
 {
-  const SearchBarWidget({super.key, required this.onSubmitted, this.controller});
+  const SearchBarWidget({super.key, this.onSubmitted, required this.controller, this.searchIconOnTap});
 
   final void Function(String)? onSubmitted;
-  final TextEditingController? controller;
+  final void Function()? searchIconOnTap;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context)
@@ -23,15 +28,25 @@ class SearchBarWidget extends StatelessWidget
     return CustomTextFormField(
       controller: controller,
       suffixIcon: const FilterIconWidget(),
-      prefixIcon: const SearchIconWidget(),
-      fillColor: AppColors.color.kWhite001,
-      hintText: 'ابحث عن.......',
+      prefixIcon: GestureDetector(
+        onTap: searchIconOnTap ?? () {
+          if (controller.text.isEmpty)
+          {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+          else {AppRouter.router.pushSearchString(fruitName: controller.text);}
+        },
+        child: const SearchIconWidget()
+      ),
+      hintText: S.current.searchFor,
       hintStyle: AppStyles.extraLight(
         fontColor: AppColors.color.kGrey002,
         fontWeight: AppFontWeights.regularWeight,
       ),
       keyboardType: TextInputType.text,
-      onSubmitted: onSubmitted,
+      onSubmitted: (value){
+        if (controller.text.isEmpty)
+        {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+        else {AppRouter.router.pushSearchString(fruitName: controller.text);}
+      },
     ).withShadow(shadow: AppShadowBoxes.searchBar, height: 40.h,);
   }
 }

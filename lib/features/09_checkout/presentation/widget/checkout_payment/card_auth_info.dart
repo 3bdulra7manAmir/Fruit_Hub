@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/services/validation/app_validation.dart';
-import '../../../../../core/utils/input_formatters.dart';
+import '../../../../../core/utils/UI/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class CardAuthInfoWidget extends StatelessWidget
 {
-  const CardAuthInfoWidget({super.key});
+  const CardAuthInfoWidget({super.key, required this.expireDateController, required this.cvvCodeController});
+  final TextEditingController expireDateController;
+  final TextEditingController cvvCodeController;
 
   @override
   Widget build(BuildContext context)
@@ -16,9 +19,9 @@ class CardAuthInfoWidget extends StatelessWidget
     return Row(
       children:
       [
-        const Expanded(child: ExpireDateWidget()),
+        Expanded(child: ExpireDateWidget(expireDateController: expireDateController,)),
         Sizes.s16.horizontalSpace,
-        const Expanded(child: CvvCodeWidget()),
+        Expanded(child: CvvCodeWidget(cvvCodeController: cvvCodeController,)),
       ],
     );
   }
@@ -27,9 +30,9 @@ class CardAuthInfoWidget extends StatelessWidget
 
 class ExpireDateWidget extends StatelessWidget
 {
-  const ExpireDateWidget({super.key});
+  const ExpireDateWidget({super.key, required this.expireDateController});
 
-  static final TextEditingController expireDateController = TextEditingController();
+  final TextEditingController expireDateController;
 
   @override
   Widget build(BuildContext context)
@@ -39,7 +42,7 @@ class ExpireDateWidget extends StatelessWidget
       keyboardType: TextInputType.number,
       controller: expireDateController,
       validator: (value) => AppValidation.expireDateValidation(value),
-      hintText: 'تاريخ الصلاحيه',
+      hintText: S.current.expiryDate,
     );
   }
 }
@@ -47,9 +50,9 @@ class ExpireDateWidget extends StatelessWidget
 
 class CvvCodeWidget extends StatelessWidget
 {
-  const CvvCodeWidget({super.key});
+  const CvvCodeWidget({super.key, required this.cvvCodeController});
 
-  static final TextEditingController cvvCodeController = TextEditingController();
+  final TextEditingController cvvCodeController;
 
   @override
   Widget build(BuildContext context)
@@ -59,7 +62,7 @@ class CvvCodeWidget extends StatelessWidget
       keyboardType: TextInputType.number,
       controller: cvvCodeController,
       validator: (value) => AppValidation.cvvValidation(value),
-      hintText: 'CVV',
+      hintText: S.current.cvv,
     );
   }
 }

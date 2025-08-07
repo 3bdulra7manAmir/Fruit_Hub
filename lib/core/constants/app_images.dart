@@ -21,8 +21,7 @@ class _Icons
   final String pineapple = 'assets/icons/OnBoarding/Pineapple.svg';
 
   /// [Login]
-  final String rightBlackArrow = 'assets/icons/Login/Right_Black_Arrow _No_Circle.svg';
-  final String rightBlackArrowPNG = 'assets/icons/Login/Right_Black_Arrow _No_Circle.png';
+
   final String eyeGrey = 'assets/icons/Login/Eye_Grey.svg';
 
   final String google = 'assets/icons/Login/Google.svg';
@@ -42,7 +41,8 @@ class _Icons
   final String searchGreen = 'assets/icons/Home/Search_Green.png';
   final String filterGreyPNG = 'assets/icons/Home/Filter_Grey.png';
   // [Most Sold]
-  final String hartBlack = 'assets/icons/Home/Hart_Black.svg';
+  final String hartEmptyWhite = 'assets/icons/Home/Hart_Empty_Light.png';
+  final String hartFilledWhite = 'assets/icons/Home/Hart_Filled_Light.png';
   final String addGreen = 'assets/icons/Home/Add_Green.svg';
   final String crossBlack = 'assets/icons/Home/Cross_Black.svg';
   final String crossWhite = 'assets/icons/Home/Cross_White.svg';
@@ -109,7 +109,7 @@ class _Icons
 
   //[Favourit]
   final String hartFilledPNG = 'assets/icons/Favourit/Hart_Filled_Red.png';
-  final String hartFilled = 'assets/icons/Favourit/Hart_Filled_Red.svg';
+  final String hartRedWhiteTheme = 'assets/icons/Favourit/Hart_Filled_Red.svg';
 
   ///[Nav Bar]
   final String home = 'assets/icons/NavBar/Home_active.svg';

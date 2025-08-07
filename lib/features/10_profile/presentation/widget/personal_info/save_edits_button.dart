@@ -1,18 +1,27 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/widgets/buttons/button.dart';
-import 'confirm_password_field.dart';
-import 'current_password_field.dart';
-import 'edit_email.dart';
-import 'edit_full_name.dart';
-import 'new_password_field.dart';
+import '../../../../02_auth/presentation/widget/new_password/password_changed_dialog.dart';
 
 class SaveEditsButtonWidget extends StatelessWidget
 {
-  const SaveEditsButtonWidget({super.key, required this.formKey,});
+  SaveEditsButtonWidget({super.key, 
+  required this.formKey, 
+  required this.fullNameController, 
+  required this.emailController, 
+  required this.currentPasswordController, 
+  required this.newPasswordController, 
+  required this.confirmPasswordController,});
 
   final GlobalKey<FormState> formKey;
+  final GlobalKey<FormState> personalInfoFormKey = GlobalKey<FormState>();
+  final TextEditingController fullNameController;
+  final TextEditingController emailController;
+  final TextEditingController currentPasswordController;
+  final TextEditingController newPasswordController;
+  final TextEditingController confirmPasswordController;
 
   @override
   Widget build(BuildContext context)
@@ -28,19 +37,20 @@ class SaveEditsButtonWidget extends StatelessWidget
         log('Valid...');
         log(
           '''
-            ${EditFullNameFieldWidget.fullNameController.text}\n
-            ${EditEmailFieldWidget.emailController.text}\n
-            ${CurrentPasswordFieldWidget.currentPasswordController.text}\n
-            ${NewPasswordFieldWidget.newPasswordController.text}\n
-            ${ConfirmPasswordFieldWidget.confirmPasswordController.text}\n
+            ${fullNameController.text}\n
+            ${emailController.text}\n
+            ${currentPasswordController.text}\n
+            ${newPasswordController.text}\n
+            ${confirmPasswordController.text}\n
           ''');
-        EditFullNameFieldWidget.fullNameController.clear();
-        EditEmailFieldWidget.emailController.clear();
-        CurrentPasswordFieldWidget.currentPasswordController.clear();
-        NewPasswordFieldWidget.newPasswordController.clear();
-        ConfirmPasswordFieldWidget.confirmPasswordController.clear();
+        fullNameController.clear();
+        emailController.clear();
+        currentPasswordController.clear();
+        newPasswordController.clear();
+        confirmPasswordController.clear();
+        showSuccessDialog(context, S.current.changeSuccess);
       }
     }, 
-    text: 'حفظ التغييرات',);
+    text: S.current.saveChanges);
   }
 }

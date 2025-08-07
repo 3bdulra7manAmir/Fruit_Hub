@@ -1,9 +1,11 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/routes_extras.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/column.dart';
+import '../../../../core/widgets/snackbar.dart';
 import '../../../03_home/presentation/widget/fruit_grid_list.dart';
 import '../../../03_home/presentation/widget/most_sold.dart';
 import '../../../03_home/presentation/widget/search_bar/search_bar_body.dart';
@@ -13,7 +15,9 @@ import '../widget/products_list.dart';
 
 class Products extends StatelessWidget
 {
-  const Products({super.key});
+  Products({super.key});
+
+  final TextEditingController productsSearchController = TextEditingController(); 
 
   @override
   Widget build(BuildContext context)
@@ -22,7 +26,19 @@ class Products extends StatelessWidget
         children:
         [
           Sizes.s16.verticalSpace,
-          SearchBarWidget(onSubmitted: (value) {log('Search Bar Value: $value');},),
+          SearchBarWidget(
+            controller: productsSearchController,
+            searchIconOnTap: () {
+              if (productsSearchController.text.isEmpty)
+              {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+              else {AppRouter.router.pushSearchString(fruitName: productsSearchController.text);}
+            },
+            onSubmitted: (value) {
+              if (productsSearchController.text.isEmpty)
+              {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+              else {AppRouter.router.pushSearchString(fruitName: productsSearchController.text);}
+            },
+          ),
           Sizes.s16.verticalSpace,
           const OurProductsWidget(),
           Sizes.s8.verticalSpace,

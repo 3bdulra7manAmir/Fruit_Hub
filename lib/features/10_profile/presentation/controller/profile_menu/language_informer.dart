@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../../../../core/services/localization/localization_controller.dart';
+import '../../../../../config/i18n/localization/localization_controller.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../core/extensions/rebuild.dart';
 
 part 'language_informer.g.dart';
 
@@ -33,11 +36,13 @@ class LanguageInformer extends _$LanguageInformer
     {
       //log("state is: $state → setArabic()");
       setArabic();
-    } else
+    }
+    else
     {
       //log("state is: $state → setEnglish()");
       setEnglish();
     }
+    (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild,);
   }
 }
 

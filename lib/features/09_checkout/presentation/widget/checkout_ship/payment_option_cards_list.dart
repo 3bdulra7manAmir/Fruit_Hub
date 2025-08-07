@@ -1,34 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/listview_builder.dart';
+import '../../controller/payment/payment_card_selection_controller.dart';
 import 'payment_option_card.dart';
 
-
-class PaymentOptionCardsList extends StatefulWidget
+class PaymentOptionCardsList extends ConsumerWidget
 {
   const PaymentOptionCardsList({super.key});
 
   @override
-  State<PaymentOptionCardsList> createState() => _PaymentOptionCardsListState();
-}
-
-class _PaymentOptionCardsListState extends State<PaymentOptionCardsList>
-{
-  int selectedIndex = 1;
-  @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final selectedIndex = ref.watch(paymentCardSelectionProvider);
+    final controller = ref.read(paymentCardSelectionProvider.notifier);
     return CustomListviewBuilder(
-      itemCount: 5,
+      itemCount: 2,
       separatorBuilder: (context, index) => Sizes.s8.verticalSpace,
-      itemBuilder: (context, index)
-      {
+      itemBuilder: (context, index) {
         return InkWell(
           borderRadius: AppRadiuses.circular.xXXXXSmall,
-          onTap: () => setState(() {selectedIndex = index;}),
-          child: PaymentOptionCard(isSelected: selectedIndex == index,)
+          onTap: () => controller.selectCard(index),
+          child: PaymentOptionCard(isSelected: selectedIndex == index),
         );
       },
     );

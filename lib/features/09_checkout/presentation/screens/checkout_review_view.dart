@@ -2,34 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/router/app_routes.dart';
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../controller/checkout_stepper_controller.dart';
 import '../widget/checkout_review/confirm_address.dart';
 import '../widget/checkout_review/confirm_order_text.dart';
 import '../widget/checkout_review/confirm_payment.dart';
 import '../widget/checkout_review/order_summary.dart';
 import '../widget/checkout_review/order_total.dart';
-import '../widget/nav_buttons.dart';
+import '../widget/next_button.dart';
 import '../widget/payment_steps_list.dart';
 
-class CheckoutReview extends ConsumerWidget
-{
+class CheckoutReview extends ConsumerStatefulWidget {
   const CheckoutReview({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
-    ref.read(checkoutStepperControllerProvider.notifier).updateStepFromRoute(AppRoutes.checkoutReview);
+  ConsumerState<CheckoutReview> createState() => _CheckoutReviewState();
+}
+
+class _CheckoutReviewState extends ConsumerState<CheckoutReview> with RouteAware
+{
+  
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'المراجعة'),
+      appBar: CustomAppBar(title: S.current.review, isCartBackButton: true),
       body: CustomSingleChild(
-        children:
-        [
+        children: [
           Sizes.s16.verticalSpace,
-          SizedBox(height: 24.h, child: const PaymentStepsListWidget(),),
+          SizedBox(height: 24.h, child: const PaymentStepsListWidget()),
           Sizes.s24.verticalSpace,
           const OrderSummaryTextWidget(),
           Sizes.s8.verticalSpace,
@@ -43,7 +45,7 @@ class CheckoutReview extends ConsumerWidget
           Sizes.s51.verticalSpace,
           const CheckOutNavButtonsWidget(),
           Sizes.s16.verticalSpace,
-        ]
+        ],
       ),
     );
   }

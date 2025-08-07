@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/extensions/widget_padding.dart';
+import '../../../../../core/extensions/padding.dart';
 import 'rating_linear_bar.dart';
 
 class RatingBarsListWidget extends StatelessWidget

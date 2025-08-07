@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -24,7 +25,7 @@ class CartItemQuantityWidget extends StatelessWidget
           fontColor: AppColors.color.kBlack003),
         ),
         Sizes.s4.verticalSpace,
-        Text('3 كم', style: AppStyles.extraLight(
+        Text('3 ${S.current.kiloG}', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.regularWeight, 
           fontColor: AppColors.color.kOrange001),
         ),

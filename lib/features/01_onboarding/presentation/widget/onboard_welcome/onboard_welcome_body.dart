@@ -8,8 +8,8 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/string.dart';
-import '../../../../../core/extensions/widget_textstyle.dart';
+import '../../../../../core/extensions/textstyle.dart';
+import '../../../../../core/extensions/theme.dart';
 import '../fruit_img.dart';
 import '../welcome_subtitle_text.dart';
 import 'clipped_background.dart';
@@ -65,14 +65,14 @@ class FruitHubTitleWidget extends StatelessWidget
           const TextSpan(text: ' '),
           TextSpan(
             text: AppStrings.fruit.localized(context, ar: AppStrings.fruit, en: AppStrings.fruit,),
-            style: AppStyles.black().byLocale(context, 
+            style: AppStyles.black().byLocale( 
               ar: AppStyles.black(fontColor: AppColors.color.kGreen001,),
               en: AppStyles.black(fontColor: AppColors.color.kGreen001,),
             ),
           ),
           TextSpan(
             text: AppStrings.hub.localized(context, ar: AppStrings.hub, en: AppStrings.hub,),
-            style: AppStyles.black().byLocale(context, 
+            style: AppStyles.black().byLocale(
               ar: AppStyles.black(fontColor: AppColors.color.kOrange001,),
               en: AppStyles.black(fontColor: AppColors.color.kOrange001,),
             ),

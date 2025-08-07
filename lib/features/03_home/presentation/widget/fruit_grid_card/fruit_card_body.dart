@@ -2,11 +2,13 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/extensions/widget_margin.dart';
+import '../../../../../core/extensions/margin.dart';
 import 'add_button.dart';
 import 'favourite_img.dart';
 import 'fruit_price.dart';
@@ -30,16 +32,13 @@ class FruitGridCardWidget extends StatelessWidget
           const FavouriteWidget(),
           const Expanded(child: WatermelonWidget(),),
           Sizes.s12.verticalSpace,
-          Row(
+          const Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children:
             [
-              const Expanded(child: FruitGridPriceWidget()),
-              GestureDetector(
-                onTap: () {log('Add has been Pressed...');},
-                child: const FruitAddButtonWidget()
-              ),
+              Expanded(child: FruitGridPriceWidget()),
+              FruitAddButtonWidget(),
             ],
           ),
           Sizes.s20.verticalSpace,
@@ -50,4 +49,21 @@ class FruitGridCardWidget extends StatelessWidget
 }
 
 
+class FruitAddButtonWidget extends StatelessWidget
+{
+  const FruitAddButtonWidget({super.key,});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {log('Add has been Pressed...');},
+      child: FruitAddButton(
+        child: SvgPicture.asset(AppAssets.icons.crossWhite, 
+          fit: BoxFit.scaleDown,
+          colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
+        ),
+      ),
+    );
+  }
+}
 

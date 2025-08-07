@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
@@ -21,9 +22,9 @@ class PaymentMethods extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(
-        title: 'المدفوعات', isCustomBack: true, isNotifications: true,
-        actions: [PaymentActionWidget()],
+      appBar: CustomAppBar(
+        title: S.current.payments, isCustomBack: true, isNotifications: true,
+        actions: const [PaymentActionWidget()],
       ),
       body: CustomForm(
         formKey: cardFormKey,

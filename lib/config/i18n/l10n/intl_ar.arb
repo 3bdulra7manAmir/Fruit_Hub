@@ -1,26 +1,73 @@
 {
   "@@locale": "ar",
-  "error": "خطأ",
-
   
+  "error": "خطأ",
+  "or": "أو",
+  "confirm": "تأكيد",
+  "noThanks": "لا ارغب",
+  "edit": "تعديل",
+  "previous": "السابق",
+  "next": "التالي",
+  "complete": "إكمال",
+  "saveChanges": "حفظ التغييرات",
+  "success": "تمت العملية بنجاح!",
+  "success2": "تم بنجاح !",
+  "le": "جنية",
+  "kiloG": "كم",
+
   "welcomeIn": "مرحبًا بك في",
   "onBoardingDescription": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
-  "onBoarding2Description": "نُقدِّم لك نخبة مختارة من أفضل الفواكه. تصفّح التفاصيل والصور والتقييمات لتختار الفاكهة المثالية بثقة.",
+  "onBoarding2Description": "نُقدِّم لك نخبة مختارة من أفضل الفواكه. تصفّح التفاصيل والصور والتقييمات لتختار الفاكهة المثالية بثقة.",
   "searchAndShop": "ابحث وتسوق",
   "startNow": "ابدأ الآن",
 
+  "login": "تسجيل الدخول",
+  "logout": "تسجيل الخروج",
+  "logoutConfirmation": "هل ترغب في تسجيل الخروج ؟",
+  "newAccount": "حساب جديد",
+  "createAccount": "سجّل حساب جديد",
+  "createNewAccount": "إنشاء حساب جديد",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "alreadyHaveAccount": "لديك حساب مسبقًا؟",
+  "alreadyHaveAccount2": "تمتلك حساب بالفعل؟",
+  "byCreatingAccountYouAgree": "من خلال إنشاء حساب، فإنك توافق على ",
+  "ourTermsAndConditions": "الشروط والأحكام الخاصة بنا",
 
+  "signInWithGoogle": "تسجيل بواسطة جوجل",
+  "signInWithApple": "تسجيل بواسطة أبل",
+  "signInWithFacebook": "تسجيل بواسطة فيسبوك",
+
+  "email": "البريد الإلكتروني",
   "enterEmail": "أدخل البريد الإلكتروني",
+  "fullName": "الاسم الكامل",
+  "password": "كلمة المرور",
+  "newPassword": "كلمة مرور جديدة",
+  "newPassword2": "كلمة المرور الجديدة",
+  "currentPassword": "كلمة المرور الحالي",
+  "reEnterPassword": "أعد إدخال كلمة المرور",
+  "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+
+  "forgotPassword": "نسيت كلمة المرور",
+  "didForgotPassword": "نسيت كلمة المرور؟",
+  "changePassword": "تغيير كلمة المرور",
+  "createNewPassword": "إنشاء كلمة مرور جديدة",
+  "createPasswordToSignIn": "قم بإنشاء كلمة مرور جديدة لتسجيل الدخول",
+  "passwordChangedSuccessfully": "تم تغيير الباسورد بنجاح",
+  "passwordsDontMatchFunny": "كلمتا السر غير متطبقتان يا معلم\nحاول تدخل 2 متطابقين كده بتكلم بجد...",
+
+  "verifyCode": "التحقق من الرمز",
+  "resendCode": "إعادة إرسال الرمز",
+  "phoneVerificationMessage": "لا تقلق، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.",
+  "enterCodeSentToEmail": "أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي: {email}",
+
   "emailIsRequired": "البريد الإلكتروني مطلوب",
   "invalidEmailSymbol": "يجب أن يحتوي البريد الإلكتروني على رمز '@'.",
   "invalidEmailDomain": "يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).",
   "emailFailureValidation": "خطأ في التحقق من البريد الإلكتروني:",
 
-
   "fullNameIsRequired": "الاسم الكامل مطلوب.",
   "fullNameinvalid": "يرجى إدخال اسم كامل صالح.",
   "fullNameValidationFailure": "فشل التحقق من الاسم الكامل:",
-
 
   "passwordIsRequired": "كلمة المرور مطلوبة",
   "passwordLength8Character": "يجب أن تكون كلمة المرور مكونة من ٨ أحرف على الأقل.",
@@ -31,105 +78,151 @@
   "invalidPassword": "كلمة المرور غير صالحة",
   "passwordValidationFailure": "خطأ في التحقق من كلمة المرور:",
 
-
   "phoneNumberIsRequired": "رقم الهاتف مطلوب",
   "invalidPhoneNumber": "رقم الهاتف غير صالح",
   "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً",
 
-  
   "cardNumberIsRequired": "رقم البطاقة مطلوب",
   "invalidCardNumber": "رقم البطاقة غير صالح",
   "cardNumberValidationFailure": "فشل في التحقق من رقم البطاقة:",
-
-
   "cvvRequired": "رمز التحقق مطلوب",
   "cvvMustBe3or4Digits": "يجب أن يتكون رمز التحقق من 3 أو 4 أرقام",
   "invalidCvv": "رمز التحقق غير صالح",
   "cvvValidationFailure": "فشل في التحقق من رمز التحقق:",
-
-
   "expireDateRequired": "تاريخ الانتهاء مطلوب",
   "expireDateWrongFormat": "استخدم التنسيق MM/YY",
   "cardExpired": "انتهت صلاحية البطاقة",
   "expireDateValidationError": "فشل في التحقق من تاريخ الانتهاء:",
 
-
-  "forgotPassword": "نسيت كلمة المرور",
-
-
-  "dontHaveAccount": "ليس لديك حساب؟",
-  "createAccount": "سجّل حساب جديد",
-
-  
-  "or": "أو",
-  "alreadyHaveAccount": "لديك حساب مسبقًا؟",
-  "login": "تسجيل الدخول",
-
-
-  "mostSold": "الأكثر طلبًا",
-  "more": "عرض المزيد",
-  "eidOffers": "عروض عيدية",
-  "discount": "خصومات",
-
-
+  "home": "الرئيسية",
   "goodMorning": "صباح الخير!..",
-  "search": "ابحث",
-  "infoUnavailable": "عذرًا... المعلومات غير متاحة حاليًا",
-  "recentSearches": "عمليات البحث الأخيرة",
-  "clearAll": "حذف الكل",
-  "searchResults": "نتائج البحث",
-  "results": "نتائج",
-
-  "markAllRead": "تحديد الكل كمقروء",
-
+  "bestSellers": "الأكثر مبيعًا",
+  "mostSold": "الأكثر طلبًا",
+  "eidOffers": "عروض عيدية",
+  "clearance": "تصفيه",
+  "shopNow": "تسوق الآن",
   "ourProducts": "منتجاتنا",
-  "price": "السعر:",
+  "recommended": "موصي بها",
+
+  "search": "ابحث",
+  "search2": "البحث",
+  "searchFor": "ابحث عن.......",
+  "recentSearches": "عمليات البحث الأخيرة",
+  "searchResults": "نتائج البحث",
+  "noSearchResults": "لا توجد نتائج بحث",
+  "results": "نتائج",
+  "clearAll": "حذف الكل",
+  "infoUnavailable": "عذرًا... المعلومات غير متاحة حاليًا",
+  "filterBy": "تصنيف حسب :",
+  "sortBy": "ترتيب حسب :",
+  "more": "عرض المزيد",
+  "more2": "المزيد",
+
+  "products": "المنتجات",
+  "price": "السعر :",
   "to": "إلى",
-
-
+  "addToCart": "أضف الي السلة",
+  "cart": "السلة",
+  "shoppingCart": "سلة التسوق",
   "itemsInCart": "لديك منتجات في سلة التسوق",
+
   "review": "مراجعة",
   "summary": "ملخص",
-
-
-  "saveAddress": "حفظ العنوان",
-  "choosePayment": "اختر وسيلة الدفع المناسبة:",
-  "makeDefaultCard": "اجعل البطاقة الافتراضية",
-  "pleaseChoosePayment": "يرجى اختيار وسيلة الدفع المناسبة لك.",
-  "deliveryAddress": "عنوان التوصيل",
-  "edit": "تعديل",
-
-
+  "summary2": "الملخص",
+  "checkoutReview": "المراجعة",
+  "orderSummary": "ملخص الطلب :",
   "confirmOrder": "يرجى تأكيد طلبك",
-  "paymentMethod": "طريقة الدفع",
-  "orderSummary": "ملخص الطلب:",
+  "pleaseConfirmOrder": "يرجي تأكيد  طلبك",
   "subtotal": "الإجمالي الجزئي:",
+  "subtotal2": "المجموع الفرعي :",
   "delivery": "رسوم التوصيل:",
   "total": "الإجمالي",
+  "shipping": "الشحن",
+
+  "payment": "الدفع",
+  "pay": "الدفع",
+  "cartProductsCount": "لديك {count} منتجات في سله التسوق",
+  "paymentMethod": "طريقة الدفع",
+  "paymentMethod2": "وسيلة الدفع",
+  "payments": "المدفوعات",
+  "choosePayment": "اختر وسيلة الدفع المناسبة:",
+  "choosePaymentMethod": "أختار طريقه الدفع المناسبه :",
+  "pleaseChoosePayment": "يرجى اختيار وسيلة الدفع المناسبة لك.",
+  "pleaseChoosePaymentMethod": "من فضلك اختر طريقه الدفع المناسبه لك.",
+  "addPaymentMethod": "أضف وسيلة دفع جديده",
+  "addNewCard": "اضافه بطاقه جديده",
   "cashOnDelivery": "الدفع عند الاستلام",
+  "makeDefaultCard": "اجعل البطاقة الافتراضية",
+  "setAsDefaultCard": "جعل البطاقة افتراضية",
+
+  "cardHolderName": "اسم حامل البطاقه",
+  "cardNumber": "رقم البطاقة",
+  "expiryDate": "تاريخ الصلاحيه",
+  "cvv": "رمز الأمان",
+
+  "deliveryAddress": "عنوان التوصيل",
+  "address": "العنوان",
+  "city": "المدينه",
+  "floorApartment": "رقم الطابق , رقم الشقه ..",
+  "saveAddress": "حفظ العنوان",
   "pickup": "الاستلام من الفرع",
-  "success": "تمت العملية بنجاح!",
+  "pickup2": "التسليم من المكان",
 
-
-  "home": "الرئيسية",
+  "myOrders": "طلباتي",
   "orderNumber": "رقم الطلب: 1245789663#",
   "trackOrder": "تتبع الطلب",
   "numberOfOrders": "عدد الطلبات",
+  "stepsCompleted": "تم إكمال الخطوات!",
 
-
-  "changePassword": "تغيير كلمة المرور",
-  "personalInfo": "المعلومات الشخصية",
-  "general": "عام",
-  "help": "المساعدة",
-  "logout": "تسجيل الخروج",
-
-
-  "arabic": "العربية",
-  "language": "اللغة",
-  "notifications": "الإشعارات",
-  "favorites": "المفضلة",
-  "payments": "المدفوعات",
-  "myOrders": "طلباتي",
   "profile": "الملف الشخصي",
-  "theme": "الوضع"
+  "myAccount": "حسابي",
+  "personalInfo": "المعلومات الشخصية",
+  "favorites": "المفضلة",
+
+  "general": "عام",
+  "generalTitle": "عام",
+  "generalSubTitle": "الصلاحيه",
+  "language": "اللغة",
+  "arabic": "العربية",
+  "theme": "الوضع",
+  "notifications": "الإشعارات",
+  "notificationsTitle": "الاشعارات",
+  "alreadyInNotifications": "انت أساسًا في شاشة الاشعارات يا معلم...",
+  "markAllRead": "تحديد الكل كمقروء",
+  "neww": "جديد",
+  "earlier": "في وقت سابق",
+
+  "help": "المساعدة",
+  "aboutUs": "من نحن",
+  "typeComment": "اكتب التعليق..",
+
+  "total2": "الكلي",
+  "delivery2": "التوصيل :",
+
+  "loremWarning": "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص",
+  "loremWarning1": "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.",
+  "loremWarning2": "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص.",
+  "loremWarning3": "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.",
+  "loremWarning4": "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.",
+  "loremWarning5": "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص.",
+
+
+  "addressIsRequired": "العنوان مطلوب",
+  "addressTooShort": "العنوان قصير جدًا (الحد الأدنى 10 أحرف)",
+  "addressMustContainLetters": "يجب أن يحتوي العنوان على حروف",
+  "addressMustContainNumber": "يجب أن يحتوي العنوان على رقم واحد على الأقل",
+  "addressOnlySymbols": "لا يمكن أن يحتوي العنوان على رموز فقط",
+  "addressValidationFailure": "فشل في التحقق من العنوان:",
+
+
+  "cityIsRequired": "يجب إدخال اسم المدينة.",
+  "cityTooShort": "يجب أن يحتوي اسم المدينة على حرفين على الأقل.",
+  "cityOnlyLettersAllowed": "يجب أن يحتوي اسم المدينة على حروف فقط.",
+  "cityValidationFailure": "حدث خطأ أثناء التحقق من صحة اسم المدينة:",
+
+  
+  "changeSuccess": "تم التغيير بنجاح",
+  "sortLowToHigh": "السعر ( الأقل إلى الأعلى )",
+  "sortHighToLow": "السعر ( الأعلى إلى الأقل )",
+  "sortAlphabetical": "الأبجدية"
 }

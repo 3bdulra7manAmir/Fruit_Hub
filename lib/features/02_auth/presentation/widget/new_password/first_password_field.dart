@@ -3,18 +3,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
-import '../../../../../core/extensions/widget_padding.dart';
+import '../../../../../core/extensions/padding.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/textform_field.dart';
 import '../../controller/new_password_view/first_obscure_controller.dart';
 
 class FirstPasswordFieldWidget extends ConsumerWidget
 {
-  const FirstPasswordFieldWidget({super.key});
+  const FirstPasswordFieldWidget({super.key, required this.passwordController});
 
-  static final TextEditingController passwordController = TextEditingController();
+  final TextEditingController passwordController;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -24,7 +25,7 @@ class FirstPasswordFieldWidget extends ConsumerWidget
       controller: passwordController,
       keyboardType: TextInputType.visiblePassword,
       validator: (value) => AppValidation.passwordValidation(value),
-      hintText: 'كلمة المرور الجديدة',
+      hintText: S.current.newPassword,
       obscureText: obscureProvider,
       suffixIcon: GestureDetector(
         onTap: () => ref.read(firstObscurePasswordProvider.notifier).toggle(),

@@ -1,30 +1,47 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/routes_extras.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
+import '../../../../core/widgets/snackbar.dart';
 import '../../../03_home/presentation/widget/fruit_grid_list.dart';
 import '../../../03_home/presentation/widget/search_bar/search_bar_body.dart';
 import '../widget/our_products.dart';
 
 class FilteredProducts extends StatelessWidget
 {
-  const FilteredProducts({super.key});
+  FilteredProducts({super.key});
+
+  final TextEditingController filterController = TextEditingController(); 
 
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'المنتجات', isNotifications: true, isCustomBack: false,),
+      appBar: CustomAppBar(title: S.current.products, isNotifications: true, isCustomBack: false,),
       body: CustomSingleChild(
         children:
         [
           Sizes.s16.verticalSpace,
-          SearchBarWidget(onSubmitted: (value){log(value);}),
+          SearchBarWidget(
+            controller: filterController,
+            searchIconOnTap: () {
+              if (filterController.text.isEmpty)
+              {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+              else {AppRouter.router.pushSearchString(fruitName: filterController.text);}
+            },
+            onSubmitted: (value) {
+              if (filterController.text.isEmpty)
+              {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+              else {AppRouter.router.pushSearchString(fruitName: filterController.text);}
+            }
+          ),
           Sizes.s16.verticalSpace,
           const FilteredResultsTitleWidget(),
           Sizes.s16.verticalSpace,
@@ -60,6 +77,6 @@ class FilteredResultsCountWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text('4 نتائج', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
+    return Text('4 ${S.current.results}', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
   }
 }

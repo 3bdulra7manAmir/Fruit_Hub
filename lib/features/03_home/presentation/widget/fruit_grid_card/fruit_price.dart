@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -23,10 +24,10 @@ class FruitGridPriceWidget extends StatelessWidget
           children:
           [
             Flexible(
-              child: Text('20جنية ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,), maxLines: 1,),
+              child: Text('20${S.current.le} ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,), maxLines: 1,),
             ),
             Flexible(
-              child: Text('/ الكيلو', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002,), maxLines: 1,),
+              child: Text('/ ${S.current.kiloG}', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002,), maxLines: 1,),
             ),
           ],
         ),

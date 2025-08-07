@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -20,7 +21,7 @@ class OrWidget extends StatelessWidget
       [
         Expanded(child: CustomDivider(color: AppColors.color.kGrey005,),),
         Sizes.s18.horizontalSpace,
-        Text('أو', style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
+        Text(S.current.or, style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
         Sizes.s18.horizontalSpace,
         Expanded(child: CustomDivider(color: AppColors.color.kGrey005,),),
       ],

@@ -7,7 +7,6 @@ extension AppRouterNavigator on GoRouter
 {
   void pushSearchString({required String fruitName})
   {
-    AppRouter.router.pushNamed(AppRoutes.search, queryParameters: {'fruitName': fruitName});
+    AppRouter.router.pushNamed(AppRoutes.search, extra: fruitName,);
   }
-
 }

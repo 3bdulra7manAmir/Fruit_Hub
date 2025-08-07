@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../config/theme/color_manager/colors.dart';
 import 'nav_bar_item_widget.dart';
 import 'nav_bar_model.dart';
 
@@ -16,8 +17,8 @@ class CustomNavBar extends StatelessWidget
     this.backgroundColor,
     this.showActiveBackgroundColor = true,
     this.border = const StadiumBorder(),
-    this.itemPadding = const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
-    this.textStyle = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+    required this.itemPadding,
+    required this.textStyle,
   });
 
   final int currentIndex;
@@ -36,20 +37,14 @@ class CustomNavBar extends StatelessWidget
   Widget build(BuildContext context)
   {
     final isLight = Theme.of(context).brightness == Brightness.light;
-    final inactiveColor = isLight ? const Color(0xFF505050) : const Color(0xF2FFFFFF);
+    final inactiveColor =  isLight ? const Color(0xFF505050) : const Color(0xF2FFFFFF);
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.r).copyWith(bottom: 16.r),
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 15.h),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20.r),
-        boxShadow: const 
-        [
-          BoxShadow(
-            blurRadius: 6,
-            offset: Offset(3, 0),
-            color: Colors.black12,
-          )
-        ],
+        //color: AppColors.color.kWhite001,
+        color: AppColors.color.kWhite005,
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(30.r), topRight: Radius.circular(30.r)),
+        boxShadow: const [BoxShadow(blurRadius: 7, offset: Offset(0, -2), color: Colors.black12,)],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../config/i18n/localization/localization_controller.dart';
 import '../../../config/theme/color_manager/colors.dart';
 import '../../constants/app_borders.dart';
 import '../../constants/app_styles.dart';
@@ -63,25 +65,33 @@ class NavBarItemWidget extends StatelessWidget
             highlightColor: Colors.transparent,
             child: Stack(
               clipBehavior: Clip.none,
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.centerRight,
               children:
               [
                 if (isSelected && title != null)
-                  Container(
-                    height: 40.h,
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.only(left: 40.r * value, right: 12.r),
-                    decoration: BoxDecoration(
-                      color: activeBackgroundColor,
-                      borderRadius: AppRadiuses.circular.xMedium,
-                    ),
-                    child: Text(title!, style: AppStyles.light(fontColor: AppColors.color.kGreen001),),
+                  Consumer(
+                    builder: (_, ref, _)
+                    {
+                      final localProvider = ref.watch(localizationProvider);
+                      return Container(
+                        height: 40.h,
+                        alignment: Alignment.center,
+                        padding: localProvider == const Locale('ar') ? EdgeInsetsDirectional.only(end: 12.w, start: 40.w,) 
+                          : EdgeInsetsDirectional.only(end: 40.w, start: 12.w,), //left: 40.r * value, right: 12.r
+                        decoration: BoxDecoration(color: activeBackgroundColor, borderRadius: AppRadiuses.circular.xMedium,),
+                        child: Text(title!, style: AppStyles.light(fontColor: AppColors.color.kGreen001,),),
+                      );
+                    },
                   ),
                 Container(
                   height: 60.h,
                   padding: EdgeInsets.all(10.r),
                   decoration: BoxDecoration(
-                    color: Color.lerp(Colors.transparent, activeIconColor, value),
+                    color: Color.lerp(
+                      Colors.transparent,
+                      activeIconColor,
+                      value,
+                    ),
                     shape: BoxShape.circle,
                   ),
                   child: isSelected ? activeIcon : (inactiveIcon ?? activeIcon),

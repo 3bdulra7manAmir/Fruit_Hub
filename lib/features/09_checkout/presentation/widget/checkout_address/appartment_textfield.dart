@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class AppartmentFieldWidget extends StatelessWidget
 {
-  const AppartmentFieldWidget({super.key});
+  const AppartmentFieldWidget({super.key, required this.apartmentController});
 
-  static final TextEditingController apartmentController = TextEditingController();
+  final TextEditingController apartmentController;
 
   @override
   Widget build(BuildContext context)
@@ -15,8 +16,8 @@ class AppartmentFieldWidget extends StatelessWidget
     return CustomTextFormField(
       keyboardType: TextInputType.name,
       controller: apartmentController,
-      validator: (value) => AppValidation.fullNameValidation(value),
-      hintText: 'رقم الطابق , رقم الشقه ..',
+      validator: (value) => AppValidation.addressValidation(value),
+      hintText: S.current.floorApartment,
     );
   }
 }

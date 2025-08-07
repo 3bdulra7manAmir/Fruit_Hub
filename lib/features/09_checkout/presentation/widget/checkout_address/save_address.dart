@@ -1,14 +1,12 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../controller/save_address_controller.dart';
+import '../../../../../core/widgets/toggle_button.dart';
+import '../../controller/address/save_address_controller.dart';
 
 class SaveAddressWidget extends StatelessWidget
 {
@@ -21,7 +19,7 @@ class SaveAddressWidget extends StatelessWidget
       children:
       [
 
-        const KeepAddressSwitchButtonWidget(),
+        SwitchButtonWidget(provider: toggleSwitchSaveAddressProvider,),
         Sizes.s8.horizontalSpace,
         const KeepAddressTextWidget(),
       ],
@@ -36,64 +34,65 @@ class KeepAddressTextWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text('حفظ العنوان', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),);
+    return Text(S.current.saveAddress, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),);
   }
 }
 
 
-class KeepAddressSwitchButtonWidget extends ConsumerWidget
-{
-  const KeepAddressSwitchButtonWidget({super.key});
+// class KeepAddressSwitchButtonWidget extends ConsumerWidget
+// {
+//   const KeepAddressSwitchButtonWidget({super.key});
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
-    final isSwitched = ref.watch(toggleSwitchSaveAddressProvider);
-    final BorderRadius borderRadius = AppRadiuses.circular.medium;
-    final double width = 44.w;
-    final double height = 24.h;
-    final double circleSize = 20.w;
-    final EdgeInsetsGeometry padding = EdgeInsets.all(2.w);
+//   @override
+//   Widget build(BuildContext context, WidgetRef ref)
+//   {
+//     final isSwitched = ref.watch(toggleSwitchSaveAddressProvider);
+//     final BorderRadius borderRadius = AppRadiuses.circular.medium;
+//     final double width = 44.w;
+//     final double height = 24.h;
+//     final double circleSize = 20.w;
+//     final EdgeInsetsGeometry padding = EdgeInsets.all(2.w);
 
-    return GestureDetector(
-      onTap: ()
-      {
-        log(!isSwitched ? 'True' : 'False');
-        ref.read(toggleSwitchSaveAddressProvider.notifier).toggle();
-      },
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
-        width: width,
-        height: height,
-        padding: padding,
-        decoration: BoxDecoration(
-          color: isSwitched ? AppColors.color.kGreen001 : Colors.grey.shade300,
-          borderRadius: borderRadius,
-        ),
-        alignment: isSwitched ? Alignment.centerRight : Alignment.centerLeft,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 250),
-          width: circleSize,
-          height: circleSize,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.circle,
-            boxShadow:
-            [
-              BoxShadow(
-                color: Color.fromARGB(15, 16, 24, 40),
-                offset: Offset(0, 1),
-                blurRadius: 2,
-              ),
-              BoxShadow(
-                color: Color.fromARGB(26, 16, 24, 40),
-                offset: Offset(0, 1),
-                blurRadius: 3,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+//     return GestureDetector(
+//       onTap: ()
+//       {
+//         log(!isSwitched ? 'True' : 'False');
+//         ref.read(toggleSwitchSaveAddressProvider.notifier).toggle();
+//       },
+//       child: AnimatedContainer(
+//         duration: const Duration(milliseconds: 250),
+//         width: width,
+//         height: height,
+//         padding: padding,
+//         decoration: BoxDecoration(
+//           color: isSwitched ? AppColors.color.kGreen001 : Colors.grey.shade300,
+//           borderRadius: borderRadius,
+//         ),
+//         alignment: isSwitched ? Alignment.centerRight : Alignment.centerLeft,
+//         child: AnimatedContainer(
+//           duration: const Duration(milliseconds: 250),
+//           width: circleSize,
+//           height: circleSize,
+//           decoration: const BoxDecoration(
+//             color: Colors.white,
+//             shape: BoxShape.circle,
+//             boxShadow:
+//             [
+//               BoxShadow(
+//                 color: Color.fromARGB(15, 16, 24, 40),
+//                 offset: Offset(0, 1),
+//                 blurRadius: 2,
+//               ),
+//               BoxShadow(
+//                 color: Color.fromARGB(26, 16, 24, 40),
+//                 offset: Offset(0, 1),
+//                 blurRadius: 3,
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+

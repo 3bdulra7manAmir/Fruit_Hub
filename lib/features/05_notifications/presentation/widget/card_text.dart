@@ -15,8 +15,8 @@ class NotificationsTextWidget extends StatelessWidget
         style: AppStyles.extraLight(fontColor: AppColors.color.kGrey009),
         children:
         [
-          const TextSpan(text: 'خصم '),
-          TextSpan(text: '50% ', style: AppStyles.extraLight(fontColor: AppColors.color.kRed001),),
+          const TextSpan(text: 'خصومات'),
+          TextSpan(text: ' 50% ', style: AppStyles.extraLight(fontColor: AppColors.color.kRed001),),
           const TextSpan(text: 'علي اسعار الفواكه بمناسبه العيد'),
         ],
       ), maxLines: 2

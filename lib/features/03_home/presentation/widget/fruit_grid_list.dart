@@ -1,6 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/app_routes.dart';
 import '../../../../core/widgets/gridview_builder.dart';
 import 'fruit_grid_card/fruit_card_body.dart';
 
@@ -12,8 +16,14 @@ class FruitGridListWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomGridbuilder(
-      itemCount: 9,
-      itemBuilder: (context, index) => const FruitGridCardWidget(),
+      itemCount: 5,
+      itemBuilder: (context, index) => GestureDetector(
+        onTap: () {
+          log('Fruit Details has been Entered...');
+          AppRouter.router.pushNamed(AppRoutes.itemsDetails);
+        },
+        child: const FruitGridCardWidget()
+      ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,             //  controls how many items per row
         mainAxisSpacing: (8.0).h,      // vertical spacing

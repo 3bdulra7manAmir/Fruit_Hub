@@ -3,18 +3,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
-import '../../../../../core/extensions/widget_padding.dart';
+import '../../../../../core/extensions/padding.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/textform_field.dart';
 import '../../controller/personal_info/confirm_obscure_controller.dart';
 
 class ConfirmPasswordFieldWidget extends ConsumerWidget
 {
-  const ConfirmPasswordFieldWidget({super.key,});
+  const ConfirmPasswordFieldWidget({super.key, required this.confirmPasswordController});
 
-  static final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -24,7 +25,7 @@ class ConfirmPasswordFieldWidget extends ConsumerWidget
       controller: confirmPasswordController,
       keyboardType: TextInputType.visiblePassword,
       validator: (value) => AppValidation.passwordValidation(value),
-      hintText: 'تأكيد كلمة المرور الجديده',
+      hintText: S.current.confirmNewPassword,
       suffixIcon: GestureDetector(
         onTap: () => ref.read(confirmObscurePasswordProvider.notifier).toggle(),
         child: !obscureProvider ? 

@@ -9,7 +9,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/popers/dialog.dart';
 
-void showSuccessDialog(context)
+void showSuccessDialog(context, String title)
 {
   customAppDialog(
     context: context,
@@ -32,10 +32,7 @@ void showSuccessDialog(context)
           ],
         ),
         Sizes.s29.verticalSpace,
-        Text(
-          'تم تغيير الباسورد بنجاح',
-          style: AppStyles.bold(fontColor: AppColors.color.kBlack001),
-        ),
+        Text(title, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         Sizes.s50.verticalSpace,
       ],
     )

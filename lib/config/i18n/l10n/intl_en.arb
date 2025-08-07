@@ -1,6 +1,19 @@
 {
   "@@locale": "en",
+  
   "error": "Error",
+  "or": "OR",
+  "confirm": "Confirm",
+  "noThanks": "No thanks",
+  "edit": "Edit",
+  "previous": "Previous",
+  "next": "Next",
+  "complete": "Complete",
+  "saveChanges": "Save changes",
+  "success": "Completed Successfully!",
+  "success2": "Success!",
+  "le": "LE",
+  "kiloG": "KG",
 
   "welcomeIn": "Welcome In",
   "onBoardingDescription": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality.",
@@ -8,18 +21,53 @@
   "searchAndShop": "Search and shop",
   "startNow": "Start now",
 
+  "login": "Login",
+  "logout": "Log out",
+  "logoutConfirmation": "Do you want to log out?",
+  "newAccount": "New Account",
+  "createAccount": "Create an account",
+  "createNewAccount": "Create a new account",
+  "dontHaveAccount": "Don't have an account?",
+  "alreadyHaveAccount": "Already have an account?",
+  "alreadyHaveAccount2": "Already have an account?",
+  "byCreatingAccountYouAgree": "By creating an account, you agree to ",
+  "ourTermsAndConditions": "our Terms and Conditions",
 
+  "signInWithGoogle": "Sign in with Google",
+  "signInWithApple": "Sign in with Apple",
+  "signInWithFacebook": "Sign in with Facebook",
+
+  "email": "Email",
   "enterEmail": "Enter email",
+  "fullName": "Full name",
+  "password": "Password",
+  "newPassword": "New Password",
+  "newPassword2": "New password",
+  "currentPassword": "Current Password",
+  "reEnterPassword": "Re-enter the password",
+  "confirmNewPassword": "Confirm new password",
+
+  "forgotPassword": "Forget Password",
+  "didForgotPassword": "Forgot Password?",
+  "changePassword": "Change Password",
+  "createNewPassword": "Create a New Password",
+  "createPasswordToSignIn": "Create a new password to sign in",
+  "passwordChangedSuccessfully": "Password changed successfully",
+  "passwordsDontMatchFunny": "Passwords don't match, bro.\nTry entering two matching ones — seriously!",
+
+  "verifyCode": "Verification Code",
+  "resendCode": "Resend the code",
+  "phoneVerificationMessage": "Don't worry, just enter your phone number and we'll send a verification code.",
+  "enterCodeSentToEmail": "Enter the code we sent to the following email address: {email}",
+
   "emailIsRequired": "Email is required",
   "invalidEmailSymbol": "Email must contain '@' symbol.",
   "invalidEmailDomain": "Email must end with a valid domain (e.g., .com, .org).",
   "emailFailureValidation": "Error validating email:",
 
-
   "fullNameIsRequired": "Full name is required.",
   "fullNameinvalid": "Please enter a valid full name.",
   "fullNameValidationFailure": "Validation failed for full name:",
-
 
   "passwordIsRequired": "Password is required",
   "passwordLength8Character": "Password must be at least 8 characters long.",
@@ -30,105 +78,152 @@
   "invalidPassword": "Invalid Password",
   "passwordValidationFailure": "Error validating password:",
 
-
   "phoneNumberIsRequired": "Phone number is required",
   "invalidPhoneNumber": "Invalid phone number",
   "unsupportedPhoneNumber": "Un-Supported phone number",
 
-
   "cardNumberIsRequired": "Card number is required",
   "invalidCardNumber": "Invalid card number",
   "cardNumberValidationFailure": "Failed to validate card number:",
-
-
   "cvvRequired": "CVV is required",
   "cvvMustBe3or4Digits": "CVV must be 3 or 4 digits",
   "invalidCvv": "Invalid CVV format",
   "cvvValidationFailure": "Failed to validate CVV:",
-
-
   "expireDateRequired": "Expiry date is required",
   "expireDateWrongFormat": "Use MM/YY format",
   "cardExpired": "This card has expired",
   "expireDateValidationError": "Failed to validate expiry date:",
 
-
-  "forgotPassword": "Forget Password",
-  
-
-  "dontHaveAccount": "Don't have an account?",
-  "createAccount": "Create an account",
-
-  
-  "or": "OR",
-  "alreadyHaveAccount": "Already have an account?",
-  "login": "Login",
-
-
-  "mostSold": "Best Sellers",
-  "more": "More",
-  "eidOffers": "Eid Offers",
-  "discount": "Discount",
-
-
+  "home": "Home",
   "goodMorning": "Good morning!..",
-  "search": "Search",
-  "infoUnavailable": "Sorry... This information is currently unavailable",
-  "recentSearches": "Recent Searches",
-  "clearAll": "Clear All",
-  "searchResults": "Search Results",
-  "results": "Results",
-
-  "markAllRead": "Mark All as Read",
-
+  "bestSellers": "Best sellers",
+  "mostSold": "Best Sellers",
+  "eidOffers": "Eid Offers",
+  "clearance": "Clearance",
+  "shopNow": "Shop now",
   "ourProducts": "Our Products",
+  "recommended": "Recommended",
+
+  "search": "Search",
+  "search2": "Search",
+  "searchFor": "Search for.......",
+  "recentSearches": "Recent Searches",
+  "searchResults": "Search Results",
+  "noSearchResults": "No search results",
+  "results": "Results",
+  "clearAll": "Clear All",
+  "infoUnavailable": "Sorry... This information is currently unavailable",
+  "filterBy": "Filter by:",
+  "sortBy": "Sort by:",
+  "more": "Show more",
+  "more2": "more",
+
+  "products": "Products",
   "price": "Price:",
   "to": "To",
-
-
+  "addToCart": "Add to cart",
+  "cart": "Cart",
+  "cartProductsCount": "You have {count} products in the cart",
+  "shoppingCart": "Shopping Cart",
   "itemsInCart": "You have products in your cart",
+
   "review": "Review",
   "summary": "Summary",
-
-
-  "saveAddress": "Save Address",
-  "choosePayment": "Choose your preferred payment method:",
-  "makeDefaultCard": "Make this card default",
-  "pleaseChoosePayment": "Please select a suitable payment method.",
-  "deliveryAddress": "Delivery Address",
-  "edit": "Edit",
-
-
-  "confirmOrder": "Please confirm your order",
-  "paymentMethod": "Payment Method",
+  "summary2": "Summary",
+  "checkoutReview": "Review",
   "orderSummary": "Order Summary:",
+  "confirmOrder": "Please confirm your order",
+  "pleaseConfirmOrder": "Please confirm your order",
   "subtotal": "Subtotal:",
+  "subtotal2": "Subtotal:",
+  "total2": "Total",
   "delivery": "Delivery:",
   "total": "Total",
+  "shipping": "Shipping",
+
+  "payment": "Payment",
+  "pay": "Pay",
+  "paymentMethod": "Payment Method",
+  "paymentMethod2": "Payment Method",
+  "payments": "Payments",
+  "choosePayment": "Choose your preferred payment method:",
+  "choosePaymentMethod": "Choose your payment method:",
+  "pleaseChoosePayment": "Please select a suitable payment method.",
+  "pleaseChoosePaymentMethod": "Please choose your preferred payment method.",
+  "addPaymentMethod": "Add new payment method",
+  "addNewCard": "Add New Card",
   "cashOnDelivery": "Cash on Delivery",
+  "makeDefaultCard": "Make this card default",
+  "setAsDefaultCard": "Set as default card",
+
+  "cardHolderName": "Cardholder Name",
+  "cardNumber": "Card Number",
+  "expiryDate": "Expiry Date",
+  "cvv": "CVV",
+
+  "deliveryAddress": "Delivery Address",
+  "address": "Address",
+  "city": "City",
+  "floorApartment": "Floor number, apartment number..",
+  "saveAddress": "Save Address",
   "pickup": "Pickup from Store",
-  "success": "Completed Successfully!",
+  "pickup2": "Pickup",
 
-
-  "home": "Home",
+  "myOrders": "My Orders",
   "orderNumber": "Order No: #1245789663",
   "trackOrder": "Track Order",
   "numberOfOrders": "Number of Orders",
+  "stepsCompleted": "Steps completed!",
 
-
-  "changePassword": "Change Password",
-  "personalInfo": "Personal Information",
-  "general": "General",
-  "help": "Help",
-  "logout": "Log out",
-
-
-  "arabic": "Arabic",
-  "language": "Language",
-  "notifications": "Notifications",
-  "favorites": "Favorites",
-  "payments": "Payments",
-  "myOrders": "My Orders",
   "profile": "Profile",
-  "theme": "Theme"
+  "myAccount": "My Account",
+  "personalInfo": "Personal Information",
+  "favorites": "Favorites",
+
+  "general": "General",
+  "generalTitle": "General",
+  "generalSubTitle": "Validity",
+  "language": "Language",
+  "arabic": "Arabic",
+  "theme": "Theme",
+  "notifications": "Notifications",
+  "notificationsTitle": "Notifications",
+  "alreadyInNotifications": "You're already on the Notifications screen, boss...",
+  "markAllRead": "Mark All as Read",
+  "neww": "New",
+  "earlier": "Earlier",
+
+  "help": "Help",
+  "aboutUs": "About Us",
+  "typeComment": "Write a comment...",
+
+  "tota2l": "Total",
+  "delivery2": "Delivery :",
+
+  "loremWarning": "There are many variations of passages of Lorem Ipsum available, but the majority have been altered in some way by injected humour or random words. If you are going to use a Lorem Ipsum passage, you need to make sure there isn't anything embarrassing hidden in the text.",
+  "loremWarning1": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+  "loremWarning2": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words.",
+  "loremWarning3": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+  "loremWarning4": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+  "loremWarning5": "There are many variations of Lorem Ipsum passages available, but the majority have been altered in some way by injecting humor or random words. If you are going to use a passage of Lorem Ipsum, you need to make sure there isn't anything embarrassing or inappropriate hidden in the middle of the text.",
+
+  
+  "addressIsRequired": "Address is required",
+  "addressTooShort": "Address is too short (minimum 10 characters)",
+  "addressMustContainLetters": "Address must contain letters",
+  "addressMustContainNumber": "Address must contain at least one number",
+  "addressOnlySymbols": "Address cannot contain only symbols",
+  "addressValidationFailure": "Address validation failed:",
+
+
+  "cityIsRequired": "City name is required.",
+  "cityTooShort": "City name must be at least 2 characters long.",
+  "cityOnlyLettersAllowed": "City name must contain only letters.",
+  "cityValidationFailure": "An error occurred while validating the city:",
+
+
+  "changeSuccess": "Changed successfully",
+  "sortLowToHigh": "Price (Low to High)",
+  "sortHighToLow": "Price (High to Low)",
+  "sortAlphabetical": "Alphabetical"
 }

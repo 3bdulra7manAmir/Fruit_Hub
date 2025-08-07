@@ -5,14 +5,14 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/validation/app_validation.dart';
-import '../../../../../core/utils/input_formatters.dart';
+import '../../../../../core/utils/UI/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class EditFullNameFieldWidget extends StatelessWidget
 {
-  const EditFullNameFieldWidget({super.key,});
+  const EditFullNameFieldWidget({super.key, required this.fullNameController,});
 
-  static final TextEditingController fullNameController = TextEditingController();
+  final TextEditingController fullNameController;
 
   @override
   Widget build(BuildContext context)

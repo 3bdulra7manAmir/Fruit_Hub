@@ -7,9 +7,9 @@ import 'edit_full_name.dart';
 
 class EditEmailFieldWidget extends StatelessWidget
 {
-  const EditEmailFieldWidget({super.key,});
+  const EditEmailFieldWidget({super.key, required this.emailController,});
 
-  static final TextEditingController emailController = TextEditingController();
+  final TextEditingController emailController;
 
   @override
   Widget build(BuildContext context)

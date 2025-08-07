@@ -4,13 +4,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../config/i18n/generated/l10n.dart';
 import '../../../config/router/app_router.dart';
 import '../../../config/theme/color_manager/colors.dart';
 import '../../constants/app_borders.dart';
 import '../../constants/app_images.dart';
 import '../../constants/app_sizes.dart';
 import '../../constants/app_styles.dart';
-import '../../extensions/widget_margin.dart';
+import '../../extensions/margin.dart';
 import '../buttons/button.dart';
 import 'dialog.dart';
 
@@ -30,7 +31,7 @@ class PopScopeWidget extends StatelessWidget
   {
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) async
+      onPopInvokedWithResult: (didPop, result) async
       {
         if (didPop)
         {
@@ -78,7 +79,7 @@ class PopScopeWidget extends StatelessWidget
             child: SvgPicture.asset(AppAssets.icons.removeBlack)
           ),
           Sizes.s12.verticalSpace,
-          Text('هل ترغب في تسجيل الخروج ؟', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+          Text(S.current.logoutConfirmation, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
           Sizes.s29.verticalSpace,
           Row(
             children:
@@ -89,7 +90,7 @@ class PopScopeWidget extends StatelessWidget
                   log('Exit App');
                   SystemNavigator.pop();
                 },
-                text: 'تأكيد', width: 146.w, height: 48.h,
+                text: S.current.confirm, width: 146.w, height: 48.h,
                 )),
               Sizes.s8.horizontalSpace,
               Expanded(child: CustomButton(
@@ -97,7 +98,7 @@ class PopScopeWidget extends StatelessWidget
                 {
                   AppRouter.router.pop();
                 },
-                text: 'لا ارغب', width: 146.w, height: 48.h,
+                text: S.current.noThanks, width: 146.w, height: 48.h,
                 textStyle: AppStyles.bold(fontColor: AppColors.color.kGreen001),
                 backgroundColor: AppColors.color.kWhite001,
                 borderColor: AppColors.color.kGreen001,

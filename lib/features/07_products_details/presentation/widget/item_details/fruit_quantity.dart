@@ -1,5 +1,7 @@
 import 'dart:developer';
+
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,6 +11,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../03_home/presentation/widget/fruit_grid_card/add_button.dart';
+import '../../controllers/fruit_item_quantity_controller.dart';
 
 class FruitNeededQuantityWidget extends StatelessWidget
 {
@@ -29,28 +32,44 @@ class FruitNeededQuantityWidget extends StatelessWidget
 }
 
 
-class FruitQuantityChanger extends StatelessWidget
+class FruitQuantityChanger extends ConsumerWidget
 {
   const FruitQuantityChanger({super.key,});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return Row(
       children:
       [
         GestureDetector(
-          onTap: () {log('Add has been Pressed...');},
-          child: const FruitAddButtonWidget(),
+          onTap: ()
+          {
+            log('Add has been Pressed...');
+            ref.read(fruitItemQuantityProvider.notifier).increment();
+          },
+          child: FruitAddButton(
+            child: SvgPicture.asset(AppAssets.icons.crossWhite, 
+              fit: BoxFit.scaleDown, 
+              colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
+            ),
+          ),
         ),
 
         Sizes.s16.horizontalSpace,
-        Text('4', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text(ref.watch(fruitItemQuantityProvider).toString(), style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
 
         Sizes.s16.horizontalSpace,
         GestureDetector(
-          onTap: () {log('Subtract has been Pressed...');},
-          child: SvgPicture.asset(AppAssets.icons.subtract),
+          onTap: ()
+          {
+            log('Subtract has been Pressed...');
+            ref.read(fruitItemQuantityProvider.notifier).decrement();
+          },
+          child: FruitAddButton(
+            color: AppColors.color.kWhite002,
+            child: SvgPicture.asset(AppAssets.icons.subtract),
+          ),
         ),
       ],
     );

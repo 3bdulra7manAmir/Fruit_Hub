@@ -18,31 +18,29 @@ class ItemDetails extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      body: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:
-          [
-            const FruitItemWidget(),
-            Sizes.s24.verticalSpace,
-            CustomColumn(
-              children:
-              [
-                const FruitNeededQuantityWidget(),
-                Sizes.s8.verticalSpace,
-                const FruitItemRatingWidget(),
-                Sizes.s8.verticalSpace,
-                const FruitItemDescriptionWidget(),
-                Sizes.s16.verticalSpace,
-                const FruitHealthGridInfoWidget(),
-                Sizes.s24.verticalSpace,
-                const AddToCartButtonWidget(),
-                Sizes.s16.verticalSpace,
-              ]
-            ),
-          ],
-        ),
+      body: CustomSingleChild(
+        isMargin: false,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children:
+        [
+          const FruitItemWidget(),
+          Sizes.s24.verticalSpace,
+          CustomColumn(
+            children:
+            [
+              const FruitNeededQuantityWidget(),
+              Sizes.s8.verticalSpace,
+              const FruitItemRatingWidget(),
+              Sizes.s8.verticalSpace,
+              const FruitItemDescriptionWidget(),
+              Sizes.s16.verticalSpace,
+              const FruitHealthGridInfoWidget(),
+              Sizes.s24.verticalSpace,
+              const AddToCartButtonWidget(),
+              Sizes.s24.verticalSpace,
+            ]
+          ),
+        ],
       ),
     );
   }
