@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 extension WidgetFlipsPerLocale on Widget
@@ -31,5 +32,35 @@ extension WidgetFlipsPerLocale on Widget
   {
     const rtlLanguages = ['en'];
     return rtlLanguages.contains(locale.languageCode.toLowerCase());
+  }
+
+
+   /// Always flip horizontally regardless of locale
+  Widget flipHorizontally({Alignment alignment = Alignment.center})
+  {
+    return Transform(
+      alignment: alignment,
+      transform: Matrix4.identity()..scale(-1.0, 1.0),
+      child: this,
+    );
+  }
+
+  /// Always flip vertically (upside-down mirror)
+  Widget flipVertically({Alignment alignment = Alignment.center})
+  {
+    return Transform(
+      alignment: alignment,
+      transform: Matrix4.identity()..scale(1.0, -1.0),
+      child: this,
+    );
+  }
+
+  /// Rotate 180 degrees (pi radians)
+  Widget rotate180()
+  {
+    return Transform.rotate(
+      angle: math.pi,
+      child: this,
+    );
   }
 }

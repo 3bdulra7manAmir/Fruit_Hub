@@ -8,7 +8,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/margin.dart';
 import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
-import 'current_order_cart.dart';
+import '../../../../10_profile/presentation/widget/order_icon.dart';
 
 class TimeLineCardWidget extends StatelessWidget
 {
@@ -40,13 +40,9 @@ class TimeLineCardWidget extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Text(S.current.trackOrder, style: AppStyles.extraLight(
-                  fontWeight: AppFontWeights.boldWeight,
-                  fontColor: AppColors.color.kBlack004,),
-                ),
-                Text('22 مارس , 2024', style: AppStyles.extraLight(
-                  fontColor: AppColors.color.kGrey002,),
-                ),
+                Text(S.current.trackOrder, style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight,
+                  fontColor: AppColors.color.kBlack004,),),
+                Text('22 مارس , 2024', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002,),),
               ],
             ).marginOnly(top: 10.h),
           ],

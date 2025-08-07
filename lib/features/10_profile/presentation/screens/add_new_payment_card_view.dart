@@ -22,7 +22,6 @@ class AddNewPaymentCard extends StatelessWidget
   final TextEditingController expireDateController = TextEditingController();
   final TextEditingController cvvCodeController = TextEditingController();
   final TextEditingController ownerNameController = TextEditingController();
-  
 
   @override
   Widget build(BuildContext context)
