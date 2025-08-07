@@ -289,7 +289,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "signInWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "sortAlphabetical": MessageLookupByLibrary.simpleMessage("الأبجدية"),
         "sortBy": MessageLookupByLibrary.simpleMessage("ترتيب حسب :"),
+        "sortHighToLow":
+            MessageLookupByLibrary.simpleMessage("السعر ( الأعلى إلى الأقل )"),
+        "sortLowToHigh":
+            MessageLookupByLibrary.simpleMessage("السعر ( الأقل إلى الأعلى )"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "stepsCompleted":
             MessageLookupByLibrary.simpleMessage("تم إكمال الخطوات!"),

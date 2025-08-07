@@ -222,5 +222,8 @@
   "cityValidationFailure": "An error occurred while validating the city:",
 
 
-  "changeSuccess": "Changed successfully"
+  "changeSuccess": "Changed successfully",
+  "sortLowToHigh": "Price (Low to High)",
+  "sortHighToLow": "Price (High to Low)",
+  "sortAlphabetical": "Alphabetical"
 }

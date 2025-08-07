@@ -292,7 +292,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sign in with Facebook"),
         "signInWithGoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with Google"),
+        "sortAlphabetical":
+            MessageLookupByLibrary.simpleMessage("Alphabetical"),
         "sortBy": MessageLookupByLibrary.simpleMessage("Sort by:"),
+        "sortHighToLow":
+            MessageLookupByLibrary.simpleMessage("Price (High to Low)"),
+        "sortLowToHigh":
+            MessageLookupByLibrary.simpleMessage("Price (Low to High)"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start now"),
         "stepsCompleted":
             MessageLookupByLibrary.simpleMessage("Steps completed!"),

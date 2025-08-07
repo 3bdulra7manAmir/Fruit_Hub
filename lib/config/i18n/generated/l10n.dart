@@ -1959,6 +1959,36 @@ class S {
       args: [],
     );
   }
+
+  /// `السعر ( الأقل إلى الأعلى )`
+  String get sortLowToHigh {
+    return Intl.message(
+      'السعر ( الأقل إلى الأعلى )',
+      name: 'sortLowToHigh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `السعر ( الأعلى إلى الأقل )`
+  String get sortHighToLow {
+    return Intl.message(
+      'السعر ( الأعلى إلى الأقل )',
+      name: 'sortHighToLow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الأبجدية`
+  String get sortAlphabetical {
+    return Intl.message(
+      'الأبجدية',
+      name: 'sortAlphabetical',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -221,5 +221,8 @@
   "cityValidationFailure": "حدث خطأ أثناء التحقق من صحة اسم المدينة:",
 
   
-  "changeSuccess": "تم التغيير بنجاح"
+  "changeSuccess": "تم التغيير بنجاح",
+  "sortLowToHigh": "السعر ( الأقل إلى الأعلى )",
+  "sortHighToLow": "السعر ( الأعلى إلى الأقل )",
+  "sortAlphabetical": "الأبجدية"
 }

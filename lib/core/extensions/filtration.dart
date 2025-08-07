@@ -1,3 +1,4 @@
+import '../../config/i18n/generated/l10n.dart';
 import '../../features/06_products/presentation/widget/sort_modal_sheet/radio_card.dart';
 
 extension SingingCharacterExtension on SingingCharacter
@@ -7,11 +8,11 @@ extension SingingCharacterExtension on SingingCharacter
     switch (this)
     {
       case SingingCharacter.low2Hight:
-        return 'السعر ( الأقل إلى الأعلى )';
+        return S.current.sortLowToHigh;
       case SingingCharacter.hight2Low:
-        return 'السعر ( الأعلى إلى الأقل )';
+        return S.current.sortHighToLow;
       case SingingCharacter.alpha:
-        return 'الأبجدية';
+        return S.current.sortAlphabetical;
     }
   }
 }

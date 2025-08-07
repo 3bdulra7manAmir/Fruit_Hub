@@ -1,6 +1,6 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
 import '../../../../../core/services/database/shared_preferences/shared_pref_manager.dart';
 import '../../../core/extensions/rebuild.dart';
 import '../../router/app_router.dart';
@@ -12,33 +12,37 @@ part 'theme_controller.g.dart';
 class Theme extends _$Theme {
   @override
   ThemeMode build() {
-    final themeString = SharedPrefManager().themeMode;
-    log('Loaded Theme from SharedPrefs: $themeString');
-
-    final appThemeMode = switch (themeString) {
-      'dark' => ThemeMode.dark,
-      'light' => ThemeMode.light,
-      _ => ThemeMode.system
-    };
-
-    AppColors.i.themeMode = appThemeMode.name;
-    return appThemeMode;
+    Future.microtask(loadSavedTheme);
+    AppColors.i.themeMode = 'light';
+    return ThemeMode.light;
   }
 
+  ///[Load_Save_Them_ON_APP_START]
+  Future<void> loadSavedTheme() async {
+    final saved = SharedPrefManager().themeMode;
+    final isDark = saved == 'dark';
+    state = isDark ? ThemeMode.dark : ThemeMode.light;
+    AppColors.i.themeMode = saved;
+  }
+
+  ///[Switch_Between_Themes] For Toggle Button
   void toggle() {
-    final mode = state == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
-    _changeTheme(mode);
-    _saveTheme(mode);
-    (AppRouter.navigatorState.currentContext as Element).visitChildren(rebuild);
+    final newMode = state == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
+    _changeTheme(newMode);
   }
 
+  ///[Switch_Between_Themes] Logic of the Toggle Button
   void _changeTheme(ThemeMode mode) {
     state = mode;
-    AppColors.i.themeMode = mode.name;
-    // log(mode.name);
+    final modeName = mode.name;
+    AppColors.i.themeMode = modeName;
+    SharedPrefManager().setThemeMode(modeName);
+    _rebuildUI();
   }
 
-  void _saveTheme(ThemeMode mode) {
-    SharedPrefManager().setThemeMode(mode.name);
+  ///[Force_Current_Childer_or_View_to_Rebuild] 
+  void _rebuildUI() {
+    final ctx = AppRouter.navigatorState.currentContext;
+    if (ctx is Element) ctx.visitChildren(rebuild);
   }
 }
