@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/constants/app_images.dart';
-import '../../../../../core/services/validation/app_validation.dart';
+import '../../../../../core/services/validation/validation.dart';
 import '../../../../../core/utils/UI/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 

@@ -126,6 +126,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Error validating email:"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("Email is required"),
+        "emptySearch":
+            MessageLookupByLibrary.simpleMessage("Search is empty, buddy"),
         "enterCodeSentToEmail": m1,
         "enterEmail": MessageLookupByLibrary.simpleMessage("Enter email"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
@@ -169,12 +171,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid Password"),
         "invalidPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Invalid phone number"),
+        "invalid_credential":
+            MessageLookupByLibrary.simpleMessage("Invalid email or Password."),
         "itemsInCart": MessageLookupByLibrary.simpleMessage(
             "You have products in your cart"),
         "kiloG": MessageLookupByLibrary.simpleMessage("KG"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "le": MessageLookupByLibrary.simpleMessage("LE"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginFailJoke": MessageLookupByLibrary.simpleMessage(
+            "Haha, who do you think you are, son of who?"),
+        "loginFailed": MessageLookupByLibrary.simpleMessage("Login failed"),
+        "login_failed": MessageLookupByLibrary.simpleMessage(
+            "Login failed. Please try again."),
         "logout": MessageLookupByLibrary.simpleMessage("Log out"),
         "logoutConfirmation":
             MessageLookupByLibrary.simpleMessage("Do you want to log out?"),
@@ -281,6 +290,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search and shop"),
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
         "searchResults": MessageLookupByLibrary.simpleMessage("Search Results"),
+        "searchWithoutInput": MessageLookupByLibrary.simpleMessage(
+            "How are you trying to search with nothing?"),
         "setAsDefaultCard":
             MessageLookupByLibrary.simpleMessage("Set as default card"),
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
@@ -311,6 +322,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "summary2": MessageLookupByLibrary.simpleMessage("Summary"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
+        "too_many_requests": MessageLookupByLibrary.simpleMessage(
+            "Too many failed attempts. Try again later."),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
         "total2": MessageLookupByLibrary.simpleMessage("Total"),
         "trackOrder": MessageLookupByLibrary.simpleMessage("Track Order"),
@@ -318,6 +331,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Write a comment..."),
         "unsupportedPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Un-Supported phone number"),
+        "user_disabled": MessageLookupByLibrary.simpleMessage(
+            "This user has been disabled."),
+        "user_not_found": MessageLookupByLibrary.simpleMessage(
+            "No account found with this email."),
         "verifyCode": MessageLookupByLibrary.simpleMessage("Verification Code"),
         "welcomeIn": MessageLookupByLibrary.simpleMessage("Welcome In")
       };

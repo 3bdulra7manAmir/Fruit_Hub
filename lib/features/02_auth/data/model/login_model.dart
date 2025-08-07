@@ -1,13 +1,24 @@
 import 'package:equatable/equatable.dart';
+import '../../domain/entity/login_entity.dart';
 
-class LoginModel extends Equatable
-{
-  const LoginModel({this.userId, this.userEmail, this.userPassword});
+class LoginModel extends LoginEntity with EquatableMixin {
+  const LoginModel({
+    required super.email,
+    required super.password,
+  });
 
-  final String? userId;
-  final String? userEmail;
-  final String? userPassword;
-  
+  factory LoginModel.fromJson(Map<String, dynamic> json) {
+    return LoginModel(
+      email: json['email'] as String,
+      password: json['password'] as String,
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+        'email': email,
+        'password': password,
+      };
+
   @override
-  List<Object?> get props => [userId, userEmail, userPassword];
+  List<Object?> get props => [email, password];
 }

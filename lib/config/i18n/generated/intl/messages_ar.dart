@@ -124,6 +124,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "خطأ في التحقق من البريد الإلكتروني:"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
+        "emptySearch":
+            MessageLookupByLibrary.simpleMessage("البحث فاضي يا معلم"),
         "enterCodeSentToEmail": m1,
         "enterEmail":
             MessageLookupByLibrary.simpleMessage("أدخل البريد الإلكتروني"),
@@ -168,12 +170,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير صالحة"),
         "invalidPhoneNumber":
             MessageLookupByLibrary.simpleMessage("رقم الهاتف غير صالح"),
+        "invalid_credential": MessageLookupByLibrary.simpleMessage(
+            "عنوان البريد الإلكتروني  او كلمة المرور غير صالحين."),
         "itemsInCart":
             MessageLookupByLibrary.simpleMessage("لديك منتجات في سلة التسوق"),
         "kiloG": MessageLookupByLibrary.simpleMessage("كم"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "le": MessageLookupByLibrary.simpleMessage("جنية"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "loginFailJoke": MessageLookupByLibrary.simpleMessage(
+            "خخخ عيب انت فاكر نفسك ابن مين يا ولد؟"),
+        "loginFailed": MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
+        "login_failed": MessageLookupByLibrary.simpleMessage(
+            "فشل تسجيل الدخول. حاول مرة أخرى."),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "logoutConfirmation":
             MessageLookupByLibrary.simpleMessage("هل ترغب في تسجيل الخروج ؟"),
@@ -278,6 +287,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchAndShop": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "searchResults": MessageLookupByLibrary.simpleMessage("نتائج البحث"),
+        "searchWithoutInput": MessageLookupByLibrary.simpleMessage(
+            "عايز تبحث ازاي والبحث فاضي؟؟"),
         "setAsDefaultCard":
             MessageLookupByLibrary.simpleMessage("جعل البطاقة افتراضية"),
         "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
@@ -306,12 +317,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "summary2": MessageLookupByLibrary.simpleMessage("الملخص"),
         "theme": MessageLookupByLibrary.simpleMessage("الوضع"),
         "to": MessageLookupByLibrary.simpleMessage("إلى"),
+        "too_many_requests": MessageLookupByLibrary.simpleMessage(
+            "عدد محاولات كثيرة جدًا. حاول لاحقًا."),
         "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
         "total2": MessageLookupByLibrary.simpleMessage("الكلي"),
         "trackOrder": MessageLookupByLibrary.simpleMessage("تتبع الطلب"),
         "typeComment": MessageLookupByLibrary.simpleMessage("اكتب التعليق.."),
         "unsupportedPhoneNumber":
             MessageLookupByLibrary.simpleMessage("رقم الهاتف غير مدعوم حالياً"),
+        "user_disabled":
+            MessageLookupByLibrary.simpleMessage("تم تعطيل هذا المستخدم."),
+        "user_not_found": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد حساب مرتبط بهذا البريد."),
         "verifyCode": MessageLookupByLibrary.simpleMessage("التحقق من الرمز"),
         "welcomeIn": MessageLookupByLibrary.simpleMessage("مرحبًا بك في")
       };

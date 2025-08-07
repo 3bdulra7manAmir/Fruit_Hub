@@ -225,5 +225,18 @@
   "changeSuccess": "Changed successfully",
   "sortLowToHigh": "Price (Low to High)",
   "sortHighToLow": "Price (High to Low)",
-  "sortAlphabetical": "Alphabetical"
+  "sortAlphabetical": "Alphabetical",
+
+
+  "loginFailed": "Login failed",
+  "loginFailJoke": "Haha, who do you think you are, son of who?",
+  "emptySearch": "Search is empty, buddy",
+  "searchWithoutInput": "How are you trying to search with nothing?",
+
+
+  "login_failed": "Login failed. Please try again.",
+  "invalid_credential": "Invalid email or Password.",
+  "user_not_found": "No account found with this email.",
+  "user_disabled": "This user has been disabled.",
+  "too_many_requests": "Too many failed attempts. Try again later."
 }

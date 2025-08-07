@@ -224,5 +224,19 @@
   "changeSuccess": "تم التغيير بنجاح",
   "sortLowToHigh": "السعر ( الأقل إلى الأعلى )",
   "sortHighToLow": "السعر ( الأعلى إلى الأقل )",
-  "sortAlphabetical": "الأبجدية"
+  "sortAlphabetical": "الأبجدية",
+
+
+  "loginFailed": "فشل تسجيل الدخول",
+  "loginFailJoke": "خخخ عيب انت فاكر نفسك ابن مين يا ولد؟",
+  "emptySearch": "البحث فاضي يا معلم",
+  "searchWithoutInput": "عايز تبحث ازاي والبحث فاضي؟؟",
+
+
+  "login_failed": "فشل تسجيل الدخول. حاول مرة أخرى.",
+  "invalid_credential": "عنوان البريد الإلكتروني  او كلمة المرور غير صالحين.",
+  "user_not_found": "لا يوجد حساب مرتبط بهذا البريد.",
+  "user_disabled": "تم تعطيل هذا المستخدم.",
+  "too_many_requests": "عدد محاولات كثيرة جدًا. حاول لاحقًا."
+
 }

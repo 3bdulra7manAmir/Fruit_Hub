@@ -1989,6 +1989,96 @@ class S {
       args: [],
     );
   }
+
+  /// `فشل تسجيل الدخول`
+  String get loginFailed {
+    return Intl.message(
+      'فشل تسجيل الدخول',
+      name: 'loginFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `خخخ عيب انت فاكر نفسك ابن مين يا ولد؟`
+  String get loginFailJoke {
+    return Intl.message(
+      'خخخ عيب انت فاكر نفسك ابن مين يا ولد؟',
+      name: 'loginFailJoke',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البحث فاضي يا معلم`
+  String get emptySearch {
+    return Intl.message(
+      'البحث فاضي يا معلم',
+      name: 'emptySearch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عايز تبحث ازاي والبحث فاضي؟؟`
+  String get searchWithoutInput {
+    return Intl.message(
+      'عايز تبحث ازاي والبحث فاضي؟؟',
+      name: 'searchWithoutInput',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل تسجيل الدخول. حاول مرة أخرى.`
+  String get login_failed {
+    return Intl.message(
+      'فشل تسجيل الدخول. حاول مرة أخرى.',
+      name: 'login_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عنوان البريد الإلكتروني  او كلمة المرور غير صالحين.`
+  String get invalid_credential {
+    return Intl.message(
+      'عنوان البريد الإلكتروني  او كلمة المرور غير صالحين.',
+      name: 'invalid_credential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا يوجد حساب مرتبط بهذا البريد.`
+  String get user_not_found {
+    return Intl.message(
+      'لا يوجد حساب مرتبط بهذا البريد.',
+      name: 'user_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم تعطيل هذا المستخدم.`
+  String get user_disabled {
+    return Intl.message(
+      'تم تعطيل هذا المستخدم.',
+      name: 'user_disabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عدد محاولات كثيرة جدًا. حاول لاحقًا.`
+  String get too_many_requests {
+    return Intl.message(
+      'عدد محاولات كثيرة جدًا. حاول لاحقًا.',
+      name: 'too_many_requests',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

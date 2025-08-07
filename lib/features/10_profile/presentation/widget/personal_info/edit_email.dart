@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/services/validation/app_validation.dart';
+import '../../../../../core/services/validation/validation.dart';
 import '../../../../../core/widgets/textform_field.dart';
 import 'edit_full_name.dart';
 

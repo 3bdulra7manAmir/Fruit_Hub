@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 dynamic customAppDialog({
   required BuildContext context,
+  bool? barrierDismissible,
   String? title,
   String? subtitle,
   AlignmentGeometry? alignment,
@@ -14,6 +15,8 @@ dynamic customAppDialog({
   {
     showDialog(
     context: context,
+    barrierDismissible: barrierDismissible ?? true,
+    barrierColor: backgroundColor,
     builder: (BuildContext context) => AlertDialog(
       alignment: alignment,
       actionsAlignment: actionsAlignment,
