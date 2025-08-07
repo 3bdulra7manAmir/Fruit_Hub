@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/divider.dart';
 import '../../../../10_profile/presentation/controller/orders_histroy/current_order_expanded_controller.dart';
 import '../../../../10_profile/presentation/widget/order_icon.dart';
+import '../../../../10_profile/presentation/widget/orders_history/expand_arrow.dart';
 import '../../../../10_profile/presentation/widget/orders_history/order_date_text.dart';
 import '../../../../10_profile/presentation/widget/orders_history/order_tracking_steps.dart';
 import '../../../../10_profile/presentation/widget/orders_history/orders_count_and_price_text.dart';
@@ -40,16 +39,18 @@ class CurrentOrderWidget extends ConsumerWidget
             [
               const OrderIconWidget(),
               Sizes.s16.horizontalSpace,
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children:
-                [
-                  const OrderNumberTextWidget(),
-                  Sizes.s3.verticalSpace,
-                  const OrderDateTextWidget(),
-                  Sizes.s6.verticalSpace,
-                  const OrdersCountTextWidget(),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:
+                  [
+                    const OrderNumberTextWidget(),
+                    Sizes.s3.verticalSpace,
+                    const OrderDateTextWidget(),
+                    Sizes.s6.verticalSpace,
+                    const OrdersCountTextWidget(),
+                  ],
+                ),
               ),
               if(isDownArrow)...
               [
@@ -59,7 +60,7 @@ class CurrentOrderWidget extends ConsumerWidget
                   child: AnimatedRotation(
                     turns: isExpanded ? 0.5 : 0,
                     duration: const Duration(milliseconds: 200),
-                    child: SvgPicture.asset(AppAssets.icons.downArrowBlack),
+                    child: const ExpandArrowWidget(),
                   ),
                 ),
               ]
@@ -78,4 +79,5 @@ class CurrentOrderWidget extends ConsumerWidget
     );
   }
 }
+
 

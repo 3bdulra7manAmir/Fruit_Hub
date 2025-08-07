@@ -10,18 +10,22 @@ import '../../../../../core/extensions/margin.dart';
 import '../../../../../core/widgets/popers/modal_bottom_sheet.dart';
 import '../../../../10_profile/presentation/widget/order_icon.dart';
 
-class TimeLineCardWidget extends StatelessWidget
-{
-  const TimeLineCardWidget({super.key});
+class TimeLineCardWidget extends StatelessWidget {
+  const TimeLineCardWidget({
+    super.key,
+    required this.index,
+    required this.itemCount,
+  });
+
+  final int index;
+  final int itemCount;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
+    final bool isLast = index == itemCount - 1;
     return Stack(
-      children:
-      [
-        Positioned(
-          top: 65.h, left: 0, right: 50.w,
+      children: [
+        Positioned(top: 65.h, left: 0, right: 50.w,
           child: CustomModalSheetDragger(height: 1.h, color: AppColors.color.kGrey021,),
         ),
         Row(
@@ -32,7 +36,12 @@ class TimeLineCardWidget extends StatelessWidget
               children:
               [
                 const OrderIconWidget(),
-                CustomModalSheetDragger(width: 2.w, height: 40.h, color: AppColors.color.kGrey020,),
+                if (!isLast)
+                  CustomModalSheetDragger(
+                    width: 2.w,
+                    height: 40.h,
+                    color: AppColors.color.kGrey020,
+                  ),
               ],
             ),
             Sizes.s24.horizontalSpace,
@@ -41,7 +50,7 @@ class TimeLineCardWidget extends StatelessWidget
               children:
               [
                 Text(S.current.trackOrder, style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight,
-                  fontColor: AppColors.color.kBlack004,),),
+                    fontColor: AppColors.color.kBlack004,),),
                 Text('22 مارس , 2024', style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002,),),
               ],
             ).marginOnly(top: 10.h),

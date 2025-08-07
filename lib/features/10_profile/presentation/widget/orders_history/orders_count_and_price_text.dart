@@ -17,9 +17,11 @@ class OrdersCountTextWidget extends StatelessWidget
     return Row(
       children:
       [
-        Text(S.current.numberOfOrders, style: AppStyles.extraLight(
-          fontWeight: AppFontWeights.regularWeight, 
-          fontColor: AppColors.color.kGrey002),
+        Flexible(
+          child: Text(S.current.numberOfOrders, style: AppStyles.extraLight(
+            fontWeight: AppFontWeights.regularWeight, 
+            fontColor: AppColors.color.kGrey002),
+          ),
         ),
         Text(': 10', style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 

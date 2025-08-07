@@ -5,19 +5,21 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/listview_builder.dart';
 import 'time_line_card.dart';
 
-class OrderTimeLineListWidget extends StatelessWidget
-{
+class OrderTimeLineListWidget extends StatelessWidget {
   const OrderTimeLineListWidget({super.key});
 
+  static const int _itemCount = 5;
+
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return CustomListviewBuilder(
-      itemCount: 5,
+      itemCount: _itemCount,
       padding: EdgeInsets.zero,
-      separatorBuilder: (_, __) => Sizes.s0.verticalSpace, //SizedBox.Shrink()
-      itemBuilder: (context, index) => const TimeLineCardWidget(),
+      separatorBuilder: (_, __) => Sizes.s0.verticalSpace,
+      itemBuilder: (context, index) => TimeLineCardWidget(
+        index: index,
+        itemCount: _itemCount,
+      ),
     );
   }
 }
-

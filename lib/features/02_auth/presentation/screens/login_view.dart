@@ -27,7 +27,7 @@ class Login extends StatelessWidget
   {
     
     return Scaffold(
-      appBar: CustomAppBar(title: S.current.login),
+      appBar: CustomAppBar(title: S.current.login,),
       body: CustomForm(
         formKey: loginFormKey,
         formBody: CustomSingleChild(

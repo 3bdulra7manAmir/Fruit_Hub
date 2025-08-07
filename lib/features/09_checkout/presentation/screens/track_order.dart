@@ -7,7 +7,7 @@ import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
-import '../widget/track_order/current_order_cart.dart';
+import '../widget/track_order/current_order_cart_body.dart';
 import '../widget/track_order/time_line_list.dart';
 
 class TrackOrder extends StatelessWidget

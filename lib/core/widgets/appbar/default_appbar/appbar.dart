@@ -108,5 +108,6 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
     catch (error, stack)
     {
       log('Error While Popping with AppRouter: $error\nStack: $stack');
+      CustomSnackBar().show(context, 'خخخ عيب انت فاكر نفسك ابن مين يا ولد؟');
     }
   }
