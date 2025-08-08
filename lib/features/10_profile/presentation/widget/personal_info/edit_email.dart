@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/services/validation/validation.dart';
@@ -15,7 +16,7 @@ class EditEmailFieldWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      hintText: 'mail@mail.com',
+      hintText: FirebaseAuth.instance.currentUser!.email ?? '',
       validator: (value) => AppValidation.emailValidation(value),
       controller: emailController,
       keyboardType: TextInputType.emailAddress,

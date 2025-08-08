@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -18,7 +19,7 @@ class EditFullNameFieldWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      hintText: 'أحمد ياسر',
+      hintText: FirebaseAuth.instance.currentUser!.displayName ?? '',
       controller: fullNameController,
       keyboardType: TextInputType.name,
       suffixIcon: NameEditWidget(onTap: () {log('Edit Name...');},),
