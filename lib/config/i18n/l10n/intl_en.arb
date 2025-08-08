@@ -234,9 +234,28 @@
   "searchWithoutInput": "How are you trying to search with nothing?",
 
 
+  "invalid_credential": "Invalid email or password.",
+  "user_not_found": "No user found with this email.",
+  "user_disabled": "This user account has been disabled.",
+  "too_many_requests": "Too many requests. Please try again later.",
+  "invalid_email": "Invalid email address.",
   "login_failed": "Login failed. Please try again.",
-  "invalid_credential": "Invalid email or Password.",
-  "user_not_found": "No account found with this email.",
-  "user_disabled": "This user has been disabled.",
-  "too_many_requests": "Too many failed attempts. Try again later."
+  "email_already_in_use": "This email is already in use.",
+  "operation_not_allowed": "Email/password sign-in is not enabled.",
+  "weak_password": "The password is too weak.",
+  "register_failed": "Registration failed. Please try again.",
+  "invalid_photo_url": "Invalid photo URL.",
+  "upload_failed": "Image upload failed. Please try again.",
+  "invalid_argument": "Invalid argument provided.",
+  "internal_error": "An internal error occurred.",
+  "invalid_user_token": "Invalid or expired user token.",
+  "invalid_session_duration": "Invalid session cookie duration.",
+  "session_cookie_revoked": "Session cookie has been revoked.",
+  "id_token_expired": "ID token has expired.",
+  "id_token_revoked": "ID token has been revoked.",
+  "unauthorized_continue_uri": "Unauthorized continue URI.",
+  "auth_failed": "Authentication failed. Please try again."
+
+
+  
 }

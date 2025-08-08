@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
-import '../../../../../core/services/error/firebase_status_code/firebase_login_error.dart';
+import '../../../../../core/services/network/status_code/login_status_code.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 import '../../../../../core/widgets/popers/loading_dialog.dart';
 import '../../../../../core/widgets/snackbar.dart';
@@ -50,7 +50,7 @@ class LoginButtonWidget extends ConsumerWidget {
           catch (e, st) {
             AppRouter.router.pop(); // remove loading
             log('Login error: $e\n$st');
-            CustomSnackBar().show(context, FirebaseErrorHelper.getMessageFromException(e));
+            CustomSnackBar().show(context, FirebaseLoginStatus.getMessageFromException(e));
           }
         }
         else {

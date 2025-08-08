@@ -52,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyInNotifications": MessageLookupByLibrary.simpleMessage(
             "You\'re already on the Notifications screen, boss..."),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "auth_failed": MessageLookupByLibrary.simpleMessage(
+            "Authentication failed. Please try again."),
         "bestSellers": MessageLookupByLibrary.simpleMessage("Best sellers"),
         "byCreatingAccountYouAgree": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to "),
@@ -126,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Error validating email:"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("Email is required"),
+        "email_already_in_use": MessageLookupByLibrary.simpleMessage(
+            "This email is already in use."),
         "emptySearch":
             MessageLookupByLibrary.simpleMessage("Search is empty, buddy"),
         "enterCodeSentToEmail": m1,
@@ -157,8 +161,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good morning!.."),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "id_token_expired":
+            MessageLookupByLibrary.simpleMessage("ID token has expired."),
+        "id_token_revoked":
+            MessageLookupByLibrary.simpleMessage("ID token has been revoked."),
         "infoUnavailable": MessageLookupByLibrary.simpleMessage(
             "Sorry... This information is currently unavailable"),
+        "internal_error":
+            MessageLookupByLibrary.simpleMessage("An internal error occurred."),
         "invalidCardNumber":
             MessageLookupByLibrary.simpleMessage("Invalid card number"),
         "invalidCvv":
@@ -171,8 +181,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid Password"),
         "invalidPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Invalid phone number"),
+        "invalid_argument":
+            MessageLookupByLibrary.simpleMessage("Invalid argument provided."),
         "invalid_credential":
-            MessageLookupByLibrary.simpleMessage("Invalid email or Password."),
+            MessageLookupByLibrary.simpleMessage("Invalid email or password."),
+        "invalid_email":
+            MessageLookupByLibrary.simpleMessage("Invalid email address."),
+        "invalid_photo_url":
+            MessageLookupByLibrary.simpleMessage("Invalid photo URL."),
+        "invalid_session_duration": MessageLookupByLibrary.simpleMessage(
+            "Invalid session cookie duration."),
+        "invalid_user_token": MessageLookupByLibrary.simpleMessage(
+            "Invalid or expired user token."),
         "itemsInCart": MessageLookupByLibrary.simpleMessage(
             "You have products in your cart"),
         "kiloG": MessageLookupByLibrary.simpleMessage("KG"),
@@ -224,6 +244,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "We offer you the finest carefully selected fruits. Check details, images, and reviews to ensure you choose the perfect fruit."),
         "onBoardingDescription": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best deals and top quality."),
+        "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
+            "Email/password sign-in is not enabled."),
         "or": MessageLookupByLibrary.simpleMessage("OR"),
         "orderNumber":
             MessageLookupByLibrary.simpleMessage("Order No: #1245789663"),
@@ -279,6 +301,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "recentSearches":
             MessageLookupByLibrary.simpleMessage("Recent Searches"),
         "recommended": MessageLookupByLibrary.simpleMessage("Recommended"),
+        "register_failed": MessageLookupByLibrary.simpleMessage(
+            "Registration failed. Please try again."),
         "resendCode": MessageLookupByLibrary.simpleMessage("Resend the code"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),
@@ -292,6 +316,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchResults": MessageLookupByLibrary.simpleMessage("Search Results"),
         "searchWithoutInput": MessageLookupByLibrary.simpleMessage(
             "How are you trying to search with nothing?"),
+        "session_cookie_revoked": MessageLookupByLibrary.simpleMessage(
+            "Session cookie has been revoked."),
         "setAsDefaultCard":
             MessageLookupByLibrary.simpleMessage("Set as default card"),
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
@@ -323,19 +349,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "too_many_requests": MessageLookupByLibrary.simpleMessage(
-            "Too many failed attempts. Try again later."),
+            "Too many requests. Please try again later."),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
         "total2": MessageLookupByLibrary.simpleMessage("Total"),
         "trackOrder": MessageLookupByLibrary.simpleMessage("Track Order"),
         "typeComment":
             MessageLookupByLibrary.simpleMessage("Write a comment..."),
+        "unauthorized_continue_uri":
+            MessageLookupByLibrary.simpleMessage("Unauthorized continue URI."),
         "unsupportedPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Un-Supported phone number"),
+        "upload_failed": MessageLookupByLibrary.simpleMessage(
+            "Image upload failed. Please try again."),
         "user_disabled": MessageLookupByLibrary.simpleMessage(
-            "This user has been disabled."),
+            "This user account has been disabled."),
         "user_not_found": MessageLookupByLibrary.simpleMessage(
-            "No account found with this email."),
+            "No user found with this email."),
         "verifyCode": MessageLookupByLibrary.simpleMessage("Verification Code"),
+        "weak_password":
+            MessageLookupByLibrary.simpleMessage("The password is too weak."),
         "welcomeIn": MessageLookupByLibrary.simpleMessage("Welcome In")
       };
 }

@@ -2030,51 +2030,211 @@ class S {
     );
   }
 
-  /// `فشل تسجيل الدخول. حاول مرة أخرى.`
-  String get login_failed {
-    return Intl.message(
-      'فشل تسجيل الدخول. حاول مرة أخرى.',
-      name: 'login_failed',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `عنوان البريد الإلكتروني  او كلمة المرور غير صالحين.`
+  /// `البريد الإلكتروني أو كلمة المرور غير صحيحة.`
   String get invalid_credential {
     return Intl.message(
-      'عنوان البريد الإلكتروني  او كلمة المرور غير صالحين.',
+      'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
       name: 'invalid_credential',
       desc: '',
       args: [],
     );
   }
 
-  /// `لا يوجد حساب مرتبط بهذا البريد.`
+  /// `لا يوجد مستخدم بهذا البريد الإلكتروني.`
   String get user_not_found {
     return Intl.message(
-      'لا يوجد حساب مرتبط بهذا البريد.',
+      'لا يوجد مستخدم بهذا البريد الإلكتروني.',
       name: 'user_not_found',
       desc: '',
       args: [],
     );
   }
 
-  /// `تم تعطيل هذا المستخدم.`
+  /// `تم تعطيل حساب هذا المستخدم.`
   String get user_disabled {
     return Intl.message(
-      'تم تعطيل هذا المستخدم.',
+      'تم تعطيل حساب هذا المستخدم.',
       name: 'user_disabled',
       desc: '',
       args: [],
     );
   }
 
-  /// `عدد محاولات كثيرة جدًا. حاول لاحقًا.`
+  /// `عدد كبير من المحاولات. حاول مرة أخرى لاحقًا.`
   String get too_many_requests {
     return Intl.message(
-      'عدد محاولات كثيرة جدًا. حاول لاحقًا.',
+      'عدد كبير من المحاولات. حاول مرة أخرى لاحقًا.',
       name: 'too_many_requests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عنوان البريد الإلكتروني غير صالح.`
+  String get invalid_email {
+    return Intl.message(
+      'عنوان البريد الإلكتروني غير صالح.',
+      name: 'invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في تسجيل الدخول. حاول مرة أخرى.`
+  String get login_failed {
+    return Intl.message(
+      'فشل في تسجيل الدخول. حاول مرة أخرى.',
+      name: 'login_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البريد الإلكتروني مستخدم بالفعل.`
+  String get email_already_in_use {
+    return Intl.message(
+      'البريد الإلكتروني مستخدم بالفعل.',
+      name: 'email_already_in_use',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل الدخول باستخدام البريد الإلكتروني غير مفعّل.`
+  String get operation_not_allowed {
+    return Intl.message(
+      'تسجيل الدخول باستخدام البريد الإلكتروني غير مفعّل.',
+      name: 'operation_not_allowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور ضعيفة جدًا.`
+  String get weak_password {
+    return Intl.message(
+      'كلمة المرور ضعيفة جدًا.',
+      name: 'weak_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في إنشاء الحساب. حاول مرة أخرى.`
+  String get register_failed {
+    return Intl.message(
+      'فشل في إنشاء الحساب. حاول مرة أخرى.',
+      name: 'register_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رابط الصورة غير صالح.`
+  String get invalid_photo_url {
+    return Intl.message(
+      'رابط الصورة غير صالح.',
+      name: 'invalid_photo_url',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في رفع الصورة. حاول مرة أخرى.`
+  String get upload_failed {
+    return Intl.message(
+      'فشل في رفع الصورة. حاول مرة أخرى.',
+      name: 'upload_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم إدخال قيمة غير صالحة.`
+  String get invalid_argument {
+    return Intl.message(
+      'تم إدخال قيمة غير صالحة.',
+      name: 'invalid_argument',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حدث خطأ داخلي.`
+  String get internal_error {
+    return Intl.message(
+      'حدث خطأ داخلي.',
+      name: 'internal_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رمز المستخدم غير صالح أو منتهي.`
+  String get invalid_user_token {
+    return Intl.message(
+      'رمز المستخدم غير صالح أو منتهي.',
+      name: 'invalid_user_token',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مدة جلسة غير صالحة.`
+  String get invalid_session_duration {
+    return Intl.message(
+      'مدة جلسة غير صالحة.',
+      name: 'invalid_session_duration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم إلغاء جلسة المستخدم.`
+  String get session_cookie_revoked {
+    return Intl.message(
+      'تم إلغاء جلسة المستخدم.',
+      name: 'session_cookie_revoked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رمز الجلسة منتهي الصلاحية.`
+  String get id_token_expired {
+    return Intl.message(
+      'رمز الجلسة منتهي الصلاحية.',
+      name: 'id_token_expired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم إلغاء رمز الجلسة.`
+  String get id_token_revoked {
+    return Intl.message(
+      'تم إلغاء رمز الجلسة.',
+      name: 'id_token_revoked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رابط متابعة غير مصرح به.`
+  String get unauthorized_continue_uri {
+    return Intl.message(
+      'رابط متابعة غير مصرح به.',
+      name: 'unauthorized_continue_uri',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل في المصادقة. حاول مرة أخرى.`
+  String get auth_failed {
+    return Intl.message(
+      'فشل في المصادقة. حاول مرة أخرى.',
+      name: 'auth_failed',
       desc: '',
       args: [],
     );
