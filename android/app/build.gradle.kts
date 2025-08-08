@@ -33,6 +33,15 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        release {
+        storeFile file("keys/my-release-key.jks")
+        storePassword "ShadowFruitHub"
+        keyAlias "my-key-alias"
+        keyPassword "ShadowCompany"
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
