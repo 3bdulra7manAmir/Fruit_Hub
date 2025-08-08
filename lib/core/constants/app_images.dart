@@ -34,7 +34,6 @@ class _Icons
 
   /// [Home]
   // [AppBar]
-  final String userIMG = 'assets/icons/Home/User.svg';
   final String billGreen = 'assets/icons/Home/Bill_Green.svg';
   final String billRedDot = 'assets/icons/Home/Dot_Red.svg';
   // [Search Bar]
@@ -43,8 +42,6 @@ class _Icons
   // [Most Sold]
   final String hartEmptyWhite = 'assets/icons/Home/Hart_Empty_Light.png';
   final String hartFilledWhite = 'assets/icons/Home/Hart_Filled_Light.png';
-  final String addGreen = 'assets/icons/Home/Add_Green.svg';
-  final String crossBlack = 'assets/icons/Home/Cross_Black.svg';
   final String crossWhite = 'assets/icons/Home/Cross_White.svg';
 
   ///[Search]
@@ -83,10 +80,9 @@ class _Icons
 
   ///[Checkout_Order]
   final String closedOrderBox = 'assets/icons/Track_Order/Order_Box.svg';
-  final String openedOrderBox = 'assets/icons/Track_Order/Opened_Order_Box.svg';
+  //final String openedOrderBox = 'assets/icons/Track_Order/Opened_Order_Box.svg';
 
   ///[Checkout_Track]
-  final String upArrowBlack = 'assets/icons/Orders_History/Up_Arrow_Black.svg';
   final String downArrowBlack = 'assets/icons/Orders_History/Down_Arrow_Black.svg';
 
   ///[Profile]
@@ -106,10 +102,6 @@ class _Icons
   //[Payment_Methods]
   final String mastercard = 'assets/icons/Payment_Methods/Mastercard.svg';
   final String addWhiteV2 = 'assets/icons/Payment_Methods/Add.svg';
-
-  //[Favourit]
-  final String hartFilledPNG = 'assets/icons/Favourit/Hart_Filled_Red.png';
-  final String hartRedWhiteTheme = 'assets/icons/Favourit/Hart_Filled_Red.svg';
 
   ///[Nav Bar]
   final String home = 'assets/icons/NavBar/Home_active.svg';
