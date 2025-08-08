@@ -48,3 +48,5 @@ app.*.map.json
 keys/my-release-key.jks
 ios/Runner/GoogleService-Info.plist
 android/app/build.gradle.kts
+/keys
+keys
