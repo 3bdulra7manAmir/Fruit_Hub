@@ -13,14 +13,14 @@ String _$toggleSwitchNotificationsHash() =>
 @ProviderFor(ToggleSwitchNotifications)
 final toggleSwitchNotificationsProvider =
     AutoDisposeNotifierProvider<ToggleSwitchNotifications, bool>.internal(
-  ToggleSwitchNotifications.new,
-  name: r'toggleSwitchNotificationsProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$toggleSwitchNotificationsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      ToggleSwitchNotifications.new,
+      name: r'toggleSwitchNotificationsProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$toggleSwitchNotificationsHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$ToggleSwitchNotifications = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

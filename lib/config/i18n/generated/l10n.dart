@@ -2239,6 +2239,36 @@ class S {
       args: [],
     );
   }
+
+  /// `يجب أن توافق على الشروط`
+  String get mustAcceptTerms {
+    return Intl.message(
+      'يجب أن توافق على الشروط',
+      name: 'mustAcceptTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `يجب ملء جميع حقول التسجيل`
+  String get registrationFieldsRequired {
+    return Intl.message(
+      'يجب ملء جميع حقول التسجيل',
+      name: 'registrationFieldsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بملء الحقول والموافقة على الشروط`
+  String get fillFieldsAndAcceptTerms {
+    return Intl.message(
+      'قم بملء الحقول والموافقة على الشروط',
+      name: 'fillFieldsAndAcceptTerms',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

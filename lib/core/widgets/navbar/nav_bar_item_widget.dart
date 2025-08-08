@@ -53,7 +53,7 @@ class NavBarItemWidget extends StatelessWidget
       tween: Tween(begin: 0, end: isSelected ? 1 : 0),
       curve: curve,
       duration: duration,
-      builder: (_, value, __)
+      builder: (_, value, _)
       {
         return Material(
           color: Colors.transparent,

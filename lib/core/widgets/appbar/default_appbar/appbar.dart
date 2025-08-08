@@ -85,7 +85,7 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
   }
 
   
-  GestureDetector billOnTap(context) => GestureDetector(onTap: () {
+  GestureDetector billOnTap(BuildContext context) => GestureDetector(onTap: () {
     log('Notifications Bill has been Pressed...');
     try
     {

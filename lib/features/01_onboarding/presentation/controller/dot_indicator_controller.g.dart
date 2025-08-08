@@ -12,13 +12,14 @@ String _$dotIndicatorHash() => r'677022339f5520e2bdc6c0146e33ed088992f26e';
 @ProviderFor(DotIndicator)
 final dotIndicatorProvider =
     AutoDisposeNotifierProvider<DotIndicator, int>.internal(
-  DotIndicator.new,
-  name: r'dotIndicatorProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$dotIndicatorHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      DotIndicator.new,
+      name: r'dotIndicatorProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$dotIndicatorHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$DotIndicator = AutoDisposeNotifier<int>;
 // ignore_for_file: type=lint

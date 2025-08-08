@@ -1,25 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'theme_controller.dart';
+part of 'login_repo.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$themeHash() => r'afc3e2b8637c0eae947a4790bdaa877ec34047a0';
+String _$loginRepoHash() => r'9421a5f79cc13014745fcf0eb37ebe9b436f2054';
 
-/// See also [Theme].
-@ProviderFor(Theme)
-final themeProvider = AutoDisposeNotifierProvider<Theme, ThemeMode>.internal(
-  Theme.new,
-  name: r'themeProvider',
+/// See also [loginRepo].
+@ProviderFor(loginRepo)
+final loginRepoProvider = AutoDisposeProvider<LoginRepo>.internal(
+  loginRepo,
+  name: r'loginRepoProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$themeHash,
+      : _$loginRepoHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$Theme = AutoDisposeNotifier<ThemeMode>;
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef LoginRepoRef = AutoDisposeProviderRef<LoginRepo>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

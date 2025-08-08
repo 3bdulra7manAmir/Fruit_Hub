@@ -31,7 +31,7 @@ class SearchBarWidget extends StatelessWidget
       prefixIcon: GestureDetector(
         onTap: searchIconOnTap ?? () {
           if (controller.text.isEmpty)
-          {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+          {CustomSnackBar().show(context, S.current.emptySearch);}
           else {AppRouter.router.pushSearchString(fruitName: controller.text);}
         },
         child: const SearchIconWidget()
@@ -44,7 +44,7 @@ class SearchBarWidget extends StatelessWidget
       keyboardType: TextInputType.text,
       onSubmitted: (value){
         if (controller.text.isEmpty)
-        {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+        {CustomSnackBar().show(context, S.current.emptySearch);}
         else {AppRouter.router.pushSearchString(fruitName: controller.text);}
       },
     ).withShadow(shadow: AppShadowBoxes.searchBar, height: 40.h,);

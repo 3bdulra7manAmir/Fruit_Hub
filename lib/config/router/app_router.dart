@@ -213,7 +213,7 @@ abstract class AppRouter
 
       /// [ Stateful Shell ]
       StatefulShellRoute.indexedStack(
-        builder: (_, __, navigationShell) => MainScaffold(navigationShell: navigationShell),
+        builder: (_, _, navigationShell) => MainScaffold(navigationShell: navigationShell),
         branches:
         [
           /// [Brach 0: Home]
@@ -223,7 +223,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.home,
                 name: AppRoutes.home,
-                builder: (_, __) => Home(),
+                builder: (_, _) => Home(),
               ),
             ],
           ),
@@ -235,7 +235,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.products,
                 name: AppRoutes.products,
-                builder: (_, __) => Products(),
+                builder: (_, _) => Products(),
               ),
             ],
           ),
@@ -247,7 +247,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.cart,
                 name: AppRoutes.cart,
-                builder: (_, __) => const Cart(),
+                builder: (_, _) => const Cart(),
               ),
             ],
           ),
@@ -259,7 +259,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.profile,
                 name: AppRoutes.profile,
-                builder: (_, __) => const Profile()
+                builder: (_, _) => const Profile()
               ),
             ],
           ),

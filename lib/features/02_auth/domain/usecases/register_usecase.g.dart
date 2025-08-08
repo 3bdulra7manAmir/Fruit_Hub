@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'login_usecase.dart';
+part of 'register_usecase.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$loginUsecaseHash() => r'9adc7eddd1b4b5029f5c501a5f890df7215e367c';
+String _$registerUsecaseHash() => r'926336bb38a9165a01776f4226fc8a07f9905f09';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -29,23 +29,23 @@ class _SystemHash {
   }
 }
 
-/// See also [loginUsecase].
-@ProviderFor(loginUsecase)
-const loginUsecaseProvider = LoginUsecaseFamily();
+/// See also [registerUsecase].
+@ProviderFor(registerUsecase)
+const registerUsecaseProvider = RegisterUsecaseFamily();
 
-/// See also [loginUsecase].
-class LoginUsecaseFamily extends Family<AsyncValue<void>> {
-  /// See also [loginUsecase].
-  const LoginUsecaseFamily();
+/// See also [registerUsecase].
+class RegisterUsecaseFamily extends Family<AsyncValue<void>> {
+  /// See also [registerUsecase].
+  const RegisterUsecaseFamily();
 
-  /// See also [loginUsecase].
-  LoginUsecaseProvider call(LoginEntity credentials) {
-    return LoginUsecaseProvider(credentials);
+  /// See also [registerUsecase].
+  RegisterUsecaseProvider call(RegisterEntity credentials) {
+    return RegisterUsecaseProvider(credentials);
   }
 
   @override
-  LoginUsecaseProvider getProviderOverride(
-    covariant LoginUsecaseProvider provider,
+  RegisterUsecaseProvider getProviderOverride(
+    covariant RegisterUsecaseProvider provider,
   ) {
     return call(provider.credentials);
   }
@@ -62,27 +62,27 @@ class LoginUsecaseFamily extends Family<AsyncValue<void>> {
       _allTransitiveDependencies;
 
   @override
-  String? get name => r'loginUsecaseProvider';
+  String? get name => r'registerUsecaseProvider';
 }
 
-/// See also [loginUsecase].
-class LoginUsecaseProvider extends AutoDisposeFutureProvider<void> {
-  /// See also [loginUsecase].
-  LoginUsecaseProvider(LoginEntity credentials)
+/// See also [registerUsecase].
+class RegisterUsecaseProvider extends AutoDisposeFutureProvider<void> {
+  /// See also [registerUsecase].
+  RegisterUsecaseProvider(RegisterEntity credentials)
     : this._internal(
-        (ref) => loginUsecase(ref as LoginUsecaseRef, credentials),
-        from: loginUsecaseProvider,
-        name: r'loginUsecaseProvider',
+        (ref) => registerUsecase(ref as RegisterUsecaseRef, credentials),
+        from: registerUsecaseProvider,
+        name: r'registerUsecaseProvider',
         debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
             ? null
-            : _$loginUsecaseHash,
-        dependencies: LoginUsecaseFamily._dependencies,
+            : _$registerUsecaseHash,
+        dependencies: RegisterUsecaseFamily._dependencies,
         allTransitiveDependencies:
-            LoginUsecaseFamily._allTransitiveDependencies,
+            RegisterUsecaseFamily._allTransitiveDependencies,
         credentials: credentials,
       );
 
-  LoginUsecaseProvider._internal(
+  RegisterUsecaseProvider._internal(
     super._createNotifier, {
     required super.name,
     required super.dependencies,
@@ -92,16 +92,16 @@ class LoginUsecaseProvider extends AutoDisposeFutureProvider<void> {
     required this.credentials,
   }) : super.internal();
 
-  final LoginEntity credentials;
+  final RegisterEntity credentials;
 
   @override
   Override overrideWith(
-    FutureOr<void> Function(LoginUsecaseRef provider) create,
+    FutureOr<void> Function(RegisterUsecaseRef provider) create,
   ) {
     return ProviderOverride(
       origin: this,
-      override: LoginUsecaseProvider._internal(
-        (ref) => create(ref as LoginUsecaseRef),
+      override: RegisterUsecaseProvider._internal(
+        (ref) => create(ref as RegisterUsecaseRef),
         from: from,
         name: null,
         dependencies: null,
@@ -114,12 +114,12 @@ class LoginUsecaseProvider extends AutoDisposeFutureProvider<void> {
 
   @override
   AutoDisposeFutureProviderElement<void> createElement() {
-    return _LoginUsecaseProviderElement(this);
+    return _RegisterUsecaseProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is LoginUsecaseProvider && other.credentials == credentials;
+    return other is RegisterUsecaseProvider && other.credentials == credentials;
   }
 
   @override
@@ -133,18 +133,19 @@ class LoginUsecaseProvider extends AutoDisposeFutureProvider<void> {
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-mixin LoginUsecaseRef on AutoDisposeFutureProviderRef<void> {
+mixin RegisterUsecaseRef on AutoDisposeFutureProviderRef<void> {
   /// The parameter `credentials` of this provider.
-  LoginEntity get credentials;
+  RegisterEntity get credentials;
 }
 
-class _LoginUsecaseProviderElement
+class _RegisterUsecaseProviderElement
     extends AutoDisposeFutureProviderElement<void>
-    with LoginUsecaseRef {
-  _LoginUsecaseProviderElement(super.provider);
+    with RegisterUsecaseRef {
+  _RegisterUsecaseProviderElement(super.provider);
 
   @override
-  LoginEntity get credentials => (origin as LoginUsecaseProvider).credentials;
+  RegisterEntity get credentials =>
+      (origin as RegisterUsecaseProvider).credentials;
 }
 
 // ignore_for_file: type=lint

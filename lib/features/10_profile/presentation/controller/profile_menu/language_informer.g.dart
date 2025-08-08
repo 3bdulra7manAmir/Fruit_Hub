@@ -12,14 +12,14 @@ String _$languageInformerHash() => r'39d691333d5dd1180e9bd2ad738b5b4dc7d6eddb';
 @ProviderFor(LanguageInformer)
 final languageInformerProvider =
     AutoDisposeNotifierProvider<LanguageInformer, bool>.internal(
-  LanguageInformer.new,
-  name: r'languageInformerProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$languageInformerHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      LanguageInformer.new,
+      name: r'languageInformerProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$languageInformerHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$LanguageInformer = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

@@ -11,7 +11,7 @@ import 'price_filter_text.dart';
 import 'price_limits.dart';
 import 'price_slider.dart';
 
-void priceFilterSheet(context)
+void priceFilterSheet(BuildContext context)
 {
   customAppBottomSheet(
     context: context, 

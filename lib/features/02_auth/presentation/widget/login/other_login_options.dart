@@ -11,6 +11,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/iterator.dart';
+import '../../../../../core/services/database/firebase/google_sign.dart';
 
 class OtherOptionsWidget extends StatelessWidget {
   const OtherOptionsWidget({super.key});
@@ -21,7 +22,7 @@ class OtherOptionsWidget extends StatelessWidget {
       children: [
         ...[
           GestureDetector(
-            onTap: () {log('Google');},
+            onTap: () async {log('Google'); await FirebaseGoogleSignIn().signInWithGoogle();},
             child: OtherOptionCardWidget(text: S.current.signInWithGoogle, logo: AppAssets.icons.google,),
           ),
           GestureDetector(

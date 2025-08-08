@@ -31,15 +31,19 @@
     <key>UISupportedInterfaceOrientations</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
+      <!-- ShadowCompany -->
       <!-- <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationLandscapeRight</string> -->
+      <!-- ShadowCompany -->
     </array>
     <key>UISupportedInterfaceOrientations~ipad</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
+      <!-- ShadowCompany -->
       <!-- <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationLandscapeRight</string> -->
+      <!-- ShadowCompany -->
     </array>
     <key>CADisableMinimumFrameDurationOnPhone</key>
     <true/>
@@ -50,5 +54,29 @@
         <string>en</string>
         <string>ar</string>
     </array>
+    
+    <!-- ShadowCompany -->
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.687671543432-b2h0j5fp7faitaq9ee1nlla6tf559l4e</string>
+        </array>
+      </dict>
+    </array>
+
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <true/>
+
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>google</string>
+      <string>com-google-gidconsent</string>
+    </array>
+    <!-- ShadowCompany -->
+
   </dict>
 </plist>

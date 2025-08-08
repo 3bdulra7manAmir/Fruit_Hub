@@ -33,12 +33,12 @@ class FilteredProducts extends StatelessWidget
             controller: filterController,
             searchIconOnTap: () {
               if (filterController.text.isEmpty)
-              {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+              {CustomSnackBar().show(context, S.current.emptySearch);}
               else {AppRouter.router.pushSearchString(fruitName: filterController.text);}
             },
             onSubmitted: (value) {
               if (filterController.text.isEmpty)
-              {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+              {CustomSnackBar().show(context, S.current.emptySearch);}
               else {AppRouter.router.pushSearchString(fruitName: filterController.text);}
             }
           ),

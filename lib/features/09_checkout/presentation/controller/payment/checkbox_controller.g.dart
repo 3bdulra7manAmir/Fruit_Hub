@@ -12,14 +12,14 @@ String _$keepCardCheckboxHash() => r'cb588b68ac163b0fb50891fe096e0b539af7fac3';
 @ProviderFor(KeepCardCheckbox)
 final keepCardCheckboxProvider =
     AutoDisposeNotifierProvider<KeepCardCheckbox, bool>.internal(
-  KeepCardCheckbox.new,
-  name: r'keepCardCheckboxProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$keepCardCheckboxHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      KeepCardCheckbox.new,
+      name: r'keepCardCheckboxProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$keepCardCheckboxHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$KeepCardCheckbox = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

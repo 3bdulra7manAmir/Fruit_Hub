@@ -253,6 +253,10 @@
   "id_token_expired": "رمز الجلسة منتهي الصلاحية.",
   "id_token_revoked": "تم إلغاء رمز الجلسة.",
   "unauthorized_continue_uri": "رابط متابعة غير مصرح به.",
-  "auth_failed": "فشل في المصادقة. حاول مرة أخرى."
+  "auth_failed": "فشل في المصادقة. حاول مرة أخرى.",
 
+
+  "mustAcceptTerms": "يجب أن توافق على الشروط",
+  "registrationFieldsRequired": "يجب ملء جميع حقول التسجيل",
+  "fillFieldsAndAcceptTerms": "قم بملء الحقول والموافقة على الشروط"
 }

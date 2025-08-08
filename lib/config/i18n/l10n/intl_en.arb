@@ -254,8 +254,10 @@
   "id_token_expired": "ID token has expired.",
   "id_token_revoked": "ID token has been revoked.",
   "unauthorized_continue_uri": "Unauthorized continue URI.",
-  "auth_failed": "Authentication failed. Please try again."
+  "auth_failed": "Authentication failed. Please try again.",
 
 
-  
+  "mustAcceptTerms": "You must accept the terms",
+  "registrationFieldsRequired": "Registration fields are required",
+  "fillFieldsAndAcceptTerms": "Fill the fields and accept the terms"
 }

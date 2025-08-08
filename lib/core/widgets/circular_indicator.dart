@@ -36,7 +36,7 @@ class _CustomCircularIndicatorState extends State<CustomCircularIndicator> with 
         height: 32.h,
         child: AnimatedBuilder(
           animation: _controller,
-          builder: (_, __) {
+          builder: (_, _) {
             final angle = _controller.value * 2 * pi;
             final color = HSVColor.fromAHSV(1, (angle * 180 / pi) % 360, 1, 1).toColor();
             return CircularProgressIndicator(

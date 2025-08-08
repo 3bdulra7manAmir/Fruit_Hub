@@ -12,13 +12,14 @@ String _$priceSliderHash() => r'24bcb1bac66a3d54e68e2346a178e47d29fa2078';
 @ProviderFor(PriceSlider)
 final priceSliderProvider =
     AutoDisposeNotifierProvider<PriceSlider, RangeValues>.internal(
-  PriceSlider.new,
-  name: r'priceSliderProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$priceSliderHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      PriceSlider.new,
+      name: r'priceSliderProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$priceSliderHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$PriceSlider = AutoDisposeNotifier<RangeValues>;
 // ignore_for_file: type=lint

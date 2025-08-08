@@ -142,6 +142,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("استخدم التنسيق MM/YY"),
         "expiryDate": MessageLookupByLibrary.simpleMessage("تاريخ الصلاحيه"),
         "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
+        "fillFieldsAndAcceptTerms": MessageLookupByLibrary.simpleMessage(
+            "قم بملء الحقول والموافقة على الشروط"),
         "filterBy": MessageLookupByLibrary.simpleMessage("تصنيف حسب :"),
         "floorApartment":
             MessageLookupByLibrary.simpleMessage("رقم الطابق , رقم الشقه .."),
@@ -225,6 +227,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "more": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
         "more2": MessageLookupByLibrary.simpleMessage("المزيد"),
         "mostSold": MessageLookupByLibrary.simpleMessage("الأكثر طلبًا"),
+        "mustAcceptTerms":
+            MessageLookupByLibrary.simpleMessage("يجب أن توافق على الشروط"),
         "myAccount": MessageLookupByLibrary.simpleMessage("حسابي"),
         "myOrders": MessageLookupByLibrary.simpleMessage("طلباتي"),
         "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
@@ -301,6 +305,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "recommended": MessageLookupByLibrary.simpleMessage("موصي بها"),
         "register_failed": MessageLookupByLibrary.simpleMessage(
             "فشل في إنشاء الحساب. حاول مرة أخرى."),
+        "registrationFieldsRequired":
+            MessageLookupByLibrary.simpleMessage("يجب ملء جميع حقول التسجيل"),
         "resendCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال الرمز"),
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "review": MessageLookupByLibrary.simpleMessage("مراجعة"),

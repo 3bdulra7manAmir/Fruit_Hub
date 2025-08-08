@@ -12,14 +12,14 @@ String _$fruitItemQuantityHash() => r'0a0ff0e18fc1b63656d9c7a012b93a30e2554ae7';
 @ProviderFor(FruitItemQuantity)
 final fruitItemQuantityProvider =
     AutoDisposeNotifierProvider<FruitItemQuantity, int>.internal(
-  FruitItemQuantity.new,
-  name: r'fruitItemQuantityProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$fruitItemQuantityHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      FruitItemQuantity.new,
+      name: r'fruitItemQuantityProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$fruitItemQuantityHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$FruitItemQuantity = AutoDisposeNotifier<int>;
 // ignore_for_file: type=lint

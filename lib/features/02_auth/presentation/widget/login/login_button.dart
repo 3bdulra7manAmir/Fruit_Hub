@@ -30,14 +30,13 @@ class LoginButtonWidget extends ConsumerWidget {
     return CustomButton(
       text: S.current.login,
       onPressed: () async {
-        if (formKey.currentState!.validate())
-        {
+        if (formKey.currentState!.validate()) {
           final email = emailController.text.trim();
           final password = passwordController.text.trim();
           log('Trying to login with: $email');
+
           final loginEntity = LoginEntity(email: email, password: password);
-          try
-          {
+          try {
             await loadingDialog(context);
             await ref.read(loginUsecaseProvider(loginEntity).future);
             if (context.mounted) {
@@ -50,6 +49,7 @@ class LoginButtonWidget extends ConsumerWidget {
           catch (e, st) {
             AppRouter.router.pop(); // remove loading
             log('Login error: $e\n$st');
+            if (!context.mounted) return;
             CustomSnackBar().show(context, FirebaseLoginStatus.getMessageFromException(e));
           }
         }

@@ -13,14 +13,14 @@ String _$currentOrderExpandedHash() =>
 @ProviderFor(CurrentOrderExpanded)
 final currentOrderExpandedProvider =
     AutoDisposeNotifierProvider<CurrentOrderExpanded, bool>.internal(
-  CurrentOrderExpanded.new,
-  name: r'currentOrderExpandedProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$currentOrderExpandedHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      CurrentOrderExpanded.new,
+      name: r'currentOrderExpandedProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$currentOrderExpandedHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$CurrentOrderExpanded = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

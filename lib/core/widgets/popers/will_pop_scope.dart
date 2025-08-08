@@ -50,7 +50,7 @@ class PopScopeWidget extends StatelessWidget
             final shouldExit = await _defaultBackHandler(context);
             if (shouldExit)
             {
-              await Navigator.of(context).maybePop();
+              AppRouter.router.pop();
             }
           }
         }

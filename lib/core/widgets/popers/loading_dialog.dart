@@ -5,7 +5,7 @@ import '../../../config/theme/color_manager/colors.dart';
 import '../circular_indicator.dart';
 import 'dialog.dart';
 
-dynamic loadingDialog(context)
+dynamic loadingDialog(BuildContext context)
 {
   customAppDialog(
     context: context, 

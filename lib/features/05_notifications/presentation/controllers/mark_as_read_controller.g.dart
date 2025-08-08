@@ -12,13 +12,14 @@ String _$markAsReadHash() => r'13d2ca87623ac88fc3619df245d15a00ed2979f0';
 @ProviderFor(MarkAsRead)
 final markAsReadProvider =
     AutoDisposeNotifierProvider<MarkAsRead, bool>.internal(
-  MarkAsRead.new,
-  name: r'markAsReadProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$markAsReadHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      MarkAsRead.new,
+      name: r'markAsReadProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$markAsReadHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$MarkAsRead = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

@@ -143,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Use MM/YY format"),
         "expiryDate": MessageLookupByLibrary.simpleMessage("Expiry Date"),
         "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
+        "fillFieldsAndAcceptTerms": MessageLookupByLibrary.simpleMessage(
+            "Fill the fields and accept the terms"),
         "filterBy": MessageLookupByLibrary.simpleMessage("Filter by:"),
         "floorApartment": MessageLookupByLibrary.simpleMessage(
             "Floor number, apartment number.."),
@@ -225,6 +227,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "more": MessageLookupByLibrary.simpleMessage("Show more"),
         "more2": MessageLookupByLibrary.simpleMessage("more"),
         "mostSold": MessageLookupByLibrary.simpleMessage("Best Sellers"),
+        "mustAcceptTerms":
+            MessageLookupByLibrary.simpleMessage("You must accept the terms"),
         "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
         "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "newAccount": MessageLookupByLibrary.simpleMessage("New Account"),
@@ -303,6 +307,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "recommended": MessageLookupByLibrary.simpleMessage("Recommended"),
         "register_failed": MessageLookupByLibrary.simpleMessage(
             "Registration failed. Please try again."),
+        "registrationFieldsRequired": MessageLookupByLibrary.simpleMessage(
+            "Registration fields are required"),
         "resendCode": MessageLookupByLibrary.simpleMessage("Resend the code"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),

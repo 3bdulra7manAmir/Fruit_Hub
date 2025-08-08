@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/routes_extras.dart';
 import '../../../../core/constants/app_sizes.dart';
@@ -29,12 +30,12 @@ class Home extends StatelessWidget
           controller: homeSearchController,
           searchIconOnTap: () {
             if (homeSearchController.text.isEmpty)
-            {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+            {CustomSnackBar().show(context, S.current.emptySearch);}
             else {AppRouter.router.pushSearchString(fruitName: homeSearchController.text);}
           },
           onSubmitted: (value){
             if (homeSearchController.text.isEmpty)
-            {CustomSnackBar().show(context, 'البحث فاضي يا معلم');}
+            {CustomSnackBar().show(context, S.current.emptySearch);}
             else {AppRouter.router.pushSearchString(fruitName: homeSearchController.text);}
           },
         ),

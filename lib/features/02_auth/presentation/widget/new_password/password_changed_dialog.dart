@@ -9,7 +9,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/popers/dialog.dart';
 
-void showSuccessDialog(context, String title)
+void showSuccessDialog(BuildContext context, String title)
 {
   customAppDialog(
     context: context,

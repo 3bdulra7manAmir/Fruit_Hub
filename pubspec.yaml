@@ -43,6 +43,7 @@ dependencies:
   flutter_launcher_icons: ^0.14.4
   rename_app: ^1.6.3
   image_picker: ^1.1.2
+  flutter_dotenv: ^5.2.1
 
   #flutter_unused_packages: ^1.0.1
 
@@ -122,6 +123,8 @@ flutter:
     - assets/imgs/Items_Details/
 
     - assets/jsons/
+    
+    - keys/
 
 flutter_intl:
   enabled: true

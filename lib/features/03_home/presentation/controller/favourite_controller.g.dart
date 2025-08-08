@@ -12,13 +12,14 @@ String _$favouriteImgHash() => r'bc075c8090113ea2108370d56a8af837137617c0';
 @ProviderFor(FavouriteImg)
 final favouriteImgProvider =
     AutoDisposeNotifierProvider<FavouriteImg, bool>.internal(
-  FavouriteImg.new,
-  name: r'favouriteImgProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$favouriteImgHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      FavouriteImg.new,
+      name: r'favouriteImgProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$favouriteImgHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$FavouriteImg = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

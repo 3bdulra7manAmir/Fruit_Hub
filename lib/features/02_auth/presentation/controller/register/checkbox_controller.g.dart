@@ -12,14 +12,14 @@ String _$registerCheckboxHash() => r'c10abd09ea1f4968f72ca57bfbd00f1033a8c0d4';
 @ProviderFor(RegisterCheckbox)
 final registerCheckboxProvider =
     AutoDisposeNotifierProvider<RegisterCheckbox, bool>.internal(
-  RegisterCheckbox.new,
-  name: r'registerCheckboxProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$registerCheckboxHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+      RegisterCheckbox.new,
+      name: r'registerCheckboxProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$registerCheckboxHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
 
 typedef _$RegisterCheckbox = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

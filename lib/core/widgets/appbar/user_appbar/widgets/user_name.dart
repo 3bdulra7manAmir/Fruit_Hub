@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
@@ -22,7 +23,7 @@ class UserNameWidget extends StatelessWidget
           fontColor: AppColors.color.kGrey002
           ),
         ),
-        Text('شادو', style: AppStyles.bold(fontColor: AppColors.color.kBlack001)),
+        Text(FirebaseAuth.instance.currentUser!.displayName ?? '', style: AppStyles.bold(fontColor: AppColors.color.kBlack001)),
       ],
     );
   }
