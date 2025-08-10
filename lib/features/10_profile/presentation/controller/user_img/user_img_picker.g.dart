@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_image_picker.dart';
+part of 'user_img_picker.dart';
 
 // **************************************************************************
 // RiverpodGenerator
