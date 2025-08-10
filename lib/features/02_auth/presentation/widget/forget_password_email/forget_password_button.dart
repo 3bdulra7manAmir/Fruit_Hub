@@ -8,10 +8,10 @@ import '../../../../../core/widgets/buttons/button.dart';
 
 class ForgetPasswordButtonWidget extends StatelessWidget
 {
-  const ForgetPasswordButtonWidget({super.key, required this.formKey, required this.phoneController});
+  const ForgetPasswordButtonWidget({super.key, required this.formKey, required this.emailController});
 
   final GlobalKey<FormState> formKey;
-  final TextEditingController phoneController;
+  final TextEditingController emailController;
 
   @override
   Widget build(BuildContext context)
@@ -25,8 +25,8 @@ class ForgetPasswordButtonWidget extends StatelessWidget
         else
         {
           log('Valid ForgetPassword...');
-          log(phoneController.text);
-          phoneController.clear();
+          log(emailController.text);
+          emailController.clear();
           AppRouter.router.pushNamed(AppRoutes.passwordRecoveryEmail);
         }
     }, text: S.current.forgotPassword);

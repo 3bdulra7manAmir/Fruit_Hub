@@ -57,7 +57,7 @@
 
   "verifyCode": "Verification Code",
   "resendCode": "Resend the code",
-  "phoneVerificationMessage": "Don't worry, just enter your phone number and we'll send a verification code.",
+  "emailVerificationMessage": "Don't worry, just enter your email address and we'll send a verification code.",
   "enterCodeSentToEmail": "Enter the code we sent to the following email address: {email}",
 
   "emailIsRequired": "Email is required",

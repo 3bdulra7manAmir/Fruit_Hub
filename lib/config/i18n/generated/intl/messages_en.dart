@@ -131,6 +131,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Error validating email:"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("Email is required"),
+        "emailVerificationMessage": MessageLookupByLibrary.simpleMessage(
+            "Don\'t worry, just enter your email address and we\'ll send a verification code."),
         "email_already_in_use": MessageLookupByLibrary.simpleMessage(
             "This email is already in use."),
         "emptySearch":
@@ -295,8 +297,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phoneNumberIsRequired":
             MessageLookupByLibrary.simpleMessage("Phone number is required"),
-        "phoneVerificationMessage": MessageLookupByLibrary.simpleMessage(
-            "Don\'t worry, just enter your phone number and we\'ll send a verification code."),
         "pickup": MessageLookupByLibrary.simpleMessage("Pickup from Store"),
         "pickup2": MessageLookupByLibrary.simpleMessage("Pickup"),
         "pleaseChoosePayment": MessageLookupByLibrary.simpleMessage(

@@ -129,6 +129,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "خطأ في التحقق من البريد الإلكتروني:"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
+        "emailVerificationMessage": MessageLookupByLibrary.simpleMessage(
+            "لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رمز التحقق."),
         "email_already_in_use": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني مستخدم بالفعل."),
         "emptySearch":
@@ -293,8 +295,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
         "phoneNumberIsRequired":
             MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
-        "phoneVerificationMessage": MessageLookupByLibrary.simpleMessage(
-            "لا تقلق، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق."),
         "pickup": MessageLookupByLibrary.simpleMessage("الاستلام من الفرع"),
         "pickup2": MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
         "pleaseChoosePayment": MessageLookupByLibrary.simpleMessage(

@@ -110,6 +110,9 @@ class DarkColorScheme extends ColorManagerBase
   @override
   /// [_F2F3F3]
   Color get kGrey027 => const Color(0xff1E1E1E);
+  @override
+  /// [_DDDFDF]
+  Color get kGrey028 => const Color(0xff1E1E1E);
 
   // Black Color Range
   @override

@@ -13,7 +13,7 @@ class ForgetPasswordTitleWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Text(
-      S.current.phoneVerificationMessage,
+      S.current.emailVerificationMessage,
       style: AppStyles.bold(
         fontWeight: AppFontWeights.semiBoldWeight, 
         fontColor: AppColors.color.kGrey006

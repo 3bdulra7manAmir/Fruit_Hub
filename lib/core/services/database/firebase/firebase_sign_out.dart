@@ -15,9 +15,9 @@ class FirebaseSignout
       await AuthService.instance.auth.signOut();
       log('SignOut Done..........');
     }
-    catch (e)
+    catch (error, stack)
     {
-      log('Error during sign-out: $e');
+      log('Error during sign-out: $error, Stack: $stack');
       rethrow;
     }
   }

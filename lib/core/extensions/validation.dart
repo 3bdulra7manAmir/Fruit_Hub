@@ -57,7 +57,7 @@ extension ValidationExtensions on String?
   /// Validates if the string is a full name (first + last name, letters only)
   bool get isFullName {
     final fullNameRegex = RegExp(
-      r"^(?!.*[^\p{L} \-'])[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$",
+      r"^(?!.*[^\p{L} \-'])[A-Za-zÀ-ÖØ-öø-ÿ\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]+)*$",
       unicode: true,
     );
     return fullNameRegex.hasMatch((this ?? '').trim());

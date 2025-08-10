@@ -13,7 +13,7 @@ class FirebaseGoogleSignIn {
   static final FirebaseGoogleSignIn _instance = FirebaseGoogleSignIn._();
   static FirebaseGoogleSignIn get instance => _instance;
 
-  // Initialize GoogleSignIn with serverClientId for Android
+  /// [Initialize GoogleSignIn with serverClientId for Android]
   Future<void> initializeGoogleSignIn() async
   {
     try
@@ -29,7 +29,7 @@ class FirebaseGoogleSignIn {
     }
   }
 
-  
+
   Future<UserCredential?> signInWithGoogle() async
   {
     try
@@ -52,19 +52,19 @@ class FirebaseGoogleSignIn {
       final credential = GoogleAuthProvider.credential(idToken: googleAuth.idToken, accessToken: authorization.accessToken,);
       return await AuthService.instance.auth.signInWithCredential(credential);
     }
-    on GoogleSignInException catch (e)
+    on GoogleSignInException catch (error, stack)
     {
-      log(StatusCodes().signInWithGoogle.getMessageFromException(e));
+      log('${StatusCodes().signInWithGoogle.getMessageFromException(error)}, Stack: $stack');
       return null;
     }
-    on PlatformException catch (e)
+    on PlatformException catch (error, stack)
     {
-      log(StatusCodes().signInWithGoogle.getMessageFromException(e));
+      log('${StatusCodes().signInWithGoogle.getMessageFromException(error)}, Stack: $stack');
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      log(StatusCodes().signInWithGoogle.getMessageFromException(e));
+      log('${StatusCodes().signInWithGoogle.getMessageFromException(error)}, Stack: $stack');
       rethrow;
     }
   }

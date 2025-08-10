@@ -38,7 +38,7 @@ class RegisterButtonWidget extends ConsumerWidget {
     if (formKey.currentState!.validate() && ref.read(registerCheckboxProvider) == true)
     {
       final fullName = fullNameController.text.trim();
-      final email = emailController.text.trim();
+      final email = emailController.text.trim().toLowerCase();
       final password = passwordController.text.trim();
       log('Trying to register with: $fullName, $email');
 

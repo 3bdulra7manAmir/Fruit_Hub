@@ -57,7 +57,7 @@
 
   "verifyCode": "التحقق من الرمز",
   "resendCode": "إعادة إرسال الرمز",
-  "phoneVerificationMessage": "لا تقلق، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.",
+  "emailVerificationMessage": "لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رمز التحقق.",
   "enterCodeSentToEmail": "أدخل الرمز الذي أرسلناه إلى عنوان بريد التالي: {email}",
 
   "emailIsRequired": "البريد الإلكتروني مطلوب",

@@ -1,4 +1,5 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,6 +14,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/iterator.dart';
+import '../../../../../core/helpers/functions/platform.dart';
 import '../../../../../core/services/database/firebase/firebase_sign_in_with_google.dart';
 import '../../../../../core/widgets/snackbar.dart';
 
@@ -36,6 +38,7 @@ class OtherOptionsWidget extends StatelessWidget {
             },
             child: OtherOptionCardWidget(text: S.current.signInWithGoogle, logo: AppAssets.icons.google,),
           ),
+          if (PlatformHelper.instance.isIOS())
           GestureDetector(
             onTap: () {log('Apple');},
             child: OtherOptionCardWidget(text: S.current.signInWithApple, logo: AppAssets.icons.apple, isColored: true,),
@@ -49,6 +52,7 @@ class OtherOptionsWidget extends StatelessWidget {
     );
   }
 }
+
 
 class OtherOptionCardWidget extends StatelessWidget {
   const OtherOptionCardWidget({
@@ -72,9 +76,9 @@ class OtherOptionCardWidget extends StatelessWidget {
       height: height ?? 56.h,
       width: width ?? double.infinity,
       decoration: BoxDecoration(
-        color: AppColors.color.kWhite001,
+        color: AppColors.color.kWhite005,
         borderRadius: AppRadiuses.circular.medium,
-        border: Border.all(color: AppColors.color.kGrey005),
+        border: Border.all(color: AppColors.color.kGrey028),
       ),
       child: Row(
         children:

@@ -550,11 +550,11 @@ class S {
     );
   }
 
-  /// `لا تقلق، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.`
-  String get phoneVerificationMessage {
+  /// `لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رمز التحقق.`
+  String get emailVerificationMessage {
     return Intl.message(
-      'لا تقلق، ما عليك سوى كتابة رقم هاتفك وسنرسل رمز التحقق.',
-      name: 'phoneVerificationMessage',
+      'لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رمز التحقق.',
+      name: 'emailVerificationMessage',
       desc: '',
       args: [],
     );

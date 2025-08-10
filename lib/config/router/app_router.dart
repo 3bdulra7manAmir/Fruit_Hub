@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/widgets/circular_indicator.dart';
 import '../../features/01_onboarding/presentation/screens/dots_indicator_view.dart';
 import '../../features/01_onboarding/presentation/screens/splash_view.dart';
-import '../../features/02_auth/presentation/screens/forget_password_phone_view.dart';
+import '../../features/02_auth/presentation/screens/forget_password_email_view.dart';
 import '../../features/02_auth/presentation/screens/login_view.dart';
 import '../../features/02_auth/presentation/screens/new_password_view.dart';
 import '../../features/02_auth/presentation/screens/password_recovery_email.dart';
@@ -80,7 +80,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.forgetPasswordPhone,
         name: AppRoutes.forgetPasswordPhone,
-        builder: (_, _) => ForgetPasswordPhone(),
+        builder: (_, _) => ForgetPasswordEmail(),
       ),
       // [Password Recovery Email]
       GoRoute(
