@@ -47,6 +47,7 @@ class PopScopeWidget extends StatelessWidget
           }
           else
           {
+            if (!context.mounted) return;
             final shouldExit = await _defaultBackHandler(context);
             if (shouldExit)
             {

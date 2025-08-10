@@ -23,7 +23,9 @@ class UserNameWidget extends StatelessWidget
           fontColor: AppColors.color.kGrey002
           ),
         ),
-        Text(FirebaseAuth.instance.currentUser!.displayName ?? '', style: AppStyles.bold(fontColor: AppColors.color.kBlack001)),
+        Text(FirebaseAuth.instance.currentUser!.displayName ?? 'User added before name adding', 
+        style: AppStyles.bold(fontColor: AppColors.color.kBlack001)
+      ),
       ],
     );
   }

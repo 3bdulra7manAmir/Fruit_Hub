@@ -19,7 +19,7 @@ class EditFullNameFieldWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      hintText: FirebaseAuth.instance.currentUser!.displayName ?? '',
+      hintText: FirebaseAuth.instance.currentUser!.displayName ?? 'NuLL or User added before name adding',
       controller: fullNameController,
       keyboardType: TextInputType.name,
       suffixIcon: NameEditWidget(onTap: () {log('Edit Name...');},),

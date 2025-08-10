@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
@@ -11,7 +13,8 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/iterator.dart';
-import '../../../../../core/services/database/firebase/google_sign.dart';
+import '../../../../../core/services/database/firebase/firebase_sign_in_with_google.dart';
+import '../../../../../core/widgets/snackbar.dart';
 
 class OtherOptionsWidget extends StatelessWidget {
   const OtherOptionsWidget({super.key});
@@ -22,7 +25,15 @@ class OtherOptionsWidget extends StatelessWidget {
       children: [
         ...[
           GestureDetector(
-            onTap: () async {log('Google'); await FirebaseGoogleSignIn().signInWithGoogle();},
+            onTap: () async {log('Google'); 
+              if (await FirebaseGoogleSignIn.instance.signInWithGoogle() != null) {
+                await AppRouter.router.pushReplacementNamed(AppRoutes.home);
+              }
+              else {
+                if (!context.mounted) return;
+                CustomSnackBar().show(context, 'Google Sign-In failed or canceled.');
+              }
+            },
             child: OtherOptionCardWidget(text: S.current.signInWithGoogle, logo: AppAssets.icons.google,),
           ),
           GestureDetector(

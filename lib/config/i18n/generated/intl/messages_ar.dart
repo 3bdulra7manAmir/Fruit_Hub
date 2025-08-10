@@ -28,6 +28,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutUs": MessageLookupByLibrary.simpleMessage("من نحن"),
+        "account_exists_with_different_credential":
+            MessageLookupByLibrary.simpleMessage(
+                "يوجد حساب مسجل بطريقة تسجيل دخول مختلفة."),
         "addNewCard": MessageLookupByLibrary.simpleMessage("اضافه بطاقه جديده"),
         "addPaymentMethod":
             MessageLookupByLibrary.simpleMessage("أضف وسيلة دفع جديده"),
@@ -160,6 +163,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "generalSubTitle": MessageLookupByLibrary.simpleMessage("الصلاحيه"),
         "generalTitle": MessageLookupByLibrary.simpleMessage("عام"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير!.."),
+        "google_signin_canceled": MessageLookupByLibrary.simpleMessage(
+            "تم إلغاء تسجيل الدخول باستخدام جوجل."),
+        "google_signin_failed": MessageLookupByLibrary.simpleMessage(
+            "فشل تسجيل الدخول باستخدام جوجل. حاول مرة أخرى."),
         "help": MessageLookupByLibrary.simpleMessage("المساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "id_token_expired":
@@ -231,6 +238,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يجب أن توافق على الشروط"),
         "myAccount": MessageLookupByLibrary.simpleMessage("حسابي"),
         "myOrders": MessageLookupByLibrary.simpleMessage("طلباتي"),
+        "network_request_failed": MessageLookupByLibrary.simpleMessage(
+            "فشل الاتصال بالشبكة. يرجى التحقق من اتصال الإنترنت."),
         "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "newPassword2":

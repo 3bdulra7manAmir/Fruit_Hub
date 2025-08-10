@@ -2269,6 +2269,46 @@ class S {
       args: [],
     );
   }
+
+  /// `يوجد حساب مسجل بطريقة تسجيل دخول مختلفة.`
+  String get account_exists_with_different_credential {
+    return Intl.message(
+      'يوجد حساب مسجل بطريقة تسجيل دخول مختلفة.',
+      name: 'account_exists_with_different_credential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل الاتصال بالشبكة. يرجى التحقق من اتصال الإنترنت.`
+  String get network_request_failed {
+    return Intl.message(
+      'فشل الاتصال بالشبكة. يرجى التحقق من اتصال الإنترنت.',
+      name: 'network_request_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فشل تسجيل الدخول باستخدام جوجل. حاول مرة أخرى.`
+  String get google_signin_failed {
+    return Intl.message(
+      'فشل تسجيل الدخول باستخدام جوجل. حاول مرة أخرى.',
+      name: 'google_signin_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم إلغاء تسجيل الدخول باستخدام جوجل.`
+  String get google_signin_canceled {
+    return Intl.message(
+      'تم إلغاء تسجيل الدخول باستخدام جوجل.',
+      name: 'google_signin_canceled',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -14,7 +14,7 @@ dependencies:
     sdk: flutter
 
   # Core packages
-  dartz: ^0.10.1
+  #dartz: ^0.10.1
   intl: ^0.20.2
   equatable: ^2.0.7
 
@@ -40,10 +40,13 @@ dependencies:
 
   # Utilities
   device_preview: ^1.2.0
-  flutter_launcher_icons: ^0.14.4
-  rename_app: ^1.6.3
   image_picker: ^1.1.2
+  flutter_launcher_icons: ^0.14.4
   flutter_dotenv: ^5.2.1
+  rename_app: ^1.6.3
+  screen_protector: ^1.4.2+1
+  #no_screenshot: ^0.3.1
+  #screen_secure: ^1.0.3
 
   #flutter_unused_packages: ^1.0.1
 
@@ -69,7 +72,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
-
+  # Flutter Fonts
   fonts:
     - family: Cairo
       fonts:
@@ -81,7 +84,6 @@ flutter:
         - asset: assets/fonts/Cairo/Cairo-Medium.ttf
         - asset: assets/fonts/Cairo/Cairo-Regular.ttf
         - asset: assets/fonts/Cairo/Cairo-SemiBold.ttf
-
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto/Roboto-Black.ttf
@@ -92,7 +94,7 @@ flutter:
         - asset: assets/fonts/Roboto/Roboto-Medium.ttf
         - asset: assets/fonts/Roboto/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto/Roboto-SemiBold.ttf
-
+  # Flutter Assets
   assets:
     - assets/fonts/Cairo/
     - assets/fonts/Roboto/
@@ -126,6 +128,7 @@ flutter:
     
     - keys/
 
+# Flutter Localization
 flutter_intl:
   enabled: true
   arb_dir: lib/config/i18n/l10n

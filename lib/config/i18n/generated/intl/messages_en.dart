@@ -28,6 +28,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aboutUs": MessageLookupByLibrary.simpleMessage("About Us"),
+        "account_exists_with_different_credential":
+            MessageLookupByLibrary.simpleMessage(
+                "An account already exists with a different sign-in method."),
         "addNewCard": MessageLookupByLibrary.simpleMessage("Add New Card"),
         "addPaymentMethod":
             MessageLookupByLibrary.simpleMessage("Add new payment method"),
@@ -161,6 +164,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "generalSubTitle": MessageLookupByLibrary.simpleMessage("Validity"),
         "generalTitle": MessageLookupByLibrary.simpleMessage("General"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good morning!.."),
+        "google_signin_canceled": MessageLookupByLibrary.simpleMessage(
+            "Google sign-in was canceled."),
+        "google_signin_failed": MessageLookupByLibrary.simpleMessage(
+            "Google sign-in failed. Please try again."),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "id_token_expired":
@@ -231,6 +238,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("You must accept the terms"),
         "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
         "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
+        "network_request_failed": MessageLookupByLibrary.simpleMessage(
+            "Network request failed. Please check your internet connection."),
         "newAccount": MessageLookupByLibrary.simpleMessage("New Account"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "newPassword2": MessageLookupByLibrary.simpleMessage("New password"),

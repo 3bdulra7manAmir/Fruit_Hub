@@ -18,7 +18,7 @@ class UserProfileInfo extends StatelessWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Text(FirebaseAuth.instance.currentUser!.displayName ?? '', style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue001),),
+        Text(FirebaseAuth.instance.currentUser!.displayName ?? 'User added before name adding', style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue001),),
         Sizes.s2.verticalSpace,
         Text(FirebaseAuth.instance.currentUser!.email ?? '', style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kGrey023),),
       ],
