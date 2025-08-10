@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'firebase_auth.dart';
+import 'intsance/firebase_auth.dart';
 
 class FirebaseSignout
 {
@@ -12,7 +12,7 @@ class FirebaseSignout
   Future<void> signOut() async {
     try
     {
-      await AuthService.instance.auth.signOut();
+      await FirebaseAuthService.instance.auth.signOut();
       log('SignOut Done..........');
     }
     catch (error, stack)

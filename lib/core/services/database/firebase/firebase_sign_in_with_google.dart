@@ -5,7 +5,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../../../config/i18n/generated/l10n.dart';
 import '../../network/status_code.dart';
-import 'firebase_auth.dart';
+import 'intsance/firebase_auth.dart';
 
 class FirebaseGoogleSignIn {
   FirebaseGoogleSignIn._();
@@ -50,7 +50,7 @@ class FirebaseGoogleSignIn {
       }
 
       final credential = GoogleAuthProvider.credential(idToken: googleAuth.idToken, accessToken: authorization.accessToken,);
-      return await AuthService.instance.auth.signInWithCredential(credential);
+      return await FirebaseAuthService.instance.auth.signInWithCredential(credential);
     }
     on GoogleSignInException catch (error, stack)
     {
