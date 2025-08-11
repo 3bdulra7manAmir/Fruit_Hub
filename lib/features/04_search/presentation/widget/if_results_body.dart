@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,15 +41,17 @@ class FruitFilterGridWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return CustomGridbuilder(
-      itemCount: 1,
-      itemBuilder: (context, index) => const FruitGridCardWidget(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,             //  controls how many items per row
-        mainAxisSpacing: (8.0).h,      // vertical spacing
-        crossAxisSpacing: (16.0).w,    // horizontal spacing
-        childAspectRatio: (163.w / 214.h), // ≈ 0.7617
-      ),
-    );
+    return 
+    Container();
+    // CustomGridbuilder(
+    //   itemCount: 1,
+    //   itemBuilder: (context, index) => const FruitGridCardWidget(),
+    //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    //     crossAxisCount: 2,             //  controls how many items per row
+    //     mainAxisSpacing: (8.0).h,      // vertical spacing
+    //     crossAxisSpacing: (16.0).w,    // horizontal spacing
+    //     childAspectRatio: (163.w / 214.h), // ≈ 0.7617
+    //   ),
+    //);
   }
 }

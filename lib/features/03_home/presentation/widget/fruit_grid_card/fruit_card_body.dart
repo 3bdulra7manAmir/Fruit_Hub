@@ -9,36 +9,41 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/margin.dart';
+import '../../../domain/entity/fruit_entity.dart';
 import 'add_button.dart';
 import 'favourite_img.dart';
+import 'fruit_img.dart';
 import 'fruit_price.dart';
-import 'watermelon_img.dart';
 
-class FruitGridCardWidget extends StatelessWidget
-{
-  const FruitGridCardWidget({super.key});
+class FruitGridCardWidget extends StatelessWidget {
+  const FruitGridCardWidget({super.key, required this.fruit});
+  final FruitEntity fruit;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Card(
       color: AppColors.color.kGrey008,
-      shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXXSmall,),
+      shape: RoundedRectangleBorder(
+        borderRadius: AppRadiuses.circular.xXXXXSmall,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:
-        [
+        children: [
           Sizes.s8.verticalSpace,
           const FavouriteWidget(),
-          const Expanded(child: WatermelonWidget(),),
+          Expanded(child: FruitImgWidget(imageUrl: fruit.imageUrl)),
           Sizes.s12.verticalSpace,
-          const Row(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children:
-            [
-              Expanded(child: FruitGridPriceWidget()),
-              FruitAddButtonWidget(),
+            children: [
+              Expanded(
+                child: FruitGridPriceWidget(
+                  name: fruit.name,
+                  price: fruit.price,
+                ),
+              ),
+              const FruitAddButtonWidget(),
             ],
           ),
           Sizes.s20.verticalSpace,
@@ -47,6 +52,7 @@ class FruitGridCardWidget extends StatelessWidget
     );
   }
 }
+
 
 
 class FruitAddButtonWidget extends StatelessWidget
