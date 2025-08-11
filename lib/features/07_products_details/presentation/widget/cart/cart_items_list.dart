@@ -16,14 +16,14 @@ class CartItemsListWidget extends ConsumerWidget
   {
     final items = ref.watch(cartItemsProvider);
     return CustomListviewBuilder(
-      itemBuilder: (context, index) {
+      itemBuilder: (_, index) {
         final item = items[index];
         return SizedBox(
           height: 110.h,
           child: CartCardWidget(itemId: item.id),
         );
       },
-      separatorBuilder: (context, index) => Sizes.s8.verticalSpace,
+      separatorBuilder: (_, index) => Sizes.s8.verticalSpace,
       itemCount: items.length,
     );
   }

@@ -20,6 +20,7 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
   {
     try
     {
+      await Future.delayed(const Duration(seconds: 15));
       final mainCardSnapshot = await FirebaseFirestore.instance
         .collection('Fruits_Grid').get();
 

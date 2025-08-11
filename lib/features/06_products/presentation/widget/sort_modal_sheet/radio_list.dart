@@ -19,8 +19,8 @@ class ArrangementRadioList extends ConsumerWidget
     const options = SingingCharacter.values;
     return CustomListviewBuilder(
       itemCount: options.length,
-      separatorBuilder: (context, index) => Sizes.s10.verticalSpace,
-      itemBuilder: (context, index)
+      separatorBuilder: (_, index) => Sizes.s10.verticalSpace,
+      itemBuilder: (_, index)
       {
         final option = options[index];
         return ArrangementRadioCard(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
@@ -7,8 +8,10 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/numbers_and_dates.dart';
 import '../../../../../core/widgets/divider.dart';
 import '../common_container.dart';
+
 
 class OrderSummaryWidget extends StatelessWidget
 {
@@ -50,7 +53,13 @@ class SubTotalTextWidget extends StatelessWidget
         Sizes.s2.horizontalSpace,
         Text(S.current.subtotal2, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
         const Spacer(),
-        Text('150 ${S.current.le}', style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),),
+        Consumer(
+          builder: (_, ref, _)
+          {
+            return Text('${150.toString().localizedNumbers(ref)} ${S.current.le}', 
+              style: AppStyles.bold(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kBlack001),);
+          },
+        ),
         Sizes.s2.horizontalSpace,
       ],
     );
@@ -70,7 +79,7 @@ class DeliveryCostTextWidget extends StatelessWidget
       [
         Text(S.current.delivery2, style: AppStyles.extraLight(fontWeight: AppFontWeights.regularWeight),),
         const Spacer(),
-        Text('30 ${S.current.le}', style: AppStyles.extraLight(),),
+        Text('${30} ${S.current.le}', style: AppStyles.extraLight(),),
         Sizes.s20.horizontalSpace,
       ],
     );
@@ -91,7 +100,7 @@ class TotalCostTextWidget extends StatelessWidget
         Sizes.s2.horizontalSpace,
         Text(S.current.total2, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         const Spacer(),
-        Text('180 ${S.current.le}', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text('${180} ${S.current.le}', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         Sizes.s2.horizontalSpace,
       ],
     );

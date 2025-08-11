@@ -75,8 +75,8 @@ class PreviouslySearchedResultsWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomListviewBuilder(
-      itemBuilder: (context, index) => const PreviouslySearchedTextWidget(), 
-      separatorBuilder: (context, index) => Sizes.s8.verticalSpace, 
+      itemBuilder: (_, _) => const PreviouslySearchedTextWidget(), 
+      separatorBuilder: (_, _) => Sizes.s8.verticalSpace, 
       itemCount: 3
     );
   }

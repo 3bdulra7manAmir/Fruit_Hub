@@ -13,8 +13,8 @@ class PaymentMethodsListWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomListviewBuilder(
-      itemBuilder: (context, index) => const PaymentMethodCard(),
-      separatorBuilder: (context, index) => Sizes.s16.verticalSpace,
+      itemBuilder: (_, _) => const PaymentMethodCard(),
+      separatorBuilder: (_, _) => Sizes.s16.verticalSpace,
       itemCount: 2,
     );
   }

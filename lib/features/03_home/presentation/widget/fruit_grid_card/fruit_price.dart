@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
@@ -33,8 +34,12 @@ class FruitGridPriceWidget extends StatelessWidget
           children:
           [
             Flexible(
-              child: Text('${price.toCleanString()}${S.current.le} ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,),
-                maxLines: 1,),
+              child: Consumer(
+                builder: (_, ref, _) {
+                  return Text('${(price.toCleanString().localizedNumbers(ref))} ${S.current.le} ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,),
+                  maxLines: 1,);
+                },
+              ),
             ),
             Flexible(
               child: Text('/ ${S.current.kiloG}', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002,),

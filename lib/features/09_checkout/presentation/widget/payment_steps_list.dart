@@ -21,10 +21,10 @@ class PaymentStepsListWidget extends ConsumerWidget
     final List<String> titles = [S.current.shipping, S.current.address, S.current.pay, S.current.review];
 
     return CustomListviewBuilder(
-      separatorBuilder: (context, index) => Sizes.s24.horizontalSpace,
+      separatorBuilder: (_, index) => Sizes.s24.horizontalSpace,
       scrollDirection: Axis.horizontal,
       itemCount: titles.length,
-      itemBuilder: (context, index) {
+      itemBuilder: (_, index) {
         final isCompleted = index < currentStep;
         final isActive = index == currentStep;
         return GestureDetector(

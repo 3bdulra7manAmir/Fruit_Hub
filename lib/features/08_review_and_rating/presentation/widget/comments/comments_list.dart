@@ -16,8 +16,8 @@ class CommentsListWidget extends StatelessWidget
       children:
       [
         CustomListviewBuilder(
-          separatorBuilder: (context, index) => const CommentBody(),
-          itemBuilder: (context, index) => Sizes.s16.verticalSpace, 
+          separatorBuilder: (_, _) => const CommentBody(),
+          itemBuilder: (_, _) => Sizes.s16.verticalSpace, 
           itemCount: 5,
         )
       ],

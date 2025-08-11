@@ -9,6 +9,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/numbers_and_dates.dart';
 import '../../controllers/cart_items_controller.dart';
 
 class CartItemPriceWidget extends ConsumerWidget
@@ -53,14 +54,14 @@ class TrashImgWidget extends StatelessWidget
 }
 
 
-class ItemPriceTextWidget extends StatelessWidget
+class ItemPriceTextWidget extends ConsumerWidget
 {
   const ItemPriceTextWidget({super.key,});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
-    return Text('60 ${S.current.le} ', style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
+    return Text('${60.toString().localizedNumbers(ref)} ${S.current.le} ', style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
   }
 }
 

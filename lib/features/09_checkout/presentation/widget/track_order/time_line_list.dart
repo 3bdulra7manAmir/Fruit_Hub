@@ -16,7 +16,7 @@ class OrderTimeLineListWidget extends StatelessWidget {
       itemCount: _itemCount,
       padding: EdgeInsets.zero,
       separatorBuilder: (_, _) => Sizes.s0.verticalSpace,
-      itemBuilder: (context, index) => TimeLineCardWidget(
+      itemBuilder: (_, index) => TimeLineCardWidget(
         index: index,
         itemCount: _itemCount,
       ),

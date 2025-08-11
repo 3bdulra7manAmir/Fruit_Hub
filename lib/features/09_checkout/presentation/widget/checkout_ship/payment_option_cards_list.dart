@@ -19,8 +19,8 @@ class PaymentOptionCardsList extends ConsumerWidget
     final controller = ref.read(paymentCardSelectionProvider.notifier);
     return CustomListviewBuilder(
       itemCount: 2,
-      separatorBuilder: (context, index) => Sizes.s8.verticalSpace,
-      itemBuilder: (context, index) {
+      separatorBuilder: (_, index) => Sizes.s8.verticalSpace,
+      itemBuilder: (_, index) {
         return InkWell(
           borderRadius: AppRadiuses.circular.xXXXXSmall,
           onTap: () => controller.selectCard(index),

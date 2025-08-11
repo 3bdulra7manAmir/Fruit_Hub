@@ -10,6 +10,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/numbers_and_dates.dart';
 import '../../../../../core/widgets/paint_clipper.dart';
 import 'shop_now_button.dart';
 
@@ -61,7 +62,13 @@ class FruitCardWidget extends StatelessWidget
           [
             Text('خصومات', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
             Text(' ', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
-            Text('25%', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
+            Consumer(
+              builder: (_, ref, _)
+              {
+                return Text('${25.toString().localizedNumbers(ref)}%', 
+                  style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),);
+              },
+            ),
           ],
         ),
         Sizes.s8.verticalSpace,

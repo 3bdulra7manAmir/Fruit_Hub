@@ -5,11 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
-import '../../../../core/widgets/circular_indicator.dart';
 import '../../../../core/widgets/error_widget.dart';
 import '../../../../core/widgets/gridview_builder.dart';
 import '../../domain/usecases/fetch_fruit_usecase.dart';
 import 'fruit_grid_card/fruit_card_body.dart';
+import 'fruit_grid_list_shimmer.dart';
 
 class FruitGridListWidget extends ConsumerWidget
 {
@@ -30,7 +30,7 @@ class FruitGridListWidget extends ConsumerWidget
             crossAxisSpacing: (16.0).w,                     // horizontal spacing
             childAspectRatio: (163.w / 214.h),              // ≈ 0.7617
           ),
-          itemBuilder: (context, index)
+          itemBuilder: (_, index)
           {
             final fruit = fruits[index];
             return GestureDetector(
@@ -43,7 +43,7 @@ class FruitGridListWidget extends ConsumerWidget
           },
         );
       },
-      loading: () => const CustomCircularIndicator(),
+      loading: () => const FruitGridListShimmer(),
       error: (error, _) => CustomErrorWidget(error: error),
     );
   }

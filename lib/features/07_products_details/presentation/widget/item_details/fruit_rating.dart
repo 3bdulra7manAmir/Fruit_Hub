@@ -1,5 +1,7 @@
 import 'dart:developer';
+
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,6 +13,8 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/numbers_and_dates.dart';
+
 
 class FruitItemRatingWidget extends StatelessWidget
 {
@@ -39,26 +43,26 @@ class FruitItemRatingWidget extends StatelessWidget
 }
 
 
-class RatingAmountTextWidget extends StatelessWidget
+class RatingAmountTextWidget extends ConsumerWidget
 {
   const RatingAmountTextWidget({super.key,});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
-    return Text('4.5', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack002),);
+    return Text('${4.5.toString().localizedNumbers(ref)}', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack002),);
   }
 }
 
 
-class RatingsCountTextWidget extends StatelessWidget
+class RatingsCountTextWidget extends ConsumerWidget
 {
   const RatingsCountTextWidget({super.key,});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
-    return Text('(30+)', style: AppStyles.extraLight(
+    return Text('(${30.toString().localizedNumbers(ref)}+)', style: AppStyles.extraLight(
       fontColor: AppColors.color.kGrey012, 
       fontWeight: AppFontWeights.regularWeight),
     );

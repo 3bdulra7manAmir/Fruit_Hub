@@ -15,8 +15,8 @@ class PaymentMethodsListWidget extends StatelessWidget
   {
     return CustomListviewBuilder(
       scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) => PaymentMethodCardWidget(paymentMethodImg: AppAssets.icons.paymentMethodLogo,),
-      separatorBuilder: (context, index) => Sizes.s16.horizontalSpace,
+      itemBuilder: (_, _) => PaymentMethodCardWidget(paymentMethodImg: AppAssets.icons.paymentMethodLogo,),
+      separatorBuilder: (_, _) => Sizes.s16.horizontalSpace,
       itemCount: 8,
     );
   }

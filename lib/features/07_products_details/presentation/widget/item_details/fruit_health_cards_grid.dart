@@ -15,7 +15,7 @@ class FruitHealthGridInfoWidget extends StatelessWidget
   {
     return CustomGridbuilder(
       itemCount: 4,
-      itemBuilder: (context, index) => FruitHealthInfoCardWidget(
+      itemBuilder: (_, _) => FruitHealthInfoCardWidget(
         img: AppAssets.icons.calendarBlue,
         title: S.current.general, subTitle: S.current.generalSubTitle,
       ),

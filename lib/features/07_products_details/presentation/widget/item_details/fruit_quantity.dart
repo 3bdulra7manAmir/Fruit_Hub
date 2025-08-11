@@ -5,11 +5,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/numbers_and_dates.dart';
 import '../../../../03_home/presentation/widget/fruit_grid_card/add_button.dart';
 import '../../controllers/fruit_item_quantity_controller.dart';
 
@@ -57,7 +59,7 @@ class FruitQuantityChanger extends ConsumerWidget
         ),
 
         Sizes.s16.horizontalSpace,
-        Text(ref.watch(fruitItemQuantityProvider).toString(), style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text(ref.watch(fruitItemQuantityProvider).toString().localizedNumbers(ref)!, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
 
         Sizes.s16.horizontalSpace,
         GestureDetector(
@@ -77,12 +79,12 @@ class FruitQuantityChanger extends ConsumerWidget
 }
 
 
-class FruitQuantityPriceWidget extends StatelessWidget
+class FruitQuantityPriceWidget extends ConsumerWidget
 {
   const FruitQuantityPriceWidget({super.key,});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,7 +97,7 @@ class FruitQuantityPriceWidget extends StatelessWidget
           text: TextSpan(style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight,),
           children:
           [
-            TextSpan(text: '20جنية', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001)),
+            TextSpan(text: '${20.toString().localizedNumbers(ref)} ${S.current.le}', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001)),
             TextSpan(text: ' / ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
             TextSpan(text: 'الكيلو', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
           ]
