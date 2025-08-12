@@ -10,6 +10,7 @@ import '../../features/02_auth/presentation/screens/login_view.dart';
 import '../../features/02_auth/presentation/screens/new_password_view.dart';
 import '../../features/02_auth/presentation/screens/password_recovery_email.dart';
 import '../../features/02_auth/presentation/screens/register_view.dart';
+import '../../features/03_home/domain/entity/fruit_entity.dart';
 import '../../features/03_home/presentation/screens/home_view.dart';
 import '../../features/03_home/presentation/screens/more_popular_view.dart';
 import '../../features/04_search/presentation/screens/search_view.dart';
@@ -130,7 +131,11 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.itemsDetails,
         name: AppRoutes.itemsDetails,
-        builder: (_, _) => const ItemDetails(),
+        builder: (_, state)
+        {
+          final itemDetails = state.extra as FruitEntity;
+          return ItemDetails(itemDetails: itemDetails);
+        } 
       ),
       
       ///[ Rate Feature]

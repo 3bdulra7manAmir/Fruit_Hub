@@ -910,6 +910,16 @@ class S {
     );
   }
 
+  /// `خصومات`
+  String get discounts {
+    return Intl.message(
+      'خصومات',
+      name: 'discounts',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `تصفيه`
   String get clearance {
     return Intl.message(

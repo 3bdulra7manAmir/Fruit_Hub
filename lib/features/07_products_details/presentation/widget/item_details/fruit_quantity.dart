@@ -17,17 +17,20 @@ import '../../controllers/fruit_item_quantity_controller.dart';
 
 class FruitNeededQuantityWidget extends StatelessWidget
 {
-  const FruitNeededQuantityWidget({super.key});
+  const FruitNeededQuantityWidget({super.key, required this.itemName, required this.itemPrice});
+
+  final String itemName;
+  final String itemPrice;
 
   @override
   Widget build(BuildContext context)
   {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:
       [
-        FruitQuantityPriceWidget(),
-        FruitQuantityChanger()
+        FruitQuantityPriceWidget(itemName: itemName, itemPrice: itemPrice,),
+        const FruitQuantityChanger()
       ],
     );
   }
@@ -81,7 +84,10 @@ class FruitQuantityChanger extends ConsumerWidget
 
 class FruitQuantityPriceWidget extends ConsumerWidget
 {
-  const FruitQuantityPriceWidget({super.key,});
+  const FruitQuantityPriceWidget({super.key, required this.itemName, required this.itemPrice, });
+
+  final String itemName;
+  final String itemPrice;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -90,14 +96,14 @@ class FruitQuantityPriceWidget extends ConsumerWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Text('بطيخ', style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text(itemName, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         Sizes.s4.verticalSpace,
         RichText(
           textAlign: TextAlign.center,
           text: TextSpan(style: AppStyles.extraLight(fontWeight: AppFontWeights.boldWeight,),
           children:
           [
-            TextSpan(text: '${20.toString().localizedNumbers(ref)} ${S.current.le}', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001)),
+            TextSpan(text: '${itemPrice.localizedNumbers(ref)} ${S.current.le}', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001)),
             TextSpan(text: ' / ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
             TextSpan(text: 'الكيلو', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange002)),
           ]

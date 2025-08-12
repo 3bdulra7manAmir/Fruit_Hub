@@ -6,16 +6,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/i18n/localization/localization_controller.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/extensions/transform.dart';
 import '../../../../../core/widgets/appbar/default_appbar/back_button.dart';
+import '../../../../../core/widgets/cached_network_img.dart';
 import '../../../../../core/widgets/paint_clipper.dart';
 import '../../../../01_onboarding/presentation/widget/onboard_welcome/clipped_background.dart';
 
 
 class FruitItemWidget extends StatelessWidget
 {
-  const FruitItemWidget({super.key});
+  const FruitItemWidget({super.key, required this.imgUrl});
+
+  final String imgUrl;
 
   @override
   Widget build(BuildContext context)
@@ -44,7 +46,8 @@ class FruitItemWidget extends StatelessWidget
             ),
           ),
         ),
-        Image.asset(AppAssets.imgs.watermelonV2,),
+        CustomCachedNetworkImg(imgUrl: imgUrl)
+        //Image.asset(AppAssets.imgs.watermelonV2,),
       ],
     );
   }

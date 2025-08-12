@@ -121,6 +121,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Delivery Address"),
         "didForgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "discounts": MessageLookupByLibrary.simpleMessage("Discount"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "earlier": MessageLookupByLibrary.simpleMessage("Earlier"),

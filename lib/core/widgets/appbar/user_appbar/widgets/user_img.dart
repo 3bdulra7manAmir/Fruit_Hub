@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,6 +6,7 @@ import '../../../../../features/10_profile/presentation/controller/user_img/user
 import '../../../../constants/app_borders.dart';
 import '../../../../constants/app_images.dart';
 import '../../../../widgets/circular_indicator.dart';
+import '../../../cached_network_img.dart';
 
 class UserImgWidget extends ConsumerWidget
 {
@@ -23,11 +23,11 @@ class UserImgWidget extends ConsumerWidget
         {
           if (url != null && url.isNotEmpty)
           {
-            return CachedNetworkImage(
-              imageUrl: url,
+            return CustomCachedNetworkImg(
+              imgUrl: url,
               fit: BoxFit.cover,
-              placeholder: (context, _) => const CustomCircularIndicator(),
-              errorWidget: (context, _, _) => Image.asset(AppAssets.imgs.user, fit: BoxFit.contain),
+              placeholder: (_, _) => const CustomCircularIndicator(),
+              errorWidget: (_, _, _) => Image.asset(AppAssets.imgs.user, fit: BoxFit.contain),
               height: 44.h, width: 44.w,
             );
           }

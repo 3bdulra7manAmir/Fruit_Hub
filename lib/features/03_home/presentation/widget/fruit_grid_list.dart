@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/router/app_router.dart';
-import '../../../../config/router/app_routes.dart';
+import '../../../../config/router/routes_extras.dart';
 import '../../../../core/widgets/error_widget.dart';
 import '../../../../core/widgets/gridview_builder.dart';
 import '../../domain/usecases/fetch_fruit_usecase.dart';
@@ -34,9 +34,10 @@ class FruitGridListWidget extends ConsumerWidget
           {
             final fruit = fruits[index];
             return GestureDetector(
-              onTap: () {
+              onTap: ()
+              {
                 log('Fruit Details has been Entered...');
-                AppRouter.router.pushNamed(AppRoutes.itemsDetails);
+                AppRouter.router.pushFruitDetails(fruitDetails: fruits[index]);
               },
               child: FruitGridCardWidget(fruit: fruit)
             );

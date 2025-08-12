@@ -1,30 +1,30 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'remote_datasource.dart';
+part of 'offer_remote_datasource.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$remoteFruitDataSourceHash() =>
-    r'249f7e5497b70e7b528a3ea00273c2cebcc3431f';
+String _$remoteOfferDataSourceHash() =>
+    r'c5146c2a3c30efaa8a971fe932ed5d1319bf32cb';
 
-/// See also [remoteFruitDataSource].
-@ProviderFor(remoteFruitDataSource)
-final remoteFruitDataSourceProvider =
-    AutoDisposeProvider<RemoteFruitDataSource>.internal(
-      remoteFruitDataSource,
-      name: r'remoteFruitDataSourceProvider',
+/// See also [remoteOfferDataSource].
+@ProviderFor(remoteOfferDataSource)
+final remoteOfferDataSourceProvider =
+    AutoDisposeProvider<RemoteOfferDataSource>.internal(
+      remoteOfferDataSource,
+      name: r'remoteOfferDataSourceProvider',
       debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
           ? null
-          : _$remoteFruitDataSourceHash,
+          : _$remoteOfferDataSourceHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef RemoteFruitDataSourceRef =
-    AutoDisposeProviderRef<RemoteFruitDataSource>;
+typedef RemoteOfferDataSourceRef =
+    AutoDisposeProviderRef<RemoteOfferDataSource>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

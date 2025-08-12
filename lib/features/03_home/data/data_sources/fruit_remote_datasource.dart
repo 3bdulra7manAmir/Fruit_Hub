@@ -1,10 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../../core/services/database/firebase/intsance/firebase_fire_store.dart';
 import '../model/fruit_model.dart';
 
-part 'remote_datasource.g.dart';
+part 'fruit_remote_datasource.g.dart';
 
 abstract class RemoteFruitDataSource
 {
@@ -20,8 +20,8 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
   {
     try
     {
-      await Future.delayed(const Duration(seconds: 15));
-      final mainCardSnapshot = await FirebaseFirestore.instance
+      await Future.delayed(const Duration(seconds: 5));
+      final mainCardSnapshot = await FirebaseFireStoreService.instance.firestore
         .collection('Fruits_Grid').get();
 
       final List<FruitModel> fruits = [];
@@ -40,6 +40,7 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
       throw Exception('Error fetching fruits: $e');
     }
   }
+  
 }
 
 @riverpod

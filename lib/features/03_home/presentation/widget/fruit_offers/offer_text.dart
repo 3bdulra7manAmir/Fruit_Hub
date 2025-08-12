@@ -16,7 +16,10 @@ import 'shop_now_button.dart';
 
 class OfferTextWidget extends ConsumerWidget
 {
-  const OfferTextWidget({super.key});
+  const OfferTextWidget({super.key, required this.discountValue, required this.offerTitle});
+
+  final String offerTitle;
+  final double discountValue;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -36,7 +39,10 @@ class OfferTextWidget extends ConsumerWidget
           borderRadius: AppRadiuses.circular.xXXXXSmall, 
           color: AppColors.color.kGreen003,
         ),
-        child: const FruitCardWidget(),
+        child: FruitCardWidget(
+          discountValue: discountValue,
+          offerTitle: offerTitle,
+        ),
       ),
     );
   }
@@ -45,7 +51,10 @@ class OfferTextWidget extends ConsumerWidget
 
 class FruitCardWidget extends StatelessWidget
 {
-  const FruitCardWidget({super.key});
+  const FruitCardWidget({super.key, required this.offerTitle, required this.discountValue});
+
+  final String offerTitle;
+  final double discountValue;
 
   @override
   Widget build(BuildContext context)
@@ -55,17 +64,17 @@ class FruitCardWidget extends StatelessWidget
       children:
       [
         Sizes.s25.verticalSpace,
-        Text(S.current.eidOffers, style: AppStyles.extraLight(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.regularWeight),),
+        Text(offerTitle, style: AppStyles.extraLight(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.regularWeight),),
         Sizes.s8.verticalSpace,
         Row(
           children:
           [
-            Text('خصومات', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
+            Text(S.current.discounts, style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
             Text(' ', style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),),
             Consumer(
               builder: (_, ref, _)
               {
-                return Text('${25.toString().localizedNumbers(ref)}%', 
+                return Text('${discountValue.toCleanString().localizedNumbers(ref)}%', 
                   style: AppStyles.extraBold(fontColor: AppColors.color.kWhite001),);
               },
             ),

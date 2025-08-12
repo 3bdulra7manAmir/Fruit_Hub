@@ -9,14 +9,14 @@ class FruitModel extends FruitEntity with EquatableMixin {
       id: json['ProductId'] as String,
       name: json['ProductName'] as String,
       price: (json['ProductPrice'] as num).toDouble(),
-      imageUrl: json['ProductImg'] as String,
+      imgUrl: json['ProductImg'] as String,
     );
   }
   const FruitModel({
     required this.id,
     required super.name,
     required super.price,
-    required super.imageUrl,
+    required super.imgUrl,
   });
 
   final String id;
@@ -25,9 +25,9 @@ class FruitModel extends FruitEntity with EquatableMixin {
         'ProductId': id,
         'ProductName': name,
         'ProductPrice': price,
-        'ProductImg': imageUrl,
+        'ProductImg': imgUrl,
       };
 
   @override
-  List<Object?> get props => [id, name, price, imageUrl];
+  List<Object?> get props => [id, name, price, imgUrl];
 }

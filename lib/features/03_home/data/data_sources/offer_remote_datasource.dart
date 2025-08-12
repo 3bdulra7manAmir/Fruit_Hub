@@ -1,0 +1,49 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../../core/services/database/firebase/intsance/firebase_fire_store.dart';
+import '../model/offer_model.dart';
+
+part 'offer_remote_datasource.g.dart';
+
+abstract class RemoteOfferDataSource
+{
+  Future<List<OffersModel>> fetchOffers();
+}
+
+class RemoteOfferDataSourceImpl implements RemoteOfferDataSource
+{
+  RemoteOfferDataSourceImpl();
+
+  @override
+  Future<List<OffersModel>> fetchOffers() async
+  {
+    try
+    {
+      await Future.delayed(const Duration(seconds: 5));
+      final mainCardSnapshot = await FirebaseFireStoreService.instance.firestore
+        .collection('Discounts_List').get();
+
+      final List<OffersModel> offers = [];
+      for (var categoryDoc in mainCardSnapshot.docs)
+      {
+        final subCollectionSnapshot = await categoryDoc.reference.get();
+        offers.add(OffersModel.fromJson({
+          ...subCollectionSnapshot.data()!,
+          'id': categoryDoc.id,
+        }));
+      }
+      return offers;
+    }
+    catch (e)
+    {
+      throw Exception('Error fetching fruits: $e');
+    }
+  }
+  
+}
+
+@riverpod
+RemoteOfferDataSource remoteOfferDataSource(Ref ref) {
+  return RemoteOfferDataSourceImpl();
+}

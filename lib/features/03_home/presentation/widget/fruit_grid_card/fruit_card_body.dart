@@ -31,7 +31,7 @@ class FruitGridCardWidget extends StatelessWidget {
         children: [
           Sizes.s8.verticalSpace,
           const FavouriteWidget(),
-          Expanded(child: FruitImgWidget(imageUrl: fruit.imageUrl)),
+          Expanded(child: FruitImgWidget(imgUrl: fruit.imgUrl)),
           Sizes.s12.verticalSpace,
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,

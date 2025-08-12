@@ -9,5 +9,5 @@ part 'fetch_fruit_usecase.g.dart';
 @riverpod
 Future<List<FruitEntity>> fetchFruitsUsecase(Ref ref)
 {
-  return ref.read(fruitRepoProvider).fetchFruits();
+  return ref.read(fruitRepoProvider).fetchFruit();
 }

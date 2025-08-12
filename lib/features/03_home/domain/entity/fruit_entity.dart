@@ -5,12 +5,12 @@ class FruitEntity extends Equatable {
   const FruitEntity({
     required this.name,
     required this.price,
-    required this.imageUrl,
+    required this.imgUrl,
   });
   final String name;
   final double price;
-  final String imageUrl;
+  final String imgUrl;
 
   @override
-  List<Object?> get props => [name, price, imageUrl];
+  List<Object?> get props => [name, price, imgUrl];
 }

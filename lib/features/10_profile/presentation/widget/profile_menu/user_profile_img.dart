@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +8,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/widgets/cached_network_img.dart';
 import '../../../../../core/widgets/circular_indicator.dart';
 import '../../controller/user_img/user_img_controller.dart';
 
@@ -26,10 +26,10 @@ class UserProfileImg extends ConsumerWidget {
         imgState.when(
           data: (url) => ClipRRect(
             borderRadius: AppRadiuses.circular.xLarge,
-            child: CachedNetworkImage(
-              imageUrl: url ?? 'https://via.placeholder.com/150',
-              placeholder: (context, _) => const CustomCircularIndicator(),
-              errorWidget: (context, _, _) => const Icon(Icons.error),
+            child: CustomCachedNetworkImg(
+              imgUrl: url!,
+              placeholder: (_, _) => const CustomCircularIndicator(),
+              errorWidget: (_, _, _) => const Icon(Icons.error),
               width: 73.w,
               height: 73.h,
             ),
