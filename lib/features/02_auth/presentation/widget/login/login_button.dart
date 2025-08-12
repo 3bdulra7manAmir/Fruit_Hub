@@ -52,12 +52,12 @@ class LoginButtonWidget extends ConsumerWidget
           await AppRouter.router.pushReplacementNamed(AppRoutes.home);
         }
       }
-      catch (e, stack)
+      catch (error, stack)
       {
         AppRouter.router.pop(); // remove loading
-        log('Login error: $e \n\n $stack');
+        log('Login error: $error \n\n $stack');
         if (!context.mounted) return;
-        CustomSnackBar().show(context, StatusCodes().loginAuth.getMessageFromException(e));
+        CustomSnackBar().show(context, StatusCodes().loginAuth.getMessageFromException(error));
       }
     }
     else

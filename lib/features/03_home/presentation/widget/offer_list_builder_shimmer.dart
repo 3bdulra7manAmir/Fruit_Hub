@@ -21,9 +21,7 @@ class OffersListShimmer extends ConsumerWidget
       itemCount: 3,
       separatorBuilder: (_, _) => Sizes.s8.horizontalSpace,
       scrollDirection: Axis.horizontal,
-      itemBuilder: (_, _)
-      {
-        return Card(
+      itemBuilder: (_, _) => Card(
           shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXXSmall,),
           clipBehavior: Clip.antiAlias,
           child: Stack(
@@ -36,7 +34,6 @@ class OffersListShimmer extends ConsumerWidget
                 baseColor: AppColors.color.kGrey002,
                 highlightColor: AppColors.color.kGrey003,
               ),
-
               // Text And Button Shimmer
               Consumer(
                 builder: (_, ref, _)
@@ -62,8 +59,7 @@ class OffersListShimmer extends ConsumerWidget
               ),
             ],
           ),
-        );
-      },
+        ),
     );
   }
 }

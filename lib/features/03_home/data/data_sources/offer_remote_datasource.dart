@@ -35,9 +35,9 @@ class RemoteOfferDataSourceImpl implements RemoteOfferDataSource
       }
       return offers;
     }
-    catch (e)
+    catch (error, stack)
     {
-      throw Exception('Error fetching fruits: $e');
+      throw Exception('Error fetching Offers: $error, stack: $stack');
     }
   }
   

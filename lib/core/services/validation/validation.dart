@@ -28,9 +28,9 @@ abstract class AppValidation
       }
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.emailFailureValidation} ${e.toString()}';
+      return '${S.current.emailFailureValidation} ${error.toString()}, stack: $stack';
     }
   }
 
@@ -48,9 +48,9 @@ abstract class AppValidation
       }
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.fullNameValidationFailure} ${e.toString()}';
+      return '${S.current.fullNameValidationFailure} ${error.toString()}, stack: $stack';
     }
   }
 
@@ -89,9 +89,9 @@ abstract class AppValidation
       }
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.passwordValidationFailure} ${e.toString()}';
+      return '${S.current.passwordValidationFailure} ${error.toString()}, stack: $stack';
     }
   }
 
@@ -114,9 +114,9 @@ abstract class AppValidation
       }
       return null;
     }
-    on Exception catch (e)
+    on Exception catch (erorr, stack)
     {
-      return e.toString();
+      return '${erorr.toString()}, stack: $stack';
     }
   }
 
@@ -135,9 +135,9 @@ abstract class AppValidation
       }
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.cardNumberValidationFailure} ${e.toString()}';
+      return '${S.current.cardNumberValidationFailure} ${error.toString()}, stack: $stack';
     }
   }
 
@@ -161,9 +161,9 @@ abstract class AppValidation
       }
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.cvvValidationFailure} ${e.toString()}';
+      return '${S.current.cvvValidationFailure} ${error.toString()}, stack: $stack';
     }
   }
 
@@ -185,9 +185,9 @@ abstract class AppValidation
       }
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.expireDateValidationError} ${e.toString()}';
+      return '${S.current.expireDateValidationError} ${error.toString()}, stack: $stack';
     }
   }
 
@@ -213,9 +213,9 @@ abstract class AppValidation
 
       return null;
     } 
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.addressValidationFailure} ${e.toString()}';
+      return '${S.current.addressValidationFailure} ${error.toString()}, stack: $stack';
     }
   }
 
@@ -233,9 +233,9 @@ abstract class AppValidation
       }
       return null;
     }
-    catch (e)
+    catch (error, stack)
     {
-      return '${S.current.cityValidationFailure} ${e.toString()}';
+      return '${S.current.cityValidationFailure} ${error.toString()}, stack: $stack';
     }
   }
 }

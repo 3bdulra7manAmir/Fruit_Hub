@@ -20,13 +20,12 @@ class PaymentOptionCardsList extends ConsumerWidget
     return CustomListviewBuilder(
       itemCount: 2,
       separatorBuilder: (_, index) => Sizes.s8.verticalSpace,
-      itemBuilder: (_, index) {
-        return InkWell(
-          borderRadius: AppRadiuses.circular.xXXXXSmall,
-          onTap: () => controller.selectCard(index),
-          child: PaymentOptionCard(isSelected: selectedIndex == index),
-        );
-      },
+      itemBuilder: (_, index) =>
+       InkWell(
+        borderRadius: AppRadiuses.circular.xXXXXSmall,
+        onTap: () => controller.selectCard(index),
+        child: PaymentOptionCard(isSelected: selectedIndex == index),
+      ),
     );
   }
 }

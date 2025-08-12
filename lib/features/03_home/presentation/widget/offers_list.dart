@@ -18,9 +18,7 @@ class OffersListWidget extends ConsumerWidget
   {
     final offersAsync = ref.watch(fetchOffersUsecaseProvider);
     return offersAsync.when(
-      data: (offers)
-      {
-        return CustomListviewBuilder(
+      data: (offers) => CustomListviewBuilder(
           itemCount: offers.length,
           separatorBuilder: (_, _) => Sizes.s8.horizontalSpace,
           scrollDirection: Axis.horizontal,
@@ -29,9 +27,7 @@ class OffersListWidget extends ConsumerWidget
             final offer = offers[index];
             return OffersBody(offer: offer,);
           }, 
-          
-        );
-      }, 
+      ),
       error: (error, _) => CustomErrorWidget(error: error),
       loading: () => const OffersListShimmer(),
     );

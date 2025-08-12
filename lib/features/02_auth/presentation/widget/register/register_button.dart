@@ -58,12 +58,12 @@ class RegisterButtonWidget extends ConsumerWidget {
           await AppRouter.router.pushReplacementNamed(AppRoutes.login);
         }
       } 
-      catch (e, stack)
+      catch (error, stack)
       {
         AppRouter.router.pop(); // remove loading
-        log('Register error: $e \n\n $stack');
+        log('Register error: $error \n\n $stack');
         if (!context.mounted) return;
-        CustomSnackBar().show(context, StatusCodes().registerAuth.getMessageFromException(e));
+        CustomSnackBar().show(context, StatusCodes().registerAuth.getMessageFromException(error));
       }
     } 
     if(formKey.currentState!.validate() && ref.read(registerCheckboxProvider) == false)

@@ -20,7 +20,7 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
   {
     try
     {
-      await Future.delayed(const Duration(seconds: 5));
+      // await Future.delayed(const Duration(seconds: 5));
       final fruitsGridSnapshot = await FirebaseFireStoreService.instance.firestore
         .collection('Fruits_Grid').get();
 
@@ -35,9 +35,9 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
       }
       return fruits;
     }
-    catch (e)
+    catch (error, stack)
     {
-      throw Exception('Error fetching fruits: $e');
+      throw Exception('Error fetching fruits: $error, stack: $stack');
     }
   }
   

@@ -14,9 +14,9 @@ class FirebaseInitial
       await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
       log('Firebase Init Done... no issues');
     }
-    on Exception catch (e, stack)
+    on Exception catch (eroor, stack)
     {
-      log('error Within Firebase Init... error is: $e ${'\n\n'} error Stack: $stack');
+      log('error Within Firebase Init... error is: $eroor ${'\n\n'} error Stack: $stack');
     }
   }
 
