@@ -7,8 +7,8 @@ import '../constants/app_borders.dart';
 class CustomShimmer extends StatelessWidget {
   const CustomShimmer({
     super.key,
-    required this.width,
-    required this.height,
+    this.width,
+    this.height,
     this.borderRadius,
     this.baseColor,
     this.highlightColor,
@@ -20,8 +20,8 @@ class CustomShimmer extends StatelessWidget {
 
   final Color? baseColor;
   final Color? highlightColor;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
   final AlignmentGeometry? alignment;

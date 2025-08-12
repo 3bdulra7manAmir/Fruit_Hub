@@ -21,11 +21,11 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
     try
     {
       await Future.delayed(const Duration(seconds: 5));
-      final mainCardSnapshot = await FirebaseFireStoreService.instance.firestore
+      final fruitsGridSnapshot = await FirebaseFireStoreService.instance.firestore
         .collection('Fruits_Grid').get();
 
       final List<FruitModel> fruits = [];
-      for (var categoryDoc in mainCardSnapshot.docs)
+      for (var categoryDoc in fruitsGridSnapshot.docs)
       {
         final subCollectionSnapshot = await categoryDoc.reference.get();
         fruits.add(FruitModel.fromJson({

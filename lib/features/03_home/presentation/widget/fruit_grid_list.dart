@@ -37,7 +37,7 @@ class FruitGridListWidget extends ConsumerWidget
               onTap: ()
               {
                 log('Fruit Details has been Entered...');
-                AppRouter.router.pushFruitDetails(fruitDetails: fruits[index]);
+                AppRouter.router.pushFruitDetails(fruitEntity: fruits[index]);
               },
               child: FruitGridCardWidget(fruit: fruit)
             );

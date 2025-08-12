@@ -11,8 +11,8 @@ extension AppRouterNavigator on GoRouter
     AppRouter.router.pushNamed(AppRoutes.search, extra: fruitName,);
   }
   
-  void pushFruitDetails({required FruitEntity fruitDetails})
+  void pushFruitDetails({required FruitEntity fruitEntity,})
   {
-    AppRouter.router.pushNamed(AppRoutes.itemsDetails, extra: fruitDetails,);
+    AppRouter.router.pushNamed(AppRoutes.itemsDetails, extra: fruitEntity,);
   }
 }

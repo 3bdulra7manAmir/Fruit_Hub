@@ -6,28 +6,27 @@ class FruitModel extends FruitEntity with EquatableMixin {
 
   factory FruitModel.fromJson(Map<String, dynamic> json) {
     return FruitModel(
-      id: json['ProductId'] as String,
+      fruitId: json['ProductId'] as String,
       name: json['ProductName'] as String,
       price: (json['ProductPrice'] as num).toDouble(),
       imgUrl: json['ProductImg'] as String,
     );
   }
   const FruitModel({
-    required this.id,
+    required super.fruitId,
     required super.name,
     required super.price,
     required super.imgUrl,
   });
 
-  final String id;
 
   Map<String, dynamic> toJson() => {
-        'ProductId': id,
+        'ProductId': fruitId,
         'ProductName': name,
         'ProductPrice': price,
         'ProductImg': imgUrl,
       };
 
   @override
-  List<Object?> get props => [id, name, price, imgUrl];
+  List<Object?> get props => [fruitId, name, price, imgUrl];
 }

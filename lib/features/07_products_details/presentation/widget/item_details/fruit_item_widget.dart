@@ -10,6 +10,7 @@ import '../../../../../core/extensions/transform.dart';
 import '../../../../../core/widgets/appbar/default_appbar/back_button.dart';
 import '../../../../../core/widgets/cached_network_img.dart';
 import '../../../../../core/widgets/paint_clipper.dart';
+import '../../../../../core/widgets/shimmer.dart';
 import '../../../../01_onboarding/presentation/widget/onboard_welcome/clipped_background.dart';
 
 
@@ -31,14 +32,14 @@ class FruitItemWidget extends StatelessWidget
           clipper: BottomArcClipper(), 
           color: AppColors.color.kGrey008,
         ),
-        Positioned(
-          top: 30.h, right: 16.w,
+        
+        Positioned(top: 30.h, right: 16.w,
           child: GestureDetector(
             onTap: backButtonOnTap,
-            child: SizedBox(
-              width: 44.w, height: 44.h,
-              child:  Consumer(
-                builder: (_, ref, _) {
+            child: SizedBox(width: 44.w, height: 44.h,
+              child: Consumer(
+                builder: (_, ref, _)
+                {
                   final locale = ref.watch(localizationProvider);
                   return const BackButtonWidget().flipForRtl(locale);
                 },
@@ -46,8 +47,14 @@ class FruitItemWidget extends StatelessWidget
             ),
           ),
         ),
-        CustomCachedNetworkImg(imgUrl: imgUrl)
-        //Image.asset(AppAssets.imgs.watermelonV2,),
+        
+        CustomCachedNetworkImg(
+          imgUrl: imgUrl, 
+          placeholder: (_, _) => CustomShimmer(
+            width: 200.w, height: 150.h,
+            baseColor: AppColors.color.kGrey009, highlightColor: AppColors.color.kGrey003,
+          ),
+        ),
       ],
     );
   }

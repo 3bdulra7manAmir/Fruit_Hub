@@ -133,8 +133,8 @@ abstract class AppRouter
         name: AppRoutes.itemsDetails,
         builder: (_, state)
         {
-          final itemDetails = state.extra as FruitEntity;
-          return ItemDetails(itemDetails: itemDetails);
+          final fruitEntity = state.extra as FruitEntity;
+          return ItemDetails(fruitEntity: fruitEntity,);
         } 
       ),
       

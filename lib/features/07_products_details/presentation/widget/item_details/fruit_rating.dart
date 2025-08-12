@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,11 +13,16 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/numbers_and_dates.dart';
+import '../../../../../core/widgets/error_widget.dart';
+import '../../../data/model/rating_and_description_model.dart';
+import '../../../domain/usecases/fetch_rating_and_description_usecase.dart';
 
 
 class FruitItemRatingWidget extends StatelessWidget
 {
-  const FruitItemRatingWidget({super.key});
+  const FruitItemRatingWidget({super.key, required this.id,});
+
+  final String id;
 
   @override
   Widget build(BuildContext context)
@@ -28,9 +32,9 @@ class FruitItemRatingWidget extends StatelessWidget
       [
         SvgPicture.asset(AppAssets.icons.itemDetailsStar),
         Sizes.s9.horizontalSpace,
-        const RatingAmountTextWidget(),
+        RatingAmountTextWidget(fruitId: id,),
         Sizes.s9.horizontalSpace,
-        const RatingsCountTextWidget(),
+        RatingsCountTextWidget(fruitId: id,),
         Sizes.s9.horizontalSpace,
         GestureDetector(
           onTap: ()
@@ -45,29 +49,65 @@ class FruitItemRatingWidget extends StatelessWidget
 
 class RatingAmountTextWidget extends ConsumerWidget
 {
-  const RatingAmountTextWidget({super.key,});
 
+  const RatingAmountTextWidget({super.key, required this.fruitId});
+  final String fruitId;
+  
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    return Text('${4.5.toString().localizedNumbers(ref)}', style: AppStyles.extraLight(fontColor: AppColors.color.kBlack002),);
+    final ratingsAsync = ref.watch(fetchRatingAndDescriptionUsecaseProvider);
+    return ratingsAsync.when(
+      data: (ratings)
+      {
+        final rating = ratings.firstWhere(
+          (r) => r.ratingId == fruitId,
+          orElse: () => const RatingAndDescriptionModel(
+            ratingId: '',  ratingDescription: '', usersCount: '', value: 0,
+          ),
+        );
+        final rateValue = rating.value;
+        return Text(rateValue.toString().localizedNumbers(ref)!, style: AppStyles.extraLight(fontColor: AppColors.color.kBlack002),);
+      },
+      loading: () => const SizedBox.shrink(),
+      error: (error, stack) => CustomErrorWidget(error: error),
+    );
   }
 }
+
 
 
 class RatingsCountTextWidget extends ConsumerWidget
 {
-  const RatingsCountTextWidget({super.key,});
+
+  const RatingsCountTextWidget({super.key, required this.fruitId});
+  final String fruitId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    return Text('(${30.toString().localizedNumbers(ref)}+)', style: AppStyles.extraLight(
-      fontColor: AppColors.color.kGrey012, 
-      fontWeight: AppFontWeights.regularWeight),
+    final ratingsAsync = ref.watch(fetchRatingAndDescriptionUsecaseProvider);
+    return ratingsAsync.when(
+      data: (ratings)
+      {
+        final rating = ratings.firstWhere(
+          (r) => r.ratingId == fruitId,
+          orElse: () => const RatingAndDescriptionModel(
+            ratingId: '',  ratingDescription: '', usersCount: '', value: 0,
+          ),
+        );
+
+        final usersCount = rating.usersCount;
+        return Text('(${usersCount.toString().localizedNumbers(ref)}+)',
+          style: AppStyles.extraLight(fontColor: AppColors.color.kGrey012, fontWeight: AppFontWeights.regularWeight,),
+        );
+      },
+      loading: () => const SizedBox.shrink(),
+      error: (error, stack) => CustomErrorWidget(error: error),
     );
   }
 }
+
 
 
 class RatingReviewsTextWidget extends StatelessWidget
