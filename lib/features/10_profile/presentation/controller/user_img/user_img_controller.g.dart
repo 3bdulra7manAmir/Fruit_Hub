@@ -6,11 +6,11 @@ part of 'user_img_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$userImageHash() => r'ec18bc32222a3895b2efee1132f896d6436038e6';
+String _$userImageHash() => r'fc9ac5976fe3d2c1b6b272eef99569f0f29bb852';
 
 /// See also [userImage].
 @ProviderFor(userImage)
-final userImageProvider = AutoDisposeFutureProvider<String?>.internal(
+final userImageProvider = FutureProvider<String?>.internal(
   userImage,
   name: r'userImageProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -22,7 +22,7 @@ final userImageProvider = AutoDisposeFutureProvider<String?>.internal(
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef UserImageRef = AutoDisposeFutureProviderRef<String?>;
+typedef UserImageRef = FutureProviderRef<String?>;
 String _$userImageUploadHash() => r'5fd22366f2671726526f024a6cbd17fc41d9c5ea';
 
 /// Copied from Dart SDK

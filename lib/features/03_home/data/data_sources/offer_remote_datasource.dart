@@ -20,7 +20,7 @@ class RemoteOfferDataSourceImpl implements RemoteOfferDataSource
   {
     try
     {
-      await Future.delayed(const Duration(seconds: 5));
+      // await Future.delayed(const Duration(seconds: 5));
       final offersListSnapshot = await FirebaseFireStoreService.instance.firestore
         .collection('Discounts_List').get();
 

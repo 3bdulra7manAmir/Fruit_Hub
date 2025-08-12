@@ -11,6 +11,7 @@ import '../../data/model/rating_and_description_model.dart';
 import '../../domain/usecases/fetch_rating_and_description_usecase.dart';
 import '../widget/item_details/add_to_cart_button.dart';
 import '../widget/item_details/fruit_description.dart';
+import '../widget/item_details/fruit_description_shimmer.dart';
 import '../widget/item_details/fruit_health_cards_grid.dart';
 import '../widget/item_details/fruit_item_widget.dart';
 import '../widget/item_details/fruit_quantity.dart';
@@ -54,7 +55,7 @@ class ItemDetails extends ConsumerWidget
                   final decsriptionValue = rating.ratingDescription;
                   return FruitItemDescriptionWidget(fruitDescription: decsriptionValue);
                 }, 
-                loading: () => const SizedBox.shrink(),
+                loading: () => const FruitItemDescriptionShimmer(),
                 error: (error, stack) => CustomErrorWidget(error: error),
               ),
               

@@ -16,6 +16,7 @@ import '../../../../../core/extensions/numbers_and_dates.dart';
 import '../../../../../core/widgets/error_widget.dart';
 import '../../../data/model/rating_and_description_model.dart';
 import '../../../domain/usecases/fetch_rating_and_description_usecase.dart';
+import 'fruit_rating_shimmer.dart';
 
 
 class FruitItemRatingWidget extends StatelessWidget
@@ -69,7 +70,7 @@ class RatingAmountTextWidget extends ConsumerWidget
         final rateValue = rating.value;
         return Text(rateValue.toString().localizedNumbers(ref)!, style: AppStyles.extraLight(fontColor: AppColors.color.kBlack002),);
       },
-      loading: () => const SizedBox.shrink(),
+      loading: () => const RatingAmountShimmer(),
       error: (error, stack) => CustomErrorWidget(error: error),
     );
   }
@@ -102,7 +103,7 @@ class RatingsCountTextWidget extends ConsumerWidget
           style: AppStyles.extraLight(fontColor: AppColors.color.kGrey012, fontWeight: AppFontWeights.regularWeight,),
         );
       },
-      loading: () => const SizedBox.shrink(),
+      loading: () => const RatingsCountShimmer(),
       error: (error, stack) => CustomErrorWidget(error: error),
     );
   }

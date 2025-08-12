@@ -6,7 +6,7 @@ import '../repository/rating_and_description_repo.dart';
 
 part 'fetch_rating_and_description_usecase.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 Future<List<RatingAndDescriptionEntity>> fetchRatingAndDescriptionUsecase(Ref ref)
 {
   return ref.read(ratingAndDescriptionRepoProvider).fetchRatingAndDescription();

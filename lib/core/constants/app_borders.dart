@@ -21,6 +21,9 @@ class BorderCircular
 {
   BorderCircular._();
 
+  /// [circular: 0.r]
+  BorderRadius get zero => BorderRadius.circular(0.r);
+
   /// [circular: 2.r]
   BorderRadius get linearRatingBar => BorderRadius.circular(2.r);
 

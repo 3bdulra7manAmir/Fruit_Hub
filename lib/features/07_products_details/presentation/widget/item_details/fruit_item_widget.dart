@@ -49,9 +49,11 @@ class FruitItemWidget extends StatelessWidget
         ),
         
         CustomCachedNetworkImg(
-          imgUrl: imgUrl, 
+          imgUrl: imgUrl,
+          fit: BoxFit.contain,
+          width: 221.w, height: 167.h,
           placeholder: (_, _) => CustomShimmer(
-            width: 200.w, height: 150.h,
+            width: 221.w, height: 167.h,
             baseColor: AppColors.color.kGrey009, highlightColor: AppColors.color.kGrey003,
           ),
         ),

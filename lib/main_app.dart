@@ -18,7 +18,7 @@ class ECommerceApp extends StatelessWidget
   Widget build(BuildContext context)
   {
     return const DevicePreviewWidget(
-      isEnabled: false,
+      isEnabled: true,
       builder: ScreenUtilWidget(
         designSize: Size(375, 812),
         builder: MaterialAppWidget(),

@@ -28,7 +28,10 @@ class FruitsProductsWidget extends StatelessWidget
             borderRadius: AppRadiuses.circular.large,
             color: AppColors.color.kGrey008
           ),
-          child: CustomCachedNetworkImg(imgUrl: imgUrl),
+          child: CustomCachedNetworkImg(
+            imgUrl: imgUrl, width: 36.w, height: 36.h,
+            fit: BoxFit.cover,
+          ),
         ),
         Sizes.s2.verticalSpace,
         Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),)

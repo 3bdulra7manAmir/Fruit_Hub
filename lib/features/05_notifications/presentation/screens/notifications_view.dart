@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/extensions/margin.dart';
+import '../../../../core/extensions/numbers_and_dates.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../controllers/mark_as_read_controller.dart';
@@ -26,16 +27,21 @@ class Notifications extends StatelessWidget
           Consumer(
             builder: (_, ref, _) {
               final markAsRead = ref.watch(markAsReadProvider);
-              return NotificationsTitleWidget(header: S.current.neww, count: markAsRead ? '2' : '0',);
+              return NotificationsTitleWidget(header: S.current.neww, count: markAsRead ? '${2.toString().localizedNumbers(ref)}' : '${0.toString().localizedNumbers(ref)}',);
             },
           ).marginSymmetric(horizontal: 16.w),
           Sizes.s16.verticalSpace,
           const NotificationsCardListWidget(),
           Sizes.s16.verticalSpace,
-          NotificationsTitleWidget(
-            header: S.current.earlier,
-            count: '2',
-          ).marginSymmetric(horizontal: 16.w),
+          Consumer(
+            builder: (_, ref, _)
+            {
+              return NotificationsTitleWidget(
+                header: S.current.earlier,
+                count: '${2.toString().localizedNumbers(ref)}',
+              ).marginSymmetric(horizontal: 16.w);
+            },
+          ),
           Sizes.s26.verticalSpace,
           const NotificationsCardListWidget(),
         ],
