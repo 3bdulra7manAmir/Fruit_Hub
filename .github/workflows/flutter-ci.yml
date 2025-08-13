@@ -39,21 +39,19 @@ jobs:
       - name: Create firebase_options.dart
         run: |
           mkdir -p lib
-          cat << 'EOF' > lib/firebase_options.dart
-          ${{ secrets.FIREBASE_OPTIONS }}
-          EOF
+          echo "${{ secrets.FIREBASE_OPTIONS_BASE64 }}" | base64 --decode > lib/firebase_options.dart
 
       # 6️⃣ Create google-services.json
       - name: Create google-services.json
         run: |
           mkdir -p android/app
-          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | base64 --decode > android/app/google-services.json
+          echo "${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}" | base64 --decode > android/app/google-services.json
 
       # 7️⃣ Create GoogleService-Info.plist
       - name: Create GoogleService-Info.plist
         run: |
           mkdir -p ios/Runner
-          echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST }}" | base64 --decode > ios/Runner/GoogleService-Info.plist
+          echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST_BASE64 }}" | base64 --decode > ios/Runner/GoogleService-Info.plist
 
       # 8️⃣ Decode Android keystore for signing
       - name: Decode keystore

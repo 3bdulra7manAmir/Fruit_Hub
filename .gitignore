@@ -51,3 +51,6 @@ android/app/build.gradle.kts
 /keys
 keys
 my-release-key.jks.base64
+GoogleService-Info.b64
+google-services.b64
+firebase_options.b64
