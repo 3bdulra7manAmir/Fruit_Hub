@@ -45,7 +45,8 @@ class ProfileOptions extends ConsumerWidget
       contentPadding: EdgeInsets.zero,
       onTap: onTap,
       leading: SvgPicture.asset(leading),
-      trailing: isArrow ? SvgPicture.asset(AppAssets.icons.leftBlackArrow, colorFilter: ColorFilter.mode(AppColors.color.kBlack001, BlendMode.srcIn),).flipForRtl(ref.watch(localizationProvider)) : caseWidget,
+      trailing: isArrow ? SvgPicture.asset(AppAssets.icons.leftBlackArrow, colorFilter: ColorFilter.mode(AppColors.color.kBlack001, BlendMode.srcIn),).
+      flipForRtl(ref.watch(localizationProvider)) : caseWidget,
       title: Text(title, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),),
       shape: Border(bottom: BorderSide(color: AppColors.color.kGrey016)),
     );

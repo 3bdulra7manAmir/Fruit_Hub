@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -7,7 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/services/database/firebase/intsance/firebase_init.dart';
 import 'core/services/database/shared_preferences/shared_pref_init.dart';
-import 'core/utils/screen_protection.dart';
 import 'main_app.dart';
 
 void main() async

@@ -1,6 +1,9 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
+  exclude:
+      - lib/config/i18n/generated/**
+      - lib/firebase_options.dart
 
 linter:
   rules:
