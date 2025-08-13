@@ -34,6 +34,14 @@ jobs:
       # 4️⃣ Install dependencies
       - name: Install Dependencies
         run: flutter pub get
+      
+      # 4️⃣ clean dependencies
+      - name: Install Dependencies
+        run: flutter pub clean
+      
+      # 4️⃣ Install dependencies
+      - name: Install Dependencies
+        run: flutter pub get
 
       # 5️⃣ Create firebase_options.dart
       - name: Create firebase_options.dart
