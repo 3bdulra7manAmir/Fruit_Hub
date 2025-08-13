@@ -48,19 +48,19 @@ jobs:
       - name: Create google-services.json
         run: |
           mkdir -p android/app
-          echo "${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}" | base64 --decode > android/app/google-services.json
+          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | tr -d '\r' | base64 --decode > android/app/google-services.json
 
       # 7️⃣ Create GoogleService-Info.plist
       - name: Create GoogleService-Info.plist
         run: |
           mkdir -p ios/Runner
-          echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST_BASE64 }}" | base64 --decode > ios/Runner/GoogleService-Info.plist
+          echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST_BASE64 }}" | tr -d '\r' | base64 --decode > ios/Runner/GoogleService-Info.plist
 
       # 8️⃣ Decode Android keystore for signing
       - name: Decode keystore
         run: |
           mkdir -p keys
-          echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | base64 --decode > keys/my-release-key.jks
+          echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | tr -d '\r' | base64 --decode > keys/my-release-key.jks
 
       # 9️⃣ Set environment variables for Android signing
       - name: Set Gradle properties
