@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/services/validation/validation.dart';
+import '../../../../../core/utils/ui/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class CardAuthInfoWidget extends StatelessWidget
@@ -57,7 +58,7 @@ class CvvCodeWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      //inputFormatters: AppInputFormatters.digitsOnlyWithLength,
+      inputFormatters: AppInputFormatters.digitsOnlyWithLength,
       keyboardType: TextInputType.number,
       controller: cvvCodeController,
       validator: (value) => AppValidation.cvvValidation(value),

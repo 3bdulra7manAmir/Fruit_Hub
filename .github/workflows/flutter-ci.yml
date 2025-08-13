@@ -43,18 +43,17 @@ jobs:
           ${{ secrets.FIREBASE_OPTIONS }}
           EOF
 
-
       # 6️⃣ Create google-services.json
       - name: Create google-services.json
         run: |
           mkdir -p android/app
-          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" > android/app/google-services.json
+          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | base64 --decode > android/app/google-services.json
 
       # 7️⃣ Create GoogleService-Info.plist
       - name: Create GoogleService-Info.plist
         run: |
           mkdir -p ios/Runner
-          echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST }}" > ios/Runner/GoogleService-Info.plist
+          echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST }}" | base64 --decode > ios/Runner/GoogleService-Info.plist
 
       # 8️⃣ Decode Android keystore for signing
       - name: Decode keystore
@@ -65,7 +64,7 @@ jobs:
       # 9️⃣ Set environment variables for Android signing
       - name: Set Gradle properties
         run: |
-          echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" >> android/key.properties
+          echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" > android/key.properties
           echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
           echo "storeFile=../keys/my-release-key.jks" >> android/key.properties
