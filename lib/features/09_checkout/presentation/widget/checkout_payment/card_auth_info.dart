@@ -38,7 +38,7 @@ class ExpireDateWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      inputFormatters: AppInputFormatters.expireDate,
+      //inputFormatters: AppInputFormatters.expireDate,
       keyboardType: TextInputType.number,
       controller: expireDateController,
       validator: (value) => AppValidation.expireDateValidation(value),
@@ -58,7 +58,7 @@ class CvvCodeWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      inputFormatters: AppInputFormatters.digitsOnlyWithLength,
+      //inputFormatters: AppInputFormatters.digitsOnlyWithLength,
       keyboardType: TextInputType.number,
       controller: cvvCodeController,
       validator: (value) => AppValidation.cvvValidation(value),

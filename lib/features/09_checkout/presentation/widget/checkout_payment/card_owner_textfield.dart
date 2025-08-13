@@ -15,7 +15,7 @@ class CardOwnerNameWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      inputFormatters: AppInputFormatters.lettersOnly,
+      //inputFormatters: AppInputFormatters.lettersOnly,
       keyboardType: TextInputType.emailAddress,
       controller: ownerNameController,
       validator: (value) => AppValidation.fullNameValidation(value),

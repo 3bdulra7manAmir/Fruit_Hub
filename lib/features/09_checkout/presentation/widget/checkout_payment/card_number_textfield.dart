@@ -15,7 +15,7 @@ class CardNumberWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      inputFormatters: AppInputFormatters.digitsOnly,
+      //inputFormatters: AppInputFormatters.digitsOnly,
       keyboardType: TextInputType.number,
       controller: cardNumberController,
       validator: (value) => AppValidation.paymentMethodNumValidation(value),

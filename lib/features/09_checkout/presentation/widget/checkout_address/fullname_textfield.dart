@@ -15,7 +15,7 @@ class CheckOutFullNameWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      inputFormatters: AppInputFormatters.lettersOnly,
+      //inputFormatters: AppInputFormatters.lettersOnly,
       keyboardType: TextInputType.name,
       controller: fullNameController,
       validator: (value) => AppValidation.fullNameValidation(value),
