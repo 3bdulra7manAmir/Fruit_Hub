@@ -35,34 +35,38 @@ jobs:
       - name: Install Dependencies
         run: flutter pub get
       
-      # 4️⃣ clean dependencies
-      - name: Install Dependencies
+      # 4️⃣ Clean dependencies
+      - name: Clean Dependencies
         run: flutter clean
       
-      # 4️⃣ Install dependencies
-      - name: Install Dependencies
+      # 4️⃣ Install dependencies again
+      - name: Install Dependencies (Post-clean)
         run: flutter pub get
 
       # 5️⃣ Create firebase_options.dart
       - name: Create firebase_options.dart
+        shell: bash
         run: |
           mkdir -p lib
           echo "${{ secrets.FIREBASE_OPTIONS }}" > lib/firebase_options.dart
 
       # 6️⃣ Create google-services.json
       - name: Create google-services.json
+        shell: bash
         run: |
           mkdir -p android/app
           echo "${{ secrets.GOOGLE_SERVICES_JSON }}" > android/app/google-services.json
 
       # 7️⃣ Create GoogleService-Info.plist
       - name: Create GoogleService-Info.plist
+        shell: bash
         run: |
           mkdir -p ios/Runner
           echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST }}" > ios/Runner/GoogleService-Info.plist
 
       # 8️⃣ Decode Android keystore for signing
       - name: Decode keystore
+        shell: bash
         run: |
           mkdir -p keys
           echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | base64 --decode > keys/my-release-key.jks
