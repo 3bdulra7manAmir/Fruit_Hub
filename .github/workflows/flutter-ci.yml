@@ -1,0 +1,55 @@
+name: Flutter CI/CD
+
+on:
+  push:
+    branches:
+      - Riverpod # Trigger when pushing to main
+  pull_request:
+    branches:
+      - Riverpod # Trigger on pull requests to main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Use latest Ubuntu environment
+
+    steps:
+      # 1️⃣ Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2️⃣ Setup Java (required for Android builds)
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin # Eclipse Temurin distribution
+          java-version: 17
+
+      # 3️⃣ Install Flutter (with caching for faster builds)
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.32.8
+          #cache: true
+
+      # 4️⃣ Install dependencies
+      - name: Install Dependencies
+        run: flutter pub get
+
+      # 5️⃣ Analyze code for errors and warnings
+      - name: Analyze Code
+        run: flutter analyze
+
+      # 6️⃣ Run tests
+      - name: Run Tests
+        run: flutter test
+
+      # 7️⃣ Build the Release APK
+      - name: Build Release APK
+        run: flutter build apk --release
+
+      # 8️⃣ Upload the APK as a GitHub Artifact
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
