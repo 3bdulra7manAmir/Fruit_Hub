@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -38,7 +40,7 @@ class RatingUserImgWidget extends StatelessWidget
       width: 50.w, height: 50.w, alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: AppRadiuses.circular.large,
-        color: getRandomColor(),
+        //color: getRandomColor(),
         image: DecorationImage(image: AssetImage(AppAssets.imgs.usercomment))
       ),
     );

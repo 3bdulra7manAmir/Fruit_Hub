@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -58,7 +60,7 @@ class CvvCodeWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      inputFormatters: AppInputFormatters.digitsOnlyWithLength,
+      //inputFormatters: AppInputFormatters.digitsOnlyWithLength,
       keyboardType: TextInputType.number,
       controller: cvvCodeController,
       validator: (value) => AppValidation.cvvValidation(value),

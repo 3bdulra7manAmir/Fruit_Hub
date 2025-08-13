@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -24,7 +26,7 @@ class EditFullNameFieldWidget extends StatelessWidget
       keyboardType: TextInputType.name,
       suffixIcon: NameEditWidget(onTap: () {log('Edit Name...');},),
       validator: (value) => AppValidation.fullNameValidation(value),
-      inputFormatters: AppInputFormatters.lettersOnly,
+      //inputFormatters: AppInputFormatters.lettersOnly,
     );
   }
 }

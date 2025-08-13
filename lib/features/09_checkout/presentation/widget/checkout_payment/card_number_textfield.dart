@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
@@ -15,7 +17,7 @@ class CardNumberWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      inputFormatters: AppInputFormatters.digitsOnly,
+      //inputFormatters: AppInputFormatters.digitsOnly,
       keyboardType: TextInputType.number,
       controller: cardNumberController,
       validator: (value) => AppValidation.paymentMethodNumValidation(value),
