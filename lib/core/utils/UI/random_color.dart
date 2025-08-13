@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+
 Color getRandomColor()
 {
   final List<Color> colors =
@@ -15,3 +16,4 @@ Color getRandomColor()
   final random = Random();
   return colors[random.nextInt(colors.length)];
 }
+

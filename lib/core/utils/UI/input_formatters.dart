@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 
+
 abstract class AppInputFormatters
 {
   AppInputFormatters._();
@@ -9,6 +10,7 @@ abstract class AppInputFormatters
   static List<TextInputFormatter> get lettersOnly => [_FullNameFormatter()];
   static List<TextInputFormatter> get expireDate => [ExpiryDateInputFormatter()];
 }
+
 
 class _FullNameFormatter extends TextInputFormatter
 {
@@ -57,3 +59,4 @@ class ExpiryDateInputFormatter extends TextInputFormatter
     );
   }
 }
+
