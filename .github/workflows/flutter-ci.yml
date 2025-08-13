@@ -67,9 +67,15 @@ jobs:
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
           echo "storeFile=../keys/my-release-key.jks" >> android/key.properties
 
+      # 🔹 Fix relative imports for CI (Temporary)
+      - name: Fix Imports for CI
+        run: |
+          APP_NAME=$(grep '^name:' pubspec.yaml | awk '{print $2}')
+          find lib -type f -name "*.dart" -exec sed -i "s|^\(import \'\(\.\./\)\+\)|import 'package:${APP_NAME}/|g" {} \;
+
       # 🔟 Analyze code for errors/warnings
       - name: Analyze Code
-        run: flutter analyze || true
+        run: flutter analyze
 
       # 1️⃣2️⃣ Build Release APK
       - name: Build Release APK
