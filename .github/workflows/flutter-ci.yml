@@ -34,12 +34,15 @@ jobs:
       # 4️⃣ Install dependencies
       - name: Install Dependencies
         run: flutter pub get
+
+      # Auto-gen Files...
+      - name: Run Build Runner
+        run: flutter pub run build_runner build --delete-conflicting-outputs
       
-      # 5️⃣ Create firebase_options.dart
+      # 5️⃣ Create firebase_options.dart ,, Decode firebase_options.dart
       - name: Create firebase_options.dart
         run: |
-          mkdir -p lib
-          echo "${{ secrets.FIREBASE_OPTIONS_BASE64 }}" | base64 --decode > lib/firebase_options.dart
+          echo "${{ secrets.FIREBASE_OPTIONS }}" | tr -d '\r' | base64 --decode > lib/firebase_options.dart
 
       # 6️⃣ Create google-services.json
       - name: Create google-services.json
