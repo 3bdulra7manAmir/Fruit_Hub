@@ -50,3 +50,4 @@ ios/Runner/GoogleService-Info.plist
 android/app/build.gradle.kts
 /keys
 keys
+my-release-key.jks.base64

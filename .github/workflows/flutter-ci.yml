@@ -1,19 +1,19 @@
-name: Flutter CI/CD
+name: Flutter CI/CD (Secure Build)
 
 on:
   push:
     branches:
-      - Riverpod # Trigger when pushing to main
+      - Riverpod
   pull_request:
     branches:
-      - Riverpod # Trigger on pull requests to main
+      - Riverpod
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Use latest Ubuntu environment
+    runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the repository code
+      # 1️⃣ Checkout project code
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -21,35 +21,78 @@ jobs:
       - name: Setup Java 17
         uses: actions/setup-java@v4
         with:
-          distribution: temurin # Eclipse Temurin distribution
+          distribution: temurin
           java-version: 17
 
-      # 3️⃣ Install Flutter (with caching for faster builds)
+      # 3️⃣ Setup Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: 3.32.8
-          #cache: true
+          cache: true
 
       # 4️⃣ Install dependencies
       - name: Install Dependencies
         run: flutter pub get
 
-      # 5️⃣ Analyze code for errors and warnings
+      # 5️⃣ Create firebase_options.dart
+      - name: Create firebase_options.dart
+        run: |
+          mkdir -p lib
+          echo "${{ secrets.FIREBASE_OPTIONS }}" > lib/firebase_options.dart
+
+      # 6️⃣ Create google-services.json
+      - name: Create google-services.json
+        run: |
+          mkdir -p android/app
+          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" > android/app/google-services.json
+
+      # 7️⃣ Create GoogleService-Info.plist
+      - name: Create GoogleService-Info.plist
+        run: |
+          mkdir -p ios/Runner
+          echo "${{ secrets.GOOGLE_SERVICE_INFO_PLIST }}" > ios/Runner/GoogleService-Info.plist
+
+      # 8️⃣ Decode Android keystore for signing
+      - name: Decode keystore
+        run: |
+          mkdir -p keys
+          echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | base64 --decode > keys/my-release-key.jks
+
+      # 9️⃣ Set environment variables for Android signing
+      - name: Set Gradle properties
+        run: |
+          echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" >> android/key.properties
+          echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
+          echo "storeFile=../keys/my-release-key.jks" >> android/key.properties
+
+      # 🔟 Analyze code for errors/warnings
       - name: Analyze Code
         run: flutter analyze
 
-      # 6️⃣ Run tests
+      # 1️⃣1️⃣ Run unit tests
       - name: Run Tests
         run: flutter test
 
-      # 7️⃣ Build the Release APK
+      # 1️⃣2️⃣ Build Release APK
       - name: Build Release APK
         run: flutter build apk --release
 
-      # 8️⃣ Upload the APK as a GitHub Artifact
+      # # 1️⃣3️⃣ Build Release AAB
+      # - name: Build Release AAB
+      #   run: flutter build appbundle --release
+
+      # 1️⃣4️⃣ Upload APK
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+
+      # # 1️⃣5️⃣ Upload AAB
+      # - name: Upload AAB
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: release-aab
+      #     path: build/app/outputs/bundle/release/app-release.aab
