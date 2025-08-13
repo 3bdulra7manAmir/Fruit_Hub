@@ -37,7 +37,7 @@ jobs:
       
       # 4️⃣ clean dependencies
       - name: Install Dependencies
-        run: flutter pub clean
+        run: flutter clean
       
       # 4️⃣ Install dependencies
       - name: Install Dependencies
