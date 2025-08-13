@@ -3,10 +3,10 @@ name: Flutter CI/CD (Secure Build)
 on:
   push:
     branches:
-      - Riverpod
+      - main
   pull_request:
     branches:
-      - Riverpod
+      - main
 
 jobs:
   build:
@@ -34,10 +34,6 @@ jobs:
       # 4️⃣ Install dependencies
       - name: Install Dependencies
         run: flutter pub get
-
-      # 🔟 Analyze code for errors/warnings
-      - name: Analyze Code
-        run: flutter analyze
       
       # 5️⃣ Create firebase_options.dart
       - name: Create firebase_options.dart
@@ -77,9 +73,9 @@ jobs:
       #     APP_NAME=$(grep '^name:' pubspec.yaml | awk '{print $2}')
       #     find lib -type f -name "*.dart" -exec sed -i "s|^\(import \'\(\.\./\)\+\)|import 'package:${APP_NAME}/|g" {} \;
 
-      # # 🔟 Analyze code for errors/warnings
-      # - name: Analyze Code
-      #   run: flutter analyze
+      # 🔟 Analyze code for errors/warnings
+      - name: Analyze Code
+        run: flutter analyze
 
       # 1️⃣2️⃣ Build Release APK
       - name: Build Release APK
