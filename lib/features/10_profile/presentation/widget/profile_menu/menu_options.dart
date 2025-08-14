@@ -15,7 +15,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/transform.dart';
 import '../../../../../core/helpers/functions/toggle_button.dart';
-import '../../../../../core/widgets/toggle_button.dart';
+import '../../../../../core/widgets/buttons/toggle_button.dart';
 import '../../controller/profile_menu/language_informer.dart';
 import '../../controller/profile_menu/notification_controller.dart';
 import '../../controller/profile_menu/theme_informer.dart';

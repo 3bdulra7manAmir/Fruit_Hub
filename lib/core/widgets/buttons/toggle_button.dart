@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_borders.dart';
-import '../helpers/functions/toggle_button.dart';
+import '../../../../../../config/theme/color_manager/colors.dart';
+import '../../../../../../core/constants/app_borders.dart';
+import '../../helpers/functions/toggle_button.dart';
 
 class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWidget
 {

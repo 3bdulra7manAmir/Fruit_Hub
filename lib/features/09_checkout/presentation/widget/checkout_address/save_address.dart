@@ -5,7 +5,7 @@ import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/widgets/toggle_button.dart';
+import '../../../../../core/widgets/buttons/toggle_button.dart';
 import '../../controller/address/save_address_controller.dart';
 
 class SaveAddressWidget extends StatelessWidget
