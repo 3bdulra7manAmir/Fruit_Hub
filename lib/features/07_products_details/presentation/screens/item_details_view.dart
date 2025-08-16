@@ -58,9 +58,8 @@ class ItemDetails extends ConsumerWidget
                 loading: () => const FruitItemDescriptionShimmer(),
                 error: (error, stack) => CustomErrorWidget(error: error),
               ),
-              
               Sizes.s16.verticalSpace,
-              const FruitHealthGridInfoWidget(),
+              FruitHealthGridInfoWidget(fruitId: fruitEntity.fruitId,),
               Sizes.s24.verticalSpace,
               const AddToCartButtonWidget(),
               Sizes.s24.verticalSpace,

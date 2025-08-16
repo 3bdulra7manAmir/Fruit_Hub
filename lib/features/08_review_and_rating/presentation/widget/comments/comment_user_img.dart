@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,6 +5,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/utils/ui/random_color.dart';
 
 class RatingUserImgBody extends StatelessWidget
 {
@@ -39,7 +38,7 @@ class RatingUserImgWidget extends StatelessWidget
       width: 50.w, height: 50.w, alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: AppRadiuses.circular.large,
-        //color: getRandomColor(),
+        color: getRandomColor(),
         image: DecorationImage(image: AssetImage(AppAssets.imgs.usercomment))
       ),
     );

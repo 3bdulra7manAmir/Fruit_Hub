@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -7,24 +8,25 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 
-class FruitHealthInfoCardWidget extends StatelessWidget
+class FruitHealthInfoCardWidget extends ConsumerWidget
 {
   const FruitHealthInfoCardWidget({
-    super.key, 
+    super.key,
+    required this.fruitId,
     required this.title, 
-    required this.subTitle, 
+    this.sideTitle,
+    required this.subTitle,
     required this.img, 
-    this.is2Title = false,
-    this.title2});
+  });
 
+  final String fruitId;
   final String title;
+  final String? sideTitle;
   final String subTitle;
   final String img;
-  final bool? is2Title;
-  final String? title2;
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return Container(
       alignment: Alignment.center,
@@ -45,17 +47,15 @@ class FruitHealthInfoCardWidget extends StatelessWidget
             mainAxisAlignment: MainAxisAlignment.center,
             children:
             [
-              !is2Title! ?
-              Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007),)
-              : Row(
+              Row(
                 children:
                 [
-                  Text(title2!, style: AppStyles.bold(fontColor: AppColors.color.kGrey013)),
+                  Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGrey013)),
                   Text(' ', style: AppStyles.bold(),),
-                  Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
+                  Text(sideTitle ?? '', style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
                 ],
               ),
-              Sizes.s4.verticalSpace, 
+              Sizes.s4.verticalSpace,
               Text(subTitle, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey013),),
             ],
           ),

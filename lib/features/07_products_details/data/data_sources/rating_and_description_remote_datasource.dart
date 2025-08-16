@@ -40,6 +40,7 @@ class RemoteRatingAndDescriptionDataSourceImpl implements RemoteRatingAndDescrip
       throw Exception('Error fetching rating and description: $error, stack: $stack');
     }
   }
+
   
 }
 

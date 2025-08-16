@@ -1,13 +1,11 @@
-// ignore_for_file: unused_import
-
 import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/validation/validation.dart';
+import '../../../../../core/utils/ui/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class EditFullNameFieldWidget extends StatelessWidget
@@ -25,7 +23,7 @@ class EditFullNameFieldWidget extends StatelessWidget
       keyboardType: TextInputType.name,
       suffixIcon: NameEditWidget(onTap: () {log('Edit Name...');},),
       validator: (value) => AppValidation.fullNameValidation(value),
-      //inputFormatters: AppInputFormatters.lettersOnly,
+      inputFormatters: AppInputFormatters.lettersOnly,
     );
   }
 }

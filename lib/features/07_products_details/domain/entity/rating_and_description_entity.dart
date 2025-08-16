@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class RatingAndDescriptionEntity extends Equatable {
+class RatingAndDescriptionEntity extends Equatable
+{
 
   const RatingAndDescriptionEntity({
     required this.ratingId,

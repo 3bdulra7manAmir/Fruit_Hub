@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../config/i18n/generated/l10n.dart';
@@ -12,8 +13,9 @@ class CustomErrorWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
+    log('$error');
     return Center(child: Text('${S.current.error}: $error', 
-      style: AppStyles.extraLight(), maxLines: 3,)
+      style: AppStyles.extraLight(), maxLines: 6,)
     );
   }
 }

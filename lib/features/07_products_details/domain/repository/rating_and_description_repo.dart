@@ -7,7 +7,8 @@ import '../entity/rating_and_description_entity.dart';
 
 part 'rating_and_description_repo.g.dart';
 
-abstract class RatingAndDescriptionRepo {
+abstract class RatingAndDescriptionRepo
+{
   Future<List<RatingAndDescriptionEntity>> fetchRatingAndDescription();
 }
 

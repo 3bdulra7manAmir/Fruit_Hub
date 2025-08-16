@@ -15,20 +15,21 @@ import 'favourite_img.dart';
 import 'fruit_img.dart';
 import 'fruit_price.dart';
 
-class FruitGridCardWidget extends StatelessWidget {
+class FruitGridCardWidget extends StatelessWidget
+{
   const FruitGridCardWidget({super.key, required this.fruit});
   final FruitEntity fruit;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Card(
       color: AppColors.color.kGrey008,
-      shape: RoundedRectangleBorder(
-        borderRadius: AppRadiuses.circular.xXXXXSmall,
-      ),
+      shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.xXXXXSmall,),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children:
+        [
           Sizes.s8.verticalSpace,
           const FavouriteWidget(),
           Expanded(child: FruitImgWidget(imgUrl: fruit.imgUrl)),
@@ -36,12 +37,10 @@ class FruitGridCardWidget extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children:
+            [
               Expanded(
-                child: FruitGridPriceWidget(
-                  name: fruit.name,
-                  price: fruit.price,
-                ),
+                child: FruitGridPriceWidget(name: fruit.name, price: fruit.price,),
               ),
               const FruitAddButtonWidget(),
             ],

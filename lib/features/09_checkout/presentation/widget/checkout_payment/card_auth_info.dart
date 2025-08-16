@@ -1,11 +1,10 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/services/validation/validation.dart';
+import '../../../../../core/utils/ui/input_formatters.dart';
 import '../../../../../core/widgets/textform_field.dart';
 
 class CardAuthInfoWidget extends StatelessWidget
@@ -39,7 +38,7 @@ class ExpireDateWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return CustomTextFormField(
-      //inputFormatters: AppInputFormatters.expireDate,
+      inputFormatters: AppInputFormatters.expireDate,
       keyboardType: TextInputType.number,
       controller: expireDateController,
       validator: (value) => AppValidation.expireDateValidation(value),
