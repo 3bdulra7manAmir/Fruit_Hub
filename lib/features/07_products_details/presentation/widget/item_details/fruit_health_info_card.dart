@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/widgets/cached_network_img.dart';
 
 class FruitHealthInfoCardWidget extends ConsumerWidget
 {
   const FruitHealthInfoCardWidget({
     super.key,
-    required this.fruitId,
     required this.title, 
     this.sideTitle,
     required this.subTitle,
     required this.img, 
   });
 
-  final String fruitId;
   final String title;
   final String? sideTitle;
   final String subTitle;
@@ -50,9 +48,9 @@ class FruitHealthInfoCardWidget extends ConsumerWidget
               Row(
                 children:
                 [
-                  Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGrey013)),
+                  Text(title, style: AppStyles.bold(fontColor: AppColors.color.kGreen007)),
                   Text(' ', style: AppStyles.bold(),),
-                  Text(sideTitle ?? '', style: AppStyles.bold(fontColor: AppColors.color.kGreen007),),
+                  Text(sideTitle ?? '', style: AppStyles.bold(fontColor: AppColors.color.kGrey013),),
                 ],
               ),
               Sizes.s4.verticalSpace,
@@ -63,7 +61,7 @@ class FruitHealthInfoCardWidget extends ConsumerWidget
           if (1.sw < 427 && 1.sh < 952)...
           [const SizedBox.shrink(),]
           else...
-          [SvgPicture.asset(img),],
+          [CustomCachedNetworkImg(imgUrl: img, width: 35.w, height: 35.h,),],
           if (1.sw <= 427 && 1.sh <= 952)...
           [Sizes.s13.horizontalSpace,]
           else...

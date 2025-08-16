@@ -28,13 +28,13 @@ class UserProfileImg extends ConsumerWidget {
             borderRadius: AppRadiuses.circular.xLarge,
             child: CustomCachedNetworkImg(
               imgUrl: url!,
-              placeholder: (_, _) => const CustomCircularIndicator(),
+              placeholder: (_, _) => const CustomLoadingIndicator(),
               errorWidget: (_, _, _) => const Icon(Icons.error),
               width: 73.w,
               height: 73.h,
             ),
           ),
-          loading: () => const CustomCircularIndicator(),
+          loading: () => const CustomLoadingIndicator(),
           error: (_, _) => const Icon(Icons.error),
         ),
         Positioned(

@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class OffersEntity extends Equatable {
+class OffersEntity extends Equatable
+{
 
   const OffersEntity({
     required this.name,

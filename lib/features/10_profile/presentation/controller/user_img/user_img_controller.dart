@@ -7,7 +7,7 @@ import '../../../../../../core/services/database/firebase/firebase_user_img_stor
 
 part 'user_img_controller.g.dart';
 
-@Riverpod(keepAlive: true)
+@Riverpod(keepAlive: false)
 Future<String?> userImage(Ref ref) async {
   return await FirebaseUserImgStore().fetchUserImage(fromFirestore: true);
 }

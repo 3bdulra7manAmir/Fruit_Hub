@@ -2,50 +2,49 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/widgets/circular_indicator.dart';
 import '../../../../../core/widgets/error_widget.dart';
 import '../../../../../core/widgets/gridview_builder.dart';
-import '../../../domain/usecases/fetch_health_info_usecase.dart';
+import '../../../../03_home/domain/usecases/fetch_fruit_usecase.dart';
 import 'fruit_health_info_card.dart';
 
-class FruitHealthGridInfoWidget extends ConsumerWidget {
-  const FruitHealthGridInfoWidget({super.key, required this.fruitId});
+class FruitHealthGridInfoWidget extends ConsumerWidget
+{
+
+  const FruitHealthGridInfoWidget({
+    super.key, required this.fruitId,
+  });
   final String fruitId;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final healthInfoAsync = ref.watch(fetchHealthInfoUsecaseProvider);
-
-    return healthInfoAsync.when(
-      data: (items)
+  Widget build(BuildContext context, WidgetRef ref)
+  {
+    final fruitsAsync = ref.watch(fetchFruitsUsecaseProvider);
+    return fruitsAsync.when(
+      data: (fruits)
       {
-        final filtered = items.where((item) => item.fruitId == fruitId).toList();
-        if (filtered.isEmpty)
-        {
-          return const Text('No health info available');
-        }
-
+        final fruit = fruits.firstWhere(
+          (f) => f.fruitId == fruitId,
+          orElse: () => throw Exception('Fruit not found'),
+        );
         return CustomGridbuilder(
-          itemCount: filtered.length,
+          itemCount: fruit.healthInfo.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,             //  controls how many items per row
-            mainAxisSpacing: (16.0).h,      // vertical spacing
-            crossAxisSpacing: (16.0).w,    // horizontal spacing
-            childAspectRatio: (163.w / 80.h), //
+            crossAxisCount: 2, mainAxisSpacing: (16.0).h,
+            crossAxisSpacing: (16.0).w, childAspectRatio: (163.w / 80.h),
           ),
           itemBuilder: (context, index)
           {
-            final item = filtered[index];
+            final info = fruit.healthInfo[index];
             return FruitHealthInfoCardWidget(
-              fruitId: item.fruitId,
-              img: item.cardImg,
-              title: item.title,
-              subTitle: item.subtitle,
+              img: info.healthCardImg, title: info.healthTitle,
+              subTitle: info.healthSubTitle, sideTitle: info.healthSideTitle,
             );
           },
         );
       },
-      loading: () => const CircularProgressIndicator(),
-      error: (error, st) => CustomErrorWidget(error: error,),
+      error: (error, stackTrace) => CustomErrorWidget(error: error),
+      loading: () => const CustomLoadingIndicator(),
     );
   }
 }

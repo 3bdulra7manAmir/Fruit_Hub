@@ -11,6 +11,7 @@ abstract class RemoteOfferDataSource
   Future<List<OffersModel>> fetchOffers();
 }
 
+
 class RemoteOfferDataSourceImpl implements RemoteOfferDataSource
 {
   RemoteOfferDataSourceImpl();
@@ -43,7 +44,9 @@ class RemoteOfferDataSourceImpl implements RemoteOfferDataSource
   
 }
 
+
 @riverpod
-RemoteOfferDataSource remoteOfferDataSource(Ref ref) {
+RemoteOfferDataSource remoteOfferDataSource(Ref ref)
+{
   return RemoteOfferDataSourceImpl();
 }

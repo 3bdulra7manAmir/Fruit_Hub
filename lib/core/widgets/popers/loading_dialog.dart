@@ -18,7 +18,7 @@ dynamic loadingDialog(BuildContext context)
         shape: BoxShape.circle,
         color: AppColors.color.kGrey003.withValues(alpha: 0.4),
       ),
-      child: const CustomCircularIndicator()
+      child: const CustomLoadingIndicator()
     ),
   );
 }

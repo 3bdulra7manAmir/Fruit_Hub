@@ -7,13 +7,14 @@ import '../entity/fruit_entity.dart';
 
 part 'fruit_repo.g.dart';
 
-abstract class FruitRepo {
+abstract class FruitRepo
+{
   Future<List<FruitEntity>> fetchFruit();
 }
 
+
 @riverpod
-FruitRepo fruitRepo(Ref ref) {
-  return FruitRepoImpl(
-    remote: ref.read(remoteFruitDataSourceProvider),
-  );
+FruitRepo fruitRepo(Ref ref)
+{
+  return FruitRepoImpl(remote: ref.read(remoteFruitDataSourceProvider),);
 }

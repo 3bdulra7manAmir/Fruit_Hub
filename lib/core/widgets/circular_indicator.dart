@@ -2,15 +2,15 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomCircularIndicator extends StatefulWidget
+class CustomLoadingIndicator extends StatefulWidget
 {
-  const CustomCircularIndicator({super.key});
+  const CustomLoadingIndicator({super.key});
 
   @override
-  State<CustomCircularIndicator> createState() => _CustomCircularIndicatorState();
+  State<CustomLoadingIndicator> createState() => _CustomLoadingIndicatorState();
 }
 
-class _CustomCircularIndicatorState extends State<CustomCircularIndicator> with SingleTickerProviderStateMixin {
+class _CustomLoadingIndicatorState extends State<CustomLoadingIndicator> with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
   @override

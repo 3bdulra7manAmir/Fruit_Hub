@@ -47,7 +47,7 @@ abstract class AppRouter
     debugLogDiagnostics: kDebugMode,
     observers: [RouteTracker()],
     initialLocation: AppRoutes.splash,
-    errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomCircularIndicator()),),
+    errorBuilder: (_, _) => const Scaffold(body: Center(child: CustomLoadingIndicator()),),
     routes:
     [
       /// [ OnBoarding Feature ]

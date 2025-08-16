@@ -2,9 +2,11 @@ import 'package:equatable/equatable.dart';
 import '../../domain/entity/offer_entity.dart';
 
 
-class OffersModel extends OffersEntity with EquatableMixin {
+class OffersModel extends OffersEntity with EquatableMixin
+{
 
-  factory OffersModel.fromJson(Map<String, dynamic> json) {
+  factory OffersModel.fromJson(Map<String, dynamic> json)
+  {
     return OffersModel(
       id: json['OfferId'] as String,
       name: json['OfferName'] as String,

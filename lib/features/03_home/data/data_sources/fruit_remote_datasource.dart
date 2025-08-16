@@ -11,6 +11,7 @@ abstract class RemoteFruitDataSource
   Future<List<FruitModel>> fetchFruits();
 }
 
+
 class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
 {
   RemoteFruitDataSourceImpl();
@@ -20,19 +21,19 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
   {
     try
     {
-      // await Future.delayed(const Duration(seconds: 5));
-      final fruitsGridSnapshot = await FirebaseFireStoreService.instance.firestore
-        .collection('Fruits_Grid').get();
+      final fruitsGridSnapshot = await FirebaseFireStoreService.instance.firestore.collection('Fruits_Grid').get();
 
       final List<FruitModel> fruits = [];
-      for (var categoryDoc in fruitsGridSnapshot.docs)
+      for (var fruitDoc in fruitsGridSnapshot.docs)
       {
-        final subCollectionSnapshot = await categoryDoc.reference.get();
+        final fruitData = fruitDoc.data();
+        final healthInfoSnapshot = await fruitDoc.reference.collection('Fruits_Health_Info').get();
+        final healthInfoList = healthInfoSnapshot.docs.map((doc) => doc.data()).toList();
         fruits.add(FruitModel.fromJson({
-          ...subCollectionSnapshot.data()!,
-          'id': categoryDoc.id,
+          ...fruitData, 'ProductId': fruitDoc.id, 'healthInfo': healthInfoList,
         }));
       }
+
       return fruits;
     }
     catch (error, stack)
@@ -40,10 +41,12 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
       throw Exception('Error fetching fruits: $error, stack: $stack');
     }
   }
-  
+
 }
 
+
 @riverpod
-RemoteFruitDataSource remoteFruitDataSource(Ref ref) {
+RemoteFruitDataSource remoteFruitDataSource(Ref ref)
+{
   return RemoteFruitDataSourceImpl();
 }

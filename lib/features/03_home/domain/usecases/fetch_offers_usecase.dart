@@ -6,6 +6,7 @@ import '../repository/offer_repo.dart';
 
 part 'fetch_offers_usecase.g.dart';
 
+
 @riverpod
 Future<List<OffersEntity>> fetchOffersUsecase(Ref ref)
 {

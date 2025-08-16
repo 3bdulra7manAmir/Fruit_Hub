@@ -26,7 +26,7 @@ class UserImgWidget extends ConsumerWidget
             return CustomCachedNetworkImg(
               imgUrl: url,
               fit: BoxFit.cover,
-              placeholder: (_, _) => const CustomCircularIndicator(),
+              placeholder: (_, _) => const CustomLoadingIndicator(),
               errorWidget: (_, _, _) => Image.asset(AppAssets.imgs.user, fit: BoxFit.contain),
               height: 44.h, width: 44.w,
             );
@@ -36,7 +36,7 @@ class UserImgWidget extends ConsumerWidget
             return Image.asset(AppAssets.imgs.user, fit: BoxFit.contain);
           }
         },
-        loading: () => const CustomCircularIndicator(),
+        loading: () => const CustomLoadingIndicator(),
         error: (_, _) => Image.asset(AppAssets.imgs.user, fit: BoxFit.contain),
       ),
     );

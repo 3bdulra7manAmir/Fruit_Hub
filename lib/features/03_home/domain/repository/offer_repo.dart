@@ -7,13 +7,14 @@ import '../entity/offer_entity.dart';
 
 part 'offer_repo.g.dart';
 
-abstract class OfferRepo {
+abstract class OfferRepo
+{
   Future<List<OffersEntity>> fetchOffers();
 }
 
+
 @riverpod
-OfferRepo offerRepo(Ref ref) {
-  return OfferRepoImpl(
-    remote: ref.read(remoteOfferDataSourceProvider),
-  );
+OfferRepo offerRepo(Ref ref)
+{
+  return OfferRepoImpl(remote: ref.read(remoteOfferDataSourceProvider),);
 }
