@@ -6,7 +6,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'user_img_picker.g.dart';
 
 @riverpod
-Future<XFile?> pickUserImage(Ref ref) async
+Future<XFile?> userImagePicker(Ref ref) async
 {
   final ImagePicker picker = ImagePicker();
   final XFile? pickedImage = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100,);

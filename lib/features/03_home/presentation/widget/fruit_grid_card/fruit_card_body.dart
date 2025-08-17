@@ -40,26 +40,24 @@ class FruitGridCardWidget extends StatelessWidget
             children:
             [
               Expanded(child: FruitGridPriceWidget(name: fruit.name, price: fruit.price,),),
-              Consumer(
-                builder: (_, ref, _) => FruitAddButton(
-                  onTap: ()
-                  {
-                    log('Add has been Pressed...');
-                    ref.read(fruitItemQuantityProvider(fruit.fruitId).notifier).increment();
-                    final fruitInCart = ref.read(cartItemsProvider).where((item) => item.fruit.fruitId == fruit.fruitId).firstOrNull;
-                    if (fruitInCart != null)
-                    {ref.read(cartItemsProvider.notifier).addItem(fruitInCart.fruit, 1);}
-                    else
-                    {ref.read(cartItemsProvider.notifier).addItem(fruit, 1);}
-                  },
-                ),
-              ),
+              Consumer(builder: (_, ref, _) => FruitAddButton(onTap:() => fruitAddButtonOnTap(ref)),),
             ],
           ),
           Sizes.s20.verticalSpace,
         ],
       ).marginSymmetric(horizontal: 8.w),
     );
+  }
+
+  void fruitAddButtonOnTap(WidgetRef ref)
+  {
+    log('Add has been Pressed...');
+    ref.read(fruitItemQuantityProvider(fruit.fruitId).notifier).increment();
+    final fruitInCart = ref.read(cartItemsProvider).where((item) => item.fruit.fruitId == fruit.fruitId).firstOrNull;
+    if (fruitInCart != null)
+    {ref.read(cartItemsProvider.notifier).addItem(fruitInCart.fruit, 1);}
+    else
+    {ref.read(cartItemsProvider.notifier).addItem(fruit, 1);}
   }
 }
 

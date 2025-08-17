@@ -21,9 +21,10 @@ class UserProfileInfoBody extends ConsumerWidget
       children:
       [
         GestureDetector(
-          onTap: () async {
+          onTap: () async
+          {
             log('User Img Picker...');
-            final pickedImage = await ref.read(pickUserImageProvider.future);
+            final pickedImage = await ref.read(userImagePickerProvider.future);
             if (pickedImage != null)
             {
               await ref.read(userImageUploadProvider(File(pickedImage.path)).future);

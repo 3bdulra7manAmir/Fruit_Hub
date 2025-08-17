@@ -7,7 +7,9 @@ import '../../../../config/i18n/generated/l10n.dart';
 import '../../network/status_code.dart';
 import 'intsance/firebase_auth.dart';
 
-class FirebaseGoogleSignIn {
+
+class FirebaseGoogleSignIn
+{
   FirebaseGoogleSignIn._();
 
   static final FirebaseGoogleSignIn _instance = FirebaseGoogleSignIn._();

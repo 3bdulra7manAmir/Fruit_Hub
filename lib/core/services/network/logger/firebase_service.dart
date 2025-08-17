@@ -18,9 +18,9 @@ class FirebaseService
       AppLogger.firebaseAction('SignIn Success', data: {'uid': userCred.user?.uid});
       return userCred.user;
     }
-    catch (e)
+    catch (e, stack)
     {
-      AppLogger.firebaseError('SignIn', e);
+      AppLogger.firebaseError('SignIn', e, stackTrace: stack);
       rethrow;
     }
   }
@@ -33,9 +33,9 @@ class FirebaseService
       await _firestore.collection('users').doc(uid).set(data);
       AppLogger.firebaseAction('AddUserData Success', data: {'uid': uid});
     }
-    catch (e)
+    catch (e, stack)
     {
-      AppLogger.firebaseError('AddUserData', e);
+      AppLogger.firebaseError('AddUserData', e, stackTrace: stack);
       rethrow;
     }
   }

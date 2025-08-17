@@ -15,7 +15,7 @@ class UserImgWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final userImageAsync = ref.watch(userImageProvider);
+    final userImageAsync = ref.watch(userImageFetchProvider);
     return ClipRRect(
       borderRadius: AppRadiuses.circular.xLarge,
       child: userImageAsync.when(

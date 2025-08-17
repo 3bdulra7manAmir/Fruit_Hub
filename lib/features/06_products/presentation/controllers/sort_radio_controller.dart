@@ -1,17 +1,15 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../widget/sort_modal_sheet/radio_card.dart';
-
 part 'sort_radio_controller.g.dart';
 
-@riverpod
-class SortRadio extends _$SortRadio
-{
-  @override
-  SingingCharacter build() => SingingCharacter.low2Hight;
+enum SortOptions { highToLow, lowToHigh, alphabetOrder }
 
-  void select(SingingCharacter value)
-  {
-    state = value;
+@riverpod
+class SortRadio extends _$SortRadio {
+  @override
+  SortOptions build() => SortOptions.lowToHigh;
+
+  void select(SortOptions option) {
+    state = option;
   }
 }

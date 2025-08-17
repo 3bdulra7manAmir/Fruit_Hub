@@ -24,10 +24,10 @@ class AppLogger {
     _logger.w(message);
   }
 
-  // static void error(String message, [error, StackTrace? stackTrace])
-  // {
-  //   _logger.e(message, error, stackTrace);
-  // }
+  static void error(String message, {error, StackTrace? stackTrace})
+  {
+    _logger.e(message, error: error, stackTrace: stackTrace);
+  }
 
   // --------- Firebase Logs ----------
   static void firebaseAction(String action, {Map<String, dynamic>? data})
@@ -35,8 +35,8 @@ class AppLogger {
     _logger.i('Firebase Action: $action\nData: $data');
   }
 
-  static void firebaseError(String action, error)
+  static void firebaseError(String action, error, {StackTrace? stackTrace})
   {
-    _logger.e('Firebase Error: $action\n$error');
+    _logger.e('Firebase Error: $action\n$error', error: error, stackTrace: stackTrace);
   }
 }

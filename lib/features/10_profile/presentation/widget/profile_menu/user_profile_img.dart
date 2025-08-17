@@ -18,7 +18,7 @@ class UserProfileImg extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final imgState = ref.watch(userImageProvider);
+    final imgState = ref.watch(userImageFetchProvider);
     return Stack(
       alignment: Alignment.center,
       clipBehavior: Clip.none,

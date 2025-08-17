@@ -41,7 +41,6 @@ class FiltrationArrowsWidget extends StatelessWidget
       {
         log('Arrows Has been Pressed...');
         priceFilterSheet(context);
-        
       },
       child: Container(
         height: 31.h, width: 44.w, alignment: Alignment.center,

@@ -6,22 +6,22 @@ part of 'user_img_picker.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$pickUserImageHash() => r'cdd7351a0146e775e80e4ad5cc02e15131ecc100';
+String _$userImagePickerHash() => r'23a9d0180831c6e63363608d4fa2de4a35927d2b';
 
-/// See also [pickUserImage].
-@ProviderFor(pickUserImage)
-final pickUserImageProvider = AutoDisposeFutureProvider<XFile?>.internal(
-  pickUserImage,
-  name: r'pickUserImageProvider',
+/// See also [userImagePicker].
+@ProviderFor(userImagePicker)
+final userImagePickerProvider = AutoDisposeFutureProvider<XFile?>.internal(
+  userImagePicker,
+  name: r'userImagePickerProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$pickUserImageHash,
+      : _$userImagePickerHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef PickUserImageRef = AutoDisposeFutureProviderRef<XFile?>;
+typedef UserImagePickerRef = AutoDisposeFutureProviderRef<XFile?>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

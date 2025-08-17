@@ -1,5 +1,4 @@
 // ignore_for_file: unused_local_variable
-
 import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -8,12 +7,12 @@ import '../../../../../../core/services/database/firebase/firebase_user_img_stor
 part 'user_img_controller.g.dart';
 
 @Riverpod(keepAlive: false)
-Future<String?> userImage(Ref ref) async {
-  return await FirebaseUserImgStore().fetchUserImage(fromFirestore: true);
-}
+Future<String?> userImageFetch(Ref ref) async => await FirebaseUserImgFetch().fetchUserImage(fromFirestore: true);
+
 
 @riverpod
-Future<void> userImageUpload(Ref ref, File imageFile) async {
+Future<void> userImageUpload(Ref ref, File imageFile) async
+{
   final url = await FirebaseUserImgStore().uploadUserImage(imageFile: imageFile);
-  ref.invalidate(userImageProvider);
+  ref.invalidate(userImageFetchProvider);
 }

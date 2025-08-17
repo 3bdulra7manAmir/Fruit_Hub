@@ -1,17 +1,17 @@
 import '../../config/i18n/generated/l10n.dart';
-import '../../features/06_products/presentation/widget/sort_modal_sheet/radio_card.dart';
+import '../../features/06_products/presentation/controllers/sort_radio_controller.dart';
 
-extension SingingCharacterExtension on SingingCharacter
+extension SingingCharacterExtension on SortOptions
 {
   String get title
   {
     switch (this)
     {
-      case SingingCharacter.low2Hight:
+      case SortOptions.lowToHigh:
         return S.current.sortLowToHigh;
-      case SingingCharacter.hight2Low:
+      case SortOptions.highToLow:
         return S.current.sortHighToLow;
-      case SingingCharacter.alpha:
+      case SortOptions.alphabetOrder:
         return S.current.sortAlphabetical;
     }
   }
