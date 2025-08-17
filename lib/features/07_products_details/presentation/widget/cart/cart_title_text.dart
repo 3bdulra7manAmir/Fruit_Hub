@@ -25,14 +25,8 @@ class CartTitleWidget extends ConsumerWidget
       height: 41.h, width: 375.w,
       alignment: Alignment.center,
       decoration: BoxDecoration(color: AppColors.color.kGreen006,),
-      child: Text(
-        S.current.cartProductsCount(
-          cartItemsTotal.totalItemsCount().toString().localizedNumbers(ref)!,
-        ),
-        style: AppStyles.extraLight(
-          fontColor: AppColors.color.kGreen011,
-          fontWeight: AppFontWeights.regularWeight,
-        ),
+      child: Text(S.current.cartProductsCount(cartItemsTotal.totalItemsCount().toString().localizedNumbers(ref)!,),
+        style: AppStyles.extraLight(fontColor: AppColors.color.kGreen011, fontWeight: AppFontWeights.regularWeight,),
       ),
     );
   }

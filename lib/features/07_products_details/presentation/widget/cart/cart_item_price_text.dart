@@ -10,19 +10,21 @@ import '../../controllers/fruit_item_quantity_controller.dart';
 class ItemPriceTextWidget extends ConsumerWidget
 {
   const ItemPriceTextWidget({super.key, 
+  required this.itemId,
   required this.itemPrice,
   required this.itemWeight,
   });
 
+  final String itemId;
   final String itemPrice;
   final String itemWeight;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final addButtonController = ref.watch(fruitItemQuantityProvider);
-    final totalKilosPrice = '${(double.tryParse(itemPrice)! * double.tryParse(itemWeight)! * addButtonController)
-    .toCleanString().localizedNumbers(ref)} ${S.current.le}';
+    final quantity = ref.watch(fruitItemQuantityProvider(itemId));
+    final totalKilosPrice = '${(double.tryParse(itemPrice)! * double.tryParse(itemWeight)! * quantity)
+      .toCleanString().localizedNumbers(ref)} ${S.current.le}';
 
     return Text(totalKilosPrice, style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
   }

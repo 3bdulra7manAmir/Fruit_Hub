@@ -37,7 +37,7 @@ class CartItemPriceWidget extends ConsumerWidget
           child: const TrashImgWidget()
         ),
         const Spacer(),
-        ItemPriceTextWidget(itemPrice: itemPrice, itemWeight: itemWeight,),
+        ItemPriceTextWidget(itemPrice: itemPrice, itemWeight: itemWeight, itemId: itemId,),
         Sizes.s8.verticalSpace,
       ],
     );

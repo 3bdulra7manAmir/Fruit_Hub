@@ -18,9 +18,9 @@ class CartPayButtonWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final total = ref.watch(cartItemsProvider).fold<double>(0.0, (sum, item) => sum + (item.fruit.price * item.quantity),);
+    final total = ref.read(cartItemsProvider.notifier).totalPrice();
+    ref.watch(cartItemsProvider);
     final finalPrice = '${S.current.pay} ' '${total.toCleanString().localizedNumbers(ref)} ' '${S.current.le}';
-
     return CustomButton(
       margin: AppMargins.symmetric.medium, text: finalPrice,
       onPressed: () {log('Pay has been Pressed...'); AppRouter.router.goNamed(AppRoutes.checkoutShip,);},

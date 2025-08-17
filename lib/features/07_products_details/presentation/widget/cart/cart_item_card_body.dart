@@ -44,7 +44,7 @@ class CartCardWidget extends StatelessWidget
             child: CartItemImgWidget(itemImg: itemImg,)
           ),
           Sizes.s16.horizontalSpace,
-          CartItemQuantityWidget(itemName: itemName, itemWeight: itemWeight,),
+          CartItemQuantityWidget(itemName: itemName, itemWeight: itemWeight, itemId: itemId,),
           const Spacer(),
           CartItemPriceWidget(itemId: itemId, itemPrice: itemPrice, itemWeight: itemWeight,),
         ],

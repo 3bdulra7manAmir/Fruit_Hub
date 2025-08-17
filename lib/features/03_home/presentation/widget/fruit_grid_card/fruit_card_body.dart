@@ -9,6 +9,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/margin.dart';
 import '../../../../../core/widgets/buttons/add_button.dart';
 import '../../../../07_products_details/presentation/controllers/cart_item_controller.dart';
+import '../../../../07_products_details/presentation/controllers/fruit_item_quantity_controller.dart';
 import '../../../domain/entity/fruit_entity.dart';
 import 'favourite_img.dart';
 import 'fruit_img.dart';
@@ -40,11 +41,18 @@ class FruitGridCardWidget extends StatelessWidget
             [
               Expanded(child: FruitGridPriceWidget(name: fruit.name, price: fruit.price,),),
               Consumer(
-                builder: (_, ref, _) => FruitAddButton(onTap: () =>
-                {
-                  ref.read(cartItemsProvider.notifier).addItem(fruit),
-                  log('Fruit added to cart: ${fruit.name}'),
-                },),
+                builder: (_, ref, _) => FruitAddButton(
+                  onTap: ()
+                  {
+                    log('Add has been Pressed...');
+                    ref.read(fruitItemQuantityProvider(fruit.fruitId).notifier).increment();
+                    final fruitInCart = ref.read(cartItemsProvider).where((item) => item.fruit.fruitId == fruit.fruitId).firstOrNull;
+                    if (fruitInCart != null)
+                    {ref.read(cartItemsProvider.notifier).addItem(fruitInCart.fruit, 1);}
+                    else
+                    {ref.read(cartItemsProvider.notifier).addItem(fruit, 1);}
+                  },
+                ),
               ),
             ],
           ),

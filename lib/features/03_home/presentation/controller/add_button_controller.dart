@@ -11,16 +11,12 @@ part 'add_button_controller.g.dart';
 class AddButton extends _$AddButton
 {
   @override
-  void build()
-  {
-    return;
-  }
+  void build() {return;}
 
   void addFruit(FruitEntity fruit, WidgetRef ref)
   {
-    ref.read(fruitItemQuantityProvider.notifier).increment();
-    final quantity = ref.read(fruitItemQuantityProvider);
-    ref.read(cartItemsProvider.notifier).addItem(fruit);
-    ref.read(fruitItemQuantityProvider.notifier).reset();
+    final quantity = ref.read(fruitItemQuantityProvider(fruit.fruitId));
+    ref.read(cartItemsProvider.notifier).addItem(fruit, quantity);
+    ref.read(fruitItemQuantityProvider(fruit.fruitId).notifier).reset();
   }
 }

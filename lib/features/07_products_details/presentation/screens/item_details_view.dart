@@ -33,7 +33,11 @@ class ItemDetails extends ConsumerWidget
           CustomColumn(
             children:
             [
-              FruitNeededQuantityWidget(itemName: fruitEntity.name, itemPrice: fruitEntity.price.toCleanString(),),
+              FruitNeededQuantityWidget(
+                itemName: fruitEntity.name,
+                fruitId: fruitEntity.fruitId,
+                itemPrice: fruitEntity.price.toCleanString(),
+              ),
               Sizes.s8.verticalSpace,
               FruitItemRatingWidget(rateValue: fruitEntity.rateValue, usersCount: fruitEntity.rateUsersCount,),
               Sizes.s8.verticalSpace,

@@ -12,10 +12,11 @@ import '../fruit_quantity.dart';
 
 class CartItemQuantityWidget extends StatelessWidget
 {
-  const CartItemQuantityWidget({super.key, required this.itemName, required this.itemWeight,});
+  const CartItemQuantityWidget({super.key, required this.itemName, required this.itemWeight, required this.itemId,});
 
   final String itemName;
   final String itemWeight;
+  final String itemId;
 
   @override
   Widget build(BuildContext context)
@@ -33,14 +34,14 @@ class CartItemQuantityWidget extends StatelessWidget
         Consumer(
           builder: (_, ref, _)
           {
-            return Text('${itemWeight.toString().localizedNumbers(ref)} ${S.current.kiloG}', style: AppStyles.extraLight(
+            return Text('${(double.tryParse(itemWeight))!.toCleanString().localizedNumbers(ref)} ${S.current.kiloG}', style: AppStyles.extraLight(
               fontWeight: AppFontWeights.regularWeight, 
               fontColor: AppColors.color.kOrange001),
             );
           },
         ),
         Sizes.s10.verticalSpace,
-        const FruitQuantityChanger(),
+        FruitQuantityChanger(fruitId: itemId),
       ],
     );
   }

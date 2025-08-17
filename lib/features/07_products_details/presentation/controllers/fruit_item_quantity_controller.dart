@@ -6,7 +6,10 @@ part 'fruit_item_quantity_controller.g.dart';
 class FruitItemQuantity extends _$FruitItemQuantity
 {
   @override
-  int build() => 1;
+  int build(String fruitId)
+  {
+    return 1;
+  }
 
   void increment() => state++;
   void decrement() {if (state > 1) state--;}
