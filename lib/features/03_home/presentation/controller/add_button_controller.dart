@@ -13,19 +13,14 @@ class AddButton extends _$AddButton
   @override
   void build()
   {
-    // مفيش state عند البروفايدر ده (informing only)
     return;
   }
 
   void addFruit(FruitEntity fruit, WidgetRef ref)
   {
-    // زود quantity
     ref.read(fruitItemQuantityProvider.notifier).increment();
-    // هات القيمة الجديدة
     final quantity = ref.read(fruitItemQuantityProvider);
-    // زودها على cart
     ref.read(cartItemsProvider.notifier).addItem(fruit);
-    // ✅ تقدر تعمل reset للـ quantity بعد الإضافة (اختياري)
     ref.read(fruitItemQuantityProvider.notifier).reset();
   }
 }
