@@ -15,7 +15,6 @@ dependencies:
 
   # Core packages
   #dartz: ^0.10.1
-  #http: ^1.5.0
   intl: ^0.20.2
   equatable: ^2.0.7
 
@@ -31,8 +30,11 @@ dependencies:
 
   # UI
   cached_network_image: ^3.4.1
+  logger: ^2.6.1
+
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.0
+
   dots_indicator: ^4.0.1
   percent_indicator: ^4.2.5
   shimmer: ^3.0.0
@@ -51,9 +53,9 @@ dependencies:
   flutter_dotenv: ^5.2.1
   rename_app: ^1.6.3
   screen_protector: ^1.4.2+1
+
   #no_screenshot: ^0.3.1
   #screen_secure: ^1.0.3
-
   #flutter_unused_packages: ^1.0.1
 
 dev_dependencies:
@@ -72,7 +74,6 @@ dev_dependencies:
   # Analyzer (manual pins to avoid conflicts)
   analyzer: ^7.6.0
   analyzer_plugin: ^0.13.4
-
   intl_utils: ^2.8.2
 
 flutter:

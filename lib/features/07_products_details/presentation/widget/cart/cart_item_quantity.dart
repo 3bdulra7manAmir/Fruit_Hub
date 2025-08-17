@@ -8,11 +8,14 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/numbers_and_dates.dart';
-import '../item_details/fruit_quantity.dart';
+import '../fruit_quantity.dart';
 
 class CartItemQuantityWidget extends StatelessWidget
 {
-  const CartItemQuantityWidget({super.key,});
+  const CartItemQuantityWidget({super.key, required this.itemName, required this.itemWeight,});
+
+  final String itemName;
+  final String itemWeight;
 
   @override
   Widget build(BuildContext context)
@@ -22,7 +25,7 @@ class CartItemQuantityWidget extends StatelessWidget
       children:
       [
         Sizes.s6.verticalSpace,
-        Text('بطيخ', style: AppStyles.extraLight(
+        Text(itemName, style: AppStyles.extraLight(
           fontWeight: AppFontWeights.boldWeight, 
           fontColor: AppColors.color.kBlack003),
         ),
@@ -30,7 +33,7 @@ class CartItemQuantityWidget extends StatelessWidget
         Consumer(
           builder: (_, ref, _)
           {
-            return Text('${3.toString().localizedNumbers(ref)} ${S.current.kiloG}', style: AppStyles.extraLight(
+            return Text('${itemWeight.toString().localizedNumbers(ref)} ${S.current.kiloG}', style: AppStyles.extraLight(
               fontWeight: AppFontWeights.regularWeight, 
               fontColor: AppColors.color.kOrange001),
             );

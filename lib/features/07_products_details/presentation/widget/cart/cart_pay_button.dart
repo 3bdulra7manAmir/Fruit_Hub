@@ -9,6 +9,7 @@ import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/extensions/numbers_and_dates.dart';
 import '../../../../../core/widgets/buttons/button.dart';
+import '../../controllers/cart_item_controller.dart';
 
 class CartPayButtonWidget extends ConsumerWidget
 {
@@ -17,9 +18,11 @@ class CartPayButtonWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
+    final total = ref.watch(cartItemsProvider).fold<double>(0.0, (sum, item) => sum + (item.fruit.price * item.quantity),);
+    final finalPrice = '${S.current.pay} ' '${total.toCleanString().localizedNumbers(ref)} ' '${S.current.le}';
+
     return CustomButton(
-      margin: AppMargins.symmetric.medium,
-      text: '${S.current.pay} ${120.toString().localizedNumbers(ref)} ${S.current.le}',
+      margin: AppMargins.symmetric.medium, text: finalPrice,
       onPressed: () {log('Pay has been Pressed...'); AppRouter.router.goNamed(AppRoutes.checkoutShip,);},
     );
   }

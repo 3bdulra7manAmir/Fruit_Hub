@@ -2,20 +2,22 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../../../../../config/i18n/generated/l10n.dart';
-import '../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/extensions/numbers_and_dates.dart';
-import '../../controllers/cart_items_controller.dart';
+import '../../controllers/cart_item_controller.dart';
+import 'cart_item_price_text.dart';
+import 'cart_trash_img.dart';
 
 class CartItemPriceWidget extends ConsumerWidget
 {
-  const CartItemPriceWidget({super.key, required this.itemId});
-  final int itemId;
+  const CartItemPriceWidget({super.key, 
+  required this.itemId,
+  required this.itemPrice,
+  required this.itemWeight,
+  });
+  final String itemId;
+  final String itemPrice;
+  final String itemWeight;
 
 
   @override
@@ -27,41 +29,18 @@ class CartItemPriceWidget extends ConsumerWidget
       [
         Sizes.s6.verticalSpace,
         GestureDetector(
-          onTap: () {
+          onTap: ()
+          {
             log('Trash...');
             ref.read(cartItemsProvider.notifier).removeItem(itemId);
           },
           child: const TrashImgWidget()
         ),
         const Spacer(),
-        const ItemPriceTextWidget(),
+        ItemPriceTextWidget(itemPrice: itemPrice, itemWeight: itemWeight,),
         Sizes.s8.verticalSpace,
       ],
     );
-  }
-}
-
-
-class TrashImgWidget extends StatelessWidget
-{
-  const TrashImgWidget({super.key,});
-
-  @override
-  Widget build(BuildContext context)
-  {
-    return SvgPicture.asset(AppAssets.icons.trash);
-  }
-}
-
-
-class ItemPriceTextWidget extends ConsumerWidget
-{
-  const ItemPriceTextWidget({super.key,});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
-    return Text('${60.toString().localizedNumbers(ref)} ${S.current.le} ', style: AppStyles.bold(fontColor: AppColors.color.kOrange001),);
   }
 }
 

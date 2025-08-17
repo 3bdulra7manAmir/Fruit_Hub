@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'cart_items_controller.dart';
+part of 'cart_item_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$cartItemsHash() => r'7c02103e03aa7b7a12acdf75578c6e0ca390a248';
+String _$cartItemsHash() => r'1a6fc401d8a4843345576b03baf13b3aa145818b';
 
 /// See also [CartItems].
 @ProviderFor(CartItems)

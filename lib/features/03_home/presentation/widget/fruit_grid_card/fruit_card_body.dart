@@ -1,16 +1,15 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/margin.dart';
+import '../../../../../core/widgets/buttons/add_button.dart';
+import '../../../../07_products_details/presentation/controllers/cart_item_controller.dart';
 import '../../../domain/entity/fruit_entity.dart';
-import 'add_button.dart';
 import 'favourite_img.dart';
 import 'fruit_img.dart';
 import 'fruit_price.dart';
@@ -39,35 +38,19 @@ class FruitGridCardWidget extends StatelessWidget
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children:
             [
-              Expanded(
-                child: FruitGridPriceWidget(name: fruit.name, price: fruit.price,),
+              Expanded(child: FruitGridPriceWidget(name: fruit.name, price: fruit.price,),),
+              Consumer(
+                builder: (_, ref, _) => FruitAddButton(onTap: () =>
+                {
+                  ref.read(cartItemsProvider.notifier).addItem(fruit),
+                  log('Fruit added to cart: ${fruit.name}'),
+                },),
               ),
-              const FruitAddButtonWidget(),
             ],
           ),
           Sizes.s20.verticalSpace,
         ],
       ).marginSymmetric(horizontal: 8.w),
-    );
-  }
-}
-
-
-
-class FruitAddButtonWidget extends StatelessWidget
-{
-  const FruitAddButtonWidget({super.key,});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {log('Add has been Pressed...');},
-      child: FruitAddButton(
-        child: SvgPicture.asset(AppAssets.icons.crossWhite, 
-          fit: BoxFit.scaleDown,
-          colorFilter: ColorFilter.mode(AppColors.color.kWhite001, BlendMode.srcIn),
-        ),
-      ),
     );
   }
 }

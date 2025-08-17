@@ -6,11 +6,11 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/extensions/numbers_and_dates.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../03_home/domain/entity/fruit_entity.dart';
+import '../widget/cart/cart_fruit_info_body.dart';
 import '../widget/item_details/add_to_cart_button.dart';
 import '../widget/item_details/fruit_description.dart';
 import '../widget/item_details/fruit_health_cards_grid.dart';
 import '../widget/item_details/fruit_item_widget.dart';
-import '../widget/item_details/fruit_quantity.dart';
 import '../widget/item_details/fruit_rating.dart';
 
 class ItemDetails extends ConsumerWidget

@@ -206,6 +206,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "رمز المستخدم غير صالح أو منتهي."),
         "itemsInCart":
             MessageLookupByLibrary.simpleMessage("لديك منتجات في سلة التسوق"),
+        "kilo": MessageLookupByLibrary.simpleMessage("الكيلو"),
         "kiloG": MessageLookupByLibrary.simpleMessage("كم"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "le": MessageLookupByLibrary.simpleMessage("جنية"),

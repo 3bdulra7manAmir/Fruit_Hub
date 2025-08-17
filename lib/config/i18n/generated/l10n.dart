@@ -180,6 +180,16 @@ class S {
     );
   }
 
+  /// `الكيلو`
+  String get kilo {
+    return Intl.message(
+      'الكيلو',
+      name: 'kilo',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `مرحبًا بك في`
   String get welcomeIn {
     return Intl.message(

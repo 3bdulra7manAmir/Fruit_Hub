@@ -207,6 +207,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Invalid or expired user token."),
         "itemsInCart": MessageLookupByLibrary.simpleMessage(
             "You have products in your cart"),
+        "kilo": MessageLookupByLibrary.simpleMessage("Kilo"),
         "kiloG": MessageLookupByLibrary.simpleMessage("KG"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "le": MessageLookupByLibrary.simpleMessage("LE"),

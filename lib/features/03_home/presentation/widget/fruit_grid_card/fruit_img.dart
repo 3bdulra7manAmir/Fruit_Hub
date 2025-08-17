@@ -13,8 +13,7 @@ class FruitImgWidget extends StatelessWidget
   {
     return Center(
       child: CustomCachedNetworkImg(
-        imgUrl: imgUrl,
-        fit: BoxFit.contain,
+        imgUrl: imgUrl, fit: BoxFit.contain,
         height: double.infinity,
         errorWidget: (_, _, _) => const Icon(Icons.error),
       ),

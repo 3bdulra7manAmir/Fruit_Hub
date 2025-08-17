@@ -29,12 +29,14 @@ class Products extends StatelessWidget
           Sizes.s16.verticalSpace,
           SearchBarWidget(
             controller: productsSearchController,
-            searchIconOnTap: () {
+            searchIconOnTap: ()
+            {
               if (productsSearchController.text.isEmpty)
               {CustomSnackBar().show(context, S.current.emptySearch);}
               else {AppRouter.router.pushSearchString(fruitName: productsSearchController.text);}
             },
-            onSubmitted: (value) {
+            onSubmitted: (value)
+            {
               if (productsSearchController.text.isEmpty)
               {CustomSnackBar().show(context, S.current.emptySearch);}
               else {AppRouter.router.pushSearchString(fruitName: productsSearchController.text);}

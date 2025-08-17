@@ -6,7 +6,7 @@ part of 'fruit_item_quantity_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$fruitItemQuantityHash() => r'0a0ff0e18fc1b63656d9c7a012b93a30e2554ae7';
+String _$fruitItemQuantityHash() => r'14bff912670fb2296528b10189d0aba5bca875a4';
 
 /// See also [FruitItemQuantity].
 @ProviderFor(FruitItemQuantity)

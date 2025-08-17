@@ -12,9 +12,12 @@ class FruitModel extends FruitEntity with EquatableMixin
       name: json['ProductName'] as String,
       price: (json['ProductPrice'] as num).toDouble(),
       imgUrl: json['ProductImg'] as String,
+      weight: (json['ProductWieght'] as num).toDouble(),
+
       rateValue: (json['RatingValue'] as num).toDouble(),
       rateUsersCount: (json['RatingUsersCount'] as num).toDouble(),
       rateDescription: json['RatingDescription'] as String,
+
       healthInfo: (json['healthInfo'] as List<dynamic>? ?? [])
         .map((e) => HealthInfoModel.fromJson(e as Map<String, dynamic>)).toList(),
     );
@@ -25,9 +28,12 @@ class FruitModel extends FruitEntity with EquatableMixin
     required super.name,
     required super.price,
     required super.imgUrl,
+    required super.weight,
+
     required super.rateValue,
     required super.rateUsersCount,
     required super.rateDescription,
+
     super.healthInfo = const [],
   });
 
@@ -38,9 +44,12 @@ class FruitModel extends FruitEntity with EquatableMixin
     'ProductName': name,
     'ProductPrice': price,
     'ProductImg': imgUrl,
+    'ProductWieght': weight,
+
     'RatingValue': rateValue,
     'RatingUsersCount': rateUsersCount,
     'RatingDescription': rateDescription,
+
     'healthInfo': healthInfo.map((e)
     {
       if (e is HealthInfoModel) return e.toJson();
@@ -58,7 +67,7 @@ class FruitModel extends FruitEntity with EquatableMixin
   List<Object?> get props =>
   [
     fruitId,
-    name, price, imgUrl,
+    name, price, imgUrl, weight,
     rateValue, rateUsersCount, rateDescription,
     healthInfo,
   ];

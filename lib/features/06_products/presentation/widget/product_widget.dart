@@ -17,7 +17,6 @@ class FruitsProductsWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    
     return Column(
       children:
       [
@@ -30,7 +29,7 @@ class FruitsProductsWidget extends StatelessWidget
           ),
           child: CustomCachedNetworkImg(
             imgUrl: imgUrl, width: 36.w, height: 36.h,
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
         ),
         Sizes.s2.verticalSpace,
