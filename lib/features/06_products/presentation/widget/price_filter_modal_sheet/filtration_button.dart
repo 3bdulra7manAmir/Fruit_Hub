@@ -1,9 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 import '../../controllers/products_filter_controller.dart';
 import '../../controllers/slider_line_controller.dart';
@@ -21,7 +21,7 @@ class PriceFiltrationButtonWidget extends ConsumerWidget
       onPressed: ()
       {
         final range = ref.read(priceSliderProvider);
-        log('User selected price range: ${range.start.round()} to ${range.end.round()}');
+        AppLogger.debug('User selected price range: ${range.start.round()} to ${range.end.round()}');
         ref.read(productsFilterProvider.notifier).filterByPrice(range.start, range.end);
         AppRouter.router.pop();
         arrangementFilterSheet(context);

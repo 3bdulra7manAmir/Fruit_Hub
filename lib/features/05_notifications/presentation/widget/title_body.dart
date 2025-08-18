@@ -1,9 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../controllers/mark_as_read_controller.dart';
 import 'title_all_read.dart';
 import 'title_count.dart';
@@ -34,7 +34,7 @@ class NotificationsTitleWidget extends StatelessWidget
           {
             return GestureDetector(
               onTap: () {
-                log('Remove All Green Color Or Remove From List did not decide Know Yet...',);
+                AppLogger.debug('Remove All Green Color Or Remove From List did not decide Know Yet...',);
                 ref.read(markAsReadProvider.notifier).toggle();
               },
               child: const MarkAllAsReadWidget(),

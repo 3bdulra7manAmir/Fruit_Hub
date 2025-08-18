@@ -1,10 +1,11 @@
-import 'dart:developer';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../controller/user_img/user_img_controller.dart';
 import '../../controller/user_img/user_img_picker.dart';
 import 'user_profile_img.dart';
@@ -23,7 +24,7 @@ class UserProfileInfoBody extends ConsumerWidget
         GestureDetector(
           onTap: () async
           {
-            log('User Img Picker...');
+            AppLogger.debug('User Img Picker...');
             final pickedImage = await ref.read(userImagePickerProvider.future);
             if (pickedImage != null)
             {
@@ -31,7 +32,7 @@ class UserProfileInfoBody extends ConsumerWidget
             }
             else
             {
-              log('No image selected.');
+              AppLogger.debug('No image selected.');
             }
           },
           child: const UserProfileImg(),

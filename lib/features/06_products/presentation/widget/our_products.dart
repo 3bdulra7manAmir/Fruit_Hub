@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,6 +7,7 @@ import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import 'price_filter_modal_sheet/modal_sheet_body.dart';
 
 class OurProductsWidget extends StatelessWidget
@@ -39,7 +39,7 @@ class FiltrationArrowsWidget extends StatelessWidget
     return GestureDetector(
       onTap: ()
       {
-        log('Arrows Has been Pressed...');
+        AppLogger.debug('Arrows Has been Pressed...');
         priceFilterSheet(context);
       },
       child: Container(

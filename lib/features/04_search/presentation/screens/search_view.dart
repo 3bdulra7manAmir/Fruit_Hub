@@ -1,6 +1,4 @@
 // ignore_for_file: unused_import
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,6 +9,7 @@ import '../../../../config/router/route_observer.dart';
 import '../../../../config/router/routes_extras.dart';
 import '../../../../core/constants/app_margins.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/appbar/notifications_bill.dart';
 import '../../../../core/widgets/column.dart';
@@ -30,7 +29,7 @@ class Search extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    log('Received fruitName: $fruitName'); // Just for debug
+    AppLogger.debug('Received fruitName: $fruitName'); // Just for debug
     return Scaffold(
       appBar:  CustomAppBar(title: S.current.search2, isNotifications: true,),
       body: CustomSingleChild(
@@ -42,12 +41,12 @@ class Search extends StatelessWidget
             searchIconOnTap: () {
               if (RouteTracker.currentRoute == AppRoutes.search && productsSearchController.text.isEmpty)
               {CustomSnackBar().show(context, 'عايز تبحث ازاي والبحث فاضي؟؟');}
-              else{log('Addsaa');}
+              else{AppLogger.debug('Addsaa');}
             },
             onSubmitted: (value) {
               if (RouteTracker.currentRoute == AppRoutes.search && productsSearchController.text.isEmpty)
               {CustomSnackBar().show(context, 'عايز تبحث ازاي والبحث فاضي؟؟');}
-              else{log('Addsaa');}
+              else{AppLogger.debug('Addsaa');}
             },
           ),
           //IfNoResultsBody(),

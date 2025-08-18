@@ -1,4 +1,4 @@
-import 'dart:developer';
+import '../../../core/utils/logger/app_logger.dart';
 
 import 'font_manager_base.dart';
 import 'font_manager_cairo.dart';
@@ -24,7 +24,7 @@ class AppFonts
     }
     catch (error, stack)
     {
-      log('Erro in get font: $error ,, Stack: $stack');
+      AppLogger.error('Erro in get font: $error ,, Stack: $stack');
       return FontRoboto();
     }
   }
@@ -42,7 +42,7 @@ class AppFonts
     }
     on Exception catch (error, stack)
     {
-      log('Erro in font Language: $error ,, Stack: $stack');
+      AppLogger.error('Erro in font Language: $error ,, Stack: $stack');
     }
   }
 
@@ -62,7 +62,7 @@ class AppFonts
     }
     catch (error, stack)
     {
-      log('Erro in font Language: $error ,, Stack: $stack');
+      AppLogger.error('Erro in font Language: $error ,, Stack: $stack');
       return FontRoboto();
     }
   }

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,6 +6,7 @@ import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/extensions/align.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/buttons/button.dart';
 import '../../../../core/widgets/column.dart';
@@ -43,7 +42,7 @@ class PaymentSuccess extends StatelessWidget
             text: S.current.trackOrder,
             onPressed: ()
             {
-              log('Follow Order has been pressed...');
+              AppLogger.debug('Follow Order has been pressed...');
               AppRouter.router.pushNamed(AppRoutes.trackOrder);
             },
           ).align(Alignment.bottomCenter),
@@ -51,7 +50,7 @@ class PaymentSuccess extends StatelessWidget
           GestureDetector(
             onTap: ()
             {
-              log('Route to the main Screen...');
+              AppLogger.debug('Route to the main Screen...');
               AppRouter.router.goNamed(AppRoutes.home);
             },
             child: const MainPageTextWidget()

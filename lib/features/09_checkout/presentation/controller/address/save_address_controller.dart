@@ -1,8 +1,7 @@
-import 'dart:developer';
-
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../../core/utils/functions/toggle_button.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 
 part 'save_address_controller.g.dart';
 
@@ -12,7 +11,7 @@ class ToggleSwitchSaveAddress extends _$ToggleSwitchSaveAddress with ToggleSwitc
   @override
   bool build()
   {
-    log('Initial State: false');
+    AppLogger.debug('Initial State: false');
     return false;
   }
 

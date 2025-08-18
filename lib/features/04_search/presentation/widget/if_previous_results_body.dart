@@ -1,5 +1,4 @@
 
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,6 +9,7 @@ import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/listview_builder.dart';
 
 class IfPreviousResultsBody extends StatelessWidget
@@ -29,7 +29,7 @@ class IfPreviousResultsBody extends StatelessWidget
           [
             Text(S.current.recentSearches, style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001),),
             GestureDetector(
-              onTap: () {log('Delete All has been Pressed...');},
+              onTap: () {AppLogger.debug('Delete All has been Pressed...');},
               child: Text(S.current.clearAll, style: AppStyles.extraLight(fontColor: AppColors.color.kGrey002),)
             ),
           ],
@@ -58,7 +58,7 @@ class PreviouslySearchedTextWidget extends StatelessWidget
         Text('فراولة', style: AppStyles.bold(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.regularWeight),),
         const Spacer(),
         GestureDetector(
-          onTap: () {log('Single Delete has been Pressed...');},
+          onTap: () {AppLogger.debug('Single Delete has been Pressed...');},
           child: SvgPicture.asset(AppAssets.icons.removeBlacksemisold)
         ),
       ],

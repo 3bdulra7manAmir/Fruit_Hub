@@ -18,7 +18,7 @@ dependencies:
   intl: ^0.20.2
   equatable: ^2.0.7
 
-  # Database # FireBase
+  # FireBase... & Local DB...
   firebase_core: ^4.0.0
   firebase_auth: ^6.0.0
   firebase_storage: ^13.0.0
@@ -30,6 +30,8 @@ dependencies:
 
   # UI
   cached_network_image: ^3.4.1
+
+  # Debugging
   logger: ^2.6.1
 
   flutter_screenutil: ^5.9.3

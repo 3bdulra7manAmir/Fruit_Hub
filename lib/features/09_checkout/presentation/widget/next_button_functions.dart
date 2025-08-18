@@ -1,7 +1,7 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/utils/logger/app_logger.dart';
 import '../controller/checkout_stepper_controller.dart';
 
 class NextButtonOps
@@ -13,10 +13,10 @@ class NextButtonOps
     final controller = ref.read(checkoutStepperControllerProvider.notifier);
 
     if (formKey == null || formKey.currentState?.validate() == true) {
-      log('Valid or No Form address');
+      AppLogger.debug('Valid or No Form address');
       controller.onNextPressed(context);
     } else {
-      log('Invalid Info');
+      AppLogger.debug('Invalid Info');
       //controller.onNextPressed(context);
     }
   }
@@ -25,10 +25,10 @@ class NextButtonOps
     final controller = ref.read(checkoutStepperControllerProvider.notifier);
 
     if (formKey == null || formKey.currentState?.validate() == true) {
-      log('Valid or No Form payment');
+      AppLogger.debug('Valid or No Form payment');
       controller.onNextPressed(context);
     } else {
-      log('Invalid Info');
+      AppLogger.debug('Invalid Info');
       //controller.onNextPressed(context);
     }
   }

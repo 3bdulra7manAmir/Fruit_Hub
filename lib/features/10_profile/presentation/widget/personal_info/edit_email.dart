@@ -1,8 +1,8 @@
-import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/services/validation/validation.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/textform_field.dart';
 import 'edit_full_name.dart';
 
@@ -20,7 +20,7 @@ class EditEmailFieldWidget extends StatelessWidget
       validator: (value) => AppValidation.emailValidation(value),
       controller: emailController,
       keyboardType: TextInputType.emailAddress,
-      suffixIcon: NameEditWidget(onTap: () {log('Edit Name...');},),
+      suffixIcon: NameEditWidget(onTap: () {AppLogger.debug('Edit Name...');},),
     );
   }
 }

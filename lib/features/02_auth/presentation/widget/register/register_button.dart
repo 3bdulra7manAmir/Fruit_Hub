@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -6,6 +5,7 @@ import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/services/network/status_code.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 import '../../../../../core/widgets/popers/loading_dialog.dart';
 import '../../../../../core/widgets/snackbar.dart';
@@ -40,7 +40,7 @@ class RegisterButtonWidget extends ConsumerWidget {
       final fullName = fullNameController.text.trim();
       final email = emailController.text.trim().toLowerCase();
       final password = passwordController.text.trim();
-      log('Trying to register with: $fullName, $email');
+      AppLogger.info('Trying to register with: $fullName, $email');
 
       final registerEntity = RegisterEntity(
         fullName: fullName, email: email, password: password,
@@ -61,7 +61,7 @@ class RegisterButtonWidget extends ConsumerWidget {
       catch (error, stack)
       {
         AppRouter.router.pop(); // remove loading
-        log('Register error: $error \n\n $stack');
+        AppLogger.error('Register error: $error \n\n $stack');
         if (!context.mounted) return;
         CustomSnackBar().show(context, StatusCodes().registerAuth.getMessageFromException(error));
       }
@@ -83,7 +83,7 @@ class RegisterButtonWidget extends ConsumerWidget {
     }
     else
     {
-      log('Invalid register input');
+      AppLogger.error('Invalid register input');
     }
   }
 }

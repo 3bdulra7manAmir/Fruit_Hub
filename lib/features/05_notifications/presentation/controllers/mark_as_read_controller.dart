@@ -1,5 +1,6 @@
-import 'dart:developer';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../../core/utils/logger/app_logger.dart';
 
 part 'mark_as_read_controller.g.dart';
 
@@ -14,7 +15,7 @@ class MarkAsRead extends _$MarkAsRead
 
   void toggle()
   { 
-    log('obscure text state is: $state');
+    AppLogger.debug('obscure text state is: $state');
     state = !state;
   }
 }

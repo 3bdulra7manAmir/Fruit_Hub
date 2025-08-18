@@ -6,7 +6,7 @@ part of 'checkbox_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$keepCardCheckboxHash() => r'cb588b68ac163b0fb50891fe096e0b539af7fac3';
+String _$keepCardCheckboxHash() => r'3ef65f9ac3ad4235b57f7d637d108c1d72fb88a1';
 
 /// See also [KeepCardCheckbox].
 @ProviderFor(KeepCardCheckbox)

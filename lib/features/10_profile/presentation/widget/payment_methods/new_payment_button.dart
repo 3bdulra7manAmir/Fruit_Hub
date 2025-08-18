@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -7,6 +6,7 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/router/route_observer.dart';
 import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/icon_button.dart';
 
 class AddNewPaymentMethodButtonWidget extends StatelessWidget
@@ -25,7 +25,7 @@ class AddNewPaymentMethodButtonWidget extends StatelessWidget
       {
         if (!formKey.currentState!.validate())
         {
-          log('InValid...');
+          AppLogger.debug('InValid...');
         }
         else if(RouteTracker.currentRoute == AppRoutes.addNewPaymentCard)
         {
@@ -33,7 +33,7 @@ class AddNewPaymentMethodButtonWidget extends StatelessWidget
         }
         else
         {
-          log('Add new Payment Method has been Pressed');
+          AppLogger.debug('Add new Payment Method has been Pressed');
           AppRouter.router.pushNamed(AppRoutes.addNewPaymentCard);
         }
       },

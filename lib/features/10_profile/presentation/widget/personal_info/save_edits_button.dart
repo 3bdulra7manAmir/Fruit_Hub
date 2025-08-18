@@ -1,7 +1,7 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 import '../../../../02_auth/presentation/widget/new_password/password_changed_dialog.dart';
 
@@ -30,12 +30,12 @@ class SaveEditsButtonWidget extends StatelessWidget
     {
       if (!formKey.currentState!.validate())
       {
-        log('InValid...');
+        AppLogger.debug('InValid...');
       }
       else
       {
-        log('Valid...');
-        log(
+        AppLogger.debug('Valid...');
+        AppLogger.debug(
           '''
             ${fullNameController.text}\n
             ${emailController.text}\n

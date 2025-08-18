@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -6,6 +5,7 @@ import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/services/network/status_code.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 import '../../../../../core/widgets/popers/loading_dialog.dart';
 import '../../../../../core/widgets/snackbar.dart';
@@ -37,7 +37,7 @@ class LoginButtonWidget extends ConsumerWidget
     {
       final email = emailController.text.trim();
       final password = passwordController.text.trim();
-      log('Trying to login with: $email');
+      AppLogger.info('Trying to login with: $email');
 
       final loginEntity = LoginEntity(email: email, password: password);
       try
@@ -55,14 +55,14 @@ class LoginButtonWidget extends ConsumerWidget
       catch (error, stack)
       {
         AppRouter.router.pop(); // remove loading
-        log('Login error: $error \n\n $stack');
+        AppLogger.error('Login error => ', error: error, stackTrace: stack);
         if (!context.mounted) return;
         CustomSnackBar().show(context, StatusCodes().loginAuth.getMessageFromException(error));
       }
     }
     else
     {
-      log('Invalid login input');
+      AppLogger.error('Invalid login input');
     }
   }
 }

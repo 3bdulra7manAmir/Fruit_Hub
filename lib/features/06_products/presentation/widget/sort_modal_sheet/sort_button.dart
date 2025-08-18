@@ -1,9 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 import '../../controllers/sort_radio_controller.dart';
 
@@ -19,7 +19,7 @@ class AlpahpetFiltrationButtonWidget extends ConsumerWidget
       onPressed: ()
       {
         final selected = ref.read(sortRadioProvider);
-        log('User selected sort type: $selected');
+        AppLogger.debug('User selected sort type: $selected');
         AppRouter.router.pop();
       },
     );

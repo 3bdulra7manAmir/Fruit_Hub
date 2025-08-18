@@ -1,5 +1,6 @@
-import 'dart:developer';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../../../core/utils/logger/app_logger.dart';
 
 part 'checkbox_controller.g.dart';
 
@@ -10,14 +11,14 @@ class RegisterCheckbox extends _$RegisterCheckbox
   bool build()
   {
     const initialValue = false;
-    log('Initial CheckBox State: $initialValue');
+    AppLogger.debug('Initial CheckBox State: $initialValue');
     return initialValue;
   }
 
   void toggle()
   {
     state = !state;
-    log('CheckBox Toggled => $state');
+    AppLogger.debug('CheckBox Toggled => $state');
   }
 }
 

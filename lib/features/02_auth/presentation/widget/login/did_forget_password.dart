@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
@@ -8,6 +6,7 @@ import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/align.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 
 class DidForgetPasswordWidget extends StatelessWidget
 {
@@ -19,7 +18,7 @@ class DidForgetPasswordWidget extends StatelessWidget
     return GestureDetector(
       onTap: ()
       {
-        log('Forget Password? Pressed');
+        AppLogger.debug('Forget Password? Pressed');
         AppRouter.router.pushNamed(AppRoutes.forgetPasswordPhone);
       },
       child: Text(

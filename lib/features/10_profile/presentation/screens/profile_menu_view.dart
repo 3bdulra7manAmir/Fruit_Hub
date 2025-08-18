@@ -1,11 +1,10 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/column.dart';
 import '../widget/profile_menu/general_text.dart';
 import '../widget/profile_menu/help_text.dart';
@@ -43,7 +42,7 @@ class Profile extends StatelessWidget
         GestureDetector(
           onTap: ()
           {
-            log('Logout has been Pressed...');
+            AppLogger.debug('Logout has been Pressed...');
             AppRouter.router.pushReplacementNamed(AppRoutes.login);
           },
           child: const LogOutWidget()

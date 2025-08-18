@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../config/i18n/generated/l10n.dart';
@@ -7,6 +6,7 @@ import '../../../../config/router/app_routes.dart';
 import '../../../../config/theme/color_manager/colors.dart';
 import '../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 
 class MostSoldWidget extends StatelessWidget
 {
@@ -24,7 +24,7 @@ class MostSoldWidget extends StatelessWidget
         GestureDetector(
           onTap: ()
           {
-            log('More has been Pressed...');
+            AppLogger.debug('More has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.mostSold);
           },
           child: isMoreEnabled ?

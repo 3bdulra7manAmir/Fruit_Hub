@@ -1,6 +1,4 @@
 
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +7,7 @@ import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 
 
 class RecoveryOtpFieldWidget extends StatefulWidget
@@ -104,7 +103,7 @@ class _RecoveryOtpFieldWidgetState extends State<RecoveryOtpFieldWidget>
                   }
                 }
               },
-              onFieldSubmitted: (value) => log(value),
+              onFieldSubmitted: (value) => AppLogger.debug(value),
             ),
           );
         }),

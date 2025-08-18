@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,6 +6,7 @@ import '../../../../../config/i18n/localization/localization_controller.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/extensions/transform.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/appbar/default_appbar/back_button.dart';
 import '../../../../../core/widgets/cached_network_img.dart';
 import '../../../../../core/widgets/paint_clipper.dart';
@@ -63,15 +63,15 @@ class FruitItemWidget extends StatelessWidget
 
   void backButtonOnTap()
   {
-    log('Poping has been Pressed...');
+    AppLogger.debug('Poping has been Pressed...');
     try
     {
-      log('Poping Back...');
+      AppLogger.debug('Poping Back...');
       AppRouter.router.pop();
     } 
     catch (error, stack)
     {
-      log('Error: $error,, Stack: $stack');
+      AppLogger.error('Error => ', error: error, stackTrace: stack);
     }
   }
 }

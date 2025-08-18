@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +12,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/numbers_and_dates.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 
 
 class FruitItemRatingWidget extends StatelessWidget
@@ -36,7 +36,7 @@ class FruitItemRatingWidget extends StatelessWidget
         Sizes.s9.horizontalSpace,
         GestureDetector(
           onTap: ()
-          {log('Review has been Pressed...'); AppRouter.router.pushNamed(AppRoutes.rate);},
+          {AppLogger.debug('Review has been Pressed...'); AppRouter.router.pushNamed(AppRoutes.rate);},
           child: const RatingReviewsTextWidget()
         ),
       ],

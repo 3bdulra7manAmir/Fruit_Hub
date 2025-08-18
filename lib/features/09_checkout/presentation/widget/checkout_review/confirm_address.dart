@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,6 +9,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../common_container.dart';
 
 class ConfirmAddressWidget extends StatelessWidget
@@ -52,7 +52,7 @@ class DeliveryAddressEditWidget extends StatelessWidget
         GestureDetector(
           onTap: ()
           {
-            log('Edit has been Pressed');
+            AppLogger.debug('Edit has been Pressed');
           },
           child: Row(
             children:

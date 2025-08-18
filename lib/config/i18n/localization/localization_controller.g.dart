@@ -6,7 +6,7 @@ part of 'localization_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$localizationHash() => r'12992569d0ad3214f39e8e37e50cf7e671ff1afe';
+String _$localizationHash() => r'6d2dce638712b4d132bbf75ce33e1a4ff560af85';
 
 /// See also [Localization].
 @ProviderFor(Localization)

@@ -1,9 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
 
 class ForgetPasswordButtonWidget extends StatelessWidget
@@ -20,12 +20,12 @@ class ForgetPasswordButtonWidget extends StatelessWidget
     {
       if (!formKey.currentState!.validate())
         {
-          log('InValid ForgetPassword...');
+          AppLogger.debug('InValid ForgetPassword...');
         }
         else
         {
-          log('Valid ForgetPassword...');
-          log(emailController.text);
+          AppLogger.info('Valid ForgetPassword...');
+          AppLogger.info(emailController.text);
           emailController.clear();
           AppRouter.router.pushNamed(AppRoutes.passwordRecoveryEmail);
         }

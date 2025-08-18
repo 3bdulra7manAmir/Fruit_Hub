@@ -1,5 +1,6 @@
-import 'dart:developer';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../../../core/utils/logger/app_logger.dart';
 
 part 'obscure_password_controller.g.dart';
 
@@ -14,7 +15,7 @@ class LoginObscurePassword extends _$LoginObscurePassword
 
   void toggle()
   { 
-    log('obscure text state is: $state');
+    AppLogger.debug('obscure text state is: $state');
     state = !state;
   }
 }

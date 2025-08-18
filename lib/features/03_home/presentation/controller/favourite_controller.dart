@@ -1,6 +1,6 @@
-import 'dart:developer';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../../core/utils/logger/app_logger.dart';
 
 part 'favourite_controller.g.dart';
 
@@ -11,13 +11,13 @@ class FavouriteImg extends _$FavouriteImg
   bool build()
   {
     const initialValue = false;
-    log('Initial Favourit State: $initialValue');
+    AppLogger.debug('Initial Favourit State: $initialValue');
     return initialValue;
   }
 
   void toggle()
   {
     state = !state;
-    log('Favourit Toggled => $state');
+    AppLogger.debug('Favourit Toggled => $state');
   }
 }

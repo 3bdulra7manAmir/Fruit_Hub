@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,6 +10,7 @@ import '../../../../features/09_checkout/presentation/controller/checkout_steppe
 import '../../../constants/app_margins.dart';
 import '../../../constants/app_styles.dart';
 import '../../../extensions/margin.dart';
+import '../../../utils/logger/app_logger.dart';
 import '../../snackbar.dart';
 import '../notifications_bill.dart';
 import 'back_button.dart';
@@ -86,7 +86,7 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
 
   
   GestureDetector billOnTap(BuildContext context) => GestureDetector(onTap: () {
-    log('Notifications Bill has been Pressed...');
+    AppLogger.debug('Notifications Bill has been Pressed...');
     try
     {
       if (RouteTracker.currentRoute == AppRoutes.notifications)
@@ -94,19 +94,21 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
       else
       {AppRouter.router.pushNamed(AppRoutes.notifications);}
     }
-    catch (error, stack)
-    {log('Error Going to Notifications Screen: $error, Stack is: $stack');}
-  }, child: const BillWidget(),);
+    catch (error, stack) 
+    {
+      AppLogger.error('Error Going to Notifications Screen:', error: error, stackTrace: stack);
+    }
+    }, child: const BillWidget(),);
 
   void leadingOnTap(BuildContext context) {
     try
     {
-      log('Trying to Pop...');
+      AppLogger.debug('Trying to Pop...');
       AppRouter.router.pop();
     }
     catch (error, stack)
     {
-      log('Error While Popping with AppRouter: $error\nStack: $stack');
+      AppLogger.error('Error While Popping with AppRouter:', error: error, stackTrace: stack);
       CustomSnackBar().show(context, 'خخخ عيب انت فاكر نفسك ابن مين يا ولد؟');
     }
   }

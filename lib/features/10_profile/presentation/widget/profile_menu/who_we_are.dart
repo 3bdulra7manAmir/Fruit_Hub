@@ -1,10 +1,10 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import 'menu_options.dart';
 
 class WhoWeAreTextWidget extends StatelessWidget
@@ -19,7 +19,7 @@ class WhoWeAreTextWidget extends StatelessWidget
       title: S.current.aboutUs,
       onTap: ()
       {
-        log('Who We are has been Pressed...');
+        AppLogger.debug('Who We are has been Pressed...');
         AppRouter.router.pushNamed(AppRoutes.whoWeAre);
       },
     );

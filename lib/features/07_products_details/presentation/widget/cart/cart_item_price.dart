@@ -1,9 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../controllers/cart_item_controller.dart';
 import 'cart_item_price_text.dart';
 import 'cart_trash_img.dart';
@@ -31,7 +31,7 @@ class CartItemPriceWidget extends ConsumerWidget
         GestureDetector(
           onTap: ()
           {
-            log('Trash...');
+            AppLogger.debug('Trash...');
             ref.read(cartItemsProvider.notifier).removeItem(itemId);
           },
           child: const TrashImgWidget()

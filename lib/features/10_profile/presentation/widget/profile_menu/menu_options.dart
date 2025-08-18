@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +14,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/transform.dart';
 import '../../../../../core/utils/functions/toggle_button.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/toggle_button.dart';
 import '../../controller/profile_menu/language_informer.dart';
 import '../../controller/profile_menu/notification_controller.dart';
@@ -68,7 +68,7 @@ class OptionsMenuWidget extends StatelessWidget
           leading: AppAssets.icons.userGreen,
           title: S.current.profile,
           onTap: () {
-            log('Profile has been Pressed...');
+            AppLogger.debug('Profile has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.personalInfo);
           },
         ),
@@ -76,7 +76,7 @@ class OptionsMenuWidget extends StatelessWidget
           leading: AppAssets.icons.boxGreen,
           title: S.current.myOrders,
           onTap: () {
-            log('Orders has been Pressed...');
+            AppLogger.debug('Orders has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.ordersHistory);
           },
         ),
@@ -84,7 +84,7 @@ class OptionsMenuWidget extends StatelessWidget
           leading: AppAssets.icons.walletGreen,
           title: S.current.payments,
           onTap: () {
-            log('Payments has been Pressed...');
+            AppLogger.debug('Payments has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.paymentMethods);
           },
         ),
@@ -92,7 +92,7 @@ class OptionsMenuWidget extends StatelessWidget
           leading: AppAssets.icons.hartGreen,
           title: S.current.favorites,
           onTap: () {
-            log('Favourit has been Pressed...');
+            AppLogger.debug('Favourit has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.favourit);
           },
         ),
@@ -103,7 +103,7 @@ class OptionsMenuWidget extends StatelessWidget
           caseWidget: SwitchButtonWidget(
             provider: toggleSwitchNotificationsProvider,
           ),
-          onTap: () => log('Notifications has been Pressed...'),
+          onTap: () => AppLogger.debug('Notifications has been Pressed...'),
         ),
         Consumer(
           builder: (_, ref, _) => ProfileOptions(

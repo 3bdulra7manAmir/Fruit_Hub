@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,6 +5,7 @@ import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../../core/widgets/form.dart';
@@ -35,7 +34,7 @@ class PasswordRecoveryEmail extends StatelessWidget
             const RecoveryOtpFieldWidget(),
             Sizes.s29.verticalSpace,
             GestureDetector(
-              onTap: () {log('ReSend Code...'); AppRouter.router.pushNamed(AppRoutes.newPassword);},
+              onTap: () {AppLogger.debug('ReSend Code...'); AppRouter.router.pushNamed(AppRoutes.newPassword);},
               child: const ResendCodeWidget(),
             ),
           ],

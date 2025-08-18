@@ -7,7 +7,7 @@ part of 'first_obscure_controller.dart';
 // **************************************************************************
 
 String _$firstObscurePasswordHash() =>
-    r'287789f43a082448fa3de9016d5dfe46eca035a9';
+    r'34ca2eb905bc208b3fc9dafdba803abdb7c9ea42';
 
 /// See also [FirstObscurePassword].
 @ProviderFor(FirstObscurePassword)

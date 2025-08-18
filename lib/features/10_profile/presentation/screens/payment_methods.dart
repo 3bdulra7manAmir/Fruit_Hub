@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../config/i18n/generated/l10n.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../../core/widgets/form.dart';
@@ -54,7 +54,7 @@ class PaymentActionWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return GestureDetector(
-      onTap: () {log('Edit...');},
+      onTap: () {AppLogger.debug('Edit...');},
       child: SvgPicture.asset(AppAssets.icons.editGreyV2,),
     );
   }

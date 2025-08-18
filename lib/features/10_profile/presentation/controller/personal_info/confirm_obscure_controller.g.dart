@@ -7,7 +7,7 @@ part of 'confirm_obscure_controller.dart';
 // **************************************************************************
 
 String _$confirmObscurePasswordHash() =>
-    r'e386641058ba86e2f178c9323ec4910a56c87de4';
+    r'd44085066cf3a8ad8e3d65fd91ed30c1cecb33e4';
 
 /// See also [ConfirmObscurePassword].
 @ProviderFor(ConfirmObscurePassword)

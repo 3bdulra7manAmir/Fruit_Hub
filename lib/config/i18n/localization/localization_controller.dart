@@ -1,9 +1,8 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/services/database/shared_preferences/shared_pref_manager.dart';
-
+import '../../../core/utils/logger/app_logger.dart';
 
 part 'localization_controller.g.dart';
 
@@ -14,19 +13,19 @@ class Localization extends _$Localization
   Locale build()
   {
     final saved = SharedPrefManager().localeLang;
-    log('Default Localization is: $saved');
+    AppLogger.debug('Default Localization is: $saved');
     return Locale(saved); // 'en' or 'ar'
   }
 
   void setEnglish() {
     state = const Locale('en');
     SharedPrefManager().setLocaleLang('en');
-    log('Localization is now: EN');
+    AppLogger.debug('Localization is now: EN');
   }
 
   void setArabic() {
     state = const Locale('ar');
     SharedPrefManager().setLocaleLang('ar');
-    log('Localization is now: AR');
+    AppLogger.debug('Localization is now: AR');
   }
 }

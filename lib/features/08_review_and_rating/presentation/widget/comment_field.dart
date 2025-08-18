@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import '../../../../config/i18n/generated/l10n.dart';
@@ -10,6 +8,7 @@ import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/extensions/shadow_box.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/textform_field.dart';
 
 class CommentFieldWidget extends StatelessWidget
@@ -24,7 +23,7 @@ class CommentFieldWidget extends StatelessWidget
       borderRadius: AppRadiuses.circular.xSmall,
       borderRadiusColor: AppColors.color.kWhite003,
       keyboardType: TextInputType.text,
-      onSubmitted: (value) => log(value),
+      onSubmitted: (value) => AppLogger.debug(value),
       fillColor: AppColors.color.kWhite001,
       hintText: S.current.typeComment,
       hintStyle: AppStyles.extraLight(

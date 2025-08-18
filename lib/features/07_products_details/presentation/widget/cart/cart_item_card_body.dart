@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,6 +6,7 @@ import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/padding.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import 'cart_fruit_img.dart';
 import 'cart_item_price.dart';
 import 'cart_item_quantity.dart';
@@ -38,7 +38,7 @@ class CartCardWidget extends StatelessWidget
           GestureDetector(
             onTap: ()
             {
-              log('Item Details...');
+              AppLogger.debug('Item Details...');
               AppRouter.router.pushNamed(AppRoutes.itemsDetails);
             },
             child: CartItemImgWidget(itemImg: itemImg,)

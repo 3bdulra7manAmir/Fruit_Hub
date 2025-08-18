@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,6 +10,7 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../checkout_payment/payment_method_card.dart';
 import '../common_container.dart';
 
@@ -52,7 +52,7 @@ class PaymentMethodEditWidget extends StatelessWidget
         const Spacer(),
         GestureDetector(
           onTap: () 
-          {log('Edit has been Pressed...');},
+          {AppLogger.debug('Edit has been Pressed...');},
           child: Row(
             children:
             [

@@ -1,5 +1,6 @@
-import 'dart:developer';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../../../core/utils/logger/app_logger.dart';
 
 part 'confirm_obscure_controller.g.dart';
 
@@ -9,13 +10,13 @@ class ConfirmObscurePassword extends _$ConfirmObscurePassword
   @override
   bool build()
   {
-    log('inital State is: True');
+    AppLogger.debug('inital State is: True');
     return true;
   }
 
   void toggle()
   { 
-    log('obscure text state is: $state');
+    AppLogger.debug('obscure text state is: $state');
     state = !state;
   }
 }

@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,6 +11,7 @@ import '../../constants/app_images.dart';
 import '../../constants/app_sizes.dart';
 import '../../constants/app_styles.dart';
 import '../../extensions/margin.dart';
+import '../../utils/logger/app_logger.dart';
 import '../buttons/button.dart';
 import 'dialog.dart';
 
@@ -35,7 +35,7 @@ class PopScopeWidget extends StatelessWidget
       {
         if (didPop)
         {
-          log('Screen Closed');
+          AppLogger.debug('Screen Closed');
           return;
         }
         final allowPop = await (onWillPop?.call() ?? _defaultBackHandler(context));
@@ -74,7 +74,7 @@ class PopScopeWidget extends StatelessWidget
           GestureDetector(
             onTap: ()
             {
-              log('PopScope Canceled');
+              AppLogger.debug('PopScope Canceled');
               AppRouter.router.pop();
             },
             child: SvgPicture.asset(AppAssets.icons.removeBlack)
@@ -88,7 +88,7 @@ class PopScopeWidget extends StatelessWidget
               Expanded(child: CustomButton(
                 onPressed: ()
                 {
-                  log('Exit App');
+                  AppLogger.debug('Exit App');
                   SystemNavigator.pop();
                 },
                 text: S.current.confirm, width: 146.w, height: 48.h,
