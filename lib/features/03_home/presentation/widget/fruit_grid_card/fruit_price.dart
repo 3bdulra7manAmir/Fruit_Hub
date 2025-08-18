@@ -28,17 +28,17 @@ class FruitGridPriceWidget extends StatelessWidget
       children:
       [
         Text(name, style: AppStyles.extraLight(fontColor: AppColors.color.kBlack001,),
-          maxLines: 1,),
+        maxLines: 1,),
         Sizes.s4.verticalSpace,
         Row(
           children:
           [
             Flexible(
               child: Consumer(
-                builder: (_, ref, _) {
-                  return Text('${(price.toCleanString().localizedNumbers(ref))} ${S.current.le} ', style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,),
-                  maxLines: 1,);
-                },
+                builder: (_, ref, _) =>
+                  Text('${(price.toCleanString().localizedNumbers(ref))} ${S.current.le} ', 
+                    style: AppStyles.extraLight(fontColor: AppColors.color.kOrange001,),
+                      maxLines: 1,),
               ),
             ),
             Flexible(

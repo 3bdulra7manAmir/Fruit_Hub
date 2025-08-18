@@ -51,7 +51,9 @@ class CartItems extends _$CartItems
   void removeItem(String id) => state = state.where((item) => item.fruit.fruitId != id).toList();
   
   //[Just returns the total number of items in Your cart list only...]
-  int totalItemsCount() => state.fold(0, (sum, item) => sum + item.quantity);
+  //int totalItemsCount() => state.fold(0, (sum, item) => sum + item.quantity);
+
+  int uniqueItemsCount() => state.length;
   
   //[Just returns the total price of all fruits where the 
   //sum of kilos * price then 'final price' = sum * number of wanted fruits of this fruit like 2 or 3 ones]
