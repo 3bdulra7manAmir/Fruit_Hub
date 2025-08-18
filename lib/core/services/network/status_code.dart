@@ -9,7 +9,6 @@ class StatusCodes
   final FirebaseRegisterStatus registerAuth = FirebaseRegisterStatus._();
   final FirebaseGoogleSignInStatus signInWithGoogle = FirebaseGoogleSignInStatus._();
   final FirebaseUploadImgStatus imgUpload = FirebaseUploadImgStatus._();
-  
 }
 
 
@@ -17,7 +16,8 @@ class FirebaseGeneralAuthStatus
 {
   FirebaseGeneralAuthStatus._();
 
-  String getMessageFromException(Object error) {
+  String getMessageFromException(Object error)
+  {
     if (error is FirebaseAuthException) {
       switch (error.code) {
         case 'invalid-argument':
@@ -73,7 +73,9 @@ class FirebaseLoginStatus
 }
 
 
-class FirebaseGoogleSignInStatus {
+class FirebaseGoogleSignInStatus
+{
+
   FirebaseGoogleSignInStatus._();
 
   String getMessageFromException(Object error) {

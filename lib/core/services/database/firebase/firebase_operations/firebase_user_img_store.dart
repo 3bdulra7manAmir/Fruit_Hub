@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../network/logger/requests_logger.dart';
-import 'intsance/firebase_auth.dart';
-import 'intsance/firebase_fire_store.dart';
-import 'intsance/firebase_storage.dart';
+import '../../../network/logger/app_logger.dart';
+import '../intsance/firebase_auth.dart';
+import '../intsance/firebase_fire_store.dart';
+import '../intsance/firebase_storage.dart';
 
 
 class FirebaseUserImgStore

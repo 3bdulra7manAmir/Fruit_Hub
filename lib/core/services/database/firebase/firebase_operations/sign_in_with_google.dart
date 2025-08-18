@@ -3,9 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../../../../config/i18n/generated/l10n.dart';
-import '../../network/status_code.dart';
-import 'intsance/firebase_auth.dart';
+import '../../../../../config/i18n/generated/l10n.dart';
+import '../../../network/status_code.dart';
+import '../intsance/firebase_auth.dart';
 
 
 class FirebaseGoogleSignIn
@@ -52,6 +52,8 @@ class FirebaseGoogleSignIn
       }
 
       final credential = GoogleAuthProvider.credential(idToken: googleAuth.idToken, accessToken: authorization.accessToken,);
+      final requestLanguage = FirebaseAuthService.instance.langCode.toString();
+      log('requestLanguage: is $requestLanguage');
       return await FirebaseAuthService.instance.auth.signInWithCredential(credential);
     }
     on GoogleSignInException catch (error, stack)

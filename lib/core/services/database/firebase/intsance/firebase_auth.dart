@@ -1,4 +1,8 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
+
+import '../../shared_preferences/shared_pref_manager.dart';
 
 class FirebaseAuthService
 {
@@ -8,5 +12,18 @@ class FirebaseAuthService
   static FirebaseAuthService get instance => _instance;
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
+
   FirebaseAuth get auth => _auth;
+
+  /* Get the "header X-Firebase-Locale" Request Language...
+  language from the SharedPref Same As AppLanguage if you like to  */
+  Future<void> get langCode => auth.setLanguageCode(SharedPrefManager().localeLang);
+  void logRequestCode()
+  {
+    if (FirebaseAuthService.instance.auth.languageCode == SharedPrefManager().localeLang)
+    {
+      log('requestLanguage: is ${FirebaseAuthService.instance.auth.languageCode}');
+    }
+  }
+  
 }

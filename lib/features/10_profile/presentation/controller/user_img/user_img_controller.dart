@@ -2,7 +2,7 @@
 import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../../../../../core/services/database/firebase/firebase_user_img_store.dart';
+import '../../../../../core/services/database/firebase/firebase_operations/user_img_store.dart';
 
 part 'user_img_controller.g.dart';
 

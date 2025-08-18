@@ -1,5 +1,5 @@
-import '../../network/logger/requests_logger.dart';
-import 'intsance/firebase_auth.dart';
+import '../../../network/logger/app_logger.dart';
+import '../intsance/firebase_auth.dart';
 
 class FirebaseSignout
 {

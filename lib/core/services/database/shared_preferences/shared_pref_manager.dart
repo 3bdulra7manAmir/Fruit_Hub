@@ -1,6 +1,7 @@
-import 'shared_pref_init.dart';
+import 'shared_pref_initialization.dart';
 
-class SharedPrefManager {
+class SharedPrefManager
+{
   SharedPrefManager._internal();
   factory SharedPrefManager() => _instance;
   static final SharedPrefManager _instance = SharedPrefManager._internal();

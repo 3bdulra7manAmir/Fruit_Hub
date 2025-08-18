@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "com.example.e_commerce_app"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
     ndkVersion = "27.0.12077973"
 
     compileOptions {
@@ -25,10 +25,10 @@ android {
     defaultConfig {
         applicationId = "com.example.e_commerce_app"
         minSdk = 23
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 35
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        multiDexEnabled = true //ShadowCompany
+        multiDexEnabled = true
     }
 
     signingConfigs {
@@ -45,14 +45,13 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
-
-    // buildTypes {
-    //     release {
-    //         signingConfig = signingConfigs.getByName("release")
-    //     }
-    // }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // Firebase App Check (Play Integrity)
+    implementation("com.google.firebase:firebase-appcheck-playintegrity")
 }

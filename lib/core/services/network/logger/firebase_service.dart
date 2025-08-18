@@ -1,13 +1,15 @@
+// ignore_for_file: unused_import
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../database/firebase/intsance/firebase_auth.dart';
 import '../../database/firebase/intsance/firebase_fire_store.dart';
-import 'requests_logger.dart';
+import 'app_logger.dart';
 
 class FirebaseService
 {
   final FirebaseAuth _auth = FirebaseAuthService.instance.auth;
-  final FirebaseFirestore _firestore = FirebaseFireStoreService.instance.firestore;
+  //final FirebaseFirestore _firestore = FirebaseFireStoreService.instance.firestore;
 
   Future<User?> signIn(String email, String password) async
   {
@@ -25,18 +27,18 @@ class FirebaseService
     }
   }
 
-  Future<void> addUserData(String uid, Map<String, dynamic> data) async
-  {
-    try
-    {
-      AppLogger.firebaseAction('AddUserData', data: {'uid': uid, ...data});
-      await _firestore.collection('users').doc(uid).set(data);
-      AppLogger.firebaseAction('AddUserData Success', data: {'uid': uid});
-    }
-    catch (e, stack)
-    {
-      AppLogger.firebaseError('AddUserData', e, stackTrace: stack);
-      rethrow;
-    }
-  }
+  // Future<void> addUserData(String uid, Map<String, dynamic> data) async
+  // {
+  //   try
+  //   {
+  //     AppLogger.firebaseAction('AddUserData', data: {'uid': uid, ...data});
+  //     await _firestore.collection('users').doc(uid).set(data);
+  //     AppLogger.firebaseAction('AddUserData Success', data: {'uid': uid});
+  //   }
+  //   catch (e, stack)
+  //   {
+  //     AppLogger.firebaseError('AddUserData', e, stackTrace: stack);
+  //     rethrow;
+  //   }
+  // }
 }

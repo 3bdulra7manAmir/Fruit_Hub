@@ -4,7 +4,7 @@ import '../data_sources/remote_datasource_login.dart';
 
 class LoginRepoImpl implements LoginRepo {
 
-  const LoginRepoImpl({required this.remote});
+  const LoginRepoImpl({required this.remote,});
   final RemoteLoginDataSource remote;
 
   @override
