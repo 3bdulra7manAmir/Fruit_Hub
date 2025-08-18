@@ -1,7 +1,6 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../../../../utils/logger/app_logger.dart';
 import '../../shared_preferences/shared_pref_manager.dart';
 
 class FirebaseAuthService
@@ -22,7 +21,7 @@ class FirebaseAuthService
   {
     if (FirebaseAuthService.instance.auth.languageCode == SharedPrefManager().localeLang)
     {
-      log('requestLanguage: is ${FirebaseAuthService.instance.auth.languageCode}');
+      AppLogger.info('requestLanguage: is ${FirebaseAuthService.instance.auth.languageCode}');
     }
   }
   

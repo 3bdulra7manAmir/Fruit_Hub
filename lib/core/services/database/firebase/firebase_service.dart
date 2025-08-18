@@ -2,9 +2,10 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../../database/firebase/intsance/firebase_auth.dart';
-import '../../database/firebase/intsance/firebase_fire_store.dart';
-import 'app_logger.dart';
+
+import '../../../utils/logger/app_logger.dart';
+import 'intsance/firebase_auth.dart';
+import 'intsance/firebase_fire_store.dart';
 
 class FirebaseService
 {

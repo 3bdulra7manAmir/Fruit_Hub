@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../../network/logger/app_logger.dart';
+import '../../../../utils/logger/app_logger.dart';
 import '../intsance/firebase_auth.dart';
 import '../intsance/firebase_fire_store.dart';
 import '../intsance/firebase_storage.dart';

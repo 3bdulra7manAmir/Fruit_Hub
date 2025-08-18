@@ -32,6 +32,4 @@ class RemoteRegisterDataSourceImpl implements RemoteRegisterDataSource {
 }
 
 @riverpod
-RemoteRegisterDataSource remoteRegisterDataSource(Ref ref) {
-  return RemoteRegisterDataSourceImpl();
-}
+RemoteRegisterDataSource remoteRegisterDataSource(Ref ref) => RemoteRegisterDataSourceImpl();

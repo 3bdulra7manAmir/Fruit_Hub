@@ -1,4 +1,4 @@
-import '../../../network/logger/app_logger.dart';
+import '../../../../utils/logger/app_logger.dart';
 import '../intsance/firebase_auth.dart';
 
 class FirebaseSignout
