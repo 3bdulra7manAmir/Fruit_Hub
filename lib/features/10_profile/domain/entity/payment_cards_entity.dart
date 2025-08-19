@@ -1,42 +1,26 @@
-// import 'package:equatable/equatable.dart';
-// import 'fruit_sub_entity.dart';
+import 'package:equatable/equatable.dart';
 
 
-// class FruitEntity extends Equatable
-// {
-//   const FruitEntity({
-//     required this.fruitId,
-//     required this.name,
-//     required this.price,
-//     required this.imgUrl,
-//     required this.weight,
+class PaymentCardsEntity extends Equatable
+{
+  const PaymentCardsEntity({
+    required this.cardId,
+    required this.ownerName,
+    required this.cardNumber,
+    required this.expireDate,
+    required this.cvvCode,
+  });
 
-//     required this.rateValue,
-//     required this.rateUsersCount,
-//     required this.rateDescription,
+  final String cardId;
+  final String ownerName;
+  final int cardNumber;
+  final String expireDate;
+  final int cvvCode;
 
-//     this.healthInfo = const [],
-//   });
-
-//   final String fruitId;
-
-//   final String name;
-//   final double price;
-//   final String imgUrl;
-//   final double weight;
-
-//   final double rateValue;
-//   final double rateUsersCount;
-//   final String rateDescription;
-
-//   final List<HealthInfoEntity> healthInfo;
-
-//   @override
-//   List<Object?> get props =>
-//   [
-//     fruitId,
-//     name, price, imgUrl, weight,
-//     rateValue, rateUsersCount, rateDescription,
-//     healthInfo,
-//   ];
-// }
+  @override
+  List<Object?> get props =>
+  [
+    cardId, ownerName, cardNumber, 
+    cardNumber, expireDate, cvvCode
+  ];
+}

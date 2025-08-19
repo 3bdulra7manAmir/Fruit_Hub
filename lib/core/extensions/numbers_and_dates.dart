@@ -3,8 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/i18n/localization/localization_controller.dart';
 
 
-extension PriceFormatter on double
-{
+extension PriceFormatter on double {
   String toCleanString()
   {
     if (this % 1 == 0)
@@ -57,3 +56,27 @@ extension NumbersFormatter on String? {
     }
   }
 }
+
+
+extension MaskCardNumber on String {
+  String get maskedCard {
+    if (length <= 4) return this;
+    final last4 = substring(length - 4);
+    final stars = List.filled(length - 4, '*').join();
+    return '$stars$last4';
+  }
+
+  String get maskedCardGrouped {
+    final masked = maskedCard;
+    final buffer = StringBuffer();
+    for (var i = 0; i < masked.length; i++) {
+      buffer.write(masked[i]);
+      if ((i + 1) % 4 == 0 && i != masked.length - 1) {
+        buffer.write(' ');
+      }
+    }
+    return buffer.toString();
+  }
+}
+
+

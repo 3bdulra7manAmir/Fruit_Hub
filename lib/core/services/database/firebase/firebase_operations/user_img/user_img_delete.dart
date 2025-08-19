@@ -36,9 +36,9 @@ class FirebaseUserImgDelete
 
       // -------- Logging ----------
       AppLogger.firebaseAction('DeleteUserImage', data: {'uid': user.uid});
-    } catch (error, stack) {
+    } 
+    catch (error, stack) {
       AppLogger.firebaseError('DeleteUserImage', error, stackTrace: stack);
-      throw Exception('Failed to delete image: $error, stack: $stack');
     }
   }
 }

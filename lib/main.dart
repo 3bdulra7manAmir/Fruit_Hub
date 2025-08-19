@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/services/database/firebase/firebase_operations/initialization/firebase_app_check.dart';
 import 'core/services/database/firebase/firebase_operations/initialization/firebase_initialization.dart';
+import 'core/services/database/keys/app_database.dart';
 import 'core/services/database/shared_preferences/shared_pref_initialization.dart';
 import 'main_app.dart';
 
@@ -15,6 +16,7 @@ void main() async
   await SharedPrefInit.init();
   await FirebaseInitialization().firebaseInit();
   FirebaseAppChecker().firebaseAppChecker();
+  await AppLocalDatabase.instance.init();
   await dotenv.load(fileName: 'keys/keys.env');
   //await ScreenProtection.enable();
 

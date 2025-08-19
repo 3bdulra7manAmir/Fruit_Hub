@@ -1,20 +1,20 @@
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-// import '../../data/data_sources/fruit_remote_datasource.dart';
-// import '../../data/repository/fruit_repo_impl.dart';
-// import '../entity/fruit_entity.dart';
+import '../../data/data_sources/payment_cards_remote_datasource.dart';
+import '../../data/repository/payment_cards_repo_impl.dart';
+import '../entity/payment_cards_entity.dart';
 
-// part 'fruit_repo.g.dart';
+part 'payment_cards_repo.g.dart';
 
-// abstract class FruitRepo
-// {
-//   Future<List<FruitEntity>> fetchFruit();
-// }
+abstract class PaymentCardsRepo
+{
+  Future<List<PaymentCardsEntity>> fetchPaymentCards();
+}
 
 
-// @riverpod
-// FruitRepo fruitRepo(Ref ref)
-// {
-//   return FruitRepoImpl(remote: ref.read(remoteFruitDataSourceProvider),);
-// }
+@riverpod
+PaymentCardsRepo paymentCardsRepo(Ref ref)
+{
+  return PaymentCardsRepoImpl(remote: ref.read(remotePaymentCardsDataSourceProvider),);
+}

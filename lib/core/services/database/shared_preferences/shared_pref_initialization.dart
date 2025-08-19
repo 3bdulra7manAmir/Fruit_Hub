@@ -1,5 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../utils/logger/app_logger.dart';
+
 class SharedPrefInit
 {
   static SharedPreferences? _prefs;
@@ -13,7 +15,7 @@ class SharedPrefInit
   {
     if (_prefs == null)
     {
-      throw Exception('SharedPreferences not initialized. Call SharedPrefInit.init() first.');
+      AppLogger.error('SharedPreferences not initialized. Call SharedPrefInit.init() first.');
     }
     return _prefs!;
   }

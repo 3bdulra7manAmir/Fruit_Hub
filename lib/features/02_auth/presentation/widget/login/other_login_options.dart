@@ -8,6 +8,8 @@ import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/extensions/iterator.dart';
+import '../../../../../core/services/database/firebase/firebase_services/firebase_auth.dart';
+import '../../../../../core/services/database/keys/app_settings.dart';
 import '../../../../../core/utils/functions/platform.dart';
 import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/popers/loading_dialog.dart';
@@ -50,12 +52,23 @@ class OtherOptionsWidget extends ConsumerWidget
     {
       await loadingDialog(context);
       final entity = await ref.read(loginWithGoogleUsecaseProvider.future);
+      final user = FirebaseAuthService.instance.auth.currentUser;
+      final token = await user?.getIdToken();
       AppLogger.info(
         '''User logged in => Email: ${entity.email},
         Name: ${entity.name},
         photoUrl: ${entity.photoUrl},
         ID: ${entity.id}''',
       );
+
+      if (token != null && user != null) {
+        await AppSettingsDatabase.instance.saveAuthData(
+          token: token,
+          name: user.displayName ?? entity.name ?? '',
+          email: user.email ?? entity.email,
+          photoUrl: user.photoURL ?? entity.photoUrl,
+        );
+      }
 
       if (context.mounted) {
         AppRouter.router.pop(); // remove loading

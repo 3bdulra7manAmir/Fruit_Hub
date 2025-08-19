@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,13 +9,17 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/extensions/numbers_and_dates.dart';
 
-class PaymentMethodCard extends StatelessWidget
+class PaymentMethodCard extends ConsumerWidget
 {
-  const PaymentMethodCard({super.key});
+  const PaymentMethodCard({super.key, required this.cardNumber});
+
+  final String cardNumber;
+  //final 
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return Container(
       height: 50.h,
@@ -26,7 +31,7 @@ class PaymentMethodCard extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.end,
         children:
         [
-          Text('**** 1234 ', style: AppStyles.bold(
+          Text(cardNumber.maskedCardGrouped.localizedNumbers(ref)!, style: AppStyles.bold(
             fontColor: AppColors.color.kGrey002, 
             fontWeight: AppFontWeights.semiBoldWeight),
             textDirection: TextDirection.ltr,

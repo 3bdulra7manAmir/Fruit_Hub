@@ -38,6 +38,7 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
     }
     catch (error, stack)
     {
+      //AppLogger.error('Error fetching fruits:', error: error, stackTrace: stack);
       throw Exception('Error fetching fruits: $error, stack: $stack');
     }
   }

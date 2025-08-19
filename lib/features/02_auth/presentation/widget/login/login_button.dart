@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
+import '../../../../../core/services/database/firebase/firebase_services/firebase_auth.dart';
+import '../../../../../core/services/database/keys/app_settings.dart';
 import '../../../../../core/services/network/status_code.dart';
 import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
@@ -42,9 +44,22 @@ class LoginButtonWidget extends ConsumerWidget
     final password = passwordController.text.trim();
     AppLogger.info('Trying to login with: $email');
     final loginEntity = LoginEntity(email: email, password: password);
+    final user = FirebaseAuthService.instance.auth.currentUser;
+    final token = await user?.getIdToken();
     try
     {
+      if (token != null && user != null) {
+        await AppSettingsDatabase.instance.saveAuthData(
+          token: token,
+          name: user.displayName ?? 'No Name',
+          email: user.email ?? '',
+          photoUrl: user.photoURL,
+        );
+      }
+
+      if (!context.mounted) return;
       await loadingDialog(context);
+      
       await ref.read(loginUsecaseProvider(loginEntity).future);
       if (context.mounted) {
         AppRouter.router.pop(); // remove loading

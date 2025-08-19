@@ -1,52 +1,52 @@
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-// import '../../../../core/services/database/firebase/firebase_services/firebase_fire_store.dart';
-// import '../../../03_home/data/model/fruit_model.dart';
+import '../../../../core/services/database/firebase/firebase_services/firebase_fire_store.dart';
+import '../model/payment_cards_model.dart';
 
-// part '../../../03_home/data/data_sources/fruit_remote_datasource.g.dart';
+part 'payment_cards_remote_datasource.g.dart';
 
-// abstract class RemoteFruitDataSource
-// {
-//   Future<List<FruitModel>> fetchFruits();
-// }
-
-
-// class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
-// {
-//   RemoteFruitDataSourceImpl();
-
-//   @override
-//   Future<List<FruitModel>> fetchFruits() async
-//   {
-//     try
-//     {
-//       final fruitsGridSnapshot = await FirebaseFireStoreService.instance.firestore.collection('Fruits_Grid').get();
-
-//       final List<FruitModel> fruits = [];
-//       for (var fruitDoc in fruitsGridSnapshot.docs)
-//       {
-//         final fruitData = fruitDoc.data();
-//         final healthInfoSnapshot = await fruitDoc.reference.collection('Fruits_Health_Info').get();
-//         final healthInfoList = healthInfoSnapshot.docs.map((doc) => doc.data()).toList();
-//         fruits.add(FruitModel.fromJson({
-//           ...fruitData, 'ProductId': fruitDoc.id, 'healthInfo': healthInfoList,
-//         }));
-//       }
-
-//       return fruits;
-//     }
-//     catch (error, stack)
-//     {
-//       throw Exception('Error fetching fruits: $error, stack: $stack');
-//     }
-//   }
-
-// }
+abstract class RemotePaymentCardsDataSource
+{
+  Future<List<PaymentCardsModel>> fetchPaymentCards();
+}
 
 
-// @riverpod
-// RemoteFruitDataSource remoteFruitDataSource(Ref ref)
-// {
-//   return RemoteFruitDataSourceImpl();
-// }
+class RemotePaymentCardsDataSourceImpl implements RemotePaymentCardsDataSource
+{
+  RemotePaymentCardsDataSourceImpl();
+
+  @override
+  Future<List<PaymentCardsModel>> fetchPaymentCards() async
+  {
+    try
+    {
+      // await Future.delayed(const Duration(seconds: 5));
+      final cardsListSnapshot = await FirebaseFireStoreService.instance.firestore
+        .collection('Payment_Cards_List').get();
+
+      final List<PaymentCardsModel> cards = [];
+      for (var categoryDoc in cardsListSnapshot.docs)
+      {
+        final subCollectionSnapshot = await categoryDoc.reference.get();
+        cards.add(PaymentCardsModel.fromJson({
+          ...subCollectionSnapshot.data()!,
+          'id': categoryDoc.id,
+        }));
+      }
+      return cards;
+    }
+    catch (error, stack)
+    {
+      throw Exception('Error fetching cards: $error, stack: $stack');
+    }
+  }
+  
+}
+
+
+@riverpod
+RemotePaymentCardsDataSource remotePaymentCardsDataSource(Ref ref)
+{
+  return RemotePaymentCardsDataSourceImpl();
+}

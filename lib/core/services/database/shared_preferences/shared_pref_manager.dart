@@ -12,6 +12,8 @@ class SharedPrefManager
   static const String _localeKey = 'locale_lang'; // 'en' or 'ar'
   ///[Token_KEY]
   //static const String _tokenKey = 'auth_token';
+  ///[First_Launch]
+  static const String _firstLaunch = 'first_launch';
 
   /// [Theme]
   String get themeMode => SharedPrefInit.prefs.getString(_themeKey) ?? 'light';
@@ -20,6 +22,10 @@ class SharedPrefManager
   /// [Localization]
   String get localeLang => SharedPrefInit.prefs.getString(_localeKey) ?? 'ar';
   Future<void> setLocaleLang(String lang) => SharedPrefInit.prefs.setString(_localeKey, lang);
+
+  /// [First_Launch]
+  int get firstLaunch => SharedPrefInit.prefs.getInt(_firstLaunch) ?? 1;
+  Future<void> setFirstLaunch(int first) => SharedPrefInit.prefs.setInt(_firstLaunch, first);
 
   /// [TOKEN]
   // String? get token => SharedPrefInit.prefs.getString(_tokenKey);
