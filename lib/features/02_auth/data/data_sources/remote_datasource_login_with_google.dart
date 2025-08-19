@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../core/services/database/firebase/intsance/firebase_auth.dart';
+import '../../../../core/services/database/firebase/firebase_services/firebase_auth.dart';
 import '../../../../core/services/network/status_code.dart';
 import '../../../../core/utils/logger/app_logger.dart';
 import '../../domain/entity/login_with_google_entity.dart';

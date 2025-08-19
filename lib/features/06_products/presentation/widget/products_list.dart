@@ -24,10 +24,7 @@ class FruitsProductsListWidget extends ConsumerWidget
           itemBuilder: (_, index)
           {
             final fruits = fruit[index];
-            return FruitsProductsWidget(
-              imgUrl: fruits.imgUrl,
-              title: fruits.name,
-            );
+            return FruitsProductsWidget(imgUrl: fruits.imgUrl, title: fruits.name,);
           },
           separatorBuilder: (_, _) => Sizes.s9.horizontalSpace,
         ), 

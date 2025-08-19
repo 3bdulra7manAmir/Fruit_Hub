@@ -4,7 +4,7 @@ import '../../../../../config/i18n/generated/l10n.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/services/database/firebase/intsance/firebase_auth.dart';
+import '../../../../../core/services/database/firebase/firebase_services/firebase_auth.dart';
 
 class PhoneRecoveryTitleWidget extends StatelessWidget
 {

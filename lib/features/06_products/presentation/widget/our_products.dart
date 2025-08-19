@@ -17,12 +17,19 @@ class OurProductsWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:
       [
-        OurProductsTextWidget(),
-        FiltrationArrowsWidget(),
+        const OurProductsTextWidget(),
+        GestureDetector(
+          onTap: ()
+          {
+            AppLogger.debug('Arrows Has been Pressed...');
+            priceFilterSheet(context);
+          },
+          child: const FiltrationArrowsWidget()
+        ),
       ],
     );
   }
@@ -36,20 +43,13 @@ class FiltrationArrowsWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return GestureDetector(
-      onTap: ()
-      {
-        AppLogger.debug('Arrows Has been Pressed...');
-        priceFilterSheet(context);
-      },
-      child: Container(
-        height: 31.h, width: 44.w, alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: AppRadiuses.circular.xXXXXSmall,
-          border: Border.all(color: AppColors.color.kWhite002),
-          color: AppColors.color.kWhite001,
-        ), child: SvgPicture.asset(AppAssets.icons.swapArrows),
-      ),
+    return Container(
+      height: 31.h, width: 44.w, alignment: Alignment.center,
+      decoration: BoxDecoration(
+        borderRadius: AppRadiuses.circular.xXXXXSmall,
+        border: Border.all(color: AppColors.color.kWhite002),
+        color: AppColors.color.kWhite001,
+      ), child: SvgPicture.asset(AppAssets.icons.swapArrows),
     );
   }
 }
@@ -65,3 +65,4 @@ class OurProductsTextWidget extends StatelessWidget
     return Text(S.current.ourProducts, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),);
   }
 }
+

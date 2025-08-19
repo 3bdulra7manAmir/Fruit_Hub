@@ -8,30 +8,29 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/services/database/firebase/firebase_operations/user_img/controller/user_img_controller.dart';
 import '../../../../../core/widgets/cached_network_img.dart';
 import '../../../../../core/widgets/circular_indicator.dart';
-import '../../controller/user_img/user_img_controller.dart';
 
-class UserProfileImg extends ConsumerWidget {
+class UserProfileImg extends ConsumerWidget
+{
   const UserProfileImg({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final imgState = ref.watch(userImageFetchProvider);
+    final userImgState = ref.watch(userImgFetchProvider);
     return Stack(
       alignment: Alignment.center,
       clipBehavior: Clip.none,
       children: [
-        imgState.when(
+        userImgState.when(
           data: (url) => ClipRRect(
             borderRadius: AppRadiuses.circular.xLarge,
             child: CustomCachedNetworkImg(
-              imgUrl: url!,
+              imgUrl: url!, width: 73.w, height: 73.h,
               placeholder: (_, _) => const CustomLoadingIndicator(),
               errorWidget: (_, _, _) => const Icon(Icons.error),
-              width: 73.w,
-              height: 73.h,
             ),
           ),
           loading: () => const CustomLoadingIndicator(),

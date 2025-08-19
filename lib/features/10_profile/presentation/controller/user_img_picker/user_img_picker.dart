@@ -7,7 +7,7 @@ import '../../../../../core/utils/logger/app_logger.dart';
 part 'user_img_picker.g.dart';
 
 @riverpod
-Future<XFile?> userImagePicker(Ref ref) async
+Future<XFile?> userImgPicker(Ref ref) async
 {
   final ImagePicker picker = ImagePicker();
   final XFile? pickedImage = await picker.pickImage(source: ImageSource.gallery, imageQuality: 100,);

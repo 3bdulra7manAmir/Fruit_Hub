@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../core/services/database/firebase/intsance/firebase_auth.dart';
+import '../../../../core/services/database/firebase/firebase_services/firebase_auth.dart';
 
 part 'remote_datasource_login.g.dart';
 

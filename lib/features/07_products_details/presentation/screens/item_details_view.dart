@@ -45,7 +45,7 @@ class ItemDetails extends ConsumerWidget
               Sizes.s16.verticalSpace,
               FruitHealthGridInfoWidget(fruitId: fruitEntity.fruitId,),
               Sizes.s24.verticalSpace,
-              AddToCartButtonWidget(fruit: fruitEntity,),
+              AddToCartButtonWidget(fruitId: fruitEntity.fruitId,),
               Sizes.s24.verticalSpace,
             ]
           ),

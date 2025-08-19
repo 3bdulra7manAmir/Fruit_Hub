@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../core/services/database/firebase/intsance/firebase_fire_store.dart';
+import '../../../../core/services/database/firebase/firebase_services/firebase_fire_store.dart';
 import '../model/fruit_model.dart';
 
 part 'fruit_remote_datasource.g.dart';

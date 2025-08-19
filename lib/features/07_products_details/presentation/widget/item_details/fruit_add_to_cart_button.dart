@@ -6,14 +6,13 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/buttons/button.dart';
-import '../../../../03_home/domain/entity/fruit_entity.dart';
 import '../../controllers/cart_item_controller.dart';
 
 
 class AddToCartButtonWidget extends ConsumerWidget
 {
-  const AddToCartButtonWidget({super.key, required this.fruit});
-  final FruitEntity fruit;
+  const AddToCartButtonWidget({super.key, required this.fruitId});
+  final String fruitId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -32,10 +31,8 @@ class AddToCartButtonWidget extends ConsumerWidget
   void fruitAddButtonOnTap(WidgetRef ref)
   {
     AppLogger.debug('Add has been Pressed...');
-    final fruitInCart = ref.read(cartItemsProvider).where((item) => item.fruit.fruitId == fruit.fruitId).firstOrNull;
+    final fruitInCart = ref.read(cartItemsProvider).where((item) => item.fruit.fruitId == fruitId).firstOrNull;
     if (fruitInCart != null)
     {ref.read(cartItemsProvider.notifier).addItem(fruitInCart.fruit, 1);}
-    else
-    {ref.read(cartItemsProvider.notifier).addItem(fruit, 1);}
   }
 }
