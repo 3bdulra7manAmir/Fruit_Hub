@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/router/app_router.dart';
-import '../../../../config/router/app_routes.dart';
-import '../../../constants/app_sizes.dart';
-import '../../../extensions/margin.dart';
-import '../../../utils/logger/app_logger.dart';
-import '../notifications_bill.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/extensions/margin.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
+import '../../../../../core/widgets/appbar/notifications_bill.dart';
 import 'widgets/user_img.dart';
 import 'widgets/user_name.dart';
 

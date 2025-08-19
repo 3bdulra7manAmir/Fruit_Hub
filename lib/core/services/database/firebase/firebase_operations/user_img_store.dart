@@ -20,25 +20,23 @@ class FirebaseUserImgStore
     bool saveToFirestore = true,
   }) async
   {
-    try {
+    try 
+    {
       final user = FirebaseAuthService.instance.auth.currentUser;
       if (user == null) throw Exception('No authenticated user found.');
 
       final ref = FirebaseStorageService.instance.storage
-          .ref().child('users/${user.uid}/profile.jpg');
-      
+        .ref().child('users/${user.uid}/profile.jpg');
       await ref.putFile(imageFile); // IMG Upload
 
       final downloadUrl = await ref.getDownloadURL(); // Fetch Download Link
-      if (updateAuth) // Upload IMG Link in firebase Auth
-      {
+      if (updateAuth) { // Upload IMG Link in firebase Auth
         await user.updatePhotoURL(downloadUrl);
         await user.reload();
       }
 
       // Save IMG Link in Firebase Firestore
-      if (saveToFirestore)
-      {
+      if (saveToFirestore) {
         await FirebaseFireStoreService.instance.firestore
             .collection('users')
             .doc(user.uid)
@@ -84,10 +82,13 @@ class FirebaseUserImgFetch
             .doc(user.uid)
             .get();
         return doc.data()?['photoURL'] as String?;
-      } else {
+      } 
+      else {
         return user.photoURL;
       }
-    } catch (error, stack) {
+    } 
+    catch (error, stack) 
+    {
       AppLogger.firebaseError('FetchUserImage', error, stackTrace: stack);
       throw Exception('Failed to fetch image: $error, stack: $stack');
     }
@@ -127,7 +128,9 @@ class FirebaseUserImgDelete
 
       // -------- Logging ----------
       AppLogger.firebaseAction('DeleteUserImage', data: {'uid': user.uid});
-    } catch (error, stack) {
+    } 
+    catch (error, stack)
+    {
       AppLogger.firebaseError('DeleteUserImage', error, stackTrace: stack);
       throw Exception('Failed to delete image: $error, stack: $stack');
     }

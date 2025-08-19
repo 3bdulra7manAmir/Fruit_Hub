@@ -8,10 +8,10 @@ import '../../../config/theme/color_manager/colors.dart';
 import '../../core/constants/app_images.dart';
 import '../../core/constants/app_styles.dart';
 import '../../core/widgets/appbar/default_appbar/appbar.dart';
-import '../../core/widgets/appbar/user_appbar/user_appbar_body.dart';
 import '../../core/widgets/navbar/nav_bar_model.dart';
 import '../../core/widgets/navbar/nav_bar_widget.dart';
 import '../../core/widgets/popers/will_pop_scope.dart';
+import '../../features/03_home/presentation/widget/user_appbar/user_appbar_body.dart';
 
 
 

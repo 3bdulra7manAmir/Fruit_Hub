@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../features/10_profile/presentation/controller/user_img/user_img_controller.dart';
-import '../../../../constants/app_borders.dart';
-import '../../../../constants/app_images.dart';
-import '../../../../widgets/circular_indicator.dart';
-import '../../../cached_network_img.dart';
+import '../../../../../../core/constants/app_borders.dart';
+import '../../../../../../core/constants/app_images.dart';
+import '../../../../../../core/widgets/cached_network_img.dart';
+import '../../../../../../core/widgets/circular_indicator.dart';
+import '../../../../../10_profile/presentation/controller/user_img/user_img_controller.dart';
 
 class UserImgWidget extends ConsumerWidget
 {
