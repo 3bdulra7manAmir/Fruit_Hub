@@ -23,6 +23,8 @@ plugins {
     id("com.google.gms.google-services") version("4.4.0") apply false
     // END: FlutterFire Configuration
     id("org.jetbrains.kotlin.android") version "2.1.0" apply false
+    // Add the dependency for the Performance Monitoring Gradle plugin
+    id("com.google.firebase.firebase-perf") version "2.0.1" apply false
 }
 
 include(":app")
