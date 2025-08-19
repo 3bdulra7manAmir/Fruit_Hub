@@ -28,41 +28,38 @@ class LoginButtonWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    return CustomButton(text: S.current.login, onPressed: () => onPressed(context, ref),);
+    return CustomButton(text: S.current.login, onPressed: () => _onPressed(context, ref),);
   }
 
-  void onPressed(BuildContext context, WidgetRef ref) async
+  Future<void> _onPressed(BuildContext context, WidgetRef ref) async
   {
-    if (formKey.currentState!.validate())
-    {
-      final email = emailController.text.trim();
-      final password = passwordController.text.trim();
-      AppLogger.info('Trying to login with: $email');
+    if (!formKey.currentState!.validate()) {
+      AppLogger.error('Invalid login input');
+      return;
+    }
 
-      final loginEntity = LoginEntity(email: email, password: password);
-      try
-      {
-        await loadingDialog(context);
-        await ref.read(loginUsecaseProvider(loginEntity).future);
-        if (context.mounted)
-        {
-          AppRouter.router.pop(); // remove loading
-          emailController.clear();
-          passwordController.clear();
-          await AppRouter.router.pushReplacementNamed(AppRoutes.home);
-        }
-      }
-      catch (error, stack)
-      {
+    final email = emailController.text.trim();
+    final password = passwordController.text.trim();
+    AppLogger.info('Trying to login with: $email');
+    final loginEntity = LoginEntity(email: email, password: password);
+    try
+    {
+      await loadingDialog(context);
+      await ref.read(loginUsecaseProvider(loginEntity).future);
+      if (context.mounted) {
         AppRouter.router.pop(); // remove loading
-        AppLogger.error('Login error => ', error: error, stackTrace: stack);
-        if (!context.mounted) return;
-        CustomSnackBar().show(context, StatusCodes().loginAuth.getMessageFromException(error));
+        emailController.clear();
+        passwordController.clear();
+        await AppRouter.router.pushReplacementNamed(AppRoutes.home);
       }
     }
-    else
+    catch (error, stack) 
     {
-      AppLogger.error('Invalid login input');
+      AppRouter.router.pop(); // remove loading
+      AppLogger.error('Login error => ', error: error, stackTrace: stack);
+      if (!context.mounted) return;
+      CustomSnackBar().show(context, StatusCodes().loginAuth.getMessageFromException(error),);
     }
   }
 }
+
