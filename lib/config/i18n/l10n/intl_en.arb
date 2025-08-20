@@ -57,8 +57,9 @@
   "passwordsDontMatchFunny": "Passwords don't match, bro.\nTry entering two matching ones — seriously!",
 
   "verifyCode": "Verification Code",
-  "resendCode": "Resend the code",
-  "emailVerificationMessage": "Don't worry, just enter your email address and we'll send a verification code.",
+  "resendCode": "Resend the code?",
+  "notGetTheLink": "Didn't receive the link yet,",
+  "emailVerificationMessage": "Don't worry, just enter your email address and we'll send a recovery link.",
   "enterCodeSentToEmail": "Enter the code we sent to the following email address: {email}",
 
   "emailIsRequired": "Email is required",

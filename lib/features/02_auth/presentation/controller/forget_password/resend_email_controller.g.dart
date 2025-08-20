@@ -1,29 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'login_with_google_repo_impl.dart';
+part of 'resend_email_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$loginWithGoogleRepoHash() =>
-    r'd53bc602342fec6c3fbf25216def8688ecc36fc7';
+String _$resendEmailHash() => r'a5191a20e80e8a710090da7f06e3ca449f1f24ab';
 
-/// See also [loginWithGoogleRepo].
-@ProviderFor(loginWithGoogleRepo)
-final loginWithGoogleRepoProvider =
-    AutoDisposeProvider<LoginWithGoogleRepo>.internal(
-      loginWithGoogleRepo,
-      name: r'loginWithGoogleRepoProvider',
+/// See also [ResendEmail].
+@ProviderFor(ResendEmail)
+final resendEmailProvider =
+    AutoDisposeNotifierProvider<ResendEmail, bool>.internal(
+      ResendEmail.new,
+      name: r'resendEmailProvider',
       debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
           ? null
-          : _$loginWithGoogleRepoHash,
+          : _$resendEmailHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef LoginWithGoogleRepoRef = AutoDisposeProviderRef<LoginWithGoogleRepo>;
+typedef _$ResendEmail = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -550,20 +550,30 @@ class S {
     );
   }
 
-  /// `إعادة إرسال الرمز`
+  /// `إعادة إرسال الرمز؟`
   String get resendCode {
     return Intl.message(
-      'إعادة إرسال الرمز',
+      'إعادة إرسال الرمز؟',
       name: 'resendCode',
       desc: '',
       args: [],
     );
   }
 
-  /// `لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رمز التحقق.`
+  /// `لم تتلقي البريد بعد,`
+  String get notGetTheLink {
+    return Intl.message(
+      'لم تتلقي البريد بعد,',
+      name: 'notGetTheLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رابط التحقق.`
   String get emailVerificationMessage {
     return Intl.message(
-      'لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رمز التحقق.',
+      'لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رابط التحقق.',
       name: 'emailVerificationMessage',
       desc: '',
       args: [],

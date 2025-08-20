@@ -7,7 +7,7 @@ part of 'current_obscure_controller.dart';
 // **************************************************************************
 
 String _$currentObscurePasswordHash() =>
-    r'41103781d4af628e3463751037e76a4d6b7e6957';
+    r'852e93fe3313ef4bb036d1bc9dd65bddd76239d5';
 
 /// See also [CurrentObscurePassword].
 @ProviderFor(CurrentObscurePassword)

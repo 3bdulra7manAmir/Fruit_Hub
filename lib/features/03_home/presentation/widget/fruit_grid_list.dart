@@ -16,8 +16,8 @@ class FruitGridListWidget extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final fruits = ref.watch(productsFilterProvider);
-
     if (fruits.isEmpty) return const FruitGridListShimmer();
+    
     return CustomGridbuilder(
       itemCount: fruits.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

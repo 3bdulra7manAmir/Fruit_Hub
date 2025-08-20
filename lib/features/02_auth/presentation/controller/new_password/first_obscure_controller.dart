@@ -2,10 +2,10 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../../core/utils/logger/app_logger.dart';
 
-part 'current_obscure_controller.g.dart';
+part 'first_obscure_controller.g.dart';
 
 @riverpod
-class CurrentObscurePassword extends _$CurrentObscurePassword
+class FirstObscurePassword extends _$FirstObscurePassword
 {
   @override
   bool build()

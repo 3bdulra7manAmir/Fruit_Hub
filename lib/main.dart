@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -14,10 +16,10 @@ void main() async
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,]);
   await SharedPrefInit.init();
+  await AppLocalDatabase.instance.init();
   await FirebaseInitialization().firebaseInit();
   FirebaseAppChecker().firebaseAppChecker();
-  await AppLocalDatabase.instance.init();
-  await dotenv.load(fileName: 'keys/keys.env');
+  //await dotenv.load(fileName: 'keys/keys.env');
   //await ScreenProtection.enable();
 
   runApp(const ProviderScope(child: ECommerceApp()));

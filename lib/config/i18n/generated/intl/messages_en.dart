@@ -133,7 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("Email is required"),
         "emailVerificationMessage": MessageLookupByLibrary.simpleMessage(
-            "Don\'t worry, just enter your email address and we\'ll send a verification code."),
+            "Don\'t worry, just enter your email address and we\'ll send a recovery link."),
         "email_already_in_use": MessageLookupByLibrary.simpleMessage(
             "This email is already in use."),
         "emptySearch":
@@ -252,6 +252,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSearchResults":
             MessageLookupByLibrary.simpleMessage("No search results"),
         "noThanks": MessageLookupByLibrary.simpleMessage("No thanks"),
+        "notGetTheLink": MessageLookupByLibrary.simpleMessage(
+            "Didn\'t receive the link yet,"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "notificationsTitle":
             MessageLookupByLibrary.simpleMessage("Notifications"),
@@ -320,7 +322,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Registration failed. Please try again."),
         "registrationFieldsRequired": MessageLookupByLibrary.simpleMessage(
             "Registration fields are required"),
-        "resendCode": MessageLookupByLibrary.simpleMessage("Resend the code"),
+        "resendCode": MessageLookupByLibrary.simpleMessage("Resend the code?"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "review": MessageLookupByLibrary.simpleMessage("Review"),
         "saveAddress": MessageLookupByLibrary.simpleMessage("Save Address"),

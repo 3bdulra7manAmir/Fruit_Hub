@@ -131,7 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
         "emailVerificationMessage": MessageLookupByLibrary.simpleMessage(
-            "لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رمز التحقق."),
+            "لا تقلق، ما عليك سوى كتابة البريد الالكتروني وسنرسل رابط التحقق."),
         "email_already_in_use": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني مستخدم بالفعل."),
         "emptySearch":
@@ -253,6 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSearchResults":
             MessageLookupByLibrary.simpleMessage("لا توجد نتائج بحث"),
         "noThanks": MessageLookupByLibrary.simpleMessage("لا ارغب"),
+        "notGetTheLink":
+            MessageLookupByLibrary.simpleMessage("لم تتلقي البريد بعد,"),
         "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "notificationsTitle": MessageLookupByLibrary.simpleMessage("الاشعارات"),
         "numberOfOrders": MessageLookupByLibrary.simpleMessage("عدد الطلبات"),
@@ -318,7 +320,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "فشل في إنشاء الحساب. حاول مرة أخرى."),
         "registrationFieldsRequired":
             MessageLookupByLibrary.simpleMessage("يجب ملء جميع حقول التسجيل"),
-        "resendCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال الرمز"),
+        "resendCode":
+            MessageLookupByLibrary.simpleMessage("إعادة إرسال الرمز؟"),
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "review": MessageLookupByLibrary.simpleMessage("مراجعة"),
         "saveAddress": MessageLookupByLibrary.simpleMessage("حفظ العنوان"),

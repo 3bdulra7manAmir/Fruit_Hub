@@ -16,7 +16,7 @@ class SecondObscurePassword extends _$SecondObscurePassword
 
   void toggle()
   { 
-    AppLogger.debug('obscure text state is: $state');
     state = !state;
+    AppLogger.debug('obscure text state is: $state');
   }
 }

@@ -29,8 +29,7 @@ class OffersListShimmer extends ConsumerWidget
             [
               // BackGround IMG Shimmer
               CustomShimmer(
-                width: 175.w,
-                height: 158.h,
+                width: 175.w, height: 158.h,
                 baseColor: AppColors.color.kGrey002,
                 highlightColor: AppColors.color.kGrey003,
               ),
@@ -48,8 +47,7 @@ class OffersListShimmer extends ConsumerWidget
                     child: ClipPath(
                       clipper: clipper,
                       child: CustomShimmer(
-                        width: 110.w,
-                        baseColor: AppColors.color.kGrey004,
+                        width: 110.w, baseColor: AppColors.color.kGrey004,
                         highlightColor: AppColors.color.kGrey006,
                         borderRadius: AppRadiuses.circular.xXXXXSmall,
                       ),

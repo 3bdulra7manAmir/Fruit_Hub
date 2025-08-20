@@ -16,7 +16,7 @@ class ConfirmObscurePassword extends _$ConfirmObscurePassword
 
   void toggle()
   { 
-    AppLogger.debug('obscure text state is: $state');
     state = !state;
+    AppLogger.debug('obscure text state is: $state');
   }
 }

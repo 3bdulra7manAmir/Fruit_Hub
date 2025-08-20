@@ -12,9 +12,22 @@ class ResendCodeWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Text(
-      S.current.resendCode,
-      style: AppStyles.bold(fontColor: AppColors.color.kGreen004, fontWeight: AppFontWeights.semiBoldWeight),
+    return RichText(
+      text: TextSpan(
+        style: AppStyles.extraLight(
+          fontColor: AppColors.color.kGrey002,
+          fontWeight: AppFontWeights.semiBoldWeight,
+        ),
+        children:
+        [
+          TextSpan(text: '${S.current.notGetTheLink} ',),
+          TextSpan(text: S.current.resendCode,
+            style: AppStyles.extraLight(
+              fontColor: AppColors.color.kGreen004,
+              fontWeight: AppFontWeights.semiBoldWeight,),
+          ),
+        ],
+      ),
     );
   }
 }

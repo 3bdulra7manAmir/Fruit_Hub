@@ -9,7 +9,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/extensions/padding.dart';
 import '../../../../../core/services/validation/validation.dart';
 import '../../../../../core/widgets/textform_field.dart';
-import '../../controller/new_password_view/first_obscure_controller.dart';
+import '../../controller/new_password/first_obscure_controller.dart';
 
 class FirstPasswordFieldWidget extends ConsumerWidget
 {

@@ -38,7 +38,7 @@ class _Icons
   final String billRedDot = 'assets/icons/Home/Dot_Red.svg';
   // [Search Bar]
   final String searchGreen = 'assets/icons/Home/Search_Green.png';
-  final String filterGreyPNG = 'assets/icons/Home/Filter_Grey.png';
+  final String filterGrey = 'assets/icons/Home/Filter_Grey.svg';
   // [Most Sold]
   final String hartEmptyWhite = 'assets/icons/Home/Hart_Empty_Light.png';
   final String hartFilledWhite = 'assets/icons/Home/Hart_Filled_Light.png';

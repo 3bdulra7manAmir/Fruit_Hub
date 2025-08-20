@@ -31,9 +31,9 @@ class MostSoldWidget extends StatelessWidget
           child: isShowMore ?
           Text(S.current.more, style: AppStyles.extraLight(
             fontColor: AppColors.color.kGrey002,
-            fontWeight: AppFontWeights.regularWeight,
+              fontWeight: AppFontWeights.regularWeight,
             ),
-          ) : const SizedBox.shrink(),
+          ) : null,
         ),
       ],
     );

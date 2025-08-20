@@ -8,7 +8,6 @@ import '../../features/01_onboarding/presentation/screens/splash_view.dart';
 import '../../features/02_auth/presentation/screens/forget_password_email_view.dart';
 import '../../features/02_auth/presentation/screens/login_view.dart';
 import '../../features/02_auth/presentation/screens/new_password_view.dart';
-import '../../features/02_auth/presentation/screens/password_recovery_email.dart';
 import '../../features/02_auth/presentation/screens/register_view.dart';
 import '../../features/03_home/domain/entity/fruit_entity.dart';
 import '../../features/03_home/presentation/screens/home_view.dart';
@@ -81,12 +80,6 @@ abstract class AppRouter
         path: AppRoutes.forgetPasswordPhone,
         name: AppRoutes.forgetPasswordPhone,
         builder: (_, _) => ForgetPasswordEmail(),
-      ),
-      // [Password Recovery Email]
-      GoRoute(
-        path: AppRoutes.passwordRecoveryEmail,
-        name: AppRoutes.passwordRecoveryEmail,
-        builder: (_, _) => PasswordRecoveryEmail(),
       ),
       // [New Password]
       GoRoute(
@@ -188,21 +181,25 @@ abstract class AppRouter
         name: AppRoutes.ordersHistory,
         builder: (_, _) => const OrdersHistory(),
       ),
+      // [Payment Methods]
       GoRoute(
         path: AppRoutes.paymentMethods,
         name: AppRoutes.paymentMethods,
         builder: (_, _) => PaymentMethods(),
       ),
+      // [Add New Payment]
       GoRoute(
         path: AppRoutes.addNewPaymentCard,
         name: AppRoutes.addNewPaymentCard,
         builder: (_, _) => AddNewPaymentCard(),
       ),
+      // [Favourits]
       GoRoute(
         path: AppRoutes.favourit,
         name: AppRoutes.favourit,
         builder: (_, _) => const Favourit(),
       ),
+      // [Who We Are?]
       GoRoute(
         path: AppRoutes.whoWeAre,
         name: AppRoutes.whoWeAre,

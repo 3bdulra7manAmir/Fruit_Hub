@@ -9,8 +9,10 @@ import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/shadow_box.dart';
+import '../../../../../core/utils/logger/app_logger.dart';
 import '../../../../../core/widgets/snackbar.dart';
 import '../../../../../core/widgets/textform_field.dart';
+import '../../../../06_products/presentation/widget/price_filter_modal_sheet/modal_sheet_body.dart';
 import 'filter_icon.dart';
 import 'search_icon.dart';
 
@@ -27,7 +29,13 @@ class SearchBarWidget extends StatelessWidget
   {
     return CustomTextFormField(
       controller: controller,
-      suffixIcon: const FilterIconWidget(),
+      suffixIcon: GestureDetector(
+        onTap: () {
+          AppLogger.debug('Filter Settings has been Pressed...'); 
+          priceFilterSheet(context);
+        },
+        child: const FilterIconWidget()
+      ),
       prefixIcon: GestureDetector(
         onTap: searchIconOnTap ?? () {
           if (controller.text.isEmpty)

@@ -1,27 +1,29 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'obscure_password_controller.dart';
+part of 'confirm_reset_password_usecase.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$loginObscurePasswordHash() =>
-    r'7167311fc77c081eacd1fd0b8bfae22f84a5d389';
+String _$confirmResetPasswordHash() =>
+    r'3be9ba7be80c527aadaed02292e8a844bf88cfff';
 
-/// See also [LoginObscurePassword].
-@ProviderFor(LoginObscurePassword)
-final loginObscurePasswordProvider =
-    AutoDisposeNotifierProvider<LoginObscurePassword, bool>.internal(
-      LoginObscurePassword.new,
-      name: r'loginObscurePasswordProvider',
+/// See also [confirmResetPassword].
+@ProviderFor(confirmResetPassword)
+final confirmResetPasswordProvider =
+    AutoDisposeProvider<ConfirmResetPassword>.internal(
+      confirmResetPassword,
+      name: r'confirmResetPasswordProvider',
       debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
           ? null
-          : _$loginObscurePasswordHash,
+          : _$confirmResetPasswordHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-typedef _$LoginObscurePassword = AutoDisposeNotifier<bool>;
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef ConfirmResetPasswordRef = AutoDisposeProviderRef<ConfirmResetPassword>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -1,27 +1,29 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'first_obscure_controller.dart';
+part of 'forget_password_repo.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$firstObscurePasswordHash() =>
-    r'34ca2eb905bc208b3fc9dafdba803abdb7c9ea42';
+String _$forgetPasswordRepoHash() =>
+    r'942375dc713d86c1b99eb9be000712edb233b331';
 
-/// See also [FirstObscurePassword].
-@ProviderFor(FirstObscurePassword)
-final firstObscurePasswordProvider =
-    AutoDisposeNotifierProvider<FirstObscurePassword, bool>.internal(
-      FirstObscurePassword.new,
-      name: r'firstObscurePasswordProvider',
+/// See also [forgetPasswordRepo].
+@ProviderFor(forgetPasswordRepo)
+final forgetPasswordRepoProvider =
+    AutoDisposeProvider<ForgetPasswordRepo>.internal(
+      forgetPasswordRepo,
+      name: r'forgetPasswordRepoProvider',
       debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
           ? null
-          : _$firstObscurePasswordHash,
+          : _$forgetPasswordRepoHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-typedef _$FirstObscurePassword = AutoDisposeNotifier<bool>;
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef ForgetPasswordRepoRef = AutoDisposeProviderRef<ForgetPasswordRepo>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
