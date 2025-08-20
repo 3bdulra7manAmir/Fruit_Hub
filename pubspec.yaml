@@ -120,7 +120,6 @@ flutter:
     - assets/icons/Items_Details/
     - assets/icons/Cart/
     - assets/icons/Review_And_Rating/
-    - assets/icons/Checkout_Payment/
     - assets/icons/Checkout_Review/
     - assets/icons/Track_Order/
     - assets/icons/Profile/
@@ -131,8 +130,7 @@ flutter:
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/
-    - assets/imgs/Items_Details/
-
+    
     - assets/jsons/
     
     - keys/

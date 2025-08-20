@@ -42,7 +42,7 @@ class Home extends StatelessWidget
         Sizes.s12.verticalSpace,
         SizedBox(height: 158.h, child: const OffersListWidget()),
         Sizes.s12.verticalSpace,
-        const MostSoldWidget(isMoreEnabled: true,),
+        MostSoldWidget(title: S.current.bestSellers, isShowMore: true,),
         Sizes.s8.verticalSpace,
         const FruitGridListWidget(),
         Sizes.s16.verticalSpace,

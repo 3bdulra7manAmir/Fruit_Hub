@@ -55,24 +55,19 @@ class _Icons
   
   ///[Products]
   final String swapArrows = 'assets/icons/Products/Horizontal_Arrows.svg';
-  final String avocado = 'assets/icons/Products/Avocado.png';
   final String priceTag = 'assets/icons/Products/Price_Tag.svg';
 
   ///[Item_Details]
   final String subtract = 'assets/icons/Items_Details/Subtract_Grey.svg';
   final String itemDetailsStar = 'assets/icons/Items_Details/Star.svg';
-  final String calendarBlue = 'assets/icons/Items_Details/Calendar_Blue.svg';
 
   ///[Cart]
-  final String watermelonV3 = 'assets/icons/Cart/Watermelon_V3.png';
   final String trash = 'assets/icons/Cart/Trash.svg';
 
   ///[Review And Rating]
   final String userComment = 'assets/icons/Review_And_Rating/User_Comment.png';
   final String reviewStar = 'assets/icons/Review_And_Rating/Star.svg';
 
-  ///[Checkout_Payment]
-  final String paymentMethodLogo = 'assets/icons/Checkout_Payment/Mastercard.svg';
 
   ///[Checkout_Review]
   final String editGrey = 'assets/icons/Checkout_Review/Edit_Grey.svg';
@@ -101,6 +96,10 @@ class _Icons
   final String leftBlackArrow = 'assets/icons/Profile/Left_Black_Arrow.svg';
   //[Payment_Methods]
   final String mastercard = 'assets/icons/Payment_Methods/Mastercard.svg';
+  final String visa = 'assets/icons/Payment_Methods/Visa.svg';
+  final String amex = 'assets/icons/Payment_Methods/Amex.svg';
+  final String dinersClub = 'assets/icons/Payment_Methods/DinersClub.svg';
+  final String discover = 'assets/icons/Payment_Methods/Discover.svg';
   final String addWhiteV2 = 'assets/icons/Payment_Methods/Add.svg';
 
   ///[Nav Bar]
@@ -121,16 +120,8 @@ class _IMGs
 
   ///[Home]
   final String user = 'assets/imgs/Home/User.png';
-  final String fruitCard = 'assets/imgs/Home/Fruit_Card.png';
-  final String watermelon = 'assets/imgs/Home/Watermelon.png';
-
-  ///[Products_Details]
-  final String watermelonV2 = 'assets/imgs/Items_Details/Watermelon_v2.png';
   
   ///[Rating_And_Review]
   final String usercomment = 'assets/icons/Review_And_Rating/User1.png';
-
-  ///[Profile_Menu]
-  final String userProfile = 'assets/icons/Profile/User_Profile.png';
 
 }

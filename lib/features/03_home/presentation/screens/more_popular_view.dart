@@ -22,7 +22,7 @@ class MorePopular extends StatelessWidget
         children:
         [
           Sizes.s24.verticalSpace,
-          const MostSoldWidget(isMoreEnabled: false,),
+          MostSoldWidget(title: S.current.bestSellers, isShowMore: false,),
           Sizes.s8.verticalSpace,
           const FruitGridListWidget(),
           Sizes.s16.verticalSpace,

@@ -11,7 +11,6 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/utils/logger/app_logger.dart';
-import '../checkout_payment/payment_method_card.dart';
 import '../common_container.dart';
 
 class ConfirmPaymentMethodWidget extends StatelessWidget
@@ -86,10 +85,10 @@ class PaymentMethodCardNumbersWidget extends ConsumerWidget
           textDirection: TextDirection.ltr,
         ),
         Sizes.s29.horizontalSpace,
-        PaymentMethodCardWidget(
-          paymentMethodImg: AppAssets.icons.paymentMethodLogo,
-          width: 53.w, height: 34.h,
-        ),
+        // PaymentMethodCardWidget(
+        //   paymentMethodImg: AppAssets.icons.paymentMethodLogo,
+        //   width: 53.w, height: 34.h,
+        // ),
       ],
     );
   }

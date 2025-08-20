@@ -47,7 +47,7 @@ class Products extends StatelessWidget
           Sizes.s8.verticalSpace,
           SizedBox(height: 89.h, child: const FruitsProductsListWidget()),
           Sizes.s24.verticalSpace,
-          const MostSoldWidget(isMoreEnabled: true),
+          MostSoldWidget(title: S.current.ourProducts, isShowMore: true),
           Sizes.s8.verticalSpace,
           const FruitGridListWidget(),
         ]

@@ -15,7 +15,6 @@ import '../../features/03_home/presentation/screens/home_view.dart';
 import '../../features/03_home/presentation/screens/more_popular_view.dart';
 import '../../features/04_search/presentation/screens/search_view.dart';
 import '../../features/05_notifications/presentation/screens/notifications_view.dart';
-import '../../features/06_products/presentation/screens/filtered_products_view.dart';
 import '../../features/06_products/presentation/screens/products_view.dart';
 import '../../features/07_products_details/presentation/screens/cart_view.dart';
 import '../../features/07_products_details/presentation/screens/item_details_view.dart';
@@ -121,12 +120,6 @@ abstract class AppRouter
         builder: (_, _) => const Notifications(),
       ),
 
-      ///[ Filtered_Products Feature ]
-      GoRoute(
-        path: AppRoutes.filteredProducts,
-        name: AppRoutes.filteredProducts,
-        builder: (_, _) => FilteredProducts(),
-      ),
       ///[ Item_Details Feature ]
       GoRoute(
         path: AppRoutes.itemsDetails,

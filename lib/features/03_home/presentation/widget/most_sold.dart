@@ -10,8 +10,9 @@ import '../../../../core/utils/logger/app_logger.dart';
 
 class MostSoldWidget extends StatelessWidget
 {
-  const MostSoldWidget({super.key, required this.isMoreEnabled});
-  final bool isMoreEnabled;
+  const MostSoldWidget({super.key, required this.isShowMore, required this.title});
+  final String title;
+  final bool isShowMore;
 
   @override
   Widget build(BuildContext context)
@@ -20,14 +21,14 @@ class MostSoldWidget extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:
       [
-        Text(S.current.bestSellers, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
+        Text(title, style: AppStyles.bold(fontColor: AppColors.color.kBlack001),),
         GestureDetector(
           onTap: ()
           {
             AppLogger.debug('More has been Pressed...');
             AppRouter.router.pushNamed(AppRoutes.mostSold);
           },
-          child: isMoreEnabled ?
+          child: isShowMore ?
           Text(S.current.more, style: AppStyles.extraLight(
             fontColor: AppColors.color.kGrey002,
             fontWeight: AppFontWeights.regularWeight,

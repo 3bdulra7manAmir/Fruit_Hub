@@ -138,7 +138,7 @@ extension ValidationExtensions on String?
   static final hasLetters = RegExp(r'[a-zA-Z]'); 
   static final hasNumbers = RegExp(r'\d');
   static final isOnlySymbols = RegExp(r'^[^a-zA-Z0-9]+$'); /// Optional: Disallow only symbols (e.g. "@@@!!!")
-
   static final cityNamePattern = RegExp(r"^[a-zA-Z\u0600-\u06FF\s\-']+$");
 
+  
 }
