@@ -1,5 +1,6 @@
 import 'package:hive/hive.dart';
 import '../../../../features/03_home/domain/entity/fruit_entity.dart';
+import '../../../../features/03_home/domain/entity/fruit_sub_entity.dart';
 
 class HiveBoxes
 {
@@ -17,6 +18,7 @@ class RegisterBox
 
   void registerAdapters() {
     Hive.registerAdapter(FruitsEntityAdapter());
+    Hive.registerAdapter(HealthInfoEntityAdapter());
   }
 }
 

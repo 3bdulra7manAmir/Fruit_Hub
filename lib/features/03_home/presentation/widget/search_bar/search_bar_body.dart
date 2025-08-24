@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -32,7 +34,7 @@ class SearchBarWidget extends StatelessWidget
       suffixIcon: GestureDetector(
         onTap: () {
           AppLogger.debug('Filter Settings has been Pressed...'); 
-          priceFilterSheet(context);
+          //priceFilterSheet(context);
         },
         child: const FilterIconWidget()
       ),

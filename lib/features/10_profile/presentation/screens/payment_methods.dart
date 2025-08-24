@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,6 +10,8 @@ import '../../../../core/utils/logger/app_logger.dart';
 import '../../../../core/widgets/appbar/default_appbar/appbar.dart';
 import '../../../../core/widgets/column.dart';
 import '../../../../core/widgets/form.dart';
+import '../../domain/usecases/payment_cards_fetch_usecase.dart';
+import '../widget/payment_methods/add_new_payment_button_shimmer.dart';
 import '../widget/payment_methods/new_payment_button.dart';
 import '../widget/payment_methods/payment_method_list.dart';
 
@@ -36,7 +39,13 @@ class PaymentMethods extends StatelessWidget
             if (1.sw <= 427 && 1.sh <= 952)...
             [Sizes.s150.verticalSpace,]
             else...[Sizes.s300.verticalSpace,],
-            AddNewPaymentMethodButtonWidget(formKey: cardFormKey,),
+            Consumer(
+              builder: (_, ref, _) => ref.watch(fetchPaymentCardsUsecaseProvider).when(
+                data: (_) => AddNewPaymentMethodButtonWidget(formKey: cardFormKey),
+                error: (_, _) => const SizedBox.shrink(),
+                loading: () => const AddNewPaymentButtonShimmer(),
+              ),
+            ),
             Sizes.s16.verticalSpace,
           ]
         ),

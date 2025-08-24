@@ -29,7 +29,6 @@ class FruitGridCard extends StatelessWidget
         [
           Sizes.s8.verticalSpace,
           FavouriteWidget(fruitId: fruit.fruitId, fruitName: fruit.name,),
-
           Expanded(child: FruitImgWidget(imgUrl: fruit.imgUrl)),
           Sizes.s12.verticalSpace,
           Row(

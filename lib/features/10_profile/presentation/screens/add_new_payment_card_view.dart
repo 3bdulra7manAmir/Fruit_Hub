@@ -42,9 +42,7 @@ class AddNewPaymentCard extends StatelessWidget
             Sizes.s18.verticalSpace,
             const MakeCardAsDeafultWidget(),
             if (1.sw <= 427 && 1.sh <= 952)...
-            [
-              Sizes.s150.verticalSpace,
-            ]
+            [Sizes.s150.verticalSpace,]
             else...[Sizes.s300.verticalSpace,],
             AddNewPaymentMethodButtonWidget(formKey: cardFormKey, cardNumberController: cardNumberController, expireDateController: expireDateController,),
             Sizes.s16.verticalSpace,

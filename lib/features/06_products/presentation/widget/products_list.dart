@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/error_widget.dart';
 import '../../../../core/widgets/listview_builder.dart';
-import '../../../03_home/domain/usecases/fetch_fruit_usecase.dart';
+import '../../../03_home/presentation/controller/fruit_controller.dart';
 import 'product_list_shimmer.dart';
 import 'product_widget.dart';
 
@@ -16,7 +16,7 @@ class FruitsProductsListWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final fruitsAsync = ref.watch(fetchFruitsUsecaseProvider);
+    final fruitsAsync = ref.watch(fruitControllerProvider);
     return fruitsAsync.when(
       data: (fruit) => CustomListviewBuilder(
           itemCount: fruit.length, 

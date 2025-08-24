@@ -29,7 +29,7 @@ class PaymentIdentifier {
     {
       return 'Maestro';
     } 
-    else if (cardNumber.startsWith('36') || cardNumber.startsWith('38'))
+    else if (cardNumber.startsWith('36') || cardNumber.startsWith('38') ||  cardNumber.startsWith('39'))
     {
       return 'Diners Club';
     }
