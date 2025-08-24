@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/widgets/circular_indicator.dart';
 import '../../../../../core/widgets/error_widget.dart';
 import '../../../../../core/widgets/gridview_builder.dart';
-import '../../../../03_home/domain/usecases/fetch_fruit_usecase.dart';
+import '../../../../03_home/presentation/controller/fruit_controller.dart';
 import 'fruit_health_info_card.dart';
 
 class FruitHealthGridInfoWidget extends ConsumerWidget
@@ -19,7 +19,7 @@ class FruitHealthGridInfoWidget extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final fruitsAsync = ref.watch(fetchFruitsUsecaseProvider);
+    final fruitsAsync = ref.watch(fruitControllerProvider);
     return fruitsAsync.when(
       data: (fruits)
       {

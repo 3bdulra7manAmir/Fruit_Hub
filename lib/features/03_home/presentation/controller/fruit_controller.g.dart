@@ -6,7 +6,7 @@ part of 'fruit_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$fruitControllerHash() => r'0de6e1798ace8b7e0b07de5f27c655c9d6c81e93';
+String _$fruitControllerHash() => r'1aa83c767f3f36b00e98bb235876f116d447848d';
 
 /// See also [FruitController].
 @ProviderFor(FruitController)
