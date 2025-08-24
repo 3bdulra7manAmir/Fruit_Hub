@@ -8,7 +8,7 @@ part 'favourite_controller.g.dart';
 
 @riverpod
 class Favourite extends _$Favourite {
-  /// الحالة = مجموعة من الـ fruitIds المحفوظة في الـ Firebase
+  /// State equal a group of fruitIds Saved in Firebase
   @override
   Future<Set<String>> build() async {
     final uid = FirebaseAuth.instance.currentUser?.uid;
@@ -28,8 +28,8 @@ class Favourite extends _$Favourite {
     return ids;
   }
 
-  /// إضافة أو إزالة المنتج من المفضلة
-  Future<void> toggleFavourite(String fruitId) async {
+  /// Add or Remove Favourite Product
+  Future<void> toggleFavourite(String fruitId, fruitName) async {
     final uid = FirebaseAuth.instance.currentUser?.uid;
     if (uid == null) return;
 
@@ -42,14 +42,15 @@ class Favourite extends _$Favourite {
     final currentState = state.value ?? {};
 
     if (currentState.contains(fruitId)) {
-      // 🔴 لو موجود → احذف
+      // If it is in there Delete it
       await userFavRef.delete();
       state = AsyncData({...currentState}..remove(fruitId));
       AppLogger.debug('Removed $fruitId from favourites');
     } else {
-      // 🟢 لو مش موجود → أضف
+      // if it is not Add it
       await userFavRef.set({
         'fruitId': fruitId,
+        'fruitName': fruitName,
         'createdAt': FieldValue.serverTimestamp(),
       });
       state = AsyncData({...currentState, fruitId});
@@ -76,7 +77,7 @@ class Favourite extends _$Favourite {
   }
 
 
-  /// هل المنتج مفضل حاليًا؟
+  /// Is Product is currently Facourited?
   bool isFavourite(String fruitId) {
     return state.value?.contains(fruitId) ?? false;
   }

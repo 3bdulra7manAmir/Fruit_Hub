@@ -249,6 +249,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "newPassword2": MessageLookupByLibrary.simpleMessage("New password"),
         "neww": MessageLookupByLibrary.simpleMessage("New"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "noFavouritFruits":
+            MessageLookupByLibrary.simpleMessage("No Favourit Fruits Boss"),
         "noSearchResults":
             MessageLookupByLibrary.simpleMessage("No search results"),
         "noThanks": MessageLookupByLibrary.simpleMessage("No thanks"),

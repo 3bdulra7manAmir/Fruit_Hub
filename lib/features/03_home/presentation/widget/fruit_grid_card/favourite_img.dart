@@ -10,9 +10,9 @@ import '../../../../../core/widgets/circular_indicator.dart';
 import '../../controller/favourite_controller.dart';
 
 class FavouriteWidget extends ConsumerWidget {
-  const FavouriteWidget({super.key, required this.fruitId});
+  const FavouriteWidget({super.key, required this.fruitId, required this.fruitName});
   final String fruitId;
-  //OnTap
+  final String fruitName;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -29,7 +29,7 @@ class FavouriteWidget extends ConsumerWidget {
           onTap: ()
           {
             AppLogger.debug('Favourite pressed for $fruitId');
-            ref.read(favouriteProvider.notifier).toggleFavourite(fruitId);
+            ref.read(favouriteProvider.notifier).toggleFavourite(fruitId, fruitName);
           },
           child: Image.asset(img, color: color, width: 16.w, height: 16.h),
         );

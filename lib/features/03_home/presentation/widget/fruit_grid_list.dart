@@ -5,8 +5,10 @@ import '../../../../config/router/app_router.dart';
 import '../../../../config/router/routes_extras.dart';
 import '../../../../core/widgets/gridview_builder.dart';
 import '../../../06_products/presentation/controllers/products_filter_controller.dart';
+import '../../domain/entity/fruit_entity.dart';
 import 'fruit_grid_card/fruit_card_body.dart';
 import 'fruit_grid_list_shimmer.dart';
+
 
 class FruitGridListWidget extends ConsumerWidget
 {
@@ -27,11 +29,24 @@ class FruitGridListWidget extends ConsumerWidget
       itemBuilder: (_, index)
       {
         final fruit = fruits[index];
-        return GestureDetector(
-          onTap: () => AppRouter.router.pushFruitDetails(fruitEntity: fruit),
-          child: FruitGridCardWidget(fruit: fruit),
-        );
+        return FruitGridCardWidget(fruit: fruit);
       },
+    );
+  }
+}
+
+
+class FruitGridCardWidget extends StatelessWidget
+{
+  const FruitGridCardWidget({super.key, required this.fruit,});
+
+  final FruitEntity fruit;
+  @override
+  Widget build(BuildContext context)
+  {
+    return GestureDetector(
+      onTap: () => AppRouter.router.pushFruitDetails(fruitEntity: fruit),
+      child: FruitGridCard(fruit: fruit),
     );
   }
 }

@@ -2339,6 +2339,16 @@ class S {
       args: [],
     );
   }
+
+  /// `مفيش فواكهة مفضلة يا معلم`
+  String get noFavouritFruits {
+    return Intl.message(
+      'مفيش فواكهة مفضلة يا معلم',
+      name: 'noFavouritFruits',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

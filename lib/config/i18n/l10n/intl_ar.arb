@@ -267,5 +267,7 @@
   "account_exists_with_different_credential": "يوجد حساب مسجل بطريقة تسجيل دخول مختلفة.",
   "network_request_failed": "فشل الاتصال بالشبكة. يرجى التحقق من اتصال الإنترنت.",
   "google_signin_failed": "فشل تسجيل الدخول باستخدام جوجل. حاول مرة أخرى.",
-  "google_signin_canceled": "تم إلغاء تسجيل الدخول باستخدام جوجل."
+  "google_signin_canceled": "تم إلغاء تسجيل الدخول باستخدام جوجل.",
+
+  "noFavouritFruits": "مفيش فواكهة مفضلة يا معلم"
 }

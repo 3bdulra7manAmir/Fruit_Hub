@@ -12,9 +12,9 @@ import 'fruit_img.dart';
 import 'fruit_price.dart';
 
 
-class FruitGridCardWidget extends StatelessWidget
+class FruitGridCard extends StatelessWidget
 {
-  const FruitGridCardWidget({super.key, required this.fruit});
+  const FruitGridCard({super.key, required this.fruit});
   final FruitEntity fruit;
 
   @override
@@ -28,7 +28,7 @@ class FruitGridCardWidget extends StatelessWidget
         children:
         [
           Sizes.s8.verticalSpace,
-          FavouriteWidget(fruitId: fruit.fruitId,),
+          FavouriteWidget(fruitId: fruit.fruitId, fruitName: fruit.name,),
 
           Expanded(child: FruitImgWidget(imgUrl: fruit.imgUrl)),
           Sizes.s12.verticalSpace,

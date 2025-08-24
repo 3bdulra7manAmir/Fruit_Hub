@@ -268,5 +268,7 @@
   "account_exists_with_different_credential": "An account already exists with a different sign-in method.",
   "network_request_failed": "Network request failed. Please check your internet connection.",
   "google_signin_failed": "Google sign-in failed. Please try again.",
-  "google_signin_canceled": "Google sign-in was canceled."
+  "google_signin_canceled": "Google sign-in was canceled.",
+
+  "noFavouritFruits": "No Favourit Fruits Boss"
 }
