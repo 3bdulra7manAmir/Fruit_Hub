@@ -11,6 +11,7 @@ import 'fruit_add_button_home.dart';
 import 'fruit_img.dart';
 import 'fruit_price.dart';
 
+
 class FruitGridCardWidget extends StatelessWidget
 {
   const FruitGridCardWidget({super.key, required this.fruit});
@@ -27,7 +28,8 @@ class FruitGridCardWidget extends StatelessWidget
         children:
         [
           Sizes.s8.verticalSpace,
-          const FavouriteWidget(),
+          FavouriteWidget(fruitId: fruit.fruitId,),
+
           Expanded(child: FruitImgWidget(imgUrl: fruit.imgUrl)),
           Sizes.s12.verticalSpace,
           Row(

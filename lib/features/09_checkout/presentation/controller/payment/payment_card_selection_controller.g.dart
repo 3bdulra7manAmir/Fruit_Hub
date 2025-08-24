@@ -13,14 +13,14 @@ String _$paymentCardSelectionHash() =>
 @ProviderFor(PaymentCardSelection)
 final paymentCardSelectionProvider =
     AutoDisposeNotifierProvider<PaymentCardSelection, int>.internal(
-      PaymentCardSelection.new,
-      name: r'paymentCardSelectionProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$paymentCardSelectionHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  PaymentCardSelection.new,
+  name: r'paymentCardSelectionProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$paymentCardSelectionHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$PaymentCardSelection = AutoDisposeNotifier<int>;
 // ignore_for_file: type=lint

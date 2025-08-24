@@ -31,6 +31,8 @@ dependencies:
   # Local DB...
   shared_preferences: ^2.5.3
   get_storage: ^2.1.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
 
   # UI
   cached_network_image: ^3.4.1
@@ -76,10 +78,11 @@ dev_dependencies:
   # Code generation
   build_runner: ^2.4.9
   riverpod_generator: ^2.6.1
+  hive_generator: ^2.0.1
 
   # Analyzer (manual pins to avoid conflicts)
-  analyzer: ^7.6.0
-  analyzer_plugin: ^0.13.4
+  analyzer: 
+  analyzer_plugin: 
   intl_utils: ^2.8.2
 
 flutter:

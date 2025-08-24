@@ -13,9 +13,8 @@ String _$registerRepoHash() => r'dade4f91f1e06af5a6ba694c1a6cfb789d838404';
 final registerRepoProvider = AutoDisposeProvider<RegisterRepo>.internal(
   registerRepo,
   name: r'registerRepoProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$registerRepoHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$registerRepoHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

@@ -13,14 +13,14 @@ String _$fetchFruitsUsecaseHash() =>
 @ProviderFor(fetchFruitsUsecase)
 final fetchFruitsUsecaseProvider =
     AutoDisposeFutureProvider<List<FruitEntity>>.internal(
-      fetchFruitsUsecase,
-      name: r'fetchFruitsUsecaseProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$fetchFruitsUsecaseHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  fetchFruitsUsecase,
+  name: r'fetchFruitsUsecaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$fetchFruitsUsecaseHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element

@@ -12,14 +12,13 @@ String _$cartItemsHash() => r'602f27d8aaf7993b40f780f5e5fb587f8214d1ee';
 @ProviderFor(CartItems)
 final cartItemsProvider =
     AutoDisposeNotifierProvider<CartItems, List<CartItem>>.internal(
-      CartItems.new,
-      name: r'cartItemsProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$cartItemsHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  CartItems.new,
+  name: r'cartItemsProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$cartItemsHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$CartItems = AutoDisposeNotifier<List<CartItem>>;
 // ignore_for_file: type=lint

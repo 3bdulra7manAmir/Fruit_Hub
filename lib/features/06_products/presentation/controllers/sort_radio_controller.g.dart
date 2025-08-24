@@ -12,14 +12,13 @@ String _$sortRadioHash() => r'c040296e58c0a3a89a326adc0d36833a39d35ac5';
 @ProviderFor(SortRadio)
 final sortRadioProvider =
     AutoDisposeNotifierProvider<SortRadio, SortOptions>.internal(
-      SortRadio.new,
-      name: r'sortRadioProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$sortRadioHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  SortRadio.new,
+  name: r'sortRadioProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$sortRadioHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$SortRadio = AutoDisposeNotifier<SortOptions>;
 // ignore_for_file: type=lint

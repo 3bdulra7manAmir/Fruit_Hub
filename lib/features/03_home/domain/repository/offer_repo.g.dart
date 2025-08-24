@@ -13,9 +13,8 @@ String _$offerRepoHash() => r'88bba51926b277bff551e591639a3c991103b2a7';
 final offerRepoProvider = AutoDisposeProvider<OfferRepo>.internal(
   offerRepo,
   name: r'offerRepoProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$offerRepoHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$offerRepoHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

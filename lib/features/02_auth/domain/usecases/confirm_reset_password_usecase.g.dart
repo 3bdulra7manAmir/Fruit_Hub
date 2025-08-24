@@ -13,14 +13,14 @@ String _$confirmResetPasswordHash() =>
 @ProviderFor(confirmResetPassword)
 final confirmResetPasswordProvider =
     AutoDisposeProvider<ConfirmResetPassword>.internal(
-      confirmResetPassword,
-      name: r'confirmResetPasswordProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$confirmResetPasswordHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  confirmResetPassword,
+  name: r'confirmResetPasswordProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$confirmResetPasswordHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element

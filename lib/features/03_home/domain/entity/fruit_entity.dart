@@ -1,7 +1,10 @@
 import 'package:equatable/equatable.dart';
+import 'package:hive/hive.dart';
 import 'fruit_sub_entity.dart';
 
+part 'fruit_entity.g.dart';
 
+@HiveType(typeId: 0, adapterName: 'FruitsEntityAdapter')
 class FruitEntity extends Equatable
 {
   const FruitEntity({
@@ -18,17 +21,26 @@ class FruitEntity extends Equatable
     this.healthInfo = const [],
   });
 
+  @HiveField(0)
   final String fruitId;
 
+  @HiveField(1)
   final String name;
+  @HiveField(2)
   final double price;
+  @HiveField(3)
   final String imgUrl;
+  @HiveField(4)
   final double weight;
 
+  @HiveField(5)
   final double rateValue;
+  @HiveField(6)
   final double rateUsersCount;
+  @HiveField(7)
   final String rateDescription;
 
+  @HiveField(8)
   final List<HealthInfoEntity> healthInfo;
 
   @override

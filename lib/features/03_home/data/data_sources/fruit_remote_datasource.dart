@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../core/services/database/firebase/firebase_services/firebase_fire_store.dart';
+import '../../../../core/utils/logger/app_logger.dart';
 import '../model/fruit_model.dart';
 
 part 'fruit_remote_datasource.g.dart';
@@ -21,19 +22,23 @@ class RemoteFruitDataSourceImpl implements RemoteFruitDataSource
   {
     try
     {
-      final fruitsGridSnapshot = await FirebaseFireStoreService.instance.firestore.collection('Fruits_Grid').get();
-
-      final List<FruitModel> fruits = [];
-      for (var fruitDoc in fruitsGridSnapshot.docs)
-      {
+      final fruitsSnapshot = await FirebaseFireStoreService.instance.firestore
+        .collection('Fruits_Grid').get();
+      
+      final fruits = await Future.wait(
+      fruitsSnapshot.docs.map((fruitDoc) async {
         final fruitData = fruitDoc.data();
-        final healthInfoSnapshot = await fruitDoc.reference.collection('Fruits_Health_Info').get();
+        final healthInfoSnapshot =await fruitDoc.reference.collection('Fruits_Health_Info').get();
         final healthInfoList = healthInfoSnapshot.docs.map((doc) => doc.data()).toList();
-        fruits.add(FruitModel.fromJson({
-          ...fruitData, 'ProductId': fruitDoc.id, 'healthInfo': healthInfoList,
-        }));
-      }
 
+        return FruitModel.fromJson({
+          ...fruitData,
+          'ProductId': fruitDoc.get('ProductId'),
+          'healthInfo': healthInfoList,
+        });
+      }),
+    );
+      AppLogger.info(fruits[0].fruitId.toString());
       return fruits;
     }
     catch (error, stack)

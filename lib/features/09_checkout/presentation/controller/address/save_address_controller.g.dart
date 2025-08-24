@@ -13,14 +13,14 @@ String _$toggleSwitchSaveAddressHash() =>
 @ProviderFor(ToggleSwitchSaveAddress)
 final toggleSwitchSaveAddressProvider =
     AutoDisposeNotifierProvider<ToggleSwitchSaveAddress, bool>.internal(
-      ToggleSwitchSaveAddress.new,
-      name: r'toggleSwitchSaveAddressProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$toggleSwitchSaveAddressHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  ToggleSwitchSaveAddress.new,
+  name: r'toggleSwitchSaveAddressProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$toggleSwitchSaveAddressHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$ToggleSwitchSaveAddress = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

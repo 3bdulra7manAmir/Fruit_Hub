@@ -12,14 +12,13 @@ String _$localizationHash() => r'6d2dce638712b4d132bbf75ce33e1a4ff560af85';
 @ProviderFor(Localization)
 final localizationProvider =
     AutoDisposeNotifierProvider<Localization, Locale>.internal(
-      Localization.new,
-      name: r'localizationProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$localizationHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  Localization.new,
+  name: r'localizationProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$localizationHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$Localization = AutoDisposeNotifier<Locale>;
 // ignore_for_file: type=lint

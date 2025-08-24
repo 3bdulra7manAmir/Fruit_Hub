@@ -13,9 +13,8 @@ String _$themeHash() => r'afc3e2b8637c0eae947a4790bdaa877ec34047a0';
 final themeProvider = AutoDisposeNotifierProvider<Theme, ThemeMode>.internal(
   Theme.new,
   name: r'themeProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$themeHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$themeHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

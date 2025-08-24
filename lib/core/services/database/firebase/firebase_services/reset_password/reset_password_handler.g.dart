@@ -15,19 +15,19 @@ String _$resetPasswordLinkHandlerHash() =>
 @ProviderFor(resetPasswordLinkHandler)
 final resetPasswordLinkHandlerProvider =
     AutoDisposeProvider<ResetPasswordLinkHandler>.internal(
-      resetPasswordLinkHandler,
-      name: r'resetPasswordLinkHandlerProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$resetPasswordLinkHandlerHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  resetPasswordLinkHandler,
+  name: r'resetPasswordLinkHandlerProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$resetPasswordLinkHandlerHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef ResetPasswordLinkHandlerRef =
-    AutoDisposeProviderRef<ResetPasswordLinkHandler>;
+typedef ResetPasswordLinkHandlerRef
+    = AutoDisposeProviderRef<ResetPasswordLinkHandler>;
 String _$resetCodeHash() => r'3ffbb74f425b14ecd23159227d3daeff168483a5';
 
 /// [Provider Stores oobCode Comming from Firebase link]
@@ -36,14 +36,13 @@ String _$resetCodeHash() => r'3ffbb74f425b14ecd23159227d3daeff168483a5';
 @ProviderFor(ResetCode)
 final resetCodeProvider =
     AutoDisposeNotifierProvider<ResetCode, String?>.internal(
-      ResetCode.new,
-      name: r'resetCodeProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$resetCodeHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  ResetCode.new,
+  name: r'resetCodeProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$resetCodeHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$ResetCode = AutoDisposeNotifier<String?>;
 // ignore_for_file: type=lint

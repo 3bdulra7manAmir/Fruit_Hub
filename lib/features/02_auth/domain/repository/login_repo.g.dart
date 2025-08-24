@@ -13,9 +13,8 @@ String _$loginRepoHash() => r'9421a5f79cc13014745fcf0eb37ebe9b436f2054';
 final loginRepoProvider = AutoDisposeProvider<LoginRepo>.internal(
   loginRepo,
   name: r'loginRepoProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$loginRepoHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$loginRepoHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

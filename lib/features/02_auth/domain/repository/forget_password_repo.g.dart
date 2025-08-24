@@ -13,14 +13,14 @@ String _$forgetPasswordRepoHash() =>
 @ProviderFor(forgetPasswordRepo)
 final forgetPasswordRepoProvider =
     AutoDisposeProvider<ForgetPasswordRepo>.internal(
-      forgetPasswordRepo,
-      name: r'forgetPasswordRepoProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$forgetPasswordRepoHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  forgetPasswordRepo,
+  name: r'forgetPasswordRepoProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$forgetPasswordRepoHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element

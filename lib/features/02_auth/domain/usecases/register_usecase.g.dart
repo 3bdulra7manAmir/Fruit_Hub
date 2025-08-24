@@ -39,15 +39,21 @@ class RegisterUsecaseFamily extends Family<AsyncValue<void>> {
   const RegisterUsecaseFamily();
 
   /// See also [registerUsecase].
-  RegisterUsecaseProvider call(RegisterEntity credentials) {
-    return RegisterUsecaseProvider(credentials);
+  RegisterUsecaseProvider call(
+    RegisterEntity credentials,
+  ) {
+    return RegisterUsecaseProvider(
+      credentials,
+    );
   }
 
   @override
   RegisterUsecaseProvider getProviderOverride(
     covariant RegisterUsecaseProvider provider,
   ) {
-    return call(provider.credentials);
+    return call(
+      provider.credentials,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -68,19 +74,24 @@ class RegisterUsecaseFamily extends Family<AsyncValue<void>> {
 /// See also [registerUsecase].
 class RegisterUsecaseProvider extends AutoDisposeFutureProvider<void> {
   /// See also [registerUsecase].
-  RegisterUsecaseProvider(RegisterEntity credentials)
-    : this._internal(
-        (ref) => registerUsecase(ref as RegisterUsecaseRef, credentials),
-        from: registerUsecaseProvider,
-        name: r'registerUsecaseProvider',
-        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-            ? null
-            : _$registerUsecaseHash,
-        dependencies: RegisterUsecaseFamily._dependencies,
-        allTransitiveDependencies:
-            RegisterUsecaseFamily._allTransitiveDependencies,
-        credentials: credentials,
-      );
+  RegisterUsecaseProvider(
+    RegisterEntity credentials,
+  ) : this._internal(
+          (ref) => registerUsecase(
+            ref as RegisterUsecaseRef,
+            credentials,
+          ),
+          from: registerUsecaseProvider,
+          name: r'registerUsecaseProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$registerUsecaseHash,
+          dependencies: RegisterUsecaseFamily._dependencies,
+          allTransitiveDependencies:
+              RegisterUsecaseFamily._allTransitiveDependencies,
+          credentials: credentials,
+        );
 
   RegisterUsecaseProvider._internal(
     super._createNotifier, {
@@ -139,14 +150,12 @@ mixin RegisterUsecaseRef on AutoDisposeFutureProviderRef<void> {
 }
 
 class _RegisterUsecaseProviderElement
-    extends AutoDisposeFutureProviderElement<void>
-    with RegisterUsecaseRef {
+    extends AutoDisposeFutureProviderElement<void> with RegisterUsecaseRef {
   _RegisterUsecaseProviderElement(super.provider);
 
   @override
   RegisterEntity get credentials =>
       (origin as RegisterUsecaseProvider).credentials;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -13,14 +13,14 @@ String _$loginObscurePasswordHash() =>
 @ProviderFor(LoginObscurePassword)
 final loginObscurePasswordProvider =
     AutoDisposeNotifierProvider<LoginObscurePassword, bool>.internal(
-      LoginObscurePassword.new,
-      name: r'loginObscurePasswordProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$loginObscurePasswordHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  LoginObscurePassword.new,
+  name: r'loginObscurePasswordProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$loginObscurePasswordHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$LoginObscurePassword = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

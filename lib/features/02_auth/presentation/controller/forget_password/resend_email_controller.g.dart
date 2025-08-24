@@ -12,14 +12,13 @@ String _$resendEmailHash() => r'a5191a20e80e8a710090da7f06e3ca449f1f24ab';
 @ProviderFor(ResendEmail)
 final resendEmailProvider =
     AutoDisposeNotifierProvider<ResendEmail, bool>.internal(
-      ResendEmail.new,
-      name: r'resendEmailProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$resendEmailHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  ResendEmail.new,
+  name: r'resendEmailProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$resendEmailHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$ResendEmail = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint

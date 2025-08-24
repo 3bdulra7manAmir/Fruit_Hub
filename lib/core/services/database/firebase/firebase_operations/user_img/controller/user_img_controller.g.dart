@@ -13,9 +13,8 @@ String _$userImgFetchHash() => r'f9b52f608ec30f6a3e2cc9c4e26569cdf56199cc';
 final userImgFetchProvider = AutoDisposeFutureProvider<String?>.internal(
   userImgFetch,
   name: r'userImgFetchProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$userImgFetchHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$userImgFetchHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -56,15 +55,21 @@ class UserImgUploadFamily extends Family<AsyncValue<void>> {
   const UserImgUploadFamily();
 
   /// See also [userImgUpload].
-  UserImgUploadProvider call(File imageFile) {
-    return UserImgUploadProvider(imageFile);
+  UserImgUploadProvider call(
+    File imageFile,
+  ) {
+    return UserImgUploadProvider(
+      imageFile,
+    );
   }
 
   @override
   UserImgUploadProvider getProviderOverride(
     covariant UserImgUploadProvider provider,
   ) {
-    return call(provider.imageFile);
+    return call(
+      provider.imageFile,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -85,19 +90,24 @@ class UserImgUploadFamily extends Family<AsyncValue<void>> {
 /// See also [userImgUpload].
 class UserImgUploadProvider extends AutoDisposeFutureProvider<void> {
   /// See also [userImgUpload].
-  UserImgUploadProvider(File imageFile)
-    : this._internal(
-        (ref) => userImgUpload(ref as UserImgUploadRef, imageFile),
-        from: userImgUploadProvider,
-        name: r'userImgUploadProvider',
-        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-            ? null
-            : _$userImgUploadHash,
-        dependencies: UserImgUploadFamily._dependencies,
-        allTransitiveDependencies:
-            UserImgUploadFamily._allTransitiveDependencies,
-        imageFile: imageFile,
-      );
+  UserImgUploadProvider(
+    File imageFile,
+  ) : this._internal(
+          (ref) => userImgUpload(
+            ref as UserImgUploadRef,
+            imageFile,
+          ),
+          from: userImgUploadProvider,
+          name: r'userImgUploadProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$userImgUploadHash,
+          dependencies: UserImgUploadFamily._dependencies,
+          allTransitiveDependencies:
+              UserImgUploadFamily._allTransitiveDependencies,
+          imageFile: imageFile,
+        );
 
   UserImgUploadProvider._internal(
     super._createNotifier, {
@@ -156,13 +166,11 @@ mixin UserImgUploadRef on AutoDisposeFutureProviderRef<void> {
 }
 
 class _UserImgUploadProviderElement
-    extends AutoDisposeFutureProviderElement<void>
-    with UserImgUploadRef {
+    extends AutoDisposeFutureProviderElement<void> with UserImgUploadRef {
   _UserImgUploadProviderElement(super.provider);
 
   @override
   File get imageFile => (origin as UserImgUploadProvider).imageFile;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

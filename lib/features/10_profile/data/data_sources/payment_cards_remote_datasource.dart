@@ -25,15 +25,16 @@ class RemotePaymentCardsDataSourceImpl implements RemotePaymentCardsDataSource
       final cardsListSnapshot = await FirebaseFireStoreService.instance.firestore
         .collection('Payment_Cards_List').get();
 
-      final List<PaymentCardsModel> cards = [];
-      for (var categoryDoc in cardsListSnapshot.docs)
-      {
-        final subCollectionSnapshot = await categoryDoc.reference.get();
-        cards.add(PaymentCardsModel.fromJson({
-          ...subCollectionSnapshot.data()!,
-          'id': categoryDoc.id,
-        }));
-      }
+      final cards = await Future.wait(
+        cardsListSnapshot.docs.map((categoryDoc) async {
+          final subCollectionSnapshot = await categoryDoc.reference.get();
+
+          return PaymentCardsModel.fromJson({
+            ...subCollectionSnapshot.data()!,
+            'id': categoryDoc.id,
+          });
+        }),
+      );
       return cards;
     }
     catch (error, stack)

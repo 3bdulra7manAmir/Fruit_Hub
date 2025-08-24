@@ -13,18 +13,18 @@ String _$remoteRegisterDataSourceHash() =>
 @ProviderFor(remoteRegisterDataSource)
 final remoteRegisterDataSourceProvider =
     AutoDisposeProvider<RemoteRegisterDataSource>.internal(
-      remoteRegisterDataSource,
-      name: r'remoteRegisterDataSourceProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$remoteRegisterDataSourceHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  remoteRegisterDataSource,
+  name: r'remoteRegisterDataSourceProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$remoteRegisterDataSourceHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef RemoteRegisterDataSourceRef =
-    AutoDisposeProviderRef<RemoteRegisterDataSource>;
+typedef RemoteRegisterDataSourceRef
+    = AutoDisposeProviderRef<RemoteRegisterDataSource>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

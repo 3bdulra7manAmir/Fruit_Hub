@@ -32,7 +32,9 @@ class _SystemHash {
 abstract class _$FruitItemQuantity extends BuildlessAutoDisposeNotifier<int> {
   late final String fruitId;
 
-  int build(String fruitId);
+  int build(
+    String fruitId,
+  );
 }
 
 /// See also [FruitItemQuantity].
@@ -45,15 +47,21 @@ class FruitItemQuantityFamily extends Family<int> {
   const FruitItemQuantityFamily();
 
   /// See also [FruitItemQuantity].
-  FruitItemQuantityProvider call(String fruitId) {
-    return FruitItemQuantityProvider(fruitId);
+  FruitItemQuantityProvider call(
+    String fruitId,
+  ) {
+    return FruitItemQuantityProvider(
+      fruitId,
+    );
   }
 
   @override
   FruitItemQuantityProvider getProviderOverride(
     covariant FruitItemQuantityProvider provider,
   ) {
-    return call(provider.fruitId);
+    return call(
+      provider.fruitId,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -75,19 +83,21 @@ class FruitItemQuantityFamily extends Family<int> {
 class FruitItemQuantityProvider
     extends AutoDisposeNotifierProviderImpl<FruitItemQuantity, int> {
   /// See also [FruitItemQuantity].
-  FruitItemQuantityProvider(String fruitId)
-    : this._internal(
-        () => FruitItemQuantity()..fruitId = fruitId,
-        from: fruitItemQuantityProvider,
-        name: r'fruitItemQuantityProvider',
-        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-            ? null
-            : _$fruitItemQuantityHash,
-        dependencies: FruitItemQuantityFamily._dependencies,
-        allTransitiveDependencies:
-            FruitItemQuantityFamily._allTransitiveDependencies,
-        fruitId: fruitId,
-      );
+  FruitItemQuantityProvider(
+    String fruitId,
+  ) : this._internal(
+          () => FruitItemQuantity()..fruitId = fruitId,
+          from: fruitItemQuantityProvider,
+          name: r'fruitItemQuantityProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$fruitItemQuantityHash,
+          dependencies: FruitItemQuantityFamily._dependencies,
+          allTransitiveDependencies:
+              FruitItemQuantityFamily._allTransitiveDependencies,
+          fruitId: fruitId,
+        );
 
   FruitItemQuantityProvider._internal(
     super._createNotifier, {
@@ -102,8 +112,12 @@ class FruitItemQuantityProvider
   final String fruitId;
 
   @override
-  int runNotifierBuild(covariant FruitItemQuantity notifier) {
-    return notifier.build(fruitId);
+  int runNotifierBuild(
+    covariant FruitItemQuantity notifier,
+  ) {
+    return notifier.build(
+      fruitId,
+    );
   }
 
   @override
@@ -156,6 +170,5 @@ class _FruitItemQuantityProviderElement
   @override
   String get fruitId => (origin as FruitItemQuantityProvider).fruitId;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

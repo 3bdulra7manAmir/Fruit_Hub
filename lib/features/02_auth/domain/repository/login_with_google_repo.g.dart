@@ -13,14 +13,14 @@ String _$loginWithGoogleRepoHash() =>
 @ProviderFor(loginWithGoogleRepo)
 final loginWithGoogleRepoProvider =
     AutoDisposeProvider<LoginWithGoogleRepo>.internal(
-      loginWithGoogleRepo,
-      name: r'loginWithGoogleRepoProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$loginWithGoogleRepoHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  loginWithGoogleRepo,
+  name: r'loginWithGoogleRepoProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$loginWithGoogleRepoHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element

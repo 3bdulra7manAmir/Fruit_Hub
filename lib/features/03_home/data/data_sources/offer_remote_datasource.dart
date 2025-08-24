@@ -24,16 +24,18 @@ class RemoteOfferDataSourceImpl implements RemoteOfferDataSource
       // await Future.delayed(const Duration(seconds: 5));
       final offersListSnapshot = await FirebaseFireStoreService.instance.firestore
         .collection('Discounts_List').get();
+      
+      final offers = await Future.wait(
+        offersListSnapshot.docs.map((categoryDoc) async {
+          final subCollectionSnapshot = await categoryDoc.reference.get();
 
-      final List<OffersModel> offers = [];
-      for (var categoryDoc in offersListSnapshot.docs)
-      {
-        final subCollectionSnapshot = await categoryDoc.reference.get();
-        offers.add(OffersModel.fromJson({
-          ...subCollectionSnapshot.data()!,
-          'id': categoryDoc.id,
-        }));
-      }
+          return OffersModel.fromJson({
+            ...subCollectionSnapshot.data()!,
+            'id': categoryDoc.id,
+          });
+        }),
+      );
+
       return offers;
     }
     catch (error, stack)

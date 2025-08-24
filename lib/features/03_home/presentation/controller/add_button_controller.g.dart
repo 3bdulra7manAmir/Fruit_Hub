@@ -13,9 +13,8 @@ String _$addButtonHash() => r'e81149837a275496a859a6d65d479276f0ab74ee';
 final addButtonProvider = AutoDisposeNotifierProvider<AddButton, void>.internal(
   AddButton.new,
   name: r'addButtonProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$addButtonHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$addButtonHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

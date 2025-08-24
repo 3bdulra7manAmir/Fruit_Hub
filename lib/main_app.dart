@@ -10,6 +10,7 @@ import 'config/router/app_router.dart';
 import 'config/theme/theme_controller/theme_controller.dart';
 import 'config/theme/theme_manager/themes.dart';
 
+
 class ECommerceApp extends StatelessWidget
 {
   const ECommerceApp({super.key});
@@ -91,4 +92,5 @@ class MaterialAppWidget extends ConsumerWidget
     );
   }
 }
+
 

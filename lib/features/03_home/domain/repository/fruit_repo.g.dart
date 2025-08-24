@@ -13,9 +13,8 @@ String _$fruitRepoHash() => r'c2369eb20dacc814a018cda4be32149664757a61';
 final fruitRepoProvider = AutoDisposeProvider<FruitRepo>.internal(
   fruitRepo,
   name: r'fruitRepoProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$fruitRepoHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$fruitRepoHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

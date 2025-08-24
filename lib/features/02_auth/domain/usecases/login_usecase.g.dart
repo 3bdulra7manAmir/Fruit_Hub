@@ -39,15 +39,21 @@ class LoginUsecaseFamily extends Family<AsyncValue<void>> {
   const LoginUsecaseFamily();
 
   /// See also [loginUsecase].
-  LoginUsecaseProvider call(LoginEntity credentials) {
-    return LoginUsecaseProvider(credentials);
+  LoginUsecaseProvider call(
+    LoginEntity credentials,
+  ) {
+    return LoginUsecaseProvider(
+      credentials,
+    );
   }
 
   @override
   LoginUsecaseProvider getProviderOverride(
     covariant LoginUsecaseProvider provider,
   ) {
-    return call(provider.credentials);
+    return call(
+      provider.credentials,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -68,19 +74,24 @@ class LoginUsecaseFamily extends Family<AsyncValue<void>> {
 /// See also [loginUsecase].
 class LoginUsecaseProvider extends AutoDisposeFutureProvider<void> {
   /// See also [loginUsecase].
-  LoginUsecaseProvider(LoginEntity credentials)
-    : this._internal(
-        (ref) => loginUsecase(ref as LoginUsecaseRef, credentials),
-        from: loginUsecaseProvider,
-        name: r'loginUsecaseProvider',
-        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-            ? null
-            : _$loginUsecaseHash,
-        dependencies: LoginUsecaseFamily._dependencies,
-        allTransitiveDependencies:
-            LoginUsecaseFamily._allTransitiveDependencies,
-        credentials: credentials,
-      );
+  LoginUsecaseProvider(
+    LoginEntity credentials,
+  ) : this._internal(
+          (ref) => loginUsecase(
+            ref as LoginUsecaseRef,
+            credentials,
+          ),
+          from: loginUsecaseProvider,
+          name: r'loginUsecaseProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$loginUsecaseHash,
+          dependencies: LoginUsecaseFamily._dependencies,
+          allTransitiveDependencies:
+              LoginUsecaseFamily._allTransitiveDependencies,
+          credentials: credentials,
+        );
 
   LoginUsecaseProvider._internal(
     super._createNotifier, {
@@ -139,13 +150,11 @@ mixin LoginUsecaseRef on AutoDisposeFutureProviderRef<void> {
 }
 
 class _LoginUsecaseProviderElement
-    extends AutoDisposeFutureProviderElement<void>
-    with LoginUsecaseRef {
+    extends AutoDisposeFutureProviderElement<void> with LoginUsecaseRef {
   _LoginUsecaseProviderElement(super.provider);
 
   @override
   LoginEntity get credentials => (origin as LoginUsecaseProvider).credentials;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

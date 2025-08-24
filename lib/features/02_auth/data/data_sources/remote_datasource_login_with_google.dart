@@ -5,6 +5,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../core/services/database/firebase/firebase_services/firebase_auth.dart';
+import '../../../../core/services/database/firebase/firebase_services/firebase_fire_store.dart';
 import '../../../../core/services/network/status_code.dart';
 import '../../../../core/utils/logger/app_logger.dart';
 import '../../domain/entity/login_with_google_entity.dart';
@@ -51,6 +52,16 @@ class RemoteLoginGoogleDataSource
       if (user == null) {
         AppLogger.error('User is null after signInWithCredential');
         throw Exception('Google Sign-In failed: user is null');
+      }
+
+      final uid = userCredential.user?.uid;
+      if (uid != null) {
+        final userDoc = FirebaseFireStoreService.instance.firestore.collection('users').doc(uid);
+        await userDoc.set({
+          'userId': uid,
+          'userEmail': userCredential.user?.email,
+          'photoURL': userCredential.user?.photoURL,
+        });
       }
 
       return LoginWithGoogleEntity(
