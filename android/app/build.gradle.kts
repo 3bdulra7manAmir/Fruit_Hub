@@ -12,7 +12,7 @@ plugins {
 
 android {
     namespace = "com.example.e_commerce_app"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = "27.0.12077973"
 
     compileOptions {
@@ -26,10 +26,10 @@ android {
 
     defaultConfig {
         applicationId = "com.example.e_commerce_app"
-        minSdk = 23
-        targetSdk = 35
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = (project.findProperty("flutter.minSdkVersion")?.toString()?.toInt() ?: 23)
+        targetSdk = (project.findProperty("flutter.targetSdkVersion")?.toString()?.toInt() ?: 35)
+        versionCode = (project.findProperty("flutter.versionCode")?.toString()?.toInt() ?: 1)
+        versionName = project.findProperty("flutter.versionName")?.toString() ?: "0.1.0"
         multiDexEnabled = true
     }
 

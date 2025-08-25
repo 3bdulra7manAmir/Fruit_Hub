@@ -8,7 +8,7 @@ part of 'fruit_entity.dart';
 
 class FruitsEntityAdapter extends TypeAdapter<FruitEntity> {
   @override
-  final int typeId = 0;
+  final typeId = 0;
 
   @override
   FruitEntity read(BinaryReader reader) {
@@ -19,13 +19,15 @@ class FruitsEntityAdapter extends TypeAdapter<FruitEntity> {
     return FruitEntity(
       fruitId: fields[0] as String,
       name: fields[1] as String,
-      price: fields[2] as double,
+      price: (fields[2] as num).toDouble(),
       imgUrl: fields[3] as String,
-      weight: fields[4] as double,
-      rateValue: fields[5] as double,
-      rateUsersCount: fields[6] as double,
+      weight: (fields[4] as num).toDouble(),
+      rateValue: (fields[5] as num).toDouble(),
+      rateUsersCount: (fields[6] as num).toDouble(),
       rateDescription: fields[7] as String,
-      healthInfo: (fields[8] as List).cast<HealthInfoEntity>(),
+      healthInfo: fields[8] == null
+          ? const []
+          : (fields[8] as List).cast<HealthInfoEntity>(),
     );
   }
 

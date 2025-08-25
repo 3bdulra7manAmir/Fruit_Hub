@@ -10,10 +10,10 @@ class SharedPrefManager
   static const String _themeKey = 'theme_mode'; // 'light' or 'dark'
   ///[Local_KEY]
   static const String _localeKey = 'locale_lang'; // 'en' or 'ar'
-  ///[Token_KEY]
-  //static const String _tokenKey = 'auth_token';
   ///[First_Launch]
   static const String _firstLaunch = 'first_launch';
+  ///[Token_KEY]
+  //static const String _tokenKey = 'auth_token';
 
   /// [Theme]
   String get themeMode => SharedPrefInit.prefs.getString(_themeKey) ?? 'light';

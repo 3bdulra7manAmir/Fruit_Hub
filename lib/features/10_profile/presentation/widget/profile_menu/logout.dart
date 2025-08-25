@@ -13,6 +13,7 @@ import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/extensions/transform.dart';
 import '../../../../../core/services/database/firebase/firebase_operations/sign_out.dart';
+import '../../../../../core/services/database/keys/app_settings.dart';
 
 class LogOutWidget extends StatelessWidget
 {
@@ -34,8 +35,10 @@ class LogOutWidget extends StatelessWidget
           Expanded(
             child: Consumer(
               builder: (_, ref, _) => GestureDetector(
-                onTap: () async {
+                onTap: () async
+                {
                   await FirebaseSignout.instance.signOut();
+                  await AppSettingsDatabase.instance.clearAuth();
                   await AppRouter.router.pushReplacementNamed(AppRoutes.login);
                 },
                 child: const LogoutImgWidget().flipForRtl(ref.watch(localizationProvider))
@@ -66,7 +69,8 @@ class LogoutImgWidget extends StatelessWidget
   const LogoutImgWidget({super.key,});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return SvgPicture.asset(AppAssets.icons.signOut);
   }
 }

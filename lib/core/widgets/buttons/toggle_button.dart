@@ -6,8 +6,7 @@ import '../../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../../core/constants/app_borders.dart';
 import '../../utils/functions/toggle_button.dart';
 
-class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWidget
-{
+class SwitchButtonWidget<NotifierT extends ToggleSwitchBase> extends ConsumerWidget {
   const SwitchButtonWidget({
     super.key,
     required this.provider,
@@ -17,43 +16,39 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
     this.circleSize,
   });
 
-  final AutoDisposeNotifierProvider<T, bool> provider;
+  final dynamic provider;
+
   final BorderRadius? borderRadius;
   final double? width;
   final double? height;
   final double? circleSize;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
-    final isActive = ref.watch(provider);
-    final BorderRadius effectiveBorderRadius = borderRadius ?? AppRadiuses.circular.medium;
-    final double effectiveWidth = width ?? 29.w;
-    final double effectiveHeight = height ?? 17.h;
-    final double effectiveCircleSize = circleSize ?? 15.w;
-    final EdgeInsetsGeometry padding = EdgeInsets.all(1.w);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isActive = ref.watch(provider); // النوع هنا dynamic
+    final notifier = ref.read(provider.notifier) as ToggleSwitchBase;
 
     return GestureDetector(
-      onTap: () => (ref.read(provider.notifier) as ToggleSwitchBase).toggle(),
+      onTap: () => notifier.toggle(),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
-        width: effectiveWidth,
-        height: effectiveHeight,
-        padding: padding,
+        width: width ?? 29.w,
+        height: height ?? 17.h,
+        padding: EdgeInsets.all(1.w),
         decoration: BoxDecoration(
           color: isActive ? AppColors.color.kGreen001 : AppColors.color.kGrey023.withAlpha(128),
-          borderRadius: effectiveBorderRadius,
-          border: Border.all(color: AppColors.color.kGrey014,),),
+          borderRadius: borderRadius ?? AppRadiuses.circular.medium,
+          border: Border.all(color: AppColors.color.kGrey014),
+        ),
         alignment: isActive ? Alignment.centerRight : Alignment.centerLeft,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
-          width: effectiveCircleSize,
-          height: effectiveCircleSize,
+          width: circleSize ?? 15.w,
+          height: circleSize ?? 15.w,
           decoration:  BoxDecoration(
             color: AppColors.color.kWhite001,
             shape: BoxShape.circle,
-            boxShadow:
-            const [
+            boxShadow: [
               BoxShadow(
                 color: Color.fromARGB(15, 16, 24, 40),
                 offset: Offset(0, 1),
@@ -71,4 +66,3 @@ class SwitchButtonWidget<T extends AutoDisposeNotifier<bool>> extends ConsumerWi
     );
   }
 }
-

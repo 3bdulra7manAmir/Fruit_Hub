@@ -64,9 +64,9 @@ class OtherOptionsWidget extends ConsumerWidget
       if (token != null && user != null) {
         await AppSettingsDatabase.instance.saveAuthData(
           token: token,
-          name: user.displayName ?? entity.name ?? '',
-          email: user.email ?? entity.email,
-          photoUrl: user.photoURL ?? entity.photoUrl,
+          // name: user.displayName ?? entity.name ?? '',
+          // email: user.email ?? entity.email,
+          // photoUrl: user.photoURL ?? entity.photoUrl,
         );
       }
 

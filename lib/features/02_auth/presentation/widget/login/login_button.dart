@@ -51,9 +51,9 @@ class LoginButtonWidget extends ConsumerWidget
       if (token != null && user != null) {
         await AppSettingsDatabase.instance.saveAuthData(
           token: token,
-          name: user.displayName ?? 'No Name',
-          email: user.email ?? '',
-          photoUrl: user.photoURL,
+          // name: user.displayName ?? 'No Name',
+          // email: user.email ?? '',
+          // photoUrl: user.photoURL,
         );
       }
 

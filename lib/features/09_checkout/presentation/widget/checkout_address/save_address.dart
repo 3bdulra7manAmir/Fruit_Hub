@@ -19,7 +19,7 @@ class SaveAddressWidget extends StatelessWidget
       children:
       [
 
-        SwitchButtonWidget(provider: toggleSwitchSaveAddressProvider,),
+        const SwitchButtonWidget(provider: toggleSwitchSaveAddressProvider,),
         Sizes.s8.horizontalSpace,
         const KeepAddressTextWidget(),
       ],

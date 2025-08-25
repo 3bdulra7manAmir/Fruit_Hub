@@ -1,6 +1,5 @@
 // ignore_for_file: unused_local_variable
 import 'dart:io';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../user_img_fetch.dart';
 import '../user_img_store.dart';

@@ -100,7 +100,7 @@ class OptionsMenuWidget extends StatelessWidget
           leading: AppAssets.icons.billGreen,
           title: S.current.notifications,
           isArrow: false,
-          caseWidget: SwitchButtonWidget(
+          caseWidget:  const SwitchButtonWidget(
             provider: toggleSwitchNotificationsProvider,
           ),
           onTap: () => AppLogger.debug('Notifications has been Pressed...'),
@@ -129,7 +129,7 @@ class OptionsMenuWidget extends StatelessWidget
           builder: (_, ref, _) => ProfileOptions(
             leading: AppAssets.icons.magicGreen,
             isArrow: false,
-            caseWidget: SwitchButtonWidget(provider: themeInformerProvider),
+            caseWidget: const SwitchButtonWidget(provider: themeInformerProvider),
             title: S.current.theme,
             onTap: () => (ref.read(themeInformerProvider.notifier) as ToggleSwitchBase).toggle(),
           ),

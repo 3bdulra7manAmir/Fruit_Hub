@@ -24,5 +24,9 @@ void main() async
   //await dotenv.load(fileName: 'keys/keys.env');
   //await ScreenProtection.enable();
 
-  runApp(const ProviderScope(child: ECommerceApp()));
+  runApp(
+    const ProviderScope(
+      child: ECommerceApp(),
+    ),
+  );
 }

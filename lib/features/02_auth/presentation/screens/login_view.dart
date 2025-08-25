@@ -20,12 +20,10 @@ class Login extends StatelessWidget
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController(text: 'shadowcompany6270@gmail.com');
   final TextEditingController passwordController = TextEditingController(text: 'Poilkjmnb12V1#');
-  
 
   @override
   Widget build(BuildContext context)
   {
-    
     return Scaffold(
       appBar: CustomAppBar(title: S.current.login,),
       body: CustomForm(

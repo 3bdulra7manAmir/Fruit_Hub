@@ -1,4 +1,4 @@
-import 'package:hive_flutter/adapters.dart';
+import 'package:hive_ce_flutter/adapters.dart';
 
 import '../../../utils/logger/app_logger.dart';
 import 'hive_boxes.dart';

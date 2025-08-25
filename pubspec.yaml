@@ -4,10 +4,9 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.9.0
 
 dependencies:
-  # Flutter SDK
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -31,8 +30,10 @@ dependencies:
   # Local DB...
   shared_preferences: ^2.5.3
   get_storage: ^2.1.1
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
+  #hive: ^2.2.3
+  hive_ce: ^2.11.3
+  #hive_flutter: ^1.1.0
+  hive_ce_flutter: ^2.3.1
 
   # UI
   cached_network_image: ^3.4.1
@@ -51,14 +52,14 @@ dependencies:
   go_router: ^16.1.0
 
   # State Management
-  flutter_riverpod: ^2.6.1
-  riverpod_annotation: ^2.6.1
+  flutter_riverpod: ^3.0.0-dev.17
+  riverpod_annotation: ^3.0.0-dev.17
 
   # Utilities
   device_preview: ^1.2.0
   image_picker: ^1.1.2
   flutter_launcher_icons: ^0.14.4
-  flutter_dotenv: ^5.2.1
+  flutter_dotenv: ^6.0.0
   rename_app: ^1.6.3
   screen_protector: ^1.4.2+1
 
@@ -73,16 +74,17 @@ dev_dependencies:
 
   # Linting
   flutter_lints: ^6.0.0
-  riverpod_lint: ^2.6.1
+  riverpod_lint: ^3.0.0-dev.17
 
   # Code generation
   build_runner: ^2.4.9
-  riverpod_generator: ^2.6.1
-  hive_generator: ^2.0.1
+  riverpod_generator: ^3.0.0-dev.17
+  #hive_generator: ^2.0.1
+  hive_ce_generator: ^1.9.2
 
-  # Analyzer (manual pins to avoid conflicts)
-  analyzer: 
-  analyzer_plugin: 
+  # Analyzer
+  analyzer: ^7.1.0
+  analyzer_plugin: ^0.13.4
   intl_utils: ^2.8.2
 
 flutter:
@@ -137,12 +139,11 @@ flutter:
 
     - assets/imgs/Home/
     - assets/imgs/Notifications/
-    
+
     - assets/jsons/
-    
+
     - keys/
 
-# Flutter Localization
 flutter_intl:
   enabled: true
   arb_dir: lib/config/i18n/l10n

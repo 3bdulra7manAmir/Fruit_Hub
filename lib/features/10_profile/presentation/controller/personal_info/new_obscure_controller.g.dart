@@ -6,22 +6,59 @@ part of 'new_obscure_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+@ProviderFor(NewObscurePassword)
+const newObscurePasswordProvider = NewObscurePasswordProvider._();
+
+final class NewObscurePasswordProvider
+    extends $NotifierProvider<NewObscurePassword, bool> {
+  const NewObscurePasswordProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'newObscurePasswordProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$newObscurePasswordHash();
+
+  @$internal
+  @override
+  NewObscurePassword create() => NewObscurePassword();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(bool value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<bool>(value),
+    );
+  }
+}
+
 String _$newObscurePasswordHash() =>
     r'b06cabb510cba9e84ec1f9c0c26ebcdf722ae403';
 
-/// See also [NewObscurePassword].
-@ProviderFor(NewObscurePassword)
-final newObscurePasswordProvider =
-    AutoDisposeNotifierProvider<NewObscurePassword, bool>.internal(
-  NewObscurePassword.new,
-  name: r'newObscurePasswordProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$newObscurePasswordHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+abstract class _$NewObscurePassword extends $Notifier<bool> {
+  bool build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build();
+    final ref = this.ref as $Ref<bool, bool>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<bool, bool>,
+              bool,
+              Object?,
+              Object?
+            >;
+    element.handleValue(ref, created);
+  }
+}
 
-typedef _$NewObscurePassword = AutoDisposeNotifier<bool>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

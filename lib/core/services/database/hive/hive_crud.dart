@@ -1,4 +1,5 @@
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive_ce/hive.dart';
+
 import '../../../../features/03_home/domain/entity/fruit_entity.dart';
 import 'hive_boxes.dart';
 
